@@ -3,21 +3,14 @@ name: Refresh NFL news
 # (RSS/sitemap parsing + rule-based clustering/categorization, no AI calls).
 
 on:
-  schedule:
-    # Two independent staggered schedules, each nominally every 10 minutes,
-    # offset by 5 minutes from each other -> an actual trigger request every
-    # 5 minutes on average. This is redundancy, not just frequency: GitHub's
-    # own docs warn that scheduled workflows are best-effort and can be
-    # delayed or dropped under load — proven empirically in this repo, where
-    # only 1 of ~13 expected 10-minute firings over a 2-hour window actually
-    # ran (checked via the Actions API run history). A single schedule
-    # entry has no fallback if GitHub drops that exact minute; two
-    # independently-evaluated entries mean a drop in one doesn't leave a
-    # 10+ minute gap on its own. Minutes are offset from :00/:10/:20... on
-    # purpose — GitHub specifically calls out the top of the hour as a
-    # contention hotspot, so neither entry lands there.
-    - cron: "4,14,24,34,44,54 * * * *"
-    - cron: "9,19,29,39,49,59 * * * *"
+  # GitHub's native schedule: trigger was removed here. It was empirically
+  # unreliable in this repo — the Actions API run history showed only 3
+  # scheduled firings in a 2-hour window (one gap of 45 minutes) even with
+  # two staggered cron entries, which isn't enough to hold a 30-minute
+  # freshness requirement. An external scheduler (cron-job.org) now calls
+  # this workflow's dispatch endpoint every 10 minutes instead:
+  #   POST /repos/jtmasters3/nfl-news-hub/actions/workflows/refresh.yml/dispatches
+  # workflow_dispatch is what makes that possible — required, not optional.
   workflow_dispatch: {}
 
 permissions:
