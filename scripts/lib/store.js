@@ -36,7 +36,27 @@ async function writeJsonAtomic(filePath, data) {
 
 export async function readNews() {
   const data = await readJson(NEWS_JSON_PATH, { stories: [], generated_at: null });
-  return Array.isArray(data.stories) ? data.stories : [];
+  const stories = Array.isArray(data.stories) ? data.stories : [];
+  return stories.map(migrateStory);
+}
+
+/**
+ * One-time migration for stories written before first_published_at /
+ * latest_published_at existed (they only had a single `published_at` +
+ * `updated_at`). Without this, old stories would evaluate to an invalid
+ * date on read and get silently pruned as "expired" the moment this schema
+ * shipped — a real data-loss bug, not a hypothetical one. Backfills from
+ * whatever the old story already has; a no-op once a story has already
+ * been through generate-content.js under the new schema.
+ */
+function migrateStory(story) {
+  if (story.latest_published_at && story.first_published_at) return story;
+  const fallback = story.published_at ?? story.updated_at ?? new Date().toISOString();
+  return {
+    ...story,
+    first_published_at: story.first_published_at ?? story.published_at ?? fallback,
+    latest_published_at: story.latest_published_at ?? story.published_at ?? fallback,
+  };
 }
 
 /**
@@ -49,11 +69,16 @@ export async function readNews() {
 export async function writeNews(stories) {
   const cutoff = Date.now() - MAX_STORY_AGE_DAYS * 86_400_000;
   const pruned = stories
-    .filter((s) => Date.parse(s.updated_at) >= cutoff)
-    .sort((a, b) => {
-      if (b.importance_score !== a.importance_score) return b.importance_score - a.importance_score;
-      return Date.parse(b.updated_at) - Date.parse(a.updated_at);
-    })
+    // Age based on actual news recency (latest_published_at), not on when we
+    // last happened to touch the record — a story shouldn't get an
+    // indefinite reprieve from pruning just because a late duplicate source
+    // was discovered.
+    .filter((s) => Date.parse(s.latest_published_at) >= cutoff)
+    // Default sort: newest actual news first, full stop. Importance is
+    // shown as a badge but must never bury today's stories under an old
+    // "Breaking"-scored one — that was the root cause of stale-looking
+    // homepage content.
+    .sort((a, b) => Date.parse(b.latest_published_at) - Date.parse(a.latest_published_at))
     .slice(0, MAX_STORIES);
 
   const onDisk = await readJson(NEWS_JSON_PATH, { stories: [] });

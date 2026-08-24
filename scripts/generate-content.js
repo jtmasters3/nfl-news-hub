@@ -21,11 +21,23 @@ export async function processDiscoveredArticles(sourceResults, existingStories, 
   const ledger = { ...processedUrls };
   const candidates = buildClusterCandidates(stories);
 
-  const stats = { articlesSeen: 0, skippedExisting: 0, newStories: 0, updatedStories: 0 };
+  const stats = {
+    articlesSeen: 0,
+    skippedExisting: 0,
+    newStories: 0,
+    updatedStories: 0,
+    // Freshness self-check (see refresh.js) — the newest source-claimed
+    // publish time seen across every discovered article this run,
+    // regardless of whether it was new or a duplicate.
+    newestDiscoveredPublishedAt: null,
+  };
 
   for (const result of sourceResults) {
     for (const article of result.articles) {
       stats.articlesSeen++;
+      if (article.publishedAt && isNewer(article.publishedAt, stats.newestDiscoveredPublishedAt)) {
+        stats.newestDiscoveredPublishedAt = article.publishedAt;
+      }
 
       if (ledger[article.sourceUrl]) {
         stats.skippedExisting++;
@@ -61,13 +73,22 @@ export async function processDiscoveredArticles(sourceResults, existingStories, 
   return { stories, processedUrls: ledger, stats };
 }
 
+function isNewer(a, b) {
+  return !b || Date.parse(a) > Date.parse(b);
+}
+
 function buildClusterCandidates(stories) {
   return stories.map((s) => ({
     id: s.id,
     headline: s.headline,
     sourceHeadlines: s.sources.map((src) => src.headline),
     teams: s.teams,
-    lastUpdatedAt: s.updated_at,
+    // Clustering eligibility ages out based on actual news recency
+    // (latest_published_at), not on when we last happened to touch the
+    // record (updated_at) — otherwise a story that keeps picking up late
+    // cross-outlet duplicates could stay "eligible" forever even though the
+    // real event is old, risking an unrelated new story getting merged in.
+    lastUpdatedAt: s.latest_published_at,
   }));
 }
 
@@ -77,7 +98,7 @@ function upsertCandidate(candidates, story) {
     headline: story.headline,
     sourceHeadlines: story.sources.map((s) => s.headline),
     teams: story.teams,
-    lastUpdatedAt: story.updated_at,
+    lastUpdatedAt: story.latest_published_at,
   };
   const idx = candidates.findIndex((c) => c.id === next.id);
   if (idx >= 0) candidates[idx] = next;
@@ -90,13 +111,38 @@ function toSourceEntry(article) {
     headline: article.headline,
     description: article.excerpt || "",
     url: article.sourceUrl,
+    // The source's own claimed publish time — null if genuinely unavailable
+    // (never silently backfilled with discovery time; see effectiveDate()).
     published_at: article.publishedAt,
+    // When WE found this specific URL. Not the same thing as published_at —
+    // an outlet can (and does) republish/re-report an older event, which we
+    // may only discover well after its real publish time.
+    discovered_at: new Date().toISOString(),
   };
+}
+
+/** Publish-time fallback order per source entry: its own timestamp, else our discovery time (last resort). */
+function effectiveDate(source) {
+  return source.published_at ?? source.discovered_at;
+}
+
+/** first_published_at = earliest source report, latest_published_at = newest — both by *source* date, never by our processing time. */
+function computePublishWindow(sources) {
+  const dates = sources.map(effectiveDate).filter(Boolean);
+  let first = null;
+  let latest = null;
+  for (const d of dates) {
+    if (!first || Date.parse(d) < Date.parse(first)) first = d;
+    if (!latest || Date.parse(d) > Date.parse(latest)) latest = d;
+  }
+  return { first_published_at: first, latest_published_at: latest };
 }
 
 function createStory(article, teamsDetected) {
   const now = new Date().toISOString();
   const text = `${article.headline} ${article.excerpt}`;
+  const sources = [toSourceEntry(article)];
+  const { first_published_at, latest_published_at } = computePublishWindow(sources);
 
   const story = {
     id: randomUUID(),
@@ -116,8 +162,12 @@ function createStory(article, teamsDetected) {
     // capitalized, which defeats "consecutive capitalized words = name" and
     // produces junk. Conservative on purpose: better empty than wrong.
     players: extractLikelyPlayerNames(article.excerpt || ""),
-    sources: [toSourceEntry(article)],
-    published_at: article.publishedAt ?? now,
+    sources,
+    first_published_at,
+    latest_published_at,
+    // When OUR pipeline last touched this record — an audit/processing
+    // timestamp, deliberately NOT used for sorting or freshness display
+    // (see latest_published_at for that).
     updated_at: now,
     munch_content: "",
   };
@@ -135,11 +185,7 @@ function updateStory(story, article, teamsDetected) {
   // story — more reporting means a better signal, still $0 and instant.
   const combinedText = sources.map((s) => `${s.headline} ${s.description}`).join(" ");
   const combinedPlayers = sources.flatMap((s) => extractLikelyPlayerNames(s.description || ""));
-
-  const earliestPublished = sources.reduce((earliest, s) => {
-    if (!s.published_at) return earliest;
-    return !earliest || Date.parse(s.published_at) < Date.parse(earliest) ? s.published_at : earliest;
-  }, story.published_at);
+  const { first_published_at, latest_published_at } = computePublishWindow(sources);
 
   const updated = {
     ...story,
@@ -152,7 +198,8 @@ function updateStory(story, article, teamsDetected) {
     is_rumor: sources.every((s) => looksLikeRumor(`${s.headline} ${s.description}`)),
     importance_score: Math.max(story.importance_score, estimateImportance(combinedText)),
     sources,
-    published_at: earliestPublished,
+    first_published_at,
+    latest_published_at,
     updated_at: now,
     ...(alreadyHasSource
       ? {}

@@ -57,6 +57,52 @@ async function main() {
     console.error("All sources failed — check network access.");
     process.exitCode = 1;
   }
+
+  runFreshnessCheck(stats, savedStories);
+}
+
+// Automated freshness self-check (runs every refresh, local and in CI).
+// A green workflow only proves the script executed — it does NOT prove
+// current news was actually captured. This compares what we *discovered*
+// against what actually ended up in news.json and fails the run (non-zero
+// exit) if a real gap shows up, which — combined with the workflow running
+// this before its commit step — blocks a broken run from ever being
+// published as if it were healthy.
+const FRESHNESS_GAP_MINUTES = 10; // discovered-but-not-reflected tolerance
+const STALE_SOURCE_HOURS = 6; // lenient on purpose: quiet overnight windows are normal
+
+function runFreshnessCheck(stats, savedStories) {
+  const newestStory = savedStories.reduce(
+    (max, s) => (!max || Date.parse(s.latest_published_at) > Date.parse(max) ? s.latest_published_at : max),
+    null
+  );
+
+  console.log("\nFreshness check:");
+  console.log(`  Newest discovered source article: ${stats.newestDiscoveredPublishedAt ?? "n/a"}`);
+  console.log(`  Newest story saved to news.json:  ${newestStory ?? "n/a"}`);
+
+  if (stats.newestDiscoveredPublishedAt && newestStory) {
+    const gapMin = (Date.parse(stats.newestDiscoveredPublishedAt) - Date.parse(newestStory)) / 60_000;
+    if (gapMin > FRESHNESS_GAP_MINUTES) {
+      console.error(
+        `FRESHNESS CHECK FAILED: the newest discovered article (${stats.newestDiscoveredPublishedAt}) is ` +
+          `${gapMin.toFixed(0)} minutes newer than the newest story actually saved to news.json (${newestStory}). ` +
+          `A discovered article is not being reflected in the output — do not trust this run's data.`
+      );
+      process.exitCode = 1;
+      return;
+    }
+  }
+
+  if (newestStory) {
+    const staleHours = (Date.now() - Date.parse(newestStory)) / 3_600_000;
+    if (staleHours > STALE_SOURCE_HOURS) {
+      console.warn(
+        `FRESHNESS WARNING: the newest story is ${staleHours.toFixed(1)}h old. Can be normal overnight; ` +
+          `if this persists during the day it may mean a source stopped publishing or a source is broken.`
+      );
+    }
+  }
 }
 
 main().catch((err) => {

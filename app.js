@@ -133,41 +133,125 @@
   }
 
   // --- Live relative timestamps ----------------------------------------
+  // Full format: "8 minutes ago" / "1 hour ago" / "Today, 2:46 PM" /
+  // "Yesterday, 8:10 PM" / "Aug 21, 2026" — used for each story's main
+  // displayed time (latest_published_at).
   function formatRelativeTime(iso) {
     var then = Date.parse(iso);
     if (isNaN(then)) return "";
-    var diffMin = Math.round((Date.now() - then) / 60000);
+    var diffMs = Date.now() - then;
+    var diffMin = Math.round(diffMs / 60000);
 
     if (diffMin < 1) return "Just now";
     if (diffMin < 60) return diffMin + " minute" + (diffMin === 1 ? "" : "s") + " ago";
 
-    var diffHours = Math.round(diffMin / 60);
-    if (diffHours < 24) return diffHours + " hour" + (diffHours === 1 ? "" : "s") + " ago";
-
-    var date = new Date(then);
-    var yesterday = new Date();
-    yesterday.setDate(yesterday.getDate() - 1);
-    if (
-      date.getDate() === yesterday.getDate() &&
-      date.getMonth() === yesterday.getMonth() &&
-      date.getFullYear() === yesterday.getFullYear()
-    ) {
-      return "Yesterday";
+    var diffHours = diffMs / 3600000;
+    if (diffHours < 3) {
+      var hrs = Math.round(diffHours);
+      return hrs + " hour" + (hrs === 1 ? "" : "s") + " ago";
     }
 
-    var diffDays = Math.round(diffHours / 24);
-    if (diffDays < 7) return diffDays + " day" + (diffDays === 1 ? "" : "s") + " ago";
+    var date = new Date(then);
+    var now = new Date();
+    var timeStr = date.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" });
 
-    return date.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+    var isToday =
+      date.getDate() === now.getDate() && date.getMonth() === now.getMonth() && date.getFullYear() === now.getFullYear();
+    if (isToday) return "Today, " + timeStr;
+
+    var yesterday = new Date();
+    yesterday.setDate(yesterday.getDate() - 1);
+    var isYesterday =
+      date.getDate() === yesterday.getDate() &&
+      date.getMonth() === yesterday.getMonth() &&
+      date.getFullYear() === yesterday.getFullYear();
+    if (isYesterday) return "Yesterday, " + timeStr;
+
+    return date.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+  }
+
+  // Compact format: always "N minute/hour/day(s) ago", no absolute-date
+  // fallback — used for the small "UPDATED …" badge and the header's
+  // "Last checked …" indicator, where a full date would be overkill.
+  function formatShortRelative(iso) {
+    var then = Date.parse(iso);
+    if (isNaN(then)) return "";
+    var diffMin = Math.round((Date.now() - then) / 60000);
+    if (diffMin < 1) return "just now";
+    if (diffMin < 60) return diffMin + " minute" + (diffMin === 1 ? "" : "s") + " ago";
+    var diffHours = Math.round(diffMin / 60);
+    if (diffHours < 24) return diffHours + " hour" + (diffHours === 1 ? "" : "s") + " ago";
+    var diffDays = Math.round(diffHours / 24);
+    return diffDays + " day" + (diffDays === 1 ? "" : "s") + " ago";
   }
 
   function updateRelativeTimes() {
-    cards.forEach(function (card) {
-      var el = card.querySelector("[data-relative-time]");
-      if (el) el.textContent = formatRelativeTime(card.dataset.updatedAt);
+    document.querySelectorAll("[data-relative-time]").forEach(function (el) {
+      if (el.dataset.time) el.textContent = formatRelativeTime(el.dataset.time);
+    });
+    document.querySelectorAll("[data-relative-time-short]").forEach(function (el) {
+      if (el.dataset.time) el.textContent = formatShortRelative(el.dataset.time);
     });
   }
 
   updateRelativeTimes();
   setInterval(updateRelativeTimes, 60000);
+
+  // --- Freshness / "last checked" indicator ------------------------------
+  // Reads the GitHub Actions run history directly (public API, no auth
+  // needed, CORS-enabled) rather than a committed timestamp file, so this
+  // reflects when the aggregator last successfully RAN — including runs
+  // that found nothing new — without requiring a repo commit every single
+  // run just to update a timestamp (which would defeat the "no pointless
+  // commits" design elsewhere in this project).
+  (function setupFreshnessIndicator() {
+    var container = document.getElementById("freshness-indicator");
+    var label = document.getElementById("freshness-label");
+    if (!container || !label) return;
+
+    var repo = container.dataset.ghRepo;
+    var workflow = container.dataset.ghWorkflow;
+    if (!repo || !workflow) return;
+
+    var STALE_AFTER_MINUTES = 30;
+    var lastCheckedAt = null;
+
+    function render() {
+      if (!lastCheckedAt) return;
+      var ageMinutes = (Date.now() - Date.parse(lastCheckedAt)) / 60000;
+      var rel = formatShortRelative(lastCheckedAt);
+      if (ageMinutes > STALE_AFTER_MINUTES) {
+        label.textContent = "FEED MAY BE DELAYED — last checked " + rel;
+        container.classList.add("stale");
+      } else {
+        label.textContent = "Last checked: " + rel;
+        container.classList.remove("stale");
+      }
+    }
+
+    function fetchStatus() {
+      var url =
+        "https://api.github.com/repos/" + repo + "/actions/workflows/" + workflow + "/runs?status=success&per_page=1";
+      fetch(url, { headers: { Accept: "application/vnd.github+json" } })
+        .then(function (res) {
+          return res.ok ? res.json() : null;
+        })
+        .then(function (data) {
+          var run = data && data.workflow_runs && data.workflow_runs[0];
+          if (run && run.updated_at) {
+            lastCheckedAt = run.updated_at;
+            render();
+          } else if (!lastCheckedAt) {
+            label.textContent = "Feed status unavailable";
+          }
+        })
+        .catch(function () {
+          if (!lastCheckedAt) label.textContent = "Feed status unavailable";
+        });
+    }
+
+    fetchStatus();
+    setInterval(render, 60000); // keep the relative time/staleness state ticking
+    setInterval(fetchStatus, 5 * 60000); // re-poll well under the 60 req/hr unauthenticated rate limit
+  })();
 })();

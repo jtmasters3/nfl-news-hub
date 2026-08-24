@@ -18,6 +18,12 @@ function absUrl(relativePath) {
   return SITE_URL ? `${SITE_URL}/${relativePath}` : `./${relativePath}`;
 }
 
+// GITHUB_REPOSITORY ("owner/repo") is set automatically inside GitHub
+// Actions; falls back to this project's known repo for local `npm run
+// refresh` runs so the freshness indicator still works outside CI.
+const GITHUB_REPO = process.env.GITHUB_REPOSITORY || "jtmasters3/nfl-news-hub";
+const WORKFLOW_FILE = "refresh.yml";
+
 function importanceLabel(score) {
   if (score >= 9) return "Breaking";
   if (score >= 7) return "Major";
@@ -71,7 +77,9 @@ function renderStoryCard(story) {
     `<span class="badge badge-category">${escapeHtml(categoryLabel(story.category))}</span>`,
     `<span class="badge badge-importance badge-importance-${importanceLabel(story.importance_score).toLowerCase()}">${importanceLabel(story.importance_score)}</span>`,
     story.is_rumor ? `<span class="badge badge-rumor">RUMOR</span>` : "",
-    story.status === "updated" ? `<span class="badge badge-updated">UPDATED</span>` : "",
+    story.status === "updated"
+      ? `<span class="badge badge-updated">UPDATED <span data-relative-time-short data-time="${escapeHtml(story.latest_published_at)}"></span></span>`
+      : "",
   ]
     .filter(Boolean)
     .join("\n            ");
@@ -83,11 +91,11 @@ function renderStoryCard(story) {
         data-teams="${escapeHtml(story.teams.join(","))}"
         data-importance="${story.importance_score}"
         data-rumor="${story.is_rumor}"
-        data-updated-at="${escapeHtml(story.updated_at)}"
+        data-latest-published-at="${escapeHtml(story.latest_published_at)}"
         data-search="${escapeHtml(searchBlob)}">
         <div class="card-badges">
             ${badges}
-            <span class="time" data-relative-time>${escapeHtml(story.updated_at)}</span>
+            <span class="time" data-relative-time data-time="${escapeHtml(story.latest_published_at)}"></span>
         </div>
         <h2 class="headline">${escapeHtml(story.headline)}</h2>
         ${teams ? `<p class="meta teams">${escapeHtml(teams)}</p>` : ""}
@@ -137,6 +145,9 @@ function renderPage(stories) {
       <h1>NFL NEWS FEED</h1>
       <p class="tagline">Aggregated from ESPN, NFL.com, FOX Sports &amp; Pro Football Talk — organized source material for Munch AI.</p>
       <p class="feed-links"><a href="./news.json">news.json</a> · <a href="./feed.xml">feed.xml</a></p>
+      <p class="freshness" id="freshness-indicator" data-gh-repo="${escapeHtml(GITHUB_REPO)}" data-gh-workflow="${escapeHtml(WORKFLOW_FILE)}">
+        <span id="freshness-label">Checking feed status…</span>
+      </p>
     </div>
   </header>
 
@@ -193,7 +204,7 @@ function renderFeedItem(story) {
       <title>${xmlEscape(story.headline)}</title>
       <link>${xmlEscape(primarySource?.url ?? "")}</link>
       <guid isPermaLink="false">${xmlEscape(story.id)}</guid>
-      <pubDate>${new Date(story.published_at).toUTCString()}</pubDate>
+      <pubDate>${new Date(story.latest_published_at).toUTCString()}</pubDate>
       <category>${xmlEscape(categoryLabel(story.category))}</category>
       <description>${xmlEscape(description)}</description>
     </item>`;

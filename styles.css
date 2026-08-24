@@ -69,6 +69,21 @@ a {
   text-decoration: none;
 }
 
+.freshness {
+  margin: 6px 0 0;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.freshness.stale {
+  color: #fff;
+  background: var(--accent-2);
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
 main.wrap {
   padding-top: 16px;
   padding-bottom: 40px;
