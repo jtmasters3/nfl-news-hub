@@ -2,12 +2,23 @@ import { asArray, fetchXml, textOf } from "./xml.js";
 import { stripHtml, truncate } from "./text.js";
 import { fetchOgDescription } from "./ogDescription.js";
 
-const MAX_ARTICLES = 25;
-const MAX_DESCRIPTION_FETCHES = 15;
+// Raised from 25/15: a real news window can easily carry 50-100+ items in a
+// Google News sitemap (observed 98 on NFL.com during testing), and the old
+// 25-item cap was silently dropping legitimate recent articles before they
+// were ever considered — a self-imposed miss, not a limit from the source.
+const MAX_ARTICLES = 60;
+const MAX_DESCRIPTION_FETCHES = 40;
 
 export async function fetchSitemapSource(source) {
   const xml = await fetchXml(source.feedUrl);
   const entries = asArray(xml.urlset?.url);
+
+  // Sitemaps that cover more than just NFL content (e.g. FOX Sports' single
+  // cross-sport news sitemap) need a path filter to isolate NFL articles.
+  // NFL.com's sitemap is NFL-only already, but still needs a filter to
+  // exclude non-news paths (video, schedules, etc.) that also carry
+  // <news:news> blocks.
+  const pathFilter = source.sitemapPathFilter ?? "/news/";
 
   const candidates = entries
     .filter((entry) => Boolean(entry["news:news"]))
@@ -18,7 +29,7 @@ export async function fetchSitemapSource(source) {
       const publishedRaw = textOf(news["news:publication_date"]).trim();
       return { loc, title, publishedAt: parseDate(publishedRaw) };
     })
-    .filter((entry) => entry.loc.includes("/news/") && entry.title);
+    .filter((entry) => entry.loc.includes(pathFilter) && entry.title);
 
   candidates.sort((a, b) => {
     const at = a.publishedAt ? Date.parse(a.publishedAt) : 0;
