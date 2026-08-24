@@ -12,12 +12,6 @@ import { formatHumanDateTime } from "./lib/dates.js";
 import { INDEX_HTML_PATH, FEED_XML_PATH } from "./lib/store.js";
 import { absUrl } from "./lib/urls.js";
 
-// GITHUB_REPOSITORY ("owner/repo") is set automatically inside GitHub
-// Actions; falls back to this project's known repo for local `npm run
-// refresh` runs so the freshness indicator still works outside CI.
-const GITHUB_REPO = process.env.GITHUB_REPOSITORY || "jtmasters3/nfl-news-hub";
-const WORKFLOW_FILE = "refresh.yml";
-
 function importanceLabel(score) {
   if (score >= 9) return "Breaking";
   if (score >= 7) return "Major";
@@ -140,8 +134,8 @@ function renderPage(stories) {
     <div class="wrap">
       <h1>NFL NEWS FEED</h1>
       <p class="tagline">Aggregated from ESPN, NFL.com, FOX Sports &amp; Pro Football Talk — organized source material for Munch AI.</p>
-      <p class="feed-links"><a href="./news.json">news.json</a> · <a href="./feed.xml">feed.xml</a></p>
-      <p class="freshness" id="freshness-indicator" data-gh-repo="${escapeHtml(GITHUB_REPO)}" data-gh-workflow="${escapeHtml(WORKFLOW_FILE)}">
+      <p class="feed-links"><a href="./news.json">news.json</a> · <a href="./feed.xml">feed.xml</a> · <a href="./status.json">status.json</a></p>
+      <p class="freshness" id="freshness-indicator">
         <span id="freshness-label">Checking feed status…</span>
       </p>
     </div>

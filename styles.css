@@ -75,6 +75,15 @@ a {
   color: var(--text-muted);
 }
 
+.freshness.delayed {
+  color: #7a5c00;
+  background: rgba(242, 199, 68, 0.35);
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
 .freshness.stale {
   color: #fff;
   background: var(--accent-2);

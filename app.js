@@ -197,61 +197,58 @@
   updateRelativeTimes();
   setInterval(updateRelativeTimes, 60000);
 
-  // --- Freshness / "last checked" indicator ------------------------------
-  // Reads the GitHub Actions run history directly (public API, no auth
-  // needed, CORS-enabled) rather than a committed timestamp file, so this
-  // reflects when the aggregator last successfully RAN — including runs
-  // that found nothing new — without requiring a repo commit every single
-  // run just to update a timestamp (which would defeat the "no pointless
-  // commits" design elsewhere in this project).
+  // --- Freshness / "last successful feed check" indicator ----------------
+  // Reads status.json (committed on every successful refresh, whether or
+  // not any story content changed) rather than GitHub's Actions API — a
+  // same-origin static file is not subject to API rate limits, caching
+  // ambiguity, or auth scope questions, and it's written by the same
+  // process that actually did the check, so there's no second system that
+  // could disagree with it.
   (function setupFreshnessIndicator() {
     var container = document.getElementById("freshness-indicator");
     var label = document.getElementById("freshness-label");
     if (!container || !label) return;
 
-    var repo = container.dataset.ghRepo;
-    var workflow = container.dataset.ghWorkflow;
-    if (!repo || !workflow) return;
-
-    var STALE_AFTER_MINUTES = 30;
-    var lastCheckedAt = null;
+    var DELAYED_AFTER_MINUTES = 30;
+    var STALE_AFTER_MINUTES = 60;
+    var lastSuccessfulRefresh = null;
 
     function render() {
-      if (!lastCheckedAt) return;
-      var ageMinutes = (Date.now() - Date.parse(lastCheckedAt)) / 60000;
-      var rel = formatShortRelative(lastCheckedAt);
+      if (!lastSuccessfulRefresh) return;
+      var ageMinutes = (Date.now() - Date.parse(lastSuccessfulRefresh)) / 60000;
+      var rel = formatShortRelative(lastSuccessfulRefresh);
+      container.classList.remove("stale", "delayed");
       if (ageMinutes > STALE_AFTER_MINUTES) {
-        label.textContent = "FEED MAY BE DELAYED — last checked " + rel;
+        label.textContent = "FEED STALE — automatic refresh may not be running (last successful check: " + rel + ")";
         container.classList.add("stale");
+      } else if (ageMinutes > DELAYED_AFTER_MINUTES) {
+        label.textContent = "FEED MAY BE DELAYED — last successful feed check: " + rel;
+        container.classList.add("delayed");
       } else {
-        label.textContent = "Last checked: " + rel;
-        container.classList.remove("stale");
+        label.textContent = "Last successful feed check: " + rel;
       }
     }
 
     function fetchStatus() {
-      var url =
-        "https://api.github.com/repos/" + repo + "/actions/workflows/" + workflow + "/runs?status=success&per_page=1";
-      fetch(url, { headers: { Accept: "application/vnd.github+json" } })
+      fetch("./status.json", { cache: "no-store" })
         .then(function (res) {
           return res.ok ? res.json() : null;
         })
         .then(function (data) {
-          var run = data && data.workflow_runs && data.workflow_runs[0];
-          if (run && run.updated_at) {
-            lastCheckedAt = run.updated_at;
+          if (data && data.last_successful_refresh) {
+            lastSuccessfulRefresh = data.last_successful_refresh;
             render();
-          } else if (!lastCheckedAt) {
+          } else if (!lastSuccessfulRefresh) {
             label.textContent = "Feed status unavailable";
           }
         })
         .catch(function () {
-          if (!lastCheckedAt) label.textContent = "Feed status unavailable";
+          if (!lastSuccessfulRefresh) label.textContent = "Feed status unavailable";
         });
     }
 
     fetchStatus();
     setInterval(render, 60000); // keep the relative time/staleness state ticking
-    setInterval(fetchStatus, 5 * 60000); // re-poll well under the 60 req/hr unauthenticated rate limit
+    setInterval(fetchStatus, 5 * 60000); // re-poll periodically for a fresher status.json
   })();
 })();

@@ -10,6 +10,7 @@ export const PROCESSED_ARTICLES_PATH = path.join(ROOT, "data", "processed-articl
 export const INDEX_HTML_PATH = path.join(ROOT, "index.html");
 export const FEED_XML_PATH = path.join(ROOT, "feed.xml");
 export const STORIES_DIR = path.join(ROOT, "stories");
+export const STATUS_JSON_PATH = path.join(ROOT, "status.json");
 
 const MAX_STORY_AGE_DAYS = 7; // stories older than this drop out of news.json
 const MAX_STORIES = 300; // hard cap regardless of age
@@ -64,9 +65,9 @@ function migrateStory(story) {
 /**
  * Writes news.json — but only if the story content actually changed.
  * Comparing against what's currently on disk (rather than blindly writing
- * every run) keeps `generated_at` stable across no-op refreshes, which in
- * turn keeps the scheduled workflow from creating a git commit every 20
- * minutes when nothing new happened.
+ * every run) keeps `generated_at` stable across no-op refreshes. This is
+ * `last_content_change`, NOT a proxy for "the aggregator is running" — see
+ * status.json / writeStatus() for that.
  */
 export async function writeNews(stories) {
   const cutoff = Date.now() - MAX_STORY_AGE_DAYS * 86_400_000;
@@ -114,6 +115,34 @@ export async function writeProcessedArticles(urls) {
   );
   await writeJsonAtomic(PROCESSED_ARTICLES_PATH, { urls: pruned });
   return pruned;
+}
+
+/**
+ * status.json is the source of truth for "is the aggregator actually
+ * running", separate from news.json's `generated_at` (which only moves
+ * when story *content* changes — many successful refreshes find nothing
+ * new, and that's not the same thing as the system being broken). Written
+ * unconditionally on every successful refresh, so a run that checked all
+ * sources and found zero new stories still proves the feed was checked.
+ *
+ * Three distinct timestamps, deliberately not conflated:
+ *   last_successful_refresh   — when the aggregator itself last completed
+ *                                a successful source check (this write)
+ *   last_content_change       — when the public story data itself last
+ *                                changed (mirrors news.json's generated_at)
+ *   latest_story_published_at — newest source-claimed publish time
+ *                                currently in the feed (can be legitimately
+ *                                old overnight/in the offseason — this is
+ *                                NOT a health signal on its own)
+ */
+export async function writeStatus({ storyCount, latestStoryPublishedAt, lastContentChange, workflowEvent }) {
+  await writeJsonAtomic(STATUS_JSON_PATH, {
+    last_successful_refresh: new Date().toISOString(),
+    last_content_change: lastContentChange,
+    latest_story_published_at: latestStoryPublishedAt,
+    story_count: storyCount,
+    workflow_event: workflowEvent,
+  });
 }
 
 export function projectRoot() {

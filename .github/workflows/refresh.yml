@@ -4,17 +4,29 @@ name: Refresh NFL news
 
 on:
   schedule:
-    # Every 10 minutes. GitHub Actions cron is best-effort and can run late
-    # under load — 10 min builds in real margin against the project's
-    # 30-minute freshness requirement rather than sitting right at the edge
-    # of it. Public repos get unlimited free Actions minutes, and each run
-    # takes ~15-20s, so this costs nothing.
-    - cron: "*/10 * * * *"
+    # Two independent staggered schedules, each nominally every 10 minutes,
+    # offset by 5 minutes from each other -> an actual trigger request every
+    # 5 minutes on average. This is redundancy, not just frequency: GitHub's
+    # own docs warn that scheduled workflows are best-effort and can be
+    # delayed or dropped under load — proven empirically in this repo, where
+    # only 1 of ~13 expected 10-minute firings over a 2-hour window actually
+    # ran (checked via the Actions API run history). A single schedule
+    # entry has no fallback if GitHub drops that exact minute; two
+    # independently-evaluated entries mean a drop in one doesn't leave a
+    # 10+ minute gap on its own. Minutes are offset from :00/:10/:20... on
+    # purpose — GitHub specifically calls out the top of the hour as a
+    # contention hotspot, so neither entry lands there.
+    - cron: "4,14,24,34,44,54 * * * *"
+    - cron: "9,19,29,39,49,59 * * * *"
   workflow_dispatch: {}
 
 permissions:
   contents: write
 
+# Both schedules (and any manual run) share this single group, so GitHub
+# queues a second trigger rather than running two refreshes in parallel —
+# this is what actually prevents the two staggered schedules from racing
+# each other or corrupting files, on top of the push-retry logic below.
 concurrency:
   group: refresh-nfl-news
   cancel-in-progress: false
@@ -33,10 +45,23 @@ jobs:
 
       - run: npm run refresh
 
-      - name: Commit updated feed (only if something changed)
+      - name: Commit and push (status.json every run; other files only if changed)
         run: |
           git config user.name "nfl-news-hub-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add news.json data/processed-articles.json index.html feed.xml
-          git diff --quiet --cached || git commit -m "Refresh NFL news feed"
-          git push
+          git add -A
+          if git diff --quiet --cached; then
+            echo "Nothing to commit."
+            exit 0
+          fi
+          git commit -m "Refresh NFL news feed"
+          for attempt in 1 2 3; do
+            if git push; then
+              echo "Pushed on attempt $attempt."
+              exit 0
+            fi
+            echo "Push rejected (attempt $attempt) — pulling latest main and retrying."
+            git pull --rebase origin main
+          done
+          echo "Failed to push after 3 attempts." >&2
+          exit 1
