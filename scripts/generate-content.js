@@ -70,6 +70,17 @@ export async function processDiscoveredArticles(sourceResults, existingStories, 
     }
   }
 
+  // Recompute munch_content for every story, not just ones touched this
+  // run. A story that hasn't received a new source in months would
+  // otherwise keep whatever munch_content string was generated the last
+  // time it *was* touched — including, permanently, an outdated format
+  // whenever formatMunchContent() changes. This keeps every story in sync
+  // with the current formatter on every run, cheap since it's pure string
+  // formatting with no I/O.
+  for (const story of stories) {
+    story.munch_content = buildMunchContent(story);
+  }
+
   return { stories, processedUrls: ledger, stats };
 }
 
@@ -220,6 +231,7 @@ function buildMunchContent(story) {
     teams: story.teams,
     players: story.players,
     sources: story.sources,
+    latestPublishedAt: story.latest_published_at,
     isRumor: story.is_rumor,
   });
 }

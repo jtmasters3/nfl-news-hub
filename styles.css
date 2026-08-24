@@ -226,6 +226,15 @@ main.wrap {
   line-height: 1.3;
 }
 
+.headline a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.headline a:hover {
+  text-decoration: underline;
+}
+
 .meta {
   margin: 0 0 2px;
   font-size: 0.85rem;
@@ -235,6 +244,38 @@ main.wrap {
 .summary {
   margin: 8px 0 0;
   font-size: 0.92rem;
+}
+
+.card-actions {
+  margin: 8px 0 0;
+}
+
+.open-story-btn {
+  display: inline-block;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.open-story-btn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Individual story page (/stories/*.html) — reuses .card and friends from
+   the homepage feed, just given a bit more breathing room as the only
+   thing on the page. */
+.story-page {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.story-page .card {
+  padding: 20px;
 }
 
 .story-details {

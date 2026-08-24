@@ -8,15 +8,9 @@ import { TEAMS } from "./lib/teams.js";
 import { FILTERS, BREAKING_IMPORTANCE_THRESHOLD } from "./lib/filters.js";
 import { categoryLabel } from "./lib/munch.js";
 import { escapeHtml, truncate } from "./lib/text.js";
+import { formatHumanDateTime } from "./lib/dates.js";
 import { INDEX_HTML_PATH, FEED_XML_PATH } from "./lib/store.js";
-
-// Optional: set SITE_URL (e.g. https://my-nfl-feed.com) once deployed so
-// feed.xml and canonical links use absolute URLs, which RSS readers expect.
-// Left unset, everything uses relative paths and still works fine.
-const SITE_URL = (process.env.SITE_URL || "").replace(/\/+$/, "");
-function absUrl(relativePath) {
-  return SITE_URL ? `${SITE_URL}/${relativePath}` : `./${relativePath}`;
-}
+import { absUrl } from "./lib/urls.js";
 
 // GITHUB_REPOSITORY ("owner/repo") is set automatically inside GitHub
 // Actions; falls back to this project's known repo for local `npm run
@@ -68,6 +62,7 @@ function renderStoryCard(story) {
                 <h4>${escapeHtml(s.name)}</h4>
                 <p><strong>Headline:</strong> ${escapeHtml(s.headline)}</p>
                 <p><strong>Description:</strong> ${escapeHtml(s.description || "(no description available)")}</p>
+                <p><strong>Published:</strong> ${escapeHtml(formatHumanDateTime(s.published_at))}</p>
                 <p><strong>Source:</strong> <a href="${escapeHtml(s.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(truncate(s.url, 70))}</a></p>
               </div>`
     )
@@ -97,10 +92,11 @@ function renderStoryCard(story) {
             ${badges}
             <span class="time" data-relative-time data-time="${escapeHtml(story.latest_published_at)}"></span>
         </div>
-        <h2 class="headline">${escapeHtml(story.headline)}</h2>
+        <h2 class="headline"><a href="${escapeHtml(story.story_url)}">${escapeHtml(story.headline)}</a></h2>
         ${teams ? `<p class="meta teams">${escapeHtml(teams)}</p>` : ""}
         ${players ? `<p class="meta players">${escapeHtml(players)}</p>` : ""}
         ${previewText ? `<p class="summary">${escapeHtml(truncate(previewText, 220))}</p>` : ""}
+        <p class="card-actions"><a class="open-story-btn" href="${escapeHtml(story.story_url)}">Open Story</a></p>
 
         <details class="story-details">
           <summary>Show full story (${story.sources.length} source${story.sources.length === 1 ? "" : "s"})</summary>
@@ -200,10 +196,13 @@ function xmlEscape(input) {
 function renderFeedItem(story) {
   const primarySource = story.sources[0];
   const description = primarySource?.description || story.headline;
+  // Links to our own story page (which itself links out to every original
+  // source) now that one exists — more useful to a feed reader than a
+  // single arbitrary source link, and matches the guid so it's stable.
   return `    <item>
       <title>${xmlEscape(story.headline)}</title>
-      <link>${xmlEscape(primarySource?.url ?? "")}</link>
-      <guid isPermaLink="false">${xmlEscape(story.id)}</guid>
+      <link>${xmlEscape(story.story_url)}</link>
+      <guid isPermaLink="true">${xmlEscape(story.story_url)}</guid>
       <pubDate>${new Date(story.latest_published_at).toUTCString()}</pubDate>
       <category>${xmlEscape(categoryLabel(story.category))}</category>
       <description>${xmlEscape(description)}</description>

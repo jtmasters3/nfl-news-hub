@@ -2,12 +2,14 @@ import { readFile, writeFile, rename, mkdir } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { storyHtmlUrl, storyJsonUrl } from "./urls.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
 export const NEWS_JSON_PATH = path.join(ROOT, "news.json");
 export const PROCESSED_ARTICLES_PATH = path.join(ROOT, "data", "processed-articles.json");
 export const INDEX_HTML_PATH = path.join(ROOT, "index.html");
 export const FEED_XML_PATH = path.join(ROOT, "feed.xml");
+export const STORIES_DIR = path.join(ROOT, "stories");
 
 const MAX_STORY_AGE_DAYS = 7; // stories older than this drop out of news.json
 const MAX_STORIES = 300; // hard cap regardless of age
@@ -79,7 +81,10 @@ export async function writeNews(stories) {
     // "Breaking"-scored one — that was the root cause of stale-looking
     // homepage content.
     .sort((a, b) => Date.parse(b.latest_published_at) - Date.parse(a.latest_published_at))
-    .slice(0, MAX_STORIES);
+    .slice(0, MAX_STORIES)
+    // Recomputed fresh every write from slug + SITE_URL — always in sync,
+    // no drift risk, no separate field to keep updated by hand.
+    .map((s) => ({ ...s, story_url: storyHtmlUrl(s.slug), story_json_url: storyJsonUrl(s.slug) }));
 
   const onDisk = await readJson(NEWS_JSON_PATH, { stories: [] });
   const unchanged = JSON.stringify(onDisk.stories ?? []) === JSON.stringify(pruned);

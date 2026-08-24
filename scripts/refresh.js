@@ -6,11 +6,12 @@
 //      category/importance/teams/players deterministically (generate-content.js)
 //   3. Write news.json + data/processed-articles.json (lib/store.js) —
 //      only if something actually changed
-//   4. Regenerate index.html + feed.xml (generate-html.js) — same guard
+//   4. Regenerate index.html + feed.xml + per-story pages/JSON — same guard
 import { fetchAllSources } from "./fetch-news.js";
 import { processDiscoveredArticles } from "./generate-content.js";
 import { readNews, writeNews, readProcessedArticles, writeProcessedArticles } from "./lib/store.js";
 import { generateHtml, generateFeedXml } from "./generate-html.js";
+import { generateStoryPages } from "./generate-stories.js";
 import { isAiConfigured } from "./lib/ai.js";
 
 async function main() {
@@ -42,8 +43,10 @@ async function main() {
   if (changed) {
     await generateHtml(savedStories);
     await generateFeedXml(savedStories);
+    const { written, removed } = await generateStoryPages(savedStories);
+    console.log(`[refresh] Story pages: ${written} written, ${removed} removed (aged out).`);
   } else {
-    console.log("[refresh] No story content changed — index.html/feed.xml left untouched.");
+    console.log("[refresh] No story content changed — index.html/feed.xml/stories left untouched.");
   }
 
   const seconds = ((Date.now() - startedAt) / 1000).toFixed(1);
