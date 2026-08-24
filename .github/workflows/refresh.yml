@@ -1,0 +1,38 @@
+name: Refresh NFL news
+# $0 cost, no secrets required — the refresh pipeline is fully deterministic
+# (RSS/sitemap parsing + rule-based clustering/categorization, no AI calls).
+
+on:
+  schedule:
+    # Every 20 minutes. GitHub Actions cron is best-effort, not exact.
+    - cron: "*/20 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-nfl-news
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - run: npm install
+
+      - run: npm run refresh
+
+      - name: Commit updated feed (only if something changed)
+        run: |
+          git config user.name "nfl-news-hub-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add news.json data/processed-articles.json index.html feed.xml
+          git diff --quiet --cached || git commit -m "Refresh NFL news feed"
+          git push
