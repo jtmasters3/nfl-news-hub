@@ -225,7 +225,9 @@
         label.textContent = "FEED MAY BE DELAYED — last successful feed check: " + rel;
         container.classList.add("delayed");
       } else {
-        label.textContent = "Last successful feed check: " + rel;
+        // Healthy state gets the "LIVE" treatment with a small red dot —
+        // rel/label text only, same underlying data/thresholds as above.
+        label.innerHTML = '<span class="live-dot"></span>LIVE &bull; Updated ' + rel;
       }
     }
 

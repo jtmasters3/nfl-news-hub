@@ -8,6 +8,8 @@ import { categoryLabel } from "./lib/munch.js";
 import { formatHumanDateTime } from "./lib/dates.js";
 import { escapeHtml, truncate } from "./lib/text.js";
 import { STORIES_DIR } from "./lib/store.js";
+import { BREAKING_IMPORTANCE_THRESHOLD } from "./lib/filters.js";
+import { absUrl } from "./lib/urls.js";
 
 function importanceLabel(score) {
   if (score >= 9) return "Breaking";
@@ -57,27 +59,38 @@ function renderStoryPage(story) {
   const players = story.players.join(", ");
   const description = truncate(story.sources[0]?.description || story.headline, 200);
   const sourceReportsHtml = story.sources.map(renderSourceReport).join("\n      ");
+  const breakingClass = story.importance_score >= BREAKING_IMPORTANCE_THRESHOLD ? " card-breaking" : "";
 
   return `<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>${escapeHtml(story.headline)} | NFL News Hub</title>
+  <title>${escapeHtml(story.headline)} | The Aggregate</title>
   <meta name="description" content="${escapeHtml(description)}" />
+  <link rel="icon" type="image/png" href="../assets/aggregate-mark.png" />
   <link rel="canonical" href="${escapeHtml(story.story_url)}" />
   <link rel="stylesheet" href="../styles.css" />
+  <meta property="og:site_name" content="The Aggregate" />
+  <meta property="og:title" content="${escapeHtml(story.headline)}" />
+  <meta property="og:description" content="${escapeHtml(description)}" />
+  <meta property="og:image" content="${escapeHtml(absUrl("assets/aggregate-logo.png"))}" />
   <script type="application/ld+json">${JSON.stringify(jsonLd(story))}</script>
 </head>
 <body>
   <header class="site-header">
-    <div class="wrap">
-      <p><a href="../index.html">&larr; NFL News Feed</a></p>
+    <div class="wrap header-row">
+      <a class="brand" href="../index.html">
+        <img class="brand-logo brand-logo-full" src="../assets/aggregate-logo.png" alt="The Aggregate" />
+        <img class="brand-logo brand-logo-mark" src="../assets/aggregate-mark.png" alt="The Aggregate" />
+        <span class="section-label">NFL</span>
+      </a>
     </div>
+    <p><a class="back-link" href="../index.html">&larr; Back to NFL Feed</a></p>
   </header>
 
   <main class="wrap story-page">
-    <article class="card">
+    <article class="card${breakingClass}">
       <div class="card-badges">
         ${badgesHtml}
       </div>
@@ -112,7 +125,9 @@ function renderStoryPage(story) {
 
   <footer class="site-footer">
     <div class="wrap">
-      <p>Sources: ESPN &middot; NFL.com &middot; FOX Sports &middot; Pro Football Talk. Every story links back to its original reporting.</p>
+      <p class="footer-brand">The Aggregate</p>
+      <p>NFL News Aggregator</p>
+      <p>Sources include ESPN, NFL.com, FOX Sports, and Pro Football Talk. Every story links back to its original reporting.</p>
     </div>
   </footer>
 

@@ -73,8 +73,10 @@ function renderStoryCard(story) {
     .filter(Boolean)
     .join("\n            ");
 
+  const breakingClass = story.importance_score >= BREAKING_IMPORTANCE_THRESHOLD ? " card-breaking" : "";
+
   return `
-      <article class="card"
+      <article class="card${breakingClass}"
         data-id="${escapeHtml(story.id)}"
         data-category="${escapeHtml(story.category)}"
         data-teams="${escapeHtml(story.teams.join(","))}"
@@ -124,21 +126,29 @@ function renderPage(stories) {
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NFL News Hub</title>
-  <meta name="description" content="Aggregated NFL news, deduplicated and organized as source material for social content production." />
-  <link rel="alternate" type="application/rss+xml" title="NFL News Hub" href="${absUrl("feed.xml")}" />
+  <title>The Aggregate | NFL News</title>
+  <meta name="description" content="The Aggregate — NFL news aggregated from ESPN, NFL.com, FOX Sports, and Pro Football Talk, organized as source material for social content production." />
+  <link rel="icon" type="image/png" href="./assets/aggregate-mark.png" />
+  <link rel="alternate" type="application/rss+xml" title="The Aggregate | NFL" href="${absUrl("feed.xml")}" />
   <link rel="stylesheet" href="./styles.css" />
+  <meta property="og:site_name" content="The Aggregate" />
+  <meta property="og:title" content="The Aggregate | NFL News" />
+  <meta property="og:description" content="NFL news aggregated from ESPN, NFL.com, FOX Sports, and Pro Football Talk." />
+  <meta property="og:image" content="${absUrl("assets/aggregate-logo.png")}" />
 </head>
 <body>
   <header class="site-header">
-    <div class="wrap">
-      <h1>NFL NEWS FEED</h1>
-      <p class="tagline">Aggregated from ESPN, NFL.com, FOX Sports &amp; Pro Football Talk — organized source material for Munch AI.</p>
-      <p class="feed-links"><a href="./news.json">news.json</a> · <a href="./feed.xml">feed.xml</a> · <a href="./status.json">status.json</a></p>
+    <div class="wrap header-row">
+      <a class="brand" href="./index.html">
+        <img class="brand-logo brand-logo-full" src="./assets/aggregate-logo.png" alt="The Aggregate" />
+        <img class="brand-logo brand-logo-mark" src="./assets/aggregate-mark.png" alt="The Aggregate" />
+        <span class="section-label">NFL</span>
+      </a>
       <p class="freshness" id="freshness-indicator">
         <span id="freshness-label">Checking feed status…</span>
       </p>
     </div>
+    <p class="feed-links"><a href="./news.json">news.json</a> · <a href="./feed.xml">feed.xml</a> · <a href="./status.json">status.json</a></p>
   </header>
 
   <main class="wrap">
@@ -164,7 +174,9 @@ function renderPage(stories) {
 
   <footer class="site-footer">
     <div class="wrap">
-      <p>Sources: ESPN · NFL.com · FOX Sports · Pro Football Talk. Every story links back to its original reporting.</p>
+      <p class="footer-brand">The Aggregate</p>
+      <p>NFL News Aggregator</p>
+      <p>Sources include ESPN, NFL.com, FOX Sports, and Pro Football Talk. Every story links back to its original reporting.</p>
     </div>
   </footer>
 
@@ -208,9 +220,9 @@ export async function generateFeedXml(stories) {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>NFL News Hub</title>
+    <title>The Aggregate | NFL</title>
     <link>${xmlEscape(absUrl("index.html"))}</link>
-    <description>Aggregated, deduplicated NFL news with organized source reporting.</description>
+    <description>The Aggregate — aggregated, deduplicated NFL news with organized source reporting.</description>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
 ${items}
   </channel>
