@@ -70,15 +70,21 @@ a {
 
 .brand-logo-full {
   display: block;
-  width: 340px;
+  width: 430px;
   max-width: 100%;
   height: auto;
 }
 
 .brand-logo-mark {
   display: none;
-  width: 64px;
-  height: auto;
+  width: auto;
+  height: 68px;
+}
+
+/* Story pages reuse the same masthead but at a slightly smaller scale so
+   the homepage remains the most visually dominant use of the logo. */
+.brand--compact .brand-logo-full {
+  width: 360px;
 }
 
 .header-subrow {
@@ -636,15 +642,23 @@ main.wrap {
    to nothing. Tested at 1440/1280/768/430/390/375.
    --------------------------------------------------------------------- */
 
-@media (max-width: 1024px) {
+@media (max-width: 1439px) {
   .brand-logo-full {
-    width: 280px;
+    width: 380px;
+  }
+
+  .brand--compact .brand-logo-full {
+    width: 320px;
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .brand-logo-full {
-    width: 240px;
+    width: 300px;
+  }
+
+  .brand--compact .brand-logo-full {
+    width: 260px;
   }
 }
 
@@ -655,7 +669,6 @@ main.wrap {
 
   .brand-logo-mark {
     display: block;
-    width: 56px;
   }
 
   .header-row {

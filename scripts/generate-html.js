@@ -128,7 +128,7 @@ function renderPage(stories) {
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Aggregate | NFL News</title>
   <meta name="description" content="The Aggregate — NFL news aggregated from ESPN, NFL.com, FOX Sports, and Pro Football Talk, organized as source material for social content production." />
-  <link rel="icon" type="image/png" href="./assets/aggregate-mark.png" />
+  <link rel="icon" type="image/png" href="./assets/aggregate-favicon.png" />
   <link rel="alternate" type="application/rss+xml" title="The Aggregate | NFL" href="${absUrl("feed.xml")}" />
   <link rel="stylesheet" href="./styles.css" />
   <meta property="og:site_name" content="The Aggregate" />

@@ -68,7 +68,7 @@ function renderStoryPage(story) {
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>${escapeHtml(story.headline)} | The Aggregate</title>
   <meta name="description" content="${escapeHtml(description)}" />
-  <link rel="icon" type="image/png" href="../assets/aggregate-mark.png" />
+  <link rel="icon" type="image/png" href="../assets/aggregate-favicon.png" />
   <link rel="canonical" href="${escapeHtml(story.story_url)}" />
   <link rel="stylesheet" href="../styles.css" />
   <meta property="og:site_name" content="The Aggregate" />
@@ -80,7 +80,7 @@ function renderStoryPage(story) {
 <body>
   <header class="site-header">
     <div class="wrap header-row">
-      <a class="brand" href="../index.html">
+      <a class="brand brand--compact" href="../index.html">
         <img class="brand-logo brand-logo-full" src="../assets/aggregate-logo-dark.png" alt="The Aggregate" />
         <img class="brand-logo brand-logo-mark" src="../assets/aggregate-mark-dark.png" alt="The Aggregate" />
       </a>
