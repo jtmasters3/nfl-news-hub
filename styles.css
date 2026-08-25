@@ -297,6 +297,17 @@ main.wrap {
   overflow: hidden;
 }
 
+/* .card[hidden] and .card.card-has-media are the same specificity (0,2,0);
+   card-has-media appears later in the cascade, so on a hidden card that
+   also has media it was winning with display:flex — the filter tabs would
+   set every card's [hidden] attribute correctly (confirmed via
+   card.hidden in app.js) but ~63% of cards stayed visually shown anyway.
+   This rule's three-part selector outranks both, independent of source
+   order, so a hidden media card always actually hides. */
+.card.card-has-media[hidden] {
+  display: none;
+}
+
 .card-media {
   flex: 0 0 260px;
   align-self: stretch;
