@@ -28,6 +28,23 @@ function renderSourceReport(s) {
       </div>`;
 }
 
+// Only rendered when a subject-matching image actually cleared the
+// confidence bar (see imageMatch.js) — no image field means no image area,
+// never a broken placeholder. "Image: [source]" always shown alongside a
+// real image; "Credit: [credit]" only when a credit was actually found —
+// never invented (see imageMeta.js).
+function renderStoryMedia(story) {
+  if (!story.primary_image_url) return "";
+  const alt = story.primary_image_alt || story.visual_subject || story.headline;
+  return `<div class="story-media">
+        <img src="${escapeHtml(story.primary_image_url)}" alt="${escapeHtml(alt)}" loading="lazy" />
+        <p class="media-attribution">
+          Image: ${escapeHtml(story.primary_image_source || "Unknown source")}
+          ${story.primary_image_credit ? ` &bull; Credit: ${escapeHtml(story.primary_image_credit)}` : ""}
+        </p>
+      </div>`;
+}
+
 function jsonLd(story) {
   return {
     "@context": "https://schema.org",
@@ -107,6 +124,7 @@ function renderStoryPage(story) {
         Latest report:
         <time datetime="${escapeHtml(story.latest_published_at)}">${escapeHtml(formatHumanDateTime(story.latest_published_at))}</time>
       </p>
+      ${renderStoryMedia(story)}
       ${story.status === "updated" && story.update_note ? `<p class="callout callout-updated"><strong>UPDATED:</strong> ${escapeHtml(story.update_note)}</p>` : ""}
       ${story.is_rumor ? `<p class="callout callout-rumor">RUMOR — unconfirmed report</p>` : ""}
 

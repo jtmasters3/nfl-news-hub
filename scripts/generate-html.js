@@ -74,9 +74,20 @@ function renderStoryCard(story) {
     .join("\n            ");
 
   const breakingClass = story.importance_score >= BREAKING_IMPORTANCE_THRESHOLD ? " card-breaking" : "";
+  // Only ever a remote reference to the publisher's own photo — never
+  // downloaded/rehosted (see imageMeta.js) — and only shown when a
+  // subject-matching image actually cleared the confidence bar (see
+  // imageMatch.js). No image field means no image area, never a broken
+  // placeholder.
+  const mediaHtml = story.primary_image_url
+    ? `<div class="card-media">
+          <img src="${escapeHtml(story.primary_image_url)}" alt="${escapeHtml(story.primary_image_alt || story.visual_subject || story.headline)}" loading="lazy" />
+        </div>`
+    : "";
+  const mediaClass = story.primary_image_url ? " card-has-media" : "";
 
   return `
-      <article class="card${breakingClass}"
+      <article class="card${breakingClass}${mediaClass}"
         data-id="${escapeHtml(story.id)}"
         data-category="${escapeHtml(story.category)}"
         data-teams="${escapeHtml(story.teams.join(","))}"
@@ -84,6 +95,8 @@ function renderStoryCard(story) {
         data-rumor="${story.is_rumor}"
         data-latest-published-at="${escapeHtml(story.latest_published_at)}"
         data-search="${escapeHtml(searchBlob)}">
+        ${mediaHtml}
+        <div class="card-body">
         <div class="card-badges">
             ${badges}
             <span class="time" data-relative-time data-time="${escapeHtml(story.latest_published_at)}"></span>
@@ -113,6 +126,7 @@ function renderStoryCard(story) {
             <textarea id="munch-${escapeHtml(story.id)}" class="munch-textarea" readonly>${escapeHtml(story.munch_content)}</textarea>
           </section>
         </details>
+        </div>
       </article>`;
 }
 
