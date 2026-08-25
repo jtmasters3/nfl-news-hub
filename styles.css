@@ -1,29 +1,17 @@
-/* The Aggregate — brand palette. Red sampled directly from the official
-   logo artwork (assets/aggregate-mark.png), not guessed. Overwhelmingly
-   black/white/gray with red used only for emphasis — no blue anywhere. */
+/* The Aggregate — dark, sports-broadcast brand theme. Black background
+   throughout, red accent sampled directly from the official logo artwork
+   (#e20915) used only for emphasis — no blue anywhere. */
 :root {
-  --bg: #f7f7f8; /* page background: very light gray */
-  --surface: #ffffff; /* story cards: white */
-  --border: #e2e2e4; /* light gray borders */
-  --text: #000000; /* headlines/major text: black */
-  --text-muted: #666668; /* metadata: medium gray */
-  --charcoal: #161616; /* dark secondary surface (nav bar, footer) */
-  --red: #e20915; /* brand accent — sampled from the logo */
-  --red-tint: rgba(226, 9, 21, 0.1);
+  --bg: #000000; /* page background */
+  --surface: #0b0b0b; /* story cards, primary surfaces */
+  --surface-alt: #171717; /* secondary surfaces: nav bar, inputs, footer */
+  --border: #2a2a2a;
+  --text: #ffffff; /* headlines/primary text */
+  --text-secondary: #b5b5b5; /* body copy, descriptions */
+  --text-muted: #888888; /* metadata */
+  --red: #e20915; /* brand accent */
+  --red-tint: rgba(226, 9, 21, 0.14);
   --radius: 6px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0a0a0a;
-    --surface: #161616;
-    --border: #2c2c2e;
-    --text: #ffffff;
-    --text-muted: #9a9a9e;
-    --charcoal: #000000;
-    --red: #ff2a35;
-    --red-tint: rgba(255, 42, 53, 0.14);
-  }
 }
 
 * {
@@ -50,12 +38,12 @@ a {
 }
 
 /* ---------------------------------------------------------------------
-   Header / brand
+   Header / brand — sports-network masthead: black, tall, logo-dominant.
    --------------------------------------------------------------------- */
 
 .site-header {
-  background: var(--surface);
-  border-bottom: 3px solid var(--text);
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
 }
 
 .header-row {
@@ -63,14 +51,13 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 16px 20px;
+  padding: 28px 20px 20px;
   flex-wrap: wrap;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
   text-decoration: none;
   color: var(--text);
   min-width: 0;
@@ -78,26 +65,39 @@ a {
 
 .brand-logo {
   display: block;
-  height: 34px;
   width: auto;
 }
 
 .brand-logo-full {
   display: block;
+  width: 340px;
+  max-width: 100%;
+  height: auto;
 }
 
 .brand-logo-mark {
   display: none;
-  height: 38px;
+  width: 64px;
+  height: auto;
+}
+
+.header-subrow {
+  border-top: 2px solid var(--red);
+}
+
+.header-subrow .wrap {
+  display: flex;
+  align-items: center;
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 
 .section-label {
-  border-left: 2px solid var(--red);
+  border-left: 3px solid var(--red);
   padding-left: 10px;
-  margin-left: 2px;
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--text);
 }
@@ -118,13 +118,15 @@ a {
   height: 7px;
   border-radius: 50%;
   background: var(--red);
+  box-shadow: 0 0 6px rgba(226, 9, 21, 0.8);
   margin-right: 6px;
   vertical-align: middle;
 }
 
 .freshness.delayed {
-  color: #7a5c00;
-  background: rgba(242, 199, 68, 0.35);
+  color: #ffb3b8;
+  background: rgba(226, 9, 21, 0.16);
+  border: 1px solid rgba(226, 9, 21, 0.4);
   display: inline-block;
   padding: 4px 10px;
   border-radius: 4px;
@@ -142,10 +144,9 @@ a {
 
 .feed-links {
   margin: 0;
-  padding: 6px 20px 10px;
+  padding: 6px 20px 14px;
   font-size: 0.75rem;
   color: var(--text-muted);
-  border-top: 1px solid var(--border);
 }
 
 .feed-links a {
@@ -158,7 +159,7 @@ a {
 }
 
 /* ---------------------------------------------------------------------
-   Category navigation — broadcast-style dark bar
+   Category navigation
    --------------------------------------------------------------------- */
 
 main.wrap {
@@ -177,7 +178,8 @@ main.wrap {
   display: flex;
   gap: 2px;
   overflow-x: auto;
-  background: var(--charcoal);
+  background: var(--surface-alt);
+  border-bottom: 1px solid var(--border);
   padding: 0 18px;
 }
 
@@ -198,6 +200,7 @@ main.wrap {
 
 .chip:hover {
   color: #fff;
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .chip.active {
@@ -215,12 +218,22 @@ main.wrap {
 
 .controls select,
 .controls input {
-  border: 1px solid var(--text);
-  background: var(--surface);
+  border: 1px solid var(--border);
+  background: var(--surface-alt);
   color: var(--text);
   border-radius: var(--radius);
   padding: 9px 11px;
   font-size: 0.9rem;
+}
+
+.controls select option {
+  background: var(--surface-alt);
+  color: var(--text);
+}
+
+.controls select::placeholder,
+.controls input::placeholder {
+  color: var(--text-muted);
 }
 
 .controls select:focus,
@@ -252,6 +265,11 @@ main.wrap {
   border-left: 3px solid var(--border);
   border-radius: var(--radius);
   padding: 18px 20px;
+  transition: background-color 0.15s ease;
+}
+
+.card:hover {
+  background: #131313;
 }
 
 .card[hidden] {
@@ -280,8 +298,9 @@ main.wrap {
 }
 
 .badge-category {
-  background: var(--charcoal);
+  background: var(--surface-alt);
   color: #fff;
+  border: 1px solid var(--border);
 }
 
 .badge-importance-breaking {
@@ -296,8 +315,9 @@ main.wrap {
 
 .badge-importance-normal,
 .badge-importance-minor {
-  background: var(--border);
+  background: var(--surface-alt);
   color: var(--text-muted);
+  border: 1px solid var(--border);
 }
 
 .badge-rumor {
@@ -307,7 +327,7 @@ main.wrap {
 
 .badge-updated {
   background: var(--red-tint);
-  color: var(--red);
+  color: #ff5a63;
   display: inline-flex;
   align-items: center;
   gap: 4px;
@@ -348,12 +368,13 @@ main.wrap {
 .meta.teams,
 .meta.players {
   font-weight: 600;
+  color: var(--text-secondary);
 }
 
 .summary {
   margin: 10px 0 0;
   font-size: 0.94rem;
-  color: var(--text);
+  color: var(--text-secondary);
 }
 
 .card-actions {
@@ -362,8 +383,8 @@ main.wrap {
 
 .open-story-btn {
   display: inline-block;
-  border: 1.5px solid var(--text);
-  background: var(--surface);
+  border: 1.5px solid var(--border);
+  background: var(--bg);
   color: var(--text);
   border-radius: var(--radius);
   padding: 6px 14px;
@@ -375,8 +396,8 @@ main.wrap {
 }
 
 .open-story-btn:hover {
-  background: var(--text);
-  color: #fff;
+  background: var(--surface-alt);
+  border-color: #4a4a4a;
 }
 
 /* ---------------------------------------------------------------------
@@ -440,6 +461,7 @@ main.wrap {
 
 .story-details p {
   margin: 0;
+  color: var(--text-secondary);
   font-size: 0.92rem;
 }
 
@@ -449,6 +471,7 @@ main.wrap {
   padding: 10px 12px;
   margin-top: 8px;
   font-size: 0.85rem;
+  background: var(--surface-alt);
 }
 
 .source-report h4 {
@@ -462,10 +485,12 @@ main.wrap {
 
 .source-report p {
   margin: 2px 0;
+  color: var(--text-secondary);
 }
 
 .source-report a {
   word-break: break-all;
+  color: var(--red);
 }
 
 .callout {
@@ -477,17 +502,23 @@ main.wrap {
 }
 
 .callout-rumor {
-  background: rgba(242, 199, 68, 0.2);
-  color: #7a5c00;
+  background: rgba(242, 199, 68, 0.16);
+  color: #f2c744;
+  border: 1px solid rgba(242, 199, 68, 0.35);
 }
 
 .callout-updated {
   background: var(--red-tint);
-  color: var(--red);
+  color: #ff5a63;
+  border: 1px solid rgba(226, 9, 21, 0.35);
 }
 
+/* ---------------------------------------------------------------------
+   Munch Content Brief
+   --------------------------------------------------------------------- */
+
 .munch-block {
-  background: var(--bg);
+  background: var(--surface-alt);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 12px;
@@ -503,10 +534,22 @@ main.wrap {
 .munch-header h2,
 .munch-header h3 {
   margin: 0;
+  color: var(--text);
+}
+
+.munch-header h2::before,
+.munch-header h3::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 0.9em;
+  background: var(--red);
+  margin-right: 8px;
+  vertical-align: middle;
 }
 
 .copy-btn {
-  background: var(--text);
+  background: var(--red);
   color: #fff;
   border: none;
   border-radius: var(--radius);
@@ -519,7 +562,7 @@ main.wrap {
 }
 
 .copy-btn:hover {
-  background: var(--red);
+  background: #ff1f2c;
 }
 
 .copy-btn.copied {
@@ -535,7 +578,7 @@ main.wrap {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 8px;
-  background: var(--surface);
+  background: var(--bg);
   color: var(--text);
 }
 
@@ -549,13 +592,30 @@ main.wrap {
   margin: 0 20px;
 }
 
+/* ---------------------------------------------------------------------
+   Footer
+   --------------------------------------------------------------------- */
+
 .site-footer {
-  border-top: 3px solid var(--text);
-  background: var(--charcoal);
-  color: #b8b8ba;
-  padding: 20px 0 30px;
+  border-top: 1px solid var(--border);
+  background: var(--surface-alt);
+  color: var(--text-secondary);
+  padding: 24px 0 30px;
   font-size: 0.8rem;
   margin-top: 20px;
+}
+
+.footer-brand-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.footer-logo {
+  display: block;
+  height: 22px;
+  width: auto;
 }
 
 .site-footer .footer-brand {
@@ -563,7 +623,7 @@ main.wrap {
   font-weight: 800;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  margin: 0 0 4px;
+  margin: 0;
 }
 
 .site-footer p {
@@ -571,8 +631,22 @@ main.wrap {
 }
 
 /* ---------------------------------------------------------------------
-   Mobile
+   Responsive — desktop logo scales down through tablet, then swaps to
+   the standalone mark on mobile so it stays legible instead of shrinking
+   to nothing. Tested at 1440/1280/768/430/390/375.
    --------------------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+  .brand-logo-full {
+    width: 280px;
+  }
+}
+
+@media (max-width: 900px) {
+  .brand-logo-full {
+    width: 240px;
+  }
+}
 
 @media (max-width: 640px) {
   .brand-logo-full {
@@ -581,18 +655,19 @@ main.wrap {
 
   .brand-logo-mark {
     display: block;
+    width: 56px;
+  }
+
+  .header-row {
+    padding: 20px 16px 16px;
   }
 
   .section-label {
     font-size: 0.85rem;
   }
 
-  .header-row {
-    padding: 12px 16px;
-  }
-
   .feed-links {
-    padding: 6px 16px 10px;
+    padding: 6px 16px 12px;
   }
 
   .filters {

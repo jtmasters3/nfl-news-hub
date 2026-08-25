@@ -81,10 +81,14 @@ function renderStoryPage(story) {
   <header class="site-header">
     <div class="wrap header-row">
       <a class="brand" href="../index.html">
-        <img class="brand-logo brand-logo-full" src="../assets/aggregate-logo.png" alt="The Aggregate" />
-        <img class="brand-logo brand-logo-mark" src="../assets/aggregate-mark.png" alt="The Aggregate" />
-        <span class="section-label">NFL</span>
+        <img class="brand-logo brand-logo-full" src="../assets/aggregate-logo-dark.png" alt="The Aggregate" />
+        <img class="brand-logo brand-logo-mark" src="../assets/aggregate-mark-dark.png" alt="The Aggregate" />
       </a>
+    </div>
+    <div class="header-subrow">
+      <div class="wrap">
+        <span class="section-label">NFL</span>
+      </div>
     </div>
     <p><a class="back-link" href="../index.html">&larr; Back to NFL Feed</a></p>
   </header>
@@ -125,7 +129,10 @@ function renderStoryPage(story) {
 
   <footer class="site-footer">
     <div class="wrap">
-      <p class="footer-brand">The Aggregate</p>
+      <div class="footer-brand-row">
+        <img class="footer-logo" src="../assets/aggregate-mark-dark.png" alt="" />
+        <p class="footer-brand">The Aggregate</p>
+      </div>
       <p>NFL News Aggregator</p>
       <p>Sources include ESPN, NFL.com, FOX Sports, and Pro Football Talk. Every story links back to its original reporting.</p>
     </div>
