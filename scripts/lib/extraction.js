@@ -97,48 +97,96 @@ const NON_NAME_PHRASES = new Set([
   "NFL", "NFL Draft", "Pro Bowl", "Super Bowl", "Week", "Monday Night",
   "Sunday Night", "Thursday Night", "Free Agency", "Training Camp",
   "Mock Draft", "Player Health", "Chief Medical", "Roster Cuts",
+  "Hall Of Fame", "Hall of Fame", "Hall of Fame Game",
 ]);
 
-// Common words that end up capitalized at the start of a sentence (or a
-// clause) and would otherwise be mistaken for the first word of a name —
-// "The Cowboys...", "After being booed...", "Two days later...".
-const COMMON_WORDS = new Set([
+// Pure function words — articles, pronouns, conjunctions, prepositions,
+// auxiliary/copula verbs, question words. These get capitalized purely by
+// sentence-position ("Is Patrick Mahomes still...", "The Cowboys...",
+// "After being booed...") and are NEVER part of an actual person's name,
+// so they're safe to both strip from the leading position (see
+// STRIPPABLE below) and reject outright if one somehow survives in a
+// non-leading position.
+const GRAMMAR_WORDS = new Set([
   "The", "A", "An", "This", "That", "These", "Those", "His", "Her", "Their",
   "Its", "Our", "Your", "He", "She", "They", "It", "We", "You", "I",
   "But", "And", "Or", "So", "If", "When", "While", "Since", "As", "On",
   "In", "At", "For", "With", "To", "From", "After", "Before", "Over",
   "Into", "About", "During", "Following", "Amid", "Per", "According",
-  "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine",
-  "Ten", "First", "Second", "Third", "Last", "Next", "New", "Old",
-  "There", "Here", "What", "Who", "How", "Why", "Despite", "Report",
-  "Reports", "Sources", "Source", "Team", "Teams", "Coach", "Coaches",
-  // Auxiliary/copula verbs capitalized as rhetorical-question sentence
-  // openers ("Is Patrick Mahomes still the league's best QB?").
+  "There", "Here", "What", "Who", "How", "Why", "Despite",
   "Is", "Are", "Was", "Were", "Be", "Been", "Has", "Have", "Had", "Does",
   "Do", "Did", "Will", "Would", "Should", "Could", "Can", "May", "Might",
-  // Role words that precede a reporter's name in attribution clauses
-  // ("NFL Network Insider Ian Rapoport", "ESPN Insider Adam Schefter
-  // reported...") — without these, reporters get mistaken for players.
+]);
+
+// Role/title words that precede a reporter's/coach's/executive's name in an
+// attribution or title clause ("NFL Network Insider Ian Rapoport",
+// "Cornerback Christian Gonzalez has...", "Commissioner Roger Goodell
+// said...", "Coach Mike Tomlin..."). Legitimately followed by a real name,
+// so — like GRAMMAR_WORDS — these are STRIPPED from the leading position
+// rather than causing the whole match to be discarded.
+const STRIPPABLE_TITLES = new Set([
   "Insider", "Network", "Reporter", "Analyst", "Correspondent",
-  "Contributor", "Columnist", "Writer",
-  // Position words that commonly open a sentence directly before a player's
-  // name ("Cornerback Christian Gonzalez has...", "Running Back Nick Chubb
-  // announced..."). Stripped from the front of a match rather than causing
-  // the whole match to be discarded — see extractLikelyPlayerNames below.
+  "Contributor", "Columnist", "Writer", "Commissioner", "Owner",
   "Cornerback", "Quarterback", "Linebacker", "Fullback", "Kicker", "Punter",
   "Safety", "Guard", "Tackle", "Center", "Receiver", "Running", "Wide",
   "Tight", "Defensive", "Offensive", "Rookie", "Veteran", "Star", "Pro",
-  "Free", "Edge",
+  "Free", "Edge", "Nose", "Strong", "Long", "Punt", "Kick", "Returner",
+  "Snapper", "Coach", "Coaches",
 ]);
 
-// Well-known NFL reporters, insiders, and staff analysts/columnists whose
-// names constantly appear as the subject of analysis pieces ("Chad Reuter
-// grades...", "Mike Clay provides his draft blueprint..."), which is
-// structurally identical to a player being the subject of a news sentence.
-// Not exhaustive — new bylines will still slip through occasionally; this
-// list only covers names actually observed in testing. Filtered out
-// explicitly since there's no reliable syntactic marker separating a
-// columnist byline from real player-does-something news.
+// The word combining GRAMMAR_WORDS and STRIPPABLE_TITLES — everything
+// that's safe to peel off the front of a candidate.
+const STRIPPABLE_LEADING = new Set([...GRAMMAR_WORDS, ...STRIPPABLE_TITLES]);
+
+// Content words that are ambiguous enough to be common in non-name
+// contexts (numbers/ordinals, "New"/"Old", generic wire-copy prefixes like
+// "Report:"/"Sources say") — ONLY ever cause outright rejection, never get
+// stripped. Stripping these is what previously turned "New York Times"
+// into the false positive "York Times": treating a content word like a
+// disposable title/grammar word left a garbage remainder standing in for
+// a whole organization's name.
+const NON_STRIPPABLE_REJECT_WORDS = new Set([
+  "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine",
+  "Ten", "First", "Second", "Third", "Last", "Next", "New", "Old",
+  "Report", "Reports", "Sources", "Source", "Team", "Teams",
+]);
+
+// Words that mean the candidate is an organization, publication, government
+// body, geographic/tribal entity, generic descriptor, or job title rather
+// than a person — reject the WHOLE candidate if any of these appear
+// anywhere in it (not just leading, unlike STRIPPABLE_TITLES above). Built
+// from concrete false positives seen in production (British Medical
+// Journal, Navajo Nation, Harris County Sheriff, Flag Football World,
+// Football Operations, Jaguars Executive, Physically Unable, Brothers
+// Matt, Hall of Fame Game) generalized into categories, not just those
+// exact strings, so the same class of mistake elsewhere gets caught too.
+const ENTITY_WORDS = new Set([
+  // Organizations / institutions
+  "Nation", "County", "State", "City", "District", "Territory", "Republic",
+  "Committee", "Department", "Office", "Agency", "Association", "Council",
+  "Bureau", "Authority", "Commission", "Corporation", "Company", "Group",
+  "Board", "Union", "League", "University", "College", "Hospital",
+  "Foundation", "Institute", "Society", "Academy", "School", "Center",
+  "Centre", "Operations", "Executive",
+  // Government / law enforcement
+  "Sheriff", "Police", "Court", "Attorney", "Prosecutor",
+  // Publications / media outlets
+  "Journal", "Times", "Post", "Tribune", "Herald", "Gazette", "News",
+  "Press", "Magazine", "Chronicle",
+  // Generic descriptors that showed up in garbage matches
+  "World", "Game", "Fame", "Football", "Brothers", "Count", "Physically",
+  "Unable", "Medical", "British",
+]);
+
+// Well-known NFL reporters, insiders, and staff analysts/columnists/media
+// personalities whose names constantly appear as the subject of analysis
+// pieces ("Chad Reuter grades...", "Mike Clay provides his draft
+// blueprint..."), which is structurally identical to a player being the
+// subject of a news sentence. Not exhaustive — new bylines will still slip
+// through occasionally; this list only covers names actually observed in
+// testing. Filtered out explicitly since there's no reliable syntactic
+// marker separating a columnist byline from real player-does-something
+// news.
 const KNOWN_REPORTERS = new Set([
   "Adam Schefter", "Ian Rapoport", "Tom Pelissero", "Jordan Schultz",
   "Mike Garafolo", "Jay Glazer", "Josina Anderson", "Field Yates",
@@ -147,6 +195,7 @@ const KNOWN_REPORTERS = new Set([
   "Mike Florio", "Charean Williams", "Michael David Smith",
   "Kevin Patra", "Chad Reuter", "Geoff Schwartz", "Mike Clay",
   "Jordan Reid", "Grant Gordon", "Bill Barnwell", "Dan Graziano",
+  "Bucky Brooks", "Colin Cowherd", "Lance Zierlein",
 ]);
 
 export function extractLikelyPlayerNames(text) {
@@ -168,13 +217,18 @@ export function extractLikelyPlayerNames(text) {
     if (/'s\s*$/.test(precedingText)) continue;
 
     let words = match.split(" ");
-    while (words.length > 2 && COMMON_WORDS.has(words[0])) {
-      words = words.slice(1); // drop a leading position/role word
+    while (words.length > 2 && STRIPPABLE_LEADING.has(words[0])) {
+      words = words.slice(1); // drop a leading grammar word or position/role/title word
     }
     if (words.length < 2) continue;
-    if (words.some((w) => COMMON_WORDS.has(w))) continue; // still hits a stoplisted word
-    if (words.every((w) => TEAM_WORDS.has(w))) continue; // whole phrase is a team name
-    if (words.length > 3) words = words.slice(0, 3); // First [Middle] Last, not a whole clause
+    if (words.some((w) => GRAMMAR_WORDS.has(w) || NON_STRIPPABLE_REJECT_WORDS.has(w) || ENTITY_WORDS.has(w))) continue; // hits a stoplisted word anywhere
+    // Trim to a plausible First [Middle] Last shape BEFORE checking
+    // against team words — checking on the untrimmed array let a team
+    // name followed by an extra word (e.g. "Las Vegas Raiders Sign")
+    // survive, because not *all* of the untrimmed words were team words,
+    // even though the trimmed-down phrase (the part actually kept) was.
+    if (words.length > 3) words = words.slice(0, 3);
+    if (words.every((w) => TEAM_WORDS.has(w))) continue; // whole (trimmed) phrase is a team name
 
     const name = words.join(" ");
     if (KNOWN_REPORTERS.has(name)) continue;

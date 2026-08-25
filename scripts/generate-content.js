@@ -70,14 +70,20 @@ export async function processDiscoveredArticles(sourceResults, existingStories, 
     }
   }
 
-  // Recompute munch_content for every story, not just ones touched this
-  // run. A story that hasn't received a new source in months would
-  // otherwise keep whatever munch_content string was generated the last
-  // time it *was* touched — including, permanently, an outdated format
-  // whenever formatMunchContent() changes. This keeps every story in sync
-  // with the current formatter on every run, cheap since it's pure string
-  // formatting with no I/O.
+  // Recompute players and munch_content for every story, not just ones
+  // touched this run. A story that hasn't received a new source in months
+  // would otherwise keep whatever player list / munch_content string was
+  // generated the last time it *was* touched — including, permanently, any
+  // false positives from a player-extraction bug that's since been fixed,
+  // or an outdated munch format whenever formatMunchContent() changes.
+  // This keeps every story in sync with the current extraction logic on
+  // every run, cheap since it's pure string processing with no I/O.
+  // players before munch_content: the Munch brief is built from players,
+  // so it needs the corrected list, not the stale one.
   for (const story of stories) {
+    story.players = Array.from(
+      new Set(story.sources.flatMap((s) => extractLikelyPlayerNames(s.description || "")))
+    );
     story.munch_content = buildMunchContent(story);
   }
 
