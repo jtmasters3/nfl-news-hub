@@ -35,6 +35,54 @@ function renderTeamOptions() {
   );
 }
 
+/**
+ * Compact "Social Post" block replacing the old Munch Content Brief —
+ * exactly the three facts needed to hand a post to Munch (or another
+ * downstream creative system): the graphic-ready headline, the base
+ * article image, and the reporting source. Deliberately does NOT show
+ * the creative brief, full instructions, source-reporting summaries, or
+ * caption text — those either live elsewhere already (Source Reporting
+ * section) or are computed but not meant to be pasted anywhere (see
+ * socialPayload.js). story.munch_content itself is untouched and still
+ * computed/stored — this only stops rendering it.
+ */
+function renderSocialPost(story) {
+  const social = story.social;
+  const headlineId = `social-headline-${escapeHtml(story.id)}`;
+  const imageUrlId = `social-image-url-${escapeHtml(story.id)}`;
+
+  const headlineHtml = social.post_headline
+    ? `<p class="social-post-value">${escapeHtml(social.post_headline)}</p>
+              <input type="hidden" id="${headlineId}" value="${escapeHtml(social.post_headline)}" />
+              <button type="button" class="copy-btn" data-copy-target="${headlineId}">Copy Headline</button>`
+    : `<p class="social-post-empty">Needs review</p>`;
+
+  const imageHtml = social.base_image_url
+    ? `<img class="social-post-image" src="${escapeHtml(social.base_image_url)}" alt="${escapeHtml(story.primary_image_alt || story.headline)}" loading="lazy" />
+              <input type="hidden" id="${imageUrlId}" value="${escapeHtml(social.base_image_url)}" />
+              <div class="social-post-image-actions">
+                <a class="open-story-btn" href="${escapeHtml(social.base_image_url)}" target="_blank" rel="noopener noreferrer">Open Image</a>
+                <button type="button" class="copy-btn" data-copy-target="${imageUrlId}">Copy Image URL</button>
+              </div>`
+    : `<p class="social-post-empty">No image found — needs media</p>`;
+
+  return `<section class="social-post">
+            <h3>Social Post</h3>
+            <div class="social-post-field">
+              <span class="social-post-label">Post Headline</span>
+              ${headlineHtml}
+            </div>
+            <div class="social-post-field">
+              <span class="social-post-label">Base Image</span>
+              ${imageHtml}
+            </div>
+            <div class="social-post-field">
+              <span class="social-post-label">Source</span>
+              <p class="social-post-value">${escapeHtml(social.source_name || "(unknown)")}</p>
+            </div>
+          </section>`;
+}
+
 function renderStoryCard(story) {
   const teams = story.teams.join(", ");
   const players = story.players.join(", ");
@@ -118,13 +166,7 @@ function renderStoryCard(story) {
             ${sourceReportsHtml}
           </section>
 
-          <section class="munch-block">
-            <div class="munch-header">
-              <h3>Munch Content</h3>
-              <button type="button" class="copy-btn" data-copy-target="munch-${escapeHtml(story.id)}">Copy for Munch</button>
-            </div>
-            <textarea id="munch-${escapeHtml(story.id)}" class="munch-textarea" readonly>${escapeHtml(story.munch_content)}</textarea>
-          </section>
+          ${renderSocialPost(story)}
         </details>
         </div>
       </article>`;

@@ -8,21 +8,24 @@ import { SOCIAL_FEED_JSON_PATH } from "./lib/store.js";
 
 function toFeedEntry(story) {
   const social = story.social;
+  // Deliberately excludes creative_brief and source_urls — both remain
+  // computed on story.social (and so still present in news.json / each
+  // story's own JSON) for internal use, but this feed is meant to be
+  // pasted straight into a downstream posting workflow, not read as a
+  // story brief, so it stays limited to exactly these fields.
   return {
     story_id: story.id,
     post_headline: social.post_headline,
     base_image_url: social.base_image_url,
     base_image_source: social.base_image_source,
     base_image_credit: social.base_image_credit,
-    caption: social.caption,
-    caption_generation: social.caption_generation,
-    creative_brief: social.creative_brief,
     source_url: social.source_url,
     source_name: social.source_name,
-    source_urls: social.source_urls,
     category: social.category,
     published_at: story.latest_published_at,
     social_status: social.social_status,
+    caption: social.caption,
+    caption_generation: social.caption_generation,
   };
 }
 
