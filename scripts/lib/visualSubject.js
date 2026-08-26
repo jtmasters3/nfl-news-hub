@@ -142,17 +142,31 @@ export function determineVisualSubject({ headline, combinedText, players, teams,
 // rest of the sentence) with nothing to stop it.
 const TEAM_NAME_CAPTURE = "([A-Z][A-Za-z0-9']*(?:\\s+[A-Z0-9][A-Za-z0-9']*){0,3})";
 
+// No "i" (case-insensitive) flag on any of these, despite the trigger
+// words below being hand-cased for both sentence-initial and mid-sentence
+// use — verified during the social-payload audit that the "i" flag
+// silently defeats TEAM_NAME_CAPTURE's own [A-Z0-9] "must start with a
+// capital" guard on its continuation tokens (under /i, [A-Z0-9] matches
+// lowercase too), letting the capture run on into ordinary lowercase
+// words right after the real team name ("to the Texans this week"
+// captured as "Texans this week", which then no longer matches exactly
+// one known team and silently falls through to a stale-team fallback —
+// reproduced live on a Kayshon Boutte/Texans story where a later source's
+// phrasing happened to trigger it). Case-sensitivity here is the actual
+// signal that separates a proper noun from a random word, so it must
+// never be relaxed by a blanket flag.
 const TEAM_JOIN_PATTERNS = [
-  new RegExp(`\\btrad(?:e[sd]?|ing)\\b[^.]{0,60}?\\bto\\s+(?:the\\s+)?${TEAM_NAME_CAPTURE}`, "i"),
-  new RegExp(`\\bsign(?:s|ed|ing)?\\b[^.]{0,60}?\\bwith\\s+(?:the\\s+)?${TEAM_NAME_CAPTURE}`, "i"),
-  new RegExp(`\\bagrees?\\s+to\\s+terms\\s+with\\s+(?:the\\s+)?${TEAM_NAME_CAPTURE}`, "i"),
-  new RegExp(`\\bclaimed\\b[^.]{0,60}?\\bby\\s+(?:the\\s+)?${TEAM_NAME_CAPTURE}`, "i"),
-  new RegExp(`\\bjoins?\\b[^.]{0,60}?\\bthe\\s+${TEAM_NAME_CAPTURE}`, "i"),
+  new RegExp(`\\b[Tt]rad(?:e[sd]?|ing)\\b[^.]{0,60}?\\b[Tt]o\\s+(?:[Tt]he\\s+)?${TEAM_NAME_CAPTURE}`),
+  new RegExp(`\\b[Ss]ign(?:s|ed|ing)?\\b[^.]{0,60}?\\b[Ww]ith\\s+(?:[Tt]he\\s+)?${TEAM_NAME_CAPTURE}`),
+  new RegExp(`\\b[Aa]grees?\\s+to\\s+terms\\s+with\\s+(?:[Tt]he\\s+)?${TEAM_NAME_CAPTURE}`),
+  new RegExp(`\\b[Cc]laimed\\b[^.]{0,60}?\\b[Bb]y\\s+(?:[Tt]he\\s+)?${TEAM_NAME_CAPTURE}`),
+  new RegExp(`\\b[Jj]oins?\\b[^.]{0,60}?\\b[Tt]he\\s+${TEAM_NAME_CAPTURE}`),
 ];
 
 // Team-first phrasing: "Chiefs sign RB Kenneth Walker III", "Chiefs trade for WR ...".
+// Same no-"i"-flag reasoning as above.
 const TEAM_FIRST_PATTERN =
-  /^([A-Z][A-Za-z0-9']*(?:\s+[A-Z0-9][A-Za-z0-9']*){0,3})\s+(?:sign|signs|trade for|trades for|acquire|acquires|claim|claims|agree to terms with|agrees to terms with)\b/i;
+  /^([A-Z][A-Za-z0-9']*(?:\s+[A-Z0-9][A-Za-z0-9']*){0,3})\s+(?:sign|signs|trade for|trades for|acquire|acquires|claim|claims|agree to terms with|agrees to terms with)\b/;
 
 /** Resolves free-text like "the Kansas City Chiefs" to exactly one known team, or null if ambiguous/unmatched. */
 function resolveOneTeam(text) {
