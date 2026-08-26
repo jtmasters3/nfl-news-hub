@@ -24,6 +24,7 @@ import {
 } from "./lib/store.js";
 import { generateHtml, generateFeedXml } from "./generate-html.js";
 import { generateStoryPages } from "./generate-stories.js";
+import { generateSocialFeed } from "./generate-social-feed.js";
 import { isAiConfigured } from "./lib/ai.js";
 
 async function main() {
@@ -60,6 +61,15 @@ async function main() {
   } else {
     console.log("[refresh] No story content changed — index.html/feed.xml/stories left untouched.");
   }
+
+  // Unconditional, unlike the block above — social-feed.json must never be
+  // allowed to drift out of sync with news.json just because no new NFL
+  // article happened to arrive this run. story.social is pure computation
+  // over data already in memory (no I/O), so regenerating it every single
+  // run is cheap and is the simplest possible guarantee of staying in sync
+  // — no separate staleness/diff check needed.
+  const { count: socialCount } = await generateSocialFeed(savedStories);
+  console.log(`[refresh] social-feed.json regenerated (${socialCount} entries).`);
 
   const seconds = ((Date.now() - startedAt) / 1000).toFixed(1);
   console.log(

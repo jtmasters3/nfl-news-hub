@@ -14,6 +14,7 @@ import { fetchArticleImageMeta, validateImageUrl } from "./lib/imageMeta.js";
 import { determineVisualSubject, detectCurrentTeam, buildVisualSearchQuery } from "./lib/visualSubject.js";
 import { selectStoryImages } from "./lib/imageMatch.js";
 import { mapWithConcurrency } from "./lib/concurrency.js";
+import { buildSocialPayload } from "./lib/socialPayload.js";
 
 const EMPTY_IMAGE_META = {
   image_url: null,
@@ -120,19 +121,24 @@ export async function processDiscoveredArticles(sourceResults, existingStories, 
     });
   }
 
-  // Recompute players, visual-media fields, and munch_content for every
-  // story, not just ones touched this run. A story that hasn't received a
-  // new source in months would otherwise keep whatever player list /
-  // visual subject / munch_content was generated the last time it *was*
-  // touched — including, permanently, any bug fixes since. Cheap: pure
-  // string processing over already-fetched data, no I/O.
-  // Order matters: players -> visual media (uses players) -> munch_content
-  // (uses both).
+  // Recompute players, visual-media fields, the social payload, and
+  // munch_content for every story, not just ones touched this run. A story
+  // that hasn't received a new source in months would otherwise keep
+  // whatever player list / visual subject / social payload / munch_content
+  // was generated the last time it *was* touched — including, permanently,
+  // any bug fixes since. Cheap: pure string processing over already-
+  // fetched data, no I/O. This is also how the social payload backfills
+  // for every pre-existing story the first time this feature ships — no
+  // separate backfill script needed, unlike image metadata (which needs a
+  // real fetch) — this is pure computation over fields already on disk.
+  // Order matters: players -> visual media (uses players) -> social (uses
+  // both) -> munch_content (uses all three).
   for (const story of stories) {
     story.players = Array.from(
       new Set(story.sources.flatMap((s) => extractLikelyPlayerNames(s.description || "")))
     );
     applyVisualMedia(story);
+    story.social = buildSocialPayload(story);
     story.munch_content = buildMunchContent(story);
   }
 
@@ -294,6 +300,9 @@ async function createStory(article, teamsDetected) {
     primary_image_credit: null,
     primary_image_alt: null,
     visual_search_query: null,
+    // Social-media payload (see socialPayload.js) — populated by the final
+    // recompute pass below, not here, same as the visual-media fields above.
+    social: null,
   };
 
   story.munch_content = buildMunchContent(story);

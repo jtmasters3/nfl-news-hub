@@ -11,6 +11,7 @@ export const INDEX_HTML_PATH = path.join(ROOT, "index.html");
 export const FEED_XML_PATH = path.join(ROOT, "feed.xml");
 export const STORIES_DIR = path.join(ROOT, "stories");
 export const STATUS_JSON_PATH = path.join(ROOT, "status.json");
+export const SOCIAL_FEED_JSON_PATH = path.join(ROOT, "social-feed.json");
 
 const MAX_STORY_AGE_DAYS = 7; // stories older than this drop out of news.json
 const MAX_STORIES = 300; // hard cap regardless of age
