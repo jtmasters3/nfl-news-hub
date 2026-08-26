@@ -160,6 +160,10 @@ const NON_STRIPPABLE_REJECT_WORDS = new Set([
 // Football Operations, Jaguars Executive, Physically Unable, Brothers
 // Matt, Hall of Fame Game) generalized into categories, not just those
 // exact strings, so the same class of mistake elsewhere gets caught too.
+// "Stadium"/"Arena"/"Field" added alongside initials-name support below —
+// "C.J."/"T.J."-style two-letter-initials matching also matches plain
+// abbreviations like "U.S.", and "U.S. Bank Stadium" would otherwise be a
+// new false-positive shape that couldn't occur before that support existed.
 const ENTITY_WORDS = new Set([
   // Organizations / institutions
   "Nation", "County", "State", "City", "District", "Territory", "Republic",
@@ -173,6 +177,8 @@ const ENTITY_WORDS = new Set([
   // Publications / media outlets
   "Journal", "Times", "Post", "Tribune", "Herald", "Gazette", "News",
   "Press", "Magazine", "Chronicle",
+  // Venues — see comment above
+  "Stadium", "Arena", "Field",
   // Generic descriptors that showed up in garbage matches
   "World", "Game", "Fame", "Football", "Brothers", "Count", "Physically",
   "Unable", "Medical", "British",
@@ -198,11 +204,44 @@ const KNOWN_REPORTERS = new Set([
   "Bucky Brooks", "Colin Cowherd", "Lance Zierlein",
 ]);
 
+// A capitalized name word, in the two shapes real NFL names actually take:
+//   - normal: capital + 1+ lowercase, e.g. "Marr", "Chase", "Andre"
+//   - apostrophe-led: capital + apostrophe + letters with zero lowercase
+//     before the apostrophe, e.g. "D'" in "D'Andre", "O'" in "O'Brien"
+// Either shape may then take an internal apostrophe-continuation
+// ("Ja" + "'Marr") and/or a hyphenated second capitalized chunk
+// ("Amon" + "-Ra", "Gardner" + "-Johnson"). Never matches a bare single
+// capital letter with nothing else — that would start matching stray
+// list markers/grades ("Tier A") as if they were names, which the
+// apostrophe/hyphen requirement on the short branch avoids.
+//
+// The apostrophe-continuation is deliberately restricted to an UPPERCASE
+// letter right after the apostrophe (['’][A-Z][a-z]*), never a general
+// [A-Za-z]+ — a real internal-name apostrophe is always followed by a
+// capitalized syllable (Ja'Marr, O'Brien), while a possessive marker is
+// always a lowercase "s" (Jeanty's, Watson's). A generic class matched
+// both, so every legitimately-extracted name immediately followed by its
+// own possessive in the source text ("Ashton Jeanty's ankle...") was
+// coming out as "Ashton Jeanty's" instead of "Ashton Jeanty" — caught
+// during the 50-story validation for this exact fix.
+const NAME_WORD =
+  "(?:[A-Z][a-z]+(?:['’][A-Z][a-z]*)?|[A-Z]['’][A-Z][a-z]*)(?:-[A-Z][a-z]+(?:['’][A-Z][a-z]*)?)?";
+
+// Two-letter initials used as a first name — "C.J.", "T.J.", "A.J.",
+// "D.J." — always exactly two capital-letter+period pairs, no space
+// between them, immediately followed by a real surname.
+const INITIALS_WORD = "[A-Z]\\.[A-Z]\\.";
+
+const FIRST_TOKEN = `(?:${INITIALS_WORD}|${NAME_WORD})`;
+// Continuation tokens may additionally end in a trailing period — suffix
+// abbreviations like "Jr." — same allowance the previous pattern had.
+const CONTINUATION_TOKEN = `(?:${INITIALS_WORD}|${NAME_WORD}\\.?)`;
+
 export function extractLikelyPlayerNames(text) {
   // Capture up to 4 words so a leading position/role word ("Cornerback
   // Christian Gonzalez", "Receiver Odell Beckham Jr.") can be stripped
   // below without losing the name entirely.
-  const regex = /\b[A-Z][a-z]+(?:\s[A-Z][a-z.]+){1,3}\b/g;
+  const regex = new RegExp(`\\b${FIRST_TOKEN}(?:\\s${CONTINUATION_TOKEN}){1,3}\\b`, "g");
   const found = new Set();
 
   for (const m of text.matchAll(regex)) {
