@@ -77,6 +77,50 @@ function stripPositionPhrases(text) {
   return out;
 }
 
+// Collapses verb-tense/inflection variants of the same transaction/status
+// word down to one canonical token before scoring — same word families as
+// GENERIC_EVENT_WORDS above, just mapped to a representative form instead
+// of being dropped, since here they need to still COUNT toward similarity
+// (dropping them would erase a real, meaningful signal that two headlines
+// describe the same kind of event). Found live in production: PFT's
+// "Report: Browns to release WR Cedric Tillman" ("release") scored 0.300
+// against FOX's "Browns Reportedly Releasing Former 3rd-Round Pick Cedric
+// Tillman" ("releasing") — just under the 0.32 team-aware threshold —
+// purely because "release" and "releasing" tokenize as two unrelated words
+// with no stemming, fragmenting what should have been a shared token.
+const VERB_STEM_GROUPS = [
+  ["trade", "trades", "traded", "trading"],
+  ["acquire", "acquires", "acquired", "acquiring"],
+  ["sign", "signs", "signed", "signing"],
+  ["release", "releases", "released", "releasing"],
+  ["waive", "waives", "waived", "waiving"],
+  ["cut", "cuts", "cutting"],
+  ["activate", "activates", "activated", "activating"],
+  ["promote", "promotes", "promoted", "promoting"],
+  ["injure", "injures", "injured", "injuring", "injury", "injuries"],
+  ["suffer", "suffers", "suffered", "suffering"],
+  ["diagnose", "diagnoses", "diagnosed", "diagnosis"],
+  ["confirm", "confirms", "confirmed", "confirming"],
+  ["fail", "fails", "failed", "failing"],
+  ["retire", "retires", "retired", "retiring", "retirement"],
+  ["fire", "fires", "fired", "firing"],
+  ["hire", "hires", "hired", "hiring"],
+  ["suspend", "suspends", "suspended", "suspending", "suspension"],
+  ["clear", "clears", "cleared", "clearing"],
+  ["return", "returns", "returned", "returning"],
+  ["rule", "rules", "ruled", "ruling"],
+  ["place", "places", "placed", "placing"],
+  ["extend", "extends", "extended", "extending", "extension"],
+  ["agree", "agrees", "agreed", "agreeing"],
+];
+const VERB_STEM_MAP = new Map();
+for (const group of VERB_STEM_GROUPS) {
+  for (const word of group) VERB_STEM_MAP.set(word, group[0]);
+}
+function stemToken(token) {
+  return VERB_STEM_MAP.get(token) ?? token;
+}
+
 /**
  * Tokenizes a headline for clustering comparison. Strips multi-word
  * position phrases first, then collapses every team mention (city,
@@ -103,7 +147,7 @@ export function normalizeHeadlineTokens(text) {
     if (stripWords.has(t)) continue;
     if (POSITION_ABBR_TOKENS.has(t)) continue;
     if (SUFFIX_TOKENS.has(t)) continue;
-    result.add(t);
+    result.add(stemToken(t));
   }
   for (const abbr of teams) result.add(`team:${abbr}`);
   return result;
