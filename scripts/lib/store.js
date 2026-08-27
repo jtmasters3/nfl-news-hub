@@ -12,6 +12,19 @@ export const FEED_XML_PATH = path.join(ROOT, "feed.xml");
 export const STORIES_DIR = path.join(ROOT, "stories");
 export const STATUS_JSON_PATH = path.join(ROOT, "status.json");
 export const SOCIAL_FEED_JSON_PATH = path.join(ROOT, "social-feed.json");
+// Persistent social-workflow state (data/social-state.json) — the
+// authoritative record of what has happened to each story_id's social
+// workflow. NEVER regenerated wholesale like SOCIAL_FEED_JSON_PATH/
+// SOCIAL_ARTWORK_QUEUE_JSON_PATH below; only ever read-modified-written by
+// scripts/lib/socialState.js. See that file for why.
+export const SOCIAL_STATE_PATH = path.join(ROOT, "data", "social-state.json");
+// Small config (publishing_mode, cutover_at for audit) — not a secret, safe
+// as plain committed JSON; not consumed by any automatic-mode logic yet.
+export const SOCIAL_CONFIG_PATH = path.join(ROOT, "data", "social-config.json");
+// Derived queue (like SOCIAL_FEED_JSON_PATH) — regenerated unconditionally
+// every refresh from social-state.json, never itself the source of truth.
+export const SOCIAL_ARTWORK_QUEUE_JSON_PATH = path.join(ROOT, "social-artwork-queue.json");
+export const POSTS_FOR_APPROVAL_HTML_PATH = path.join(ROOT, "posts-for-approval.html");
 
 const MAX_STORY_AGE_DAYS = 7; // stories older than this drop out of news.json
 const MAX_STORIES = 300; // hard cap regardless of age

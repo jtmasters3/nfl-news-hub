@@ -741,6 +741,89 @@ main.wrap {
 }
 
 /* ---------------------------------------------------------------------
+   Posts For Approval — admin/social-workflow view, not an NFL category.
+   Reuses .card/.badge/.empty-state/.story-page rather than inventing a
+   parallel visual language; the handful of classes below are only for the
+   things genuinely unique to this page (side-by-side artwork/base-image
+   media, the "no actions yet" note).
+   --------------------------------------------------------------------- */
+
+.approval-page-title {
+  color: var(--text);
+  font-size: 1.4rem;
+  letter-spacing: 0.02em;
+  margin: 20px 20px 16px;
+}
+
+.approval-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.approval-item {
+  padding: 18px 20px;
+}
+
+.approval-headline {
+  font-size: 1.1rem;
+}
+
+.approval-media {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 14px 0;
+}
+
+@media (max-width: 560px) {
+  .approval-media {
+    grid-template-columns: 1fr;
+  }
+}
+
+.approval-media-block {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px;
+  background: var(--surface-alt);
+}
+
+.approval-media-label {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.approval-media-image {
+  display: block;
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.approval-empty {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.approval-actions-note {
+  margin: 14px 0 0;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+/* ---------------------------------------------------------------------
    Footer
    --------------------------------------------------------------------- */
 

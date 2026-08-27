@@ -25,6 +25,8 @@ import {
 import { generateHtml, generateFeedXml } from "./generate-html.js";
 import { generateStoryPages } from "./generate-stories.js";
 import { generateSocialFeed } from "./generate-social-feed.js";
+import { generateArtworkQueue } from "./generate-artwork-queue.js";
+import { generatePostsForApproval } from "./generate-posts-for-approval.js";
 import { isAiConfigured } from "./lib/ai.js";
 
 async function main() {
@@ -70,6 +72,23 @@ async function main() {
   // — no separate staleness/diff check needed.
   const { count: socialCount } = await generateSocialFeed(savedStories);
   console.log(`[refresh] social-feed.json regenerated (${socialCount} entries).`);
+
+  // Persistent social-workflow state (data/social-state.json) + its two
+  // derived views — same "regenerate unconditionally every run" philosophy
+  // as social-feed.json above, since the underlying state can advance
+  // (e.g. a story becoming image-eligible later) even on a run where
+  // news.json's own content didn't change. See scripts/lib/socialState.js
+  // for why this file, unlike social-feed.json, is never wholesale
+  // rewritten from scratch — only read-modified-written.
+  const { count: queueCount, created: socialRecordsCreated, promoted: socialRecordsPromoted } =
+    await generateArtworkQueue(savedStories);
+  console.log(
+    `[refresh] social-artwork-queue.json regenerated (${queueCount} entries; ` +
+      `${socialRecordsCreated} new social-state record(s), ${socialRecordsPromoted} promoted to queued).`
+  );
+
+  const { count: approvalCount } = await generatePostsForApproval();
+  console.log(`[refresh] posts-for-approval.html regenerated (${approvalCount} item(s) awaiting approval).`);
 
   const seconds = ((Date.now() - startedAt) / 1000).toFixed(1);
   console.log(

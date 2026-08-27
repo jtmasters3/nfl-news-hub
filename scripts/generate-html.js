@@ -208,7 +208,7 @@ function renderPage(stories) {
         <span class="section-label">NFL</span>
       </div>
     </div>
-    <p class="feed-links"><a href="./news.json">news.json</a> · <a href="./feed.xml">feed.xml</a> · <a href="./status.json">status.json</a></p>
+    <p class="feed-links"><a href="./news.json">news.json</a> · <a href="./feed.xml">feed.xml</a> · <a href="./status.json">status.json</a> · <a href="./posts-for-approval.html">Posts For Approval</a></p>
   </header>
 
   <main class="wrap">
