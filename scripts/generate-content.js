@@ -78,7 +78,10 @@ export async function processDiscoveredArticles(sourceResults, existingStories, 
 
       const text = `${article.headline} ${article.excerpt}`;
       const teamsDetected = detectTeams(text).map(teamName);
-      const match = pickBestMatch({ headline: article.headline, text, teams: teamsDetected }, candidates);
+      const match = pickBestMatch(
+        { headline: article.headline, text, excerpt: article.excerpt, teams: teamsDetected },
+        candidates
+      );
 
       let story;
       if (match) {
@@ -189,6 +192,9 @@ function buildClusterCandidates(stories) {
     id: s.id,
     headline: s.headline,
     sourceHeadlines: s.sources.map((src) => src.headline),
+    // Feeds pickBestMatch's excerpt-corroboration rescue only — never used
+    // for the primary headline-similarity score. See similarity.js.
+    sourceDescriptions: s.sources.map((src) => src.description || ""),
     teams: s.teams,
     // Clustering eligibility ages out based on actual news recency
     // (latest_published_at), not on when we last happened to touch the
@@ -204,6 +210,7 @@ function upsertCandidate(candidates, story) {
     id: story.id,
     headline: story.headline,
     sourceHeadlines: story.sources.map((s) => s.headline),
+    sourceDescriptions: story.sources.map((s) => s.description || ""),
     teams: story.teams,
     lastUpdatedAt: story.latest_published_at,
   };

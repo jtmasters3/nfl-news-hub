@@ -16,6 +16,19 @@ import { classifyCategory } from "./extraction.js";
 // See similarity.js's use of detectEventTypes for why that matters.
 export const UNSPECIFIC_TYPE = "league_news";
 
+// Types that always represent a MATERIALLY NEW development — a diagnosis, a
+// reversal, a status change — as opposed to just a finer-grained
+// characterization of the same base event. similarity.js treats these two
+// tiers differently: a story with no concrete type yet (e.g. a bare "Player
+// carted off" headline, which matches no classifyCategory rule) can freely
+// pick up a BASE type from its first real report without that counting as a
+// conflict — but an ESCALATION type is never free to attach that way, even
+// onto an unspecific story, because "carted off" -> "torn ACL, out for
+// season" must never merge just because the story hadn't committed to a
+// type yet. An escalation type is only ever compatible with a candidate
+// that already carries that same escalation type from an earlier source.
+export const ESCALATION_TYPES = new Set(["injury_diagnosis", "trade_rescinded", "cleared_status"]);
+
 const SUPPLEMENTARY_PATTERNS = [
   {
     // A materially more specific/severe development than a bare injury
@@ -42,6 +55,15 @@ const SUPPLEMENTARY_PATTERNS = [
       /\bplaced\s+on\s+(?:injured\s+reserve|IR)\b/i,
       /\bruled\s+out\b/i,
       /\bfails?\s+(?:his |her |a |the )?physical\b/i,
+      // A duration/prognosis determination is new information regardless of
+      // which specific body part or structure is named — a bare "injured
+      // his foot" carries no timeline, while "to miss time"/"out X weeks"
+      // reflects an actual diagnosis having been made. General on purpose
+      // (not scoped to any one injury type) so it doesn't need a growing
+      // enumeration of every possible named injury the way ACL/MCL/
+      // achilles/meniscus above does.
+      /\b(?:will|to|expected to)\s+miss\s+(?:time|\d+|multiple|several|some)\b/i,
+      /\bmiss(?:es|ed)?\s+(?:\d+\+?\s+)?(?:games?|weeks?)\b/i,
     ],
   },
   {
@@ -57,7 +79,14 @@ const SUPPLEMENTARY_PATTERNS = [
     // classifyCategory rule, so without this it would fall through to the
     // unspecific catch-all and never register as a distinct development.
     type: "cleared_status",
-    patterns: [/\bcleared\b/i, /\breturns?\s+to\s+practice\b/i],
+    // Allows up to two intervening words between "to" and "practice" (e.g.
+    // a team name/possessive: "returns to Patriots practice", "returns to
+    // the team's practice") — found via a real-data replay: the literal
+    // "returns to practice" phrase alone missed "Christian Gonzalez
+    // returns to Patriots practice" entirely, which fell through to the
+    // unspecific catch-all instead of being recognized as a real status
+    // change.
+    patterns: [/\bcleared\b/i, /\breturns?\s+to\s+(?:\w+\s+){0,2}practice\b/i],
   },
   {
     // classifyCategory's own free_agency rule only matches the PAST-TENSE
