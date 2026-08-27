@@ -6,6 +6,20 @@ const CLUSTER_WINDOW_HOURS = 72;
 const TEAM_AWARE_THRESHOLD = 0.32; // article and candidate share a team
 const TEAM_AGNOSTIC_THRESHOLD = 0.5; // no shared team (e.g. league-wide news) — require a closer match
 
+// A leading "Outlet:"/"Report:"/"Sources:" attribution prefix is scaffolding
+// for a news headline, not part of the actual fact — left in, it pollutes
+// the token set with outlet-name noise ("nfl", "network") that dilutes the
+// similarity score against every other outlet's un-prefixed headline for
+// the same event. Same pattern already used in socialPayload.js for the
+// same reason; duplicated here (rather than imported) to keep this module's
+// only dependency on that file nonexistent — found live in production data:
+// "NFL Network: Seahawks, DT Leonard Williams agree to three-year, $90M
+// extension" was scoring just under threshold against FOX's un-prefixed
+// "Seahawks Reportedly Extend Star DL Leonard Williams On 3-Year Deal"
+// (0.308 vs. the 0.32 team-aware bar) for exactly this reason.
+const SOURCE_PREFIX_PATTERN =
+  /^(?:NFL Network|NFL\.com|ESPN|FOX Sports|Fox Sports|Pro Football Talk|PFT|NBC Sports|CBS Sports|Yahoo Sports|The Athletic|Report|Reports|Source|Sources|Breaking)\s*:\s*/i;
+
 // Multi-word position phrases, stripped as whole phrases from the raw text
 // before tokenizing — deliberately NOT a per-word stopword list, so generic
 // words like "back"/"end"/"line" are never dropped except as part of an
@@ -72,7 +86,8 @@ function stripPositionPhrases(text) {
  * move the similarity score. Exported for the live-data audit script.
  */
 export function normalizeHeadlineTokens(text) {
-  const teams = detectTeams(text);
+  const withoutPrefix = text.replace(SOURCE_PREFIX_PATTERN, "");
+  const teams = detectTeams(withoutPrefix);
   const stripWords = new Set();
   for (const abbr of teams) {
     const team = TEAMS.find((t) => t.abbr === abbr);
@@ -82,7 +97,7 @@ export function normalizeHeadlineTokens(text) {
     }
   }
 
-  const tokens = titleTokens(stripPositionPhrases(text));
+  const tokens = titleTokens(stripPositionPhrases(withoutPrefix));
   const result = new Set();
   for (const t of tokens) {
     if (stripWords.has(t)) continue;
