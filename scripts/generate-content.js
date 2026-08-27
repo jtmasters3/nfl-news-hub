@@ -78,7 +78,7 @@ export async function processDiscoveredArticles(sourceResults, existingStories, 
 
       const text = `${article.headline} ${article.excerpt}`;
       const teamsDetected = detectTeams(text).map(teamName);
-      const match = pickBestMatch({ headline: article.headline, teams: teamsDetected }, candidates);
+      const match = pickBestMatch({ headline: article.headline, text, teams: teamsDetected }, candidates);
 
       let story;
       if (match) {
