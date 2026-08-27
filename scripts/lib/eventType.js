@@ -59,6 +59,22 @@ const SUPPLEMENTARY_PATTERNS = [
     type: "cleared_status",
     patterns: [/\bcleared\b/i, /\breturns?\s+to\s+practice\b/i],
   },
+  {
+    // classifyCategory's own free_agency rule only matches the PAST-TENSE
+    // "released" — a present-tense/gerund "release"/"releasing" headline
+    // (common outlet phrasing: "Team releasing Player") falls all the way
+    // through to the unspecific catch-all instead. Since the catch-all
+    // never counts as a "new type" (see UNSPECIFIC_TYPE), a "sign" story
+    // and a later, unrelated "release" story for the SAME player could
+    // both land on no-concrete-type and look compatible — exactly the kind
+    // of opposite-action false merge the event-type gate exists to catch.
+    // This is a general action-family signal (independent of
+    // classifyCategory, and never touches the public category field), not
+    // specific to any one player/team/outlet — caught by the
+    // "signing -> later release" case in the permanent regression suite.
+    type: "release",
+    patterns: [/\breleas(?:e|es|ed|ing)\b/i, /\bwaiv(?:e|es|ed|ing)\b/i],
+  },
 ];
 
 /**
