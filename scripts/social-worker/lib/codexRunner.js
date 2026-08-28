@@ -88,7 +88,10 @@ export async function runCodex({ promptText, addDir, timeoutMs = 20 * 60 * 1000,
 
     const timer = setTimeout(() => {
       child.kill();
-      reject(new Error(`codex exec timed out after ${timeoutMs}ms`));
+      const err = new Error(`codex exec timed out after ${timeoutMs}ms`);
+      err.codexStdout = stdout;
+      err.codexStderr = stderr;
+      reject(err);
     }, timeoutMs);
 
     child.stdin.write(promptText);
@@ -106,8 +109,18 @@ export async function runCodex({ promptText, addDir, timeoutMs = 20 * 60 * 1000,
     });
     child.on("close", (code) => {
       clearTimeout(timer);
-      if (code === 0) resolve({ stdout, stderr, exitCode: code });
-      else reject(new Error(`codex exec exited with code ${code}. stderr tail: ${stderr.slice(-2000)}`));
+      if (code === 0) {
+        resolve({ stdout, stderr, exitCode: code });
+        return;
+      }
+      // Attach the FULL stdout/stderr to the error (not just a truncated
+      // tail in the message) so the caller can always write complete logs
+      // to disk on a real Codex crash, not just on the happy path.
+      const err = new Error(`codex exec exited with code ${code}. stderr tail: ${stderr.slice(-2000)}`);
+      err.codexStdout = stdout;
+      err.codexStderr = stderr;
+      err.codexExitCode = code;
+      reject(err);
     });
   });
 }

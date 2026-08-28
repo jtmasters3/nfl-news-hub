@@ -20,6 +20,7 @@ import { fileURLToPath } from "node:url";
 import { claimStory, completeArtwork, failArtwork, fetchArtworkQueue } from "./lib/apiClient.js";
 import { runCodex } from "./lib/codexRunner.js";
 import { readPngDimensions } from "./lib/pngDimensions.js";
+import { selectTarget, missingFixtureFields } from "./lib/selectTarget.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
 const SOCIAL_OUTPUT_DIR = path.join(ROOT, "social-output");
@@ -36,10 +37,12 @@ function parseArgs(argv) {
 }
 
 async function pickTarget(storyId) {
-  if (storyId) return { story_id: storyId };
+  // Always fetch the queue, even for an explicit --story-id — the 2026-08-28
+  // f4328222-... incident happened because this used to skip the fetch
+  // entirely and return a bare {story_id}, silently discarding the real
+  // post_headline/base_image_url. See lib/selectTarget.js.
   const queue = await fetchArtworkQueue();
-  if (!queue.length) return null;
-  return queue[0];
+  return selectTarget(queue, storyId);
 }
 
 async function buildPrompt({ storyId, workDir, fixture }) {
@@ -73,6 +76,20 @@ async function main() {
   }
 
   const storyId = target.story_id;
+
+  // Fail fast, before ever claiming — a claim burns a real lease and a
+  // generation attempt, so an incomplete target (e.g. an explicit
+  // --story-id not found in the live queue, such as a lease-recovery case
+  // this processor doesn't yet fetch source data for) must be caught here,
+  // not discovered only after Codex has already run.
+  const missing = missingFixtureFields(target);
+  if (missing.length) {
+    console.error(`Refusing to claim ${storyId}: missing required fixture field(s): ${missing.join(", ")}.`);
+    console.error("This usually means the story wasn't found in the live artwork queue (e.g. a lease-recovery case) — this processor doesn't yet have a way to fetch its source data outside the queue.");
+    process.exitCode = 1;
+    return;
+  }
+
   console.log(`Claiming ${storyId}...`);
   const claimResult = await claimStory(storyId);
 
@@ -108,9 +125,21 @@ async function main() {
     const { promptText, outputPath } = await buildPrompt({ storyId, workDir, fixture });
 
     console.log("Running codex exec...");
-    const codexResult = await runCodex({ promptText, addDir: SOCIAL_OUTPUT_DIR });
+    let codexResult;
+    try {
+      codexResult = await runCodex({ promptText, addDir: SOCIAL_OUTPUT_DIR });
+    } catch (codexErr) {
+      // Persist whatever output Codex produced even on a crash/timeout —
+      // codexRunner.js attaches the full stdout/stderr to the error for
+      // exactly this, not just the truncated tail in the message.
+      await writeFile(path.join(workDir, "codex.stdout.log"), codexErr.codexStdout ?? "", "utf-8");
+      await writeFile(path.join(workDir, "codex.stderr.log"), codexErr.codexStderr ?? "", "utf-8");
+      console.error(`codex exec failed (exit code ${codexErr.codexExitCode ?? "n/a"}) — see ${workDir}\\codex.std{out,err}.log`);
+      throw codexErr;
+    }
     await writeFile(path.join(workDir, "codex.stdout.log"), codexResult.stdout, "utf-8");
     await writeFile(path.join(workDir, "codex.stderr.log"), codexResult.stderr, "utf-8");
+    console.log(`codex exec exited 0. stdout/stderr written to ${workDir}`);
 
     const dims = await readPngDimensions(outputPath);
     if (!dims || dims.sizeBytes === 0) {
