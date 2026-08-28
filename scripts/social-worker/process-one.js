@@ -55,10 +55,12 @@ async function buildPrompt({ storyId, workDir, fixture }) {
     .replaceAll("{{template_pack_dir}}", templatePackDir)
     .replaceAll("{{output_path}}", outputPath);
 
+  // Written for logs/debugging only — codex exec itself receives promptText
+  // via stdin, matching the proven invocation exactly (see codexRunner.js).
   const promptFilePath = path.join(workDir, "prompt.md");
   await writeFile(promptFilePath, promptText, "utf-8");
 
-  return { promptText, promptFilePath, outputPath };
+  return { promptText, outputPath };
 }
 
 async function main() {
@@ -96,10 +98,10 @@ async function main() {
   };
 
   try {
-    const { promptText, promptFilePath, outputPath } = await buildPrompt({ storyId, workDir, fixture });
+    const { promptText, outputPath } = await buildPrompt({ storyId, workDir, fixture });
 
     console.log("Running codex exec...");
-    const codexResult = await runCodex({ promptText, promptFilePath, cwd: workDir });
+    const codexResult = await runCodex({ promptText, addDir: SOCIAL_OUTPUT_DIR });
     await writeFile(path.join(workDir, "codex.stdout.log"), codexResult.stdout, "utf-8");
     await writeFile(path.join(workDir, "codex.stderr.log"), codexResult.stderr, "utf-8");
 

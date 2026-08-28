@@ -1,27 +1,88 @@
-// Invokes the already-proven noninteractive `codex exec` workflow. The
-// exact CLI invocation that was proven working in this environment wasn't
-// captured verbatim, so this is deliberately configurable rather than
-// guessed at with false confidence — set CODEX_EXEC_MODE to match whatever
-// was actually proven:
-//   "arg"   (default) — codex exec <extra args...> "<full prompt text>"
-//   "stdin"            — codex exec <extra args...>, prompt piped via stdin
-//   "file"             — codex exec <extra args...> <promptFilePath>
-// CODEX_BIN (default "codex") and CODEX_EXTRA_ARGS (space-separated, e.g.
-// "--full-auto") are also both overridable without touching this file.
+// Invokes codex exec using the exact invocation pattern proven working in
+// this environment on 2026-08-26 (see the fixture/prompt this workflow
+// grew out of, under C:\Users\jacks\Documents\Codex\2026-08-26\...):
+//
+//   $codex = <newest codex.exe under CODEX_INSTALL_DIR>
+//   Get-Content -Raw <prompt> | & $codex -a never -s workspace-write
+//     -C <CODEX_WORKSPACE_DIR> --add-dir <social-output dir>
+//     exec --skip-git-repo-check -
+//
+// Deliberately NOT re-guessed or made "more flexible" than that — every
+// flag below is fixed to match the proven run. The only configurable
+// pieces are the two paths (CODEX_INSTALL_DIR / CODEX_WORKSPACE_DIR),
+// overridable for testing without touching this file, both defaulting to
+// exactly what was proven.
 import { spawn } from "node:child_process";
+import { readdir, stat } from "node:fs/promises";
+import path from "node:path";
 
-export async function runCodex({ promptText, promptFilePath, cwd, timeoutMs = 20 * 60 * 1000 }) {
-  const bin = process.env.CODEX_BIN || "codex";
-  const extraArgs = process.env.CODEX_EXTRA_ARGS ? process.env.CODEX_EXTRA_ARGS.split(" ").filter(Boolean) : [];
-  const mode = process.env.CODEX_EXEC_MODE || "arg";
+const DEFAULT_CODEX_INSTALL_DIR = "C:\\Users\\jacks\\AppData\\Local\\OpenAI\\Codex\\bin";
+const DEFAULT_CODEX_WORKSPACE_DIR = "C:\\Users\\jacks\\Documents\\Codex\\2026-08-26\\use-this-story-s-headline-and";
 
-  const args = ["exec", ...extraArgs];
-  if (mode === "arg") args.push(promptText);
-  else if (mode === "file") args.push(promptFilePath);
-  else if (mode !== "stdin") throw new Error(`Unknown CODEX_EXEC_MODE: ${mode}`);
+export function codexInstallDir() {
+  return process.env.CODEX_INSTALL_DIR || DEFAULT_CODEX_INSTALL_DIR;
+}
+
+export function codexWorkspaceDir() {
+  return process.env.CODEX_WORKSPACE_DIR || DEFAULT_CODEX_WORKSPACE_DIR;
+}
+
+async function walkForFile(dir, fileName) {
+  const matches = [];
+  let entries;
+  try {
+    entries = await readdir(dir, { withFileTypes: true });
+  } catch {
+    return matches;
+  }
+  for (const entry of entries) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      matches.push(...(await walkForFile(full, fileName)));
+    } else if (entry.isFile() && entry.name.toLowerCase() === fileName.toLowerCase()) {
+      matches.push(full);
+    }
+  }
+  return matches;
+}
+
+/**
+ * Recursively finds every codex.exe under the install dir and returns the
+ * most recently modified one — mirrors:
+ *   Get-ChildItem ... -Filter codex.exe -File -Recurse |
+ *     Sort-Object LastWriteTimeUtc -Descending | Select -First 1
+ */
+export async function findCodexExe(installDir = codexInstallDir()) {
+  const candidates = await walkForFile(installDir, "codex.exe");
+  if (candidates.length === 0) {
+    throw new Error(`No codex.exe found under ${installDir}`);
+  }
+  const withTimes = await Promise.all(candidates.map(async (p) => ({ path: p, mtimeMs: (await stat(p)).mtimeMs })));
+  withTimes.sort((a, b) => b.mtimeMs - a.mtimeMs);
+  return withTimes[0].path;
+}
+
+/**
+ * Pure arg-list builder — kept separate from spawn() so it's directly
+ * unit-testable without invoking a real codex.exe.
+ */
+export function buildCodexArgs({ workspaceDir, addDir }) {
+  return ["-a", "never", "-s", "workspace-write", "-C", workspaceDir, "--add-dir", addDir, "exec", "--skip-git-repo-check", "-"];
+}
+
+/**
+ * @param {{ promptText: string, addDir: string, timeoutMs?: number, codexExePath?: string }} opts
+ *   addDir must be the writable output directory (social-output) — the
+ *   sandbox is workspace-write, scoped to the codex workspace dir plus
+ *   exactly this one extra directory, matching the proven invocation.
+ */
+export async function runCodex({ promptText, addDir, timeoutMs = 20 * 60 * 1000, codexExePath }) {
+  const bin = codexExePath || (await findCodexExe());
+  const workspaceDir = codexWorkspaceDir();
+  const args = buildCodexArgs({ workspaceDir, addDir });
 
   return new Promise((resolve, reject) => {
-    const child = spawn(bin, args, { cwd, shell: false, windowsHide: true });
+    const child = spawn(bin, args, { cwd: workspaceDir, shell: false, windowsHide: true });
     let stdout = "";
     let stderr = "";
 
@@ -30,10 +91,8 @@ export async function runCodex({ promptText, promptFilePath, cwd, timeoutMs = 20
       reject(new Error(`codex exec timed out after ${timeoutMs}ms`));
     }, timeoutMs);
 
-    if (mode === "stdin") {
-      child.stdin.write(promptText);
-      child.stdin.end();
-    }
+    child.stdin.write(promptText);
+    child.stdin.end();
 
     child.stdout.on("data", (chunk) => {
       stdout += chunk;

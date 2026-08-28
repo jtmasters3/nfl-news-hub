@@ -9,7 +9,7 @@ the process that invoked you — your only job is producing the image file.
 Perform the following workflow as a fresh run using only the files and
 URLs named below. Do not rely on conversation history or memory.
 
-1. Read `{{fixture_path}}` from the workspace root.
+1. Read `{{fixture_path}}` (an absolute path).
 2. Read the reference guide and these six approved The Aggregate templates
    from `{{template_pack_dir}}`:
    - `01-split-editorial.jpg`
