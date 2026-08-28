@@ -9,8 +9,10 @@
     "serve": "node scripts/serve.js",
     "test:clustering": "node scripts/tests/clustering-regression.mjs",
     "test:social-state": "node scripts/tests/social-state-regression.mjs",
+    "test:artwork-events": "node scripts/tests/artwork-events-regression.mjs",
     "social:seed-cutover": "node scripts/social/cutover-seed.js",
-    "social:enqueue": "node scripts/social/enqueue-story.js"
+    "social:enqueue": "node scripts/social/enqueue-story.js",
+    "social:process-one": "node scripts/social-worker/process-one.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.120.0",

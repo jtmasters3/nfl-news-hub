@@ -4,3 +4,7 @@ node_modules
 .env*.local
 npm-debug.log*
 .DS_Store
+
+# Local Codex artwork-generation scratch output — the durable artifact
+# lives in Cloudflare R2, never committed here.
+social-output/

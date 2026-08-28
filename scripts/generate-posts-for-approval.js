@@ -37,6 +37,7 @@ function renderItem(record) {
   return `<article class="card approval-item" data-story-id="${escapeHtml(record.story_id)}">
         <div class="card-badges approval-badges">
           <span class="badge badge-category">${escapeHtml(record.status)}</span>
+          ${s.category ? `<span class="badge badge-category">${escapeHtml(s.category)}</span>` : ""}
         </div>
         <h2 class="headline approval-headline">${escapeHtml(headline)}</h2>
         <div class="approval-media">
@@ -47,6 +48,7 @@ function renderItem(record) {
           ${s.source_url ? ` &mdash; <a href="${escapeHtml(s.source_url)}" target="_blank" rel="noopener noreferrer">View original</a>` : ""}</p>
         <p class="meta"><strong>Story ID:</strong> <code>${escapeHtml(record.story_id)}</code></p>
         <p class="meta"><strong>Created:</strong> ${escapeHtml(formatHumanDateTime(record.created_at))}</p>
+        ${record.artwork?.created_at ? `<p class="meta"><strong>Artwork created:</strong> ${escapeHtml(formatHumanDateTime(record.artwork.created_at))}</p>` : ""}
         <p class="approval-actions-note">Approve / Reject / Regenerate will appear here once the approval backend is connected. No action taken on this page persists anything yet.</p>
       </article>`;
 }

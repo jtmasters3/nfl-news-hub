@@ -1,0 +1,63 @@
+name: Social artwork event
+# Applies exactly one artwork-bridge state transition (claimed / completed /
+# failed), fired by the Cloudflare Worker via repository_dispatch once it
+# has atomically claimed a story (or accepted/rejected an upload). This is
+# the ONLY writer of these transitions — see scripts/social/apply-artwork-event.js
+# and scripts/lib/artworkEvents.js, both of which build on the existing
+# scripts/lib/socialState.js transition table rather than a second one.
+#
+# Deliberately narrow: never runs `npm run refresh`, never touches
+# clustering/ingestion/news.json, and commits only the three files this
+# event chain can legitimately change.
+
+on:
+  repository_dispatch:
+    types: [artwork-claimed, artwork-completed, artwork-failed]
+
+permissions:
+  contents: write
+
+# One event applied at a time, in delivery order, so two dispatches for the
+# same story_id can't race each other into the same working tree.
+concurrency:
+  group: social-artwork-event
+  cancel-in-progress: false
+
+jobs:
+  apply-event:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - run: npm install
+
+      - name: Apply artwork event
+        env:
+          ARTWORK_EVENT_TYPE: ${{ github.event.action }}
+          ARTWORK_EVENT_PAYLOAD: ${{ toJson(github.event.client_payload) }}
+        run: node scripts/social/apply-artwork-event.js
+
+      - name: Commit and push (only if the state files actually changed)
+        run: |
+          git config user.name "nfl-news-hub-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/social-state.json social-artwork-queue.json posts-for-approval.html
+          if git diff --quiet --cached; then
+            echo "Nothing to commit."
+            exit 0
+          fi
+          git commit -m "Social artwork event: ${{ github.event.action }} (${{ github.event.client_payload.story_id }})"
+          for attempt in 1 2 3; do
+            if git push; then
+              echo "Pushed on attempt $attempt."
+              exit 0
+            fi
+            echo "Push rejected (attempt $attempt) — pulling latest main and retrying."
+            git pull --rebase origin main
+          done
+          echo "Failed to push after 3 attempts." >&2
+          exit 1
