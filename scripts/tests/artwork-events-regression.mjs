@@ -153,6 +153,15 @@ test("Q: a valid artwork submission reaches awaiting_approval with a permanent i
   assert.equal(result.record.status, "awaiting_approval");
   assert.equal(result.record.artwork.image_url, "https://artwork.example.test/social-artwork/TEST-A.png"); // O
   assert.equal(buildQueueEntries(result.state).length, 0, "T: never reappears in the queue after completion");
+
+  // The persistent record itself — not just this call's return value — must
+  // accurately reflect that validation ran and passed (2026-08-28 audit-trail
+  // bug: the real production record kept showing validation.status "not_run"
+  // even after successfully reaching awaiting_approval).
+  assert.equal(result.record.validation.status, "passed");
+  assert.equal(result.record.validation.passed, true);
+  assert.deepEqual(result.record.validation.issues, []);
+  assert.notEqual(result.record.validation.status, "not_run", "awaiting_approval must never carry a not_run validation record");
 });
 
 // ---------------------------------------------------------------------------
@@ -168,6 +177,35 @@ test("R: an artwork failing validation (wrong aspect ratio) transitions to faile
   assert.ok(result.validation.issues.some((i) => i.startsWith("aspect_ratio_out_of_range")));
   assert.equal(result.record.status, "failed");
   assert.equal(result.state.stories["TEST-A"].last_error.stage, "validation");
+
+  // The persistent record must accurately represent the failure too, not
+  // just last_error — same fix as the success path above.
+  assert.equal(result.record.validation.status, "failed");
+  assert.equal(result.record.validation.passed, false);
+  assert.ok(result.record.validation.issues.some((i) => i.startsWith("aspect_ratio_out_of_range")), "the actual issues array must be persisted, not discarded");
+});
+
+// ---------------------------------------------------------------------------
+// Validation audit trail: multiple simultaneous issues are all persisted,
+// not just the first/summary one.
+// ---------------------------------------------------------------------------
+test("Validation audit trail: multiple simultaneous failure reasons are all persisted verbatim", () => {
+  let state = queuedState("TEST-A");
+  state = applyClaimEvent(state, { story_id: "TEST-A", claim_id: "claim-1", processor_id: "p", claimed_at: "t0", claim_expires_at: "t1" }).state;
+
+  const result = applyCompleteEvent(
+    state,
+    goodCompletePayload("TEST-A", "claim-1", { width: 1000, height: 1000, mime_type: "image/gif" }),
+    { reachable: false }
+  );
+  assert.equal(result.record.status, "failed");
+  assert.equal(result.record.validation.status, "failed");
+  assert.equal(result.record.validation.passed, false);
+  const issues = result.record.validation.issues;
+  assert.ok(issues.some((i) => i.startsWith("aspect_ratio_out_of_range")));
+  assert.ok(issues.some((i) => i.startsWith("invalid_mime_type")));
+  assert.ok(issues.some((i) => i === "image_unreachable"));
+  assert.equal(result.state.stories["TEST-A"].last_error.message, issues.join("; "), "last_error.message and validation.issues must tell the same story");
 });
 
 // ---------------------------------------------------------------------------

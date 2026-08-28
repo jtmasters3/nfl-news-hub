@@ -84,8 +84,17 @@ export function applyCompleteEvent(state, payload, { reachable }) {
 
   const { passed, issues } = validateArtwork({ record: step.record, claimId: claim_id, reachable });
 
+  // Persist the ACTUAL validation outcome onto the record's own
+  // validation.* fields — previously only returned from this function for
+  // apply-artwork-event.js's log line, never patched into the record
+  // itself, so a real pass/fail was recorded as validation.status:
+  // "not_run" forever (found auditing the first real production run,
+  // story 0cdc3d4a-..., 2026-08-28: it correctly reached awaiting_approval
+  // but its committed validation object never reflected that).
   if (passed) {
-    const final = transition(step.state, story_id, "awaiting_approval");
+    const final = transition(step.state, story_id, "awaiting_approval", {
+      validation: { status: "passed", passed: true, issues },
+    });
     return { ...final, validation: { passed, issues } };
   }
 
@@ -93,7 +102,9 @@ export function applyCompleteEvent(state, payload, { reachable }) {
     stage: "validation",
     message: issues.join("; "),
   });
-  const final = transition(withError, story_id, "failed");
+  const final = transition(withError, story_id, "failed", {
+    validation: { status: "failed", passed: false, issues },
+  });
   return { ...final, validation: { passed, issues } };
 }
 
