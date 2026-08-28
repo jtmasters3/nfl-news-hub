@@ -21,6 +21,7 @@ import { claimStory, completeArtwork, failArtwork, fetchArtworkQueue } from "./l
 import { runCodex } from "./lib/codexRunner.js";
 import { readPngDimensions } from "./lib/pngDimensions.js";
 import { selectTarget, missingFixtureFields } from "./lib/selectTarget.js";
+import { assertOutputProduced } from "./lib/codexOutcome.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
 const SOCIAL_OUTPUT_DIR = path.join(ROOT, "social-output");
@@ -140,6 +141,14 @@ async function main() {
     await writeFile(path.join(workDir, "codex.stdout.log"), codexResult.stdout, "utf-8");
     await writeFile(path.join(workDir, "codex.stderr.log"), codexResult.stderr, "utf-8");
     console.log(`codex exec exited 0. stdout/stderr written to ${workDir}`);
+
+    // A clean exit 0 does NOT mean generation succeeded — Codex's own
+    // self-verification can (correctly) decline to save a bad result
+    // (e.g. story 85696f0d-..., 2026-08-28: wrong player rendered) and
+    // exit 0 anyway, explaining why on stdout. This surfaces THAT
+    // explanation as the actual failure reason instead of letting the
+    // downstream "file doesn't exist" become a bare, uninformative ENOENT.
+    await assertOutputProduced(outputPath, codexResult.stdout);
 
     const dims = await readPngDimensions(outputPath);
     if (!dims || dims.sizeBytes === 0) {
