@@ -77,7 +77,14 @@ async function main() {
   const claimResult = await claimStory(storyId);
 
   if (!claimResult.claimed) {
-    console.log(`Not claimed (${claimResult.reason ?? "unknown"}).`);
+    // claimResult.reason is set for a normal rejection (e.g. "already_claimed").
+    // Anything else (a 5xx, a network-level failure) means the Worker threw
+    // before it could return a proper claim response — surface whatever it
+    // did send (claimResult.error/message) instead of hiding it behind
+    // "unknown", so a real bug is visible immediately rather than silently.
+    const detail = claimResult.reason ?? claimResult.error ?? `http_${claimResult.httpStatus ?? "?"}`;
+    console.log(`Not claimed (${detail}).`);
+    if (claimResult.message) console.log(`Detail: ${claimResult.message}`);
     if (requestedStoryId) process.exitCode = 1; // an explicitly requested story really should have been claimable
     return;
   }
