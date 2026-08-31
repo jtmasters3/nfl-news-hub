@@ -305,8 +305,11 @@ async function handleDecide(req, res) {
   // "pending": dispatch was accepted by GitHub (or an earlier attempt's
   // dispatch was) but not yet committed. Poll the authoritative state
   // server-side and return ONE final outcome — the browser never polls
-  // anything itself.
-  const pollResult = await waitForApprovalCommit(fetchSocialState, storyId);
+  // anything itself. Each attempt gets a fresh cache-busting query param
+  // (see fetchSocialState/appendCacheBustParam in lib/apiClient.js) so a
+  // stale upstream CDN entry can't make every poll see the same pre-commit
+  // snapshot.
+  const pollResult = await waitForApprovalCommit((cacheBust) => fetchSocialState({ cacheBust }), storyId);
   res.writeHead(200, { "content-type": "application/json" });
   res.end(JSON.stringify(pollResult.committed ? { outcome: pollResult.status } : { outcome: "timeout" }));
 }
