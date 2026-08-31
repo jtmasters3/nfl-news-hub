@@ -22,6 +22,14 @@ export function defaultProcessorId() {
   return process.env.ARTWORK_PROCESSOR_ID || `local-codex-${os.hostname()}`;
 }
 
+// A truthful console-instance identifier, NOT a cryptographically verified
+// human identity — the approval console authenticates with the same
+// shared bearer token as everything else here, so this only ever
+// identifies "which authenticated console instance made this decision".
+export function defaultApprovalActor() {
+  return process.env.APPROVAL_ACTOR_ID || `local-approval-${os.hostname()}`;
+}
+
 async function postJson(pathName, body) {
   const res = await fetch(`${baseUrl()}${pathName}`, {
     method: "POST",
@@ -81,9 +89,35 @@ export async function failCaption(storyId, claimId, message, lastCandidateText) 
   return postJson("/social/caption/fail", { story_id: storyId, claim_id: claimId, message, last_candidate_text: lastCandidateText || null });
 }
 
+// --- Approval (Phase Approval) — a decision-aware claim lifecycle, still
+// on the SAME Durable Object class, key "approval:{story_id}". See
+// cloudflare-worker/src/handlers/approvalDecide.js for the full
+// first-decision-wins semantics.
+
+export async function decideApproval(storyId, decision, { requestId, rejectionReason, actor = defaultApprovalActor() } = {}) {
+  return postJson("/social/approval/decide", {
+    story_id: storyId,
+    decision,
+    request_id: requestId,
+    rejection_reason: rejectionReason || null,
+    actor,
+  });
+}
+
 export async function fetchArtworkQueue() {
   const url = process.env.ARTWORK_QUEUE_URL || "https://jtmasters3.github.io/nfl-news-hub/social-artwork-queue.json";
   const res = await fetch(url, { cache: "no-store" });
   if (!res.ok) throw new Error(`Failed to fetch artwork queue: ${res.status}`);
+  return res.json();
+}
+
+// Public, unauthenticated read of the authoritative state — same raw
+// content path the Cloudflare Worker itself reads (see cloudflare-worker's
+// github.js). Used by the approval console both to list pending records
+// and to poll for the real committed approved/rejected transition.
+export async function fetchSocialState() {
+  const url = process.env.SOCIAL_STATE_URL || "https://raw.githubusercontent.com/jtmasters3/nfl-news-hub/main/data/social-state.json";
+  const res = await fetch(url, { cache: "no-store" });
+  if (!res.ok) throw new Error(`Failed to fetch data/social-state.json: ${res.status}`);
   return res.json();
 }

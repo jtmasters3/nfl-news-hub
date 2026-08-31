@@ -118,7 +118,22 @@ function emptyRecord(storyId, status) {
     source_story: emptySourceStory(),
     artwork: { status: "not_created", image_url: null, created_at: null, provider: null },
     validation: { status: "not_run", passed: null, issues: [] },
-    approval: { status: "pending", approved_at: null, rejected_at: null },
+    // Approval phase additions — additive, so a historical record simply
+    // lacks them (defaults below) rather than needing a migration. `actor`
+    // identifies which authenticated console instance made the decision
+    // (e.g. "local-approval-<hostname>"), NOT a cryptographically verified
+    // human identity — the auth model is a single shared bearer token, not
+    // per-person OAuth (see cloudflare-worker's approvalDecide.js).
+    approval: {
+      status: "pending", // "pending" | "approved" | "rejected"
+      decided_at: null,
+      approved_at: null,
+      rejected_at: null,
+      rejection_reason: null,
+      actor: null,
+      request_id: null,
+      decision_source: null, // e.g. "local-approval-console"
+    },
     // Phase 2C: caption.text is ONLY ever written by the code path that
     // just confirmed the shared, authoritative validateCaption() passed
     // server-side (see captionEvents.js's applyCaptionCompleteEvent) — a

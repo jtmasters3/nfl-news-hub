@@ -19,9 +19,12 @@
     "test:caption-formatting": "node scripts/social-worker/lib/captionFormatting.test.mjs",
     "test:wait-caption-claim": "node scripts/social-worker/lib/waitForCaptionClaim.test.mjs",
     "test:route-target": "node scripts/social-worker/lib/routeTarget.test.mjs",
+    "test:approval-events": "node scripts/tests/approval-events-regression.mjs",
+    "test:wait-approval-commit": "node scripts/social-worker/lib/waitForApprovalCommit.test.mjs",
     "social:seed-cutover": "node scripts/social/cutover-seed.js",
     "social:enqueue": "node scripts/social/enqueue-story.js",
-    "social:process-one": "node scripts/social-worker/process-one.js"
+    "social:process-one": "node scripts/social-worker/process-one.js",
+    "social:approval-console": "node scripts/social-worker/approval-console.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.120.0",

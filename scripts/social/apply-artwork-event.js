@@ -18,6 +18,7 @@
 import { readSocialState, writeSocialState, buildQueueEntries } from "../lib/socialState.js";
 import { applyClaimEvent, applyCompleteEvent, applyFailEvent } from "../lib/artworkEvents.js";
 import { applyCaptionClaimEvent, applyCaptionCompleteEvent, applyCaptionFailEvent } from "../lib/captionEvents.js";
+import { applyApprovalApprovedEvent, applyApprovalRejectedEvent } from "../lib/approvalEvents.js";
 import { generatePostsForApproval } from "../generate-posts-for-approval.js";
 import { writeFile } from "node:fs/promises";
 import { SOCIAL_ARTWORK_QUEUE_JSON_PATH } from "../lib/store.js";
@@ -91,6 +92,10 @@ async function main() {
     result = applyCaptionCompleteEvent(state, payload);
   } else if (eventType === "caption-failed") {
     result = applyCaptionFailEvent(state, payload);
+  } else if (eventType === "approval-approved") {
+    result = applyApprovalApprovedEvent(state, payload);
+  } else if (eventType === "approval-rejected") {
+    result = applyApprovalRejectedEvent(state, payload);
   } else {
     console.error(`Unknown ARTWORK_EVENT_TYPE: ${eventType}`);
     process.exitCode = 1;
