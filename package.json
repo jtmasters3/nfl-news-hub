@@ -17,6 +17,8 @@
     "test:source-image": "node scripts/social-worker/lib/sourceImage.test.mjs",
     "test:generate-retries": "node scripts/social-worker/lib/generateWithRetries.test.mjs",
     "test:caption-formatting": "node scripts/social-worker/lib/captionFormatting.test.mjs",
+    "test:wait-caption-claim": "node scripts/social-worker/lib/waitForCaptionClaim.test.mjs",
+    "test:route-target": "node scripts/social-worker/lib/routeTarget.test.mjs",
     "social:seed-cutover": "node scripts/social/cutover-seed.js",
     "social:enqueue": "node scripts/social/enqueue-story.js",
     "social:process-one": "node scripts/social-worker/process-one.js"

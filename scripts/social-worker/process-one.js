@@ -33,6 +33,8 @@ import { selectTarget, missingFixtureFields } from "./lib/selectTarget.js";
 import { assertOutputProduced } from "./lib/codexOutcome.js";
 import { downloadSourceImageWithRetries, cleanupSourceImage } from "./lib/sourceImage.js";
 import { generateWithRetries, MAX_GENERATION_ATTEMPTS } from "./lib/generateWithRetries.js";
+import { waitForCaptionClaim, CAPTION_CLAIM_POLL_MAX_ATTEMPTS, CAPTION_CLAIM_POLL_INTERVAL_MS } from "./lib/waitForCaptionClaim.js";
+import { shouldSkipArtwork } from "./lib/routeTarget.js";
 import { validateCaption } from "../lib/captionValidation.js";
 import { buildHashtags } from "./lib/captionFormatting.js";
 
@@ -242,9 +244,28 @@ async function buildCaptionPrompt({ workDir, captionFixture, feedback }) {
 
 async function processCaption(storyId) {
   console.log(`Claiming caption work for ${storyId}...`);
-  const claimResult = await claimCaption(storyId);
+  // /social/artwork/complete's dispatch_confirmed:true only means GitHub
+  // ACCEPTED the repository_dispatch webhook, not that the Action has
+  // finished committing artwork_ready into data/social-state.json (2026-08-31
+  // incident: story 34195a7b-69d8-4225-b58b-757febe23f4d's one-shot claim
+  // hit "not_artwork_ready" ~1s after acceptance, ~20s before the commit
+  // landed). Poll the same authoritative endpoint instead of assuming.
+  const claimResult = await waitForCaptionClaim(claimCaption, storyId, {
+    onWaiting: (attempt, attempts) =>
+      console.log(`artwork_ready not yet committed — waiting ${CAPTION_CLAIM_POLL_INTERVAL_MS}ms before retrying caption claim (attempt ${attempt}/${attempts})...`),
+  });
 
   if (!claimResult.claimed) {
+    if (claimResult.reason === "not_artwork_ready_timeout") {
+      const totalSeconds = (CAPTION_CLAIM_POLL_MAX_ATTEMPTS * CAPTION_CLAIM_POLL_INTERVAL_MS) / 1000;
+      console.log(
+        `Caption not claimed: artwork_ready was not committed within ~${totalSeconds}s. ` +
+          `Artwork is preserved and untouched — rerun with --story-id=${storyId} later to retry captioning ` +
+          `(it will use the caption-only recovery path and will NOT regenerate artwork).`
+      );
+      process.exitCode = 1;
+      return;
+    }
     const detail = claimResult.reason ?? claimResult.error ?? `http_${claimResult.httpStatus ?? "?"}`;
     console.log(`Caption not claimed (${detail}).`);
     if (claimResult.message) console.log(`Detail: ${claimResult.message}`);
@@ -358,9 +379,7 @@ async function main() {
     return;
   }
 
-  const foundInQueue = queue.some((e) => e.story_id === target.story_id);
-
-  if (!foundInQueue) {
+  if (shouldSkipArtwork(queue, target.story_id)) {
     // Only reachable when --story-id was explicitly given (selectTarget's
     // no-argument path only ever returns a real queue entry or null) —
     // not in the live artwork queue, so assume Content Creation already
