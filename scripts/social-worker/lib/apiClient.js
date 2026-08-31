@@ -57,6 +57,30 @@ export async function failArtwork(storyId, claimId, stage, message) {
   return postJson("/social/artwork/fail", { story_id: storyId, claim_id: claimId, stage, message });
 }
 
+// --- Caption (Phase 2C) — a separate, independent claim lifecycle from
+// artwork above, only ever claimable once a story has reached
+// "artwork_ready". JSON throughout, not multipart — no binary involved.
+
+export async function claimCaption(storyId, { processorId = defaultProcessorId(), leaseMs } = {}) {
+  return postJson("/social/caption/claim", { story_id: storyId, processor_id: processorId, lease_ms: leaseMs });
+}
+
+export async function completeCaption(storyId, claimId, { text, hashtags, attributionLine, sourceUrl, provider = "chatgpt-codex-local" }) {
+  return postJson("/social/caption/complete", {
+    story_id: storyId,
+    claim_id: claimId,
+    text,
+    hashtags: hashtags || [],
+    attribution_line: attributionLine || null,
+    source_url: sourceUrl || null,
+    provider,
+  });
+}
+
+export async function failCaption(storyId, claimId, message, lastCandidateText) {
+  return postJson("/social/caption/fail", { story_id: storyId, claim_id: claimId, message, last_candidate_text: lastCandidateText || null });
+}
+
 export async function fetchArtworkQueue() {
   const url = process.env.ARTWORK_QUEUE_URL || "https://jtmasters3.github.io/nfl-news-hub/social-artwork-queue.json";
   const res = await fetch(url, { cache: "no-store" });

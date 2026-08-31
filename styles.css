@@ -814,6 +814,26 @@ main.wrap {
   font-style: italic;
 }
 
+.approval-caption-block {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  background: var(--surface-alt);
+  margin-top: 12px;
+}
+
+.approval-caption-text {
+  margin: 0;
+  white-space: pre-wrap;
+  line-height: 1.45;
+}
+
+.approval-caption-hashtags {
+  margin: 8px 0 0;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
 .approval-actions-note {
   margin: 14px 0 0;
   padding-top: 12px;

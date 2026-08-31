@@ -30,6 +30,29 @@ function renderMediaBlock(label, url, alt) {
         </div>`;
 }
 
+/**
+ * Phase 2C: caption.text is only ever non-null once server-side
+ * validateCaption() has actually passed (see scripts/lib/captionEvents.js)
+ * — so displaying it here is inherently safe, never a rejected candidate.
+ * Historical pre-Caption-phase records (caption.status "not_created")
+ * degrade to the same "not yet" text pattern already used for artwork —
+ * never a fabricated placeholder caption.
+ */
+function renderCaptionBlock(caption) {
+  if (!caption || caption.status !== "ready" || !caption.text) {
+    return `<div class="approval-caption-block">
+          <span class="approval-media-label">Generated Caption</span>
+          <p class="approval-empty">Caption not generated yet</p>
+        </div>`;
+  }
+  const hashtagLine = Array.isArray(caption.hashtags) && caption.hashtags.length ? `<p class="approval-caption-hashtags">${escapeHtml(caption.hashtags.join(" "))}</p>` : "";
+  return `<div class="approval-caption-block">
+          <span class="approval-media-label">Generated Caption</span>
+          <p class="approval-caption-text">${escapeHtml(caption.text)}</p>
+          ${hashtagLine}
+        </div>`;
+}
+
 function renderItem(record) {
   const s = record.source_story || {};
   const headline = s.post_headline || "(no headline captured)";
@@ -44,6 +67,7 @@ function renderItem(record) {
           ${renderMediaBlock("Generated Graphic", record.artwork?.image_url, headline)}
           ${renderMediaBlock("Base Article Image", s.base_image_url, headline)}
         </div>
+        ${renderCaptionBlock(record.caption)}
         <p class="meta"><strong>Source:</strong> ${escapeHtml(s.source_name || "(unknown)")}
           ${s.source_url ? ` &mdash; <a href="${escapeHtml(s.source_url)}" target="_blank" rel="noopener noreferrer">View original</a>` : ""}</p>
         <p class="meta"><strong>Story ID:</strong> <code>${escapeHtml(record.story_id)}</code></p>

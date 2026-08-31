@@ -29,10 +29,10 @@ export const STATES = Object.freeze([
   "artwork_requested",
   "artwork_created",
   "validating",
+  "artwork_ready",
   "awaiting_approval",
   "approved",
   "rejected",
-  "caption_ready",
   "posting",
   "posted",
   "failed",
@@ -40,23 +40,39 @@ export const STATES = Object.freeze([
 
 // Adjacency list: from -> allowed to. Enforced by transition() below, so an
 // invalid move (e.g. "posted" -> "new") is rejected in code, not just by
-// convention. "validating" branches two ways deliberately: approval mode
-// always lands on "awaiting_approval"; automatic mode (not implemented in
-// this phase) is the only thing that would ever request "caption_ready"
-// directly from "validating". "failed" is recoverable exactly once, into
-// "awaiting_approval", for exception review — it never bounces back into
-// the front of the pipeline.
+// convention.
+//
+// Phase 2C (Caption) note: "artwork_ready" is a durable resting state — a
+// story lands here once its artwork is generated AND deterministically
+// validated, and stays here across any number of caption attempts/claim
+// runs. Caption generation is claimed and executed entirely outside this
+// state machine (via the caption:{story_id} Durable Object claim
+// namespace — see scripts/lib/captionEvents.js) and does NOT need its own
+// top-level state: a claimed-but-not-yet-captioned story is fully
+// distinguished by the Durable Object's own claim/lease record, exactly
+// the same way an abandoned "artwork_requested" claim already is (see
+// applyClaimEvent's "recovered" branch) — adding a second top-level state
+// here would duplicate an atomicity guarantee the DO already provides.
+// "awaiting_approval" is reachable from "artwork_ready" in exactly one
+// place (applyCaptionCompleteEvent, after the shared, authoritative
+// validateCaption() passes) — this is what makes "awaiting_approval" mean
+// a COMPLETE social post (valid artwork + valid caption), never a partial
+// one. A caption claim run that exhausts its local attempts does NOT
+// transition status at all (see applyCaptionFailEvent) unless it's the
+// THIRD separate exhausted claim run, at which point it escalates here to
+// "failed" for human review — preserving both the artwork and every
+// caption diagnostic collected along the way.
 const TRANSITIONS = Object.freeze({
   preexisting_ignored: ["new"],
   new: ["queued"],
   queued: ["artwork_requested"],
   artwork_requested: ["artwork_created", "failed"],
   artwork_created: ["validating"],
-  validating: ["awaiting_approval", "caption_ready", "failed"],
+  validating: ["artwork_ready", "failed"],
+  artwork_ready: ["awaiting_approval", "failed"],
   awaiting_approval: ["approved", "rejected"],
-  approved: ["caption_ready"],
+  approved: ["posting"],
   rejected: [],
-  caption_ready: ["posting"],
   posting: ["posted", "failed"],
   failed: ["awaiting_approval"],
   posted: [],
@@ -71,7 +87,24 @@ export function canTransition(fromStatus, toStatus) {
 // ---------------------------------------------------------------------------
 
 function emptySourceStory() {
-  return { post_headline: null, base_image_url: null, source_name: null, source_url: null, category: null };
+  return {
+    post_headline: null,
+    base_image_url: null,
+    source_name: null,
+    source_url: null,
+    category: null,
+    // Phase 2C additions — additive, so a historical record simply lacks
+    // them (defaults below) rather than needing a migration. Carried
+    // forward from the SAME already-verified, already-deterministic
+    // extraction the news pipeline computes at story-creation time
+    // (scripts/generate-content.js), never re-derived or fetched live —
+    // this is what lets the caption generator use real team/player names
+    // and rumor status without ever looking at mutable live story data.
+    teams: [],
+    players: [],
+    description: null,
+    is_rumor: false,
+  };
 }
 
 function emptyRecord(storyId, status) {
@@ -86,7 +119,24 @@ function emptyRecord(storyId, status) {
     artwork: { status: "not_created", image_url: null, created_at: null, provider: null },
     validation: { status: "not_run", passed: null, issues: [] },
     approval: { status: "pending", approved_at: null, rejected_at: null },
-    caption: { status: "not_created", text: null, created_at: null },
+    // Phase 2C: caption.text is ONLY ever written by the code path that
+    // just confirmed the shared, authoritative validateCaption() passed
+    // server-side (see captionEvents.js's applyCaptionCompleteEvent) — a
+    // rejected candidate goes in last_candidate_text, never here. The
+    // invariant `caption.status === "ready" implies caption.text !== null`
+    // holds by construction, not by convention.
+    caption: {
+      status: "not_created", // "not_created" | "generating" | "ready" | "failed"
+      text: null,
+      last_candidate_text: null,
+      hashtags: [],
+      attribution_line: null,
+      source_url: null,
+      provider: null,
+      claim: { claim_id: null, processor_id: null, claimed_at: null, claim_expires_at: null },
+      claim_attempt_count: 0, // separate claim RUNS that fully exhausted their local 3-attempt budget — caps at 3, then escalates artwork_ready -> failed
+      created_at: null,
+    },
     publishing: {
       status: "not_posted",
       instagram: { status: "not_posted", post_id: null, post_url: null },
@@ -193,6 +243,14 @@ function snapshotSourceStory(story) {
     source_name: social.source_name ?? null,
     source_url: social.source_url ?? null,
     category: story.category ?? null,
+    // Phase 2C — same already-verified fields the news pipeline already
+    // computed (scripts/generate-content.js), snapshotted here for the
+    // same reason everything else above is: caption generation must read
+    // this snapshot, never a live story lookup.
+    teams: Array.isArray(story.teams) ? story.teams : [],
+    players: Array.isArray(story.players) ? story.players : [],
+    description: story.sources?.[0]?.description || null,
+    is_rumor: story.is_rumor === true,
   };
 }
 
@@ -264,6 +322,10 @@ export function buildQueueEntries(state) {
       source_name: r.source_story.source_name,
       source_url: r.source_story.source_url,
       category: r.source_story.category,
+      teams: r.source_story.teams ?? [],
+      players: r.source_story.players ?? [],
+      description: r.source_story.description ?? null,
+      is_rumor: r.source_story.is_rumor ?? false,
     }));
 }
 

@@ -178,6 +178,7 @@ test("G: reaching awaiting_approval surfaces exactly one item for the approval v
   state = transition(state, "TEST-A", "artwork_requested").state;
   state = transition(state, "TEST-A", "artwork_created").state;
   state = transition(state, "TEST-A", "validating").state;
+  state = transition(state, "TEST-A", "artwork_ready").state;
   state = transition(state, "TEST-A", "awaiting_approval").state;
 
   const approvalItems = Object.values(state.stories).filter((r) => r.status === "awaiting_approval");
@@ -196,9 +197,9 @@ test("H: a posted story never returns to the artwork queue or the approval view"
   state = transition(state, "TEST-A", "artwork_requested").state;
   state = transition(state, "TEST-A", "artwork_created").state;
   state = transition(state, "TEST-A", "validating").state;
+  state = transition(state, "TEST-A", "artwork_ready").state;
   state = transition(state, "TEST-A", "awaiting_approval").state;
   state = transition(state, "TEST-A", "approved").state;
-  state = transition(state, "TEST-A", "caption_ready").state;
   state = transition(state, "TEST-A", "posting").state;
   state = transition(state, "TEST-A", "posted").state;
 

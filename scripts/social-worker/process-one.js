@@ -1,13 +1,22 @@
 #!/usr/bin/env node
 // Local processor: claims exactly one queued story from the live artwork
-// queue (or a specific story_id via --story-id, for the controlled STEP 15
-// test), generates its graphic with the already-proven Codex workflow, and
-// uploads it through the Cloudflare Worker bridge. Never writes to
-// production state directly — every decision (is this claimable? did the
-// upload succeed?) is made by the backend, reached only through
-// lib/apiClient.js. Exits nonzero only on a TRUE processing failure (a
-// claim rejection because nothing is queued, or the requested story isn't
-// claimable, is normal and exits 0).
+// queue (or a specific story_id via --story-id), generates its graphic
+// with the already-proven Codex workflow, uploads it through the
+// Cloudflare Worker bridge, then — once artwork is durably at
+// artwork_ready — generates and submits its caption through a fully
+// independent claim (see lib/apiClient.js's claim/complete/failCaption).
+// Never writes to production state directly — every decision is made by
+// the backend, reached only through lib/apiClient.js.
+//
+// Two entry paths, both landing in the same two phases:
+//   - No --story-id, or a --story-id currently in the live artwork queue:
+//     runs the FULL pipeline (artwork phase, then caption phase) for one
+//     freshly queued story.
+//   - A --story-id NOT in the live artwork queue: assumed to already be
+//     past Content Creation (artwork_ready, from an earlier run) — skips
+//     the artwork phase entirely and attempts ONLY caption claiming/
+//     generation for it. This is how a caption failure gets retried
+//     later WITHOUT ever regenerating artwork — see lib/captionEvents.js.
 //
 // Usage:
 //   node scripts/social-worker/process-one.js [--story-id=<id>]
@@ -17,19 +26,23 @@
 import { mkdir, writeFile, readFile, rm } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { claimStory, completeArtwork, failArtwork, fetchArtworkQueue } from "./lib/apiClient.js";
+import { claimStory, completeArtwork, failArtwork, claimCaption, completeCaption, failCaption, fetchArtworkQueue } from "./lib/apiClient.js";
 import { runCodex } from "./lib/codexRunner.js";
 import { readPngDimensions } from "./lib/pngDimensions.js";
 import { selectTarget, missingFixtureFields } from "./lib/selectTarget.js";
 import { assertOutputProduced } from "./lib/codexOutcome.js";
 import { downloadSourceImageWithRetries, cleanupSourceImage } from "./lib/sourceImage.js";
 import { generateWithRetries, MAX_GENERATION_ATTEMPTS } from "./lib/generateWithRetries.js";
+import { validateCaption } from "../lib/captionValidation.js";
+import { buildHashtags } from "./lib/captionFormatting.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
 const SOCIAL_OUTPUT_DIR = path.join(ROOT, "social-output");
 const TEMPLATE_PATH = path.join(ROOT, "scripts", "social-worker", "templates", "automation-prompt.template.md");
+const CAPTION_TEMPLATE_PATH = path.join(ROOT, "scripts", "social-worker", "templates", "caption-prompt.template.md");
 const DEFAULT_TEMPLATE_PACK_DIR =
   "C:\\Users\\jacks\\Documents\\Codex\\2026-08-26\\use-this-story-s-headline-and\\outputs\\aggregate-nfl-reference-pack";
+const MAX_CAPTION_ATTEMPTS = 3;
 
 function parseArgs(argv) {
   const args = { storyId: null };
@@ -39,14 +52,9 @@ function parseArgs(argv) {
   return args;
 }
 
-async function pickTarget(storyId) {
-  // Always fetch the queue, even for an explicit --story-id — the 2026-08-28
-  // f4328222-... incident happened because this used to skip the fetch
-  // entirely and return a bare {story_id}, silently discarding the real
-  // post_headline/base_image_url. See lib/selectTarget.js.
-  const queue = await fetchArtworkQueue();
-  return selectTarget(queue, storyId);
-}
+// ---------------------------------------------------------------------------
+// Phase 1: Content Creation (artwork)
+// ---------------------------------------------------------------------------
 
 async function buildPrompt({ storyId, workDir, fixture, sourceImagePath }) {
   const template = await readFile(TEMPLATE_PATH, "utf-8");
@@ -71,44 +79,24 @@ async function buildPrompt({ storyId, workDir, fixture, sourceImagePath }) {
   return { promptText, outputPath };
 }
 
-async function main() {
-  const { storyId: requestedStoryId } = parseArgs(process.argv.slice(2));
-
-  const target = await pickTarget(requestedStoryId);
-  if (!target) {
-    console.log("No queued stories to process.");
-    return;
-  }
-
+/** @returns {Promise<boolean>} whether artwork completed successfully (caption phase should follow) */
+async function processArtwork(target) {
   const storyId = target.story_id;
 
-  // Fail fast, before ever claiming — a claim burns a real lease and a
-  // generation attempt, so an incomplete target (e.g. an explicit
-  // --story-id not found in the live queue, such as a lease-recovery case
-  // this processor doesn't yet fetch source data for) must be caught here,
-  // not discovered only after Codex has already run.
   const missing = missingFixtureFields(target);
   if (missing.length) {
     console.error(`Refusing to claim ${storyId}: missing required fixture field(s): ${missing.join(", ")}.`);
-    console.error("This usually means the story wasn't found in the live artwork queue (e.g. a lease-recovery case) — this processor doesn't yet have a way to fetch its source data outside the queue.");
-    process.exitCode = 1;
-    return;
+    return false;
   }
 
   console.log(`Claiming ${storyId}...`);
   const claimResult = await claimStory(storyId);
 
   if (!claimResult.claimed) {
-    // claimResult.reason is set for a normal rejection (e.g. "already_claimed").
-    // Anything else (a 5xx, a network-level failure) means the Worker threw
-    // before it could return a proper claim response — surface whatever it
-    // did send (claimResult.error/message) instead of hiding it behind
-    // "unknown", so a real bug is visible immediately rather than silently.
     const detail = claimResult.reason ?? claimResult.error ?? `http_${claimResult.httpStatus ?? "?"}`;
     console.log(`Not claimed (${detail}).`);
     if (claimResult.message) console.log(`Detail: ${claimResult.message}`);
-    if (requestedStoryId) process.exitCode = 1; // an explicitly requested story really should have been claimable
-    return;
+    return false;
   }
 
   const claimId = claimResult.claim_id;
@@ -186,8 +174,11 @@ async function main() {
     if (!completeResult.uploaded) {
       throw new Error(`Upload rejected: ${completeResult.reason ?? "unknown"}`);
     }
+    if (completeResult.dispatch_confirmed === false) {
+      console.warn(`WARNING: artwork for ${storyId} is safely stored (R2 + claim), but GitHub was never notified after retries — needs manual reconciliation.`);
+    }
 
-    console.log("Done:");
+    console.log("Artwork done:");
     console.log(
       JSON.stringify(
         {
@@ -197,26 +188,196 @@ async function main() {
           storage_key: completeResult.storage_key,
           width: completeResult.width,
           height: completeResult.height,
+          dispatch_confirmed: completeResult.dispatch_confirmed,
         },
         null,
         2
       )
     );
+    return true;
   } catch (err) {
-    console.error(`Processing failed: ${err.message}`);
+    console.error(`Artwork processing failed: ${err.message}`);
     const stage = err.message.includes("Upload rejected") ? "upload" : "generation";
     try {
       await failArtwork(storyId, claimId, stage, err.message.slice(0, 2000));
     } catch (failErr) {
-      console.error(`Also failed to report the failure: ${failErr.message}`);
+      console.error(`Also failed to report the artwork failure: ${failErr.message}`);
     }
-    process.exitCode = 1;
+    return false;
   } finally {
     // Publisher source photography is temporary working input only —
     // never rehosted, never left accumulating locally — deleted whether
     // this run succeeded or exhausted every retry.
     await cleanupSourceImage(sourceImagePath);
   }
+}
+
+// ---------------------------------------------------------------------------
+// Phase 2: Caption — a fully independent claim (caption:{story_id} on the
+// Durable Object), only ever legal once artwork_ready. Never touches
+// artwork in any way — a caption failure here cannot regenerate or lose it.
+// ---------------------------------------------------------------------------
+
+async function buildCaptionPrompt({ workDir, captionFixture, feedback }) {
+  const template = await readFile(CAPTION_TEMPLATE_PATH, "utf-8");
+  const fixturePath = path.join(workDir, "caption-fixture.json");
+  await writeFile(fixturePath, JSON.stringify(captionFixture, null, 2) + "\n", "utf-8");
+
+  const outputPath = path.join(workDir, "caption.txt");
+  const feedbackSection = feedback
+    ? `\nYour previous attempt was rejected for: ${feedback}. Fix this and try again — do not repeat the same mistake.\n`
+    : "";
+
+  const promptText = template
+    .replaceAll("{{fixture_path}}", fixturePath)
+    .replaceAll("{{output_path}}", outputPath)
+    .replaceAll("{{source_name}}", captionFixture.source_name || "the original source")
+    .replace("{{feedback_section}}", feedbackSection);
+
+  const promptFilePath = path.join(workDir, "caption-prompt.md");
+  await writeFile(promptFilePath, promptText, "utf-8");
+
+  return { promptText, outputPath };
+}
+
+async function processCaption(storyId) {
+  console.log(`Claiming caption work for ${storyId}...`);
+  const claimResult = await claimCaption(storyId);
+
+  if (!claimResult.claimed) {
+    const detail = claimResult.reason ?? claimResult.error ?? `http_${claimResult.httpStatus ?? "?"}`;
+    console.log(`Caption not claimed (${detail}).`);
+    if (claimResult.message) console.log(`Detail: ${claimResult.message}`);
+    process.exitCode = 1;
+    return;
+  }
+
+  const claimId = claimResult.claim_id;
+  console.log(`Caption claimed. claim_id=${claimId}`);
+
+  const sourceStory = claimResult.source_story || {};
+  const captionFixture = {
+    story_id: storyId,
+    post_headline: sourceStory.post_headline,
+    source_name: sourceStory.source_name,
+    source_url: sourceStory.source_url,
+    category: sourceStory.category,
+    teams: sourceStory.teams || [],
+    players: sourceStory.players || [],
+    description: sourceStory.description,
+    is_rumor: sourceStory.is_rumor || false,
+  };
+
+  const workDir = path.join(SOCIAL_OUTPUT_DIR, "work", storyId);
+  await mkdir(workDir, { recursive: true });
+
+  let feedback = null;
+  let lastCandidateText = null;
+  let finalCaptionText = null;
+
+  try {
+    await generateWithRetries(
+      async (attempt) => {
+        console.log(`Running codex exec for caption (attempt ${attempt}/${MAX_CAPTION_ATTEMPTS})...`);
+        const { promptText, outputPath } = await buildCaptionPrompt({ workDir, captionFixture, feedback });
+        await rm(outputPath, { force: true });
+
+        let codexResult;
+        try {
+          codexResult = await runCodex({ promptText, addDir: SOCIAL_OUTPUT_DIR });
+        } catch (codexErr) {
+          await writeFile(path.join(workDir, `caption.attempt${attempt}.stdout.log`), codexErr.codexStdout ?? "", "utf-8");
+          await writeFile(path.join(workDir, `caption.attempt${attempt}.stderr.log`), codexErr.codexStderr ?? "", "utf-8");
+          console.error(`codex exec (caption) failed (exit code ${codexErr.codexExitCode ?? "n/a"}) — see ${workDir}\\caption.attempt${attempt}.std{out,err}.log`);
+          throw codexErr;
+        }
+        await writeFile(path.join(workDir, `caption.attempt${attempt}.stdout.log`), codexResult.stdout, "utf-8");
+        await writeFile(path.join(workDir, `caption.attempt${attempt}.stderr.log`), codexResult.stderr, "utf-8");
+
+        await assertOutputProduced(outputPath, codexResult.stdout);
+        const text = (await readFile(outputPath, "utf-8")).trim();
+        lastCandidateText = text;
+
+        // Local validation (bounded retry loop, feedback-driven) — the
+        // SAME shared validateCaption() the server-side gate uses (see
+        // scripts/lib/captionValidation.js), imported directly since this
+        // processor lives in the same repo. Passing here is a strong
+        // signal, not a guarantee — the server-side pass in
+        // scripts/lib/captionEvents.js is still the authoritative one.
+        const { passed, issues } = validateCaption(text, captionFixture);
+        if (!passed) {
+          feedback = issues.join("; ");
+          throw new Error(`Local caption validation rejected: ${feedback}`);
+        }
+        console.log(`Caption generated and locally validated on attempt ${attempt}.`);
+        finalCaptionText = text;
+      },
+      { onAttemptFailure: (attempt, err) => console.error(`Caption attempt ${attempt} failed: ${err.message}`), maxAttempts: MAX_CAPTION_ATTEMPTS }
+    );
+
+    console.log("Submitting caption...");
+    const completeResult = await completeCaption(storyId, claimId, {
+      text: finalCaptionText,
+      hashtags: buildHashtags(captionFixture.teams),
+      attributionLine: `Source: ${captionFixture.source_name}`,
+      sourceUrl: captionFixture.source_url,
+    });
+    if (!completeResult.completed) {
+      throw new Error(`Caption submission rejected: ${completeResult.reason ?? "unknown"}`);
+    }
+    if (completeResult.dispatch_confirmed === false) {
+      console.warn(`WARNING: caption for ${storyId} is safely stored (claim completed), but GitHub was never notified after retries — needs manual reconciliation.`);
+    }
+
+    console.log("Caption done:");
+    console.log(JSON.stringify({ story_id: storyId, claim_id: claimId, dispatch_confirmed: completeResult.dispatch_confirmed }, null, 2));
+  } catch (err) {
+    console.error(`Caption processing failed: ${err.message}`);
+    try {
+      await failCaption(storyId, claimId, err.message.slice(0, 2000), lastCandidateText);
+    } catch (failErr) {
+      console.error(`Also failed to report the caption failure: ${failErr.message}`);
+    }
+    process.exitCode = 1;
+  }
+}
+
+// ---------------------------------------------------------------------------
+
+async function main() {
+  const { storyId: requestedStoryId } = parseArgs(process.argv.slice(2));
+
+  // Always fetch the queue, even for an explicit --story-id — the
+  // 2026-08-28 f4328222-... incident happened because a bare story_id was
+  // once used without ever looking it up. See lib/selectTarget.js.
+  const queue = await fetchArtworkQueue();
+  const target = selectTarget(queue, requestedStoryId);
+
+  if (!target) {
+    console.log("No queued stories to process.");
+    return;
+  }
+
+  const foundInQueue = queue.some((e) => e.story_id === target.story_id);
+
+  if (!foundInQueue) {
+    // Only reachable when --story-id was explicitly given (selectTarget's
+    // no-argument path only ever returns a real queue entry or null) —
+    // not in the live artwork queue, so assume Content Creation already
+    // succeeded for this story in an earlier run and this is a caption
+    // retry/recovery. Artwork is never regenerated on this path.
+    console.log(`${target.story_id} is not in the live artwork queue — attempting caption-only processing (artwork already complete?).`);
+    await processCaption(target.story_id);
+    return;
+  }
+
+  const artworkSucceeded = await processArtwork(target);
+  if (!artworkSucceeded) {
+    process.exitCode = process.exitCode || (requestedStoryId ? 1 : 0);
+    return;
+  }
+
+  await processCaption(target.story_id);
 }
 
 main().catch((err) => {

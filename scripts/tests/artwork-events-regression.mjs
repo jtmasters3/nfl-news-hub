@@ -142,7 +142,7 @@ test("I: completing with a claim_id that doesn't match the active claim is rejec
 // ---------------------------------------------------------------------------
 // Q: a fully valid artwork submission reaches awaiting_approval.
 // ---------------------------------------------------------------------------
-test("Q: a valid artwork submission reaches awaiting_approval with a permanent image_url recorded", () => {
+test("Q: a valid artwork submission reaches artwork_ready (not awaiting_approval — caption hasn't run yet) with a permanent image_url recorded", () => {
   let state = queuedState("TEST-A");
   state = applyClaimEvent(state, { story_id: "TEST-A", claim_id: "claim-1", processor_id: "p", claimed_at: "t0", claim_expires_at: "t1" }).state;
   assert.equal(buildQueueEntries(state).length, 0, "S: queue entry disappears once claimed");
@@ -150,7 +150,7 @@ test("Q: a valid artwork submission reaches awaiting_approval with a permanent i
   const result = applyCompleteEvent(state, goodCompletePayload("TEST-A", "claim-1"), { reachable: true });
   assert.equal(result.ok, true);
   assert.equal(result.validation.passed, true);
-  assert.equal(result.record.status, "awaiting_approval");
+  assert.equal(result.record.status, "artwork_ready", "Phase 2C: awaiting_approval requires a valid caption too — see captionEvents.js");
   assert.equal(result.record.artwork.image_url, "https://artwork.example.test/social-artwork/TEST-A.png"); // O
   assert.equal(buildQueueEntries(result.state).length, 0, "T: never reappears in the queue after completion");
 
@@ -218,12 +218,12 @@ test("N/U: a second completion attempt after success is rejected (idempotent no-
   state = applyClaimEvent(state, { story_id: "TEST-A", claim_id: "claim-1", processor_id: "p", claimed_at: "t0", claim_expires_at: "t1" }).state;
   const first = applyCompleteEvent(state, goodCompletePayload("TEST-A", "claim-1"), { reachable: true });
   assert.equal(first.ok, true);
-  assert.equal(first.record.status, "awaiting_approval");
+  assert.equal(first.record.status, "artwork_ready");
 
   const second = applyCompleteEvent(first.state, goodCompletePayload("TEST-A", "claim-1"), { reachable: true });
   assert.equal(second.ok, false);
-  assert.equal(second.error, "invalid_state:awaiting_approval");
-  assert.equal(second.state.stories["TEST-A"].status, "awaiting_approval", "must not overwrite the completed artwork — rule D");
+  assert.equal(second.error, "invalid_state:artwork_ready");
+  assert.equal(second.state.stories["TEST-A"].status, "artwork_ready", "must not overwrite the completed artwork — rule D");
   assert.equal(second.state.stories["TEST-A"].artwork.image_url, first.record.artwork.image_url);
 });
 

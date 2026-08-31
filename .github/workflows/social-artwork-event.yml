@@ -1,10 +1,13 @@
 name: Social artwork event
-# Applies exactly one artwork-bridge state transition (claimed / completed /
-# failed), fired by the Cloudflare Worker via repository_dispatch once it
-# has atomically claimed a story (or accepted/rejected an upload). This is
-# the ONLY writer of these transitions — see scripts/social/apply-artwork-event.js
-# and scripts/lib/artworkEvents.js, both of which build on the existing
-# scripts/lib/socialState.js transition table rather than a second one.
+# Applies exactly one artwork- or caption-bridge state transition (claimed /
+# completed / failed, for either), fired by the Cloudflare Worker via
+# repository_dispatch once it has atomically claimed a story (or accepted/
+# rejected an artwork upload or caption). This is the ONLY writer of these
+# transitions — see scripts/social/apply-artwork-event.js and
+# scripts/lib/artworkEvents.js / scripts/lib/captionEvents.js, all of which
+# build on the existing scripts/lib/socialState.js transition table rather
+# than a second one. Caption events reuse this same workflow deliberately
+# (not a parallel Action) — same commit/push logic, same concurrency group.
 #
 # Deliberately narrow: never runs `npm run refresh`, never touches
 # clustering/ingestion/news.json, and commits only the three files this
@@ -12,7 +15,7 @@ name: Social artwork event
 
 on:
   repository_dispatch:
-    types: [artwork-claimed, artwork-completed, artwork-failed]
+    types: [artwork-claimed, artwork-completed, artwork-failed, caption-claimed, caption-completed, caption-failed]
 
 permissions:
   contents: write

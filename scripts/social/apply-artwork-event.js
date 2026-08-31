@@ -1,13 +1,14 @@
 #!/usr/bin/env node
 // Runs inside .github/workflows/social-artwork-event.yml — the only code
-// that ever applies an artwork-bridge event (claimed/completed/failed,
-// fired by the Cloudflare Worker via repository_dispatch) to
-// data/social-state.json. Reads the event type + payload from env vars the
-// workflow sets from github.event.action / github.event.client_payload,
-// applies exactly one of the pure handlers in scripts/lib/artworkEvents.js
-// (which themselves just call scripts/lib/socialState.js's existing
-// transition()), writes state, and regenerates the two derived files that
-// depend on it. Never touches news.json, never runs clustering/ingestion.
+// that ever applies an artwork- or caption-bridge event (claimed/
+// completed/failed for either, fired by the Cloudflare Worker via
+// repository_dispatch) to data/social-state.json. Reads the event type +
+// payload from env vars the workflow sets from github.event.action /
+// github.event.client_payload, applies exactly one of the pure handlers in
+// scripts/lib/artworkEvents.js or scripts/lib/captionEvents.js (both just
+// call scripts/lib/socialState.js's existing transition()), writes state,
+// and regenerates the two derived files that depend on it. Never touches
+// news.json, never runs clustering/ingestion.
 //
 // Deliberately tolerant of "this event no longer applies" (e.g. a
 // duplicate delivery, or a race where the record already moved on) —
@@ -16,6 +17,7 @@
 // script must be idempotent, not merely retried.
 import { readSocialState, writeSocialState, buildQueueEntries } from "../lib/socialState.js";
 import { applyClaimEvent, applyCompleteEvent, applyFailEvent } from "../lib/artworkEvents.js";
+import { applyCaptionClaimEvent, applyCaptionCompleteEvent, applyCaptionFailEvent } from "../lib/captionEvents.js";
 import { generatePostsForApproval } from "../generate-posts-for-approval.js";
 import { writeFile } from "node:fs/promises";
 import { SOCIAL_ARTWORK_QUEUE_JSON_PATH } from "../lib/store.js";
@@ -83,6 +85,12 @@ async function main() {
     result = applyCompleteEvent(state, payload, { reachable });
   } else if (eventType === "artwork-failed") {
     result = applyFailEvent(state, payload);
+  } else if (eventType === "caption-claimed") {
+    result = applyCaptionClaimEvent(state, payload);
+  } else if (eventType === "caption-completed") {
+    result = applyCaptionCompleteEvent(state, payload);
+  } else if (eventType === "caption-failed") {
+    result = applyCaptionFailEvent(state, payload);
   } else {
     console.error(`Unknown ARTWORK_EVENT_TYPE: ${eventType}`);
     process.exitCode = 1;
@@ -109,6 +117,16 @@ async function main() {
   }
   if (result.recovered) {
     console.log("Lease recovery: claimed after previous lease expired.");
+  }
+  if ("escalatedToFailed" in result) {
+    console.log(
+      result.escalatedToFailed
+        ? "Caption claim_attempt_count cap reached — escalated to failed for human review."
+        : "Caption claim run exhausted but retryable — story remains at artwork_ready."
+    );
+  }
+  if ("alreadyFailed" in result && result.alreadyFailed) {
+    console.log("Story was already in a terminal failed state — diagnostics appended only.");
   }
 }
 
