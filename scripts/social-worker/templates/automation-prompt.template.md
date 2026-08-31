@@ -5,9 +5,11 @@ feed, news, cron, GitHub workflow, or processed-ID file. Do not publish
 anything. Do not make any HTTP POST request. Claiming the story and
 uploading the finished graphic are both handled outside this session, by
 the process that invoked you — your only job is producing the image file.
+The base photograph has ALREADY been downloaded and verified locally —
+never fetch `base_image_url` or any other URL yourself.
 
-Perform the following workflow as a fresh run using only the files and
-URLs named below. Do not rely on conversation history or memory.
+Perform the following workflow as a fresh run using only the local files
+named below. Do not rely on conversation history or memory.
 
 1. Read `{{fixture_path}}` (an absolute path).
 2. Read the reference guide and these six approved The Aggregate templates
@@ -20,10 +22,17 @@ URLs named below. Do not rely on conversation history or memory.
    - `06-cinematic-trade.png`
 3. Read and use `{{template_pack_dir}}\the-aggregate-official-logo.png`. Do
    not redraw, retype, replace, or distort the logo.
-4. Download the fixture's `base_image_url` and use that supplied
-   photograph as the factual base image. Preserve the real NFL subject's
+4. Read the base photograph directly from the local file
+   `{{base_image_path}}` (already downloaded from `{{source_name}}` and
+   verified locally — do not download or fetch it again from any URL).
+   Use it as the factual base image. Preserve the real NFL subject's
    identity, face, uniform, jersey number, and photographic realism. Do
-   not substitute or invent a player.
+   not substitute or invent a player. If this local photograph does not
+   clearly show a real, identifiable NFL player (for example, it shows
+   only equipment, a logo, or a crowd with no usable subject), do not
+   generate a substitute or invented player — treat this as a failure and
+   report it exactly per step 15, the same as any other validation
+   failure.
 5. Treat `BREAKING NEWS: [post_headline]` as creative direction. The words
    `BREAKING NEWS` do not have to appear unless naturally required by the
    selected approved template.
