@@ -23,6 +23,7 @@ import { escapeHtml } from "../lib/text.js";
 import { formatHumanDateTime } from "../lib/dates.js";
 import { fetchSocialState, decideApproval } from "./lib/apiClient.js";
 import { waitForApprovalCommit } from "./lib/waitForApprovalCommit.js";
+import { assessApprovalReadiness } from "./lib/approvalReadiness.js";
 
 const HOST = "127.0.0.1";
 const PORT = Number(process.env.APPROVAL_CONSOLE_PORT) || 4321;
@@ -46,11 +47,34 @@ function renderCard(record) {
   const c = record.caption || {};
   const headline = s.post_headline || "(no headline captured)";
   const hashtagLine = Array.isArray(c.hashtags) && c.hashtags.length ? `<p class="approval-caption-hashtags">${escapeHtml(c.hashtags.join(" "))}</p>` : "";
+  const readiness = assessApprovalReadiness(record);
+
+  // Legacy/not-ready records (e.g. records that reached awaiting_approval
+  // before the Caption phase existed, so they were never captioned) are
+  // still shown for visibility, but with no live decision controls — the
+  // Worker's own not_ready_for_approval gate would refuse them anyway;
+  // this is purely a UI safety net so a human is never offered a button
+  // that would either fail or act on incomplete data.
+  const decisionSection = readiness.ready
+    ? `<div class="approval-decision-row">
+          <button type="button" class="approval-btn approval-btn-approve" data-decision="approved">Approve</button>
+          <button type="button" class="approval-btn approval-btn-reject" data-decision="rejected">Reject</button>
+        </div>
+        <label class="approval-reason-label">Rejection reason (optional)
+          <input type="text" class="approval-reason-input" placeholder="Optional — only used if you click Reject" />
+        </label>
+        <p class="approval-status" role="status"></p>`
+    : `<div class="approval-decision-row">
+          <button type="button" class="approval-btn approval-btn-approve" disabled>Approve</button>
+          <button type="button" class="approval-btn approval-btn-reject" disabled>Reject</button>
+        </div>
+        <p class="approval-not-actionable">Not actionable — ${escapeHtml(readiness.issues.join("; "))}</p>`;
 
   return `<article class="card approval-item" data-story-id="${escapeHtml(record.story_id)}">
         <div class="card-badges approval-badges">
           <span class="badge badge-category">${escapeHtml(record.status)}</span>
           ${s.category ? `<span class="badge badge-category">${escapeHtml(s.category)}</span>` : ""}
+          ${readiness.ready ? "" : `<span class="badge badge-not-ready">not actionable</span>`}
         </div>
         <h2 class="headline approval-headline">${escapeHtml(headline)}</h2>
         <div class="approval-media">
@@ -59,21 +83,14 @@ function renderCard(record) {
         </div>
         <div class="approval-caption-block">
           <span class="approval-media-label">Generated Caption</span>
-          <p class="approval-caption-text">${escapeHtml(c.text || "")}</p>
+          <p class="approval-caption-text">${c.text ? escapeHtml(c.text) : `<span class="approval-empty">Caption not generated yet</span>`}</p>
           ${hashtagLine}
         </div>
         <p class="meta"><strong>Source:</strong> ${escapeHtml(s.source_name || "(unknown)")}
           ${s.source_url ? ` &mdash; <a href="${escapeHtml(s.source_url)}" target="_blank" rel="noopener noreferrer">View original</a>` : ""}</p>
         <p class="meta"><strong>Story ID:</strong> <code>${escapeHtml(record.story_id)}</code></p>
         <p class="meta"><strong>Created:</strong> ${escapeHtml(formatHumanDateTime(record.created_at))}</p>
-        <div class="approval-decision-row">
-          <button type="button" class="approval-btn approval-btn-approve" data-decision="approved">Approve</button>
-          <button type="button" class="approval-btn approval-btn-reject" data-decision="rejected">Reject</button>
-        </div>
-        <label class="approval-reason-label">Rejection reason (optional)
-          <input type="text" class="approval-reason-input" placeholder="Optional — only used if you click Reject" />
-        </label>
-        <p class="approval-status" role="status"></p>
+        ${decisionSection}
       </article>`;
 }
 
@@ -107,6 +124,9 @@ function renderPage(records) {
   .approval-reason-label { display: block; font-size: 0.8rem; color: #555; margin-top: 0.5rem; }
   .approval-reason-input { display: block; width: 100%; box-sizing: border-box; margin-top: 0.25rem; padding: 0.4rem; }
   .approval-status { font-size: 0.9rem; margin-top: 0.5rem; min-height: 1.2em; }
+  .approval-not-actionable { font-size: 0.9rem; margin-top: 0.5rem; color: #92400e; background: #fff7ed; border: 1px solid #fed7aa; border-radius: 4px; padding: 0.5rem; }
+  .badge-not-ready { background: #fde68a; color: #78350f; }
+  .approval-empty { color: #888; font-style: italic; }
   .empty-state { color: #666; }
 </style>
 </head>
