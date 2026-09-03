@@ -49,6 +49,7 @@ import { assertOutputProduced } from "./lib/codexOutcome.js";
 import { downloadSourceImageWithRetries, cleanupSourceImage } from "./lib/sourceImage.js";
 import { generateWithRetries, MAX_GENERATION_ATTEMPTS } from "./lib/generateWithRetries.js";
 import { waitForCaptionClaim, CAPTION_CLAIM_POLL_MAX_ATTEMPTS, CAPTION_CLAIM_POLL_INTERVAL_MS } from "./lib/waitForCaptionClaim.js";
+import { waitForStoryArtworkClaim, STORY_ARTWORK_CLAIM_POLL_MAX_ATTEMPTS, STORY_ARTWORK_CLAIM_POLL_INTERVAL_MS } from "./lib/waitForStoryArtworkClaim.js";
 import { shouldSkipArtwork } from "./lib/routeTarget.js";
 import { determineRecoveryAction } from "./lib/routeRecovery.js";
 import { validateCaption } from "../lib/captionValidation.js";
@@ -210,9 +211,29 @@ async function buildStoryPrompt({ storyId, workDir, fixture, sourceImagePath }) 
 /** @returns {Promise<boolean>} whether Story completed successfully. Never touches Feed. */
 async function processStoryArtwork({ storyId, workDir, fixture, sourceImagePath }) {
   console.log(`Claiming ${storyId} (Story)...`);
-  const claimResult = await claimStoryArtwork(storyId);
+  // Feed's own /complete returning dispatch_confirmed:true only means
+  // GitHub ACCEPTED the repository_dispatch webhook, not that the Action
+  // has finished committing artwork_ready into data/social-state.json —
+  // the exact same gap already fixed for captions (2026-08-31 incident),
+  // now recurring here (2026-09-03 incident, story
+  // 6a443992-55a9-4ac5-b57d-ba2993a740e3) because this claim path was
+  // built without the same bounded-polling protection. Poll the same
+  // authoritative endpoint instead of assuming — never touches Feed.
+  const claimResult = await waitForStoryArtworkClaim(claimStoryArtwork, storyId, {
+    onWaiting: (attempt, attempts) =>
+      console.log(`artwork_ready not yet committed — waiting ${STORY_ARTWORK_CLAIM_POLL_INTERVAL_MS}ms before retrying Story claim (attempt ${attempt}/${attempts})...`),
+  });
 
   if (!claimResult.claimed) {
+    if (claimResult.reason === "not_artwork_ready_timeout") {
+      const totalSeconds = (STORY_ARTWORK_CLAIM_POLL_MAX_ATTEMPTS * STORY_ARTWORK_CLAIM_POLL_INTERVAL_MS) / 1000;
+      console.log(
+        `Story not claimed: artwork_ready was not committed within ~${totalSeconds}s. ` +
+          `Feed is preserved and untouched — rerun with --story-id=${storyId} later to retry Story ` +
+          `(it will use the Story-only recovery path and will NOT regenerate Feed).`
+      );
+      return false;
+    }
     const detail = claimResult.reason ?? claimResult.error ?? `http_${claimResult.httpStatus ?? "?"}`;
     console.log(`Story not claimed (${detail}).`);
     if (claimResult.message) console.log(`Detail: ${claimResult.message}`);
