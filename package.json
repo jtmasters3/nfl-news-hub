@@ -22,7 +22,7 @@
     "test:approval-events": "node scripts/tests/approval-events-regression.mjs",
     "test:wait-approval-commit": "node scripts/social-worker/lib/waitForApprovalCommit.test.mjs",
     "test:approval-readiness": "node scripts/social-worker/lib/approvalReadiness.test.mjs",
-    "test:api-client": "node scripts/social-worker/lib/apiClient.test.mjs",
+    "test:github-state-reader": "node scripts/social-worker/lib/githubStateReader.test.mjs",
     "test:story-artwork-events": "node scripts/tests/story-artwork-events-regression.mjs",
     "test:social-payload": "node scripts/tests/social-payload-regression.mjs",
     "test:wait-story-artwork-claim": "node scripts/social-worker/lib/waitForStoryArtworkClaim.test.mjs",

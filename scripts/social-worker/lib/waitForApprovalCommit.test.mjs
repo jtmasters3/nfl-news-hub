@@ -107,60 +107,12 @@ test("custom attempts/intervalMs override the defaults", async () => {
   assert.deepEqual(sleeps, [111, 111]);
 });
 
-// ---------------------------------------------------------------------------
-// Cache-busting (2026-08-31 false-timeout fix — see the doc comment on
-// waitForApprovalCommit.js for the full incident writeup)
-// ---------------------------------------------------------------------------
-
-test("every poll attempt's URL/token differs from every other attempt — a stale CDN entry can never be reused across the whole window", async () => {
-  const seenTokens = [];
-  const result = await waitForApprovalCommit(
-    async (cacheBust) => {
-      seenTokens.push(cacheBust);
-      return stateWith("S1", "awaiting_approval");
-    },
-    "S1",
-    { sleep: fakeSleep([]) }
-  );
-  assert.equal(result.status, "timeout");
-  assert.equal(seenTokens.length, APPROVAL_POLL_MAX_ATTEMPTS);
-  assert.equal(new Set(seenTokens).size, APPROVAL_POLL_MAX_ATTEMPTS, "every single attempt must receive a genuinely unique cache-busting value");
-});
-
-test("a custom deterministic cacheBustToken generator is used exactly once per attempt, in order", async () => {
-  const seenTokens = [];
-  await waitForApprovalCommit(
-    async (cacheBust) => {
-      seenTokens.push(cacheBust);
-      return stateWith("S1", "awaiting_approval");
-    },
-    "S1",
-    { attempts: 4, sleep: fakeSleep([]), cacheBustToken: (attempt) => `deterministic-${attempt}` }
-  );
-  assert.deepEqual(seenTokens, ["deterministic-1", "deterministic-2", "deterministic-3", "deterministic-4"]);
-});
-
-test("the default cache-busting token contains no token/secret-shaped content — it is purely a local timestamp+attempt+random value", async () => {
-  const seenTokens = [];
-  await waitForApprovalCommit(
-    async (cacheBust) => {
-      seenTokens.push(cacheBust);
-      return stateWith("S1", "awaiting_approval");
-    },
-    "S1",
-    { attempts: 3, sleep: fakeSleep([]) }
-  );
-  for (const token of seenTokens) {
-    assert.match(token, /^\d+-\d+-[a-z0-9]+$/, "must be a plain timestamp-attempt-random string, nothing resembling a bearer token");
-  }
-});
-
 test("polling never invokes anything beyond the injected read function — no decision is mutated by polling", async () => {
-  let readCalls = 0;
   const otherSideEffects = [];
   const fakeApiClient = {
     decideApproval: () => otherSideEffects.push("decideApproval"),
   };
+  let readCalls = 0;
   const result = await waitForApprovalCommit(
     async () => {
       readCalls++;
@@ -172,6 +124,116 @@ test("polling never invokes anything beyond the injected read function — no de
   assert.equal(result.committed, true);
   assert.equal(otherSideEffects.length, 0, "waitForApprovalCommit must never call anything write-capable — polling is a pure read loop");
   void fakeApiClient; // present only to make the "nothing else was called" assertion explicit
+});
+
+// ---------------------------------------------------------------------------
+// Read-error handling (2026-09-03 CDN-staleness fix — fetchState now reads
+// through a real API and can genuinely fail; see the doc comment on
+// waitForApprovalCommit.js for the full incident writeup)
+// ---------------------------------------------------------------------------
+
+test("fetchState is called with no arguments — the cache-busting-token contract from the old CDN-workaround fix is gone", async () => {
+  const receivedArgs = [];
+  await waitForApprovalCommit(
+    async (...args) => {
+      receivedArgs.push(args);
+      return stateWith("S1", "approved");
+    },
+    "S1",
+    { sleep: fakeSleep([]) }
+  );
+  assert.deepEqual(receivedArgs, [[]], "fetchState must be invoked with zero arguments every time");
+});
+
+test("a transient read failure does not crash polling and does not count as a definitive 'pending' — a later successful read can still observe approved", async () => {
+  let calls = 0;
+  const result = await waitForApprovalCommit(
+    async () => {
+      calls++;
+      if (calls === 1) throw new Error("GitHub API returned 502");
+      return stateWith("S1", "approved");
+    },
+    "S1",
+    { sleep: fakeSleep([]) }
+  );
+  assert.equal(result.committed, true);
+  assert.equal(result.status, "approved");
+  assert.equal(calls, 2);
+});
+
+test("read failures on every attempt exhaust the loop and return a DISTINCT status:'read_error', never folded into status:'timeout'", async () => {
+  let calls = 0;
+  const result = await waitForApprovalCommit(
+    async () => {
+      calls++;
+      throw new Error("network unreachable");
+    },
+    "S1",
+    { attempts: 4, sleep: fakeSleep([]) }
+  );
+  assert.equal(result.committed, false);
+  assert.equal(result.status, "read_error");
+  assert.equal(result.error, "network unreachable");
+  assert.equal(calls, 4);
+});
+
+test("a genuine pending timeout (reads always succeed, decision never appears) still reports status:'timeout', not 'read_error'", async () => {
+  const result = await waitForApprovalCommit(async () => stateWith("S1", "awaiting_approval"), "S1", {
+    attempts: 3,
+    sleep: fakeSleep([]),
+  });
+  assert.equal(result.committed, false);
+  assert.equal(result.status, "timeout");
+});
+
+test("a rate-limited error (err.rateLimited === true) stops polling immediately instead of exhausting the attempt budget", async () => {
+  let calls = 0;
+  const result = await waitForApprovalCommit(
+    async () => {
+      calls++;
+      const err = new Error("rate limited");
+      err.rateLimited = true;
+      throw err;
+    },
+    "S1",
+    { attempts: 20, sleep: fakeSleep([]) }
+  );
+  assert.equal(result.committed, false);
+  assert.equal(result.status, "read_error");
+  assert.equal(result.rateLimited, true);
+  assert.equal(calls, 1, "must stop after the very first rate-limited response, not keep retrying");
+});
+
+test("bounded polling is preserved: read errors still respect the configured attempts ceiling, never more", async () => {
+  let calls = 0;
+  await waitForApprovalCommit(
+    async () => {
+      calls++;
+      throw new Error("boom");
+    },
+    "S1",
+    { attempts: 5, sleep: fakeSleep([]) }
+  );
+  assert.equal(calls, 5);
+});
+
+test("onWaiting distinguishes 'pending' from 'read_error' reasons", async () => {
+  const reasons = [];
+  let calls = 0;
+  await waitForApprovalCommit(
+    async () => {
+      calls++;
+      if (calls === 1) throw new Error("blip");
+      return stateWith("S1", "awaiting_approval");
+    },
+    "S1",
+    {
+      attempts: 3,
+      sleep: fakeSleep([]),
+      onWaiting: (attempt, attempts, reason) => reasons.push(reason),
+    }
+  );
+  assert.deepEqual(reasons, ["read_error", "pending"]);
 });
 
 // ---------------------------------------------------------------------------

@@ -14,15 +14,24 @@
 // (see lib/waitForApprovalCommit.js) and returns ONE final outcome to the
 // browser — the browser never polls anything directly.
 //
+// Post-decision confirmation reads GitHub's REST API directly (see
+// lib/githubStateReader.js) rather than the raw.githubusercontent.com CDN
+// path used for the plain list view — unauthenticated api.github.com calls
+// are capped at 60/req/hour/IP, comfortably enough for this rare,
+// human-paced workflow. An optional GITHUB_API_TOKEN env var raises that
+// limit if it's ever needed; this server process is the only place that
+// token would ever be read — it must never reach the browser.
+//
 // Usage:
 //   node scripts/social-worker/approval-console.js
 // Required env: ARTWORK_WORKER_BASE_URL, AGGREGATE_ARTWORK_API_TOKEN.
-// Optional env: APPROVAL_CONSOLE_PORT (default 4321).
+// Optional env: APPROVAL_CONSOLE_PORT (default 4321), GITHUB_API_TOKEN.
 import http from "node:http";
 import { escapeHtml } from "../lib/text.js";
 import { formatHumanDateTime } from "../lib/dates.js";
 import { fetchSocialState, decideApproval } from "./lib/apiClient.js";
 import { waitForApprovalCommit } from "./lib/waitForApprovalCommit.js";
+import { createFreshStateFetcher } from "./lib/githubStateReader.js";
 import { assessApprovalReadiness } from "./lib/approvalReadiness.js";
 
 const HOST = "127.0.0.1";
@@ -167,6 +176,7 @@ function renderPage(records) {
       in_flight: () => "A decision submission for this post is already in progress — wait a moment and check again.",
       recoverable_error: (d) => "GitHub didn't confirm the dispatch — safe to retry " + d.decision + " now.",
       timeout: (d) => "Still waiting on GitHub to confirm your " + (d.decision === "approved" ? "Approve" : "Reject") + " decision. This may still be processing. You can check again or safely retry " + (d.decision === "approved" ? "Approve" : "Reject") + ".",
+      read_error: (d) => "Couldn't confirm your " + (d.decision === "approved" ? "Approve" : "Reject") + " decision — GitHub's API had a temporary problem" + (d.rateLimited ? " (rate limited)" : "") + ". This is separate from the decision itself, which may already be through. You can check again or safely retry " + (d.decision === "approved" ? "Approve" : "Reject") + ".",
       error: (d) => "Something went wrong: " + (d.message || "unknown error"),
     };
 
@@ -247,7 +257,7 @@ function renderPage(records) {
         return;
       }
 
-      // recoverable_error / timeout: only the SAME decision is safe to retry.
+      // recoverable_error / timeout / read_error: only the SAME decision is safe to retry.
       approveBtn.disabled = decision !== "approved";
       rejectBtn.disabled = decision !== "rejected";
     }
@@ -322,13 +332,27 @@ async function handleDecide(req, res) {
   // "pending": dispatch was accepted by GitHub (or an earlier attempt's
   // dispatch was) but not yet committed. Poll the authoritative state
   // server-side and return ONE final outcome — the browser never polls
-  // anything itself. Each attempt gets a fresh cache-busting query param
-  // (see fetchSocialState/appendCacheBustParam in lib/apiClient.js) so a
-  // stale upstream CDN entry can't make every poll see the same pre-commit
-  // snapshot.
-  const pollResult = await waitForApprovalCommit((cacheBust) => fetchSocialState({ cacheBust }), storyId);
+  // anything itself.
+  //
+  // Reads through lib/githubStateReader.js's createFreshStateFetcher()
+  // rather than the plain fetchSocialState() used by the list view above —
+  // that function reads the mutable `.../main/...` raw.githubusercontent.com
+  // URL, which was proven (2026-09-03) to be served stale by Fastly
+  // regardless of any query-string cache-busting. createFreshStateFetcher()
+  // instead checks the GitHub REST API for the latest commit SHA and reads
+  // the file pinned to that exact SHA, which cannot be stale by
+  // construction. A fresh fetcher (its own clean "last seen SHA") is built
+  // per decision, matching this poll's own bounded lifetime.
+  const fetchState = createFreshStateFetcher();
+  const pollResult = await waitForApprovalCommit(fetchState, storyId);
   res.writeHead(200, { "content-type": "application/json" });
-  res.end(JSON.stringify(pollResult.committed ? { outcome: pollResult.status } : { outcome: "timeout" }));
+  if (pollResult.committed) {
+    res.end(JSON.stringify({ outcome: pollResult.status }));
+  } else if (pollResult.status === "read_error") {
+    res.end(JSON.stringify({ outcome: "read_error", message: pollResult.error, rateLimited: !!pollResult.rateLimited }));
+  } else {
+    res.end(JSON.stringify({ outcome: "timeout" }));
+  }
 }
 
 const server = http.createServer(async (req, res) => {

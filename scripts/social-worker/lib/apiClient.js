@@ -192,35 +192,23 @@ function socialStateBaseUrl() {
   return process.env.SOCIAL_STATE_URL || "https://raw.githubusercontent.com/jtmasters3/nfl-news-hub/main/data/social-state.json";
 }
 
-/**
- * Appends a cache-busting query parameter, preserving any existing query
- * string. raw.githubusercontent.com's Fastly CDN (Cache-Control:
- * max-age=300) keys its cache by full URL — cache: "no-store" alone only
- * defeats the LOCAL fetch client's cache, not that upstream edge cache
- * (see the 2026-08-31 false-timeout incident, documented in
- * waitForApprovalCommit.js). A unique query value per request forces a
- * genuine cache miss every time. Pure/exported for direct testing.
- */
-export function appendCacheBustParam(url, value) {
-  const separator = url.includes("?") ? "&" : "?";
-  return `${url}${separator}approval_poll=${encodeURIComponent(value)}`;
-}
-
 // Public, unauthenticated read of the authoritative state — same raw
 // content path the Cloudflare Worker itself reads (see cloudflare-worker's
-// github.js). Used by the approval console both to list pending records
-// and to poll for the real committed approved/rejected transition.
+// github.js). Used only for the one-off list view (approval-console.js's
+// GET /) — a page reload is already a fresh browser navigation, not a
+// tight polling loop, so the CDN-staleness problem below doesn't apply
+// here.
 //
-// `cacheBust`, when supplied, forces a genuine origin re-fetch on every
-// call (see appendCacheBustParam above) — used only by the post-decision
-// confirmation poll (scripts/social-worker/lib/waitForApprovalCommit.js).
-// The one-off list-fetch call (approval-console.js's GET /) omits it,
-// unchanged from before — a page reload is already a fresh browser
-// navigation, not a tight polling loop, so it isn't the case this fixes.
-export async function fetchSocialState({ cacheBust } = {}) {
-  const base = socialStateBaseUrl();
-  const url = cacheBust != null ? appendCacheBustParam(base, cacheBust) : base;
-  const res = await fetch(url, { cache: "no-store" });
+// The post-decision confirmation poll does NOT use this function. It used
+// to (via a `cacheBust` query-string parameter), but that was proven
+// empirically ineffective: raw.githubusercontent.com's Fastly CDN ignores
+// query strings entirely when computing its cache key for this asset, so
+// no value appended here could ever force a fresh read. That poll now
+// reads through lib/githubStateReader.js's createFreshStateFetcher()
+// instead, which is immune to this by construction (see
+// waitForApprovalCommit.js for the full incident writeup).
+export async function fetchSocialState() {
+  const res = await fetch(socialStateBaseUrl(), { cache: "no-store" });
   if (!res.ok) throw new Error(`Failed to fetch data/social-state.json: ${res.status}`);
   return res.json();
 }
