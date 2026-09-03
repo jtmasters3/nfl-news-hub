@@ -20,8 +20,15 @@ named below. Do not rely on conversation history or memory.
    - `04-compact-mobile.png`
    - `05-dynamic-diagonal.png`
    - `06-cinematic-trade.png`
-3. Read and use `{{template_pack_dir}}\the-aggregate-official-logo.png`. Do
-   not redraw, retype, replace, or distort the logo.
+3. Do NOT render, draw, recreate, approximate, reinterpret, or spell out
+   The Aggregate logo or the words "THE AGGREGATE" anywhere in the image.
+   The official logo is composited on afterward by a separate deterministic
+   step, from the real logo file — never by image generation. Leave the
+   bottom-left branding area visually clean (dark background only, no
+   text, no mark, no wordmark, no placeholder shape) so that step has
+   clear space to work with, respecting the same bottom safe-area margin
+   as step 10 below. Do not read or reference any logo file for this
+   purpose, even if one exists in `{{template_pack_dir}}`.
 4. Read the base photograph directly from the local file
    `{{base_image_path}}` (already downloaded from `{{source_name}}` and
    verified locally — do not download or fetch it again from any URL).
@@ -54,14 +61,15 @@ named below. Do not rely on conversation history or memory.
    dates, source copy, or explanatory copy. Do NOT include a full caption
    on the graphic — headline only.
 9. Use The Aggregate black, white, and vivid-red branding: a dark/black
-   background, bold condensed white headline typography, restrained red
-   accents, and the official logo — optimized for a phone screen held
-   vertically.
+   background, bold condensed white headline typography, and restrained
+   red accents — everything EXCEPT the logo itself (per step 3) —
+   optimized for a phone screen held vertically.
 10. Keep the headline fully legible and inside safe areas for a phone
-    Story viewer: do not place any critical text (headline, logo) too
-    close to the very top or very bottom of the frame, where a viewing
-    app's own UI chrome (progress bar, reply field, controls) typically
-    sits. Leave clear vertical margin above and below the headline block.
+    Story viewer: do not place any critical text (headline) too close to
+    the very top or very bottom of the frame, where a viewing app's own UI
+    chrome (progress bar, reply field, controls) typically sits, and where
+    the deterministically-composited logo will also sit near the bottom.
+    Leave clear vertical margin above and below the headline block.
 11. Do not create a carousel, second slide, alternate concept, explainer,
     follow-up image, duplicate slide, or multiple output images — exactly
     ONE Story image for this story.
@@ -76,9 +84,11 @@ named below. Do not rely on conversation history or memory.
 15. Before exiting, verify that the saved file exists, is a readable
     nonzero-byte PNG, is approximately 9:16 (1080x1920 or a nearby valid
     vertical resolution), contains the correct supplied NFL subject,
-    visibly uses The Aggregate branding and official logo, contains the
-    fixture headline without additional story copy, and keeps the
-    headline clear of the top/bottom safe-area margins.
+    visibly uses The Aggregate color palette and typography treatment,
+    leaves the bottom-left branding area clean (no logo/wordmark of any
+    kind — that is added afterward, separately), contains the fixture
+    headline without additional story copy, and keeps the headline clear
+    of the top/bottom safe-area margins.
 16. Exit with a concise result stating the output path and verification
     outcome. If generation or validation fails, do not create substitutes
     or additional concepts; report the failure and exit non-successfully

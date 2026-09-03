@@ -39,11 +39,18 @@ import {
   claimCaption,
   completeCaption,
   failCaption,
+  claimFeedRegeneration,
+  completeFeedRegeneration,
+  failFeedRegeneration,
+  claimStoryRegeneration,
+  completeStoryRegeneration,
+  failStoryRegeneration,
   fetchArtworkQueue,
   fetchSocialState,
 } from "./lib/apiClient.js";
 import { runCodex } from "./lib/codexRunner.js";
 import { readPngDimensions } from "./lib/pngDimensions.js";
+import { compositeBrandOverlay } from "./lib/brandOverlay.js";
 import { selectTarget, missingFixtureFields } from "./lib/selectTarget.js";
 import { assertOutputProduced } from "./lib/codexOutcome.js";
 import { downloadSourceImageWithRetries, cleanupSourceImage } from "./lib/sourceImage.js";
@@ -66,9 +73,15 @@ const DEFAULT_TEMPLATE_PACK_DIR =
 const MAX_CAPTION_ATTEMPTS = 3;
 
 function parseArgs(argv) {
-  const args = { storyId: null };
+  const args = { storyId: null, regenerateFeed: false, regenerateStory: false };
   for (const arg of argv) {
     if (arg.startsWith("--story-id=")) args.storyId = arg.slice("--story-id=".length);
+    else if (arg === "--regenerate-feed") args.regenerateFeed = true;
+    else if (arg === "--regenerate-story") args.regenerateStory = true;
+    else if (arg === "--regenerate-package") {
+      args.regenerateFeed = true;
+      args.regenerateStory = true;
+    }
   }
   return args;
 }
@@ -145,8 +158,20 @@ async function processFeedArtwork({ storyId, workDir, fixture, sourceImagePath }
       { onAttemptFailure: (attempt, err) => console.error(`Feed attempt ${attempt} failed: ${err.message}`) }
     );
 
+    // Deterministic brand compositing (2026-09 fix — see brandOverlay.js):
+    // Codex is now prompted to leave the branding area clean; the exact
+    // official logo, hash-verified against the canonical asset, is pasted
+    // on here by code — never by image generation. A compositing failure
+    // (missing/corrupt logo, out-of-bounds placement) fails this whole
+    // attempt exactly like a generation failure — nothing unbranded or
+    // AI-approximated is ever uploaded.
+    const brandedPath = outputPath.replace(/\.png$/i, ".branded.png");
+    console.log("Compositing official logo onto Feed...");
+    const overlayResult = await compositeBrandOverlay({ baseImagePath: outputPath, outputPath: brandedPath, format: "feed" });
+    console.log(`Logo composited: ${overlayResult.logoWidth}x${overlayResult.logoHeight} at (${overlayResult.logoLeft},${overlayResult.logoTop}) on ${overlayResult.width}x${overlayResult.height} canvas.`);
+
     console.log("Uploading Feed...");
-    const completeResult = await completeArtwork(storyId, claimId, outputPath);
+    const completeResult = await completeArtwork(storyId, claimId, brandedPath);
     if (!completeResult.uploaded) {
       throw new Error(`Upload rejected: ${completeResult.reason ?? "unknown"}`);
     }
@@ -278,8 +303,15 @@ async function processStoryArtwork({ storyId, workDir, fixture, sourceImagePath 
       { onAttemptFailure: (attempt, err) => console.error(`Story attempt ${attempt} failed: ${err.message}`) }
     );
 
+    // Deterministic brand compositing — same mechanism as Feed, see
+    // brandOverlay.js and the comment on the Feed call site above.
+    const brandedPath = outputPath.replace(/\.png$/i, ".branded.png");
+    console.log("Compositing official logo onto Story...");
+    const overlayResult = await compositeBrandOverlay({ baseImagePath: outputPath, outputPath: brandedPath, format: "story" });
+    console.log(`Logo composited: ${overlayResult.logoWidth}x${overlayResult.logoHeight} at (${overlayResult.logoLeft},${overlayResult.logoTop}) on ${overlayResult.width}x${overlayResult.height} canvas.`);
+
     console.log("Uploading Story...");
-    const completeResult = await completeStoryArtwork(storyId, claimId, outputPath);
+    const completeResult = await completeStoryArtwork(storyId, claimId, brandedPath);
     if (!completeResult.uploaded) {
       throw new Error(`Upload rejected: ${completeResult.reason ?? "unknown"}`);
     }
@@ -418,6 +450,229 @@ async function processStoryArtworkRecovery(storyId, record) {
   }
 
   await processCaption(storyId);
+}
+
+// ---------------------------------------------------------------------------
+// Package regeneration (2026-09 branding-defect fix) — an EXPLICIT,
+// operator-only recovery path for a story already sitting at
+// "awaiting_approval" with a full, valid content package that needs its
+// Feed and/or Story re-rendered with the new deterministic logo
+// compositing. ONLY reachable via the --regenerate-feed/--regenerate-story
+// CLI flags (see main()) — an ordinary process-one.js run, with or without
+// --story-id, can NEVER reach this code, so accidental regeneration is
+// impossible by construction. Uses fully independent claim namespaces
+// (regenerate-feed:{story_id}, regenerate-story:{story_id}) and Worker
+// endpoints, legal ONLY while status is exactly "awaiting_approval" —
+// enforced server-side, not just here. Caption is never touched: nothing
+// about the underlying facts changes when only the branding treatment of
+// an image is corrected.
+// ---------------------------------------------------------------------------
+
+async function processFeedRegeneration({ storyId, workDir, fixture, sourceImagePath }) {
+  console.log(`Claiming ${storyId} (Feed regeneration)...`);
+  const claimResult = await claimFeedRegeneration(storyId);
+  if (!claimResult.claimed) {
+    const detail = claimResult.reason ?? claimResult.error ?? `http_${claimResult.httpStatus ?? "?"}`;
+    console.log(`Feed regeneration not claimed (${detail}).`);
+    if (claimResult.message) console.log(`Detail: ${claimResult.message}`);
+    return false;
+  }
+  const claimId = claimResult.claim_id;
+  console.log(`Feed regeneration claimed. claim_id=${claimId}`);
+
+  try {
+    const { promptText, outputPath } = await buildFeedPrompt({ storyId, workDir, fixture, sourceImagePath });
+
+    await generateWithRetries(
+      async (attempt) => {
+        console.log(`Running codex exec for Feed regeneration (attempt ${attempt}/${MAX_GENERATION_ATTEMPTS})...`);
+        await rm(outputPath, { force: true });
+        let codexResult;
+        try {
+          codexResult = await runCodex({ promptText, addDir: SOCIAL_OUTPUT_DIR });
+        } catch (codexErr) {
+          await writeFile(path.join(workDir, `codex.feed-regen.attempt${attempt}.stdout.log`), codexErr.codexStdout ?? "", "utf-8");
+          await writeFile(path.join(workDir, `codex.feed-regen.attempt${attempt}.stderr.log`), codexErr.codexStderr ?? "", "utf-8");
+          throw codexErr;
+        }
+        await writeFile(path.join(workDir, `codex.feed-regen.attempt${attempt}.stdout.log`), codexResult.stdout, "utf-8");
+        await writeFile(path.join(workDir, `codex.feed-regen.attempt${attempt}.stderr.log`), codexResult.stderr, "utf-8");
+        await assertOutputProduced(outputPath, codexResult.stdout);
+        const attemptDims = await readPngDimensions(outputPath);
+        if (!attemptDims || attemptDims.sizeBytes === 0) throw new Error(`Output PNG missing or empty at ${outputPath}`);
+        console.log(`Feed regenerated on attempt ${attempt}: ${outputPath} (${attemptDims.width}x${attemptDims.height}, ${attemptDims.sizeBytes} bytes)`);
+      },
+      { onAttemptFailure: (attempt, err) => console.error(`Feed regeneration attempt ${attempt} failed: ${err.message}`) }
+    );
+
+    const brandedPath = outputPath.replace(/\.png$/i, ".branded.png");
+    console.log("Compositing official logo onto regenerated Feed...");
+    const overlayResult = await compositeBrandOverlay({ baseImagePath: outputPath, outputPath: brandedPath, format: "feed" });
+    console.log(`Logo composited: ${overlayResult.logoWidth}x${overlayResult.logoHeight} at (${overlayResult.logoLeft},${overlayResult.logoTop}) on ${overlayResult.width}x${overlayResult.height} canvas.`);
+
+    console.log("Uploading regenerated Feed (overwrites the existing R2 object at the deterministic key)...");
+    const completeResult = await completeFeedRegeneration(storyId, claimId, brandedPath);
+    if (!completeResult.uploaded) throw new Error(`Upload rejected: ${completeResult.reason ?? "unknown"}`);
+    if (completeResult.dispatch_confirmed === false) {
+      console.warn(`WARNING: regenerated Feed for ${storyId} is safely stored (R2 + claim), but GitHub was never notified after retries — needs manual reconciliation.`);
+    }
+    console.log("Feed regeneration done:");
+    console.log(JSON.stringify({ story_id: storyId, claim_id: claimId, image_url: completeResult.image_url, width: completeResult.width, height: completeResult.height, dispatch_confirmed: completeResult.dispatch_confirmed }, null, 2));
+    return true;
+  } catch (err) {
+    console.error(`Feed regeneration failed: ${err.message}`);
+    try {
+      await failFeedRegeneration(storyId, claimId, err.message.slice(0, 2000));
+    } catch (failErr) {
+      console.error(`Also failed to report the Feed regeneration failure: ${failErr.message}`);
+    }
+    return false;
+  }
+}
+
+async function processStoryRegeneration({ storyId, workDir, fixture, sourceImagePath }) {
+  console.log(`Claiming ${storyId} (Story regeneration)...`);
+  const claimResult = await claimStoryRegeneration(storyId);
+  if (!claimResult.claimed) {
+    const detail = claimResult.reason ?? claimResult.error ?? `http_${claimResult.httpStatus ?? "?"}`;
+    console.log(`Story regeneration not claimed (${detail}).`);
+    if (claimResult.message) console.log(`Detail: ${claimResult.message}`);
+    return false;
+  }
+  const claimId = claimResult.claim_id;
+  console.log(`Story regeneration claimed. claim_id=${claimId}`);
+
+  await mkdir(path.join(SOCIAL_OUTPUT_DIR, "story"), { recursive: true });
+
+  try {
+    const { promptText, outputPath } = await buildStoryPrompt({ storyId, workDir, fixture, sourceImagePath });
+
+    await generateWithRetries(
+      async (attempt) => {
+        console.log(`Running codex exec for Story regeneration (attempt ${attempt}/${MAX_GENERATION_ATTEMPTS})...`);
+        await rm(outputPath, { force: true });
+        let codexResult;
+        try {
+          codexResult = await runCodex({ promptText, addDir: SOCIAL_OUTPUT_DIR });
+        } catch (codexErr) {
+          await writeFile(path.join(workDir, `codex.story-regen.attempt${attempt}.stdout.log`), codexErr.codexStdout ?? "", "utf-8");
+          await writeFile(path.join(workDir, `codex.story-regen.attempt${attempt}.stderr.log`), codexErr.codexStderr ?? "", "utf-8");
+          throw codexErr;
+        }
+        await writeFile(path.join(workDir, `codex.story-regen.attempt${attempt}.stdout.log`), codexResult.stdout, "utf-8");
+        await writeFile(path.join(workDir, `codex.story-regen.attempt${attempt}.stderr.log`), codexResult.stderr, "utf-8");
+        await assertOutputProduced(outputPath, codexResult.stdout);
+        const attemptDims = await readPngDimensions(outputPath);
+        if (!attemptDims || attemptDims.sizeBytes === 0) throw new Error(`Output PNG missing or empty at ${outputPath}`);
+        console.log(`Story regenerated on attempt ${attempt}: ${outputPath} (${attemptDims.width}x${attemptDims.height}, ${attemptDims.sizeBytes} bytes)`);
+      },
+      { onAttemptFailure: (attempt, err) => console.error(`Story regeneration attempt ${attempt} failed: ${err.message}`) }
+    );
+
+    const brandedPath = outputPath.replace(/\.png$/i, ".branded.png");
+    console.log("Compositing official logo onto regenerated Story...");
+    const overlayResult = await compositeBrandOverlay({ baseImagePath: outputPath, outputPath: brandedPath, format: "story" });
+    console.log(`Logo composited: ${overlayResult.logoWidth}x${overlayResult.logoHeight} at (${overlayResult.logoLeft},${overlayResult.logoTop}) on ${overlayResult.width}x${overlayResult.height} canvas.`);
+
+    console.log("Uploading regenerated Story (overwrites the existing R2 object at the deterministic key)...");
+    const completeResult = await completeStoryRegeneration(storyId, claimId, brandedPath);
+    if (!completeResult.uploaded) throw new Error(`Upload rejected: ${completeResult.reason ?? "unknown"}`);
+    if (completeResult.dispatch_confirmed === false) {
+      console.warn(`WARNING: regenerated Story for ${storyId} is safely stored (R2 + claim), but GitHub was never notified after retries — needs manual reconciliation.`);
+    }
+    console.log("Story regeneration done:");
+    console.log(JSON.stringify({ story_id: storyId, claim_id: claimId, image_url: completeResult.image_url, width: completeResult.width, height: completeResult.height, dispatch_confirmed: completeResult.dispatch_confirmed }, null, 2));
+    return true;
+  } catch (err) {
+    console.error(`Story regeneration failed: ${err.message}`);
+    try {
+      await failStoryRegeneration(storyId, claimId, err.message.slice(0, 2000));
+    } catch (failErr) {
+      console.error(`Also failed to report the Story regeneration failure: ${failErr.message}`);
+    }
+    return false;
+  }
+}
+
+/**
+ * Orchestrates an explicit package regeneration. Refuses anything not
+ * currently "awaiting_approval" (the Worker re-enforces this too, at both
+ * claim and complete time — this is a fast client-side check, not the
+ * real guard). Downloads one fresh source image for the whole operation
+ * (a new processing lifecycle) and shares it across Feed and/or Story as
+ * requested. Never touches caption, never touches approval, never calls
+ * Meta — the record simply stays "awaiting_approval" throughout, and the
+ * existing readiness gate (approvalReadiness.js / the Worker's
+ * storyReadyForApproval) automatically reflects whether the regenerated
+ * package is actionable again once this returns.
+ */
+async function processPackageRegeneration(storyId, { regenerateFeed, regenerateStory }) {
+  const state = await fetchSocialState();
+  const record = state?.stories?.[storyId];
+  if (!record) {
+    console.error(`Cannot regenerate ${storyId}: no record found in data/social-state.json.`);
+    process.exitCode = 1;
+    return;
+  }
+  if (record.status !== "awaiting_approval") {
+    console.error(
+      `Refusing to regenerate ${storyId}: status is "${record.status}", not "awaiting_approval". ` +
+        `Package regeneration is only for a still-unapproved, still-undecided package — never for an approved, rejected, or posted story.`
+    );
+    process.exitCode = 1;
+    return;
+  }
+
+  const s = record.source_story || {};
+  const fixture = {
+    story_id: storyId,
+    post_headline: s.post_headline,
+    base_image_url: s.base_image_url,
+    source_name: s.source_name,
+    source_url: s.source_url,
+  };
+  const missing = missingFixtureFields(fixture);
+  if (missing.length) {
+    console.error(`Refusing to regenerate ${storyId}: missing required fixture field(s): ${missing.join(", ")}.`);
+    process.exitCode = 1;
+    return;
+  }
+
+  const workDir = path.join(SOCIAL_OUTPUT_DIR, "work", storyId);
+  await mkdir(workDir, { recursive: true });
+  await mkdir(SOCIAL_OUTPUT_DIR, { recursive: true });
+
+  let sourceImagePath;
+  let feedOk = true;
+  let storyOk = true;
+  try {
+    console.log("Downloading source image locally (package regeneration)...");
+    const sourceImage = await downloadSourceImageWithRetries(fixture.base_image_url, workDir, {
+      onAttemptFailure: (attempt, err) => console.error(`Source image download attempt ${attempt} failed: ${err.message}`),
+    });
+    sourceImagePath = sourceImage.path;
+    console.log(`Source image saved locally: ${sourceImagePath} (${sourceImage.sizeBytes} bytes)`);
+
+    if (regenerateFeed) {
+      feedOk = await processFeedRegeneration({ storyId, workDir, fixture, sourceImagePath });
+    }
+    if (regenerateStory) {
+      storyOk = await processStoryRegeneration({ storyId, workDir, fixture, sourceImagePath });
+    }
+  } finally {
+    await cleanupSourceImage(sourceImagePath);
+  }
+
+  if (!feedOk || !storyOk) {
+    console.log(
+      `Package regeneration incomplete for ${storyId} (Feed: ${feedOk ? "ok" : "FAILED"}, Story: ${storyOk ? "ok" : "FAILED"}). ` +
+        `The story remains at awaiting_approval; whichever asset failed keeps its prior valid data untouched. Rerun the same command to retry.`
+    );
+    process.exitCode = 1;
+    return;
+  }
+
+  console.log(`Package regeneration complete for ${storyId}. Story remains at awaiting_approval — caption untouched, approval untouched, nothing published.`);
 }
 
 // ---------------------------------------------------------------------------
@@ -578,7 +833,21 @@ async function processCaption(storyId) {
 // ---------------------------------------------------------------------------
 
 async function main() {
-  const { storyId: requestedStoryId } = parseArgs(process.argv.slice(2));
+  const { storyId: requestedStoryId, regenerateFeed, regenerateStory } = parseArgs(process.argv.slice(2));
+
+  // Explicit, opt-in ONLY — reachable exclusively via --regenerate-feed/
+  // --regenerate-story, never as a side effect of any other flag or
+  // argument combination. An ordinary run (no flags, or --story-id alone)
+  // never enters this branch, so accidental regeneration is impossible.
+  if (regenerateFeed || regenerateStory) {
+    if (!requestedStoryId) {
+      console.error("--regenerate-feed/--regenerate-story require an explicit --story-id.");
+      process.exitCode = 1;
+      return;
+    }
+    await processPackageRegeneration(requestedStoryId, { regenerateFeed, regenerateStory });
+    return;
+  }
 
   // Always fetch the queue, even for an explicit --story-id — the
   // 2026-08-28 f4328222-... incident happened because a bare story_id was

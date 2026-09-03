@@ -27,6 +27,9 @@
     "test:social-payload": "node scripts/tests/social-payload-regression.mjs",
     "test:wait-story-artwork-claim": "node scripts/social-worker/lib/waitForStoryArtworkClaim.test.mjs",
     "test:readiness-messages": "node scripts/social-worker/lib/readinessMessages.test.mjs",
+    "test:brand-overlay": "node scripts/social-worker/lib/brandOverlay.test.mjs",
+    "test:prompt-templates": "node scripts/tests/prompt-templates-regression.mjs",
+    "test:regeneration-events": "node scripts/tests/regeneration-events-regression.mjs",
     "test:route-recovery": "node scripts/social-worker/lib/routeRecovery.test.mjs",
     "social:seed-cutover": "node scripts/social/cutover-seed.js",
     "social:enqueue": "node scripts/social/enqueue-story.js",
@@ -35,6 +38,7 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.120.0",
-    "fast-xml-parser": "^5.11.0"
+    "fast-xml-parser": "^5.11.0",
+    "sharp": "^0.35.4"
   }
 }

@@ -20,6 +20,7 @@ import { applyClaimEvent, applyCompleteEvent, applyFailEvent } from "../lib/artw
 import { applyCaptionClaimEvent, applyCaptionCompleteEvent, applyCaptionFailEvent } from "../lib/captionEvents.js";
 import { applyApprovalApprovedEvent, applyApprovalRejectedEvent } from "../lib/approvalEvents.js";
 import { applyStoryArtworkClaimEvent, applyStoryArtworkCompleteEvent, applyStoryArtworkFailEvent } from "../lib/storyArtworkEvents.js";
+import { applyFeedRegenerateCompleteEvent, applyFeedRegenerateFailEvent, applyStoryRegenerateCompleteEvent, applyStoryRegenerateFailEvent } from "../lib/regenerationEvents.js";
 import { generatePostsForApproval } from "../generate-posts-for-approval.js";
 import { writeFile } from "node:fs/promises";
 import { SOCIAL_ARTWORK_QUEUE_JSON_PATH } from "../lib/store.js";
@@ -104,6 +105,16 @@ async function main() {
     result = applyStoryArtworkCompleteEvent(state, payload, { reachable });
   } else if (eventType === "story-artwork-failed") {
     result = applyStoryArtworkFailEvent(state, payload);
+  } else if (eventType === "feed-regenerate-completed") {
+    const reachable = await checkReachable(payload.image_url);
+    result = applyFeedRegenerateCompleteEvent(state, payload, { reachable });
+  } else if (eventType === "feed-regenerate-failed") {
+    result = applyFeedRegenerateFailEvent(state, payload);
+  } else if (eventType === "story-regenerate-completed") {
+    const reachable = await checkReachable(payload.image_url);
+    result = applyStoryRegenerateCompleteEvent(state, payload, { reachable });
+  } else if (eventType === "story-regenerate-failed") {
+    result = applyStoryRegenerateFailEvent(state, payload);
   } else {
     console.error(`Unknown ARTWORK_EVENT_TYPE: ${eventType}`);
     process.exitCode = 1;

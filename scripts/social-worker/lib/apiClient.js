@@ -95,6 +95,53 @@ export async function failStoryArtwork(storyId, claimId, message) {
   return postJson("/social/story-artwork/fail", { story_id: storyId, claim_id: claimId, message });
 }
 
+// --- Package regeneration (2026-09 branding-defect fix) — an operator-only
+// recovery path, only ever legal while a story sits at "awaiting_approval".
+// Fully independent claim namespaces from both the original Feed/Story
+// claims (permanently completed, un-reclaimable) and from each other.
+// Reachable ONLY via process-one.js's explicit --regenerate-feed /
+// --regenerate-story flags — never called by any normal recovery path.
+
+export async function claimFeedRegeneration(storyId, { processorId = defaultProcessorId(), leaseMs } = {}) {
+  return postJson("/social/regenerate-feed/claim", { story_id: storyId, processor_id: processorId, lease_ms: leaseMs });
+}
+
+export async function completeFeedRegeneration(storyId, claimId, filePath, { provider = "chatgpt-codex-local" } = {}) {
+  const bytes = await readFile(filePath);
+  const form = new FormData();
+  form.set("story_id", storyId);
+  form.set("claim_id", claimId);
+  form.set("provider", provider);
+  form.set("image", new Blob([bytes], { type: "image/png" }), path.basename(filePath));
+  const res = await fetch(`${baseUrl()}/social/regenerate-feed/complete`, { method: "POST", headers: { authorization: `Bearer ${token()}` }, body: form });
+  const parsed = await res.json().catch(() => ({}));
+  return { httpStatus: res.status, ...parsed };
+}
+
+export async function failFeedRegeneration(storyId, claimId, message) {
+  return postJson("/social/regenerate-feed/fail", { story_id: storyId, claim_id: claimId, message });
+}
+
+export async function claimStoryRegeneration(storyId, { processorId = defaultProcessorId(), leaseMs } = {}) {
+  return postJson("/social/regenerate-story/claim", { story_id: storyId, processor_id: processorId, lease_ms: leaseMs });
+}
+
+export async function completeStoryRegeneration(storyId, claimId, filePath, { provider = "chatgpt-codex-local" } = {}) {
+  const bytes = await readFile(filePath);
+  const form = new FormData();
+  form.set("story_id", storyId);
+  form.set("claim_id", claimId);
+  form.set("provider", provider);
+  form.set("image", new Blob([bytes], { type: "image/png" }), path.basename(filePath));
+  const res = await fetch(`${baseUrl()}/social/regenerate-story/complete`, { method: "POST", headers: { authorization: `Bearer ${token()}` }, body: form });
+  const parsed = await res.json().catch(() => ({}));
+  return { httpStatus: res.status, ...parsed };
+}
+
+export async function failStoryRegeneration(storyId, claimId, message) {
+  return postJson("/social/regenerate-story/fail", { story_id: storyId, claim_id: claimId, message });
+}
+
 // --- Caption (Phase 2C) — a separate, independent claim lifecycle from
 // artwork above, only ever claimable once a story has reached
 // "artwork_ready". JSON throughout, not multipart — no binary involved.

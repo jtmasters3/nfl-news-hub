@@ -20,8 +20,14 @@ named below. Do not rely on conversation history or memory.
    - `04-compact-mobile.png`
    - `05-dynamic-diagonal.png`
    - `06-cinematic-trade.png`
-3. Read and use `{{template_pack_dir}}\the-aggregate-official-logo.png`. Do
-   not redraw, retype, replace, or distort the logo.
+3. Do NOT render, draw, recreate, approximate, reinterpret, or spell out
+   The Aggregate logo or the words "THE AGGREGATE" anywhere in the image.
+   The official logo is composited on afterward by a separate deterministic
+   step, from the real logo file — never by image generation. Leave the
+   bottom-left branding area visually clean (dark background/gradient only,
+   no text, no mark, no wordmark, no placeholder shape) so that step has
+   clear space to work with. Do not read or reference any logo file for
+   this purpose, even if one exists in `{{template_pack_dir}}`.
 4. Read the base photograph directly from the local file
    `{{base_image_path}}` (already downloaded from `{{source_name}}` and
    verified locally — do not download or fetch it again from any URL).
@@ -46,8 +52,8 @@ named below. Do not rely on conversation history or memory.
    statistics, quotes, summaries, subheadlines, dates, source copy, or
    explanatory copy.
 9. Use The Aggregate black, white, and vivid-red branding, dark gradients,
-   condensed high-impact headline typography, restrained red accents, and
-   the official logo.
+   condensed high-impact headline typography, and restrained red accents —
+   everything EXCEPT the logo itself (per step 3).
 10. Do not create a carousel, second slide, alternate concept, explainer,
     follow-up image, or multiple output images.
 11. Use the built-in image-generation capability associated with the
@@ -60,9 +66,10 @@ named below. Do not rely on conversation history or memory.
     that exact file.
 14. Before exiting, verify that the saved file exists, is a readable
     nonzero-byte PNG, is 1024 x 1280 or approximately 4:5, contains the
-    correct supplied NFL subject, visibly uses The Aggregate branding and
-    official logo, and contains the fixture headline without additional
-    story copy.
+    correct supplied NFL subject, visibly uses The Aggregate color palette
+    and typography treatment, leaves the bottom-left branding area clean
+    (no logo/wordmark of any kind — that is added afterward, separately),
+    and contains the fixture headline without additional story copy.
 15. Exit with a concise result stating the output path and verification
     outcome. If generation or validation fails, do not create substitutes
     or additional concepts; report the failure and exit non-successfully
