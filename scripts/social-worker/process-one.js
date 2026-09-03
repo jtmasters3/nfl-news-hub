@@ -49,6 +49,7 @@ import { assertOutputProduced } from "./lib/codexOutcome.js";
 import { downloadSourceImageWithRetries, cleanupSourceImage } from "./lib/sourceImage.js";
 import { generateWithRetries, MAX_GENERATION_ATTEMPTS } from "./lib/generateWithRetries.js";
 import { waitForCaptionClaim, CAPTION_CLAIM_POLL_MAX_ATTEMPTS, CAPTION_CLAIM_POLL_INTERVAL_MS } from "./lib/waitForCaptionClaim.js";
+import { describeReadinessTimeout } from "./lib/readinessMessages.js";
 import { waitForStoryArtworkClaim, STORY_ARTWORK_CLAIM_POLL_MAX_ATTEMPTS, STORY_ARTWORK_CLAIM_POLL_INTERVAL_MS } from "./lib/waitForStoryArtworkClaim.js";
 import { shouldSkipArtwork } from "./lib/routeTarget.js";
 import { determineRecoveryAction } from "./lib/routeRecovery.js";
@@ -451,33 +452,29 @@ async function buildCaptionPrompt({ workDir, captionFixture, feedback }) {
 
 async function processCaption(storyId) {
   console.log(`Claiming caption work for ${storyId}...`);
-  // /social/artwork/complete's dispatch_confirmed:true only means GitHub
-  // ACCEPTED the repository_dispatch webhook, not that the Action has
-  // finished committing artwork_ready into data/social-state.json (2026-08-31
-  // incident: story 34195a7b-69d8-4225-b58b-757febe23f4d's one-shot claim
-  // hit "not_artwork_ready" ~1s after acceptance, ~20s before the commit
-  // landed). Poll the same authoritative endpoint instead of assuming.
+  // /social/artwork/complete and /social/story-artwork/complete both
+  // returning dispatch_confirmed:true only means GitHub ACCEPTED the
+  // repository_dispatch webhook, not that the Action has finished
+  // committing the corresponding readiness into data/social-state.json.
+  // Poll the same authoritative endpoint instead of assuming, for BOTH
+  // temporary readiness reasons (not_artwork_ready = Feed's own commit
+  // still pending; story_artwork_not_ready = Story's own commit still
+  // pending, v2 only — 2026-09-03 incident: story
+  // 6a443992-55a9-4ac5-b57d-ba2993a740e3's Story generated and uploaded
+  // successfully, but the claim attempted ~1s later hit
+  // story_artwork_not_ready because only "not_artwork_ready" was
+  // recognized as retryable at the time).
   const claimResult = await waitForCaptionClaim(claimCaption, storyId, {
-    onWaiting: (attempt, attempts) =>
-      console.log(`artwork_ready not yet committed — waiting ${CAPTION_CLAIM_POLL_INTERVAL_MS}ms before retrying caption claim (attempt ${attempt}/${attempts})...`),
+    onWaiting: (attempt, attempts, reason) => {
+      const what = reason === "story_artwork_not_ready" ? "Story artwork" : "Feed artwork";
+      console.log(`${what} not yet committed — waiting ${CAPTION_CLAIM_POLL_INTERVAL_MS}ms before retrying caption claim (attempt ${attempt}/${attempts})...`);
+    },
   });
 
   if (!claimResult.claimed) {
-    if (claimResult.reason === "not_artwork_ready_timeout") {
+    if (claimResult.reason === "readiness_timeout") {
       const totalSeconds = (CAPTION_CLAIM_POLL_MAX_ATTEMPTS * CAPTION_CLAIM_POLL_INTERVAL_MS) / 1000;
-      console.log(
-        `Caption not claimed: artwork_ready was not committed within ~${totalSeconds}s. ` +
-          `Artwork is preserved and untouched — rerun with --story-id=${storyId} later to retry captioning ` +
-          `(it will use the caption-only recovery path and will NOT regenerate artwork).`
-      );
-      process.exitCode = 1;
-      return;
-    }
-    if (claimResult.reason === "story_artwork_not_ready") {
-      console.log(
-        `Caption not claimed: Story artwork is not yet valid for ${storyId}. ` +
-          `Rerun with --story-id=${storyId} to retry Story generation (Story-only recovery — Feed will NOT be regenerated).`
-      );
+      console.log(describeReadinessTimeout({ lastReason: claimResult.last_reason, storyId, totalSeconds }));
       process.exitCode = 1;
       return;
     }

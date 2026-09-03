@@ -26,6 +26,7 @@
     "test:story-artwork-events": "node scripts/tests/story-artwork-events-regression.mjs",
     "test:social-payload": "node scripts/tests/social-payload-regression.mjs",
     "test:wait-story-artwork-claim": "node scripts/social-worker/lib/waitForStoryArtworkClaim.test.mjs",
+    "test:readiness-messages": "node scripts/social-worker/lib/readinessMessages.test.mjs",
     "test:route-recovery": "node scripts/social-worker/lib/routeRecovery.test.mjs",
     "social:seed-cutover": "node scripts/social/cutover-seed.js",
     "social:enqueue": "node scripts/social/enqueue-story.js",
