@@ -25,8 +25,27 @@ const SOURCE_PREFIX_PATTERN =
 // Earliest of these marks the point where a headline moves from the core
 // fact into a secondary clause (trade compensation, extra context, a
 // second story tacked on with "and") — truncating there keeps the primary
-// fact intact instead of chopping mid-sentence.
-const CLAUSE_BOUNDARY_PATTERN = /,| and | in exchange for | after | amid | while | but | following /i;
+// fact intact instead of chopping mid-sentence. Global, so
+// truncateAtClauseBoundary can walk every occurrence rather than just the
+// first — necessary now that a match can be skipped (see below).
+const CLAUSE_BOUNDARY_PATTERN = /,| and | in exchange for | after | amid | while | but | following | under /gi;
+
+// A headline that opens with one of these immediately after any leading
+// "Name:" attribution is a dependent/setup clause, not a complete
+// statement on its own ("When the lights have come on" has no subject or
+// payoff) — cutting the headline down to just this clause, as a naive
+// "keep everything before the boundary" rule would, produces a dangling
+// fragment. See buildSwappedFragment below.
+const SUBORDINATING_CONJUNCTIONS = new Set(["when", "while", "after", "before", "since", "as", "although", "though", "because", "if", "until", "unless"]);
+
+// A kept fragment must never itself END on one of these — defense in
+// depth alongside the quote-span protection below; truncateAtClauseBoundary
+// already never includes the boundary word itself (it cuts strictly
+// BEFORE the match), so this should be unreachable in practice, but a
+// cheap, explicit check costs nothing and guards future boundary patterns.
+const TRAILING_DANGLING_WORDS = new Set([
+  "and", "or", "but", "nor", "for", "so", "yet", "with", "in", "on", "at", "to", "of", "by", "from", "as", "than", "that", "which", "who", "whose", "the", "a", "an",
+]);
 
 const MIN_WORDS = 4;
 const TARGET_MID = 7;
@@ -35,6 +54,64 @@ const HARD_MAX_WORDS = 12;
 
 function wordCount(text) {
   return text.trim().split(/\s+/).filter(Boolean).length;
+}
+
+/** Balanced-pair quoted spans ('...' or "..."), as [start, end) index ranges — never a bare/possessive apostrophe, since that has no matching partner to complete a pair. */
+function findQuotedSpans(text) {
+  const spans = [];
+  const re = /'[^']+'|"[^"]+"/g;
+  let m;
+  while ((m = re.exec(text))) {
+    spans.push([m.index, m.index + m[0].length]);
+  }
+  return spans;
+}
+
+function isInsideAnySpan(index, spans) {
+  return spans.some(([start, end]) => index > start && index < end);
+}
+
+/** The word immediately after a leading "Name:" attribution, or the first word if there is none. */
+function firstContentWord(text) {
+  const colonIdx = text.indexOf(":");
+  const afterPrefix = colonIdx >= 0 ? text.slice(colonIdx + 1) : text;
+  return (afterPrefix.trim().split(/\s+/)[0] || "").replace(/[^A-Za-z']/g, "");
+}
+
+/**
+ * A kept fragment is usable as a graphic headline only if it doesn't open
+ * on a dangling dependent clause or end on a dangling conjunction/
+ * preposition/article. Quote-balance is enforced separately, at the
+ * source, by never letting truncateAtClauseBoundary cut inside a detected
+ * quoted span in the first place (findQuotedSpans/isInsideAnySpan above) —
+ * not re-checked here, since a blanket apostrophe-parity check would
+ * misfire on an ordinary possessive ("Cowboys' defense") that has no
+ * matching partner and was never part of a quoted phrase at all.
+ */
+function isCompleteFragment(text) {
+  if (!text) return false;
+  const words = text.trim().split(/\s+/).filter(Boolean);
+  if (!words.length) return false;
+  if (SUBORDINATING_CONJUNCTIONS.has(firstContentWord(text).toLowerCase())) return false;
+  const last = words[words.length - 1].toLowerCase().replace(/[^a-z']/g, "");
+  if (TRAILING_DANGLING_WORDS.has(last)) return false;
+  return true;
+}
+
+/**
+ * When the clause BEFORE a boundary is a dangling dependent setup clause
+ * (e.g. "When the lights have come on,"), the clause AFTER it is usually
+ * the actual payoff fact with the real subject — reattach any leading
+ * "Name:" attribution to that clause instead of discarding it. Faithful
+ * to the source: every word here came from the original headline, just
+ * recombined, never invented.
+ */
+function buildSwappedFragment(text, match) {
+  const colonIdx = text.indexOf(":");
+  const prefix = colonIdx >= 0 ? text.slice(0, colonIdx + 1) : "";
+  const after = text.slice(match.index + match[0].length).trim();
+  if (!after) return null;
+  return (prefix ? `${prefix} ${after}` : after).replace(/\s+/g, " ").trim();
 }
 
 function normalize(raw) {
@@ -50,10 +127,31 @@ function normalize(raw) {
     .trim();
 }
 
+/**
+ * Truncates at the earliest SAFE clause boundary — never inside a quoted
+ * phrase (findQuotedSpans/isInsideAnySpan), and never landing on a
+ * dangling dependent clause (isCompleteFragment) without first trying the
+ * payoff clause on the other side of that same boundary
+ * (buildSwappedFragment). A boundary match that can't produce a complete
+ * fragment either way is skipped in favor of the next match, rather than
+ * accepted anyway — and if NO boundary in the whole headline can be cut
+ * safely, the text is returned completely unchanged. Truncation-only, by
+ * construction: every character in the result already existed in `text`.
+ */
 function truncateAtClauseBoundary(text) {
-  const m = CLAUSE_BOUNDARY_PATTERN.exec(text);
-  if (!m) return text;
-  return text.slice(0, m.index).trim();
+  const spans = findQuotedSpans(text);
+  CLAUSE_BOUNDARY_PATTERN.lastIndex = 0;
+  let m;
+  while ((m = CLAUSE_BOUNDARY_PATTERN.exec(text))) {
+    if (isInsideAnySpan(m.index, spans)) continue;
+
+    const before = text.slice(0, m.index).trim();
+    if (isCompleteFragment(before)) return before;
+
+    const swapped = buildSwappedFragment(text, m);
+    if (swapped && isCompleteFragment(swapped)) return swapped;
+  }
+  return text;
 }
 
 /**

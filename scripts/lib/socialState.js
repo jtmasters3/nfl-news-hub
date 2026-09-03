@@ -362,6 +362,36 @@ export function promoteEligible(state, stories) {
 }
 
 /**
+ * Re-snapshots source_story for every record still sitting at "queued"
+ * (never a later status) from CURRENT live story data. Safe specifically
+ * because "queued" is the one status with zero Content Creation progress
+ * attached yet — no claim, no artwork, nothing an upstream fix could
+ * clobber — unlike promoteEligible(), which deliberately never re-touches
+ * a record once it leaves "new" precisely to avoid overwriting in-progress
+ * work. This is the one narrow, safe exception: it lets a corrected
+ * upstream computation (e.g. a socialPayload.js fix) reach an
+ * ALREADY-queued entry on the very next refresh — no manual state edit,
+ * no story_id change, no duplicate record — while never touching a story
+ * that has moved past "queued".
+ */
+export function refreshQueuedSnapshots(state, stories) {
+  const storyById = new Map(stories.map((s) => [s.id, s]));
+  let next = state;
+  let refreshed = 0;
+  for (const [storyId, record] of Object.entries(state.stories)) {
+    if (record.status !== "queued") continue;
+    const story = storyById.get(storyId);
+    if (!story || !isEligible(story)) continue;
+    const snapshot = snapshotSourceStory(story);
+    if (JSON.stringify(snapshot) === JSON.stringify(record.source_story)) continue;
+    const updated = { ...record, source_story: snapshot, updated_at: new Date().toISOString() };
+    next = { ...next, stories: { ...next.stories, [storyId]: updated } };
+    refreshed++;
+  }
+  return { state: next, refreshed };
+}
+
+/**
  * The artwork-queue payload: every record currently "queued" (regardless
  * of which refresh cycle promoted it — a story stays visible here across
  * as many refreshes as it takes until a future processor acknowledges it;

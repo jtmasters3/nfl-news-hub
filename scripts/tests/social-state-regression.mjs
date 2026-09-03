@@ -10,6 +10,7 @@ import {
   ensureRecord,
   syncStories,
   promoteEligible,
+  refreshQueuedSnapshots,
   buildQueueEntries,
   transition,
   canTransition,
@@ -313,6 +314,71 @@ test("Extra: an ineligible story (social_status != 'ready') is never promoted to
   assert.equal(promote.promoted, 0);
   assert.equal(state.stories["TEST-B"].status, "new");
   assert.equal(buildQueueEntries(state).length, 0);
+});
+
+// ---------------------------------------------------------------------------
+// refreshQueuedSnapshots: a 2026-09 fix (headline-truncation incident) that
+// lets an already-queued record pick up a corrected upstream computation
+// (e.g. a socialPayload.js fix) on the very next refresh — see its own doc
+// comment in socialState.js for why "queued" specifically is safe.
+// ---------------------------------------------------------------------------
+test("refreshQueuedSnapshots: a queued record's source_story is refreshed when the live story's social payload has changed", () => {
+  let state = emptyState();
+  const original = eligibleStory("TEST-A");
+  state = syncStories(state, [original]).state;
+  state = promoteEligible(state, [original]).state;
+  assert.equal(state.stories["TEST-A"].status, "queued");
+  assert.equal(state.stories["TEST-A"].source_story.post_headline, "POST HEADLINE FOR TEST-A");
+
+  const corrected = eligibleStory("TEST-A", { social: { ...original.social, post_headline: "CORRECTED POST HEADLINE FOR TEST-A" } });
+  const result = refreshQueuedSnapshots(state, [corrected]);
+
+  assert.equal(result.refreshed, 1);
+  assert.equal(result.state.stories["TEST-A"].source_story.post_headline, "CORRECTED POST HEADLINE FOR TEST-A");
+  assert.equal(result.state.stories["TEST-A"].status, "queued", "status itself must never change");
+});
+
+test("refreshQueuedSnapshots: a no-op (refreshed: 0) when nothing has actually changed", () => {
+  let state = emptyState();
+  const story = eligibleStory("TEST-A");
+  state = syncStories(state, [story]).state;
+  state = promoteEligible(state, [story]).state;
+
+  const result = refreshQueuedSnapshots(state, [story]);
+  assert.equal(result.refreshed, 0);
+  assert.deepEqual(result.state.stories["TEST-A"], state.stories["TEST-A"]);
+});
+
+test("refreshQueuedSnapshots: NEVER touches a record that has moved past 'queued' — Content Creation progress (claim, artwork) is never clobbered", () => {
+  let state = emptyState();
+  const story = eligibleStory("TEST-A");
+  state = syncStories(state, [story]).state;
+  state = promoteEligible(state, [story]).state;
+  // Simulate the story having already been claimed (moved past "queued").
+  state = transition(state, "TEST-A", "artwork_requested", { claim: { claim_id: "c1", processor_id: "p", claimed_at: "t0", claim_expires_at: "t1", retry_count: 0 } }).state;
+  const beforeClaim = state.stories["TEST-A"].claim;
+  const beforeSourceStory = state.stories["TEST-A"].source_story;
+
+  const corrected = eligibleStory("TEST-A", { social: { ...story.social, post_headline: "A DIFFERENT HEADLINE NOW" } });
+  const result = refreshQueuedSnapshots(state, [corrected]);
+
+  assert.equal(result.refreshed, 0, "a non-'queued' record must never be touched, even if its live data changed");
+  assert.deepEqual(result.state.stories["TEST-A"].claim, beforeClaim);
+  assert.deepEqual(result.state.stories["TEST-A"].source_story, beforeSourceStory);
+});
+
+test("refreshQueuedSnapshots: an ineligible-now story (e.g. lost its image) leaves the existing queued snapshot untouched rather than blanking it", () => {
+  let state = emptyState();
+  const story = eligibleStory("TEST-A");
+  state = syncStories(state, [story]).state;
+  state = promoteEligible(state, [story]).state;
+  const beforeSourceStory = state.stories["TEST-A"].source_story;
+
+  const nowIneligible = eligibleStory("TEST-A", { social: { ...story.social, social_status: "needs_media" } });
+  const result = refreshQueuedSnapshots(state, [nowIneligible]);
+
+  assert.equal(result.refreshed, 0);
+  assert.deepEqual(result.state.stories["TEST-A"].source_story, beforeSourceStory);
 });
 
 // ---------------------------------------------------------------------------

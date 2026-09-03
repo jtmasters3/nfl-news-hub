@@ -24,6 +24,7 @@
     "test:approval-readiness": "node scripts/social-worker/lib/approvalReadiness.test.mjs",
     "test:api-client": "node scripts/social-worker/lib/apiClient.test.mjs",
     "test:story-artwork-events": "node scripts/tests/story-artwork-events-regression.mjs",
+    "test:social-payload": "node scripts/tests/social-payload-regression.mjs",
     "test:route-recovery": "node scripts/social-worker/lib/routeRecovery.test.mjs",
     "social:seed-cutover": "node scripts/social/cutover-seed.js",
     "social:enqueue": "node scripts/social/enqueue-story.js",

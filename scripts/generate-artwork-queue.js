@@ -8,7 +8,7 @@
 // thin file-I/O shell around them.
 import { writeFile } from "node:fs/promises";
 import { SOCIAL_ARTWORK_QUEUE_JSON_PATH } from "./lib/store.js";
-import { readSocialState, writeSocialState, syncStories, promoteEligible, buildQueueEntries } from "./lib/socialState.js";
+import { readSocialState, writeSocialState, syncStories, promoteEligible, refreshQueuedSnapshots, buildQueueEntries } from "./lib/socialState.js";
 
 /**
  * @param {Array} stories - current news.json stories (post-prune, i.e. what writeNews() returned)
@@ -22,10 +22,17 @@ export async function generateArtworkQueue(stories) {
   const promoteResult = promoteEligible(state, stories);
   state = promoteResult.state;
 
+  // Lets a corrected upstream computation (e.g. a socialPayload.js fix)
+  // reach an already-queued entry on this very refresh — see
+  // refreshQueuedSnapshots' doc comment for why this is safe only for
+  // "queued" (zero Content Creation progress) and never any later status.
+  const refreshResult = refreshQueuedSnapshots(state, stories);
+  state = refreshResult.state;
+
   await writeSocialState(state);
 
   const queueEntries = buildQueueEntries(state);
   await writeFile(SOCIAL_ARTWORK_QUEUE_JSON_PATH, JSON.stringify(queueEntries, null, 2) + "\n", "utf-8");
 
-  return { count: queueEntries.length, created: syncResult.created, promoted: promoteResult.promoted };
+  return { count: queueEntries.length, created: syncResult.created, promoted: promoteResult.promoted, refreshed: refreshResult.refreshed };
 }
