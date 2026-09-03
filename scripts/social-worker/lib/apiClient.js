@@ -65,6 +65,36 @@ export async function failArtwork(storyId, claimId, stage, message) {
   return postJson("/social/artwork/fail", { story_id: storyId, claim_id: claimId, stage, message });
 }
 
+// --- Story artwork (Feed+Story phase) — a separate, independent claim
+// lifecycle from Feed above, only ever claimable once a story has reached
+// "artwork_ready" (i.e. Feed already succeeded). Multipart, same shape as
+// Feed's own complete call, uploading to a distinct social-story/ R2 key.
+
+export async function claimStoryArtwork(storyId, { processorId = defaultProcessorId(), leaseMs } = {}) {
+  return postJson("/social/story-artwork/claim", { story_id: storyId, processor_id: processorId, lease_ms: leaseMs });
+}
+
+export async function completeStoryArtwork(storyId, claimId, filePath, { provider = "chatgpt-codex-local" } = {}) {
+  const bytes = await readFile(filePath);
+  const form = new FormData();
+  form.set("story_id", storyId);
+  form.set("claim_id", claimId);
+  form.set("provider", provider);
+  form.set("image", new Blob([bytes], { type: "image/png" }), path.basename(filePath));
+
+  const res = await fetch(`${baseUrl()}/social/story-artwork/complete`, {
+    method: "POST",
+    headers: { authorization: `Bearer ${token()}` },
+    body: form,
+  });
+  const parsed = await res.json().catch(() => ({}));
+  return { httpStatus: res.status, ...parsed };
+}
+
+export async function failStoryArtwork(storyId, claimId, message) {
+  return postJson("/social/story-artwork/fail", { story_id: storyId, claim_id: claimId, message });
+}
+
 // --- Caption (Phase 2C) — a separate, independent claim lifecycle from
 // artwork above, only ever claimable once a story has reached
 // "artwork_ready". JSON throughout, not multipart — no binary involved.

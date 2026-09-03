@@ -107,6 +107,29 @@ function emptySourceStory() {
   };
 }
 
+/**
+ * Feed+Story phase: a fresh, empty "second artwork slot" — same shape as
+ * the existing top-level artwork.* fields, but with validation nested
+ * inside (rather than a top-level sibling) since this is a brand-new
+ * object with no legacy readers to keep compatible. Used both for
+ * emptyRecord()'s default and by storyArtworkEvents.js when patching.
+ */
+function emptyStoryArtwork() {
+  return {
+    status: "not_created", // "not_created" | "created" | "failed"
+    image_url: null,
+    storage_key: null,
+    width: null,
+    height: null,
+    mime_type: null,
+    size_bytes: null,
+    provider: null,
+    created_at: null,
+    claim: { claim_id: null, processor_id: null, claimed_at: null, claim_expires_at: null },
+    validation: { status: "not_run", passed: null, issues: [] },
+  };
+}
+
 function emptyRecord(storyId, status) {
   const now = new Date().toISOString();
   return {
@@ -115,9 +138,23 @@ function emptyRecord(storyId, status) {
     merged_into: null,
     created_at: now,
     updated_at: now,
+    // Feed+Story phase: which content requirements this record is held to.
+    // NEVER written onto an existing record — a historical record simply
+    // lacks this field, and every version-aware check below treats absence
+    // as version 1 (legacy: Feed-only). Only emptyRecord() (i.e. a
+    // genuinely brand-new story_id, see ensureRecord()) ever sets 2.
+    content_package_version: 2,
+    // Per-story override for which destinations to eventually publish to —
+    // read only by the (not-yet-built) posting phase; both default true.
+    // A legacy record simply lacks this object too.
+    publishing_preferences: { instagram_feed: true, instagram_story: true },
     source_story: emptySourceStory(),
     artwork: { status: "not_created", image_url: null, created_at: null, provider: null },
     validation: { status: "not_run", passed: null, issues: [] },
+    // Feed+Story phase addition — additive sibling to the existing `artwork`
+    // (which continues to mean the 4:5 Feed graphic, completely unchanged).
+    // See scripts/lib/storyArtworkEvents.js/storyArtworkValidation.js.
+    story_artwork: emptyStoryArtwork(),
     // Approval phase additions — additive, so a historical record simply
     // lacks them (defaults below) rather than needing a migration. `actor`
     // identifies which authenticated console instance made the decision
@@ -152,9 +189,16 @@ function emptyRecord(storyId, status) {
       claim_attempt_count: 0, // separate claim RUNS that fully exhausted their local 3-attempt budget — caps at 3, then escalates artwork_ready -> failed
       created_at: null,
     },
+    // instagram.feed / instagram.story tracked independently — no posting
+    // code exists yet (see the deferred Posting-phase design), so this
+    // shape has no legacy readers to preserve; restructured directly
+    // rather than added as yet another sibling.
     publishing: {
       status: "not_posted",
-      instagram: { status: "not_posted", post_id: null, post_url: null },
+      instagram: {
+        feed: { status: "not_posted", container_id: null, media_id: null, published_at: null },
+        story: { status: "not_posted", container_id: null, media_id: null, published_at: null },
+      },
       facebook: { status: "not_posted", post_id: null, post_url: null },
       posted_at: null,
     },
@@ -341,6 +385,7 @@ export function buildQueueEntries(state) {
       players: r.source_story.players ?? [],
       description: r.source_story.description ?? null,
       is_rumor: r.source_story.is_rumor ?? false,
+      content_package_version: r.content_package_version ?? 1,
     }));
 }
 

@@ -19,6 +19,7 @@ import { readSocialState, writeSocialState, buildQueueEntries } from "../lib/soc
 import { applyClaimEvent, applyCompleteEvent, applyFailEvent } from "../lib/artworkEvents.js";
 import { applyCaptionClaimEvent, applyCaptionCompleteEvent, applyCaptionFailEvent } from "../lib/captionEvents.js";
 import { applyApprovalApprovedEvent, applyApprovalRejectedEvent } from "../lib/approvalEvents.js";
+import { applyStoryArtworkClaimEvent, applyStoryArtworkCompleteEvent, applyStoryArtworkFailEvent } from "../lib/storyArtworkEvents.js";
 import { generatePostsForApproval } from "../generate-posts-for-approval.js";
 import { writeFile } from "node:fs/promises";
 import { SOCIAL_ARTWORK_QUEUE_JSON_PATH } from "../lib/store.js";
@@ -96,6 +97,13 @@ async function main() {
     result = applyApprovalApprovedEvent(state, payload);
   } else if (eventType === "approval-rejected") {
     result = applyApprovalRejectedEvent(state, payload);
+  } else if (eventType === "story-artwork-claimed") {
+    result = applyStoryArtworkClaimEvent(state, payload);
+  } else if (eventType === "story-artwork-completed") {
+    const reachable = await checkReachable(payload.image_url);
+    result = applyStoryArtworkCompleteEvent(state, payload, { reachable });
+  } else if (eventType === "story-artwork-failed") {
+    result = applyStoryArtworkFailEvent(state, payload);
   } else {
     console.error(`Unknown ARTWORK_EVENT_TYPE: ${eventType}`);
     process.exitCode = 1;

@@ -92,6 +92,43 @@ test("the real Jets story (34195a7b) is actionable", () => {
 });
 
 // ---------------------------------------------------------------------------
+// Feed+Story phase: content_package_version 2 readiness.
+// ---------------------------------------------------------------------------
+
+function fullyReadyV2Record(overrides = {}) {
+  return fullyReadyRecord({
+    content_package_version: 2,
+    story_artwork: { status: "created", validation: { status: "passed", passed: true, issues: [] } },
+    ...overrides,
+  });
+}
+
+test("a v2 record with valid Feed + valid Story + ready caption is actionable", () => {
+  const result = assessApprovalReadiness(fullyReadyV2Record());
+  assert.equal(result.ready, true);
+  assert.deepEqual(result.issues, []);
+});
+
+test("Caption-ready + only Feed artwork (no Story) is NOT approval-ready for a v2 record", () => {
+  const result = assessApprovalReadiness(fullyReadyV2Record({ story_artwork: { status: "not_created", validation: { status: "not_run", passed: null, issues: [] } } }));
+  assert.equal(result.ready, false);
+  assert.ok(result.issues.includes("Story artwork not created"));
+  assert.ok(result.issues.includes("Story artwork validation not passed"));
+});
+
+test("a v2 record whose Story artwork was created but failed validation is NOT actionable", () => {
+  const result = assessApprovalReadiness(fullyReadyV2Record({ story_artwork: { status: "failed", validation: { status: "failed", passed: false, issues: ["aspect_ratio_out_of_range:1.250"] } } }));
+  assert.equal(result.ready, false);
+  assert.ok(result.issues.includes("Story artwork validation not passed"));
+});
+
+test("a v1-explicit record (content_package_version: 1) is unaffected by the Story requirement even with no story_artwork object", () => {
+  const record = fullyReadyRecord({ content_package_version: 1 });
+  const result = assessApprovalReadiness(record);
+  assert.equal(result.ready, true, "explicit v1 must behave exactly like a legacy record with no field at all");
+});
+
+// ---------------------------------------------------------------------------
 let failures = 0;
 for (const c of cases) {
   try {

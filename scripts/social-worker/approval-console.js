@@ -42,6 +42,20 @@ function renderMediaBlock(label, url, alt) {
         </div>`;
 }
 
+// Story Preview renders in a narrow phone-like column (not stretched or
+// resized beyond that — the image itself is never distorted, only the
+// display container is capped in width) so a 9:16 image reads naturally
+// next to the wider 4:5 Feed Preview instead of looking oversized.
+function renderStoryMediaBlock(url, alt) {
+  const body = url
+    ? `<img class="approval-media-image approval-story-image" src="${escapeHtml(url)}" alt="${escapeHtml(alt || "")}" loading="lazy" />`
+    : `<p class="approval-empty">Not available</p>`;
+  return `<div class="approval-media-block approval-story-block">
+          <span class="approval-media-label">Story Preview</span>
+          ${body}
+        </div>`;
+}
+
 function renderCard(record) {
   const s = record.source_story || {};
   const c = record.caption || {};
@@ -78,7 +92,8 @@ function renderCard(record) {
         </div>
         <h2 class="headline approval-headline">${escapeHtml(headline)}</h2>
         <div class="approval-media">
-          ${renderMediaBlock("Generated Graphic", record.artwork?.image_url, headline)}
+          ${renderMediaBlock("Feed Preview", record.artwork?.image_url, headline)}
+          ${record.content_package_version === 2 ? renderStoryMediaBlock(record.story_artwork?.image_url, headline) : ""}
           ${renderMediaBlock("Base Article Image", s.base_image_url, headline)}
         </div>
         <div class="approval-caption-block">
@@ -110,6 +125,8 @@ function renderPage(records) {
   .approval-media { display: flex; gap: 1rem; flex-wrap: wrap; }
   .approval-media-block { flex: 1 1 260px; }
   .approval-media-image { max-width: 100%; border-radius: 4px; }
+  .approval-story-block { flex: 0 1 180px; }
+  .approval-story-image { max-width: 180px; width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: contain; background: #111; }
   .approval-media-label { display: block; font-size: 0.75rem; text-transform: uppercase; color: #666; margin-bottom: 0.25rem; }
   .approval-caption-block { margin: 1rem 0; padding: 0.75rem; background: #f4f4f4; border-radius: 4px; }
   .approval-caption-text { white-space: pre-wrap; margin: 0 0 0.5rem; }

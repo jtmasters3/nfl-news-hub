@@ -16,7 +16,20 @@ name: Social artwork event
 
 on:
   repository_dispatch:
-    types: [artwork-claimed, artwork-completed, artwork-failed, caption-claimed, caption-completed, caption-failed, approval-approved, approval-rejected]
+    types:
+      [
+        artwork-claimed,
+        artwork-completed,
+        artwork-failed,
+        caption-claimed,
+        caption-completed,
+        caption-failed,
+        approval-approved,
+        approval-rejected,
+        story-artwork-claimed,
+        story-artwork-completed,
+        story-artwork-failed,
+      ]
 
 permissions:
   contents: write

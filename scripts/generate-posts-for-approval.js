@@ -19,6 +19,7 @@ import { escapeHtml } from "./lib/text.js";
 import { formatHumanDateTime } from "./lib/dates.js";
 import { POSTS_FOR_APPROVAL_HTML_PATH } from "./lib/store.js";
 import { readSocialState } from "./lib/socialState.js";
+import { assessApprovalReadiness } from "./social-worker/lib/approvalReadiness.js";
 
 function renderMediaBlock(label, url, alt) {
   const body = url
@@ -53,6 +54,16 @@ function renderCaptionBlock(caption) {
         </div>`;
 }
 
+function renderStoryMediaBlock(url, alt) {
+  const body = url
+    ? `<img class="approval-media-image approval-story-image" src="${escapeHtml(url)}" alt="${escapeHtml(alt || "")}" loading="lazy" />`
+    : `<p class="approval-empty">Not available</p>`;
+  return `<div class="approval-media-block approval-story-block">
+          <span class="approval-media-label">Story Preview</span>
+          ${body}
+        </div>`;
+}
+
 function renderItem(record) {
   const s = record.source_story || {};
   const headline = s.post_headline || "(no headline captured)";
@@ -64,7 +75,8 @@ function renderItem(record) {
         </div>
         <h2 class="headline approval-headline">${escapeHtml(headline)}</h2>
         <div class="approval-media">
-          ${renderMediaBlock("Generated Graphic", record.artwork?.image_url, headline)}
+          ${renderMediaBlock("Feed Preview", record.artwork?.image_url, headline)}
+          ${record.content_package_version === 2 ? renderStoryMediaBlock(record.story_artwork?.image_url, headline) : ""}
           ${renderMediaBlock("Base Article Image", s.base_image_url, headline)}
         </div>
         ${renderCaptionBlock(record.caption)}
@@ -134,8 +146,14 @@ function renderPage(records) {
 
 export async function generatePostsForApproval() {
   const state = await readSocialState();
+  // Feed+Story phase: only records meeting the FULL readiness contract
+  // (Feed valid, Story valid for v2 records, caption ready+non-empty) are
+  // shown here — a legacy/not-ready awaiting_approval record (e.g. one
+  // missing its Story asset) is simply omitted rather than shown without
+  // a way to act on it, since this static page has no interactive
+  // controls to label "not actionable" the way the local console does.
   const records = Object.values(state.stories)
-    .filter((r) => r.status === "awaiting_approval")
+    .filter((r) => r.status === "awaiting_approval" && assessApprovalReadiness(r).ready)
     .sort((a, b) => Date.parse(a.created_at) - Date.parse(b.created_at));
   await writeFile(POSTS_FOR_APPROVAL_HTML_PATH, renderPage(records), "utf-8");
   return { count: records.length };
