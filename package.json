@@ -31,6 +31,7 @@
     "test:prompt-templates": "node scripts/tests/prompt-templates-regression.mjs",
     "test:regeneration-events": "node scripts/tests/regeneration-events-regression.mjs",
     "test:route-recovery": "node scripts/social-worker/lib/routeRecovery.test.mjs",
+    "test:editorial-scoring": "node scripts/tests/editorial-scoring-regression.mjs",
     "social:seed-cutover": "node scripts/social/cutover-seed.js",
     "social:enqueue": "node scripts/social/enqueue-story.js",
     "social:process-one": "node scripts/social-worker/process-one.js",
