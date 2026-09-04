@@ -75,7 +75,7 @@ function looksLikeHeadlineFallbackGarbage(words) {
 
 /**
  * @param {{headline: string, combinedText: string, players: string[], teams: string[], category: string}} input
- * @returns {{visual_subject: string|null, visual_subject_type: string|null}}
+ * @returns {{visual_subject: string|null, visual_subject_type: string|null, subject_match_count: number}}
  */
 export function determineVisualSubject({ headline, combinedText, players, teams, category }) {
   // 1. A specific player, when confidently the subject: exactly one
@@ -102,34 +102,42 @@ export function determineVisualSubject({ headline, combinedText, players, teams,
   if (candidates.length > 0) {
     const inHeadline = candidates.filter((p) => headline.includes(p));
     if (inHeadline.length === 1) {
-      return { visual_subject: inHeadline[0], visual_subject_type: "player" };
+      // subject_match_count: additive field, added for the Editorial
+      // Scoring Brain's Phase 2C identity resolver — a confident, single
+      // headline candidate is distinguishable from the weaker multi-
+      // candidate "earliest in headline" fallback below, which this
+      // function has always computed internally but never exposed. Purely
+      // additive: this function's only production caller
+      // (generate-content.js) destructures only { visual_subject,
+      // visual_subject_type } and is unaffected by the extra field.
+      return { visual_subject: inHeadline[0], visual_subject_type: "player", subject_match_count: 1 };
     }
     if (inHeadline.length > 1) {
       const earliest = inHeadline.reduce((best, p) =>
         headline.indexOf(p) < headline.indexOf(best) ? p : best
       );
-      return { visual_subject: earliest, visual_subject_type: "player" };
+      return { visual_subject: earliest, visual_subject_type: "player", subject_match_count: inHeadline.length };
     }
   }
 
   // 2. A named coach/executive who is the subject.
   const coach = findTitledPerson(combinedText, COACH_TITLES);
-  if (coach) return { visual_subject: coach, visual_subject_type: "coach" };
+  if (coach) return { visual_subject: coach, visual_subject_type: "coach", subject_match_count: 0 };
   const exec = findTitledPerson(combinedText, EXECUTIVE_TITLES);
-  if (exec) return { visual_subject: exec, visual_subject_type: "executive" };
+  if (exec) return { visual_subject: exec, visual_subject_type: "executive", subject_match_count: 0 };
 
   // 3. A single dominant team (team-wide news with no individual subject).
   if (teams.length === 1) {
-    return { visual_subject: teamName(teams[0]), visual_subject_type: "team" };
+    return { visual_subject: teamName(teams[0]), visual_subject_type: "team", subject_match_count: 0 };
   }
 
   // 4. League-wide event (draft, combine) with no single player/team focus.
   if (category === "draft" && /\bdraft\b/i.test(headline)) {
-    return { visual_subject: "NFL Draft", visual_subject_type: "event" };
+    return { visual_subject: "NFL Draft", visual_subject_type: "event", subject_match_count: 0 };
   }
 
   // 5. Nothing confident enough — leave empty rather than guess.
-  return { visual_subject: null, visual_subject_type: null };
+  return { visual_subject: null, visual_subject_type: null, subject_match_count: 0 };
 }
 
 // A team name/nickname is at most a handful of capitalized (or digit-led,
@@ -184,7 +192,16 @@ function resolveOneTeam(text) {
 // not "the team that just cut him."
 const DEPARTURE_PATTERN = /\b(cut|cuts|release[sd]?|releasing|waive[sd]?|waiving|parts? ways with)\b/i;
 
-function findTransactionTeam(text) {
+// Exported (previously module-private) for the Editorial Scoring Brain's
+// Phase 2C identity resolver, which needs to know SPECIFICALLY whether a
+// genuine transaction-direction match fired for a given source's text —
+// detectCurrentTeam() below already uses this internally but only ever
+// returns a plain team name/null, with no way for a caller to tell "found
+// via transaction language" apart from "found via a passive single
+// mention." No logic change; this is the exact same function
+// detectCurrentTeam has always called, exported to avoid a second,
+// duplicate transaction-direction implementation.
+export function findTransactionTeam(text) {
   const headlineFirst = TEAM_FIRST_PATTERN.exec(text);
   if (headlineFirst) {
     const resolved = resolveOneTeam(headlineFirst[1]);
