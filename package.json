@@ -32,6 +32,8 @@
     "test:regeneration-events": "node scripts/tests/regeneration-events-regression.mjs",
     "test:route-recovery": "node scripts/social-worker/lib/routeRecovery.test.mjs",
     "test:editorial-scoring": "node scripts/tests/editorial-scoring-regression.mjs",
+    "test:nflverse-cache": "node scripts/tests/nflverse-cache-regression.mjs",
+    "test:nflverse-player-index": "node scripts/tests/nflverse-player-index-regression.mjs",
     "social:seed-cutover": "node scripts/social/cutover-seed.js",
     "social:enqueue": "node scripts/social/enqueue-story.js",
     "social:process-one": "node scripts/social-worker/process-one.js",
