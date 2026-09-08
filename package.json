@@ -39,6 +39,8 @@
     "test:nflverse-position-normalizer": "node scripts/tests/nflverse-position-normalizer-regression.mjs",
     "test:nflverse-role-resolver": "node scripts/tests/nflverse-role-resolver-regression.mjs",
     "test:nflverse-fresh-role-resolver": "node scripts/tests/nflverse-fresh-role-resolver-regression.mjs",
+    "test:nflverse-player-importance": "node scripts/tests/nflverse-player-importance-regression.mjs",
+    "test:nflverse-star-registry": "node scripts/tests/nflverse-star-registry-regression.mjs",
     "social:seed-cutover": "node scripts/social/cutover-seed.js",
     "social:enqueue": "node scripts/social/enqueue-story.js",
     "social:process-one": "node scripts/social-worker/process-one.js",
