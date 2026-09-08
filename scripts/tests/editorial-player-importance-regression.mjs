@@ -218,10 +218,8 @@ test("37. no input mutation", () => {
   assert.doesNotThrow(() => compute(input));
 });
 
-test("38. no production scoring import (this module is never imported by editorialScoring.js/generate-content.js)", async () => {
-  const scoring = await import("node:fs/promises").then((fs) => fs.readFile(new URL("../lib/editorialScoring.js", import.meta.url), "utf-8"));
+test("38. no PIPELINE production import — generate-content.js and the live news/social pipeline never import this module. (Phase 2H-B, separately authorized, wires it into editorialScoring.js's own dual-score calibration; editorialScoring.js itself remains non-load-bearing — see scripts/editorial/README.md — so this still holds the line that matters: nothing in the actual production pipeline consumes player-importance math yet.)", async () => {
   const content = await import("node:fs/promises").then((fs) => fs.readFile(new URL("../generate-content.js", import.meta.url), "utf-8"));
-  assert.equal(/editorialPlayerImportance/.test(scoring), false);
   assert.equal(/editorialPlayerImportance/.test(content), false);
 });
 

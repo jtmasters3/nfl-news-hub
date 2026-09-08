@@ -53,13 +53,17 @@ data. All deferred — see `OBSERVE_ONLY_CALIBRATION_DEFAULTS` in
 `editorialScoring.js` for exactly which multipliers stay neutral because of
 this.
 
-## Neutral defaults
+## Neutral defaults (legacy score)
 
-| Multiplier | Phase 1 value | Why |
+These remain true, unconditionally, for the **legacy** `total_score` — see
+"Phase 2H-B: dual-score calibration" below for the separate enriched score,
+which is the only place these three stop being neutral.
+
+| Multiplier | Legacy value | Why |
 |---|---|---|
-| `ROLE_MULTIPLIER` | `1.0` (always) | No position/depth-chart data source exists yet |
-| `STAR_BOOST` | `1.0` (always) | No star-exception list exists yet |
-| `GAME_PERFORMANCE_MULTIPLIER` | `1.0` (always) | No game/performance data source exists yet |
+| `ROLE_MULTIPLIER` | `1.0` (always) | The legacy score never consults position/role data |
+| `STAR_BOOST` | `1.0` (always) | The legacy score never consults star/notable data |
+| `GAME_PERFORMANCE_MULTIPLIER` | `1.0` (always) | No game/performance data source exists yet, in either score |
 
 Every constant lives in one place — `OBSERVE_ONLY_CALIBRATION_DEFAULTS` — and
 is named that deliberately. **None of these numbers are final editorial
@@ -89,17 +93,71 @@ node scripts/editorial/score-story.js --story-id <uuid>
 node scripts/editorial/score-story.js --fixture <path> --json
 ```
 
-## What Phase 2 will add
+## Phase 2H-B: dual-score calibration (observe-only)
 
-Player identity/role/tier resolution — a cached nflverse roster + depth-chart
-lookup, and the small, seasonal, audited star-exception list — per the
-locked architecture's Decisions 1 and 2. This is the point at which
-`ROLE_MULTIPLIER` and `STAR_BOOST` stop being hardcoded neutral values.
+`scoreStory()` now computes TWO scores side by side, for calibration only:
+
+- **`total_score`** (legacy) — mathematically identical to the score
+  Phase 1 has always produced. `ROLE_MULTIPLIER` and `STAR_BOOST` remain
+  hardcoded neutral (`1.0`) in this path, exactly as before. Every existing
+  caller (the `score-story.js` CLI, this module's own regression suite, and
+  any future caller) sees byte-for-byte the same `total_score`,
+  `signals`, `modifiers`, and `destination` it always did.
+- **`enrichment.enriched_total`** — the SAME formula, but with
+  `ROLE_MULTIPLIER` and `STAR_BOOST` replaced by the locked Phase 2H-A
+  player-importance multiplier (`scripts/lib/editorialPlayerImportance.js`,
+  itself built on Phase 2C-2G's position/role/QB/star resolution). Only
+  `EVENT_MAGNITUDE` is multiplied by the enriched player factors — every
+  bonus (corroboration, social interest, escalation) and penalty (rumor,
+  repetition) is reused verbatim from the legacy calculation, never scaled
+  by player importance.
+
+The player-importance inputs arrive via `scoreStory(story, context)`'s
+existing **second argument**, at `context.player_context` — deliberately
+NOT a field on `story` itself. `story` holds persisted article/event facts;
+`context.player_context` is derived, scoring-time-only enrichment (Phase
+2C-2G's resolved position/role/QB/star output) the caller supplies fresh on
+each call. A `story.player_context` a caller might have persisted is never
+read as scoring context — this boundary matters most for Phase 2I, whose
+future historical as-of roster/depth/player context must never leak into
+the persisted story object by design (see `computePlayerImportanceMultipliers`'s
+own doc comment for `player_context`'s shape). A call that doesn't supply
+`context.player_context` at all — which is every real story in the current
+pipeline today, since nothing upstream of `scoreStory()` yet runs Phase
+2C-2G against nflverse data — gets an exactly neutral enrichment
+(`enriched_total === total_score`), never a damped one. This is
+deliberately different from an *explicitly* supplied unresolved-player
+context, which uses Phase 2H-A's own mild 0.855 multiplier instead of full
+neutrality — see `enrichment.player_importance_reason_codes`
+(`player_context_not_supplied` vs. Phase 2H-A's own `non_player_neutral` /
+unresolved-player codes) to tell the two apart.
+
+`enrichment.enriched_destination_preview` runs the identical
+`feed_fit`/`story_fit` logic — including the same rumor gate — against the
+enriched total, purely for inspecting where a story WOULD land if enriched
+scoring ever went live. **`destination` (top-level, legacy) remains the only
+field any real or future caller may treat as the actual recommendation.**
+No production/pipeline file reads `enrichment` today; only this module's own
+regression suite does.
+
+## What Phase 2 already added (2A-2H-A) and what remains
+
+Player identity/position/role/fresh-role/QB-importance/star resolution (nflverse
+roster + depth-chart lookup, a bounded gsis_id-keyed star registry — currently
+empty pending a separate calibration review) and the player-importance
+multiplier math itself are all built and locked (Phase 2A-2H-A). Phase 2H-B
+(above) taught `scoreStory()` to CALCULATE an enriched score from that math.
+What has **not** happened yet: no real caller supplies
+`context.player_context` (nothing upstream resolves and attaches it), and no
+production/pipeline caller consumes `enrichment` at all. Phase 2I
+(historical/as-of selection) is not implemented.
 
 ## What MUST NOT consume this score yet
 
 `promoteEligible()`, `buildQueueEntries()`, `process-one.js`'s target
 selection, the Approval Console, regeneration, or any future automatic-
-approval policy. Wiring any of these to `scoreStory()`'s output is
-explicitly a later phase (Phase 3 dry-runs, then Phase 6 load-bearing),
-gated on real dry-run review — not part of this implementation.
+approval policy. Wiring any of these to `scoreStory()`'s output — legacy OR
+enriched — is explicitly a later phase (Phase 3 dry-runs, then Phase 6
+load-bearing), gated on real dry-run review — not part of this
+implementation. The enriched score and its destination preview exist
+purely for human calibration review right now.

@@ -14,8 +14,48 @@
 import { computeEventMagnitude } from "./editorialEventMagnitude.js";
 import { bestSourceTier, corroborationBonus, UNKNOWN_SOURCE_TIER } from "./editorialSourceConfidence.js";
 import { normalizeHeadlineTokens } from "./similarity.js";
+import { computePlayerImportanceMultipliers } from "./editorialPlayerImportance.js";
 
 export const SCORING_VERSION = 1;
+
+// ---------------------------------------------------------------------------
+// Phase 2H-B — dual-score calibration (observe-only).
+//
+// scoreStory() still returns the exact same legacy top-level shape it always
+// has (total_score, core_score, signals, modifiers, destination, ...) —
+// nothing about those fields, or their values for any existing caller, is
+// touched by this addition. This purely ADDS one new `enrichment` block
+// containing an enriched score computed from the LOCKED Phase 2H-A player-
+// importance multiplier helper, for calibration/comparison only. No
+// production/pipeline caller consumes `enrichment` yet — see
+// scripts/editorial/README.md.
+//
+// `context.player_context` is a new, entirely OPTIONAL field on the second
+// (context) argument — deliberately NOT on `story`. `story` holds
+// persisted article/event facts; `context.player_context` is derived
+// scoring-time enrichment (Phase 2C-2G's resolved position/role/QB/star
+// output) the caller supplies fresh on each call. Any `story.player_context`
+// a caller might have persisted is never read as scoring context — this
+// keeps derived roster/depth/identity/role/star data (especially Phase
+// 2I's future historical as-of context) from ever leaking into the
+// persisted story object. When a caller does not supply
+// `context.player_context` at all, player importance is exactly neutral
+// (1.0 everywhere) — an absent field must never retroactively damp a
+// legacy caller the way an explicitly-unresolved player would. This is
+// deliberately a different state from Phase 2H-A's own "unresolved player"
+// result (0.855), which only occurs when a caller explicitly says a player
+// subject exists but its position/role are unknown.
+// ---------------------------------------------------------------------------
+const NEUTRAL_PLAYER_IMPORTANCE = Object.freeze({
+  position_weight: 1.0,
+  role_weight: 1.0,
+  raw_role_multiplier: 1.0,
+  combined_role_multiplier: 1.0,
+  star_boost: 1.0,
+  combined_player_multiplier: 1.0,
+  diagnostics: Object.freeze({ role_multiplier_floor_applied: false, role_multiplier_ceiling_applied: false, star_boost_applied: false, star_gate_passed: false, is_qb: false }),
+  reason_codes: Object.freeze(["player_context_not_supplied"]),
+});
 
 // ---------------------------------------------------------------------------
 // OBSERVE_ONLY_CALIBRATION_DEFAULTS
@@ -177,13 +217,21 @@ function round1(n) {
  *   category?, teams?, players?, visual_subject?, visual_subject_type?,
  *   current_team?, is_rumor?, sources?: [{name?, source_name?, headline?,
  *   description?}], first_published_at?, latest_published_at?,
- *   primary_image_url?, base_image_url? }
+ *   primary_image_url?, base_image_url? } — article/event FACTS only.
+ *   `story.player_context`, even if present, is deliberately never read —
+ *   see `context.player_context` below.
  * @param {object} [context] - reserved for future (Phase 3+) window/re-entry
- *   context; unused in Phase 1, accepted for forward API compatibility.
+ *   context; still unused for that purpose in Phase 1. Phase 2H-B adds one
+ *   field here: `context.player_context` — resolved, DERIVED player
+ *   enrichment (Phase 2C-2G's position/role/QB/star output), deliberately
+ *   kept out of `story` itself. `story` is persisted article/event data;
+ *   `context.player_context` is scoring-time-only enrichment the caller
+ *   supplies fresh on each call — this boundary matters most for Phase 2I,
+ *   whose historical as-of roster/depth/player context must never leak into
+ *   the persisted story object by design.
  * @returns {object} deterministic, JSON-serializable, explainable score result
  */
 export function scoreStory(story, context = {}) {
-  void context; // Phase 1: not yet consumed — see docs.
   const constants = OBSERVE_ONLY_CALIBRATION_DEFAULTS;
 
   const headline = story?.headline ?? "";
@@ -241,7 +289,48 @@ export function scoreStory(story, context = {}) {
   const totalScore = round1(coreScore + corroboration + socialInterest.bonus + escalation.bonus - rumorPenalty - repetitionPenalty);
 
   // --- Destination fit (observe-only) -----------------------------------
+  // This is the LEGACY destination — still the only one any caller (the
+  // read-only score-story.js CLI, or a future production caller) should
+  // ever treat as the real recommendation. See enrichedDestinationPreview
+  // below, which is observe-only and never substituted here.
   const destination = computeDestinationFit({ totalScore, rung: eventMagnitude.rung, isRumor, constants });
+
+  // --- Phase 2H-B: player-importance enrichment (observe-only) ----------
+  // `context.player_context` is optional and new — deliberately NOT read
+  // from `story`. A `story.player_context` some caller might have persisted
+  // is intentionally ignored as scoring context (see the module's own
+  // doc comment on scoreStory and the "no ambiguous precedence" test).
+  // Absent entirely -> exactly neutral (see NEUTRAL_PLAYER_IMPORTANCE's doc
+  // comment for why this must differ from Phase 2H-A's own "unresolved
+  // player" result). Present -> delegate wholesale to the LOCKED Phase
+  // 2H-A helper; this module never duplicates or re-tunes its tables.
+  const playerContext = context?.player_context ?? null;
+  const playerImportance = playerContext ? computePlayerImportanceMultipliers(playerContext) : NEUTRAL_PLAYER_IMPORTANCE;
+
+  const enrichedMagnitude = eventMagnitude.magnitude * playerImportance.combined_role_multiplier * playerImportance.star_boost * gamePerformanceMultiplier;
+  const enrichedTotal = round1(enrichedMagnitude + corroboration + socialInterest.bonus + escalation.bonus - rumorPenalty - repetitionPenalty);
+
+  // Delta diagnostics use the TRUE pre-display-rounding totals, not the
+  // rounded `totalScore`/`enrichedTotal` above (those remain exactly the
+  // existing, externally-visible legacy/enriched display values — nothing
+  // about them changes here). `coreScore` and `enrichedMagnitude` are
+  // themselves already unrounded; `corroboration`/`socialInterest.bonus`
+  // similarly carry full floating-point precision until their own
+  // individual round1() call in the `modifiers` output below — reusing
+  // them here (rather than the rounded `totalScore`/`enrichedTotal`) is
+  // what makes this a genuinely raw-vs-raw comparison, not raw-vs-rounded.
+  const rawLegacyTotal = coreScore + corroboration + socialInterest.bonus + escalation.bonus - rumorPenalty - repetitionPenalty;
+  const rawEnrichedTotal = enrichedMagnitude + corroboration + socialInterest.bonus + escalation.bonus - rumorPenalty - repetitionPenalty;
+  const rawScoreDelta = rawEnrichedTotal - rawLegacyTotal;
+  const scoreDelta = round1(rawScoreDelta);
+  // Divide-by-zero guard: an explicit, documented null rather than
+  // Infinity/NaN when the raw legacy total is exactly zero.
+  const scoreDeltaPercent = rawLegacyTotal === 0 ? null : round1((rawScoreDelta / rawLegacyTotal) * 100);
+
+  // Observe-only preview: the SAME destination-fit function, same rumor
+  // gate, evaluated against the enriched total instead. Never assigned to
+  // `destination` above, never read by score-story.js or any other caller.
+  const enrichedDestinationPreview = computeDestinationFit({ totalScore: enrichedTotal, rung: eventMagnitude.rung, isRumor, constants });
 
   // --- Production readiness (NEVER an input to any score term above) ----
   const imageAvailable = Boolean(story?.primary_image_url ?? story?.base_image_url ?? null);
@@ -263,6 +352,8 @@ export function scoreStory(story, context = {}) {
     `Rumor: ${isRumor} → ${rumorPenalty > 0 ? `-${rumorPenalty}` : "no penalty"}`,
     `Repetition: not computed in Phase 1 (0)`,
     `Total: ${round1(coreScore)} + ${round1(corroboration)} + ${round1(socialInterest.bonus)} + ${escalation.bonus} - ${rumorPenalty} - ${repetitionPenalty} = ${totalScore}`,
+    `Enrichment (Phase 2H-B, observe-only): ${playerContext ? "player_context supplied" : "no player_context supplied — neutral"} — position_weight ${playerImportance.position_weight} × role_weight ${playerImportance.role_weight} → combined_role_multiplier ${playerImportance.combined_role_multiplier}, star_boost ${playerImportance.star_boost}`,
+    `Enriched total: ${round1(enrichedMagnitude)} + ${round1(corroboration)} + ${round1(socialInterest.bonus)} + ${escalation.bonus} - ${rumorPenalty} - ${repetitionPenalty} = ${enrichedTotal} (delta ${scoreDelta} vs. legacy — NOT used for destination selection)`,
   ]);
 
   return {
@@ -297,5 +388,33 @@ export function scoreStory(story, context = {}) {
     escalation,
     production_readiness: productionReadiness,
     explanation,
+    // --- Phase 2H-B (observe-only) --------------------------------------
+    // Additive only. `destination` above (legacy) remains the only field
+    // any production/pipeline caller may ever treat as the real
+    // recommendation — see enriched_destination_preview's own note.
+    enrichment: {
+      legacy_total: totalScore,
+      enriched_total: enrichedTotal,
+      score_delta: scoreDelta,
+      score_delta_percent: scoreDeltaPercent,
+      event_magnitude: eventMagnitude.magnitude,
+      legacy_role_multiplier: roleMultiplier,
+      legacy_star_boost: starBoost,
+      legacy_game_performance_multiplier: gamePerformanceMultiplier,
+      legacy_magnitude: round1(coreScore),
+      position_weight: playerImportance.position_weight,
+      role_weight: playerImportance.role_weight,
+      raw_role_multiplier: playerImportance.raw_role_multiplier,
+      combined_role_multiplier: playerImportance.combined_role_multiplier,
+      star_boost: playerImportance.star_boost,
+      combined_player_multiplier: playerImportance.combined_player_multiplier,
+      enriched_magnitude: round1(enrichedMagnitude),
+      player_importance_diagnostics: playerImportance.diagnostics,
+      player_importance_reason_codes: playerImportance.reason_codes,
+      legacy_destination: destination,
+      // OBSERVE-ONLY: never consumed by score-story.js, generate-content.js,
+      // or any other caller. Real destination selection remains `destination`.
+      enriched_destination_preview: enrichedDestinationPreview,
+    },
   };
 }
