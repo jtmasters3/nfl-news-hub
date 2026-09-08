@@ -42,6 +42,8 @@
     "test:nflverse-player-importance": "node scripts/tests/nflverse-player-importance-regression.mjs",
     "test:nflverse-star-registry": "node scripts/tests/nflverse-star-registry-regression.mjs",
     "test:editorial-player-importance": "node scripts/tests/editorial-player-importance-regression.mjs",
+    "test:nflverse-as-of-resolver": "node scripts/tests/nflverse-as-of-resolver-regression.mjs",
+    "test:nflverse-schedule-as-of": "node scripts/tests/nflverse-schedule-as-of-regression.mjs",
     "social:seed-cutover": "node scripts/social/cutover-seed.js",
     "social:enqueue": "node scripts/social/enqueue-story.js",
     "social:process-one": "node scripts/social-worker/process-one.js",
