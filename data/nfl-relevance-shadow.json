@@ -616,6 +616,67 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/operations-college-administrators",
+      "source_name": "NFL.com",
+      "headline": "Operations - College Administrators",
+      "published_at": "2026-09-09T05:39:39.000Z",
+      "observed_at": "2026-09-09T17:40:22.179Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/ron-rivera-explains-patriots-challenge-super-bowl-rematch",
+      "source_name": "FOX Sports",
+      "headline": "Ron Rivera, ‘Still Bitter,’ Details Challenge For Patriots In Super Bowl Rematch",
+      "published_at": "2026-09-09T17:26:03.000Z",
+      "observed_at": "2026-09-09T17:40:22.179Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR",
+        "NE"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jamarr-chase-tee-higgins-on-track-to-play-shemar-stewart-remains-uncertain",
+      "source_name": "Pro Football Talk",
+      "headline": "Ja'Marr Chase, Tee Higgins on track to play; Shemar Stewart remains uncertain",
+      "published_at": "2026-09-09T17:23:21.000Z",
+      "observed_at": "2026-09-09T17:40:22.179Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN",
+        "TB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
