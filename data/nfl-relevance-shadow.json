@@ -779,6 +779,66 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/intel-on-all-32-nfl-teams-ashton-jeanty-breakout-kyler-murray-buzz-and-more",
+      "source_name": "NFL.com",
+      "headline": "Intel on all 32 NFL teams: Ashton Jeanty breakout, Kyler Murray buzz and more",
+      "published_at": "2026-09-09T09:46:06.000Z",
+      "observed_at": "2026-09-09T19:00:26.968Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/carson-wentz-is-vikings-no-2-quarterback-j-j-mccarthy-is-no-3",
+      "source_name": "Pro Football Talk",
+      "headline": "Carson Wentz is Vikings' No. 2 quarterback, J.J. McCarthy is No. 3",
+      "published_at": "2026-09-09T18:48:12.000Z",
+      "observed_at": "2026-09-09T19:00:26.968Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-unsure-if-harrison-smith-will-play-on-sunday",
+      "source_name": "Pro Football Talk",
+      "headline": "Vikings unsure if Harrison Smith will play on Sunday",
+      "published_at": "2026-09-09T18:44:36.000Z",
+      "observed_at": "2026-09-09T19:00:26.968Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
+        "MIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
