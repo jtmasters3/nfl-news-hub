@@ -15,6 +15,7 @@ import { determineVisualSubject, detectCurrentTeam, buildVisualSearchQuery } fro
 import { selectStoryImages } from "./lib/imageMatch.js";
 import { mapWithConcurrency } from "./lib/concurrency.js";
 import { buildSocialPayload } from "./lib/socialPayload.js";
+import { buildShadowObservation } from "./lib/nflRelevanceShadow.js";
 
 const EMPTY_IMAGE_META = {
   image_url: null,
@@ -47,11 +48,23 @@ async function fetchAndValidateImage(url) {
  * @param {Array} sourceResults - output of fetchAllSources()
  * @param {Array} existingStories - current news.json stories
  * @param {Object} processedUrls - ledger: { [url]: { storyId, processedAt } }
+ * @param {{refreshRunAt?: string|null}} [options] - NFL-relevance Shadow
+ *   Mode (diagnostic only, see scripts/lib/nflRelevanceShadow.js).
+ *   `refreshRunAt` is an existing caller-supplied timestamp (refresh.js
+ *   reuses its own already-computed run-start value) reused as every
+ *   observation's observed_at this run; no new Date.now()/new Date() call
+ *   is introduced here for that purpose. Defaults to null when omitted.
  */
-export async function processDiscoveredArticles(sourceResults, existingStories, processedUrls) {
+export async function processDiscoveredArticles(sourceResults, existingStories, processedUrls, { refreshRunAt = null } = {}) {
   const stories = [...existingStories];
   const ledger = { ...processedUrls };
   const candidates = buildClusterCandidates(stories);
+  // NFL relevance Shadow Mode observations collected this run — diagnostic
+  // only, returned to the caller for persistence (this function stays pure
+  // data in / data out, no file I/O, per this module's own header comment).
+  // Zero authority over anything below: nothing reads this array before
+  // `return`.
+  const shadowObservations = [];
 
   const stats = {
     articlesSeen: 0,
@@ -74,6 +87,23 @@ export async function processDiscoveredArticles(sourceResults, existingStories, 
       if (ledger[article.sourceUrl]) {
         stats.skippedExisting++;
         continue;
+      }
+
+      // NFL relevance Shadow Mode: observe-and-record only, immediately
+      // after confirming the article is genuinely new (so a URL is ever
+      // offered to the classifier exactly once — later encounters hit the
+      // `continue` above before reaching this point) and strictly before
+      // any clustering/story decision. No continue/return/filter/throw
+      // here based on the result — the classifier's output has zero
+      // authority over the article-processing path below. Wrapped so that
+      // no classifier exception or unexpected result can ever break normal
+      // ingestion; a failure is surfaced as a clear warning, never hidden.
+      try {
+        shadowObservations.push(buildShadowObservation(article, { refreshRunAt }));
+      } catch (err) {
+        console.warn(
+          `[nfl-relevance-shadow] observation failed for ${article.sourceUrl ?? "(unknown url)"} — normal processing continues: ${err instanceof Error ? err.message : String(err)}`
+        );
       }
 
       const text = `${article.headline} ${article.excerpt}`;
@@ -145,7 +175,7 @@ export async function processDiscoveredArticles(sourceResults, existingStories, 
     story.munch_content = buildMunchContent(story);
   }
 
-  return { stories, processedUrls: ledger, stats };
+  return { stories, processedUrls: ledger, stats, shadowObservations };
 }
 
 /**

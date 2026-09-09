@@ -46,6 +46,7 @@
     "test:nflverse-schedule-as-of": "node scripts/tests/nflverse-schedule-as-of-regression.mjs",
     "test:editorial-enrichment-context": "node scripts/tests/editorial-enrichment-context-regression.mjs",
     "test:nfl-relevance": "node scripts/tests/nfl-relevance-regression.mjs",
+    "test:nfl-relevance-shadow": "node scripts/tests/nfl-relevance-shadow-regression.mjs",
     "social:seed-cutover": "node scripts/social/cutover-seed.js",
     "social:enqueue": "node scripts/social/enqueue-story.js",
     "social:process-one": "node scripts/social-worker/process-one.js",

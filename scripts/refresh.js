@@ -28,6 +28,7 @@ import { generateSocialFeed } from "./generate-social-feed.js";
 import { generateArtworkQueue } from "./generate-artwork-queue.js";
 import { generatePostsForApproval } from "./generate-posts-for-approval.js";
 import { isAiConfigured } from "./lib/ai.js";
+import { persistShadowObservations } from "./lib/nflRelevanceShadow.js";
 
 async function main() {
   const startedAt = Date.now();
@@ -46,14 +47,33 @@ async function main() {
     else console.log(`[refresh] ${r.source.name}: ${r.articles.length} articles found`);
   }
 
-  const { stories, processedUrls: updatedLedger, stats } = await processDiscoveredArticles(
+  // Reuses the already-computed `startedAt` above (no new Date.now()/new
+  // Date() call) as the shared "which refresh run" identifier for every
+  // NFL-relevance Shadow Mode observation recorded this run — diagnostic
+  // only, see scripts/lib/nflRelevanceShadow.js.
+  const refreshRunAt = new Date(startedAt).toISOString();
+
+  const { stories, processedUrls: updatedLedger, stats, shadowObservations } = await processDiscoveredArticles(
     sourceResults,
     existingStories,
-    processedUrls
+    processedUrls,
+    { refreshRunAt }
   );
 
   const { stories: savedStories, changed } = await writeNews(stories);
   await writeProcessedArticles(updatedLedger);
+
+  // Diagnostic-only persistence — see scripts/lib/nflRelevanceShadow.js.
+  // persistShadowObservations() never throws; a failure here can never
+  // abort the rest of this refresh.
+  const shadowResult = await persistShadowObservations(shadowObservations);
+  if (shadowResult.skipped) {
+    console.log("[nfl-relevance-shadow] no new observations this run.");
+  } else if (shadowResult.ok) {
+    console.log(
+      `[nfl-relevance-shadow] recorded ${shadowObservations.length} new observation(s); ${shadowResult.count} total in store.`
+    );
+  }
 
   if (changed) {
     await generateHtml(savedStories);
