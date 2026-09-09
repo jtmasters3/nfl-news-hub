@@ -735,6 +735,50 @@
       "reason_codes": [
         "no_signal_fail_open"
       ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/seahawks-will-have-white-throwback-jersey-in-2027",
+      "source_name": "Pro Football Talk",
+      "headline": "Seahawks will have white throwback jersey in 2027",
+      "published_at": "2026-09-09T18:35:13.000Z",
+      "observed_at": "2026-09-09T18:40:20.060Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/parker-washington-says-contract-talks-with-jaguars-are-continuing",
+      "source_name": "Pro Football Talk",
+      "headline": "Parker Washington says contract talks with Jaguars \"are continuing\"",
+      "published_at": "2026-09-09T18:28:15.000Z",
+      "observed_at": "2026-09-09T18:40:20.060Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX",
+        "WAS"
+      ],
+      "detected_category": "contract",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:contract"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
