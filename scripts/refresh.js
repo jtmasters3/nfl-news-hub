@@ -29,6 +29,7 @@ import { generateArtworkQueue } from "./generate-artwork-queue.js";
 import { generatePostsForApproval } from "./generate-posts-for-approval.js";
 import { isAiConfigured } from "./lib/ai.js";
 import { persistShadowObservations } from "./lib/nflRelevanceShadow.js";
+import { loadProductionNflverseData } from "./lib/nflverseProductionData.js";
 
 async function main() {
   const startedAt = Date.now();
@@ -36,16 +37,37 @@ async function main() {
     `AI enrichment: ${isAiConfigured() ? "ON (Anthropic — this run will make paid API calls)" : "off (deterministic, $0 cost)"}`
   );
 
-  const [existingStories, processedUrls, sourceResults] = await Promise.all([
+  const [existingStories, processedUrls, sourceResults, nflverseData] = await Promise.all([
     readNews(),
     readProcessedArticles(),
     fetchAllSources(),
+    // Production NFL Data Infrastructure — Stage A. Supporting-enrichment
+    // data only: loadProductionNflverseData() never throws (a nflverse/
+    // GitHub outage, malformed CSV, or cache-write failure all degrade to
+    // available:false), so this can safely sit alongside news fetching
+    // without risking it. Not yet consumed by any decision below — see
+    // scripts/lib/nflverseProductionData.js's own header comment. Scoring
+    // wiring is a separate, later stage.
+    loadProductionNflverseData(),
   ]);
 
   for (const r of sourceResults) {
     if (r.error) console.warn(`[refresh] ${r.source.name} failed: ${r.error}`);
     else console.log(`[refresh] ${r.source.name}: ${r.articles.length} articles found`);
   }
+
+  console.log(
+    `[nflverse] roster=${nflverseData.available.roster ? `available (${nflverseData.diagnostics.roster.row_count} rows, as_of ${nflverseData.diagnostics.roster.source_as_of})` : "unavailable"}` +
+      `${nflverseData.diagnostics.roster.error ? ` [${nflverseData.diagnostics.roster.error}]` : ""}`
+  );
+  console.log(
+    `[nflverse] depth_chart=${nflverseData.available.depth_chart ? `available (${nflverseData.diagnostics.depth_chart.row_count} rows, as_of ${nflverseData.diagnostics.depth_chart.source_as_of})` : "unavailable"}` +
+      `${nflverseData.diagnostics.depth_chart.error ? ` [${nflverseData.diagnostics.depth_chart.error}]` : ""}`
+  );
+  console.log(
+    `[nflverse] schedule=${nflverseData.available.schedule ? `available (${nflverseData.diagnostics.schedule.row_count} rows, as_of ${nflverseData.diagnostics.schedule.source_as_of})` : "unavailable"}` +
+      `${nflverseData.diagnostics.schedule.error ? ` [${nflverseData.diagnostics.schedule.error}]` : ""}`
+  );
 
   // Reuses the already-computed `startedAt` above (no new Date.now()/new
   // Date() call) as the shared "which refresh run" identifier for every
