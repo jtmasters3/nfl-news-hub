@@ -1115,6 +1115,51 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/raiders-te-brock-bowers-knee-procedure-out-week-1",
+      "source_name": "NFL.com",
+      "headline": "NFL Network: Raiders TE Brock Bowers undergoes knee procedure, expected to miss a game or two",
+      "published_at": "2026-09-09T08:11:22.000Z",
+      "observed_at": "2026-09-09T20:20:26.677Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patriots-elevate-rb-lan-larison-p-mitch-wishnowsky-for-wednesday-nights-game",
+      "source_name": "Pro Football Talk",
+      "headline": "Patriots elevate RB Lan Larison, P Mitch Wishnowsky for Wednesday night's game",
+      "published_at": "2026-09-09T20:09:58.000Z",
+      "observed_at": "2026-09-09T20:20:26.677Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE",
+        "SEA"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
