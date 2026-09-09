@@ -30,6 +30,7 @@ import { generatePostsForApproval } from "./generate-posts-for-approval.js";
 import { isAiConfigured } from "./lib/ai.js";
 import { persistShadowObservations } from "./lib/nflRelevanceShadow.js";
 import { loadProductionNflverseData } from "./lib/nflverseProductionData.js";
+import { persistEnrichmentShadow } from "./lib/editorialEnrichmentShadow.js";
 
 async function main() {
   const startedAt = Date.now();
@@ -104,6 +105,21 @@ async function main() {
     console.log(`[refresh] Story pages: ${written} written, ${removed} removed (aged out).`);
   } else {
     console.log("[refresh] No story content changed — index.html/feed.xml/stories left untouched.");
+  }
+
+  // Production Integration Stage 2B — Live Observe-Only Enriched Scoring.
+  // Diagnostic only; see scripts/lib/editorialEnrichmentShadow.js's own
+  // header for the full design. Runs over savedStories (every CURRENT
+  // story, same set social-feed.json below is regenerated from), using the
+  // real nflverseData already loaded above — never re-fetched, never
+  // duplicated. persistEnrichmentShadow() never throws; a failure here can
+  // never abort the rest of this refresh. Nothing here changes
+  // story.importance_score, story ordering, or any social/Feed/Story state.
+  const enrichmentResult = await persistEnrichmentShadow(savedStories, nflverseData, { observedAt: refreshRunAt });
+  if (enrichmentResult.skipped) {
+    console.log(`[editorial-enrichment-shadow] skipped this run (${enrichmentResult.reason}).`);
+  } else if (enrichmentResult.ok) {
+    console.log(`[editorial-enrichment-shadow] recorded ${enrichmentResult.count} observation(s).`);
   }
 
   // Unconditional, unlike the block above — social-feed.json must never be
