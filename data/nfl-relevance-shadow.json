@@ -3171,6 +3171,46 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-thursday-sept-10",
+      "source_name": "NFL.com",
+      "headline": "NFL news roundup: Commanders' Tress Way expects 2026 to be final season; Titans sign CB",
+      "published_at": "2026-09-10T07:18:15.000Z",
+      "observed_at": "2026-09-10T19:30:23.440Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "TEN",
+        "WAS"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chris-johnson-acknowledges-possible-link-between-his-football-career-and-his-als",
+      "source_name": "Pro Football Talk",
+      "headline": "Chris Johnson acknowledges possible link between his football career and his ALS",
+      "published_at": "2026-09-10T19:23:42.000Z",
+      "observed_at": "2026-09-10T19:30:23.440Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
     }
   ]
 }
