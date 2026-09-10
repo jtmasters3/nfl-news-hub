@@ -213,7 +213,7 @@ function emptyRecord(storyId, status) {
 }
 
 export function emptyState() {
-  return { schema_version: SCHEMA_VERSION, cutover_at: null, stories: {} };
+  return { schema_version: SCHEMA_VERSION, cutover_at: null, stories: {}, selection_activated_at: null, selection_slots: {} };
 }
 
 // ---------------------------------------------------------------------------
@@ -460,7 +460,17 @@ async function writeJsonAtomic(filePath, data) {
 export async function readSocialState(filePath = SOCIAL_STATE_PATH) {
   const data = await readJson(filePath, null);
   if (!data) return emptyState();
-  return { schema_version: data.schema_version ?? SCHEMA_VERSION, cutover_at: data.cutover_at ?? null, stories: data.stories ?? {} };
+  return {
+    schema_version: data.schema_version ?? SCHEMA_VERSION,
+    cutover_at: data.cutover_at ?? null,
+    stories: data.stories ?? {},
+    // Stage 3A (fixed-window selection engine) additive fields — a legacy
+    // file simply lacks them, exactly like every other additive field in
+    // this module (content_package_version, publishing_preferences,
+    // story_artwork, ...). See scripts/lib/selectionEngine.js.
+    selection_activated_at: data.selection_activated_at ?? null,
+    selection_slots: data.selection_slots ?? {},
+  };
 }
 
 export async function writeSocialState(state, filePath = SOCIAL_STATE_PATH) {

@@ -31,6 +31,7 @@ import { isAiConfigured } from "./lib/ai.js";
 import { persistShadowObservations } from "./lib/nflRelevanceShadow.js";
 import { loadProductionNflverseData } from "./lib/nflverseProductionData.js";
 import { persistEnrichmentShadow } from "./lib/editorialEnrichmentShadow.js";
+import { generateSelection } from "./generate-selection.js";
 
 async function main() {
   const startedAt = Date.now();
@@ -144,6 +145,26 @@ async function main() {
     `[refresh] social-artwork-queue.json regenerated (${queueCount} entries; ` +
       `${socialRecordsCreated} new social-state record(s), ${socialRecordsPromoted} promoted to queued).`
   );
+
+  // The Aggregate — Live Automation Acceleration, Stage 3A: fixed-window
+  // Feed/Story selection. SELECTION STATE ONLY — see
+  // scripts/lib/selectionEngine.js's own header for the full scope boundary
+  // (it does not feed into the artwork-claim pipeline above, does not post
+  // anything, and never uses Stage 2B's observe-only shadow scoring).
+  // Reuses refreshRunAt (already computed above for the relevance shadow) —
+  // no new Date.now()/new Date() call — as the slot-schedule evaluation
+  // time; story eligibility inside the engine still only ever uses each
+  // story's own first_published_at. Runs strictly after generateArtworkQueue()
+  // so every current story already has a social-state record.
+  // generateSelection() never throws; a failure here can never abort the
+  // rest of this refresh.
+  const selectionResult = await generateSelection(savedStories, { now: refreshRunAt });
+  if (selectionResult.ok) {
+    console.log(
+      `[selection] processed ${selectionResult.processedSlots.length} due slot(s) — ${selectionResult.selectedCount} selected, ${selectionResult.noCandidateCount} no_candidate.` +
+        (selectionResult.activated ? " (activation boundary established this run)" : "")
+    );
+  }
 
   const { count: approvalCount } = await generatePostsForApproval();
   console.log(`[refresh] posts-for-approval.html regenerated (${approvalCount} item(s) awaiting approval).`);
