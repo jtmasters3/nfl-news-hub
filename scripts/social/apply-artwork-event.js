@@ -24,6 +24,7 @@ import { applyFeedRegenerateCompleteEvent, applyFeedRegenerateFailEvent, applySt
 import {
   applyPostingClaimedEvent,
   applyPostingContainerCreatedEvent,
+  applyPostingBufferCreatedEvent,
   applyPostingPublishAttemptedEvent,
   applyPostingCompletedEvent,
   applyPostingFailedEvent,
@@ -127,6 +128,8 @@ async function main() {
     result = applyPostingClaimedEvent(state, payload);
   } else if (eventType === "posting-container-created") {
     result = applyPostingContainerCreatedEvent(state, payload);
+  } else if (eventType === "posting-buffer-created") {
+    result = applyPostingBufferCreatedEvent(state, payload);
   } else if (eventType === "posting-publish-attempted") {
     result = applyPostingPublishAttemptedEvent(state, payload);
   } else if (eventType === "posting-completed") {

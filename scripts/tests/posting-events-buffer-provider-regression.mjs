@@ -431,6 +431,18 @@ test("7. publish_attempted + sent but invalid/missing sent_at cannot complete", 
   assert.equal(malformed.error, "buffer_sent_at_invalid");
 });
 
+test("7b. a Buffer completion payload with media_id null/omitted is rejected with invalid_payload — proving a 'posted' Buffer state with a missing media_id is structurally unreachable through this reducer, regardless of an otherwise-fully-proven Buffer sent state", () => {
+  const state = bufferPublishAttemptedState("s1");
+  const nullMediaId = applyPostingCompletedEvent(state, immediateSentPayload("s1", { media_id: null }));
+  assert.equal(nullMediaId.ok, false);
+  assert.equal(nullMediaId.error, "invalid_payload");
+
+  const { media_id, ...withoutMediaId } = immediateSentPayload("s1");
+  const omittedMediaId = applyPostingCompletedEvent(state, withoutMediaId);
+  assert.equal(omittedMediaId.ok, false);
+  assert.equal(omittedMediaId.error, "invalid_payload");
+});
+
 test("8. buffer_post_created + sent + matching stored post_id can complete (Case A)", () => {
   const created = bufferPostCreatedState("s1", { postId: "buffer-post-1", status: "sending" });
   const result = applyPostingCompletedEvent(created, completeBufferPayload("s1"));
