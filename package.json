@@ -54,6 +54,7 @@
     "test:selection-engine": "node scripts/tests/selection-engine-regression.mjs",
     "test:artwork-destination-routing": "node scripts/tests/artwork-destination-routing-regression.mjs",
     "test:posting-events": "node scripts/tests/posting-events-regression.mjs",
+    "test:posting-events-buffer-provider": "node scripts/tests/posting-events-buffer-provider-regression.mjs",
     "test:jpeg-derivative": "node scripts/social-worker/lib/jpegDerivative.test.mjs",
     "test:caption-assembly": "node scripts/social-worker/lib/captionAssembly.test.mjs",
     "social:seed-cutover": "node scripts/social/cutover-seed.js",

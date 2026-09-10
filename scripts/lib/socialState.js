@@ -200,23 +200,37 @@ function emptyRecord(storyId, status) {
     // posting -> posted lifecycle (see scripts/lib/postingEvents.js).
     // `instagram.story` and `facebook` are intentionally untouched — Story
     // and Facebook publishing are out of scope for this stage.
+    //
+    // Buffer publisher stage: additive only — `provider` ("meta" | "buffer",
+    // defaults to "meta" at claim time for full backward compatibility) and
+    // the nested `buffer` object record which TRANSPORT is/was handling this
+    // Feed post. Provider-neutral fields (media_id, permalink, published_at,
+    // publish_attempted_at, last_http_outcome, last_reconciled_at,
+    // caption_used, jpeg_url/storage_key) stay shared and are populated the
+    // same way regardless of provider — only Meta's own container_id/
+    // container_created_at and Buffer's own post_id/channel_id/status/
+    // due_at/sent_at are provider-specific, never duplicated into each
+    // other. See scripts/lib/postingEvents.js for exactly where `provider`
+    // changes which preconditions apply (Buffer has no container step).
     publishing: {
       status: "not_posted",
       claim: { claim_id: null, processor_id: null, claimed_at: null, claim_expires_at: null, retry_count: 0 },
       instagram: {
         feed: {
-          status: "not_posted", // "not_posted" | "claimed" | "container_created" | "publish_attempted" | "posted" | "failed" | "ambiguous"
+          status: "not_posted", // "not_posted" | "claimed" | "container_created" | "buffer_post_created" | "publish_attempted" | "posted" | "failed" | "ambiguous"
+          provider: null, // "meta" | "buffer" | null (unset/legacy) — which transport is/was handling this Feed post
           storage_key: null,
           jpeg_url: null,
           caption_used: null, // immutable snapshot taken at claim time — never recomputed from record.caption afterward
-          container_id: null,
-          container_created_at: null,
-          publish_attempted_at: null, // durable evidence a media_publish call may have occurred — never cleared automatically
-          media_id: null,
+          container_id: null, // Meta-specific — always null for a Buffer-provider record, which has no container step
+          container_created_at: null, // Meta-specific
+          publish_attempted_at: null, // durable evidence an irreversible publish call may have occurred — never cleared automatically
+          media_id: null, // provider-neutral: Instagram media id (Meta) or Buffer's post id, whichever provider is active
           permalink: null,
           published_at: null,
           last_http_outcome: null, // sanitized outcome category only (e.g. "success" | "5xx" | "timeout") — never a raw response body
           last_reconciled_at: null,
+          buffer: { post_id: null, channel_id: null, status: null, due_at: null, sent_at: null }, // Buffer-specific raw fields, additive audit detail only
         },
         story: { status: "not_posted", container_id: null, media_id: null, published_at: null },
       },
