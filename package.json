@@ -53,6 +53,7 @@
     "test:editorial-enrichment-production": "node scripts/tests/editorial-enrichment-production-regression.mjs",
     "test:selection-engine": "node scripts/tests/selection-engine-regression.mjs",
     "test:artwork-destination-routing": "node scripts/tests/artwork-destination-routing-regression.mjs",
+    "test:posting-events": "node scripts/tests/posting-events-regression.mjs",
     "social:seed-cutover": "node scripts/social/cutover-seed.js",
     "social:enqueue": "node scripts/social/enqueue-story.js",
     "social:process-one": "node scripts/social-worker/process-one.js",

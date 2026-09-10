@@ -193,10 +193,31 @@ function emptyRecord(storyId, status) {
     // code exists yet (see the deferred Posting-phase design), so this
     // shape has no legacy readers to preserve; restructured directly
     // rather than added as yet another sibling.
+    //
+    // Stage 4B: additive only — `claim` (same lease shape as the existing
+    // top-level artwork claim / caption.claim / story_artwork.claim) and
+    // `instagram.feed`'s extra fields support the future approved ->
+    // posting -> posted lifecycle (see scripts/lib/postingEvents.js).
+    // `instagram.story` and `facebook` are intentionally untouched — Story
+    // and Facebook publishing are out of scope for this stage.
     publishing: {
       status: "not_posted",
+      claim: { claim_id: null, processor_id: null, claimed_at: null, claim_expires_at: null, retry_count: 0 },
       instagram: {
-        feed: { status: "not_posted", container_id: null, media_id: null, published_at: null },
+        feed: {
+          status: "not_posted", // "not_posted" | "claimed" | "container_created" | "publish_attempted" | "posted" | "failed" | "ambiguous"
+          storage_key: null,
+          jpeg_url: null,
+          caption_used: null, // immutable snapshot taken at claim time — never recomputed from record.caption afterward
+          container_id: null,
+          container_created_at: null,
+          publish_attempted_at: null, // durable evidence a media_publish call may have occurred — never cleared automatically
+          media_id: null,
+          permalink: null,
+          published_at: null,
+          last_http_outcome: null, // sanitized outcome category only (e.g. "success" | "5xx" | "timeout") — never a raw response body
+          last_reconciled_at: null,
+        },
         story: { status: "not_posted", container_id: null, media_id: null, published_at: null },
       },
       facebook: { status: "not_posted", post_id: null, post_url: null },

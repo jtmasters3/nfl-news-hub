@@ -33,6 +33,12 @@ on:
         feed-regenerate-failed,
         story-regenerate-completed,
         story-regenerate-failed,
+        posting-claimed,
+        posting-container-created,
+        posting-publish-attempted,
+        posting-completed,
+        posting-failed,
+        posting-ambiguous,
       ]
 
 permissions:

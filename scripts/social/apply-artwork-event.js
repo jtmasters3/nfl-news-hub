@@ -21,6 +21,14 @@ import { applyCaptionClaimEvent, applyCaptionCompleteEvent, applyCaptionFailEven
 import { applyApprovalApprovedEvent, applyApprovalRejectedEvent } from "../lib/approvalEvents.js";
 import { applyStoryArtworkClaimEvent, applyStoryArtworkCompleteEvent, applyStoryArtworkFailEvent } from "../lib/storyArtworkEvents.js";
 import { applyFeedRegenerateCompleteEvent, applyFeedRegenerateFailEvent, applyStoryRegenerateCompleteEvent, applyStoryRegenerateFailEvent } from "../lib/regenerationEvents.js";
+import {
+  applyPostingClaimedEvent,
+  applyPostingContainerCreatedEvent,
+  applyPostingPublishAttemptedEvent,
+  applyPostingCompletedEvent,
+  applyPostingFailedEvent,
+  applyPostingAmbiguousEvent,
+} from "../lib/postingEvents.js";
 import { generatePostsForApproval } from "../generate-posts-for-approval.js";
 import { writeFile } from "node:fs/promises";
 import { SOCIAL_ARTWORK_QUEUE_JSON_PATH } from "../lib/store.js";
@@ -115,6 +123,18 @@ async function main() {
     result = applyStoryRegenerateCompleteEvent(state, payload, { reachable });
   } else if (eventType === "story-regenerate-failed") {
     result = applyStoryRegenerateFailEvent(state, payload);
+  } else if (eventType === "posting-claimed") {
+    result = applyPostingClaimedEvent(state, payload);
+  } else if (eventType === "posting-container-created") {
+    result = applyPostingContainerCreatedEvent(state, payload);
+  } else if (eventType === "posting-publish-attempted") {
+    result = applyPostingPublishAttemptedEvent(state, payload);
+  } else if (eventType === "posting-completed") {
+    result = applyPostingCompletedEvent(state, payload);
+  } else if (eventType === "posting-failed") {
+    result = applyPostingFailedEvent(state, payload);
+  } else if (eventType === "posting-ambiguous") {
+    result = applyPostingAmbiguousEvent(state, payload);
   } else {
     console.error(`Unknown ARTWORK_EVENT_TYPE: ${eventType}`);
     process.exitCode = 1;
@@ -141,6 +161,9 @@ async function main() {
   }
   if (result.recovered) {
     console.log("Lease recovery: claimed after previous lease expired.");
+  }
+  if (result.idempotentReplay) {
+    console.log("Idempotent replay: identical event already applied, no new state written.");
   }
   if ("escalatedToFailed" in result) {
     console.log(
