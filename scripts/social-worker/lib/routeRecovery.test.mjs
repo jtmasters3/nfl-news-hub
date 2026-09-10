@@ -58,6 +58,39 @@ test("a null/missing record routes to none", () => {
 });
 
 // ---------------------------------------------------------------------------
+// Stage 3B: destination-aware recovery routing
+// ---------------------------------------------------------------------------
+
+test("Stage 3B: a Feed-selected v2 record at artwork_ready with no story_artwork routes to caption_only, NOT story_only — Story was never supposed to be attempted", () => {
+  const record = {
+    status: "artwork_ready",
+    content_package_version: 2,
+    selection: { destination: "feed", slot_id: "feed:2026-09-09T22:00:00-04:00" },
+  };
+  assert.equal(determineRecoveryAction(record), "caption_only");
+});
+
+test("Stage 3B: a Feed-selected v2 record at artwork_ready with a stale/failed story_artwork STILL routes to caption_only — never resurrected into a Story claim", () => {
+  const record = {
+    status: "artwork_ready",
+    content_package_version: 2,
+    selection: { destination: "feed", slot_id: "feed:2026-09-09T22:00:00-04:00" },
+    story_artwork: notReadyStoryArtwork("failed"),
+  };
+  assert.equal(determineRecoveryAction(record), "caption_only");
+});
+
+test("Stage 3B: a Story-selected record at artwork_ready (its Story succeeded, which is what drove artwork_ready) routes to caption_only", () => {
+  const record = {
+    status: "artwork_ready",
+    content_package_version: 2,
+    selection: { destination: "story", slot_id: "story:2026-09-09T20:00:00-04:00" },
+    story_artwork: readyStoryArtwork(),
+  };
+  assert.equal(determineRecoveryAction(record), "caption_only");
+});
+
+// ---------------------------------------------------------------------------
 let failures = 0;
 for (const c of cases) {
   try {

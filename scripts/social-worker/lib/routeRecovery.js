@@ -18,6 +18,13 @@
 export function determineRecoveryAction(record) {
   if (!record || record.status !== "artwork_ready") return "none";
 
+  // Stage 3B: a Feed-selected record's single required asset is Feed,
+  // already satisfied by reaching artwork_ready — it must never be routed
+  // into Story recovery merely for lacking a story_artwork it was never
+  // supposed to generate (destination is authoritative over version here,
+  // exactly as in artworkPlan.js's determineArtworkPlan).
+  if (record.selection?.destination === "feed") return "caption_only";
+
   const version = record.content_package_version ?? 1;
   if (version !== 2) return "caption_only";
 

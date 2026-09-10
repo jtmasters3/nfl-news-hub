@@ -392,17 +392,57 @@ export function refreshQueuedSnapshots(state, stories) {
 }
 
 /**
- * The artwork-queue payload: every record currently "queued" (regardless
- * of which refresh cycle promoted it — a story stays visible here across
- * as many refreshes as it takes until a future processor acknowledges it;
- * generating this list is NOT acknowledgement, see the "queued" state
- * doc). Reads the snapshot taken at promotion time, not live story data,
- * so a story aging out of news.json while still queued doesn't blank out
- * its payload.
+ * Stage 3B compatibility gate — distinguishes "a legacy pipeline record
+ * already materially in flight" from "a new, untouched auto-queued record
+ * that must wait for Stage 3A's fixed-window selection engine." Reuses
+ * EXISTING fields only (record.created_at, state.selection_activated_at —
+ * the latter already persisted by Stage 3A, see selectionEngine.js) rather
+ * than introducing any new tracking field or a second state store:
+ *
+ * - If the selection engine has never activated at all (selection_activated_at
+ *   is null), nothing requires a selection yet — every "queued" record
+ *   behaves exactly as it always has (pre-Stage-3A behavior, unchanged).
+ * - A record CREATED BEFORE activation is "legacy" by construction — it
+ *   existed under the old always-queue-everything regime and must keep
+ *   working exactly as it always did, selection or no selection.
+ * - A record created AT OR AFTER activation is subject to the new regime:
+ *   it must have an actual Stage 3A `selection` before it may enter the
+ *   artwork queue at all. Being auto-queued by promoteEligible() is no
+ *   longer sufficient on its own to begin new artwork work.
+ */
+function requiresSelectionBeforeQueue(record, selectionActivatedAt) {
+  if (!selectionActivatedAt) return false;
+  const createdMs = Date.parse(record.created_at);
+  if (!Number.isFinite(createdMs)) return false; // malformed timestamp — never gate on unusable data
+  return createdMs >= Date.parse(selectionActivatedAt);
+}
+
+/** True when a "queued" record is currently eligible to enter the artwork queue at all — see requiresSelectionBeforeQueue's doc comment. */
+export function isArtworkQueueEligible(record, selectionActivatedAt) {
+  if (!requiresSelectionBeforeQueue(record, selectionActivatedAt)) return true;
+  return Boolean(record.selection);
+}
+
+/**
+ * The artwork-queue payload: every record currently "queued" AND
+ * queue-eligible (regardless of which refresh cycle promoted it — a story
+ * stays visible here across as many refreshes as it takes until a future
+ * processor acknowledges it; generating this list is NOT acknowledgement,
+ * see the "queued" state doc). Reads the snapshot taken at promotion time,
+ * not live story data, so a story aging out of news.json while still
+ * queued doesn't blank out its payload.
+ *
+ * Stage 3B addition: each entry now carries an explicit `destination`
+ * ("feed" | "story") — a legacy record or a Feed-selected record is
+ * "feed" (existing behavior, unchanged); a Story-selected record is
+ * "story", telling the local processor to build/submit the Story (9:16)
+ * asset through the SAME primary claim/complete lifecycle instead of the
+ * Feed (4:5) one — see scripts/lib/artworkEvents.js's applyCompleteEvent.
  */
 export function buildQueueEntries(state) {
   return Object.values(state.stories)
     .filter((r) => r.status === "queued")
+    .filter((r) => isArtworkQueueEligible(r, state.selection_activated_at))
     .sort((a, b) => Date.parse(a.updated_at) - Date.parse(b.updated_at))
     .map((r) => ({
       story_id: r.story_id,
@@ -416,6 +456,7 @@ export function buildQueueEntries(state) {
       description: r.source_story.description ?? null,
       is_rumor: r.source_story.is_rumor ?? false,
       content_package_version: r.content_package_version ?? 1,
+      destination: r.selection?.destination ?? "feed",
     }));
 }
 

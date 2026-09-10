@@ -8,6 +8,8 @@
 // second, independent pass over the committed record, per the spec's
 // "defense in depth" requirement, not a shared code path across the
 // Worker/Action runtime boundary.
+import { ASPECT_RATIO_TARGET as STORY_ASPECT_RATIO_TARGET, ASPECT_RATIO_TOLERANCE as STORY_ASPECT_RATIO_TOLERANCE, ALLOWED_MIME_TYPES as STORY_ALLOWED_MIME_TYPES, MIN_DIMENSION as STORY_MIN_DIMENSION } from "./storyArtworkValidation.js";
+
 const ASPECT_RATIO_TARGET = 4 / 5;
 const ASPECT_RATIO_TOLERANCE = 0.06; // ~6%, matches "approximately 4:5"
 const ALLOWED_MIME_TYPES = new Set(["image/png", "image/jpeg"]);
@@ -94,6 +96,75 @@ export function validateArtwork({ record, claimId, reachable }) {
   if (!record.claim || record.claim.claim_id !== claimId) {
     issues.push("claim_id_mismatch");
   }
+
+  return { passed: issues.length === 0, issues };
+}
+
+// ---------------------------------------------------------------------------
+// Stage 3B — destination-aware validation for a Stage 3A-SELECTED record's
+// PRIMARY asset. Deliberately a NEW function, not a parameterization of
+// validateArtwork() above: validateArtwork() stays byte-for-byte unchanged
+// (zero risk to any legacy/Feed-selected record's existing behavior, still
+// the exact function every current record's Feed asset is validated by).
+// This function exists ONLY for the "story" case, where the SAME primary
+// artwork_requested -> artwork_created -> validating -> artwork_ready
+// lifecycle now needs to validate a 9:16 asset written into
+// record.story_artwork instead of a 4:5 asset in record.artwork. Reuses
+// the identical top-level guards (validating status, already_posted,
+// approval_already_resolved, claim_id match) — those are genuinely
+// destination-independent — and Story's own already-locked aspect-ratio/
+// dimension constants (see storyArtworkValidation.js), never re-tuned here.
+const DESTINATION_RULES = {
+  feed: { field: "artwork", ratioTarget: ASPECT_RATIO_TARGET, ratioTolerance: ASPECT_RATIO_TOLERANCE, allowedMimeTypes: ALLOWED_MIME_TYPES, minDimension: MIN_DIMENSION },
+  story: { field: "story_artwork", ratioTarget: STORY_ASPECT_RATIO_TARGET, ratioTolerance: STORY_ASPECT_RATIO_TOLERANCE, allowedMimeTypes: STORY_ALLOWED_MIME_TYPES, minDimension: STORY_MIN_DIMENSION },
+};
+
+/**
+ * @param {object} args
+ * @param {object|null} args.record - the resolved (canonical) social-state record, AFTER the asset/claim patch has been applied and status set to "validating".
+ * @param {string} args.claimId - claim_id from the /complete payload being validated.
+ * @param {boolean} args.reachable - whether image_url was confirmed reachable.
+ * @param {"feed"|"story"} args.destination - which asset field/ratio this record's Stage 3A selection requires.
+ * @returns {{ passed: boolean, issues: string[] }}
+ */
+export function validateArtworkForDestination({ record, claimId, reachable, destination }) {
+  const issues = [];
+
+  if (!record) {
+    return { passed: false, issues: ["record_not_found"] };
+  }
+
+  const rules = DESTINATION_RULES[destination];
+  if (!rules) {
+    return { passed: false, issues: [`unknown_destination:${destination ?? "none"}`] };
+  }
+
+  if (record.status !== "validating") {
+    issues.push(`unexpected_status:${record.status}`);
+  }
+
+  const asset = record[rules.field] || {};
+
+  if (!asset.image_url) issues.push("missing_image_url");
+  if (!reachable) issues.push("image_unreachable");
+  if (!asset.mime_type || !rules.allowedMimeTypes.has(asset.mime_type)) issues.push(`invalid_mime_type:${asset.mime_type ?? "none"}`);
+  if (!asset.size_bytes || asset.size_bytes <= 0) issues.push("empty_image");
+
+  const { width, height } = asset;
+  if (!width || !height || width < rules.minDimension || height < rules.minDimension) {
+    issues.push(`insane_dimensions:${width ?? "?"}x${height ?? "?"}`);
+  }
+  if (width && height) {
+    const ratio = width / height;
+    if (Math.abs(ratio - rules.ratioTarget) > rules.ratioTolerance) {
+      issues.push(`aspect_ratio_out_of_range:${ratio.toFixed(3)}`);
+    }
+  }
+
+  if (asset.status !== "created") issues.push(`unexpected_asset_status:${asset.status ?? "none"}`);
+  if (record.publishing?.status === "posted") issues.push("already_posted");
+  if (record.approval?.status && record.approval.status !== "pending") issues.push(`approval_already_resolved:${record.approval.status}`);
+  if (!record.claim || record.claim.claim_id !== claimId) issues.push("claim_id_mismatch");
 
   return { passed: issues.length === 0, issues };
 }

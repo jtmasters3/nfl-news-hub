@@ -129,6 +129,54 @@ test("a v1-explicit record (content_package_version: 1) is unaffected by the Sto
 });
 
 // ---------------------------------------------------------------------------
+// Stage 3B: destination-aware readiness (Stage 3A `selection`)
+// ---------------------------------------------------------------------------
+
+test("Stage 3B: a Story-selected record is actionable even though record.artwork was never created", () => {
+  const result = assessApprovalReadiness({
+    merged_into: null,
+    selection: { destination: "story", slot_id: "story:2026-09-09T20:00:00-04:00" },
+    artwork: { status: "not_created" },
+    story_artwork: { status: "created" },
+    validation: { status: "passed", passed: true, issues: [] },
+    caption: { status: "ready", text: "A caption. Source: ESPN" },
+  });
+  assert.equal(result.ready, true, "a Story-selected record must be actionable on story_artwork alone");
+  assert.deepEqual(result.issues, []);
+});
+
+test("Stage 3B: a Story-selected record with story_artwork not yet created is NOT actionable", () => {
+  const result = assessApprovalReadiness({
+    merged_into: null,
+    selection: { destination: "story", slot_id: "story:2026-09-09T20:00:00-04:00" },
+    artwork: { status: "not_created" },
+    story_artwork: { status: "not_created" },
+    validation: { status: "not_run", passed: null, issues: [] },
+    caption: { status: "ready", text: "A caption. Source: ESPN" },
+  });
+  assert.equal(result.ready, false);
+  assert.ok(result.issues.includes("Story artwork not created"));
+});
+
+test("Stage 3B: a Feed-selected v2 record is actionable with no story_artwork at all — the paired requirement does not apply once a selection exists", () => {
+  const result = assessApprovalReadiness(
+    fullyReadyRecord({
+      content_package_version: 2,
+      selection: { destination: "feed", slot_id: "feed:2026-09-09T22:00:00-04:00" },
+    })
+  );
+  assert.equal(result.ready, true, "a Feed-selected v2 record is satisfied by Feed alone once Stage 3A selection exists");
+});
+
+test("Stage 3B: a v2 record WITHOUT any Stage 3A selection remains fully subject to the existing paired requirement, unchanged", () => {
+  const result = assessApprovalReadiness(
+    fullyReadyV2Record({ story_artwork: { status: "not_created", validation: { status: "not_run", passed: null, issues: [] } } })
+  );
+  assert.equal(result.ready, false);
+  assert.ok(result.issues.includes("Story artwork not created"), "a record with no selection is still held to the paired requirement exactly as before Stage 3B");
+});
+
+// ---------------------------------------------------------------------------
 let failures = 0;
 for (const c of cases) {
   try {

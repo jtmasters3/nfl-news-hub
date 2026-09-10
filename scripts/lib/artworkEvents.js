@@ -9,7 +9,7 @@
 // when) — added here via transition()'s patch mechanism, so
 // scripts/lib/socialState.js itself never needs to change.
 import { resolveCanonicalId, transition, setLastError } from "./socialState.js";
-import { validateArtwork } from "./artworkValidation.js";
+import { validateArtwork, validateArtworkForDestination } from "./artworkValidation.js";
 
 /**
  * queued -> artwork_requested, recording the new lease.
@@ -68,9 +68,22 @@ export function applyCompleteEvent(state, payload, { reachable }) {
     return { state, ok: false, error: "claim_mismatch" };
   }
 
+  // Stage 3B: a Stage 3A-selected record's PRIMARY asset is routed by its
+  // own `selection.destination` — "story" writes into record.story_artwork
+  // (9:16) instead of record.artwork (4:5), and is validated by Story's own
+  // locked ratio/dimension rules via validateArtworkForDestination(). No
+  // `selection` (legacy) or destination "feed" is the EXACT existing
+  // behavior, byte-for-byte unchanged, using record.artwork + validateArtwork()
+  // exactly as before. This never touches the SEPARATE, still-untouched
+  // legacy Story-as-sibling pathway in storyArtworkEvents.js — that only
+  // ever runs from "artwork_ready" for records with no Story-primary
+  // selection, exactly as it always has.
+  const destination = resolved.record.selection?.destination === "story" ? "story" : "feed";
+  const assetField = destination === "story" ? "story_artwork" : "artwork";
+
   const now = new Date().toISOString();
   let step = transition(state, story_id, "artwork_created", {
-    artwork: {
+    [assetField]: {
       status: "created",
       image_url,
       storage_key,
@@ -87,7 +100,10 @@ export function applyCompleteEvent(state, payload, { reachable }) {
   step = transition(step.state, story_id, "validating");
   if (!step.ok) return step;
 
-  const { passed, issues } = validateArtwork({ record: step.record, claimId: claim_id, reachable });
+  const { passed, issues } =
+    destination === "story"
+      ? validateArtworkForDestination({ record: step.record, claimId: claim_id, reachable, destination: "story" })
+      : validateArtwork({ record: step.record, claimId: claim_id, reachable });
 
   // Persist the ACTUAL validation outcome onto the record's own
   // validation.* fields — previously only returned from this function for

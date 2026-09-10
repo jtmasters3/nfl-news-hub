@@ -52,6 +52,7 @@ import { runCodex } from "./lib/codexRunner.js";
 import { readPngDimensions } from "./lib/pngDimensions.js";
 import { compositeBrandOverlay } from "./lib/brandOverlay.js";
 import { selectTarget, missingFixtureFields } from "./lib/selectTarget.js";
+import { determineArtworkPlan } from "./lib/artworkPlan.js";
 import { assertOutputProduced } from "./lib/codexOutcome.js";
 import { downloadSourceImageWithRetries, cleanupSourceImage } from "./lib/sourceImage.js";
 import { generateWithRetries, MAX_GENERATION_ATTEMPTS } from "./lib/generateWithRetries.js";
@@ -348,10 +349,124 @@ async function processStoryArtwork({ storyId, workDir, fixture, sourceImagePath 
 }
 
 // ---------------------------------------------------------------------------
+// Stage 3B: a Stage 3A Story-SELECTED record's PRIMARY (and only) asset.
+// Builds the Story-shaped (9:16) content exactly like processStoryArtwork()
+// above, but submits it through the SAME PRIMARY claim/complete/fail calls
+// Feed uses (claimStory/completeArtwork/failArtwork) — never the separate
+// story-artwork:{story_id} claim namespace, which remains reserved
+// exclusively for the legacy paired (Story-as-sibling-of-Feed) case. This
+// is what lets scripts/lib/artworkEvents.js's applyCompleteEvent() drive
+// the SAME top-level queued -> artwork_requested -> artwork_created ->
+// validating -> artwork_ready sequence Feed already drives, using the
+// story_artwork field instead of artwork — no second state machine, no
+// new claim contract, no Worker deployment required for this call site.
+// @returns {Promise<boolean>} whether the Story-primary asset completed successfully
+// ---------------------------------------------------------------------------
+async function processPrimaryStoryArtwork({ storyId, workDir, fixture, sourceImagePath }) {
+  console.log(`Claiming ${storyId} (Story, primary destination)...`);
+  const claimResult = await claimStory(storyId);
+
+  if (!claimResult.claimed) {
+    const detail = claimResult.reason ?? claimResult.error ?? `http_${claimResult.httpStatus ?? "?"}`;
+    console.log(`Story (primary) not claimed (${detail}).`);
+    if (claimResult.message) console.log(`Detail: ${claimResult.message}`);
+    return false;
+  }
+
+  const claimId = claimResult.claim_id;
+  console.log(`Story (primary) claimed. claim_id=${claimId}`);
+
+  await mkdir(path.join(SOCIAL_OUTPUT_DIR, "story"), { recursive: true });
+
+  try {
+    const { promptText, outputPath } = await buildStoryPrompt({ storyId, workDir, fixture, sourceImagePath });
+
+    await generateWithRetries(
+      async (attempt) => {
+        console.log(`Running codex exec for Story-primary (attempt ${attempt}/${MAX_GENERATION_ATTEMPTS})...`);
+        await rm(outputPath, { force: true });
+
+        let codexResult;
+        try {
+          codexResult = await runCodex({ promptText, addDir: SOCIAL_OUTPUT_DIR });
+        } catch (codexErr) {
+          await writeFile(path.join(workDir, `codex.story-primary.attempt${attempt}.stdout.log`), codexErr.codexStdout ?? "", "utf-8");
+          await writeFile(path.join(workDir, `codex.story-primary.attempt${attempt}.stderr.log`), codexErr.codexStderr ?? "", "utf-8");
+          console.error(`codex exec (Story-primary) failed (exit code ${codexErr.codexExitCode ?? "n/a"}) — see ${workDir}\\codex.story-primary.attempt${attempt}.std{out,err}.log`);
+          throw codexErr;
+        }
+        await writeFile(path.join(workDir, `codex.story-primary.attempt${attempt}.stdout.log`), codexResult.stdout, "utf-8");
+        await writeFile(path.join(workDir, `codex.story-primary.attempt${attempt}.stderr.log`), codexResult.stderr, "utf-8");
+        console.log(`codex exec (Story-primary) exited 0 (attempt ${attempt}). stdout/stderr written to ${workDir}`);
+
+        await assertOutputProduced(outputPath, codexResult.stdout);
+
+        const attemptDims = await readPngDimensions(outputPath);
+        if (!attemptDims || attemptDims.sizeBytes === 0) {
+          throw new Error(`Output PNG missing or empty at ${outputPath}`);
+        }
+        console.log(`Story-primary generated on attempt ${attempt}: ${outputPath} (${attemptDims.width}x${attemptDims.height}, ${attemptDims.sizeBytes} bytes)`);
+      },
+      { onAttemptFailure: (attempt, err) => console.error(`Story-primary attempt ${attempt} failed: ${err.message}`) }
+    );
+
+    const brandedPath = outputPath.replace(/\.png$/i, ".branded.png");
+    console.log("Compositing official logo onto Story-primary...");
+    const overlayResult = await compositeBrandOverlay({ baseImagePath: outputPath, outputPath: brandedPath, format: "story" });
+    console.log(`Logo composited: ${overlayResult.logoWidth}x${overlayResult.logoHeight} at (${overlayResult.logoLeft},${overlayResult.logoTop}) on ${overlayResult.width}x${overlayResult.height} canvas.`);
+
+    console.log("Uploading Story (primary)...");
+    const completeResult = await completeArtwork(storyId, claimId, brandedPath);
+    if (!completeResult.uploaded) {
+      throw new Error(`Upload rejected: ${completeResult.reason ?? "unknown"}`);
+    }
+    if (completeResult.dispatch_confirmed === false) {
+      console.warn(`WARNING: Story (primary) artwork for ${storyId} is safely stored (R2 + claim), but GitHub was never notified after retries — needs manual reconciliation.`);
+    }
+
+    console.log("Story (primary) done:");
+    console.log(
+      JSON.stringify(
+        {
+          story_id: storyId,
+          claim_id: claimId,
+          image_url: completeResult.image_url,
+          storage_key: completeResult.storage_key,
+          width: completeResult.width,
+          height: completeResult.height,
+          dispatch_confirmed: completeResult.dispatch_confirmed,
+        },
+        null,
+        2
+      )
+    );
+    return true;
+  } catch (err) {
+    console.error(`Story (primary) processing failed: ${err.message}`);
+    const stage = err.message.includes("Upload rejected") ? "upload" : "generation";
+    try {
+      await failArtwork(storyId, claimId, stage, err.message.slice(0, 2000));
+    } catch (failErr) {
+      console.error(`Also failed to report the Story (primary) failure: ${failErr.message}`);
+    }
+    return false;
+  }
+}
+
+// ---------------------------------------------------------------------------
 // Orchestrates Feed then (for v2 stories) Story, sharing ONE downloaded
 // source image for the whole lifecycle. Story failure never deletes or
 // regenerates a successful Feed — Feed's own claim is already "completed"
 // and permanently un-reclaimable by the time Story is even attempted.
+//
+// Stage 3B: a queue entry now carries an explicit `destination` ("feed" |
+// "story", see buildQueueEntries()). "story" means this record's Stage 3A
+// selection requires ONLY the Story (9:16) asset — routed entirely through
+// processPrimaryStoryArtwork() above, NEVER touching Feed at all. Anything
+// else ("feed", or no destination at all on a legacy entry) is the EXACT
+// existing Feed-first flow, unchanged; a Feed-selected v2 record additionally
+// skips the legacy Story-after-Feed step, since its own single-destination
+// selection is already satisfied once Feed alone completes.
 // @returns {Promise<boolean>} whether the story is now ready for caption.
 // ---------------------------------------------------------------------------
 async function processArtwork(target) {
@@ -387,12 +502,23 @@ async function processArtwork(target) {
     sourceImagePath = sourceImage.path;
     console.log(`Source image saved locally: ${sourceImagePath} (${sourceImage.sizeBytes} bytes)`);
 
+    const plan = determineArtworkPlan(target);
+
+    if (plan.attemptPrimaryStory) {
+      console.log(`destination "story" — Stage 3A selection requires only the Story asset; Feed is never attempted for this record.`);
+      return await processPrimaryStoryArtwork({ storyId, workDir, fixture, sourceImagePath });
+    }
+
     const feedSucceeded = await processFeedArtwork({ storyId, workDir, fixture, sourceImagePath });
     if (!feedSucceeded) return false;
 
-    const version = target.content_package_version ?? 1;
-    if (version !== 2) {
-      console.log(`content_package_version ${version} — legacy story, Story asset is not required.`);
+    if (!plan.attemptLegacyStoryAfterFeed) {
+      const version = target.content_package_version ?? 1;
+      console.log(
+        target.destination
+          ? `destination "feed" (Stage 3A selected) — Story asset is not required for this record.`
+          : `content_package_version ${version} — legacy story, Story asset is not required.`
+      );
       return true;
     }
 
