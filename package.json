@@ -60,10 +60,13 @@
     "test:buffer-feed-orchestrator": "node scripts/social-worker/lib/bufferFeedOrchestrator.test.mjs",
     "test:buffer-posting-bridge": "node scripts/social-worker/lib/bufferPostingBridge.test.mjs",
     "test:wait-durable-commit": "node scripts/social-worker/lib/waitForDurableCommit.test.mjs",
+    "test:resolve-approved-feed-jpeg": "node scripts/social-worker/lib/resolveApprovedFeedJpeg.test.mjs",
+    "test:publish-buffer-feed-launcher": "node scripts/social/publish-buffer-feed.test.mjs",
     "social:seed-cutover": "node scripts/social/cutover-seed.js",
     "social:enqueue": "node scripts/social/enqueue-story.js",
     "social:process-one": "node scripts/social-worker/process-one.js",
-    "social:approval-console": "node scripts/social-worker/approval-console.js"
+    "social:approval-console": "node scripts/social-worker/approval-console.js",
+    "social:publish-buffer-feed": "node scripts/social/publish-buffer-feed.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.120.0",

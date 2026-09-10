@@ -179,6 +179,73 @@ test("reconcile: an AMBIGUOUS_REQUIRES_HUMAN outcome from the Worker is relayed 
 });
 
 // ---------------------------------------------------------------------------
+// uploadJpeg — multipart upload to the Worker's deterministic JPEG endpoint
+// ---------------------------------------------------------------------------
+
+function recordingFormFetch(responder) {
+  const calls = [];
+  const fetchImpl = async (url, init) => {
+    calls.push({ url, init });
+    return responder(url, init);
+  };
+  return { fetchImpl, calls };
+}
+
+test("uploadJpeg posts multipart form data to /social/artwork/jpeg with the bearer token, story_id, and jpeg file", async () => {
+  const { fetchImpl, calls } = recordingFormFetch(() => jsonResponse(200, { uploaded: true, storyId: "s1", storageKey: "social-artwork-jpeg/s1.jpg", publicUrl: "https://artwork.example.test/social-artwork-jpeg/s1.jpg" }));
+  const bridge = createBufferPostingBridge({ fetchImpl, workerBaseUrl: WORKER_BASE_URL, workerApiToken: WORKER_TOKEN });
+  const result = await bridge.uploadJpeg({ storyId: "s1", jpegBuffer: Buffer.from([0xff, 0xd8, 0xff, 0xd9]) });
+  assert.equal(result.ok, true);
+  assert.equal(result.publicUrl, "https://artwork.example.test/social-artwork-jpeg/s1.jpg");
+  assert.equal(calls.length, 1);
+  assert.equal(calls[0].url, `${WORKER_BASE_URL}/social/artwork/jpeg`);
+  assert.equal(calls[0].init.headers.authorization, `Bearer ${WORKER_TOKEN}`);
+  assert.ok(calls[0].init.body instanceof FormData);
+  assert.equal(calls[0].init.body.get("story_id"), "s1");
+  assert.ok(calls[0].init.body.get("jpeg") instanceof Blob);
+});
+
+test("uploadJpeg: a Worker-reported reused:true (idempotent collision-safe reuse) is passed through as ok:true, reused:true", async () => {
+  const { fetchImpl } = recordingFormFetch(() => jsonResponse(200, { uploaded: true, reused: true, storyId: "s1", storageKey: "social-artwork-jpeg/s1.jpg", publicUrl: "https://artwork.example.test/social-artwork-jpeg/s1.jpg" }));
+  const bridge = createBufferPostingBridge({ fetchImpl, workerBaseUrl: WORKER_BASE_URL, workerApiToken: WORKER_TOKEN });
+  const result = await bridge.uploadJpeg({ storyId: "s1", jpegBuffer: Buffer.from([0xff, 0xd8, 0xff, 0xd9]) });
+  assert.equal(result.ok, true);
+  assert.equal(result.reused, true);
+});
+
+test("uploadJpeg: a Worker-side collision conflict (409, uploaded:false) is surfaced as ok:false with the exact reason", async () => {
+  const { fetchImpl, calls } = recordingFormFetch(() => jsonResponse(409, { uploaded: false, reason: "existing_object_conflict" }));
+  const bridge = createBufferPostingBridge({ fetchImpl, workerBaseUrl: WORKER_BASE_URL, workerApiToken: WORKER_TOKEN });
+  const result = await bridge.uploadJpeg({ storyId: "s1", jpegBuffer: Buffer.from([0xff, 0xd8, 0xff, 0xd9]) });
+  assert.equal(result.ok, false);
+  assert.equal(result.error, "existing_object_conflict");
+  assert.equal(calls.length, 1, "no retry may ever be attempted after a collision conflict");
+});
+
+test("uploadJpeg: a Worker-side rejection (uploaded:false) is surfaced as ok:false with the reason, exactly once, no retry", async () => {
+  const { fetchImpl, calls } = recordingFormFetch(() => jsonResponse(400, { uploaded: false, reason: "invalid_jpeg" }));
+  const bridge = createBufferPostingBridge({ fetchImpl, workerBaseUrl: WORKER_BASE_URL, workerApiToken: WORKER_TOKEN });
+  const result = await bridge.uploadJpeg({ storyId: "s1", jpegBuffer: Buffer.from([0x00]) });
+  assert.equal(result.ok, false);
+  assert.equal(result.error, "invalid_jpeg");
+  assert.equal(calls.length, 1);
+});
+
+test("uploadJpeg: a network failure is reported as ok:false, never thrown", async () => {
+  const bridge = createBufferPostingBridge({ fetchImpl: async () => { throw new Error("ECONNRESET"); }, workerBaseUrl: WORKER_BASE_URL, workerApiToken: WORKER_TOKEN });
+  const result = await bridge.uploadJpeg({ storyId: "s1", jpegBuffer: Buffer.from([0xff]) });
+  assert.equal(result.ok, false);
+  assert.equal(result.error, "network_error");
+});
+
+test("uploadJpeg: the fake worker token never appears in the returned result", async () => {
+  const { fetchImpl } = recordingFormFetch(() => jsonResponse(200, { uploaded: true, storyId: "s1", storageKey: "social-artwork-jpeg/s1.jpg", publicUrl: "https://artwork.example.test/social-artwork-jpeg/s1.jpg" }));
+  const bridge = createBufferPostingBridge({ fetchImpl, workerBaseUrl: WORKER_BASE_URL, workerApiToken: WORKER_TOKEN });
+  const result = await bridge.uploadJpeg({ storyId: "s1", jpegBuffer: Buffer.from([0xff, 0xd8]) });
+  assert.ok(!JSON.stringify(result).includes(WORKER_TOKEN));
+});
+
+// ---------------------------------------------------------------------------
 // No-live-network / guard proof
 // ---------------------------------------------------------------------------
 

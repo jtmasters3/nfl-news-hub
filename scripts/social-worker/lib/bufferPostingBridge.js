@@ -5,7 +5,8 @@
 // or response-parsing behind them) with functions that actually call the
 // cloudflare-worker's real endpoints — /social/posting/claim,
 // /social/posting/publish-attempted, /social/posting/result,
-// /publish/buffer/feed, /social/posting/reconcile — added this stage.
+// /publish/buffer/feed, /social/posting/reconcile, /social/artwork/jpeg —
+// added this stage.
 //
 // Every function here takes an explicitly injected `fetchImpl`; construction
 // fails closed with no live-network fallback if one isn't supplied, matching
@@ -146,6 +147,40 @@ export function createBufferPostingBridge({ fetchImpl, workerBaseUrl, workerApiT
       const result = await postJson("/social/posting/reconcile", { story_id: storyId });
       if (result.__transportError) return { ok: false, error: result.error, message: result.message };
       return result;
+    },
+
+    /**
+     * Uploads a JPEG derivative buffer to the Worker's deterministic
+     * storage endpoint. Not claim-gated (see postingJpegUpload.js's header
+     * on the Worker side) — this runs before the posting claim is ever
+     * acquired, matching the real orchestrator step order (caption/JPEG
+     * resolution happens before claimPosting()). Makes exactly one HTTP
+     * request; never retries.
+     * @param {{storyId: string, jpegBuffer: Buffer}} args
+     */
+    async uploadJpeg({ storyId, jpegBuffer }) {
+      const form = new FormData();
+      form.set("story_id", storyId);
+      form.set("jpeg", new Blob([jpegBuffer], { type: "image/jpeg" }), `${storyId}.jpg`);
+
+      let res;
+      try {
+        res = await fetchImpl(`${workerBaseUrl}/social/artwork/jpeg`, {
+          method: "POST",
+          headers: { authorization: `Bearer ${workerApiToken}` },
+          body: form,
+        });
+      } catch (err) {
+        return { ok: false, error: "network_error", message: err?.message ?? "network error" };
+      }
+      let result;
+      try {
+        result = await res.json();
+      } catch {
+        return { ok: false, error: "invalid_response", httpStatus: res.status };
+      }
+      if (!result.uploaded) return { ok: false, error: result.reason ?? "upload_failed", httpStatus: res.status };
+      return { ok: true, publicUrl: result.publicUrl, storageKey: result.storageKey, reused: !!result.reused };
     },
   };
 }
