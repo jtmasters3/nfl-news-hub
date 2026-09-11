@@ -85,6 +85,60 @@ export async function convertToJpegDerivative(pngBuffer, { backgroundFillPolicy 
   return { ok: true, buffer };
 }
 
+// How far inside each edge to sample, avoiding a 1-pixel anti-aliased
+// canvas-edge ring (a common PNG-export artifact — a very slight
+// feather/rounding bleed on the outermost pixels) that would otherwise
+// contaminate a literal (0,0)-style corner read.
+const CORNER_SAMPLE_INSET = 8;
+// Small enough to reject a genuine gradient/multi-tone background, generous
+// enough to tolerate ordinary compression/dithering noise in a flat fill.
+const CORNER_AGREEMENT_TOLERANCE = 24;
+
+/**
+ * Deterministically derives a single background-fill RGB from the approved
+ * PNG's own four corners — used ONLY when the source has genuine partial
+ * transparency and no fixed template background color is known (see
+ * resolveApprovedFeedJpeg.js). Never guesses: if any sampled corner is
+ * itself non-opaque, or the four corners don't agree within a small
+ * tolerance (e.g. a real gradient/lighting design, not a flat background),
+ * this returns null — the caller must fail closed
+ * (background_fill_ambiguous), never silently default to white or black.
+ * @param {Buffer} pngBuffer
+ * @returns {Promise<{r:number,g:number,b:number}|null>}
+ */
+export async function deriveCornerBackgroundFill(pngBuffer) {
+  const { data, info } = await sharp(pngBuffer).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  const { width, height, channels } = info;
+  const inset = Math.min(CORNER_SAMPLE_INSET, Math.floor(width / 2) - 1, Math.floor(height / 2) - 1);
+  if (inset < 0) return null;
+
+  function pixelAt(x, y) {
+    const idx = (y * width + x) * channels;
+    return { r: data[idx], g: data[idx + 1], b: data[idx + 2], a: data[idx + 3] };
+  }
+
+  const corners = [
+    pixelAt(inset, inset),
+    pixelAt(width - 1 - inset, inset),
+    pixelAt(inset, height - 1 - inset),
+    pixelAt(width - 1 - inset, height - 1 - inset),
+  ];
+
+  if (corners.some((c) => c.a !== 255)) return null;
+
+  const [first, ...rest] = corners;
+  const agrees = rest.every(
+    (c) =>
+      Math.abs(c.r - first.r) <= CORNER_AGREEMENT_TOLERANCE &&
+      Math.abs(c.g - first.g) <= CORNER_AGREEMENT_TOLERANCE &&
+      Math.abs(c.b - first.b) <= CORNER_AGREEMENT_TOLERANCE
+  );
+  if (!agrees) return null;
+
+  const avg = (key) => Math.round(corners.reduce((sum, c) => sum + c[key], 0) / corners.length);
+  return { r: avg("r"), g: avg("g"), b: avg("b") };
+}
+
 const JPEG_MAGIC_BYTES = Buffer.from([0xff, 0xd8, 0xff]);
 
 /**

@@ -5,7 +5,7 @@
 // node scripts/social-worker/lib/jpegDerivative.test.mjs
 import assert from "node:assert/strict";
 import sharp from "sharp";
-import { deriveJpegStorageKey, inspectAlpha, convertToJpegDerivative, validateJpegDerivative } from "./jpegDerivative.js";
+import { deriveJpegStorageKey, inspectAlpha, convertToJpegDerivative, validateJpegDerivative, deriveCornerBackgroundFill } from "./jpegDerivative.js";
 
 const cases = [];
 function test(name, fn) {
@@ -171,6 +171,141 @@ test("14. validateJpegDerivative rejects a derivative that is visually nothing l
   const result = await validateJpegDerivative(unrelatedJpeg, sourcePng);
   assert.equal(result.passed, false);
   assert.ok(result.issues.some((i) => i.startsWith("visual_equivalence_out_of_range")));
+});
+
+// ---------------------------------------------------------------------------
+// deriveCornerBackgroundFill — deterministic, non-guessing background
+// derivation for a PNG with genuine transparency but no known fixed
+// template background color.
+// ---------------------------------------------------------------------------
+
+// Compositing a semi-transparent layer over an already-opaque base always
+// yields an OPAQUE result (alpha blends toward 255) — sharp's ".composite()"
+// itself performs the flatten. Genuine sub-255 alpha surviving in the final
+// PNG must be written directly into the raw buffer instead.
+const PATCH_ALPHA = 153; // ~60% opaque — clearly non-opaque, not a rounding-noise edge case
+const PATCH_RGB = { r: 0, g: 0, b: 0 };
+
+function buildPngWithAlpha({ width = WIDTH, height = HEIGHT, colorAt, patch } = {}) {
+  const channels = 4;
+  const raw = Buffer.alloc(width * height * channels);
+  for (let y = 0; y < height; y++) {
+    for (let x = 0; x < width; x++) {
+      const idx = (y * width + x) * channels;
+      const { r, g, b } = colorAt(x, y);
+      raw[idx] = r; raw[idx + 1] = g; raw[idx + 2] = b; raw[idx + 3] = 255;
+    }
+  }
+  if (patch) {
+    for (let y = patch.y0; y < patch.y1; y++) {
+      for (let x = patch.x0; x < patch.x1; x++) {
+        const idx = (y * width + x) * channels;
+        raw[idx] = patch.r; raw[idx + 1] = patch.g; raw[idx + 2] = patch.b; raw[idx + 3] = patch.alpha;
+      }
+    }
+  }
+  return sharp(raw, { raw: { width, height, channels } }).png().toBuffer();
+}
+
+const CENTER_PATCH = { x0: Math.round(WIDTH / 2 - 30), y0: Math.round(HEIGHT / 2 - 30), x1: Math.round(WIDTH / 2 + 30), y1: Math.round(HEIGHT / 2 + 30), alpha: PATCH_ALPHA, ...PATCH_RGB };
+
+/** A flat-background image with a small, genuinely semi-transparent patch near the CENTER (well away from all four corners). */
+function flatBackgroundWithCenterTransparency(bg = { r: 10, g: 10, b: 10 }) {
+  return buildPngWithAlpha({ colorAt: () => bg, patch: CENTER_PATCH });
+}
+
+/** A genuinely two-tone image (left half one flat color, right half another) — corners on the same side agree, but left vs right disagree, simulating a real gradient/lighting design like the actual Drake Maye artwork. */
+function twoToneWithCenterTransparency() {
+  return buildPngWithAlpha({ colorAt: (x) => (x < WIDTH / 2 ? { r: 1, g: 1, b: 1 } : { r: 90, g: 100, b: 150 }), patch: CENTER_PATCH });
+}
+
+test("15. deriveCornerBackgroundFill returns the agreed corner color for a flat-background image", async () => {
+  const png = await flatBackgroundWithCenterTransparency({ r: 12, g: 34, b: 56 });
+  const fill = await deriveCornerBackgroundFill(png);
+  assert.ok(fill);
+  assert.ok(Math.abs(fill.r - 12) <= 2 && Math.abs(fill.g - 34) <= 2 && Math.abs(fill.b - 56) <= 2);
+});
+
+test("16. deriveCornerBackgroundFill is deterministic — the exact same input always produces the exact same output", async () => {
+  const png = await flatBackgroundWithCenterTransparency({ r: 200, g: 20, b: 20 });
+  const first = await deriveCornerBackgroundFill(png);
+  const second = await deriveCornerBackgroundFill(png);
+  assert.deepEqual(first, second);
+});
+
+test("17. deriveCornerBackgroundFill returns null (never guesses) when the four corners genuinely disagree — a real gradient/two-tone design, matching the actual Drake Maye artwork's own left-black/right-blue corners", async () => {
+  const png = await twoToneWithCenterTransparency();
+  const fill = await deriveCornerBackgroundFill(png);
+  assert.equal(fill, null);
+});
+
+test("deriveCornerBackgroundFill returns null when a sampled corner is itself non-opaque (e.g. real transparency reaching into the corner region)", async () => {
+  // Compositing a semi-transparent layer over an opaque base always yields
+  // an opaque RESULT (alpha blends toward 1.0) — real sub-255 alpha at a
+  // specific pixel must be constructed directly in the raw buffer instead.
+  const width = WIDTH, height = HEIGHT, channels = 4;
+  const raw = Buffer.alloc(width * height * channels, 0);
+  for (let y = 0; y < height; y++) {
+    for (let x = 0; x < width; x++) {
+      const idx = (y * width + x) * channels;
+      raw[idx] = 5; raw[idx + 1] = 5; raw[idx + 2] = 5;
+      raw[idx + 3] = 255;
+    }
+  }
+  // Make the sampled top-left corner pixel (inset=8, i.e. (8,8)) non-opaque.
+  const cornerIdx = (8 * width + 8) * channels;
+  raw[cornerIdx + 3] = 180;
+  const png = await sharp(raw, { raw: { width, height, channels } }).png().toBuffer();
+  const fill = await deriveCornerBackgroundFill(png);
+  assert.equal(fill, null);
+});
+
+// ---------------------------------------------------------------------------
+// End-to-end: a source with minor real alpha AND an unambiguous background
+// converts successfully once resolveApprovedFeedJpeg-style derivation
+// supplies a fill — exercised here directly against convertToJpegDerivative
+// to confirm the primitive itself behaves correctly once given the derived
+// policy (the full wiring is tested in resolveApprovedFeedJpeg.test.mjs).
+// ---------------------------------------------------------------------------
+
+test("18. minor real alpha + an unambiguous derived background converts successfully, stays 1024x1280, and the flattened patch matches the mathematically-correct alpha blend against the TRUE background (no visible halo from a wrong fill)", async () => {
+  const bg = { r: 12, g: 34, b: 56 };
+  const png = await flatBackgroundWithCenterTransparency(bg);
+  const fill = await deriveCornerBackgroundFill(png);
+  assert.ok(fill);
+  const result = await convertToJpegDerivative(png, { backgroundFillPolicy: fill });
+  assert.equal(result.ok, true);
+  const meta = await sharp(result.buffer).metadata();
+  assert.equal(meta.width, WIDTH);
+  assert.equal(meta.height, HEIGHT);
+  const validation = await validateJpegDerivative(result.buffer, png);
+  assert.equal(validation.passed, true);
+
+  // The correct flatten of a semi-transparent patch is a BLEND toward the
+  // background, not the background itself: result = patch*a + bg*(1-a).
+  const a = PATCH_ALPHA / 255;
+  const expected = { r: PATCH_RGB.r * a + bg.r * (1 - a), g: PATCH_RGB.g * a + bg.g * (1 - a), b: PATCH_RGB.b * a + bg.b * (1 - a) };
+  const patchPixel = await sharp(result.buffer)
+    .extract({ left: Math.round(WIDTH / 2), top: Math.round(HEIGHT / 2), width: 1, height: 1 })
+    .raw()
+    .toBuffer();
+  assert.ok(
+    Math.abs(patchPixel[0] - expected.r) < 15 && Math.abs(patchPixel[1] - expected.g) < 15 && Math.abs(patchPixel[2] - expected.b) < 15,
+    `flattened patch pixel [${patchPixel[0]},${patchPixel[1]},${patchPixel[2]}] must match the correct blend against the true background [${expected.r.toFixed(1)},${expected.g.toFixed(1)},${expected.b.toFixed(1)}], not a wrong-color halo`
+  );
+});
+
+test("18b. flattening the SAME transparent patch against a WRONG background color produces a visibly different result — proving the derived fill actually matters, not merely 'any fill produces something similar'", async () => {
+  const bg = { r: 12, g: 34, b: 56 };
+  const wrongBg = { r: 255, g: 255, b: 255 };
+  const png = await flatBackgroundWithCenterTransparency(bg);
+  const correct = await convertToJpegDerivative(png, { backgroundFillPolicy: bg });
+  const wrong = await convertToJpegDerivative(png, { backgroundFillPolicy: wrongBg });
+  const pixelOf = async (buf) => sharp(buf).extract({ left: Math.round(WIDTH / 2), top: Math.round(HEIGHT / 2), width: 1, height: 1 }).raw().toBuffer();
+  const correctPixel = await pixelOf(correct.buffer);
+  const wrongPixel = await pixelOf(wrong.buffer);
+  const diff = Math.abs(correctPixel[0] - wrongPixel[0]) + Math.abs(correctPixel[1] - wrongPixel[1]) + Math.abs(correctPixel[2] - wrongPixel[2]);
+  assert.ok(diff > 60, "a materially wrong background must produce a visibly different flattened pixel, confirming fill choice is not cosmetic");
 });
 
 // ---------------------------------------------------------------------------

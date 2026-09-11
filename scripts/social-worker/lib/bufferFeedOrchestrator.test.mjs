@@ -208,6 +208,18 @@ test("4. an already-posted story cannot proceed — blocked before any dependenc
 // 5. real claim adapter invoked before prep/publish; claim conflict stops execution before Buffer
 // ---------------------------------------------------------------------------
 
+test("a resolveJpeg failure (e.g. background_fill_ambiguous, the real failure mode hit by the actual Drake Maye artwork's genuine gradient background) stops execution before claimPosting or the Worker are ever called — matching the real live-attempt outcome that occurred with no claim, no dispatch, and no Buffer call", async () => {
+  const { deps, log } = mockDeps({
+    resolveJpeg: async () => { log.push("resolveJpeg"); return { ok: false, error: "background_fill_ambiguous" }; },
+  });
+  const result = await executeBufferFeedPublish(deps);
+  assert.equal(result.ok, false);
+  assert.equal(result.step, "jpeg");
+  assert.equal(result.error, "background_fill_ambiguous");
+  assert.ok(!log.includes("claimPosting"), "no posting claim may ever be acquired when JPEG resolution fails");
+  assert.ok(!log.includes("publishViaWorker"), "Buffer must never be called when JPEG resolution fails");
+});
+
 test("5. the real claimPosting adapter is invoked, and invoked BEFORE the Worker publish call", async () => {
   const { deps, log } = mockDeps();
   await executeBufferFeedPublish(deps);

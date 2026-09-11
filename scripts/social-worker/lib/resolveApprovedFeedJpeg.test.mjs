@@ -152,6 +152,71 @@ test("8. an upload failure is surfaced as ok:false and stops the publish path he
 });
 
 // ---------------------------------------------------------------------------
+// Transparent approved artwork handling — no template has a single fixed
+// background (Codex generates each image freshly), so when real alpha
+// exists and no explicit backgroundFillPolicy is supplied, this resolver
+// must derive one deterministically from the PNG's own corners, or fail
+// closed as background_fill_ambiguous. Opaque PNG behavior (all tests
+// above this section) remains completely unchanged.
+// ---------------------------------------------------------------------------
+
+// Compositing a semi-transparent layer over an already-opaque base always
+// yields an OPAQUE result (sharp's .composite() itself flattens the alpha)
+// — genuine sub-255 alpha surviving in the final PNG must be written
+// directly into the raw buffer instead.
+const PATCH_ALPHA = 153; // ~60% opaque
+const CENTER_PATCH = { x0: Math.round(WIDTH / 2 - 30), y0: Math.round(HEIGHT / 2 - 30), x1: Math.round(WIDTH / 2 + 30), y1: Math.round(HEIGHT / 2 + 30), alpha: PATCH_ALPHA, r: 0, g: 0, b: 0 };
+
+function buildPngWithAlpha({ colorAt, patch }) {
+  const channels = 4;
+  const raw = Buffer.alloc(WIDTH * HEIGHT * channels);
+  for (let y = 0; y < HEIGHT; y++) {
+    for (let x = 0; x < WIDTH; x++) {
+      const idx = (y * WIDTH + x) * channels;
+      const { r, g, b } = colorAt(x, y);
+      raw[idx] = r; raw[idx + 1] = g; raw[idx + 2] = b; raw[idx + 3] = 255;
+    }
+  }
+  for (let y = patch.y0; y < patch.y1; y++) {
+    for (let x = patch.x0; x < patch.x1; x++) {
+      const idx = (y * WIDTH + x) * channels;
+      raw[idx] = patch.r; raw[idx + 1] = patch.g; raw[idx + 2] = patch.b; raw[idx + 3] = patch.alpha;
+    }
+  }
+  return sharp(raw, { raw: { width: WIDTH, height: HEIGHT, channels } }).png().toBuffer();
+}
+
+function flatBackgroundWithCenterTransparency(bg = { r: 12, g: 34, b: 56 }) {
+  return buildPngWithAlpha({ colorAt: () => bg, patch: CENTER_PATCH });
+}
+
+function twoToneWithCenterTransparency() {
+  return buildPngWithAlpha({ colorAt: (x) => (x < WIDTH / 2 ? { r: 1, g: 1, b: 1 } : { r: 90, g: 100, b: 150 }), patch: CENTER_PATCH });
+}
+
+test("2b. minor real alpha with an unambiguous (corner-agreeing) background is derived automatically and converts successfully, with no explicit backgroundFillPolicy from the caller", async () => {
+  const pngBuffer = await flatBackgroundWithCenterTransparency({ r: 12, g: 34, b: 56 });
+  const result = await resolveApprovedFeedJpeg(approvedRecord(), { fetchImpl: fetchRouter({ pngBuffer }), uploadJpeg: okUploadJpeg() });
+  assert.equal(result.ok, true);
+});
+
+test("4b. a genuinely ambiguous background (real gradient/two-tone design, matching the actual Drake Maye artwork's disagreeing corners) fails closed with background_fill_ambiguous, never a guessed color, and never reaches upload", async () => {
+  const pngBuffer = await twoToneWithCenterTransparency();
+  let uploadCalled = false;
+  const uploadJpeg = async (args) => { uploadCalled = true; return okUploadJpeg()(args); };
+  const result = await resolveApprovedFeedJpeg(approvedRecord(), { fetchImpl: fetchRouter({ pngBuffer }), uploadJpeg });
+  assert.equal(result.ok, false);
+  assert.equal(result.error, "background_fill_ambiguous");
+  assert.equal(uploadCalled, false);
+});
+
+test("an explicit caller-supplied backgroundFillPolicy always overrides automatic derivation, even for an otherwise-ambiguous image", async () => {
+  const pngBuffer = await twoToneWithCenterTransparency();
+  const result = await resolveApprovedFeedJpeg(approvedRecord(), { fetchImpl: fetchRouter({ pngBuffer }), uploadJpeg: okUploadJpeg(), backgroundFillPolicy: { r: 1, g: 1, b: 1 } });
+  assert.equal(result.ok, true);
+});
+
+// ---------------------------------------------------------------------------
 // 15-17. Worker collision-safety hardening — the Worker is authoritative,
 // this resolver's own reuse check is only a client-side optimization that
 // can always race against a concurrent uploader.
