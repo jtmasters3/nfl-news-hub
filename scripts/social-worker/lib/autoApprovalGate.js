@@ -9,14 +9,20 @@
 //     Reject buttons, itself a mirror of the Worker's own authoritative
 //     storyReadyForApproval() gate. This is the single biggest piece of
 //     this gate, deliberately reused rather than re-implemented.
-//   - sourceTier() (editorialSourceConfidence.js) — the only existing
-//     source-categorization concept in this codebase. There is no
-//     dedicated "allowed sources" allowlist anywhere in the repo (audited
-//     2026-09-11); this gate treats "known" (tier A or B) as the closest
-//     existing stand-in for "currently allowed NFL news sources," and
-//     rejects "unknown" outlets rather than guessing. If a true allowlist
-//     is ever introduced, swap the check below for it — do not silently
-//     loosen this in the meantime.
+//   - isAutoApprovalAllowedSource() (autoApprovalSourceAllowlist.js) — an
+//     EXPLICIT, audited, exact-match allowlist of sources actually
+//     intended for autonomous approval (2026-09-11: replaced an earlier
+//     version of this gate that leaned on editorialSourceConfidence.js's
+//     scoring-tier map as a stand-in for a real allowlist — that map is a
+//     confidence score, not a gate, and included aliases never seen in
+//     real production data. See that file's own header for the exact
+//     audit).
+//   - evaluateContentFidelity() (contentFidelityGate.js) — added
+//     2026-09-11 to close a real, audited gap: nothing previously verified
+//     that the generated caption's own CONTENT (named players/teams,
+//     injury/transaction claims, quotes, numbers) was consistent with the
+//     canonical, already-extracted source-article data. See that file's
+//     own header for exactly what it checks and its honest limits.
 //   - channelKeyFor() (postingEvents.js) — the same destination-to-channel
 //     mapping the posting/publishing path already uses, reused here only
 //     to point at the right publishing.instagram.<channel> sub-object for
@@ -28,7 +34,8 @@
 // through the existing production decideApproval()/approval-decide state
 // machine, never by writing approval.status directly.
 import { assessApprovalReadiness } from "./approvalReadiness.js";
-import { sourceTier, UNKNOWN_SOURCE_TIER } from "../../lib/editorialSourceConfidence.js";
+import { isAutoApprovalAllowedSource } from "../../lib/autoApprovalSourceAllowlist.js";
+import { evaluateContentFidelity } from "./contentFidelityGate.js";
 import { channelKeyFor } from "../../lib/postingEvents.js";
 
 function isNonEmptyString(v) {
@@ -90,13 +97,9 @@ export function evaluateAutoApprovalGate(record) {
   if (!isNonEmptyString(source.base_image_url)) issues.push("base_image_url_missing");
   if (!isHttpsUrl(source.source_url)) issues.push("source_url_invalid");
 
-  // No existing allowlist of trusted sources exists anywhere in this
-  // codebase (audited 2026-09-11) — sourceTier() is the closest existing
-  // categorization. An "unknown" outlet is rejected here, never guessed as
-  // safe; see this file's header for why this specific substitution was
-  // made rather than inventing a new list.
-  const tier = sourceTier(source.source_name);
-  if (tier === UNKNOWN_SOURCE_TIER) {
+  // Explicit, audited, exact-match allowlist — never the scoring-tier map.
+  // See autoApprovalSourceAllowlist.js's own header for the exact audit.
+  if (!isAutoApprovalAllowedSource(source.source_name)) {
     issues.push(`unrecognized_source:${source.source_name ?? "none"}`);
   }
 
@@ -113,6 +116,19 @@ export function evaluateAutoApprovalGate(record) {
   const readiness = assessApprovalReadiness(record);
   if (!readiness.ready) {
     for (const issue of readiness.issues) issues.push(`readiness:${issue}`);
+  }
+
+  // Content-fidelity: proves the generated caption's own CONTENT (named
+  // players/teams, injury/transaction claims, quotes, numbers) is
+  // consistent with the canonical, already-extracted source-article data —
+  // see contentFidelityGate.js's own header for exactly what this checks
+  // and its honest, disclosed limits (it is a deterministic heuristic, not
+  // true NLP fact-checking, and never claims to verify source-image
+  // subject relevance, which cannot be deterministically proven from data
+  // this codebase persists today).
+  const fidelity = evaluateContentFidelity(record);
+  if (!fidelity.passed) {
+    for (const issue of fidelity.issues) issues.push(`fidelity:${issue}`);
   }
 
   // Defense-in-depth: a record legitimately at awaiting_approval has never

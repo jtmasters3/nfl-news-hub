@@ -171,14 +171,20 @@ export async function failCaption(storyId, claimId, message, lastCandidateText) 
 // cloudflare-worker/src/handlers/approvalDecide.js for the full
 // first-decision-wins semantics.
 
-export async function decideApproval(storyId, decision, { requestId, rejectionReason, actor = defaultApprovalActor() } = {}) {
-  return postJson("/social/approval/decide", {
+export async function decideApproval(storyId, decision, { requestId, rejectionReason, actor = defaultApprovalActor(), decisionSource } = {}) {
+  const body = {
     story_id: storyId,
     decision,
     request_id: requestId,
     rejection_reason: rejectionReason || null,
     actor,
-  });
+  };
+  // Optional and additive — omitting it (every existing caller) preserves
+  // the Worker's own existing default ("local-approval-console") exactly.
+  // Only a caller that explicitly wants a distinguishable audit trail
+  // (e.g. the autonomous preparation runner) ever sets this.
+  if (decisionSource) body.decision_source = decisionSource;
+  return postJson("/social/approval/decide", body);
 }
 
 export async function fetchArtworkQueue() {

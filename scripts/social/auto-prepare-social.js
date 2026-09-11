@@ -56,18 +56,14 @@ import { fetchArtworkQueue, decideApproval } from "../social-worker/lib/apiClien
 import { waitForApprovalCommit } from "../social-worker/lib/waitForApprovalCommit.js";
 
 const AUTO_APPROVE_ACTOR = "aggregate-auto-approver";
-// NOTE: decision_source is NOT caller-controllable through the existing
-// production approval-decide endpoint today — cloudflare-worker's
-// approvalDecide.js hardcodes it to "local-approval-console" for every
-// caller (audited 2026-09-11), so an automated decision's record.
-// approval.decision_source will read the same string a human console
-// decision's does. `actor` (fully caller-controlled end-to-end, set to
-// AUTO_APPROVE_ACTOR below) is what actually distinguishes an automated
-// decision in the audit trail today. Extending decision_source to be
-// caller-provided would require a small, separate, dedicated Worker change
-// — deliberately not made here, consistent with every other Worker change
-// in this project requiring its own audit/test/deploy authorization cycle,
-// never bundled into an unrelated task.
+const AUTO_APPROVE_DECISION_SOURCE = "autonomous-production-gate";
+// 2026-09-11: cloudflare-worker's approvalDecide.js now accepts an
+// optional, validated decision_source (restricted server-side to a small
+// known set — see that file's own header) rather than hardcoding
+// "local-approval-console" for every caller. Both actor AND decision_source
+// are therefore fully distinguishable in the durable audit trail for an
+// automated decision now; the existing human console never sends
+// decision_source at all, so its own decisions are completely unaffected.
 
 function isNonEmptyString(v) {
   return typeof v === "string" && v.trim().length > 0;
@@ -242,7 +238,7 @@ export async function main({
 
   console.log(`story_id=${storyId} passes every automatic-approval requirement. Recording approval via the existing production approval-decision mechanism (actor=${AUTO_APPROVE_ACTOR}).`);
   const requestId = `auto-${storyId}-${Date.now()}`;
-  const decideResult = await decideApprovalImpl(storyId, "approved", { requestId, actor: AUTO_APPROVE_ACTOR });
+  const decideResult = await decideApprovalImpl(storyId, "approved", { requestId, actor: AUTO_APPROVE_ACTOR, decisionSource: AUTO_APPROVE_DECISION_SOURCE });
   console.log(`decideApproval result: ${JSON.stringify(decideResult)}`);
 
   if (decideResult.result === "pending") {

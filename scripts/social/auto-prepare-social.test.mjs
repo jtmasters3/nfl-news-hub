@@ -68,11 +68,20 @@ function awaitingApprovalRecord(overrides = {}) {
     story_id: "s1",
     status: "awaiting_approval",
     selection: { destination: "feed", slot_id: "feed:test", selected_at: "2026-01-01T00:00:00Z" },
-    source_story: { post_headline: "Some Player Is Out", base_image_url: "https://example.test/base.jpg", source_name: "ESPN", source_url: "https://espn.com/story/some-player-is-out" },
+    source_story: {
+      post_headline: "JORDAN LOVE OUT WITH SHOULDER INJURY",
+      description: "Jordan Love was hurt during practice with the Green Bay Packers.",
+      base_image_url: "https://example.test/base.jpg",
+      source_name: "ESPN",
+      source_url: "https://espn.com/story/jordan-love-out",
+      category: "injury",
+      teams: ["Green Bay Packers"],
+      players: ["Jordan Love"],
+    },
     artwork: { status: "created", image_url: "https://example.test/x.png", width: 1024, height: 1280 },
     story_artwork: { status: "not_created", image_url: null },
     validation: { status: "passed", passed: true, issues: [] },
-    caption: { status: "ready", text: "Some Player Is Out.\n\nSource: ESPN" },
+    caption: { status: "ready", text: "Jordan Love is out with a shoulder injury suffered during Green Bay Packers practice.\n\nSource: ESPN" },
     approval: { status: "pending" },
     publishing: { status: "not_posted", instagram: { feed: { status: "not_posted" }, story: { status: "not_posted" } } },
     ...overrides,
@@ -270,6 +279,7 @@ test("21. a Story record's readiness is evaluated against record.story_artwork, 
     artwork: { status: "failed" }, // irrelevant for a Story-destination record
     story_artwork: { status: "created", image_url: "https://example.test/x.png", width: 941, height: 1672, mime_type: "image/png", size_bytes: 500000 },
     source_story: { ...awaitingApprovalRecord().source_story, source_name: "FOX Sports" },
+    caption: { status: "ready", text: "Jordan Love is out with a shoulder injury suffered during Green Bay Packers practice.\n\nSource: FOX Sports" },
   });
   let decideCalled = false;
   const result = await main({
@@ -317,6 +327,7 @@ test("23. a valid Feed record gets approved via decideApprovalImpl with the dist
   assert.equal(decideArgs.storyId, "s1");
   assert.equal(decideArgs.decision, "approved");
   assert.equal(decideArgs.opts.actor, "aggregate-auto-approver");
+  assert.equal(decideArgs.opts.decisionSource, "autonomous-production-gate");
 });
 
 test("24. a valid Story record gets approved the same way", async () => {
@@ -325,6 +336,7 @@ test("24. a valid Story record gets approved the same way", async () => {
     artwork: { status: "not_created", image_url: null },
     story_artwork: { status: "created", image_url: "https://example.test/x.png", width: 941, height: 1672, mime_type: "image/png", size_bytes: 500000 },
     source_story: { ...awaitingApprovalRecord().source_story, source_name: "FOX Sports" },
+    caption: { status: "ready", text: "Jordan Love is out with a shoulder injury suffered during Green Bay Packers practice.\n\nSource: FOX Sports" },
   });
   let decideArgs;
   const result = await main({
@@ -335,6 +347,7 @@ test("24. a valid Story record gets approved the same way", async () => {
     decideApprovalImpl: async (storyId, decision, opts) => { decideArgs = { storyId, decision, opts }; return { result: "approved" }; },
   });
   assert.equal(decideArgs.opts.actor, "aggregate-auto-approver");
+  assert.equal(decideArgs.opts.decisionSource, "autonomous-production-gate");
   assert.equal(result.autoApproved, true);
 });
 

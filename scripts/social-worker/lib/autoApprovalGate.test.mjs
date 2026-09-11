@@ -17,15 +17,19 @@ function baseFeedRecord(overrides = {}) {
     merged_into: null,
     selection: { destination: "feed", slot_id: "feed:test", selected_at: "2026-01-01T00:00:00Z" },
     source_story: {
-      post_headline: "Some Player Is Out",
+      post_headline: "JORDAN LOVE OUT WITH SHOULDER INJURY",
+      description: "Jordan Love was hurt during practice with the Green Bay Packers.",
       base_image_url: "https://example.test/base.jpg",
       source_name: "ESPN",
-      source_url: "https://espn.com/story/some-player-is-out",
+      source_url: "https://espn.com/story/jordan-love-out",
+      category: "injury",
+      teams: ["Green Bay Packers"],
+      players: ["Jordan Love"],
     },
     artwork: { status: "created", image_url: "https://example.test/x.png", width: 1024, height: 1280 },
     story_artwork: { status: "not_created", image_url: null },
     validation: { status: "passed", passed: true, issues: [] },
-    caption: { status: "ready", text: "Some Player Is Out.\n\nSource: ESPN" },
+    caption: { status: "ready", text: "Jordan Love is out with a shoulder injury suffered during Green Bay Packers practice.\n\nSource: ESPN" },
     approval: { status: "pending" },
     publishing: { status: "not_posted", instagram: { feed: { status: "not_posted" }, story: { status: "not_posted" } } },
     ...overrides,
@@ -38,6 +42,7 @@ function baseStoryRecord(overrides = {}) {
     artwork: { status: "not_created", image_url: null },
     story_artwork: { status: "created", image_url: "https://example.test/x.png", width: 941, height: 1672, mime_type: "image/png", size_bytes: 500000 },
     source_story: { ...baseFeedRecord().source_story, source_name: "FOX Sports" },
+    caption: { status: "ready", text: "Jordan Love is out with a shoulder injury suffered during Green Bay Packers practice.\n\nSource: FOX Sports" },
     ...overrides,
   });
 }
@@ -56,8 +61,13 @@ test("2. a fully valid Story record IS eligible", () => {
   assert.equal(result.eligible, true, JSON.stringify(result.issues));
 });
 
-test("3. a known tier-A source (e.g. NFL.com) is eligible", () => {
-  const result = evaluateAutoApprovalGate(baseFeedRecord({ source_story: { ...baseFeedRecord().source_story, source_name: "NFL.com" } }));
+test("3. a source on the explicit auto-approval allowlist (e.g. NFL.com) is eligible", () => {
+  const result = evaluateAutoApprovalGate(
+    baseFeedRecord({
+      source_story: { ...baseFeedRecord().source_story, source_name: "NFL.com" },
+      caption: { status: "ready", text: "Jordan Love is out with a shoulder injury suffered during Green Bay Packers practice.\n\nSource: NFL.com" },
+    })
+  );
   assert.equal(result.eligible, true, JSON.stringify(result.issues));
 });
 
@@ -147,7 +157,7 @@ test("16. a non-HTTPS source URL is rejected", () => {
   assert.ok(result.issues.includes("source_url_invalid"));
 });
 
-test("17. an unrecognized/unknown-tier source is rejected — no existing allowlist exists, so 'unknown' tier is treated as not currently allowed", () => {
+test("17. a source not on the explicit auto-approval allowlist is rejected", () => {
   const result = evaluateAutoApprovalGate(baseFeedRecord({ source_story: { ...baseFeedRecord().source_story, source_name: "Random Blogspot Site" } }));
   assert.equal(result.eligible, false);
   assert.ok(result.issues.some((i) => i.startsWith("unrecognized_source")));
