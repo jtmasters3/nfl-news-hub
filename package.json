@@ -64,6 +64,8 @@
     "test:caption-assembly": "node scripts/social-worker/lib/captionAssembly.test.mjs",
     "test:buffer-feed-orchestrator": "node scripts/social-worker/lib/bufferFeedOrchestrator.test.mjs",
     "test:buffer-posting-bridge": "node scripts/social-worker/lib/bufferPostingBridge.test.mjs",
+    "test:buffer-completion-reconciler": "node scripts/social-worker/lib/bufferCompletionReconciler.test.mjs",
+    "test:reconcile-buffer-completions": "node scripts/social/reconcile-buffer-completions.test.mjs",
     "test:wait-durable-commit": "node scripts/social-worker/lib/waitForDurableCommit.test.mjs",
     "test:resolve-approved-feed-jpeg": "node scripts/social-worker/lib/resolveApprovedFeedJpeg.test.mjs",
     "test:publish-buffer-feed-launcher": "node scripts/social/publish-buffer-feed.test.mjs",

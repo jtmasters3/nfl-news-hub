@@ -1,0 +1,53 @@
+name: Reconcile Buffer completions
+
+# Automatic completion reconciliation ONLY — never publishing, never
+# approval, never a new social post. This workflow's job script
+# (scripts/social/reconcile-buffer-completions.js) only:
+#   1. reads current authoritative social state (SHA-pinned, never stale),
+#   2. calls the EXISTING read-only Worker endpoint /social/posting/reconcile
+#      for each record already at feed.status=buffer_post_created,
+#   3. for a genuine terminal Buffer outcome (sent, or a definitive error),
+#      persists the matching EXISTING result event via the EXISTING
+#      /social/posting/result endpoint.
+# It never calls Buffer's createPost mutation, never calls Meta, and never
+# commits/pushes anything itself — any resulting state change lands via the
+# repository_dispatch that /social/posting/result fires, processed by the
+# ALREADY-EXISTING social-artwork-event.yml workflow, exactly like every
+# other posting event in this system.
+#
+# Native GitHub `schedule:` cron firing has been empirically unreliable in
+# this exact repo for the news-refresh workflow's tight 30-minute freshness
+# requirement (see refresh.yml's own comment) — but reconciliation has no
+# comparable hard deadline: a Buffer post that reaches "posted" a few extra
+# minutes late because one scheduled firing was skipped is a self-healing,
+# low-stakes delay (the very next successful firing catches it), unlike
+# stale news content. Native schedule is therefore an acceptable, simpler
+# choice here, avoiding a second external cron-job.org dependency.
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: "*/10 * * * *"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: reconcile-buffer-completions
+  cancel-in-progress: false
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - run: npm install
+
+      - name: Reconcile existing Buffer posts stuck at buffer_post_created
+        env:
+          AGGREGATE_ARTWORK_API_TOKEN: ${{ secrets.AGGREGATE_ARTWORK_API_TOKEN }}
+        run: node scripts/social/reconcile-buffer-completions.js
