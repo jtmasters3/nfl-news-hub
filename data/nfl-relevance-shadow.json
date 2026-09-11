@@ -5560,6 +5560,45 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/ativacoes-nfl-rio-game",
+      "source_name": "NFL.com",
+      "headline": "Tudo sobre as ativações do NFL Rio Game",
+      "published_at": "2026-09-11T07:08:44.000Z",
+      "observed_at": "2026-09-11T19:20:22.662Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rome-odunze-xavier-woods-questionable-for-bears-vs-panthers",
+      "source_name": "Pro Football Talk",
+      "headline": "Rome Odunze, Xavier Woods questionable for Bears vs. Panthers",
+      "published_at": "2026-09-11T19:12:32.000Z",
+      "observed_at": "2026-09-11T19:20:22.662Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR",
+        "CHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
