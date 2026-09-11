@@ -647,6 +647,127 @@ test("48. the workflow references only the existing AGGREGATE_ARTWORK_API_TOKEN 
 });
 
 // ---------------------------------------------------------------------------
+// 2026-09-11 durability hardening — bounded post-preparation poll
+// ---------------------------------------------------------------------------
+// A live run just proved a single immediate fetchState() read after
+// process-one.js exits can observe the record moments BEFORE the sibling
+// caption-completed event durably lands (see apply-artwork-event.js's own
+// 2026-09-11 header for the exact race). main() now polls via
+// waitForDurableCommitImpl for a durable resting state (awaiting_approval
+// or failed) instead of trusting a single read. These tests mock
+// waitForDurableCommitImpl directly, the same way tests 34/35 already mock
+// waitForApprovalCommitImpl — the generic poll mechanics themselves
+// (timeout, eventual success, read_error) are already proven in
+// waitForDurableCommit.js's own dedicated suite; these tests only prove
+// auto-prepare-social.js wires it up correctly.
+
+test("49. the post-preparation durable-poll predicate recognizes BOTH awaiting_approval and failed as committed end states, and rejects an interim status", async () => {
+  let capturedPredicate;
+  await main({
+    fetchQueue: async () => [queueEntry("s1")],
+    fetchState: statefulFetchState(awaitingApprovalRecord()),
+    live: true,
+    runPreparationImpl: async () => ({ exitCode: 0 }),
+    decideApprovalImpl: async () => ({ result: "approved" }),
+    waitForDurableCommitImpl: async (fetchState, storyId, predicate) => {
+      capturedPredicate = predicate;
+      return { committed: true, record: awaitingApprovalRecord() };
+    },
+  });
+  assert.equal(capturedPredicate({ status: "awaiting_approval" }), true);
+  assert.equal(capturedPredicate({ status: "failed" }), true);
+  assert.equal(capturedPredicate({ status: "artwork_ready" }), false, "an interim, not-yet-resolved status must never be treated as a durable commit");
+});
+
+test("50. a post-preparation durable-poll TIMEOUT fails closed: no approval attempted, no regeneration, preparation reported as not ok", async () => {
+  let decideCalled = false;
+  let prepCallCount = 0;
+  const result = await main({
+    fetchQueue: async () => [queueEntry("s1")],
+    fetchState: statefulFetchState(awaitingApprovalRecord()),
+    live: true,
+    runPreparationImpl: async () => { prepCallCount++; return { exitCode: 0 }; },
+    decideApprovalImpl: async () => { decideCalled = true; return { result: "approved" }; },
+    waitForDurableCommitImpl: async () => ({ committed: false, status: "timeout" }),
+  });
+  assert.equal(result.ok, false);
+  assert.equal(result.step, "post_prepare_durable_poll");
+  assert.equal(decideCalled, false, "a poll timeout must never be treated as success — no approval may be attempted");
+  assert.equal(prepCallCount, 1, "a poll timeout must never trigger re-running preparation — no caption or artwork regeneration");
+});
+
+test("51. a post-preparation durable-poll READ ERROR (not a plain timeout) also fails closed the same way", async () => {
+  let decideCalled = false;
+  const result = await main({
+    fetchQueue: async () => [queueEntry("s1")],
+    fetchState: statefulFetchState(awaitingApprovalRecord()),
+    live: true,
+    runPreparationImpl: async () => ({ exitCode: 0 }),
+    decideApprovalImpl: async () => { decideCalled = true; return { result: "approved" }; },
+    waitForDurableCommitImpl: async () => ({ committed: false, status: "read_error", error: "GitHub API rate limited" }),
+  });
+  assert.equal(result.ok, false);
+  assert.equal(result.step, "post_prepare_durable_poll");
+  assert.equal(decideCalled, false);
+});
+
+test("52. a durable poll that EVENTUALLY observes awaiting_approval (after simulated waiting) proceeds to auto-approval exactly as an immediate success would", async () => {
+  let waitingCalls = 0;
+  let decideCalled = false;
+  const result = await main({
+    fetchQueue: async () => [queueEntry("s1")],
+    fetchState: statefulFetchState(awaitingApprovalRecord()),
+    live: true,
+    runPreparationImpl: async () => ({ exitCode: 0 }),
+    decideApprovalImpl: async () => { decideCalled = true; return { result: "approved" }; },
+    waitForDurableCommitImpl: async (fetchState, storyId, predicate, { onWaiting } = {}) => {
+      onWaiting?.(1, 20, "pending");
+      onWaiting?.(2, 20, "pending");
+      waitingCalls = 2;
+      return { committed: true, record: awaitingApprovalRecord() };
+    },
+  });
+  assert.equal(waitingCalls, 2, "sanity check: the mock actually simulated waiting before succeeding");
+  assert.equal(decideCalled, true);
+  assert.equal(result.autoApproved, true);
+});
+
+test("53. a durable poll that observes a genuinely committed 'failed' status (not a timeout) is reported as a clean, non-error outcome — never approved, never retried", async () => {
+  let decideCalled = false;
+  let prepCallCount = 0;
+  const result = await main({
+    fetchQueue: async () => [queueEntry("s1")],
+    fetchState: statefulFetchState(awaitingApprovalRecord()),
+    live: true,
+    runPreparationImpl: async () => { prepCallCount++; return { exitCode: 0 }; },
+    decideApprovalImpl: async () => { decideCalled = true; return { result: "approved" }; },
+    waitForDurableCommitImpl: async () => ({ committed: true, record: { status: "failed" } }),
+  });
+  assert.equal(result.ok, true, "a durably-committed failed state is a safe, expected outcome, not a script error");
+  assert.equal(result.prepared, false);
+  assert.equal(result.finalStatus, "failed");
+  assert.equal(decideCalled, false);
+  assert.equal(prepCallCount, 1);
+});
+
+test("54. main() passes the SAME fetchState it uses everywhere else into waitForDurableCommitImpl, never a second/different reader", async () => {
+  const sentinelFetchState = statefulFetchState(awaitingApprovalRecord());
+  let receivedFetchState;
+  await main({
+    fetchQueue: async () => [queueEntry("s1")],
+    fetchState: sentinelFetchState,
+    live: true,
+    runPreparationImpl: async () => ({ exitCode: 0 }),
+    decideApprovalImpl: async () => ({ result: "approved" }),
+    waitForDurableCommitImpl: async (fetchState) => {
+      receivedFetchState = fetchState;
+      return { committed: true, record: awaitingApprovalRecord() };
+    },
+  });
+  assert.equal(receivedFetchState, sentinelFetchState);
+});
+
+// ---------------------------------------------------------------------------
 let failures = 0;
 for (const c of cases) {
   try {

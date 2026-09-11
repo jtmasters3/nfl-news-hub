@@ -59,6 +59,7 @@
     "test:posting-failure-reset": "node scripts/tests/posting-failure-reset-regression.mjs",
     "test:posting-manual-success": "node scripts/tests/posting-manual-success-regression.mjs",
     "test:apply-artwork-event-routing": "node scripts/tests/apply-artwork-event-routing-regression.mjs",
+    "test:apply-artwork-event": "node scripts/social/apply-artwork-event.test.mjs",
     "test:durable-buffer-diagnostics": "node scripts/tests/durable-buffer-diagnostics-regression.mjs",
     "test:jpeg-derivative": "node scripts/social-worker/lib/jpegDerivative.test.mjs",
     "test:caption-assembly": "node scripts/social-worker/lib/captionAssembly.test.mjs",

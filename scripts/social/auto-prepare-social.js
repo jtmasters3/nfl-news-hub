@@ -81,6 +81,7 @@ import { evaluateStaticAutonomousEligibility } from "../social-worker/lib/static
 import { createFreshStateFetcher } from "../social-worker/lib/githubStateReader.js";
 import { fetchArtworkQueue, decideApproval } from "../social-worker/lib/apiClient.js";
 import { waitForApprovalCommit } from "../social-worker/lib/waitForApprovalCommit.js";
+import { waitForDurableCommit } from "../social-worker/lib/waitForDurableCommit.js";
 
 const AUTO_APPROVE_ACTOR = "aggregate-auto-approver";
 const AUTO_APPROVE_DECISION_SOURCE = "autonomous-production-gate";
@@ -243,7 +244,7 @@ async function tryAutoApprove(storyId, record, { decideApprovalImpl, waitForAppr
 }
 
 /**
- * @param {{fetchQueue?: Function, fetchState?: Function, live?: boolean, runPreparationImpl?: Function, decideApprovalImpl?: Function, waitForApprovalCommitImpl?: Function, selectCandidateImpl?: Function}} [args]
+ * @param {{fetchQueue?: Function, fetchState?: Function, live?: boolean, runPreparationImpl?: Function, decideApprovalImpl?: Function, waitForApprovalCommitImpl?: Function, waitForDurableCommitImpl?: Function, selectCandidateImpl?: Function}} [args]
  */
 export async function main({
   fetchQueue = fetchArtworkQueue,
@@ -252,6 +253,7 @@ export async function main({
   runPreparationImpl = runExistingPreparationPipeline,
   decideApprovalImpl = decideApproval,
   waitForApprovalCommitImpl = waitForApprovalCommit,
+  waitForDurableCommitImpl = waitForDurableCommit,
   selectCandidateImpl = selectAutonomousCandidate,
 } = {}) {
   const selection = await selectCandidateImpl({ fetchQueue, fetchState });
@@ -303,19 +305,45 @@ export async function main({
   const prepResult = await runPreparationImpl({ storyId });
   console.log(`process-one.js exited with code ${prepResult.exitCode}.`);
 
-  // Always re-read fresh, authoritative, post-preparation state — never
-  // trust the child process's own exit code alone to infer the record's
-  // resulting status.
-  const freshState = await fetchState();
-  const freshRecord = freshState?.stories?.[storyId];
+  // 2026-09-11 durability hardening: process-one.js's exit code only proves
+  // its own claim/dispatch HTTP calls were ACCEPTED. The caption's final
+  // "caption-completed" event (like every artwork/caption event) is applied
+  // by an INDEPENDENT, concurrent GitHub Actions run — see
+  // apply-artwork-event.js's own 2026-09-11 header comment for the exact,
+  // proven checkout-staleness race this closes — that can still be mid-
+  // flight (or, now, mid-retry) when this child process exits. A single
+  // immediate read here is exactly the bug a live run just proved out in
+  // production: it observed the record moments BEFORE the completion event
+  // durably landed, and wrongly concluded preparation had failed. Give the
+  // SAME bounded durable-commit poll already proven for posting-claimed/
+  // publish-attempted a fair chance to observe the real end state — a
+  // resting state the record can only reach via a durable commit, never via
+  // dispatch-acceptance alone — before concluding anything. "failed" is
+  // included as a committed end state (not just "awaiting_approval") so a
+  // genuine, durably-recorded failure is recognized immediately rather than
+  // burning the full poll budget only to time out on it.
+  const pollResult = await waitForDurableCommitImpl(
+    fetchState,
+    storyId,
+    (record) => record.status === "awaiting_approval" || record.status === "failed",
+    {
+      onWaiting: (attempt, attempts, reason) => {
+        console.log(`story_id=${storyId} has not yet reached a durable post-preparation resting state — waiting (attempt ${attempt}/${attempts}, reason=${reason})...`);
+      },
+    }
+  );
 
-  if (!freshRecord) {
-    console.log(`story_id=${storyId} not found in fresh state after preparation — cannot proceed to approval evaluation.`);
-    return { ok: false, step: "post_prepare_read", selected: { story_id: storyId } };
+  if (!pollResult.committed) {
+    console.log(
+      `story_id=${storyId} did not reach a durable post-preparation resting state (awaiting_approval or failed) within the poll budget (status=${pollResult.status}${pollResult.error ? `, error=${pollResult.error}` : ""}). Failing closed: no regeneration, no approval, no publishing attempted. A future run will re-evaluate this exact record fresh — it is never abandoned, and nothing here creates a new claim or a new generation attempt.`
+    );
+    return { ok: false, step: "post_prepare_durable_poll", selected: { story_id: storyId }, pollResult };
   }
 
+  const freshRecord = pollResult.record;
+
   if (freshRecord.status !== "awaiting_approval") {
-    console.log(`story_id=${storyId} did not reach awaiting_approval (status=${freshRecord.status}) — preparation is incomplete or failed. No approval attempted. This is a safe, expected outcome for a generation that didn't fully succeed; a future run will pick this up again per the existing pipeline's own recovery rules.`);
+    console.log(`story_id=${storyId} reached a durable terminal state of "${freshRecord.status}" (not awaiting_approval) — preparation did not succeed. No approval attempted. This is a safe, expected outcome; a future run will pick this up again per the existing pipeline's own recovery rules.`);
     return { ok: true, selected: { story_id: storyId, record: freshRecord }, prepared: false, finalStatus: freshRecord.status };
   }
 

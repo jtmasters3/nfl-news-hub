@@ -554,8 +554,14 @@ async function writeJsonAtomic(filePath, data) {
   await rename(tmpPath, filePath);
 }
 
-export async function readSocialState(filePath = SOCIAL_STATE_PATH) {
-  const data = await readJson(filePath, null);
+/**
+ * Applies the exact same top-level defaulting readSocialState() always
+ * has, to any already-parsed state document — extracted so a caller with
+ * its OWN source of raw parsed JSON (e.g. apply-artwork-event.js's fresh,
+ * SHA-pinned re-read fallback) produces an identically-shaped state object
+ * without a second, drifting copy of these defaults.
+ */
+export function normalizeStateShape(data) {
   if (!data) return emptyState();
   return {
     schema_version: data.schema_version ?? SCHEMA_VERSION,
@@ -568,6 +574,11 @@ export async function readSocialState(filePath = SOCIAL_STATE_PATH) {
     selection_activated_at: data.selection_activated_at ?? null,
     selection_slots: data.selection_slots ?? {},
   };
+}
+
+export async function readSocialState(filePath = SOCIAL_STATE_PATH) {
+  const data = await readJson(filePath, null);
+  return normalizeStateShape(data);
 }
 
 export async function writeSocialState(state, filePath = SOCIAL_STATE_PATH) {
