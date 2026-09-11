@@ -71,6 +71,7 @@
     "test:auto-approval-gate": "node scripts/social-worker/lib/autoApprovalGate.test.mjs",
     "test:auto-prepare-social": "node scripts/social/auto-prepare-social.test.mjs",
     "test:content-fidelity-gate": "node scripts/social-worker/lib/contentFidelityGate.test.mjs",
+    "test:static-autonomous-eligibility": "node scripts/social-worker/lib/staticAutonomousEligibility.test.mjs",
     "test:auto-approval-source-allowlist": "node scripts/lib/autoApprovalSourceAllowlist.test.mjs",
     "test:story-publishing": "node scripts/tests/story-publishing-regression.mjs",
     "test:wait-durable-commit": "node scripts/social-worker/lib/waitForDurableCommit.test.mjs",

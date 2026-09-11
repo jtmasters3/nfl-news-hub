@@ -38,17 +38,47 @@ import { isAutoApprovalAllowedSource } from "../../lib/autoApprovalSourceAllowli
 import { evaluateContentFidelity } from "./contentFidelityGate.js";
 import { channelKeyFor } from "../../lib/postingEvents.js";
 
-function isNonEmptyString(v) {
+export function isNonEmptyString(v) {
   return typeof v === "string" && v.trim().length > 0;
 }
 
-function isHttpsUrl(v) {
+export function isHttpsUrl(v) {
   if (!isNonEmptyString(v)) return false;
   try {
     return new URL(v).protocol === "https:";
   } catch {
     return false;
   }
+}
+
+/**
+ * Shared defense-in-depth check, reused by both this gate and
+ * staticAutonomousEligibility.js's pre-generation check: proves a record
+ * has never begun (or is not mid) a posting cycle. For a record legitimately
+ * at "queued" or "awaiting_approval" this is structurally guaranteed by the
+ * state machine itself (approved -> posting is the only edge into posting),
+ * so this exists purely so a bug elsewhere can never silently slip an
+ * in-flight/ambiguous record through either gate.
+ * @param {object} record
+ * @returns {string[]} issue codes, empty when clean
+ */
+export function assessPostingCleanState(record) {
+  const issues = [];
+  if (isNonEmptyString(record.publishing?.claim?.claim_id)) {
+    issues.push("active_posting_claim");
+  }
+  if (record.publishing?.status && record.publishing.status !== "not_posted") {
+    issues.push(`publishing_status_not_clean:${record.publishing.status}`);
+  }
+  const channelKey = channelKeyFor(record);
+  const channel = record.publishing?.instagram?.[channelKey];
+  if (channel?.publish_attempted_at) {
+    issues.push("publish_attempted_already_recorded");
+  }
+  if (channel?.status === "ambiguous") {
+    issues.push("ambiguous_posting_outcome");
+  }
+  return issues;
 }
 
 /**
@@ -132,24 +162,8 @@ export function evaluateAutoApprovalGate(record) {
   }
 
   // Defense-in-depth: a record legitimately at awaiting_approval has never
-  // begun a posting cycle (approved -> posting is the only edge into
-  // posting, and approval hasn't happened yet), so these should already be
-  // structurally guaranteed — checked explicitly anyway so a bug elsewhere
-  // can never silently slip an in-flight/ambiguous record through this gate.
-  if (isNonEmptyString(record.publishing?.claim?.claim_id)) {
-    issues.push("active_posting_claim");
-  }
-  if (record.publishing?.status && record.publishing.status !== "not_posted") {
-    issues.push(`publishing_status_not_clean:${record.publishing.status}`);
-  }
-  const channelKey = channelKeyFor(record);
-  const channel = record.publishing?.instagram?.[channelKey];
-  if (channel?.publish_attempted_at) {
-    issues.push("publish_attempted_already_recorded");
-  }
-  if (channel?.status === "ambiguous") {
-    issues.push("ambiguous_posting_outcome");
-  }
+  // begun a posting cycle — see assessPostingCleanState()'s own doc comment.
+  issues.push(...assessPostingCleanState(record));
 
   return { eligible: issues.length === 0, issues };
 }

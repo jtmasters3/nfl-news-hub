@@ -19,11 +19,39 @@
 // --story-id=<id>`), exactly as a human operator already does today, not
 // imported. This is a deliberate, audited choice, not an oversight.
 //
-// Candidate selection reuses selectTarget(queue, null) — the EXACT same
-// "front of the live artwork queue" ordering process-one.js's own default
-// (no --story-id) invocation already uses. This script never invents a
-// new ordering, never scans for out-of-queue recovery candidates, and
-// never processes more than one record per run.
+// ==========================================================================
+// Candidate selection (2026-09-11 revision — static eligibility pre-filter)
+// ==========================================================================
+// A production dry-run revealed the live artwork queue's FIFO front is
+// dominated by a legacy backlog (~472 of 514 records, audited 2026-09-11)
+// that predates Stage-3A selection/canonical entity extraction — these
+// records structurally can never pass contentFidelityGate.js no matter how
+// well generation goes. Naively picking selectTarget(queue, null) (the
+// front of the queue, unconditionally) would waste real Codex generation
+// attempts on records statically incapable of auto-approval. This file now
+// scans the queue in its EXISTING, UNCHANGED FIFO order and selects the
+// FIRST entry whose corresponding record passes
+// staticAutonomousEligibility.js's pre-generation check — never a new
+// ranking, never importance-based, never skipping a record for any reason
+// beyond "cannot possibly pass" (see that module's own header for the
+// exact, narrow list of disqualifying conditions — an EMPTY teams[]/
+// players[] array is explicitly NOT one of them). A record that fails this
+// check is left completely untouched: not claimed, not sent through
+// Codex, not mutated, not reassigned, not backfilled. It remains available
+// to any existing human/manual workflow exactly as before.
+//
+// Before scanning the queue at all, this file also checks for an
+// already-awaiting_approval record that already fully qualifies for
+// automatic approval right now (deterministic oldest-selection.selected_at
+// ordering, the same tie-break convention auto-publish-approved-story.js
+// already uses) — finishing already-completed work is strictly cheaper
+// and safer than starting new generation, so it takes priority. This does
+// NOT scan for other mid-pipeline partial states (e.g. artwork done,
+// caption missing, no longer in the live queue) — that broader recovery
+// scan is a deliberately separate, out-of-scope concern for this pass;
+// such records remain reachable via the existing human-operator recovery
+// path (explicit --story-id) exactly as today. Still never more than ONE
+// record acted on per run.
 //
 // Auto-approval is fail-closed: scripts/social-worker/lib/autoApprovalGate.js
 // re-reads the FRESH post-preparation record and only proceeds through the
@@ -48,94 +76,116 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawn } from "node:child_process";
-import { selectTarget, missingFixtureFields } from "../social-worker/lib/selectTarget.js";
 import { evaluateAutoApprovalGate } from "../social-worker/lib/autoApprovalGate.js";
-import { sourceTier, UNKNOWN_SOURCE_TIER } from "../lib/editorialSourceConfidence.js";
+import { evaluateStaticAutonomousEligibility } from "../social-worker/lib/staticAutonomousEligibility.js";
 import { createFreshStateFetcher } from "../social-worker/lib/githubStateReader.js";
 import { fetchArtworkQueue, decideApproval } from "../social-worker/lib/apiClient.js";
 import { waitForApprovalCommit } from "../social-worker/lib/waitForApprovalCommit.js";
 
 const AUTO_APPROVE_ACTOR = "aggregate-auto-approver";
 const AUTO_APPROVE_DECISION_SOURCE = "autonomous-production-gate";
-// 2026-09-11: cloudflare-worker's approvalDecide.js now accepts an
-// optional, validated decision_source (restricted server-side to a small
-// known set — see that file's own header) rather than hardcoding
-// "local-approval-console" for every caller. Both actor AND decision_source
-// are therefore fully distinguishable in the durable audit trail for an
-// automated decision now; the existing human console never sends
-// decision_source at all, so its own decisions are completely unaffected.
+// cloudflare-worker's approvalDecide.js accepts an optional, validated
+// decision_source (restricted server-side to a small known set) rather
+// than hardcoding "local-approval-console" for every caller. Both actor
+// AND decision_source are therefore fully distinguishable in the durable
+// audit trail for an automated decision; the existing human console never
+// sends decision_source at all, so its own decisions are unaffected.
 
-function isNonEmptyString(v) {
-  return typeof v === "string" && v.trim().length > 0;
-}
+// ---------------------------------------------------------------------------
+// Selection
+// ---------------------------------------------------------------------------
 
-function isHttpsUrl(v) {
-  if (!isNonEmptyString(v)) return false;
-  try {
-    return new URL(v).protocol === "https:";
-  } catch {
-    return false;
-  }
+/**
+ * Deterministic tie-break: oldest selection.selected_at first, story_id as
+ * a final tiebreak — the SAME convention auto-publish-approved-story.js's
+ * own selectEligibleStory() already uses, never a new ranking.
+ */
+function sortByOldestSelectedAt(a, b) {
+  const aTime = Date.parse(a.record.selection?.selected_at ?? "");
+  const bTime = Date.parse(b.record.selection?.selected_at ?? "");
+  const aValid = Number.isFinite(aTime);
+  const bValid = Number.isFinite(bTime);
+  if (aValid && bValid && aTime !== bTime) return aTime - bTime;
+  if (aValid !== bValid) return aValid ? -1 : 1;
+  return a.story_id.localeCompare(b.story_id);
 }
 
 /**
- * Pure: picks the exact same next candidate process-one.js's own default
- * (no --story-id) invocation would pick — the front of the live artwork
- * queue. Never mutates anything. Returns null when the queue is empty.
- * @param {Array<object>} queue - the live social-artwork-queue.json entries
- * @returns {object|null} the raw queue entry (has story_id, post_headline, base_image_url, source_name, source_url, destination, ...)
+ * Buckets a set of static-eligibility issue codes into the three
+ * dry-run-report categories requested: records that are structurally
+ * legacy/missing canonical autonomous fields, records on an unsupported
+ * source, and records excluded for lifecycle/publishing-state reasons. A
+ * single record's issues may set more than one bucket — these are
+ * independent counts, not mutually exclusive classification.
  */
-export function selectPreparationCandidate(queue) {
-  return selectTarget(queue, null);
-}
-
-/**
- * Structural, artwork/caption-independent pre-checks — everything about a
- * queue entry that can be evaluated BEFORE ever spending a Codex generation
- * attempt on it. Used both for the dry-run preview (this is all a dry-run
- * can ever know, since it never runs the generation pipeline) and as a
- * live-mode fail-fast gate (never worth claiming/generating for a
- * structurally-doomed entry). Never approves anything itself — approval
- * always additionally requires evaluateAutoApprovalGate() against the
- * POST-preparation record.
- * @param {object} queueEntry
- * @param {object|null} record - the corresponding data/social-state.json record, if resolvable
- * @returns {{ok: boolean, issues: string[]}}
- */
-export function evaluateStructuralPreChecks(queueEntry, record) {
-  const issues = [];
-
-  if (!queueEntry || !isNonEmptyString(queueEntry.story_id)) {
-    return { ok: false, issues: ["invalid_queue_entry"] };
-  }
-
-  const missing = missingFixtureFields(queueEntry);
-  for (const field of missing) issues.push(`missing_fixture_field:${field}`);
-
-  if (!isHttpsUrl(queueEntry.source_url)) issues.push("source_url_invalid");
-
-  const destination = queueEntry.destination;
-  if (destination !== "feed" && destination !== "story") {
-    issues.push(`invalid_destination:${destination ?? "none"}`);
-  }
-
-  const tier = sourceTier(queueEntry.source_name);
-  if (tier === UNKNOWN_SOURCE_TIER) {
-    issues.push(`unrecognized_source:${queueEntry.source_name ?? "none"}`);
-  }
-
-  // If the record already exists in state (it always should, by the time
-  // it's queued), it must genuinely still need preparation — never
-  // re-process something already further along.
-  if (record) {
-    if (record.status !== "queued") {
-      issues.push(`record_not_queued:${record.status ?? "none"}`);
+function categorizeIssues(issues) {
+  const categories = { legacyMissingCanonical: false, unsupportedSource: false, lifecycle: false };
+  for (const issue of issues) {
+    if (
+      issue === "no_selection" ||
+      issue.startsWith("invalid_destination") ||
+      issue === "headline_missing" ||
+      issue === "description_missing" ||
+      issue === "teams_field_missing" ||
+      issue === "players_field_missing"
+    ) {
+      categories.legacyMissingCanonical = true;
+    } else if (issue.startsWith("unrecognized_source") || issue === "source_url_invalid") {
+      categories.unsupportedSource = true;
+    } else {
+      categories.lifecycle = true;
     }
-    if (record.merged_into) issues.push("story_merged");
+  }
+  return categories;
+}
+
+/**
+ * Selects AT MOST ONE candidate for this run. Never mutates anything.
+ * @param {{fetchQueue: Function, fetchState: Function}} deps
+ * @returns {Promise<
+ *   {mode: "approve-only"|"generate", story_id: string, record: object, queuePosition: number|null, inspectedCount: number|null, skipCounts: object|null} |
+ *   {mode: null, story_id: null, record: null, queuePosition: null, inspectedCount: number, skipCounts: object, queueLength: number}
+ * >}
+ */
+export async function selectAutonomousCandidate({ fetchQueue, fetchState }) {
+  const [queue, state] = await Promise.all([fetchQueue(), fetchState()]);
+  const stories = state?.stories ?? {};
+
+  // Priority 1: an already-awaiting_approval record that already fully
+  // qualifies for automatic approval right now — no generation needed.
+  const awaitingCandidates = Object.entries(stories)
+    .filter(([, r]) => r.status === "awaiting_approval")
+    .map(([story_id, record]) => ({ story_id, record }))
+    .filter(({ record }) => evaluateStaticAutonomousEligibility(record).eligible)
+    .filter(({ record }) => evaluateAutoApprovalGate(record).eligible);
+  awaitingCandidates.sort(sortByOldestSelectedAt);
+
+  if (awaitingCandidates.length > 0) {
+    const { story_id, record } = awaitingCandidates[0];
+    return { mode: "approve-only", story_id, record, queuePosition: null, inspectedCount: null, skipCounts: null };
   }
 
-  return { ok: issues.length === 0, issues };
+  // Priority 2: the FIRST entry in the existing, unchanged queue FIFO order
+  // whose record passes static eligibility.
+  const skipCounts = { legacyMissingCanonical: 0, unsupportedSource: 0, lifecycle: 0 };
+  for (let i = 0; i < queue.length; i++) {
+    const record = stories[queue[i].story_id];
+    const result = evaluateStaticAutonomousEligibility(record);
+    if (result.eligible) {
+      return { mode: "generate", story_id: queue[i].story_id, record, queuePosition: i, inspectedCount: i + 1, skipCounts };
+    }
+    const cats = categorizeIssues(result.issues);
+    if (cats.legacyMissingCanonical) skipCounts.legacyMissingCanonical++;
+    if (cats.unsupportedSource) skipCounts.unsupportedSource++;
+    if (cats.lifecycle) skipCounts.lifecycle++;
+  }
+
+  return { mode: null, story_id: null, record: null, queuePosition: null, inspectedCount: queue.length, skipCounts, queueLength: queue.length };
 }
+
+// ---------------------------------------------------------------------------
+// Preparation + approval
+// ---------------------------------------------------------------------------
 
 /**
  * Runs the EXISTING, unmodified process-one.js pipeline as a real child
@@ -159,7 +209,41 @@ export function runExistingPreparationPipeline({ storyId }) {
 }
 
 /**
- * @param {{fetchQueue?: Function, fetchState?: Function, live?: boolean, runPreparationImpl?: Function, decideApprovalImpl?: Function, waitForApprovalCommitImpl?: Function}} [args]
+ * Evaluates the full post-preparation auto-approval gate and, only if it
+ * passes, records approval via the existing production approval-decision
+ * mechanism. Shared by both the "generate" (just-prepared) and
+ * "approve-only" (already fully prepared) selection modes so the actual
+ * decision logic exists in exactly one place.
+ */
+async function tryAutoApprove(storyId, record, { decideApprovalImpl, waitForApprovalCommitImpl, fetchState }) {
+  const gate = evaluateAutoApprovalGate(record);
+  console.log(`Auto-approval gate result for story_id=${storyId}: ${JSON.stringify(gate)}`);
+
+  if (!gate.eligible) {
+    console.log(`story_id=${storyId} does NOT qualify for automatic approval (${gate.issues.join(", ")}). Leaving it at awaiting_approval for human review — this is the exact same safe resting state the existing manual pipeline already uses.`);
+    return { ok: true, selected: { story_id: storyId, record }, prepared: true, autoApproved: false, gateIssues: gate.issues };
+  }
+
+  console.log(`story_id=${storyId} passes every automatic-approval requirement. Recording approval via the existing production approval-decision mechanism (actor=${AUTO_APPROVE_ACTOR}).`);
+  const requestId = `auto-${storyId}-${Date.now()}`;
+  const decideResult = await decideApprovalImpl(storyId, "approved", { requestId, actor: AUTO_APPROVE_ACTOR, decisionSource: AUTO_APPROVE_DECISION_SOURCE });
+  console.log(`decideApproval result: ${JSON.stringify(decideResult)}`);
+
+  if (decideResult.result === "pending") {
+    const pollResult = await waitForApprovalCommitImpl(fetchState, storyId);
+    console.log(`waitForApprovalCommit result: committed=${pollResult.committed}, status=${pollResult.status}`);
+    if (!pollResult.committed) {
+      return { ok: false, step: "approval_commit_confirmation", selected: { story_id: storyId }, decideResult, pollResult };
+    }
+    return { ok: true, selected: { story_id: storyId, record: pollResult.record }, prepared: true, autoApproved: true };
+  }
+
+  const approvedNow = decideResult.result === "approved" || decideResult.result === "already_approved";
+  return { ok: approvedNow, selected: { story_id: storyId }, prepared: true, autoApproved: approvedNow, decideResult };
+}
+
+/**
+ * @param {{fetchQueue?: Function, fetchState?: Function, live?: boolean, runPreparationImpl?: Function, decideApprovalImpl?: Function, waitForApprovalCommitImpl?: Function, selectCandidateImpl?: Function}} [args]
  */
 export async function main({
   fetchQueue = fetchArtworkQueue,
@@ -168,44 +252,51 @@ export async function main({
   runPreparationImpl = runExistingPreparationPipeline,
   decideApprovalImpl = decideApproval,
   waitForApprovalCommitImpl = waitForApprovalCommit,
+  selectCandidateImpl = selectAutonomousCandidate,
 } = {}) {
-  const queue = await fetchQueue();
-  const candidate = selectPreparationCandidate(queue);
+  const selection = await selectCandidateImpl({ fetchQueue, fetchState });
 
-  if (!candidate) {
-    console.log("No queued social record requires preparation. Nothing to do.");
-    return { ok: true, selected: null };
+  if (!selection.mode) {
+    console.log(
+      `No statically-eligible autonomous candidate found. Inspected ${selection.inspectedCount} of ${selection.queueLength} queue records; skipped — legacy/missing canonical: ${selection.skipCounts.legacyMissingCanonical}, unsupported source: ${selection.skipCounts.unsupportedSource}, lifecycle: ${selection.skipCounts.lifecycle}.`
+    );
+    return { ok: true, selected: null, inspectedCount: selection.inspectedCount, queueLength: selection.queueLength, skipCounts: selection.skipCounts };
   }
 
-  const storyId = candidate.story_id;
-  const state = await fetchState();
-  const record = state?.stories?.[storyId] ?? null;
+  const { mode, story_id: storyId, record, queuePosition, inspectedCount, skipCounts } = selection;
 
-  console.log(`Selected story_id=${storyId} (destination=${candidate.destination ?? "unknown"}, headline="${candidate.post_headline ?? "unknown"}") — front of the live artwork queue, the same candidate process-one.js's own default invocation would pick.`);
-
-  const preCheck = evaluateStructuralPreChecks(candidate, record);
+  if (mode === "approve-only") {
+    console.log(`Selected story_id=${storyId} — already awaiting_approval and fully gate-eligible; no artwork/caption generation needed.`);
+  } else {
+    console.log(`Selected story_id=${storyId} — queue position ${queuePosition} (${inspectedCount - 1} statically-ineligible record(s) skipped before it), the first statically-eligible candidate in existing FIFO order.`);
+  }
 
   if (!live) {
     console.log("=== DRY RUN — no artwork generation, no caption generation, no approval, no state mutation ===");
     const report = {
       ok: true,
+      mode,
       story_id: storyId,
-      destination: candidate.destination ?? null,
-      headline: candidate.post_headline ?? null,
-      current_status: record?.status ?? "unknown",
-      structural_pre_checks_passed: preCheck.ok,
-      structural_pre_check_issues: preCheck.issues,
-      note: preCheck.ok
-        ? "Structural pre-checks pass. Live mode would run the existing artwork+caption generation pipeline (process-one.js) for this exact story_id; whether it then qualifies for automatic approval can only be determined after that completes, since artwork/caption content does not exist yet."
-        : "Structural pre-checks FAIL. Live mode would refuse to spend a generation attempt on this candidate and would exit without calling Codex or the approval endpoint.",
+      destination: record.selection?.destination ?? null,
+      headline: record.source_story?.post_headline ?? null,
+      source_name: record.source_story?.source_name ?? null,
+      source_url: record.source_story?.source_url ?? null,
+      current_status: record.status,
+      selection_slot: record.selection?.slot_id ?? null,
+      teams: record.source_story?.teams ?? null,
+      players: record.source_story?.players ?? null,
+      queue_position: queuePosition,
+      inspected_count: inspectedCount,
+      skip_counts: skipCounts,
+      static_eligibility_passed: true,
+      would_require: mode === "approve-only" ? "approval only — artwork and caption already exist and already pass every gate" : "artwork generation, caption generation, then full post-generation approval-gate evaluation",
     };
     console.log(JSON.stringify(report, null, 2));
     return { ok: true, selected: { story_id: storyId, record }, dryRun: report };
   }
 
-  if (!preCheck.ok) {
-    console.log(`Structural pre-checks failed for story_id=${storyId}: ${preCheck.issues.join(", ")}. Refusing to spend a generation attempt. No Codex call, no approval call.`);
-    return { ok: true, selected: { story_id: storyId, record }, skipped: { reason: "structural_pre_check_failed", issues: preCheck.issues } };
+  if (mode === "approve-only") {
+    return tryAutoApprove(storyId, record, { decideApprovalImpl, waitForApprovalCommitImpl, fetchState });
   }
 
   console.log(`=== LIVE — running the existing artwork+caption generation pipeline for story_id=${storyId} ===`);
@@ -228,30 +319,7 @@ export async function main({
     return { ok: true, selected: { story_id: storyId, record: freshRecord }, prepared: false, finalStatus: freshRecord.status };
   }
 
-  const gate = evaluateAutoApprovalGate(freshRecord);
-  console.log(`Auto-approval gate result for story_id=${storyId}: ${JSON.stringify(gate)}`);
-
-  if (!gate.eligible) {
-    console.log(`story_id=${storyId} reached awaiting_approval but does NOT qualify for automatic approval (${gate.issues.join(", ")}). Leaving it at awaiting_approval for human review — this is the exact same safe resting state the existing manual pipeline already uses.`);
-    return { ok: true, selected: { story_id: storyId, record: freshRecord }, prepared: true, autoApproved: false, gateIssues: gate.issues };
-  }
-
-  console.log(`story_id=${storyId} passes every automatic-approval requirement. Recording approval via the existing production approval-decision mechanism (actor=${AUTO_APPROVE_ACTOR}).`);
-  const requestId = `auto-${storyId}-${Date.now()}`;
-  const decideResult = await decideApprovalImpl(storyId, "approved", { requestId, actor: AUTO_APPROVE_ACTOR, decisionSource: AUTO_APPROVE_DECISION_SOURCE });
-  console.log(`decideApproval result: ${JSON.stringify(decideResult)}`);
-
-  if (decideResult.result === "pending") {
-    const pollResult = await waitForApprovalCommitImpl(fetchState, storyId);
-    console.log(`waitForApprovalCommit result: committed=${pollResult.committed}, status=${pollResult.status}`);
-    if (!pollResult.committed) {
-      return { ok: false, step: "approval_commit_confirmation", selected: { story_id: storyId }, decideResult, pollResult };
-    }
-    return { ok: true, selected: { story_id: storyId, record: pollResult.record }, prepared: true, autoApproved: true };
-  }
-
-  const approvedNow = decideResult.result === "approved" || decideResult.result === "already_approved";
-  return { ok: approvedNow, selected: { story_id: storyId }, prepared: true, autoApproved: approvedNow, decideResult };
+  return tryAutoApprove(storyId, freshRecord, { decideApprovalImpl, waitForApprovalCommitImpl, fetchState });
 }
 
 /**
