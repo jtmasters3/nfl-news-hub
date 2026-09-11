@@ -200,7 +200,7 @@ test("2b. minor real alpha with an unambiguous (corner-agreeing) background is d
   assert.equal(result.ok, true);
 });
 
-test("4b. a genuinely ambiguous background (real gradient/two-tone design, matching the actual Drake Maye artwork's disagreeing corners) fails closed with background_fill_ambiguous, never a guessed color, and never reaches upload", async () => {
+test("4b/12. a genuinely ambiguous background (real gradient/two-tone design with INTERIOR transparency, matching the actual Drake Maye artwork's disagreeing corners) tries perimeter-flattening first (inapplicable — interior transparency), falls through to corner derivation (also fails — corners disagree), and fails closed with background_fill_ambiguous, never a guessed color, never reaching upload", async () => {
   const pngBuffer = await twoToneWithCenterTransparency();
   let uploadCalled = false;
   const uploadJpeg = async (args) => { uploadCalled = true; return okUploadJpeg()(args); };
@@ -208,6 +208,26 @@ test("4b. a genuinely ambiguous background (real gradient/two-tone design, match
   assert.equal(result.ok, false);
   assert.equal(result.error, "background_fill_ambiguous");
   assert.equal(uploadCalled, false);
+});
+
+test("15. a source with transparency confined strictly to the 1px perimeter (the actual real-world Drake Maye artifact shape) resolves successfully via local edge-flattening, with NO corner-agreement required at all — even when the canvas is a genuine two-tone gradient", async () => {
+  const width = WIDTH, height = HEIGHT, channels = 4;
+  const raw = Buffer.alloc(width * height * channels);
+  for (let y = 0; y < height; y++) {
+    for (let x = 0; x < width; x++) {
+      const idx = (y * width + x) * channels;
+      const { r, g, b } = x < width / 2 ? { r: 1, g: 1, b: 1 } : { r: 90, g: 100, b: 150 };
+      raw[idx] = r; raw[idx + 1] = g; raw[idx + 2] = b;
+      const onPerimeter = x === 0 || x === width - 1 || y === 0 || y === height - 1;
+      raw[idx + 3] = onPerimeter ? 220 : 255;
+    }
+  }
+  const pngBuffer = await sharp(raw, { raw: { width, height, channels } }).png().toBuffer();
+  let uploadCalled = false;
+  const uploadJpeg = async (args) => { uploadCalled = true; return okUploadJpeg()(args); };
+  const result = await resolveApprovedFeedJpeg(approvedRecord(), { fetchImpl: fetchRouter({ pngBuffer }), uploadJpeg });
+  assert.equal(result.ok, true, `expected success via perimeter flattening, got: ${JSON.stringify(result)}`);
+  assert.equal(uploadCalled, true);
 });
 
 test("an explicit caller-supplied backgroundFillPolicy always overrides automatic derivation, even for an otherwise-ambiguous image", async () => {

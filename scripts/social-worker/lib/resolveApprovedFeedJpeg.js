@@ -17,7 +17,7 @@
 // and uploads a JPEG to the Worker's artwork storage. Every network call is
 // via the explicitly injected `fetchImpl`; there is no live-network
 // fallback.
-import { convertToJpegDerivative, validateJpegDerivative, deriveJpegStorageKey, inspectAlpha, deriveCornerBackgroundFill } from "./jpegDerivative.js";
+import { convertToJpegDerivative, validateJpegDerivative, deriveJpegStorageKey, inspectAlpha, deriveCornerBackgroundFill, flattenPerimeterAlpha } from "./jpegDerivative.js";
 
 /**
  * Best-effort, read-only check for an already-uploaded, reusable JPEG at
@@ -79,7 +79,7 @@ export async function checkExistingApprovedFeedJpeg(record, { fetchImpl } = {}) 
  * @param {object} dependencies
  * @param {Function} dependencies.fetchImpl - explicit fetch, used for downloading the PNG and the reuse check (both public HTTPS URLs, no auth needed)
  * @param {(args: {storyId: string, jpegBuffer: Buffer}) => Promise<{ok: true, publicUrl: string, storageKey: string}|{ok: false, error: string}>} dependencies.uploadJpeg - injected Worker-upload adapter (bufferPostingBridge.js's uploadJpeg)
- * @param {{r: number, g: number, b: number}} [dependencies.backgroundFillPolicy] - explicit override forwarded to convertToJpegDerivative; if omitted and the source has genuine transparency, one is derived deterministically from the PNG's own corners (see jpegDerivative.js's deriveCornerBackgroundFill) — failing closed with background_fill_ambiguous if the corners disagree
+ * @param {{r: number, g: number, b: number}} [dependencies.backgroundFillPolicy] - explicit override; if omitted and the source has genuine transparency, this tries flattenPerimeterAlpha first (a known 1px edge-export artifact), then deriveCornerBackgroundFill, failing closed with background_fill_ambiguous if neither applies
  * @returns {Promise<{ok: true, jpegUrl: string, storageKey: string, reused: boolean}|{ok: false, error: string}>}
  */
 export async function resolveApprovedFeedJpeg(record, { fetchImpl, uploadJpeg, backgroundFillPolicy } = {}) {
@@ -106,16 +106,21 @@ export async function resolveApprovedFeedJpeg(record, { fetchImpl, uploadJpeg, b
   if (!pngRes.ok) return { ok: false, error: "png_download_failed" };
   const pngBuffer = Buffer.from(await pngRes.arrayBuffer());
 
-  // 3b. Determine the fill to use for genuine transparency. Opaque PNGs
-  // (the overwhelming common case) are never affected by any of this — no
-  // template has one single guaranteed background color (Codex generates
-  // each image freshly), so when real alpha exists and the caller didn't
-  // explicitly supply a policy, derive one deterministically from the
-  // approved PNG's own corners. Never guesses: a genuinely ambiguous
-  // background (e.g. a real gradient/lighting design) fails closed here,
-  // BEFORE ever attempting a flatten, rather than silently defaulting to
-  // white or black.
+  // 3b. Determine how to handle genuine transparency. Opaque PNGs (the
+  // overwhelming common case) are never affected by any of this. When real
+  // alpha exists and the caller didn't explicitly supply a policy, try —
+  // in order, never guessing at any step:
+  //   1. (implicit above) fully opaque -> nothing to do
+  //   2. transparency confined strictly to the outermost 1px perimeter (a
+  //      known PNG-export anti-alias/feather artifact) -> flattenPerimeterAlpha,
+  //      which is gradient-aware (each edge pixel is composited against ITS
+  //      OWN nearest inward opaque neighbor, never one global color)
+  //   3. other transparency with a clearly uniform background -> the
+  //      existing deriveCornerBackgroundFill single-fill derivation
+  //   4. otherwise -> fail closed with background_fill_ambiguous, never a
+  //      guessed white/black default
   let effectiveFillPolicy = backgroundFillPolicy;
+  let bufferToConvert = pngBuffer;
   if (!effectiveFillPolicy) {
     let alphaInfo;
     try {
@@ -124,9 +129,19 @@ export async function resolveApprovedFeedJpeg(record, { fetchImpl, uploadJpeg, b
       return { ok: false, error: "png_decode_failed" };
     }
     if (alphaInfo.hasAlphaChannel && !alphaInfo.fullyOpaque) {
-      const derived = await deriveCornerBackgroundFill(pngBuffer);
-      if (!derived) return { ok: false, error: "background_fill_ambiguous" };
-      effectiveFillPolicy = derived;
+      let perimeterResult;
+      try {
+        perimeterResult = await flattenPerimeterAlpha(pngBuffer);
+      } catch {
+        return { ok: false, error: "png_decode_failed" };
+      }
+      if (perimeterResult.ok) {
+        bufferToConvert = perimeterResult.buffer;
+      } else {
+        const derived = await deriveCornerBackgroundFill(pngBuffer);
+        if (!derived) return { ok: false, error: "background_fill_ambiguous" };
+        effectiveFillPolicy = derived;
+      }
     }
   }
 
@@ -135,14 +150,14 @@ export async function resolveApprovedFeedJpeg(record, { fetchImpl, uploadJpeg, b
   // blindly either) fails closed instead of throwing out of this function.
   let converted;
   try {
-    converted = await convertToJpegDerivative(pngBuffer, { backgroundFillPolicy: effectiveFillPolicy });
+    converted = await convertToJpegDerivative(bufferToConvert, { backgroundFillPolicy: effectiveFillPolicy });
   } catch {
     return { ok: false, error: "png_decode_failed" };
   }
   if (!converted.ok) return { ok: false, error: converted.error };
 
   // 5. Validate with the existing deterministic validator before ever uploading.
-  const validation = await validateJpegDerivative(converted.buffer, pngBuffer);
+  const validation = await validateJpegDerivative(converted.buffer, bufferToConvert);
   if (!validation.passed) return { ok: false, error: `jpeg_invalid:${validation.issues.join(",")}` };
 
   // 7. Upload through the Worker/R2 architecture — never direct R2 credentials here.

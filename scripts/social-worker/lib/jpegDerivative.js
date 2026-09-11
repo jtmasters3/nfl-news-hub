@@ -139,6 +139,100 @@ export async function deriveCornerBackgroundFill(pngBuffer) {
   return { r: avg("r"), g: avg("g"), b: avg("b") };
 }
 
+/**
+ * Finds the deterministic "nearest fully-opaque inward pixel" reference
+ * coordinate for a given perimeter pixel. Edge (non-corner) pixels use the
+ * single perpendicular inward pixel; corner pixels use the single diagonal
+ * inward pixel (the corner's two single-axis inward neighbors are
+ * themselves still ON the perimeter — e.g. (0,1) has x===0 — so the
+ * diagonal is the only immediately-adjacent pixel guaranteed off the
+ * perimeter). Returns null if (x,y) isn't itself a perimeter coordinate.
+ */
+function perimeterInwardReference(x, y, width, height) {
+  const isLeft = x === 0;
+  const isRight = x === width - 1;
+  const isTop = y === 0;
+  const isBottom = y === height - 1;
+  if (!isLeft && !isRight && !isTop && !isBottom) return null;
+  if ((isLeft || isRight) && (isTop || isBottom)) {
+    return [isLeft ? x + 1 : x - 1, isTop ? y + 1 : y - 1];
+  }
+  if (isTop) return [x, y + 1];
+  if (isBottom) return [x, y - 1];
+  return [isLeft ? x + 1 : x - 1, y];
+}
+
+/**
+ * Handles the SPECIFIC known PNG-export artifact where genuine partial
+ * transparency is confined strictly to the outermost 1-pixel perimeter
+ * ring (a common feather/anti-alias bleed on export) while every interior
+ * pixel — including the artwork's own background, however non-uniform —
+ * is fully opaque. This is a fundamentally different, more targeted fix
+ * than deriveCornerBackgroundFill: rather than picking ONE global fill
+ * color for the whole canvas (which fails closed for a genuinely gradient
+ * background), each perimeter pixel is flattened against ITS OWN nearest
+ * inward opaque neighbor — correctly gradient-aware, since a pixel on the
+ * blue-gradient side of the canvas is composited against the blue pixel
+ * next to it, never against an unrelated color from elsewhere on the
+ * canvas.
+ *
+ * Fails closed (returns `{ok:false}`) rather than guessing further if:
+ * - any non-opaque pixel exists OFF the perimeter (this fixer only
+ *   understands the edge-artifact case, never broader/interior
+ *   transparency — see deriveCornerBackgroundFill / background_fill_ambiguous
+ *   for those), or
+ * - a perimeter pixel's own inward reference pixel is unexpectedly not
+ *   itself fully opaque (would require guessing a reference for the
+ *   reference — never done).
+ *
+ * Only perimeter pixels are ever modified. Every interior/already-opaque
+ * pixel's bytes are copied through completely unchanged.
+ * @param {Buffer} pngBuffer
+ * @returns {Promise<{ok: true, buffer: Buffer, modifiedCount: number}|{ok: false, error: string}>}
+ */
+export async function flattenPerimeterAlpha(pngBuffer) {
+  const { data, info } = await sharp(pngBuffer).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  const { width, height, channels } = info;
+
+  function idxOf(x, y) {
+    return (y * width + x) * channels;
+  }
+
+  // Verify pass: every non-opaque pixel must be strictly on the perimeter.
+  for (let y = 0; y < height; y++) {
+    for (let x = 0; x < width; x++) {
+      if (data[idxOf(x, y) + 3] === 255) continue;
+      const onPerimeter = x === 0 || x === width - 1 || y === 0 || y === height - 1;
+      if (!onPerimeter) return { ok: false, error: "interior_transparency" };
+    }
+  }
+
+  const out = Buffer.from(data); // interior/opaque pixels are never touched beyond this copy
+  let modifiedCount = 0;
+
+  for (let y = 0; y < height; y++) {
+    for (let x = 0; x < width; x++) {
+      const idx = idxOf(x, y);
+      const alpha = data[idx + 3];
+      if (alpha === 255) continue;
+
+      const ref = perimeterInwardReference(x, y, width, height);
+      const refIdx = idxOf(ref[0], ref[1]);
+      if (data[refIdx + 3] !== 255) return { ok: false, error: "inward_reference_not_opaque" };
+
+      const a = alpha / 255;
+      out[idx] = Math.round(data[idx] * a + data[refIdx] * (1 - a));
+      out[idx + 1] = Math.round(data[idx + 1] * a + data[refIdx + 1] * (1 - a));
+      out[idx + 2] = Math.round(data[idx + 2] * a + data[refIdx + 2] * (1 - a));
+      out[idx + 3] = 255;
+      modifiedCount++;
+    }
+  }
+
+  const buffer = await sharp(out, { raw: { width, height, channels } }).png().toBuffer();
+  return { ok: true, buffer, modifiedCount };
+}
+
 const JPEG_MAGIC_BYTES = Buffer.from([0xff, 0xd8, 0xff]);
 
 /**

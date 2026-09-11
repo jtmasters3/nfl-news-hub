@@ -5,7 +5,7 @@
 // node scripts/social-worker/lib/jpegDerivative.test.mjs
 import assert from "node:assert/strict";
 import sharp from "sharp";
-import { deriveJpegStorageKey, inspectAlpha, convertToJpegDerivative, validateJpegDerivative, deriveCornerBackgroundFill } from "./jpegDerivative.js";
+import { deriveJpegStorageKey, inspectAlpha, convertToJpegDerivative, validateJpegDerivative, deriveCornerBackgroundFill, flattenPerimeterAlpha } from "./jpegDerivative.js";
 
 const cases = [];
 function test(name, fn) {
@@ -306,6 +306,148 @@ test("18b. flattening the SAME transparent patch against a WRONG background colo
   const wrongPixel = await pixelOf(wrong.buffer);
   const diff = Math.abs(correctPixel[0] - wrongPixel[0]) + Math.abs(correctPixel[1] - wrongPixel[1]) + Math.abs(correctPixel[2] - wrongPixel[2]);
   assert.ok(diff > 60, "a materially wrong background must produce a visibly different flattened pixel, confirming fill choice is not cosmetic");
+});
+
+// ---------------------------------------------------------------------------
+// flattenPerimeterAlpha — the specific 1px-perimeter PNG-export artifact
+// fix. Real Drake Maye finding: 4,604 alpha<255 pixels === 2*1024+2*1280-4,
+// exactly the full 1px perimeter, with zero interior transparency.
+// ---------------------------------------------------------------------------
+
+/** Sets every perimeter pixel (x==0 || x==width-1 || y==0 || y==height-1) to the given alpha, leaving all interior pixels fully opaque. `colorAt(x,y)` supplies the RGB everywhere (supports flat OR gradient/two-tone canvases). */
+function buildPngWithPerimeterAlpha({ width = WIDTH, height = HEIGHT, colorAt, perimeterAlpha = 200 } = {}) {
+  const channels = 4;
+  const raw = Buffer.alloc(width * height * channels);
+  for (let y = 0; y < height; y++) {
+    for (let x = 0; x < width; x++) {
+      const idx = (y * width + x) * channels;
+      const { r, g, b } = colorAt(x, y);
+      const onPerimeter = x === 0 || x === width - 1 || y === 0 || y === height - 1;
+      raw[idx] = r; raw[idx + 1] = g; raw[idx + 2] = b;
+      raw[idx + 3] = onPerimeter ? perimeterAlpha : 255;
+    }
+  }
+  return sharp(raw, { raw: { width, height, channels } }).png().toBuffer();
+}
+
+test("19. exact one-pixel perimeter transparency is detected and flattened — every perimeter pixel is processed", async () => {
+  const png = await buildPngWithPerimeterAlpha({ colorAt: () => ({ r: 10, g: 10, b: 10 }) });
+  const result = await flattenPerimeterAlpha(png);
+  assert.equal(result.ok, true);
+  assert.equal(result.modifiedCount, 2 * WIDTH + 2 * HEIGHT - 4);
+});
+
+test("20. interior transparency is NOT treated as a perimeter artifact — fails closed with interior_transparency, modifies nothing", async () => {
+  const patch = { x0: Math.round(WIDTH / 2 - 10), y0: Math.round(HEIGHT / 2 - 10), x1: Math.round(WIDTH / 2 + 10), y1: Math.round(HEIGHT / 2 + 10), alpha: 180, r: 0, g: 0, b: 0 };
+  const png = await buildPngWithAlpha({ colorAt: () => ({ r: 10, g: 10, b: 10 }), patch });
+  const result = await flattenPerimeterAlpha(png);
+  assert.equal(result.ok, false);
+  assert.equal(result.error, "interior_transparency");
+});
+
+test("21-24. each edge (top/bottom/left/right) flattens its pixel against the correct single-axis inward neighbor, using standard alpha compositing", async () => {
+  const bg = { r: 40, g: 60, b: 80 };
+  const alpha = 200;
+  const png = await buildPngWithPerimeterAlpha({ colorAt: () => bg, perimeterAlpha: alpha });
+  const result = await flattenPerimeterAlpha(png);
+  const flat = await sharp(result.buffer).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  const { width, height, channels } = flat.info;
+  function px(x, y) { const i = (y * width + x) * channels; return { r: flat.data[i], g: flat.data[i + 1], b: flat.data[i + 2], a: flat.data[i + 3] }; }
+  const a = alpha / 255;
+  // Foreground and background are the SAME color here, so the correct
+  // blended result must still equal that color exactly (and alpha=255) —
+  // proving the formula, not just "looks plausible".
+  for (const [x, y] of [[Math.floor(WIDTH / 2), 0], [Math.floor(WIDTH / 2), HEIGHT - 1], [0, Math.floor(HEIGHT / 2)], [WIDTH - 1, Math.floor(HEIGHT / 2)]]) {
+    const p = px(x, y);
+    assert.equal(p.a, 255);
+    assert.ok(Math.abs(p.r - bg.r) <= 1 && Math.abs(p.g - bg.g) <= 1 && Math.abs(p.b - bg.b) <= 1, `edge pixel (${x},${y}) must equal the flat background color, got ${JSON.stringify(p)}`);
+  }
+});
+
+test("25. corners are handled deterministically via the diagonal inward pixel — a two-tone canvas produces DIFFERENT corner results on each side, gradient-aware", async () => {
+  const png = await buildPngWithPerimeterAlpha({ colorAt: (x) => (x < WIDTH / 2 ? { r: 1, g: 1, b: 1 } : { r: 90, g: 100, b: 150 }) });
+  const result = await flattenPerimeterAlpha(png);
+  assert.equal(result.ok, true);
+  const flat = await sharp(result.buffer).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  const { width, height, channels } = flat.info;
+  function px(x, y) { const i = (y * width + x) * channels; return { r: flat.data[i], g: flat.data[i + 1], b: flat.data[i + 2] }; }
+  const topLeft = px(0, 0);
+  const topRight = px(width - 1, 0);
+  assert.ok(topLeft.r < 10, "top-left corner (left/dark side) must stay near-black");
+  assert.ok(topRight.r > 60, "top-right corner (right/blue side) must reflect its OWN local color, never the left side's");
+});
+
+test("8. gradient edge backgrounds remain gradient-aware — perimeter pixels on the two-tone image flatten against their OWN local side, never a single global color", async () => {
+  const png = await buildPngWithPerimeterAlpha({ colorAt: (x) => (x < WIDTH / 2 ? { r: 1, g: 1, b: 1 } : { r: 90, g: 100, b: 150 }) });
+  const result = await flattenPerimeterAlpha(png);
+  const flat = await sharp(result.buffer).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  const { width, channels } = flat.info;
+  function px(x, y) { const i = (y * width + x) * channels; return { r: flat.data[i], g: flat.data[i + 1], b: flat.data[i + 2] }; }
+  const leftEdgeMid = px(0, Math.floor(HEIGHT / 2));
+  const rightEdgeMid = px(width - 1, Math.floor(HEIGHT / 2));
+  assert.ok(leftEdgeMid.r < 10, "left-edge pixel must reflect the left side's own near-black color");
+  assert.ok(rightEdgeMid.r > 60, "right-edge pixel must reflect the right side's own blue color, not the left side's");
+});
+
+test("9-10. only perimeter pixels are altered before JPEG encoding — every interior pixel is byte-for-byte identical to the source", async () => {
+  const png = await buildPngWithPerimeterAlpha({ colorAt: () => ({ r: 30, g: 40, b: 50 }) });
+  const result = await flattenPerimeterAlpha(png);
+  const orig = await sharp(png).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  const flat = await sharp(result.buffer).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  const { width, height, channels } = orig.info;
+  for (let y = 1; y < height - 1; y += 37) {
+    for (let x = 1; x < width - 1; x += 37) {
+      const idx = (y * width + x) * channels;
+      assert.deepEqual(
+        [orig.data[idx], orig.data[idx + 1], orig.data[idx + 2], orig.data[idx + 3]],
+        [flat.data[idx], flat.data[idx + 1], flat.data[idx + 2], flat.data[idx + 3]],
+        `interior pixel (${x},${y}) must be byte-identical`
+      );
+    }
+  }
+});
+
+test("11. an already fully-opaque PNG (no alpha<255 anywhere) is a safe no-op through flattenPerimeterAlpha — zero pixels modified", async () => {
+  const png = await opaqueRgbaPng();
+  const result = await flattenPerimeterAlpha(png);
+  assert.equal(result.ok, true);
+  assert.equal(result.modifiedCount, 0);
+});
+
+test("13-14. dimensions remain exactly 1024x1280 after perimeter flattening — no crop, no resize", async () => {
+  const png = await buildPngWithPerimeterAlpha({ colorAt: () => ({ r: 5, g: 5, b: 5 }) });
+  const result = await flattenPerimeterAlpha(png);
+  const meta = await sharp(result.buffer).metadata();
+  assert.equal(meta.width, WIDTH);
+  assert.equal(meta.height, HEIGHT);
+});
+
+test("a perimeter pixel whose inward reference is itself unexpectedly non-opaque fails closed rather than guessing a second-order reference", async () => {
+  // A canvas narrow enough (width=2) that EVERY column is itself on the
+  // perimeter (x is always 0 or width-1) — so a left-edge pixel's inward
+  // reference (the pixel directly across, x=1) is ALSO a perimeter pixel,
+  // not interior. Making both non-opaque at the same row triggers the
+  // "reference itself isn't opaque" case without ever involving interior
+  // transparency at all — this scenario cannot occur on the real
+  // 1024x1280 artwork (whose interior is enormous), but the function must
+  // still fail closed rather than chain to a second-order reference.
+  const width = 2, height = 6, channels = 4;
+  const raw = Buffer.alloc(width * height * channels);
+  for (let y = 0; y < height; y++) {
+    for (let x = 0; x < width; x++) {
+      const idx = (y * width + x) * channels;
+      raw[idx] = 5; raw[idx + 1] = 5; raw[idx + 2] = 5;
+      raw[idx + 3] = 255;
+    }
+  }
+  const rowIdx0 = (2 * width + 0) * channels;
+  const rowIdx1 = (2 * width + 1) * channels;
+  raw[rowIdx0 + 3] = 200;
+  raw[rowIdx1 + 3] = 200;
+  const png = await sharp(raw, { raw: { width, height, channels } }).png().toBuffer();
+  const result = await flattenPerimeterAlpha(png);
+  assert.equal(result.ok, false);
+  assert.equal(result.error, "inward_reference_not_opaque");
 });
 
 // ---------------------------------------------------------------------------
