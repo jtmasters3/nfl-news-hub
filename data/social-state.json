@@ -98235,10 +98235,10 @@
     },
     "8e7d34b6-05fa-4c47-aa24-70e0069ff905": {
       "story_id": "8e7d34b6-05fa-4c47-aa24-70e0069ff905",
-      "status": "artwork_ready",
+      "status": "awaiting_approval",
       "merged_into": null,
       "created_at": "2026-09-11T14:00:47.626Z",
-      "updated_at": "2026-09-11T14:25:54.240Z",
+      "updated_at": "2026-09-11T14:26:58.742Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -98308,13 +98308,16 @@
         "decision_source": null
       },
       "caption": {
-        "status": "generating",
-        "text": null,
+        "status": "ready",
+        "text": "Myles Garrett made no impact in his first game with his second team, the Los Angeles Rams. His comments and usage are concerning.\n\nSource: Pro Football Talk",
         "last_candidate_text": null,
-        "hashtags": [],
-        "attribution_line": null,
-        "source_url": null,
-        "provider": null,
+        "hashtags": [
+          "#NFL",
+          "#Rams"
+        ],
+        "attribution_line": "Source: Pro Football Talk",
+        "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/myles-garretts-comments-usage-are-concerning",
+        "provider": "chatgpt-codex-local",
         "claim": {
           "claim_id": "df94c3e8-5bce-443a-b555-5c468615eea4",
           "processor_id": "local-codex-LAPTOP-H4IOBCTP",
@@ -98322,7 +98325,7 @@
           "claim_expires_at": "2026-09-11T15:15:38.707Z"
         },
         "claim_attempt_count": 0,
-        "created_at": null
+        "created_at": "2026-09-11T14:26:58.742Z"
       },
       "publishing": {
         "status": "not_posted",
