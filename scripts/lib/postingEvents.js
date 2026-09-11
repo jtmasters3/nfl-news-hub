@@ -508,3 +508,106 @@ export function applyPostingAmbiguousEvent(state, payload) {
     }
   );
 }
+
+/**
+ * Manual, human-attested recovery from an ambiguous Buffer publish attempt
+ * where the operator has independently verified — outside this system,
+ * e.g. against Buffer's own dashboard and the destination platform directly
+ * — that no external post was actually created. This is the ONLY function
+ * in the codebase that can ever move a record's top-level status from
+ * "posting" back to "approved" — and it deliberately does NOT go through
+ * transition()/TRANSITIONS at all (unlike every status-changing event
+ * above). TRANSITIONS has no "posting" -> "approved" edge and none is added
+ * here; canTransition("posting", "approved") remains false forever. The
+ * recovery is reachable ONLY through this function's own seven-part gate
+ * below, making it structurally impossible for any generic/future caller of
+ * transition() to reach the same state change by accident.
+ *
+ * Every fact this function inspects must independently hold: the exact
+ * claim that is being recovered, the exact provider, the exact durable
+ * checkpoint that was reached, and the absence of any known Buffer post id
+ * (a KNOWN post id means the existing reconciliation path — never this
+ * event — is the correct recovery mechanism, since "confirmed not posted"
+ * would contradict having a real post identifier on record). This makes the
+ * recovery unreachable from "posted", from a non-ambiguous posting state,
+ * from a mismatched claim, or from any other story's record.
+ *
+ * Never silently erases the prior attempt: every piece of evidence about it
+ * is archived into publishing.prior_attempts[] before any live field is
+ * reset, and the human attestation itself (who/when/why) is recorded
+ * alongside it permanently.
+ * @param {object} state
+ * @param {{story_id: string, claim_id: string, confirmed_by: string, confirmed_at: string, evidence_note: string}} payload
+ */
+export function applyPostingManuallyConfirmedNotPostedEvent(state, payload) {
+  const { story_id, claim_id, confirmed_by, confirmed_at, evidence_note } = payload;
+  const resolved = resolveCanonicalId(state, story_id);
+  if (!resolved.ok) return { state, ok: false, error: resolved.error };
+  if (!resolved.record) return { state, ok: false, error: "not_found" };
+
+  const record = resolved.record;
+  const feed = record.publishing.instagram.feed;
+  const priorAttempts = Array.isArray(record.publishing.prior_attempts) ? record.publishing.prior_attempts : [];
+
+  // Idempotency: an EXACT replay (same claim_id + same confirmed_at,
+  // already archived) is a safe no-op — never appends a second entry, never
+  // re-derives the state, just re-confirms what already happened.
+  const alreadyArchived = priorAttempts.some(
+    (a) => a.claim_id === claim_id && a.manual_confirmation?.confirmed_at === confirmed_at && a.manual_confirmation?.result === "confirmed_not_posted"
+  );
+  if (alreadyArchived) {
+    return { state, ok: true, story_id: resolved.story_id, record, idempotentReplay: true };
+  }
+
+  // From here, every check must hold simultaneously — any mismatch means
+  // this is NOT a safe replay of an already-completed recovery, so it is
+  // rejected outright rather than guessed at.
+  if (record.status !== "posting") return { state, ok: false, error: `invalid_state:${record.status}` };
+  if (record.publishing.status !== "posting") return { state, ok: false, error: `invalid_state:${record.publishing.status}` };
+  if (feed.status !== "ambiguous") return { state, ok: false, error: `invalid_feed_state:${feed.status}` };
+  if (!record.publishing.claim || record.publishing.claim.claim_id !== claim_id) return { state, ok: false, error: "claim_mismatch" };
+  if (feed.provider !== "buffer") return { state, ok: false, error: "wrong_provider" };
+  if (!isNonEmptyString(feed.publish_attempted_at)) return { state, ok: false, error: "publish_attempted_at_missing" };
+  if (isNonEmptyString(feed.buffer?.post_id)) return { state, ok: false, error: "buffer_post_id_known" };
+  if (!isNonEmptyString(confirmed_by)) return { state, ok: false, error: "confirmed_by_required" };
+  if (!isNonEmptyString(confirmed_at) || !Number.isFinite(Date.parse(confirmed_at))) return { state, ok: false, error: "confirmed_at_invalid" };
+  if (!isNonEmptyString(evidence_note)) return { state, ok: false, error: "evidence_note_required" };
+
+  const archivedAttempt = {
+    provider: feed.provider ?? null,
+    claim_id: record.publishing.claim.claim_id ?? null,
+    claimed_at: record.publishing.claim.claimed_at ?? null,
+    publish_attempted_at: feed.publish_attempted_at ?? null,
+    last_http_outcome: feed.last_http_outcome ?? null,
+    feed_status: feed.status ?? null,
+    caption_used: feed.caption_used ?? null,
+    jpeg_url: feed.jpeg_url ?? null,
+    storage_key: feed.storage_key ?? null,
+    buffer_post_id: feed.buffer?.post_id ?? null,
+    buffer_status: feed.buffer?.status ?? null,
+    manual_confirmation: {
+      confirmed_by,
+      confirmed_at,
+      evidence_note,
+      result: "confirmed_not_posted",
+    },
+  };
+
+  const updated = {
+    ...record,
+    status: "approved",
+    publishing: {
+      ...clonePublishing(record),
+      status: "not_posted",
+      claim: null,
+      prior_attempts: [...priorAttempts, archivedAttempt],
+      instagram: {
+        ...record.publishing.instagram,
+        feed: { ...feed, status: "not_posted", publish_attempted_at: null, buffer: null },
+      },
+    },
+    updated_at: new Date().toISOString(),
+  };
+
+  return { state: { ...state, stories: { ...state.stories, [resolved.story_id]: updated } }, ok: true, story_id: resolved.story_id, record: updated };
+}
