@@ -1,0 +1,93 @@
+name: Auto-prepare social content
+
+# Autonomous PREPARATION of AT MOST ONE queued social record per run —
+# artwork generation, caption generation, validation, and (only if every
+# existing readiness/validation requirement passes) automatic approval via
+# the EXISTING production approval-decision mechanism. This workflow's job
+# script (scripts/social/auto-prepare-social.js) is a thin selection +
+# delegation layer ONLY:
+#   - artwork/caption generation is delegated entirely to the SAME,
+#     unmodified scripts/social-worker/process-one.js a human operator
+#     already runs manually today (invoked here as a real child process,
+#     never re-implemented);
+#   - the approval decision itself is delegated entirely to the SAME
+#     production decideApproval()/approval-decide state machine a human
+#     already uses via approval-console.js, with a distinguishing actor
+#     ("aggregate-auto-approver") so the audit trail makes automatic
+#     decisions obvious.
+#
+# This workflow does NOT publish anything. It NEVER calls Buffer, NEVER
+# calls Meta, NEVER acquires a posting claim, and NEVER persists
+# publish_attempted — publishing remains entirely the job of the separate,
+# already-proven, already-scheduled auto-publish-approved-feed.yml /
+# auto-publish-approved-story.yml workflows, which pick up anything this
+# workflow approves on their own existing (external-dispatch-driven)
+# cadence.
+#
+# ==========================================================================
+# NO SCHEDULE TRIGGER — workflow_dispatch ONLY, deliberately, for now
+# ==========================================================================
+# Mirrors auto-publish-approved-story.yml's own precedent exactly:
+# autonomous/unattended preparation has not been authorized to run on a
+# schedule yet. This workflow exists so a human can manually dry-run
+# (default) or, with explicit "live" input, manually prepare (and possibly
+# auto-approve) exactly one candidate on demand. cron-job.org will
+# eventually call this workflow's workflow_dispatch endpoint externally,
+# exactly like it already does for the Feed/Story publishers and Buffer
+# reconciliation — that external cron is a SEPARATE, later, explicitly
+# authorized step, not part of this change.
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "dry-run (default, makes zero mutations) or live (may generate artwork/caption and auto-approve at most one record)"
+        required: false
+        default: "dry-run"
+        type: choice
+        options:
+          - dry-run
+          - live
+
+permissions:
+  contents: read
+
+# Prevents two overlapping runs from both attempting to claim/generate for
+# the same or different candidates at the same time — a second safety layer
+# on top of (never a replacement for) the Worker's own exclusive Durable
+# Object artwork/caption claims. cancel-in-progress is deliberately false:
+# artwork generation can take many minutes, and a new trigger arriving
+# mid-generation must queue behind the active run, never cancel it.
+concurrency:
+  group: auto-prepare-social
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    # Codex artwork + caption generation can each take several minutes and
+    # may retry up to 3 attempts internally (see generateWithRetries.js) —
+    # a generous ceiling well above any single expected run, so a run is
+    # only ever killed by this if something is genuinely stuck, not because
+    # generation is legitimately still working.
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - run: npm install
+
+      - name: Select and (dry-run or live) prepare + auto-approve at most one social record
+        env:
+          AGGREGATE_ARTWORK_API_TOKEN: ${{ secrets.AGGREGATE_ARTWORK_API_TOKEN }}
+          # Non-secret — the Worker's own public URL, required by
+          # process-one.js (only the live mode path ever spawns it; dry-run
+          # makes no Worker call).
+          ARTWORK_WORKER_BASE_URL: https://aggregate-artwork-bridge.jtmasters3.workers.dev
+          # Consumed by this script's own mode resolution. GITHUB_EVENT_NAME
+          # is always "workflow_dispatch" here since there is no schedule
+          # trigger.
+          INPUT_MODE: ${{ inputs.mode }}
+        run: node scripts/social/auto-prepare-social.js
