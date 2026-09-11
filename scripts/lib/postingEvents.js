@@ -633,3 +633,99 @@ export function applyPostingManuallyConfirmedNotPostedEvent(state, payload) {
 
   return { state: { ...state, stories: { ...state.stories, [resolved.story_id]: updated } }, ok: true, story_id: resolved.story_id, record: updated };
 }
+
+/**
+ * Recovery from a PROVEN definite posting failure (top-level status
+ * "failed", reached only via applyPostingFailedEvent when the Buffer
+ * publisher's classifier already proved — via a typed GraphQL error such as
+ * InvalidInputError, or a 401/403 — that no post was ever created). Unlike
+ * applyPostingManuallyConfirmedNotPostedEvent, this event requires NO human
+ * external attestation (no evidence_note describing a Buffer-dashboard/
+ * Instagram check) — the proof already exists durably in feed.last_http_outcome
+ * by construction, since "status: failed" is only reachable through that one
+ * classifier-driven path. `reason` records WHY the failure is being reset
+ * (e.g. "proven_buffer_input_validation_failure"), for audit purposes only —
+ * it is never inspected as a precondition, exactly like evidence_note isn't
+ * in the sibling function above.
+ *
+ * Deliberately does NOT go through transition()/TRANSITIONS, exactly like
+ * applyPostingManuallyConfirmedNotPostedEvent — TRANSITIONS' only edge out of
+ * "failed" is ["awaiting_approval"] (the artwork/caption/validation pipeline's
+ * "send back for human re-review" edge), which is the WRONG target here: a
+ * posting-stage failure never invalidates the already-approved caption/
+ * artwork, so recovery must return directly to "approved", an edge
+ * canTransition("failed", "approved") never gains and this function never
+ * uses transition() to reach.
+ *
+ * Never silently erases the failed attempt: archived into
+ * publishing.prior_attempts[] before any live field is reset, exactly like
+ * the ambiguous-recovery sibling. last_error is deliberately left untouched
+ * — the existing codebase convention (see approvalEvents.js's own doc
+ * comments) treats last_error as a permanent historical breadcrumb that no
+ * recovery/transition event ever clears.
+ * @param {object} state
+ * @param {{story_id: string, claim_id: string, confirmed_by: string, confirmed_at: string, reason: string}} payload
+ */
+export function applyPostingFailureResetEvent(state, payload) {
+  const { story_id, claim_id, confirmed_by, confirmed_at, reason } = payload;
+  const resolved = resolveCanonicalId(state, story_id);
+  if (!resolved.ok) return { state, ok: false, error: resolved.error };
+  if (!resolved.record) return { state, ok: false, error: "not_found" };
+
+  const record = resolved.record;
+  const feed = record.publishing.instagram.feed;
+  const priorAttempts = Array.isArray(record.publishing.prior_attempts) ? record.publishing.prior_attempts : [];
+
+  // Idempotency: an EXACT replay (same claim_id + same confirmed_at +
+  // same reason, already archived) is a safe no-op.
+  const alreadyArchived = priorAttempts.some(
+    (a) => a.claim_id === claim_id && a.failure_reset?.confirmed_at === confirmed_at && a.failure_reset?.reason === reason
+  );
+  if (alreadyArchived) {
+    return { state, ok: true, story_id: resolved.story_id, record, idempotentReplay: true };
+  }
+
+  if (record.status !== "failed") return { state, ok: false, error: `invalid_state:${record.status}` };
+  if (record.publishing.status !== "posting") return { state, ok: false, error: `invalid_state:${record.publishing.status}` };
+  if (feed.status !== "failed") return { state, ok: false, error: `invalid_feed_state:${feed.status}` };
+  if (!record.publishing.claim || record.publishing.claim.claim_id !== claim_id) return { state, ok: false, error: "claim_mismatch" };
+  if (feed.provider !== "buffer") return { state, ok: false, error: "wrong_provider" };
+  if (!isNonEmptyString(feed.publish_attempted_at)) return { state, ok: false, error: "publish_attempted_at_missing" };
+  if (isNonEmptyString(feed.buffer?.post_id)) return { state, ok: false, error: "buffer_post_id_known" };
+  if (!isNonEmptyString(confirmed_by)) return { state, ok: false, error: "confirmed_by_required" };
+  if (!isNonEmptyString(confirmed_at) || !Number.isFinite(Date.parse(confirmed_at))) return { state, ok: false, error: "confirmed_at_invalid" };
+  if (!isNonEmptyString(reason)) return { state, ok: false, error: "reason_required" };
+
+  const archivedAttempt = {
+    provider: feed.provider ?? null,
+    claim_id: record.publishing.claim.claim_id ?? null,
+    claimed_at: record.publishing.claim.claimed_at ?? null,
+    publish_attempted_at: feed.publish_attempted_at ?? null,
+    last_http_outcome: feed.last_http_outcome ?? null,
+    feed_status: feed.status ?? null,
+    caption_used: feed.caption_used ?? null,
+    jpeg_url: feed.jpeg_url ?? null,
+    storage_key: feed.storage_key ?? null,
+    buffer_post_id: feed.buffer?.post_id ?? null,
+    buffer_status: feed.buffer?.status ?? null,
+    failure_reset: { confirmed_by, confirmed_at, reason },
+  };
+
+  const updated = {
+    ...record,
+    status: "approved",
+    publishing: {
+      ...clonePublishing(record),
+      status: "not_posted",
+      claim: null,
+      prior_attempts: [...priorAttempts, archivedAttempt],
+      instagram: {
+        ...record.publishing.instagram,
+        feed: { ...feed, status: "not_posted", publish_attempted_at: null, buffer: null },
+      },
+    },
+    updated_at: new Date().toISOString(),
+  };
+
+  return { state: { ...state, stories: { ...state.stories, [resolved.story_id]: updated } }, ok: true, story_id: resolved.story_id, record: updated };
+}

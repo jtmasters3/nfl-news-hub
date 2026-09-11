@@ -14,7 +14,7 @@ import { readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 import { emptyState, ensureRecord } from "../lib/socialState.js";
-import { applyPostingClaimedEvent, applyPostingPublishAttemptedEvent, applyPostingAmbiguousEvent, applyPostingManuallyConfirmedNotPostedEvent } from "../lib/postingEvents.js";
+import { applyPostingClaimedEvent, applyPostingPublishAttemptedEvent, applyPostingAmbiguousEvent, applyPostingFailedEvent, applyPostingManuallyConfirmedNotPostedEvent, applyPostingFailureResetEvent } from "../lib/postingEvents.js";
 import { applyEventByType } from "../social/apply-artwork-event.js";
 
 const cases = [];
@@ -75,13 +75,70 @@ function recoveryPayload(id, overrides = {}) {
   };
 }
 
+function failedBufferState(id) {
+  const state = approvedFeedState(id);
+  const claimed = applyPostingClaimedEvent(state, claimPayload(id));
+  assert.equal(claimed.ok, true, "fixture: posting-claimed must succeed");
+  const attempted = applyPostingPublishAttemptedEvent(claimed.state, { story_id: id, claim_id: "claim-1", publish_attempted_at: "2026-01-01T01:02:00Z" });
+  assert.equal(attempted.ok, true, "fixture: posting-publish-attempted must succeed");
+  const failed = applyPostingFailedEvent(attempted.state, { story_id: id, claim_id: "claim-1", message: "Invalid post: Instagram posts require a type (post, story, or reel).", http_outcome_category: "mutation_error" });
+  assert.equal(failed.ok, true, "fixture: posting-failed must succeed");
+  return failed.state;
+}
+
+function resetPayload(id, overrides = {}) {
+  return {
+    story_id: id,
+    claim_id: "claim-1",
+    confirmed_by: "operator-jt",
+    confirmed_at: "2026-01-01T02:00:00Z",
+    reason: "proven_buffer_input_validation_failure",
+    ...overrides,
+  };
+}
+
 // ---------------------------------------------------------------------------
-// 5. workflow event-type allowlist contains the new event
+// 5. workflow event-type allowlist contains the new events
 // ---------------------------------------------------------------------------
 
 test("5. the GitHub Actions workflow's repository_dispatch types list includes posting-manually-confirmed-not-posted", async () => {
   const yaml = await readFile(WORKFLOW_PATH, "utf-8");
   assert.match(yaml, /posting-manually-confirmed-not-posted/, "the workflow's types: allowlist must include the new event, or a real dispatch would never even trigger the workflow");
+});
+
+test("5b. the GitHub Actions workflow's repository_dispatch types list includes posting-failure-reset", async () => {
+  const yaml = await readFile(WORKFLOW_PATH, "utf-8");
+  assert.match(yaml, /posting-failure-reset/, "the workflow's types: allowlist must include the new event, or a real dispatch would never even trigger the workflow");
+});
+
+// ---------------------------------------------------------------------------
+// posting-failure-reset routing
+// ---------------------------------------------------------------------------
+
+test("7-1/2. posting-failure-reset is accepted by applyEventByType and routes to applyPostingFailureResetEvent — not the 'unknown event type' null branch", async () => {
+  const state = failedBufferState("s1");
+  const viaDispatch = await applyEventByType(state, "posting-failure-reset", resetPayload("s1"));
+  assert.notEqual(viaDispatch, null, "must not fall through to the unknown-event-type branch");
+  assert.equal(viaDispatch.ok, true);
+
+  const viaDirectReducer = applyPostingFailureResetEvent(state, resetPayload("s1"));
+  assert.deepEqual(viaDispatch.record, viaDirectReducer.record, "routing through applyEventByType must produce byte-identical output to calling the reducer directly");
+});
+
+test("7-3. an exact replay of posting-failure-reset through applyEventByType remains idempotent", async () => {
+  const state = failedBufferState("s1");
+  const first = await applyEventByType(state, "posting-failure-reset", resetPayload("s1"));
+  assert.equal(first.ok, true);
+  const second = await applyEventByType(first.state, "posting-failure-reset", resetPayload("s1"));
+  assert.equal(second.ok, true);
+  assert.equal(second.idempotentReplay, true);
+});
+
+test("7-4. a wrong claim_id fails posting-failure-reset through applyEventByType exactly like the direct reducer call", async () => {
+  const state = failedBufferState("s1");
+  const result = await applyEventByType(state, "posting-failure-reset", resetPayload("s1", { claim_id: "wrong-claim" }));
+  assert.equal(result.ok, false);
+  assert.equal(result.error, "claim_mismatch");
 });
 
 // ---------------------------------------------------------------------------
