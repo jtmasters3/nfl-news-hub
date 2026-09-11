@@ -86738,10 +86738,10 @@
     },
     "3287b40b-d88e-44cb-a2d7-c11c97844664": {
       "story_id": "3287b40b-d88e-44cb-a2d7-c11c97844664",
-      "status": "posting",
+      "status": "approved",
       "merged_into": null,
       "created_at": "2026-09-10T01:20:33.045Z",
-      "updated_at": "2026-09-11T01:16:23.303Z",
+      "updated_at": "2026-09-11T02:37:36.028Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -86829,10 +86829,10 @@
         "created_at": "2026-09-10T02:40:03.807Z"
       },
       "publishing": {
-        "status": "posting",
+        "status": "not_posted",
         "instagram": {
           "feed": {
-            "status": "ambiguous",
+            "status": "not_posted",
             "container_id": null,
             "media_id": null,
             "published_at": null,
@@ -86840,8 +86840,9 @@
             "storage_key": "social-artwork-jpeg/3287b40b-d88e-44cb-a2d7-c11c97844664.jpg",
             "jpeg_url": "https://pub-1705b19e159c4434ba94af4ae6799f97.r2.dev/social-artwork-jpeg/3287b40b-d88e-44cb-a2d7-c11c97844664.jpg",
             "caption_used": "The Patriots took a 7-0 lead on a 2-yard touchdown pass from Drake Maye. The score marked the first touchdown of the 2026 season.\n\nSource: Pro Football Talk\n\n#NFL #Patriots",
-            "publish_attempted_at": "2026-09-11T01:15:48.113Z",
-            "last_http_outcome": "unknown"
+            "publish_attempted_at": null,
+            "last_http_outcome": "unknown",
+            "buffer": null
           },
           "story": {
             "status": "not_posted",
@@ -86856,13 +86857,28 @@
           "post_url": null
         },
         "posted_at": null,
-        "claim": {
-          "claim_id": "38c657d9-68c2-44fa-b518-f38e0e02e2d5",
-          "processor_id": "unknown-processor",
-          "claimed_at": "2026-09-11T01:15:23.777Z",
-          "claim_expires_at": "2026-09-11T02:05:23.777Z",
-          "retry_count": 0
-        }
+        "claim": null,
+        "prior_attempts": [
+          {
+            "provider": "buffer",
+            "claim_id": "38c657d9-68c2-44fa-b518-f38e0e02e2d5",
+            "claimed_at": "2026-09-11T01:15:23.777Z",
+            "publish_attempted_at": "2026-09-11T01:15:48.113Z",
+            "last_http_outcome": "unknown",
+            "feed_status": "ambiguous",
+            "caption_used": "The Patriots took a 7-0 lead on a 2-yard touchdown pass from Drake Maye. The score marked the first touchdown of the 2026 season.\n\nSource: Pro Football Talk\n\n#NFL #Patriots",
+            "jpeg_url": "https://pub-1705b19e159c4434ba94af4ae6799f97.r2.dev/social-artwork-jpeg/3287b40b-d88e-44cb-a2d7-c11c97844664.jpg",
+            "storage_key": "social-artwork-jpeg/3287b40b-d88e-44cb-a2d7-c11c97844664.jpg",
+            "buffer_post_id": null,
+            "buffer_status": null,
+            "manual_confirmation": {
+              "confirmed_by": "operator_manual_verification",
+              "confirmed_at": "2026-09-11T02:37:04.000Z",
+              "evidence_note": "Operator manually verified Buffer Sent contained only two unrelated August 25 posts, Buffer Queue and Drafts were empty, the Drake Maye post was absent from Buffer, and theaggregatenfl Instagram was manually checked and the Drake Maye post was not live.",
+              "result": "confirmed_not_posted"
+            }
+          }
+        ]
       },
       "last_error": {
         "stage": null,
