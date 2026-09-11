@@ -10,9 +10,21 @@
 // >=400px — see scripts/lib/storyArtworkValidation.js), never a single
 // fixed exact width/height the way Feed's 1024x1280 is, so this resolver
 // derives its expected width/height from the record's OWN already-approved
-// artwork.width/artwork.height rather than a hardcoded constant — the
-// point of this validation step is to catch conversion corruption, not to
-// re-assert a target the artwork-approval stage already checked.
+// story_artwork.width/story_artwork.height rather than a hardcoded
+// constant — the point of this validation step is to catch conversion
+// corruption, not to re-assert a target the artwork-approval stage already
+// checked.
+//
+// Canonical field note (confirmed against scripts/lib/artworkEvents.js's
+// applyCompleteEvent and scripts/lib/artworkValidation.js's
+// DESTINATION_RULES — the authoritative, already-existing routing): a
+// Stage-3A destination="story" record's approved asset is written to
+// record.story_artwork, NEVER record.artwork — that field is reserved for
+// destination="feed" (or legacy/no-selection) records and stays
+// "not_created" for a pure Story-destination record. Every read below must
+// use story_artwork; reading record.artwork here was a real production bug
+// (discovered 2026-09-11 against a live approved Story record) fixed in
+// this pass.
 //
 // This module makes NO Buffer/Meta call and performs NO social-state
 // mutation — it only ever downloads a public PNG, transforms it in memory,
@@ -46,7 +58,7 @@ export async function checkExistingApprovedStoryJpeg(record, { fetchImpl } = {})
   if (typeof fetchImpl !== "function") throw new Error("checkExistingApprovedStoryJpeg requires an explicit fetchImpl function — no live-network fallback exists.");
 
   const storyId = record?.story_id;
-  const pngUrl = record?.artwork?.image_url;
+  const pngUrl = record?.story_artwork?.image_url;
   if (!pngUrl || typeof pngUrl !== "string") return { ok: false, error: "artwork_missing" };
   if (!pngUrl.startsWith("https://")) return { ok: false, error: "artwork_not_https" };
 
@@ -86,9 +98,9 @@ export async function resolveApprovedStoryJpeg(record, { fetchImpl, uploadJpeg, 
 
   const { storageKey } = existing;
   const storyId = record.story_id;
-  const pngUrl = record.artwork.image_url;
-  const approvedWidth = record.artwork?.width;
-  const approvedHeight = record.artwork?.height;
+  const pngUrl = record.story_artwork.image_url;
+  const approvedWidth = record.story_artwork?.width;
+  const approvedHeight = record.story_artwork?.height;
   if (!Number.isFinite(approvedWidth) || !Number.isFinite(approvedHeight)) {
     return { ok: false, error: "artwork_dimensions_missing" };
   }

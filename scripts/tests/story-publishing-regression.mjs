@@ -26,6 +26,7 @@ import { validateJpegDerivative } from "../social-worker/lib/jpegDerivative.js";
 import { resolveApprovedStoryJpeg } from "../social-worker/lib/resolveApprovedStoryJpeg.js";
 import { isEligibleForCompletionReconciliation, decideReconciliationAction } from "../social-worker/lib/bufferCompletionReconciler.js";
 import { selectEligibleStory as selectEligibleStoryDestination, resolveRunMode } from "../social/auto-publish-approved-story.js";
+import { runPreflight as runStoryPreflight } from "../social/publish-buffer-story.js";
 
 const cases = [];
 function test(name, fn) {
@@ -45,7 +46,15 @@ function approvedStoryRecord(overrides = {}) {
     status: "approved",
     selection: { destination: "story", slot_id: "story:test", selected_at: "2026-01-01T00:00:00Z" },
     approval: { status: "approved" },
-    artwork: { status: "created", image_url: "https://example.test/social-artwork/story-1.png", width: 1080, height: 1920 },
+    // Canonical shape (confirmed against artworkEvents.js's applyCompleteEvent
+    // and approvalReadiness.js's own already-proven check, and directly
+    // against a real production Story record): a destination="story"
+    // record's approved asset lives in story_artwork; artwork intentionally
+    // stays "not_created" forever for it. validation is the SAME shared
+    // top-level field Feed uses, reused rather than duplicated.
+    artwork: { status: "not_created", image_url: null },
+    story_artwork: { status: "created", image_url: "https://example.test/social-artwork/story-1.png", width: 1080, height: 1920, mime_type: "image/png", size_bytes: 500000 },
+    validation: { status: "passed", passed: true, issues: [] },
     caption: { status: "ready", text: "A caption.\n\nSource: Test", hashtags: ["#NFL"] },
     publishing: { status: "not_posted" },
     ...overrides,
@@ -246,7 +255,7 @@ test("11. validateJpegDerivative accepts a genuine 9:16 JPEG when Story expectat
 });
 
 test("12. resolveApprovedStoryJpeg fails closed with artwork_dimensions_missing when the approved record has no recorded width/height — never guesses 1080x1920", async () => {
-  const record = approvedStoryRecord({ artwork: { status: "created", image_url: "https://example.test/x.png" } });
+  const record = approvedStoryRecord({ story_artwork: { status: "created", image_url: "https://example.test/x.png" } });
   const fetchImpl = async () => { throw new Error("must not be called before dimension check"); };
   const result = await resolveApprovedStoryJpeg(record, { fetchImpl, uploadJpeg: async () => ({ ok: true, publicUrl: "x", storageKey: "y" }) });
   assert.equal(result.ok, false);
@@ -411,7 +420,9 @@ test("26. replaying the exact same posting-claimed event for a Story-destination
     ...state.stories.s1,
     status: "approved",
     selection: { destination: "story", slot_id: "story:test", selected_at: "2026-01-01T00:00:00Z" },
-    artwork: { status: "created", image_url: "https://example.test/x.png", width: 1080, height: 1920 },
+    artwork: { status: "not_created", image_url: null },
+    story_artwork: { status: "created", image_url: "https://example.test/x.png", width: 1080, height: 1920 },
+    validation: { status: "passed", passed: true, issues: [] },
     caption: { ...state.stories.s1.caption, status: "ready", text: "Test caption." },
     approval: { ...state.stories.s1.approval, status: "approved", approved_at: "2026-01-01T00:00:00Z" },
   };
@@ -502,6 +513,164 @@ test("30d. executeBufferFeedPublish's default behavior (no validatePreconditions
 test("30e. mapBufferWorkerOutcomeToEvent is destination-agnostic — reused verbatim for Story, exactly as it already was for Feed, with no Story-specific branch anywhere in it", () => {
   const mapped = mapBufferWorkerOutcomeToEvent({ storyId: "s1", claimId: "c1", channelId: CHANNEL_ID, workerResponse: { ok: true, outcome: "definite_success", data: { status: "sent", id: "p1", sentAt: "2026-01-01T00:00:00Z" } }, now: "2026-01-01T00:00:00Z" });
   assert.equal(mapped.eventType, "posting-completed");
+});
+
+// ---------------------------------------------------------------------------
+// 31-40. Story artwork-field defect regression (2026-09-11): reproduces the
+// EXACT production shape discovered against a real approved Story record —
+// record.artwork.status === "not_created" (Feed's field, untouched for a
+// pure Story-destination record) while record.story_artwork holds the real
+// valid 9:16 approved asset. Every one of these tests would have FAILED
+// against the pre-fix code (which read record.artwork for Story).
+// ---------------------------------------------------------------------------
+
+function realProductionShapeRecord(overrides = {}) {
+  // Deliberately built independently of approvedStoryRecord()'s own
+  // defaults, spelling out every field explicitly, so this test can never
+  // pass merely because the shared fixture happens to already be correct —
+  // it must match the real discovered production shape on its own terms.
+  return {
+    story_id: "story-1",
+    status: "approved",
+    selection: { destination: "story", slot_id: "story:test", selected_at: "2026-01-01T00:00:00Z" },
+    approval: { status: "approved" },
+    artwork: { status: "not_created", image_url: null, created_at: null, provider: null },
+    story_artwork: {
+      status: "created",
+      image_url: "https://pub-1705b19e159c4434ba94af4ae6799f97.r2.dev/social-artwork/story-1.png",
+      storage_key: "social-artwork/story-1.png",
+      width: 941,
+      height: 1672,
+      mime_type: "image/png",
+      size_bytes: 2844490,
+      provider: "chatgpt-codex-local",
+      created_at: "2026-09-11T19:23:02.142Z",
+    },
+    validation: { status: "passed", passed: true, issues: [] },
+    caption: { status: "ready", text: "A caption.\n\nSource: Test", hashtags: ["#NFL"] },
+    publishing: { status: "not_posted" },
+    ...overrides,
+  };
+}
+
+test("31. valid Story artwork resolves from story_artwork against the exact discovered production shape (artwork.status=not_created, story_artwork valid)", async () => {
+  const record = realProductionShapeRecord();
+  const fetchImpl = async (url) => {
+    assert.ok(String(url).includes("social-artwork-jpeg-story/"));
+    return { ok: false }; // not yet uploaded — forces the create path below to be reachable, but this test only proves resolution reads the right source
+  };
+  const check = await import("../social-worker/lib/resolveApprovedStoryJpeg.js").then((m) => m.checkExistingApprovedStoryJpeg(record, { fetchImpl }));
+  assert.equal(check.ok, true);
+});
+
+test("32. the Feed artwork field is never read for a destination=story record — validateBufferStoryPublishPreconditions passes even though artwork.status=not_created", () => {
+  const record = realProductionShapeRecord();
+  const result = validateBufferStoryPublishPreconditions(record);
+  assert.equal(result.ok, true, `expected pass, got: ${result.error}`);
+});
+
+test("33. a missing story_artwork entirely fails closed with story_artwork_not_ready — never falls back to record.artwork", () => {
+  const record = realProductionShapeRecord({ story_artwork: undefined });
+  const result = validateBufferStoryPublishPreconditions(record);
+  assert.equal(result.ok, false);
+  assert.equal(result.error, "story_artwork_not_ready");
+});
+
+test("34. story_artwork present but not yet 'created' (e.g. still artwork_requested) fails closed", () => {
+  const record = realProductionShapeRecord({ story_artwork: { status: "artwork_requested" } });
+  const result = validateBufferStoryPublishPreconditions(record);
+  assert.equal(result.ok, false);
+  assert.equal(result.error, "story_artwork_not_ready");
+});
+
+test("35. invalid Story dimensions (aspect ratio far from 9:16) fail closed with story_artwork_aspect_ratio_invalid", () => {
+  const record = realProductionShapeRecord({ story_artwork: { ...realProductionShapeRecord().story_artwork, width: 1024, height: 1280 } });
+  const result = validateBufferStoryPublishPreconditions(record);
+  assert.equal(result.ok, false);
+  assert.equal(result.error, "story_artwork_aspect_ratio_invalid");
+});
+
+test("35b. Story dimensions below the minimum floor fail closed with story_artwork_dimensions_invalid", () => {
+  const record = realProductionShapeRecord({ story_artwork: { ...realProductionShapeRecord().story_artwork, width: 90, height: 160 } });
+  const result = validateBufferStoryPublishPreconditions(record);
+  assert.equal(result.ok, false);
+  assert.equal(result.error, "story_artwork_dimensions_invalid");
+});
+
+test("35c. a non-HTTPS story_artwork.image_url fails closed with story_artwork_url_invalid", () => {
+  const record = realProductionShapeRecord({ story_artwork: { ...realProductionShapeRecord().story_artwork, image_url: "http://example.test/x.png" } });
+  const result = validateBufferStoryPublishPreconditions(record);
+  assert.equal(result.ok, false);
+  assert.equal(result.error, "story_artwork_url_invalid");
+});
+
+test("36. Story artwork that failed/was never validated (record.validation.passed !== true) fails closed with story_artwork_validation_not_passed", () => {
+  const record = realProductionShapeRecord({ validation: { status: "failed", passed: false, issues: ["aspect_ratio_out_of_range:0.999"] } });
+  const result = validateBufferStoryPublishPreconditions(record);
+  assert.equal(result.ok, false);
+  assert.equal(result.error, "story_artwork_validation_not_passed");
+});
+
+test("37. resolveApprovedStoryJpeg downloads the PNG from story_artwork.image_url, never record.artwork.image_url, when no derivative exists yet", async () => {
+  const record = realProductionShapeRecord();
+  let downloadedUrl = null;
+  const fetchImpl = async (url) => {
+    if (String(url).includes("social-artwork-jpeg-story/")) return { ok: false }; // reuse-check: nothing exists yet
+    downloadedUrl = String(url);
+    throw new Error("stop before actually decoding a fake PNG — this test only proves WHICH url is fetched");
+  };
+  await resolveApprovedStoryJpeg(record, { fetchImpl, uploadJpeg: async () => ({ ok: true, publicUrl: "x", storageKey: "y" }) }).catch(() => {});
+  assert.equal(downloadedUrl, record.story_artwork.image_url);
+});
+
+test("38. publish-buffer-story.js's runPreflight reports the real Story PNG URL and dimensions from story_artwork, not null", async () => {
+  const record = realProductionShapeRecord();
+  const fetchState = async () => ({ stories: { "story-1": record } });
+  const fetchImpl = async () => ({ ok: false }); // JPEG doesn't exist yet — irrelevant to this assertion
+  const report = await runStoryPreflight({ storyId: "story-1", fetchState, fetchImpl });
+  assert.equal(report.approved_png_url, "https://pub-1705b19e159c4434ba94af4ae6799f97.r2.dev/social-artwork/story-1.png");
+  assert.equal(report.approved_width, 941);
+  assert.equal(report.approved_height, 1672);
+  assert.equal(report.preconditionsPass, true);
+});
+
+test("39. a Story artwork-precondition failure stops execution BEFORE any posting claim is acquired", async () => {
+  const world = makeCommittedWorld(realProductionShapeRecord({ story_artwork: undefined }));
+  const { deps, log } = mockDeps({ world });
+  const result = await executeBufferFeedPublish(deps);
+  assert.equal(result.ok, false);
+  assert.equal(result.step, "precondition");
+  assert.equal(result.error, "story_artwork_not_ready");
+  assert.ok(!log.includes("claimPosting"), "no posting claim may ever be acquired when Story artwork preconditions fail");
+});
+
+test("40. a Story artwork-precondition failure stops execution BEFORE any Buffer call — publishViaWorker is never invoked", async () => {
+  const world = makeCommittedWorld(realProductionShapeRecord({ validation: { status: "failed", passed: false, issues: [] } }));
+  const { deps, log } = mockDeps({ world });
+  const result = await executeBufferFeedPublish(deps);
+  assert.equal(result.ok, false);
+  assert.equal(result.step, "precondition");
+  assert.ok(!log.includes("publishViaWorker"), "no Buffer call may ever be attempted when Story artwork preconditions fail");
+});
+
+test("41. the actual applyPostingClaimedEvent reducer accepts a Story claim against the exact discovered production shape (artwork.status=not_created, story_artwork valid) — reproduces the fix at the reducer layer, not just the precondition-check layer", () => {
+  let state = emptyState();
+  state = ensureRecord(state, "s1", { status: "new" }).state;
+  const record = {
+    ...state.stories.s1,
+    status: "approved",
+    selection: { destination: "story", slot_id: "story:test", selected_at: "2026-01-01T00:00:00Z" },
+    artwork: { status: "not_created", image_url: null },
+    story_artwork: { status: "created", image_url: "https://example.test/x.png", width: 941, height: 1672 },
+    validation: { status: "passed", passed: true, issues: [] },
+    caption: { ...state.stories.s1.caption, status: "ready", text: "Test caption." },
+    approval: { ...state.stories.s1.approval, status: "approved", approved_at: "2026-01-01T00:00:00Z" },
+  };
+  state = { ...state, stories: { s1: record } };
+  const payload = { story_id: "s1", claim_id: "claim-1", processor_id: "p1", claimed_at: "2026-01-01T01:00:00Z", claim_expires_at: "2026-01-01T01:50:00Z", caption_used: "Test caption.\n\n#NFL" };
+  const result = applyPostingClaimedEvent(state, payload);
+  assert.equal(result.ok, true, `expected the reducer to accept the claim, got: ${result.error}`);
+  assert.equal(result.record.publishing.instagram.story.status, "claimed");
 });
 
 // ---------------------------------------------------------------------------

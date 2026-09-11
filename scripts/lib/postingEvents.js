@@ -157,7 +157,15 @@ export function applyPostingClaimedEvent(state, payload) {
   const destination = record.selection?.destination;
   if (record.approval?.status !== "approved") return { state, ok: false, error: `invalid_state:${record.status}` };
   if (destination !== "feed" && destination !== "story") return { state, ok: false, error: "wrong_destination" };
-  if (record.artwork?.status !== "created") return { state, ok: false, error: "artwork_not_ready" };
+  // A destination="story" record's approved asset lives in
+  // record.story_artwork, never record.artwork (which intentionally stays
+  // "not_created" forever for it — see artworkEvents.js's applyCompleteEvent
+  // and approvalReadiness.js's own already-proven identical check). Reading
+  // the wrong field here was a real bug (found and fixed 2026-09-11 against
+  // a live approved Story record) that would reject every legitimate Story
+  // claim with a false artwork_not_ready.
+  const artworkField = destination === "story" ? "story_artwork" : "artwork";
+  if (record[artworkField]?.status !== "created") return { state, ok: false, error: "artwork_not_ready" };
   if (record.caption?.status !== "ready") return { state, ok: false, error: "caption_not_ready" };
   if (record.publishing?.status !== "not_posted") return { state, ok: false, error: `invalid_state:${record.publishing?.status}` };
 

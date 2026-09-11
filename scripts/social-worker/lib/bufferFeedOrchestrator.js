@@ -50,6 +50,7 @@
 import { assembleInstagramCaption } from "./captionAssembly.js";
 import { waitForDurableCommit } from "./waitForDurableCommit.js";
 import { channelKeyFor } from "../../lib/postingEvents.js";
+import { ASPECT_RATIO_TARGET as STORY_ASPECT_RATIO_TARGET, ASPECT_RATIO_TOLERANCE as STORY_ASPECT_RATIO_TOLERANCE, MIN_DIMENSION as STORY_MIN_DIMENSION } from "../../lib/storyArtworkValidation.js";
 
 /**
  * Pure precondition check — no I/O. Mirrors the exact same checks
@@ -79,6 +80,27 @@ export function validateBufferStoryPublishPreconditions(record) {
   if (record?.selection?.destination !== "story") return { ok: false, error: "wrong_destination" };
   if (record?.publishing?.status === "posted") return { ok: false, error: "already_posted" };
   if (record?.publishing?.status && record.publishing.status !== "not_posted") return { ok: false, error: `invalid_state:${record.publishing.status}` };
+
+  // Story-specific artwork gate (2026-09-11 hardening): a destination="story"
+  // record's approved asset lives in record.story_artwork — NEVER
+  // record.artwork, which stays "not_created" for a pure Story-destination
+  // record by design (see artworkEvents.js's applyCompleteEvent /
+  // artworkValidation.js's DESTINATION_RULES, the authoritative routing).
+  // Fails closed BEFORE any posting claim or Buffer call if that asset
+  // isn't genuinely present, completed, HTTPS, correctly dimensioned, and
+  // already validated — reusing Story's own already-locked ratio/floor
+  // constants (storyArtworkValidation.js) and the validation result already
+  // persisted onto the record by that same existing pipeline, rather than
+  // inventing a second validation standard here.
+  const asset = record?.story_artwork;
+  if (!asset || asset.status !== "created") return { ok: false, error: "story_artwork_not_ready" };
+  if (typeof asset.image_url !== "string" || !asset.image_url.startsWith("https://")) return { ok: false, error: "story_artwork_url_invalid" };
+  if (!Number.isFinite(asset.width) || !Number.isFinite(asset.height)) return { ok: false, error: "story_artwork_dimensions_missing" };
+  if (asset.width < STORY_MIN_DIMENSION || asset.height < STORY_MIN_DIMENSION) return { ok: false, error: "story_artwork_dimensions_invalid" };
+  const ratio = asset.width / asset.height;
+  if (Math.abs(ratio - STORY_ASPECT_RATIO_TARGET) > STORY_ASPECT_RATIO_TOLERANCE) return { ok: false, error: "story_artwork_aspect_ratio_invalid" };
+  if (record?.validation?.passed !== true) return { ok: false, error: "story_artwork_validation_not_passed" };
+
   return { ok: true };
 }
 

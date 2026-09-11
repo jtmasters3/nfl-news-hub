@@ -128,9 +128,9 @@ export async function runPreflight({ storyId, fetchState, fetchImpl }) {
     publishing_status: record.publishing?.status ?? null,
     caption: captionResult.ok ? captionResult.caption : null,
     caption_error: captionResult.ok ? null : captionResult.error,
-    approved_png_url: record.artwork?.image_url ?? null,
-    approved_width: record.artwork?.width ?? null,
-    approved_height: record.artwork?.height ?? null,
+    approved_png_url: record.story_artwork?.image_url ?? null,
+    approved_width: record.story_artwork?.width ?? null,
+    approved_height: record.story_artwork?.height ?? null,
     jpeg: jpegReport,
     channel_id: channelId(),
   };

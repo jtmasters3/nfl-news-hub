@@ -91,7 +91,14 @@ test("1. an approved, Feed-selected, ready record accepts posting-claimed and mo
 });
 
 test("2. a Story-selected record accepts posting-claimed into its own .story channel, never touching .feed", () => {
-  const state = approvedFeedState("s1", { selection: { destination: "story", slot_id: "story:test", selected_at: "2026-01-01T00:00:00Z" } });
+  // A Story-selected record's approved asset lives in story_artwork, never
+  // artwork (which stays "not_created" for it by design) — see
+  // artworkEvents.js's applyCompleteEvent, the authoritative routing.
+  const state = approvedFeedState("s1", {
+    selection: { destination: "story", slot_id: "story:test", selected_at: "2026-01-01T00:00:00Z" },
+    artwork: { status: "not_created", image_url: null },
+    story_artwork: { status: "created", image_url: "https://example.test/social-artwork/x.png", width: 1080, height: 1920 },
+  });
   const result = applyPostingClaimedEvent(state, claimPayload("s1"));
   assert.equal(result.ok, true);
   assert.equal(result.record.status, "posting");
