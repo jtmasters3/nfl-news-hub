@@ -43,7 +43,7 @@ export async function main({ fetchState = createFreshStateFetcher(), bridge } = 
 
   const state = await fetchState();
   const eligibleCount = Object.values(state?.stories ?? {}).filter(isEligibleForCompletionReconciliation).length;
-  console.log(`Eligible records (publishing.status=posting, feed.status=buffer_post_created, provider=buffer, buffer_post_id present): ${eligibleCount}`);
+  console.log(`Eligible records (publishing.status=posting, feed/story.status=buffer_post_created, provider=buffer, buffer_post_id present): ${eligibleCount}`);
 
   if (eligibleCount === 0) {
     console.log("Nothing to reconcile.");

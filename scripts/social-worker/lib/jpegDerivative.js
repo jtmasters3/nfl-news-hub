@@ -29,6 +29,19 @@ export function deriveJpegStorageKey(storyId) {
 }
 
 /**
+ * The Story sibling of deriveJpegStorageKey() above — a separate key prefix
+ * (never the same key a story_id's Feed derivative would use), matching the
+ * Worker's own separate /social/artwork/jpeg-story upload route and
+ * storage key (see cloudflare-worker's postingJpegUploadStory.js).
+ */
+export function deriveStoryJpegStorageKey(storyId) {
+  if (typeof storyId !== "string" || !STORAGE_KEY_SAFE_ID.test(storyId)) {
+    throw new Error(`deriveStoryJpegStorageKey: unsafe or empty story_id: ${JSON.stringify(storyId)}`);
+  }
+  return `social-artwork-jpeg-story/${storyId}.jpg`;
+}
+
+/**
  * Alpha-channel inspection — the load-bearing safety check before any
  * flatten/fill decision is made. A PNG with no alpha channel at all, or an
  * alpha channel that is fully opaque everywhere (min value 255 across the
@@ -245,7 +258,11 @@ const JPEG_MAGIC_BYTES = Buffer.from([0xff, 0xd8, 0xff]);
  * @param {Buffer} pngBuffer - the exact source the JPEG was derived from
  * @param {{expectedWidth?: number, expectedHeight?: number}} [opts]
  */
-export async function validateJpegDerivative(jpegBuffer, pngBuffer, { expectedWidth = 1024, expectedHeight = 1280 } = {}) {
+export async function validateJpegDerivative(
+  jpegBuffer,
+  pngBuffer,
+  { expectedWidth = 1024, expectedHeight = 1280, expectedAspectRatio = ASPECT_RATIO_TARGET, aspectRatioTolerance = ASPECT_RATIO_TOLERANCE, minDimension = MIN_DIMENSION } = {}
+) {
   const issues = [];
 
   if (!jpegBuffer || jpegBuffer.length === 0) {
@@ -268,10 +285,10 @@ export async function validateJpegDerivative(jpegBuffer, pngBuffer, { expectedWi
   }
   if (metadata.width && metadata.height) {
     const ratio = metadata.width / metadata.height;
-    if (Math.abs(ratio - ASPECT_RATIO_TARGET) > ASPECT_RATIO_TOLERANCE) {
+    if (Math.abs(ratio - expectedAspectRatio) > aspectRatioTolerance) {
       issues.push(`aspect_ratio_out_of_range:${ratio.toFixed(3)}`);
     }
-    if (metadata.width < MIN_DIMENSION || metadata.height < MIN_DIMENSION) {
+    if (metadata.width < minDimension || metadata.height < minDimension) {
       issues.push("insane_dimensions");
     }
   }

@@ -232,7 +232,28 @@ function emptyRecord(storyId, status) {
           last_reconciled_at: null,
           buffer: { post_id: null, channel_id: null, status: null, due_at: null, sent_at: null }, // Buffer-specific raw fields, additive audit detail only
         },
-        story: { status: "not_posted", container_id: null, media_id: null, published_at: null },
+        // Story-posting stage: additive only, mirroring instagram.feed's own
+        // shape field-for-field (same status vocabulary, same provider-
+        // neutral vs Buffer-specific split) — no second schema, no second
+        // reducer design. Was previously just {status, container_id,
+        // media_id, published_at}, sufficient only because nothing ever
+        // wrote to it; postingEvents.js's Story-aware functions now do.
+        story: {
+          status: "not_posted", // "not_posted" | "buffer_post_created" | "publish_attempted" | "posted" | "failed" | "ambiguous"
+          provider: null, // "meta" | "buffer" | null (unset/legacy)
+          storage_key: null,
+          jpeg_url: null,
+          caption_used: null,
+          container_id: null,
+          container_created_at: null,
+          publish_attempted_at: null,
+          media_id: null,
+          permalink: null,
+          published_at: null,
+          last_http_outcome: null,
+          last_reconciled_at: null,
+          buffer: { post_id: null, channel_id: null, status: null, due_at: null, sent_at: null },
+        },
       },
       facebook: { status: "not_posted", post_id: null, post_url: null },
       posted_at: null,

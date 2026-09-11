@@ -137,6 +137,21 @@ export function createBufferPostingBridge({ fetchImpl, workerBaseUrl, workerApiT
     },
 
     /**
+     * The Story sibling of publishViaWorker() above — identical shape and
+     * behavior, hitting the Worker's separate /publish/buffer/story route
+     * (which calls publishStoryPost()/createStoryPost() server-side, never
+     * publishFeedPost()/createPost()). Kept as its own method rather than a
+     * parameter on publishViaWorker so a caller can never accidentally
+     * target the wrong route by passing the wrong flag.
+     * @param {{storyId: string, channelId: string, caption: string, imageUrl: string, publishAttemptCheckpoint: {publishAttemptedAt: string}}} args
+     */
+    async publishViaWorkerStory({ storyId, channelId, caption, imageUrl, publishAttemptCheckpoint }) {
+      const result = await postJson("/publish/buffer/story", { storyId, channelId, caption, imageUrl, publishAttemptCheckpoint });
+      if (result.__transportError) return { ok: false, error: { category: result.error, message: result.message } };
+      return result;
+    },
+
+    /**
      * Read-only reconciliation lookup. Fires no dispatch itself — the
      * caller is responsible for persisting whatever outcome this reports
      * via recordPostingResult, keeping "decide" and "persist" separate.
@@ -166,6 +181,39 @@ export function createBufferPostingBridge({ fetchImpl, workerBaseUrl, workerApiT
       let res;
       try {
         res = await fetchImpl(`${workerBaseUrl}/social/artwork/jpeg`, {
+          method: "POST",
+          headers: { authorization: `Bearer ${workerApiToken}` },
+          body: form,
+        });
+      } catch (err) {
+        return { ok: false, error: "network_error", message: err?.message ?? "network error" };
+      }
+      let result;
+      try {
+        result = await res.json();
+      } catch {
+        return { ok: false, error: "invalid_response", httpStatus: res.status };
+      }
+      if (!result.uploaded) return { ok: false, error: result.reason ?? "upload_failed", httpStatus: res.status };
+      return { ok: true, publicUrl: result.publicUrl, storageKey: result.storageKey, reused: !!result.reused };
+    },
+
+    /**
+     * The Story sibling of uploadJpeg() above — identical shape, uploads to
+     * the Worker's separate /social/artwork/jpeg-story route (9:16
+     * ratio/floor validation server-side, a separate storage key prefix
+     * from Feed's). Not claim-gated, same as uploadJpeg — runs before the
+     * posting claim is acquired.
+     * @param {{storyId: string, jpegBuffer: Buffer}} args
+     */
+    async uploadStoryJpeg({ storyId, jpegBuffer }) {
+      const form = new FormData();
+      form.set("story_id", storyId);
+      form.set("jpeg", new Blob([jpegBuffer], { type: "image/jpeg" }), `${storyId}.jpg`);
+
+      let res;
+      try {
+        res = await fetchImpl(`${workerBaseUrl}/social/artwork/jpeg-story`, {
           method: "POST",
           headers: { authorization: `Bearer ${workerApiToken}` },
           body: form,

@@ -1,0 +1,77 @@
+name: Auto-publish approved Story
+
+# Automatic publishing of AT MOST ONE already-approved Instagram Story per
+# run. This workflow's job script
+# (scripts/social/auto-publish-approved-story.js) is a thin selection +
+# delegation layer ONLY — every actual publishing decision (JPEG
+# resolution, precondition re-check, exclusive posting claim,
+# durable-commit confirmation, the single Buffer createPost call, result
+# classification, durable result persistence) lives entirely in the SAME
+# already-proven scripts/social/publish-buffer-story.js this script calls
+# directly, which itself reuses bufferFeedOrchestrator.js's proven
+# executeBufferFeedPublish sequencing. There is no second
+# Buffer-publishing implementation, and no retry logic anywhere in this
+# path.
+#
+# This workflow does NOT approve stories, does NOT create Feed-destination
+# posts, and does NOT wait for Buffer's async "sent" confirmation.
+#
+# ==========================================================================
+# NO SCHEDULE TRIGGER — workflow_dispatch ONLY, deliberately, for now
+# ==========================================================================
+# Unlike the Feed workflow (auto-publish-approved-feed.yml, on a live
+# 10-minute cron), this workflow intentionally has NO `schedule:` trigger.
+# Live Story publishing has not been authorized to run unattended yet — this
+# workflow exists so a human can manually dry-run (default) or, with
+# explicit "live" input, manually publish exactly one approved Story on
+# demand, while automatic/scheduled Story publishing remains disabled
+# pending explicit authorization. Adding a schedule trigger later is a pure
+# YAML change (mirroring the Feed workflow's own `schedule:` block) — no
+# code change is required in auto-publish-approved-story.js, whose
+# resolveRunMode() already handles a future `schedule` event correctly.
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "dry-run (default, makes zero Buffer calls) or live (makes exactly one Buffer createPost call for the selected Story)"
+        required: false
+        default: "dry-run"
+        type: choice
+        options:
+          - dry-run
+          - live
+
+permissions:
+  contents: read
+
+# Prevents two overlapping runs from both attempting to select/publish at
+# the same time — a second safety layer on top of (never a replacement
+# for) the Worker's own exclusive Durable Object posting claim.
+concurrency:
+  group: auto-publish-approved-story
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - run: npm install
+
+      - name: Select and (dry-run or live) publish at most one approved Story
+        env:
+          AGGREGATE_ARTWORK_API_TOKEN: ${{ secrets.AGGREGATE_ARTWORK_API_TOKEN }}
+          # Non-secret — the Worker's own public URL, required by
+          # publish-buffer-story.js's runLive() (only the live mode path
+          # needs it at all; dry-run makes no Worker call).
+          ARTWORK_WORKER_BASE_URL: https://aggregate-artwork-bridge.jtmasters3.workers.dev
+          # Consumed by resolveRunMode() inside the script itself — see this
+          # workflow's own header comment above. GITHUB_EVENT_NAME is always
+          # "workflow_dispatch" here since there is no schedule trigger.
+          INPUT_MODE: ${{ inputs.mode }}
+        run: node scripts/social/auto-publish-approved-story.js

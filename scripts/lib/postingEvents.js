@@ -16,10 +16,11 @@
 // artworkEvents.js/captionEvents.js/approvalEvents.js. The actual Meta/
 // Instagram client is a later, separate stage.
 //
-// Destination scope: this Feed-publishing implementation only ever reads/
-// writes publishing.instagram.feed. publishing.instagram.story and
-// publishing.facebook are untouched by every function below — Story and
-// Facebook publishing are explicitly out of scope here.
+// Destination scope: every function below reads/writes whichever of
+// publishing.instagram.feed / publishing.instagram.story matches the
+// record's own immutable selection.destination, via the channelKeyFor()
+// helper just below — one reducer set, not two. publishing.facebook remains
+// untouched and out of scope here.
 import { resolveCanonicalId, transition, setLastError } from "./socialState.js";
 
 function isNonEmptyString(v) {
@@ -79,18 +80,31 @@ function pickBufferFields(buffer, existing) {
   };
 }
 
-/** Shallow-clones the parts of `publishing` every posting event must preserve unless explicitly patching them. */
+/**
+ * Which of publishing.instagram's two sibling channels a record's posting
+ * events apply to — read directly from the record's own, immutable
+ * selection.destination ("one story -> one destination forever"). Callers
+ * never need to specify this themselves; a legacy record with no
+ * `selection` at all defaults to "feed" for full backward compatibility.
+ */
+export function channelKeyFor(record) {
+  return record.selection?.destination === "story" ? "story" : "feed";
+}
+
+/** Shallow-clones the parts of `publishing` every posting event must preserve unless explicitly patching them. Operates on whichever channel (feed|story) the record is selected for. */
 function clonePublishing(record) {
+  const channelKey = channelKeyFor(record);
   return {
     ...record.publishing,
     instagram: {
       ...record.publishing.instagram,
-      feed: { ...record.publishing.instagram.feed },
+      [channelKey]: { ...record.publishing.instagram[channelKey] },
     },
   };
 }
 
-function patchOnly(state, storyId, record, publishingPatch, feedPatch) {
+function patchOnly(state, storyId, record, publishingPatch, channelPatch) {
+  const channelKey = channelKeyFor(record);
   const updated = {
     ...record,
     publishing: {
@@ -98,7 +112,7 @@ function patchOnly(state, storyId, record, publishingPatch, feedPatch) {
       ...publishingPatch,
       instagram: {
         ...record.publishing.instagram,
-        feed: { ...record.publishing.instagram.feed, ...feedPatch },
+        [channelKey]: { ...record.publishing.instagram[channelKey], ...channelPatch },
       },
     },
     updated_at: new Date().toISOString(),
@@ -140,12 +154,15 @@ export function applyPostingClaimedEvent(state, payload) {
   if (!ALLOWED_PROVIDERS.has(provider)) return { state, ok: false, error: "invalid_provider" };
 
   const record = resolved.record;
+  const destination = record.selection?.destination;
   if (record.approval?.status !== "approved") return { state, ok: false, error: `invalid_state:${record.status}` };
-  if (record.selection?.destination !== "feed") return { state, ok: false, error: "wrong_destination" };
+  if (destination !== "feed" && destination !== "story") return { state, ok: false, error: "wrong_destination" };
   if (record.artwork?.status !== "created") return { state, ok: false, error: "artwork_not_ready" };
   if (record.caption?.status !== "ready") return { state, ok: false, error: "caption_not_ready" };
   if (record.publishing?.status !== "not_posted") return { state, ok: false, error: `invalid_state:${record.publishing?.status}` };
 
+  const channelKey = channelKeyFor(record);
+  const channel = record.publishing.instagram[channelKey];
   const result = transition(state, story_id, "posting", {
     publishing: {
       ...clonePublishing(record),
@@ -153,12 +170,12 @@ export function applyPostingClaimedEvent(state, payload) {
       claim: { claim_id, processor_id, claimed_at, claim_expires_at, retry_count: 0 },
       instagram: {
         ...record.publishing.instagram,
-        feed: {
-          ...record.publishing.instagram.feed,
+        [channelKey]: {
+          ...channel,
           status: "claimed",
           provider,
-          storage_key: storage_key ?? record.publishing.instagram.feed.storage_key,
-          jpeg_url: jpeg_url ?? record.publishing.instagram.feed.jpeg_url,
+          storage_key: storage_key ?? channel.storage_key,
+          jpeg_url: jpeg_url ?? channel.jpeg_url,
           caption_used,
         },
       },
@@ -194,7 +211,7 @@ export function applyPostingContainerCreatedEvent(state, payload) {
   if (!record.publishing.claim || record.publishing.claim.claim_id !== claim_id) return { state, ok: false, error: "claim_mismatch" };
   if (!isNonEmptyString(container_id) || !isNonEmptyString(container_created_at)) return { state, ok: false, error: "invalid_payload" };
 
-  const existing = record.publishing.instagram.feed.container_id;
+  const existing = record.publishing.instagram[channelKeyFor(record)].container_id;
   if (existing === container_id) {
     return { state, ok: true, story_id: resolved.story_id, record, idempotentReplay: true };
   }
@@ -255,7 +272,7 @@ export function applyPostingBufferCreatedEvent(state, payload) {
     return { state, ok: false, error: `invalid_buffer_status:${status ?? "missing"}` };
   }
 
-  const feed = record.publishing.instagram.feed;
+  const feed = record.publishing.instagram[channelKeyFor(record)];
   const existingPostId = feed.buffer?.post_id;
   if (existingPostId && existingPostId !== post_id) {
     return { state, ok: false, error: "buffer_post_id_conflict" };
@@ -304,7 +321,7 @@ export function applyPostingPublishAttemptedEvent(state, payload) {
   if (!record.publishing.claim || record.publishing.claim.claim_id !== claim_id) return { state, ok: false, error: "claim_mismatch" };
   if (!isNonEmptyString(publish_attempted_at)) return { state, ok: false, error: "invalid_payload" };
 
-  const feed = record.publishing.instagram.feed;
+  const feed = record.publishing.instagram[channelKeyFor(record)];
 
   if (usesContainerStep(feed)) {
     if (!isNonEmptyString(container_id)) return { state, ok: false, error: "invalid_payload" };
@@ -381,8 +398,10 @@ export function applyPostingCompletedEvent(state, payload) {
 
   const record = resolved.record;
 
+  const channelKey = channelKeyFor(record);
+
   if (record.status === "posted") {
-    if (record.publishing.instagram.feed.media_id === media_id) {
+    if (record.publishing.instagram[channelKey].media_id === media_id) {
       return { state, ok: true, story_id: resolved.story_id, record, idempotentReplay: true };
     }
     return { state, ok: false, error: "media_id_conflict" };
@@ -393,7 +412,7 @@ export function applyPostingCompletedEvent(state, payload) {
   if (!isNonEmptyString(media_id) || !isNonEmptyString(published_at)) return { state, ok: false, error: "invalid_payload" };
   if (!Number.isFinite(Date.parse(published_at))) return { state, ok: false, error: "invalid_payload" };
 
-  const feed = record.publishing.instagram.feed;
+  const feed = record.publishing.instagram[channelKey];
   if (usesContainerStep(feed) && feed.container_id !== container_id) return { state, ok: false, error: "container_mismatch" };
   if (feed.status !== "publish_attempted" && feed.status !== "buffer_post_created") return { state, ok: false, error: `invalid_state:${feed.status}` };
 
@@ -421,7 +440,7 @@ export function applyPostingCompletedEvent(state, payload) {
       posted_at: published_at,
       instagram: {
         ...record.publishing.instagram,
-        feed: { ...feed, status: "posted", media_id, permalink: permalink ?? null, published_at, buffer: pickBufferFields(buffer, feed.buffer) },
+        [channelKey]: { ...feed, status: "posted", media_id, permalink: permalink ?? null, published_at, buffer: pickBufferFields(buffer, feed.buffer) },
       },
     },
   });
@@ -456,6 +475,7 @@ export function applyPostingFailedEvent(state, payload) {
     return { state, ok: false, error: `invalid_state:${record.status}` };
   }
 
+  const failedChannelKey = channelKeyFor(record);
   const withPublishingPatch = {
     ...state,
     stories: {
@@ -466,7 +486,11 @@ export function applyPostingFailedEvent(state, payload) {
           ...clonePublishing(record),
           instagram: {
             ...record.publishing.instagram,
-            feed: { ...record.publishing.instagram.feed, status: "failed", last_http_outcome: buildLastHttpOutcome(http_outcome_category, http_diagnostic, record.publishing.instagram.feed.last_http_outcome) },
+            [failedChannelKey]: {
+              ...record.publishing.instagram[failedChannelKey],
+              status: "failed",
+              last_http_outcome: buildLastHttpOutcome(http_outcome_category, http_diagnostic, record.publishing.instagram[failedChannelKey].last_http_outcome),
+            },
           },
         },
         updated_at: new Date().toISOString(),
@@ -513,7 +537,7 @@ export function applyPostingAmbiguousEvent(state, payload) {
   if (record.status !== "posting") return { state, ok: false, error: `invalid_state:${record.status}` };
   if (!record.publishing.claim || record.publishing.claim.claim_id !== claim_id) return { state, ok: false, error: "claim_mismatch" };
 
-  const feed = record.publishing.instagram.feed;
+  const feed = record.publishing.instagram[channelKeyFor(record)];
   if (feed.status !== "publish_attempted" && feed.status !== "buffer_post_created" && feed.status !== "ambiguous") {
     return { state, ok: false, error: `invalid_state:${feed.status}` };
   }
@@ -568,7 +592,8 @@ export function applyPostingManuallyConfirmedNotPostedEvent(state, payload) {
   if (!resolved.record) return { state, ok: false, error: "not_found" };
 
   const record = resolved.record;
-  const feed = record.publishing.instagram.feed;
+  const channelKey = channelKeyFor(record);
+  const feed = record.publishing.instagram[channelKey];
   const priorAttempts = Array.isArray(record.publishing.prior_attempts) ? record.publishing.prior_attempts : [];
 
   // Idempotency: an EXACT replay (same claim_id + same confirmed_at,
@@ -625,7 +650,7 @@ export function applyPostingManuallyConfirmedNotPostedEvent(state, payload) {
       prior_attempts: [...priorAttempts, archivedAttempt],
       instagram: {
         ...record.publishing.instagram,
-        feed: { ...feed, status: "not_posted", publish_attempted_at: null, buffer: null },
+        [channelKey]: { ...feed, status: "not_posted", publish_attempted_at: null, buffer: null },
       },
     },
     updated_at: new Date().toISOString(),
@@ -673,7 +698,8 @@ export function applyPostingFailureResetEvent(state, payload) {
   if (!resolved.record) return { state, ok: false, error: "not_found" };
 
   const record = resolved.record;
-  const feed = record.publishing.instagram.feed;
+  const channelKey = channelKeyFor(record);
+  const feed = record.publishing.instagram[channelKey];
   const priorAttempts = Array.isArray(record.publishing.prior_attempts) ? record.publishing.prior_attempts : [];
 
   // Idempotency: an EXACT replay (same claim_id + same confirmed_at +
@@ -721,7 +747,7 @@ export function applyPostingFailureResetEvent(state, payload) {
       prior_attempts: [...priorAttempts, archivedAttempt],
       instagram: {
         ...record.publishing.instagram,
-        feed: { ...feed, status: "not_posted", publish_attempted_at: null, buffer: null },
+        [channelKey]: { ...feed, status: "not_posted", publish_attempted_at: null, buffer: null },
       },
     },
     updated_at: new Date().toISOString(),
@@ -772,13 +798,14 @@ export function applyPostingManuallyConfirmedPostedEvent(state, payload) {
   if (!resolved.record) return { state, ok: false, error: "not_found" };
 
   const record = resolved.record;
+  const channelKey = channelKeyFor(record);
 
   // Idempotency: an EXACT replay (already posted via THIS reconciliation —
   // same claim_id + same confirmed_at) is a safe no-op. Any OTHER reason the
   // record might already be "posted" (a real machine-verified completion, or
   // a different reconciliation) is rejected, never silently reprocessed.
   if (record.status === "posted") {
-    const existing = record.publishing.instagram.feed.manual_success_confirmation;
+    const existing = record.publishing.instagram[channelKey].manual_success_confirmation;
     const sameReconciliation = existing?.confirmed_at === confirmed_at && record.publishing.claim?.claim_id === claim_id;
     if (sameReconciliation) {
       return { state, ok: true, story_id: resolved.story_id, record, idempotentReplay: true };
@@ -788,7 +815,7 @@ export function applyPostingManuallyConfirmedPostedEvent(state, payload) {
 
   if (record.status !== "posting") return { state, ok: false, error: `invalid_state:${record.status}` };
   if (record.publishing.status !== "posting") return { state, ok: false, error: `invalid_state:${record.publishing.status}` };
-  const feed = record.publishing.instagram.feed;
+  const feed = record.publishing.instagram[channelKey];
   if (feed.status !== "ambiguous") return { state, ok: false, error: `invalid_feed_state:${feed.status}` };
   if (!record.publishing.claim || record.publishing.claim.claim_id !== claim_id) return { state, ok: false, error: "claim_mismatch" };
   if (feed.provider !== "buffer") return { state, ok: false, error: "wrong_provider" };
@@ -812,7 +839,7 @@ export function applyPostingManuallyConfirmedPostedEvent(state, payload) {
       posted_at: publishedAt,
       instagram: {
         ...record.publishing.instagram,
-        feed: {
+        [channelKey]: {
           ...feed,
           status: "posted",
           media_id: knownPostId,

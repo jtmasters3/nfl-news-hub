@@ -16,6 +16,19 @@
 // a real fetchImpl, and `fetchState` via githubStateReader.js's
 // createFreshStateFetcher() — both of those live entirely outside this file.
 //
+// Destination-generic sequencing (added alongside Story publishing):
+// executeBufferFeedPublish()'s own name and default behavior for every
+// existing Feed caller are completely unchanged, but its precondition check
+// is now an injectable `validatePreconditions` (default:
+// validateBufferFeedPublishPreconditions) and its two internal
+// durable-commit predicates read whichever of publishing.instagram.feed/
+// .story applies via the shared channelKeyFor() (postingEvents.js) instead
+// of a hardcoded `.feed` — so a Story caller (publish-buffer-story.js) can
+// reuse this ENTIRE proven sequencing/durability implementation by passing
+// validateBufferStoryPublishPreconditions + Story-specific
+// resolveJpeg/publishViaWorker, rather than a second reliability system
+// existing anywhere in this codebase.
+//
 // Exact required sequence (Stage 5B spec): 1. Load record 2. Validate
 // approved Feed/not posted 3. Acquire exclusive posting claim 4. Snapshot
 // deterministic caption 5. Resolve deterministic approved JPEG 6. Durably
@@ -36,6 +49,7 @@
 // a retry trigger and not license to guess the outcome.
 import { assembleInstagramCaption } from "./captionAssembly.js";
 import { waitForDurableCommit } from "./waitForDurableCommit.js";
+import { channelKeyFor } from "../../lib/postingEvents.js";
 
 /**
  * Pure precondition check — no I/O. Mirrors the exact same checks
@@ -46,6 +60,23 @@ import { waitForDurableCommit } from "./waitForDurableCommit.js";
 export function validateBufferFeedPublishPreconditions(record) {
   if (record?.approval?.status !== "approved") return { ok: false, error: "not_approved" };
   if (record?.selection?.destination !== "feed") return { ok: false, error: "wrong_destination" };
+  if (record?.publishing?.status === "posted") return { ok: false, error: "already_posted" };
+  if (record?.publishing?.status && record.publishing.status !== "not_posted") return { ok: false, error: `invalid_state:${record.publishing.status}` };
+  return { ok: true };
+}
+
+/**
+ * The Story sibling of validateBufferFeedPublishPreconditions() above —
+ * identical checks, requiring destination==="story" instead of "feed". Kept
+ * as a SEPARATE exported function (rather than parametrizing the Feed one)
+ * so auto-publish-approved-feed.js's own eligibility filter is completely
+ * unaffected by Story's existence: it calls the Feed function by name and
+ * always did, so its selection set cannot silently grow to include Story
+ * records just because this module now also understands Story.
+ */
+export function validateBufferStoryPublishPreconditions(record) {
+  if (record?.approval?.status !== "approved") return { ok: false, error: "not_approved" };
+  if (record?.selection?.destination !== "story") return { ok: false, error: "wrong_destination" };
   if (record?.publishing?.status === "posted") return { ok: false, error: "already_posted" };
   if (record?.publishing?.status && record.publishing.status !== "not_posted") return { ok: false, error: `invalid_state:${record.publishing.status}` };
   return { ok: true };
@@ -151,14 +182,21 @@ export async function executeBufferFeedPublish({
   recordPostingResult,
   now = () => new Date().toISOString(),
   pollOptions = {},
+  // Injected precondition check — defaults to the exact Feed-only gate this
+  // function has always used, so every existing Feed caller (which never
+  // passes this) is completely unaffected. A Story caller (see
+  // auto-publish-approved-story.js / publish-buffer-story.js) passes
+  // validateBufferStoryPublishPreconditions instead, reusing this entire
+  // sequencing/durability implementation rather than forking a second one.
+  validatePreconditions = validateBufferFeedPublishPreconditions,
 }) {
   // 1. Load record — always fresh, never a caller-supplied snapshot.
   const state = await fetchState();
   const record = state?.stories?.[storyId];
   if (!record) return { ok: false, step: "load_record", error: "not_found" };
 
-  // 2. Validate approved Feed / not posted.
-  const precondition = validateBufferFeedPublishPreconditions(record);
+  // 2. Validate approved / not posted for the caller's own destination.
+  const precondition = validatePreconditions(record);
   if (!precondition.ok) return { ok: false, step: "precondition", error: precondition.error };
 
   // 4. Snapshot deterministic caption.
@@ -201,7 +239,7 @@ export async function executeBufferFeedPublish({
   const attemptCommit = await waitForDurableCommit(
     fetchState,
     storyId,
-    (r) => r?.publishing?.instagram?.feed?.publish_attempted_at === publishAttemptedAt,
+    (r) => r?.publishing?.instagram?.[channelKeyFor(r)]?.publish_attempted_at === publishAttemptedAt,
     pollOptions
   );
   if (!attemptCommit.committed) return { ok: false, step: "publish_attempt_commit_confirmation", error: attemptCommit.status, claim, publishAttemptedAt };
@@ -277,7 +315,7 @@ function buildResultCommitPredicate(eventType, payload) {
     case "posting-completed":
       return (record) => {
         if (record?.status !== "posted") return false;
-        const feed = record?.publishing?.instagram?.feed;
+        const feed = record?.publishing?.instagram?.[channelKeyFor(record)];
         if (feed?.status !== "posted") return false;
         if (feed?.media_id !== payload.media_id) return false;
         if (payload.buffer?.post_id && feed?.buffer?.post_id !== payload.buffer.post_id) return false;
@@ -286,16 +324,16 @@ function buildResultCommitPredicate(eventType, payload) {
     case "posting-buffer-created":
       return (record) => {
         if (record?.status !== "posting") return false;
-        const feed = record?.publishing?.instagram?.feed;
+        const feed = record?.publishing?.instagram?.[channelKeyFor(record)];
         if (feed?.status !== "buffer_post_created") return false;
         if (feed?.buffer?.post_id !== payload.post_id) return false;
         if (feed?.buffer?.status !== payload.status) return false;
         return true;
       };
     case "posting-failed":
-      return (record) => record?.status === "failed" && record?.publishing?.instagram?.feed?.status === "failed";
+      return (record) => record?.status === "failed" && record?.publishing?.instagram?.[channelKeyFor(record)]?.status === "failed";
     case "posting-ambiguous":
-      return (record) => record?.status === "posting" && record?.publishing?.instagram?.feed?.status === "ambiguous";
+      return (record) => record?.status === "posting" && record?.publishing?.instagram?.[channelKeyFor(record)]?.status === "ambiguous";
     default:
       return () => false;
   }

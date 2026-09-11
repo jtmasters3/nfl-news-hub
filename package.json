@@ -67,6 +67,7 @@
     "test:buffer-completion-reconciler": "node scripts/social-worker/lib/bufferCompletionReconciler.test.mjs",
     "test:reconcile-buffer-completions": "node scripts/social/reconcile-buffer-completions.test.mjs",
     "test:auto-publish-approved-feed": "node scripts/social/auto-publish-approved-feed.test.mjs",
+    "test:story-publishing": "node scripts/tests/story-publishing-regression.mjs",
     "test:wait-durable-commit": "node scripts/social-worker/lib/waitForDurableCommit.test.mjs",
     "test:resolve-approved-feed-jpeg": "node scripts/social-worker/lib/resolveApprovedFeedJpeg.test.mjs",
     "test:publish-buffer-feed-launcher": "node scripts/social/publish-buffer-feed.test.mjs",

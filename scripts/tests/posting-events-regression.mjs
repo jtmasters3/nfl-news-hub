@@ -90,8 +90,17 @@ test("1. an approved, Feed-selected, ready record accepts posting-claimed and mo
   assert.equal(result.record.publishing.instagram.feed.status, "claimed");
 });
 
-test("2. a Story-selected record rejects a Feed posting claim (wrong_destination)", () => {
+test("2. a Story-selected record accepts posting-claimed into its own .story channel, never touching .feed", () => {
   const state = approvedFeedState("s1", { selection: { destination: "story", slot_id: "story:test", selected_at: "2026-01-01T00:00:00Z" } });
+  const result = applyPostingClaimedEvent(state, claimPayload("s1"));
+  assert.equal(result.ok, true);
+  assert.equal(result.record.status, "posting");
+  assert.equal(result.record.publishing.instagram.story.status, "claimed");
+  assert.equal(result.record.publishing.instagram.feed.status, "not_posted");
+});
+
+test("2b. a record with a destination that is neither 'feed' nor 'story' rejects posting claim (wrong_destination)", () => {
+  const state = approvedFeedState("s1", { selection: { destination: "reel", slot_id: "reel:test", selected_at: "2026-01-01T00:00:00Z" } });
   const result = applyPostingClaimedEvent(state, claimPayload("s1"));
   assert.equal(result.ok, false);
   assert.equal(result.error, "wrong_destination");
@@ -340,7 +349,22 @@ test("28. an access_token-shaped field in a payload is never persisted anywhere 
 test("29. the existing Story publishing shape is completely untouched by the full Feed posting lifecycle", () => {
   const state = publishAttemptedState("s1");
   const posted = applyPostingCompletedEvent(state, { story_id: "s1", claim_id: "claim-1", container_id: "container-1", media_id: "media-1", published_at: "2026-01-01T01:03:00Z" }).state;
-  assert.deepEqual(posted.stories.s1.publishing.instagram.story, { status: "not_posted", container_id: null, media_id: null, published_at: null });
+  assert.deepEqual(posted.stories.s1.publishing.instagram.story, {
+    status: "not_posted",
+    provider: null,
+    storage_key: null,
+    jpeg_url: null,
+    caption_used: null,
+    container_id: null,
+    container_created_at: null,
+    publish_attempted_at: null,
+    media_id: null,
+    permalink: null,
+    published_at: null,
+    last_http_outcome: null,
+    last_reconciled_at: null,
+    buffer: { post_id: null, channel_id: null, status: null, due_at: null, sent_at: null },
+  });
 });
 
 test("30. the existing Facebook publishing shape is completely untouched by the full Feed posting lifecycle", () => {

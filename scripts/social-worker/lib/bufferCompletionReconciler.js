@@ -25,6 +25,16 @@
 // so this file can be fully tested without a network call ever being
 // possible, and contains no reference to Buffer's createPost mutation or
 // to Meta at all.
+//
+// Destination-generic (added alongside Story publishing): reads whichever
+// of publishing.instagram.feed/.story applies via the shared
+// channelKeyFor() (postingEvents.js) instead of a hardcoded `.feed`, so
+// this SAME reconciler handles both Feed and Story records with zero
+// second implementation — exactly the "generalize, don't duplicate"
+// pattern already applied throughout the posting-bridge stack. Existing
+// Feed reconciliation behavior is completely unchanged (channelKeyFor
+// returns "feed" for every existing Feed record).
+import { channelKeyFor } from "../../lib/postingEvents.js";
 
 function isNonEmptyString(v) {
   return typeof v === "string" && v.length > 0;
@@ -43,7 +53,7 @@ const TERMINAL_ERROR_STATUS = "error";
  * @param {object} record - a data/social-state.json story record
  */
 export function isEligibleForCompletionReconciliation(record) {
-  const feed = record?.publishing?.instagram?.feed;
+  const feed = record?.publishing?.instagram?.[channelKeyFor(record)];
   return (
     record?.publishing?.status === "posting" &&
     feed?.status === "buffer_post_created" &&
@@ -65,7 +75,7 @@ export function isEligibleForCompletionReconciliation(record) {
  *         | {action: "none", reason: string}}
  */
 export function decideReconciliationAction(record, matchedPost) {
-  const feed = record.publishing.instagram.feed;
+  const feed = record.publishing.instagram[channelKeyFor(record)];
   const storedPostId = feed.buffer.post_id;
   const storedChannelId = feed.buffer.channel_id;
   const storedCaption = feed.caption_used;
