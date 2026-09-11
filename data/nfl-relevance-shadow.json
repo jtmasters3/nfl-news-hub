@@ -5518,6 +5518,48 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/chris-the-bear-fallicas-college-football-week-2-expert-picks-best-bets",
+      "source_name": "FOX Sports",
+      "headline": "Chris 'The Bear' Fallica's College Football Week 2 Expert Picks, Best Bets",
+      "published_at": "2026-09-11T18:40:41.000Z",
+      "observed_at": "2026-09-11T19:10:25.998Z",
+      "decision": "reject",
+      "classification": "college_football",
+      "confidence": "medium",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [
+        "college_football_phrase"
+      ],
+      "reason_codes": [
+        "college_marker_no_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/packers-release-bo-melton-but-will-bring-him-back-on-practice-squad",
+      "source_name": "Pro Football Talk",
+      "headline": "Packers release Bo Melton, but will bring him back on practice squad",
+      "published_at": "2026-09-11T19:00:15.000Z",
+      "observed_at": "2026-09-11T19:10:25.998Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
