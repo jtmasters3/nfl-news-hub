@@ -4255,6 +4255,45 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-s-australia-debut-draws-100-021-fans-where-does-that-rank-in-league-history",
+      "source_name": "NFL.com",
+      "headline": "NFL's Australia debut draws 100,021 fans. Where does that rank in league history?",
+      "published_at": "2026-09-11T03:16:04.000Z",
+      "observed_at": "2026-09-11T04:20:20.672Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-agree-to-terms-with-wr-ryan-flournoy-on-one-year-extension",
+      "source_name": "Pro Football Talk",
+      "headline": "Cowboys agree to terms with WR Ryan Flournoy on one-year extension",
+      "published_at": "2026-09-11T04:12:58.000Z",
+      "observed_at": "2026-09-11T04:20:20.672Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
+      ],
+      "detected_category": "contract",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:contract"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
