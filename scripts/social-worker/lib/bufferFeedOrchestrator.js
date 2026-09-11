@@ -69,12 +69,20 @@ export function mapBufferWorkerOutcomeToEvent({ storyId, claimId, channelId, wor
   const outcome = workerResponse?.outcome;
   const data = workerResponse?.data;
   const error = workerResponse?.error;
+  // The Worker's safe, sanitized, structured summary of the raw Buffer
+  // response (see cloudflare-worker's bufferOutcome.js buildBufferResponseDiagnostic)
+  // — threaded through into EVERY mapped event's payload so the exact
+  // response characteristics (http_status, data_is_null, has_errors_array,
+  // etc.) become durable in social-state.json, not merely visible in a
+  // Worker response nobody may still be looking at by the time it matters.
+  // Never contains a secret — the Worker itself already stripped those.
+  const httpDiagnostic = workerResponse?.diagnostic ?? null;
 
   if (workerResponse?.ok !== true || !outcome) {
     // The Worker call itself failed to complete normally (network error,
     // non-200, malformed body) — we cannot know whether Buffer's
     // createPost was ever reached. Never guessed either way.
-    return { eventType: "posting-ambiguous", payload: { story_id: storyId, claim_id: claimId, http_outcome_category: "worker_call_failed" } };
+    return { eventType: "posting-ambiguous", payload: { story_id: storyId, claim_id: claimId, http_outcome_category: "worker_call_failed", http_diagnostic: httpDiagnostic } };
   }
 
   if (outcome === "definite_success") {
@@ -88,25 +96,26 @@ export function mapBufferWorkerOutcomeToEvent({ storyId, claimId, channelId, wor
           media_id: data.id,
           published_at: data.sentAt || now,
           buffer: { post_id: data.id, channel_id: channelId, status: "sent", sent_at: data.sentAt || now, due_at: data.dueAt ?? null },
+          http_diagnostic: httpDiagnostic,
         },
       };
     }
     if (BUFFER_NONTERMINAL_STATUSES.has(bufferStatus) && data?.id) {
       return {
         eventType: "posting-buffer-created",
-        payload: { story_id: storyId, claim_id: claimId, post_id: data.id, channel_id: channelId, status: bufferStatus, due_at: data.dueAt ?? null, sent_at: data.sentAt ?? null },
+        payload: { story_id: storyId, claim_id: claimId, post_id: data.id, channel_id: channelId, status: bufferStatus, due_at: data.dueAt ?? null, sent_at: data.sentAt ?? null, http_diagnostic: httpDiagnostic },
       };
     }
     // A "success" with no post id, or an unrecognized status — never guessed.
-    return { eventType: "posting-ambiguous", payload: { story_id: storyId, claim_id: claimId, http_outcome_category: `unrecognized_buffer_status:${bufferStatus ?? "missing"}` } };
+    return { eventType: "posting-ambiguous", payload: { story_id: storyId, claim_id: claimId, http_outcome_category: `unrecognized_buffer_status:${bufferStatus ?? "missing"}`, http_diagnostic: httpDiagnostic } };
   }
 
   if (outcome === "definite_failure") {
-    return { eventType: "posting-failed", payload: { story_id: storyId, claim_id: claimId, message: error?.message ?? "Buffer reported a definite failure", http_outcome_category: error?.category ?? "unknown" } };
+    return { eventType: "posting-failed", payload: { story_id: storyId, claim_id: claimId, message: error?.message ?? "Buffer reported a definite failure", http_outcome_category: error?.category ?? "unknown", http_diagnostic: httpDiagnostic } };
   }
 
   // outcome === "ambiguous", or any future/unrecognized outcome label.
-  return { eventType: "posting-ambiguous", payload: { story_id: storyId, claim_id: claimId, http_outcome_category: error?.category ?? "ambiguous" } };
+  return { eventType: "posting-ambiguous", payload: { story_id: storyId, claim_id: claimId, http_outcome_category: error?.category ?? "ambiguous", http_diagnostic: httpDiagnostic } };
 }
 
 /**

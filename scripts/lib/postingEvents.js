@@ -26,6 +26,28 @@ function isNonEmptyString(v) {
   return typeof v === "string" && v.length > 0;
 }
 
+/**
+ * Builds the value stored in feed.last_http_outcome. Backward-compatible by
+ * construction: a caller that supplies only `http_outcome_category` (the
+ * ONLY shape every pre-existing caller — Meta included — has ever used)
+ * gets EXACTLY the same plain-string behavior as before this stage. A
+ * caller that ALSO supplies `http_diagnostic` (currently only the Buffer
+ * publish path does) gets the full sanitized diagnostic object, with
+ * `category` folded in as a named field alongside it — so the durable
+ * state distinguishes, for example, a genuinely ambiguous "HTTP 200,
+ * data:null, no errors array" response from every other ambiguous shape,
+ * without depending on transient Worker logs. Never receives (and
+ * therefore never persists) an API key, Authorization header, or request
+ * body — the diagnostic object itself was already sanitized before this
+ * function ever sees it.
+ */
+function buildLastHttpOutcome(http_outcome_category, http_diagnostic, existing) {
+  if (http_diagnostic && typeof http_diagnostic === "object") {
+    return { ...http_diagnostic, category: http_outcome_category ?? http_diagnostic.category ?? null };
+  }
+  return http_outcome_category ?? existing;
+}
+
 const ALLOWED_PROVIDERS = new Set(["meta", "buffer"]);
 
 // The only Buffer post.status values posting-buffer-created may ever
@@ -418,10 +440,10 @@ export function applyPostingCompletedEvent(state, payload) {
  * to "failed" appends diagnostics only, mirroring artworkEvents.js's
  * applyFailEvent — never a "failed" -> "failed" self-transition.
  * @param {object} state
- * @param {{story_id: string, claim_id?: string, message: string, http_outcome_category?: string}} payload
+ * @param {{story_id: string, claim_id?: string, message: string, http_outcome_category?: string, http_diagnostic?: object}} payload
  */
 export function applyPostingFailedEvent(state, payload) {
-  const { story_id, claim_id, message, http_outcome_category } = payload;
+  const { story_id, claim_id, message, http_outcome_category, http_diagnostic } = payload;
   const resolved = resolveCanonicalId(state, story_id);
   if (!resolved.ok) return { state, ok: false, error: resolved.error };
   if (!resolved.record) return { state, ok: false, error: "not_found" };
@@ -444,7 +466,7 @@ export function applyPostingFailedEvent(state, payload) {
           ...clonePublishing(record),
           instagram: {
             ...record.publishing.instagram,
-            feed: { ...record.publishing.instagram.feed, status: "failed", last_http_outcome: http_outcome_category ?? record.publishing.instagram.feed.last_http_outcome },
+            feed: { ...record.publishing.instagram.feed, status: "failed", last_http_outcome: buildLastHttpOutcome(http_outcome_category, http_diagnostic, record.publishing.instagram.feed.last_http_outcome) },
           },
         },
         updated_at: new Date().toISOString(),
@@ -479,10 +501,10 @@ export function applyPostingFailedEvent(state, payload) {
  * "cannot prove either outcome, needs a human" situation, never guessed in
  * either direction.
  * @param {object} state
- * @param {{story_id: string, claim_id: string, http_outcome_category?: string, reconciled_at?: string}} payload
+ * @param {{story_id: string, claim_id: string, http_outcome_category?: string, http_diagnostic?: object, reconciled_at?: string}} payload
  */
 export function applyPostingAmbiguousEvent(state, payload) {
-  const { story_id, claim_id, http_outcome_category, reconciled_at } = payload;
+  const { story_id, claim_id, http_outcome_category, http_diagnostic, reconciled_at } = payload;
   const resolved = resolveCanonicalId(state, story_id);
   if (!resolved.ok) return { state, ok: false, error: resolved.error };
   if (!resolved.record) return { state, ok: false, error: "not_found" };
@@ -503,7 +525,7 @@ export function applyPostingAmbiguousEvent(state, payload) {
     {},
     {
       status: "ambiguous",
-      last_http_outcome: http_outcome_category ?? feed.last_http_outcome,
+      last_http_outcome: buildLastHttpOutcome(http_outcome_category, http_diagnostic, feed.last_http_outcome),
       last_reconciled_at: reconciled_at ?? feed.last_reconciled_at,
     }
   );
