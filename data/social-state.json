@@ -86738,10 +86738,10 @@
     },
     "3287b40b-d88e-44cb-a2d7-c11c97844664": {
       "story_id": "3287b40b-d88e-44cb-a2d7-c11c97844664",
-      "status": "approved",
+      "status": "posting",
       "merged_into": null,
       "created_at": "2026-09-10T01:20:33.045Z",
-      "updated_at": "2026-09-11T02:37:36.028Z",
+      "updated_at": "2026-09-11T02:44:05.586Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -86829,10 +86829,10 @@
         "created_at": "2026-09-10T02:40:03.807Z"
       },
       "publishing": {
-        "status": "not_posted",
+        "status": "posting",
         "instagram": {
           "feed": {
-            "status": "not_posted",
+            "status": "claimed",
             "container_id": null,
             "media_id": null,
             "published_at": null,
@@ -86857,7 +86857,13 @@
           "post_url": null
         },
         "posted_at": null,
-        "claim": null,
+        "claim": {
+          "claim_id": "e6792e6f-5cb3-4722-831a-49c974358b16",
+          "processor_id": "unknown-processor",
+          "claimed_at": "2026-09-11T02:43:51.984Z",
+          "claim_expires_at": "2026-09-11T03:33:51.984Z",
+          "retry_count": 0
+        },
         "prior_attempts": [
           {
             "provider": "buffer",
