@@ -14,7 +14,7 @@ import { readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 import { emptyState, ensureRecord } from "../lib/socialState.js";
-import { applyPostingClaimedEvent, applyPostingPublishAttemptedEvent, applyPostingAmbiguousEvent, applyPostingFailedEvent, applyPostingManuallyConfirmedNotPostedEvent, applyPostingFailureResetEvent } from "../lib/postingEvents.js";
+import { applyPostingClaimedEvent, applyPostingPublishAttemptedEvent, applyPostingAmbiguousEvent, applyPostingFailedEvent, applyPostingManuallyConfirmedNotPostedEvent, applyPostingFailureResetEvent, applyPostingManuallyConfirmedPostedEvent } from "../lib/postingEvents.js";
 import { applyEventByType } from "../social/apply-artwork-event.js";
 
 const cases = [];
@@ -97,6 +97,17 @@ function resetPayload(id, overrides = {}) {
   };
 }
 
+function successPayload(id, overrides = {}) {
+  return {
+    story_id: id,
+    claim_id: "claim-1",
+    confirmed_by: "operator-jt",
+    confirmed_at: "2026-01-01T02:00:00Z",
+    evidence_note: "Operator manually verified the Drake Maye post appears in Buffer Sent and is live on Instagram.",
+    ...overrides,
+  };
+}
+
 // ---------------------------------------------------------------------------
 // 5. workflow event-type allowlist contains the new events
 // ---------------------------------------------------------------------------
@@ -109,6 +120,41 @@ test("5. the GitHub Actions workflow's repository_dispatch types list includes p
 test("5b. the GitHub Actions workflow's repository_dispatch types list includes posting-failure-reset", async () => {
   const yaml = await readFile(WORKFLOW_PATH, "utf-8");
   assert.match(yaml, /posting-failure-reset/, "the workflow's types: allowlist must include the new event, or a real dispatch would never even trigger the workflow");
+});
+
+test("5c. the GitHub Actions workflow's repository_dispatch types list includes posting-manually-confirmed-posted", async () => {
+  const yaml = await readFile(WORKFLOW_PATH, "utf-8");
+  assert.match(yaml, /posting-manually-confirmed-posted/, "the workflow's types: allowlist must include the new event, or a real dispatch would never even trigger the workflow");
+});
+
+// ---------------------------------------------------------------------------
+// posting-manually-confirmed-posted routing
+// ---------------------------------------------------------------------------
+
+test("8-1/2. posting-manually-confirmed-posted is accepted by applyEventByType and routes to applyPostingManuallyConfirmedPostedEvent — not the 'unknown event type' null branch", async () => {
+  const state = ambiguousBufferState("s1");
+  const viaDispatch = await applyEventByType(state, "posting-manually-confirmed-posted", successPayload("s1"));
+  assert.notEqual(viaDispatch, null, "must not fall through to the unknown-event-type branch");
+  assert.equal(viaDispatch.ok, true);
+
+  const viaDirectReducer = applyPostingManuallyConfirmedPostedEvent(state, successPayload("s1"));
+  assert.deepEqual(viaDispatch.record, viaDirectReducer.record, "routing through applyEventByType must produce byte-identical output to calling the reducer directly");
+});
+
+test("8-3. an exact replay of posting-manually-confirmed-posted through applyEventByType remains idempotent", async () => {
+  const state = ambiguousBufferState("s1");
+  const first = await applyEventByType(state, "posting-manually-confirmed-posted", successPayload("s1"));
+  assert.equal(first.ok, true);
+  const second = await applyEventByType(first.state, "posting-manually-confirmed-posted", successPayload("s1"));
+  assert.equal(second.ok, true);
+  assert.equal(second.idempotentReplay, true);
+});
+
+test("8-4. a wrong claim_id fails posting-manually-confirmed-posted through applyEventByType exactly like the direct reducer call", async () => {
+  const state = ambiguousBufferState("s1");
+  const result = await applyEventByType(state, "posting-manually-confirmed-posted", successPayload("s1", { claim_id: "wrong-claim" }));
+  assert.equal(result.ok, false);
+  assert.equal(result.error, "claim_mismatch");
 });
 
 // ---------------------------------------------------------------------------

@@ -729,3 +729,99 @@ export function applyPostingFailureResetEvent(state, payload) {
 
   return { state: { ...state, stories: { ...state.stories, [resolved.story_id]: updated } }, ok: true, story_id: resolved.story_id, record: updated };
 }
+
+/**
+ * Manual, human-attested reconciliation of an AMBIGUOUS Buffer attempt where
+ * the operator has independently verified — outside this system, directly
+ * against Buffer's own Sent list and the live Instagram destination — that
+ * the post DOES exist externally, even though this system's own record of
+ * the attempt could never prove that (e.g. a client-side network
+ * timeout/abort before any HTTP response was received). This is the
+ * external-success counterpart to applyPostingManuallyConfirmedNotPostedEvent
+ * (external-failure) — same ambiguous starting point, opposite proven
+ * outcome, so unlike that function this one goes forward to "posted", not
+ * back to "approved".
+ *
+ * Unlike applyPostingCompletedEvent (the normal, machine-verified completion
+ * path), this function requires NO Buffer post_id/channel_id/sent_at as
+ * proof — by definition, if that evidence were recoverable, the normal
+ * reconciliation flow (read the post back via listRecentPosts, then a real
+ * posting-completed event) would be the correct path instead of this one.
+ * `buffer_post_id` is OPTIONAL here: passed through and stored only if a
+ * read-only lookup happened to recover it, NEVER invented when absent.
+ *
+ * Deliberately DOES go through transition()/TRANSITIONS, unlike its sibling
+ * ambiguous/failure recovery functions — "posting" -> "posted" is already a
+ * legitimate, pre-existing edge (the same one applyPostingCompletedEvent
+ * itself uses), so no bypass is needed or appropriate here; this is a third
+ * way of proving the existing edge's precondition, not a new edge.
+ *
+ * Never silently loses the fact that this was a manually-reconciled
+ * ambiguous attempt, not a machine-proven one: `manual_success_confirmation`
+ * is recorded permanently on the feed alongside the normal posted fields, and
+ * — critically — this attempt is NOT archived into publishing.prior_attempts
+ * (unlike the not-posted/failure recovery paths), because it was not
+ * abandoned; it is the actual successful publication.
+ * @param {object} state
+ * @param {{story_id: string, claim_id: string, confirmed_by: string, confirmed_at: string, evidence_note: string, buffer_post_id?: string}} payload
+ */
+export function applyPostingManuallyConfirmedPostedEvent(state, payload) {
+  const { story_id, claim_id, confirmed_by, confirmed_at, evidence_note, buffer_post_id } = payload;
+  const resolved = resolveCanonicalId(state, story_id);
+  if (!resolved.ok) return { state, ok: false, error: resolved.error };
+  if (!resolved.record) return { state, ok: false, error: "not_found" };
+
+  const record = resolved.record;
+
+  // Idempotency: an EXACT replay (already posted via THIS reconciliation —
+  // same claim_id + same confirmed_at) is a safe no-op. Any OTHER reason the
+  // record might already be "posted" (a real machine-verified completion, or
+  // a different reconciliation) is rejected, never silently reprocessed.
+  if (record.status === "posted") {
+    const existing = record.publishing.instagram.feed.manual_success_confirmation;
+    const sameReconciliation = existing?.confirmed_at === confirmed_at && record.publishing.claim?.claim_id === claim_id;
+    if (sameReconciliation) {
+      return { state, ok: true, story_id: resolved.story_id, record, idempotentReplay: true };
+    }
+    return { state, ok: false, error: "invalid_state:posted" };
+  }
+
+  if (record.status !== "posting") return { state, ok: false, error: `invalid_state:${record.status}` };
+  if (record.publishing.status !== "posting") return { state, ok: false, error: `invalid_state:${record.publishing.status}` };
+  const feed = record.publishing.instagram.feed;
+  if (feed.status !== "ambiguous") return { state, ok: false, error: `invalid_feed_state:${feed.status}` };
+  if (!record.publishing.claim || record.publishing.claim.claim_id !== claim_id) return { state, ok: false, error: "claim_mismatch" };
+  if (feed.provider !== "buffer") return { state, ok: false, error: "wrong_provider" };
+  if (!isNonEmptyString(feed.publish_attempted_at)) return { state, ok: false, error: "publish_attempted_at_missing" };
+  if (!isNonEmptyString(confirmed_by)) return { state, ok: false, error: "confirmed_by_required" };
+  if (!isNonEmptyString(confirmed_at) || !Number.isFinite(Date.parse(confirmed_at))) return { state, ok: false, error: "confirmed_at_invalid" };
+  if (!isNonEmptyString(evidence_note)) return { state, ok: false, error: "evidence_note_required" };
+  if (buffer_post_id !== undefined && buffer_post_id !== null && !isNonEmptyString(buffer_post_id)) {
+    return { state, ok: false, error: "invalid_payload" };
+  }
+
+  // No machine-verified sentAt exists for this path by definition — the
+  // confirmation time is the only durable timestamp the evidence supports.
+  const publishedAt = confirmed_at;
+  const knownPostId = isNonEmptyString(buffer_post_id) ? buffer_post_id : null;
+
+  return transition(state, story_id, "posted", {
+    publishing: {
+      ...clonePublishing(record),
+      status: "posted",
+      posted_at: publishedAt,
+      instagram: {
+        ...record.publishing.instagram,
+        feed: {
+          ...feed,
+          status: "posted",
+          media_id: knownPostId,
+          permalink: null,
+          published_at: publishedAt,
+          buffer: knownPostId ? { post_id: knownPostId, channel_id: null, status: "sent", due_at: null, sent_at: null } : null,
+          manual_success_confirmation: { confirmed_by, confirmed_at, evidence_note },
+        },
+      },
+    },
+  });
+}

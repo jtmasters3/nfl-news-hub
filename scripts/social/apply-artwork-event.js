@@ -31,6 +31,7 @@ import {
   applyPostingAmbiguousEvent,
   applyPostingManuallyConfirmedNotPostedEvent,
   applyPostingFailureResetEvent,
+  applyPostingManuallyConfirmedPostedEvent,
 } from "../lib/postingEvents.js";
 import { generatePostsForApproval } from "../generate-posts-for-approval.js";
 import { writeFile } from "node:fs/promises";
@@ -135,6 +136,8 @@ export async function applyEventByType(state, eventType, payload, { checkReachab
     return applyPostingManuallyConfirmedNotPostedEvent(state, payload);
   } else if (eventType === "posting-failure-reset") {
     return applyPostingFailureResetEvent(state, payload);
+  } else if (eventType === "posting-manually-confirmed-posted") {
+    return applyPostingManuallyConfirmedPostedEvent(state, payload);
   }
   return null;
 }
