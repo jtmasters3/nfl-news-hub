@@ -4067,6 +4067,45 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/drew-lock-chasing-second-nfl-chapter-replacing-injured-sam-darnold",
+      "source_name": "FOX Sports",
+      "headline": "Just Like He Drew It Up: Drew Lock Shows He Can Be Capable Fill-In For Sam Darnold",
+      "published_at": "2026-09-11T03:23:59.000Z",
+      "observed_at": "2026-09-11T03:31:02.759Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/excited-kyler-murray-is-ready-for-his-vikings-debut",
+      "source_name": "Pro Football Talk",
+      "headline": "\"Excited\" Kyler Murray is ready for his Vikings' debut",
+      "published_at": "2026-09-11T03:26:47.000Z",
+      "observed_at": "2026-09-11T03:31:02.759Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN"
+      ],
+      "detected_category": "draft",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:draft"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
