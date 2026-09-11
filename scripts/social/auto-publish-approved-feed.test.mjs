@@ -8,7 +8,7 @@
 // with: node scripts/social/auto-publish-approved-feed.test.mjs
 import assert from "node:assert/strict";
 import { installNetworkGuard } from "../social-worker/lib/_networkGuard.mjs";
-import { selectEligibleStory, main } from "./auto-publish-approved-feed.js";
+import { selectEligibleStory, main, resolveRunMode } from "./auto-publish-approved-feed.js";
 
 installNetworkGuard();
 
@@ -235,6 +235,89 @@ test("this script never references Buffer's post-creation mutation, Buffer's API
   assert.ok(!codeOnly.includes(mutationName), "no direct reference to Buffer's post-creation mutation may exist outside the imported existing publisher");
   assert.ok(!/api\.buffer\.com/.test(codeOnly));
   assert.ok(!/graph\.(facebook|instagram)\.com/i.test(codeOnly));
+});
+
+test("10. this script never references approval decisions — auto-approval remains impossible by construction", async () => {
+  const { readFile } = await import("node:fs/promises");
+  const src = await readFile(new URL("./auto-publish-approved-feed.js", import.meta.url), "utf-8");
+  const codeOnly = src.replace(/\/\/.*$/gm, "").replace(/\/\*[\s\S]*?\*\//g, "");
+  assert.ok(!/approval\/decide|decideApproval|approval-approved/i.test(codeOnly), "this script must never call or reference the approval-decision mechanism");
+});
+
+// ---------------------------------------------------------------------------
+// Mode resolution (schedule always live, workflow_dispatch defaults dry-run)
+// ---------------------------------------------------------------------------
+
+test("3. a schedule event ALWAYS resolves to live, regardless of inputMode (which schedule events never actually supply)", () => {
+  assert.equal(resolveRunMode({ eventName: "schedule", inputMode: undefined }), "live");
+  assert.equal(resolveRunMode({ eventName: "schedule", inputMode: "" }), "live");
+  assert.equal(resolveRunMode({ eventName: "schedule", inputMode: "dry-run" }), "live", "a schedule event must resolve to live even if a stray inputMode value were somehow present");
+});
+
+test("4. a workflow_dispatch event with no explicit inputMode (the manual default) resolves to dry-run", () => {
+  assert.equal(resolveRunMode({ eventName: "workflow_dispatch", inputMode: undefined }), "dry-run");
+  assert.equal(resolveRunMode({ eventName: "workflow_dispatch", inputMode: "" }), "dry-run");
+});
+
+test("5. a workflow_dispatch event with explicit inputMode=dry-run resolves to dry-run", () => {
+  assert.equal(resolveRunMode({ eventName: "workflow_dispatch", inputMode: "dry-run" }), "dry-run");
+});
+
+test("6. a workflow_dispatch event with explicit inputMode=live resolves to live", () => {
+  assert.equal(resolveRunMode({ eventName: "workflow_dispatch", inputMode: "live" }), "live");
+});
+
+test("no accidental fall-through: an unrecognized/garbage inputMode value on a non-schedule event always resolves to the safe dry-run default, never live", () => {
+  assert.equal(resolveRunMode({ eventName: "workflow_dispatch", inputMode: "LIVE" }), "dry-run", "case must match exactly — no case-insensitive coercion to live");
+  assert.equal(resolveRunMode({ eventName: "workflow_dispatch", inputMode: "yes" }), "dry-run");
+  assert.equal(resolveRunMode({ eventName: undefined, inputMode: undefined }), "dry-run", "a completely unset context (e.g. running locally outside Actions) must default to dry-run");
+});
+
+// ---------------------------------------------------------------------------
+// Workflow YAML structure (text-based, matching this codebase's own
+// established convention for verifying workflow config — see
+// apply-artwork-event-routing-regression.mjs's own allowlist checks)
+// ---------------------------------------------------------------------------
+
+test("1. the workflow file declares a schedule trigger", async () => {
+  const { readFile } = await import("node:fs/promises");
+  const yaml = await readFile(new URL("../../.github/workflows/auto-publish-approved-feed.yml", import.meta.url), "utf-8");
+  assert.match(yaml, /^\s*schedule:\s*$/m, "the workflow must declare a schedule: trigger");
+});
+
+test("2. the cron cadence is every 10 minutes", async () => {
+  const { readFile } = await import("node:fs/promises");
+  const yaml = await readFile(new URL("../../.github/workflows/auto-publish-approved-feed.yml", import.meta.url), "utf-8");
+  assert.match(yaml, /cron:\s*"\*\/10 \* \* \* \*"/, "expected the standard 'every 10 minutes' cron expression");
+});
+
+test("11. the workflow still declares a concurrency group", async () => {
+  const { readFile } = await import("node:fs/promises");
+  const yaml = await readFile(new URL("../../.github/workflows/auto-publish-approved-feed.yml", import.meta.url), "utf-8");
+  assert.match(yaml, /^concurrency:\s*$/m, "the existing concurrency protection must remain present");
+  assert.match(yaml, /group:\s*auto-publish-approved-feed/);
+});
+
+test("12. the workflow still references the existing AGGREGATE_ARTWORK_API_TOKEN secret, and no other/new secret", async () => {
+  const { readFile } = await import("node:fs/promises");
+  const yaml = await readFile(new URL("../../.github/workflows/auto-publish-approved-feed.yml", import.meta.url), "utf-8");
+  assert.match(yaml, /secrets\.AGGREGATE_ARTWORK_API_TOKEN/);
+  const secretRefs = [...yaml.matchAll(/secrets\.(\w+)/g)].map((m) => m[1]);
+  assert.deepEqual([...new Set(secretRefs)], ["AGGREGATE_ARTWORK_API_TOKEN"], "no additional GitHub secret may be referenced by this workflow");
+});
+
+test("workflow_dispatch is still available alongside the schedule trigger, with mode defaulting to dry-run", async () => {
+  const { readFile } = await import("node:fs/promises");
+  const yaml = await readFile(new URL("../../.github/workflows/auto-publish-approved-feed.yml", import.meta.url), "utf-8");
+  assert.match(yaml, /^\s*workflow_dispatch:\s*$/m);
+  assert.match(yaml, /default:\s*"dry-run"/);
+});
+
+test("the workflow passes GITHUB_EVENT_NAME's own automatic value through implicitly (never overridden) and passes inputs.mode as INPUT_MODE — the exact two inputs resolveRunMode() consumes", async () => {
+  const { readFile } = await import("node:fs/promises");
+  const yaml = await readFile(new URL("../../.github/workflows/auto-publish-approved-feed.yml", import.meta.url), "utf-8");
+  assert.ok(!/GITHUB_EVENT_NAME\s*:/.test(yaml), "GITHUB_EVENT_NAME must never be manually overridden — it is already provided automatically");
+  assert.match(yaml, /INPUT_MODE:\s*\$\{\{\s*inputs\.mode\s*\}\}/);
 });
 
 // ---------------------------------------------------------------------------

@@ -29,6 +29,20 @@
 //   Live (the ONLY way this script can ever call Buffer) — requires the
 //   explicit --live flag:
 //     node scripts/social/auto-publish-approved-feed.js --live
+//
+// Mode resolution when run from GitHub Actions (see
+// .github/workflows/auto-publish-approved-feed.yml): deliberately NOT left
+// as inline shell conditionals in the YAML — resolveRunMode() below is the
+// single, explicit, unit-tested source of truth, driven by GITHUB_EVENT_NAME
+// (a variable GitHub Actions always sets automatically, needing no manual
+// wiring) and the INPUT_MODE env var the workflow passes through from
+// workflow_dispatch's own `inputs.mode` (empty for a schedule event, where
+// `inputs` doesn't exist at all). A `schedule` event ALWAYS resolves to
+// live, regardless of INPUT_MODE's value (which is moot for that event
+// anyway) — there is no path by which a scheduled run can resolve to
+// dry-run, and no path by which a manual run with no explicit mode
+// (INPUT_MODE unset/empty, matching the workflow input's own "dry-run"
+// default) can resolve to live.
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createFreshStateFetcher } from "../social-worker/lib/githubStateReader.js";
@@ -62,6 +76,23 @@ export function selectEligibleStory(state) {
   });
 
   return eligible[0];
+}
+
+/**
+ * Pure, explicit mode resolution — the single source of truth for whether a
+ * given invocation may go live. A `schedule` event ALWAYS resolves to
+ * "live", independent of `inputMode` (which schedule events never actually
+ * supply). Every other event resolves to "live" ONLY when `inputMode` is
+ * literally the string "live" — any other value, including undefined/empty
+ * (a manual run with no explicit input, or the workflow_dispatch default of
+ * "dry-run"), resolves to "dry-run". There is no third value and no
+ * fall-through path to "live" by omission.
+ * @param {{eventName?: string, inputMode?: string}} args
+ * @returns {"live"|"dry-run"}
+ */
+export function resolveRunMode({ eventName, inputMode } = {}) {
+  if (eventName === "schedule") return "live";
+  return inputMode === "live" ? "live" : "dry-run";
 }
 
 /**
@@ -99,7 +130,12 @@ export async function main({
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  const live = process.argv.includes("--live");
+  // `--live` (local manual testing) and the GitHub Actions env-driven
+  // resolution are combined with OR, never AND — either one requesting live
+  // mode is enough, but neither is required for the safe dry-run default.
+  const cliLive = process.argv.includes("--live");
+  const resolvedMode = resolveRunMode({ eventName: process.env.GITHUB_EVENT_NAME, inputMode: process.env.INPUT_MODE });
+  const live = cliLive || resolvedMode === "live";
   main({ live }).catch((err) => {
     console.error("auto-publish-approved-feed failed:", err);
     process.exitCode = 1;

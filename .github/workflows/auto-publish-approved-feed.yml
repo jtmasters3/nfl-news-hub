@@ -17,16 +17,18 @@ name: Auto-publish approved Feed story
 # .github/workflows/reconcile-buffer-completions.yml.
 #
 # ==========================================================================
-# ACTIVATION STATE: INTENTIONALLY INERT
+# MODE RESOLUTION — schedule always live, workflow_dispatch defaults dry-run
 # ==========================================================================
-# This workflow deliberately has NO `schedule:` trigger yet — only
-# workflow_dispatch, defaulting to dry-run mode. Nothing in this repository
-# can cause it to fire on its own. Adding a `schedule:` trigger (to make
-# this actually run automatically) is a separate, explicitly-authorized
-# follow-up change — not part of this commit. Until that happens, this
-# workflow can only ever run when a human manually triggers it via
-# workflow_dispatch, and even then defaults to a mode that makes zero
-# Buffer calls.
+# Deliberately NOT decided by an inline shell conditional here. This step
+# only passes GITHUB_EVENT_NAME (a variable GitHub Actions always sets
+# automatically — no manual wiring needed) and INPUT_MODE (workflow_dispatch's
+# own `inputs.mode`, empty for a schedule event since `inputs` doesn't exist
+# for that trigger at all) through to the script. The actual decision is
+# made by scripts/social/auto-publish-approved-feed.js's own exported,
+# unit-tested resolveRunMode() — a `schedule` event ALWAYS resolves to live
+# regardless of INPUT_MODE, and every other event resolves to live ONLY when
+# INPUT_MODE is literally "live"; there is no third value and no
+# fall-through path to live by omission.
 on:
   workflow_dispatch:
     inputs:
@@ -38,6 +40,8 @@ on:
         options:
           - dry-run
           - live
+  schedule:
+    - cron: "*/10 * * * *"
 
 permissions:
   contents: read
@@ -70,9 +74,7 @@ jobs:
           # publish-buffer-feed.js's runLive() (only the live mode path
           # needs it at all; dry-run makes no Worker call).
           ARTWORK_WORKER_BASE_URL: https://aggregate-artwork-bridge.jtmasters3.workers.dev
-        run: |
-          if [ "${{ inputs.mode }}" = "live" ]; then
-            node scripts/social/auto-publish-approved-feed.js --live
-          else
-            node scripts/social/auto-publish-approved-feed.js
-          fi
+          # Both consumed by resolveRunMode() inside the script itself — see
+          # this workflow's own header comment above.
+          INPUT_MODE: ${{ inputs.mode }}
+        run: node scripts/social/auto-publish-approved-feed.js
