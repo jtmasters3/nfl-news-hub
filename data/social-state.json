@@ -86740,10 +86740,10 @@
     },
     "3287b40b-d88e-44cb-a2d7-c11c97844664": {
       "story_id": "3287b40b-d88e-44cb-a2d7-c11c97844664",
-      "status": "posting",
+      "status": "posted",
       "merged_into": null,
       "created_at": "2026-09-10T01:20:33.045Z",
-      "updated_at": "2026-09-11T13:06:27.414Z",
+      "updated_at": "2026-09-11T13:47:03.972Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -86831,13 +86831,13 @@
         "created_at": "2026-09-10T02:40:03.807Z"
       },
       "publishing": {
-        "status": "posting",
+        "status": "posted",
         "instagram": {
           "feed": {
-            "status": "ambiguous",
+            "status": "posted",
             "container_id": null,
             "media_id": null,
-            "published_at": null,
+            "published_at": "2026-09-11T13:46:39.000Z",
             "provider": "buffer",
             "storage_key": "social-artwork-jpeg/3287b40b-d88e-44cb-a2d7-c11c97844664.jpg",
             "jpeg_url": "https://pub-1705b19e159c4434ba94af4ae6799f97.r2.dev/social-artwork-jpeg/3287b40b-d88e-44cb-a2d7-c11c97844664.jpg",
@@ -86856,7 +86856,13 @@
               "typename": null,
               "category": "network_error"
             },
-            "buffer": null
+            "buffer": null,
+            "permalink": null,
+            "manual_success_confirmation": {
+              "confirmed_by": "operator_buffer_timeout_reconciliation",
+              "confirmed_at": "2026-09-11T13:46:39.000Z",
+              "evidence_note": "Buffer createPost attempt ended with a client-side timeout/abort and no HTTP response. Operator manually verified that the Drake Maye post from this attempt appears in Buffer Sent and is live on the actual theaggregatenfl Instagram account. Exactly one matching Drake Maye post is visible and no duplicate exists."
+            }
           },
           "story": {
             "status": "not_posted",
@@ -86870,7 +86876,7 @@
           "post_id": null,
           "post_url": null
         },
-        "posted_at": null,
+        "posted_at": "2026-09-11T13:46:39.000Z",
         "claim": {
           "claim_id": "95c93fd5-ad5e-4b72-aa32-c605695607fa",
           "processor_id": "unknown-processor",
