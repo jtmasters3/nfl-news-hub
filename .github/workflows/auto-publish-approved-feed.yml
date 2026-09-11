@@ -40,8 +40,6 @@ on:
         options:
           - dry-run
           - live
-  schedule:
-    - cron: "*/10 * * * *"
 
 permissions:
   contents: read

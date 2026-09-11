@@ -279,16 +279,11 @@ test("no accidental fall-through: an unrecognized/garbage inputMode value on a n
 // apply-artwork-event-routing-regression.mjs's own allowlist checks)
 // ---------------------------------------------------------------------------
 
-test("1. the workflow file declares a schedule trigger", async () => {
+test("1. the workflow file declares NO native schedule trigger — GitHub's native schedule: was empirically unreliable for this workflow (zero schedule-triggered runs observed across many elapsed 10-minute windows); an external cron-job.org dispatcher now calls workflow_dispatch instead, mirroring refresh.yml's own proven precedent", async () => {
   const { readFile } = await import("node:fs/promises");
   const yaml = await readFile(new URL("../../.github/workflows/auto-publish-approved-feed.yml", import.meta.url), "utf-8");
-  assert.match(yaml, /^\s*schedule:\s*$/m, "the workflow must declare a schedule: trigger");
-});
-
-test("2. the cron cadence is every 10 minutes", async () => {
-  const { readFile } = await import("node:fs/promises");
-  const yaml = await readFile(new URL("../../.github/workflows/auto-publish-approved-feed.yml", import.meta.url), "utf-8");
-  assert.match(yaml, /cron:\s*"\*\/10 \* \* \* \*"/, "expected the standard 'every 10 minutes' cron expression");
+  assert.ok(!/^\s*schedule:/m.test(yaml), "this workflow must not declare a schedule: trigger");
+  assert.ok(!/cron:/.test(yaml), "no cron expression may remain");
 });
 
 test("11. the workflow still declares a concurrency group", async () => {
@@ -306,7 +301,7 @@ test("12. the workflow still references the existing AGGREGATE_ARTWORK_API_TOKEN
   assert.deepEqual([...new Set(secretRefs)], ["AGGREGATE_ARTWORK_API_TOKEN"], "no additional GitHub secret may be referenced by this workflow");
 });
 
-test("workflow_dispatch is still available alongside the schedule trigger, with mode defaulting to dry-run", async () => {
+test("workflow_dispatch remains available (now the only trigger, driven externally by cron-job.org), with mode defaulting to dry-run", async () => {
   const { readFile } = await import("node:fs/promises");
   const yaml = await readFile(new URL("../../.github/workflows/auto-publish-approved-feed.yml", import.meta.url), "utf-8");
   assert.match(yaml, /^\s*workflow_dispatch:\s*$/m);
