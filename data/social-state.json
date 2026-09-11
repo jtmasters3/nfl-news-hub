@@ -86997,10 +86997,10 @@
     },
     "384cd9ae-37e5-4271-baba-89e1a16436cd": {
       "story_id": "384cd9ae-37e5-4271-baba-89e1a16436cd",
-      "status": "approved",
+      "status": "posting",
       "merged_into": null,
       "created_at": "2026-09-10T02:20:28.829Z",
-      "updated_at": "2026-09-11T19:36:21.420Z",
+      "updated_at": "2026-09-11T20:02:37.794Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -87076,7 +87076,7 @@
         "created_at": "2026-09-11T19:24:04.925Z"
       },
       "publishing": {
-        "status": "not_posted",
+        "status": "posting",
         "instagram": {
           "feed": {
             "status": "not_posted",
@@ -87085,10 +87085,14 @@
             "published_at": null
           },
           "story": {
-            "status": "not_posted",
+            "status": "claimed",
             "container_id": null,
             "media_id": null,
-            "published_at": null
+            "published_at": null,
+            "provider": "buffer",
+            "storage_key": "social-artwork-jpeg-story/384cd9ae-37e5-4271-baba-89e1a16436cd.jpg",
+            "jpeg_url": "https://pub-1705b19e159c4434ba94af4ae6799f97.r2.dev/social-artwork-jpeg-story/384cd9ae-37e5-4271-baba-89e1a16436cd.jpg",
+            "caption_used": "A.J. Brown has been downgraded to out with an ankle injury. The injury interrupted his first game with the New England Patriots during the opening drive of the second half.\n\nSource: FOX Sports\n\n#NFL #Patriots #Seahawks"
           }
         },
         "facebook": {
@@ -87096,7 +87100,14 @@
           "post_id": null,
           "post_url": null
         },
-        "posted_at": null
+        "posted_at": null,
+        "claim": {
+          "claim_id": "71c6bcfa-6854-41bb-9c25-7ef5dbca13e1",
+          "processor_id": "unknown-processor",
+          "claimed_at": "2026-09-11T20:02:27.190Z",
+          "claim_expires_at": "2026-09-11T20:52:27.190Z",
+          "retry_count": 0
+        }
       },
       "last_error": {
         "stage": null,
