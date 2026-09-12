@@ -108162,6 +108162,171 @@
         "at": null,
         "retry_count": 0
       }
+    },
+    "b6955172-60cf-4ac2-9baa-b36be426e2bb": {
+      "story_id": "b6955172-60cf-4ac2-9baa-b36be426e2bb",
+      "status": "queued",
+      "merged_into": null,
+      "created_at": "2026-09-12T17:00:40.439Z",
+      "updated_at": "2026-09-12T17:00:28.767Z",
+      "content_package_version": 2,
+      "publishing_preferences": {
+        "instagram_feed": true,
+        "instagram_story": true
+      },
+      "source_story": {
+        "post_headline": "INSIDE THE MICHAEL MAYER DEAL",
+        "base_image_url": "https://nbcsports.brightspotcdn.com/dims4/default/d04ff29/2147483647/strip/true/crop/3555x2000+0+0/resize/1440x810!/quality/90/?url=https%3A%2F%2Fnbc-sports-production-nbc-sports.s3.us-east-1.amazonaws.com%2Fbrightspot%2F74%2Fe9%2F438080734570bd5c5065db7711ce%2F2254719704.jpg",
+        "source_name": "Pro Football Talk",
+        "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/inside-the-michael-mayer-deal",
+        "category": "contract",
+        "teams": [
+          "Las Vegas Raiders"
+        ],
+        "players": [
+          "Brock Bowers",
+          "Michael Mayer"
+        ],
+        "description": "Despite the presence of Brock Bowers, the Raiders have decided to keep tight end Michael Mayer — with an extension just before the first game of his contract year.",
+        "is_rumor": false
+      },
+      "artwork": {
+        "status": "not_created",
+        "image_url": null,
+        "created_at": null,
+        "provider": null
+      },
+      "validation": {
+        "status": "not_run",
+        "passed": null,
+        "issues": []
+      },
+      "story_artwork": {
+        "status": "not_created",
+        "image_url": null,
+        "storage_key": null,
+        "width": null,
+        "height": null,
+        "mime_type": null,
+        "size_bytes": null,
+        "provider": null,
+        "created_at": null,
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null
+        },
+        "validation": {
+          "status": "not_run",
+          "passed": null,
+          "issues": []
+        }
+      },
+      "approval": {
+        "status": "pending",
+        "decided_at": null,
+        "approved_at": null,
+        "rejected_at": null,
+        "rejection_reason": null,
+        "actor": null,
+        "request_id": null,
+        "decision_source": null
+      },
+      "caption": {
+        "status": "not_created",
+        "text": null,
+        "last_candidate_text": null,
+        "hashtags": [],
+        "attribution_line": null,
+        "source_url": null,
+        "provider": null,
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null
+        },
+        "claim_attempt_count": 0,
+        "created_at": null
+      },
+      "publishing": {
+        "status": "not_posted",
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null,
+          "retry_count": 0
+        },
+        "instagram": {
+          "feed": {
+            "status": "not_posted",
+            "provider": null,
+            "storage_key": null,
+            "jpeg_url": null,
+            "caption_used": null,
+            "container_id": null,
+            "container_created_at": null,
+            "publish_attempted_at": null,
+            "media_id": null,
+            "permalink": null,
+            "published_at": null,
+            "last_http_outcome": null,
+            "last_reconciled_at": null,
+            "buffer": {
+              "post_id": null,
+              "channel_id": null,
+              "status": null,
+              "due_at": null,
+              "sent_at": null
+            }
+          },
+          "story": {
+            "status": "not_posted",
+            "provider": null,
+            "storage_key": null,
+            "jpeg_url": null,
+            "caption_used": null,
+            "container_id": null,
+            "container_created_at": null,
+            "publish_attempted_at": null,
+            "media_id": null,
+            "permalink": null,
+            "published_at": null,
+            "last_http_outcome": null,
+            "last_reconciled_at": null,
+            "buffer": {
+              "post_id": null,
+              "channel_id": null,
+              "status": null,
+              "due_at": null,
+              "sent_at": null
+            }
+          }
+        },
+        "facebook": {
+          "status": "not_posted",
+          "post_id": null,
+          "post_url": null
+        },
+        "posted_at": null
+      },
+      "last_error": {
+        "stage": null,
+        "message": null,
+        "at": null,
+        "retry_count": 0
+      },
+      "selection": {
+        "destination": "story",
+        "slot_id": "story:2026-09-12T13:00:00-04:00",
+        "selected_at": "2026-09-12T17:00:28.767Z",
+        "window_start": "2026-09-12T16:00:00.000Z",
+        "window_end": "2026-09-12T17:00:00.000Z",
+        "score": 8,
+        "reason": "importance_score_rank"
+      }
     }
   },
   "selection_activated_at": "2026-09-10T01:00:27.709Z",
@@ -108597,6 +108762,15 @@
       "status": "no_candidate",
       "story_id": null,
       "processed_at": "2026-09-12T16:00:28.832Z"
+    },
+    "story:2026-09-12T13:00:00-04:00": {
+      "destination": "story",
+      "slot_time": "2026-09-12T17:00:00.000Z",
+      "window_start": "2026-09-12T16:00:00.000Z",
+      "window_end": "2026-09-12T17:00:00.000Z",
+      "status": "selected",
+      "story_id": "b6955172-60cf-4ac2-9baa-b36be426e2bb",
+      "processed_at": "2026-09-12T17:00:28.767Z"
     }
   }
 }
