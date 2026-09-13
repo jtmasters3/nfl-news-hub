@@ -112547,7 +112547,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-09-13T12:30:34.293Z",
-      "updated_at": "2026-09-13T12:30:34.295Z",
+      "updated_at": "2026-09-13T14:00:31.396Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -112691,6 +112691,15 @@
         "message": null,
         "at": null,
         "retry_count": 0
+      },
+      "selection": {
+        "destination": "feed",
+        "slot_id": "feed:2026-09-13T10:00:00-04:00",
+        "selected_at": "2026-09-13T14:00:31.396Z",
+        "window_start": "2026-09-13T12:00:00.000Z",
+        "window_end": "2026-09-13T14:00:00.000Z",
+        "score": 6,
+        "reason": "importance_score_rank"
       }
     },
     "dafc0c83-a28e-4f76-a51b-d4d90460beaa": {
@@ -112993,6 +113002,166 @@
         "message": null,
         "at": null,
         "retry_count": 0
+      }
+    },
+    "29aea5ac-a5e3-4c2b-9e2e-f0528ad3c6d0": {
+      "story_id": "29aea5ac-a5e3-4c2b-9e2e-f0528ad3c6d0",
+      "status": "queued",
+      "merged_into": null,
+      "created_at": "2026-09-13T14:00:42.031Z",
+      "updated_at": "2026-09-13T14:00:31.396Z",
+      "content_package_version": 2,
+      "publishing_preferences": {
+        "instagram_feed": true,
+        "instagram_story": true
+      },
+      "source_story": {
+        "post_headline": "ESPN OFFERS A LAME EXCUSE FOR GIVING TED CRUZ UNOPPOSED AIRTIME",
+        "base_image_url": "https://nbcsports.brightspotcdn.com/dims4/default/b66f825/2147483647/strip/true/crop/3569x2008+0+0/resize/1440x810!/quality/90/?url=https%3A%2F%2Fnbc-sports-production-nbc-sports.s3.us-east-1.amazonaws.com%2Fbrightspot%2F94%2F11%2Feda527d8460994f892c245e67d00%2F2026-09-12t231643z-1905442201-mt1usatoday29805308-rtrmadp-3-ncaa-football-ohio-state-at-texas.jpg",
+        "source_name": "Pro Football Talk",
+        "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/espn-offers-a-lame-excuse-for-giving-ted-cruz-unopposed-airtime",
+        "category": "league_news",
+        "teams": [],
+        "players": [],
+        "description": "We interrupt our ongoing coverage of the first Sunday of the NFL regular season for one last item regarding Saturday's developments in the NFL's unofficial farm system, originating on a network in which the NFL now holds a 10-percent stake.",
+        "is_rumor": false
+      },
+      "artwork": {
+        "status": "not_created",
+        "image_url": null,
+        "created_at": null,
+        "provider": null
+      },
+      "validation": {
+        "status": "not_run",
+        "passed": null,
+        "issues": []
+      },
+      "story_artwork": {
+        "status": "not_created",
+        "image_url": null,
+        "storage_key": null,
+        "width": null,
+        "height": null,
+        "mime_type": null,
+        "size_bytes": null,
+        "provider": null,
+        "created_at": null,
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null
+        },
+        "validation": {
+          "status": "not_run",
+          "passed": null,
+          "issues": []
+        }
+      },
+      "approval": {
+        "status": "pending",
+        "decided_at": null,
+        "approved_at": null,
+        "rejected_at": null,
+        "rejection_reason": null,
+        "actor": null,
+        "request_id": null,
+        "decision_source": null
+      },
+      "caption": {
+        "status": "not_created",
+        "text": null,
+        "last_candidate_text": null,
+        "hashtags": [],
+        "attribution_line": null,
+        "source_url": null,
+        "provider": null,
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null
+        },
+        "claim_attempt_count": 0,
+        "created_at": null
+      },
+      "publishing": {
+        "status": "not_posted",
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null,
+          "retry_count": 0
+        },
+        "instagram": {
+          "feed": {
+            "status": "not_posted",
+            "provider": null,
+            "storage_key": null,
+            "jpeg_url": null,
+            "caption_used": null,
+            "container_id": null,
+            "container_created_at": null,
+            "publish_attempted_at": null,
+            "media_id": null,
+            "permalink": null,
+            "published_at": null,
+            "last_http_outcome": null,
+            "last_reconciled_at": null,
+            "buffer": {
+              "post_id": null,
+              "channel_id": null,
+              "status": null,
+              "due_at": null,
+              "sent_at": null
+            }
+          },
+          "story": {
+            "status": "not_posted",
+            "provider": null,
+            "storage_key": null,
+            "jpeg_url": null,
+            "caption_used": null,
+            "container_id": null,
+            "container_created_at": null,
+            "publish_attempted_at": null,
+            "media_id": null,
+            "permalink": null,
+            "published_at": null,
+            "last_http_outcome": null,
+            "last_reconciled_at": null,
+            "buffer": {
+              "post_id": null,
+              "channel_id": null,
+              "status": null,
+              "due_at": null,
+              "sent_at": null
+            }
+          }
+        },
+        "facebook": {
+          "status": "not_posted",
+          "post_id": null,
+          "post_url": null
+        },
+        "posted_at": null
+      },
+      "last_error": {
+        "stage": null,
+        "message": null,
+        "at": null,
+        "retry_count": 0
+      },
+      "selection": {
+        "destination": "story",
+        "slot_id": "story:2026-09-13T10:00:00-04:00",
+        "selected_at": "2026-09-13T14:00:31.396Z",
+        "window_start": "2026-09-13T13:00:00.000Z",
+        "window_end": "2026-09-13T14:00:00.000Z",
+        "score": 4,
+        "reason": "importance_score_rank"
       }
     }
   },
@@ -113564,6 +113733,24 @@
       "status": "selected",
       "story_id": "e23bf1fc-eefb-486a-8572-e5785060c24f",
       "processed_at": "2026-09-13T13:00:28.950Z"
+    },
+    "feed:2026-09-13T10:00:00-04:00": {
+      "destination": "feed",
+      "slot_time": "2026-09-13T14:00:00.000Z",
+      "window_start": "2026-09-13T12:00:00.000Z",
+      "window_end": "2026-09-13T14:00:00.000Z",
+      "status": "selected",
+      "story_id": "d1307999-2e71-48ed-9e05-5c342d20a625",
+      "processed_at": "2026-09-13T14:00:31.396Z"
+    },
+    "story:2026-09-13T10:00:00-04:00": {
+      "destination": "story",
+      "slot_time": "2026-09-13T14:00:00.000Z",
+      "window_start": "2026-09-13T13:00:00.000Z",
+      "window_end": "2026-09-13T14:00:00.000Z",
+      "status": "selected",
+      "story_id": "29aea5ac-a5e3-4c2b-9e2e-f0528ad3c6d0",
+      "processed_at": "2026-09-13T14:00:31.396Z"
     }
   }
 }
