@@ -115489,7 +115489,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-09-13T17:50:40.692Z",
-      "updated_at": "2026-09-13T17:50:40.695Z",
+      "updated_at": "2026-09-13T18:00:27.451Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -115635,6 +115635,15 @@
         "message": null,
         "at": null,
         "retry_count": 0
+      },
+      "selection": {
+        "destination": "feed",
+        "slot_id": "feed:2026-09-13T14:00:00-04:00",
+        "selected_at": "2026-09-13T18:00:27.451Z",
+        "window_start": "2026-09-13T16:00:00.000Z",
+        "window_end": "2026-09-13T18:00:00.000Z",
+        "score": 6,
+        "reason": "importance_score_rank"
       }
     },
     "d08d23ab-60c9-4db3-be86-63493a015154": {
@@ -115642,7 +115651,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-09-13T17:50:40.693Z",
-      "updated_at": "2026-09-13T17:50:40.695Z",
+      "updated_at": "2026-09-13T18:00:27.451Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -115789,6 +115798,15 @@
         "message": null,
         "at": null,
         "retry_count": 0
+      },
+      "selection": {
+        "destination": "story",
+        "slot_id": "story:2026-09-13T14:00:00-04:00",
+        "selected_at": "2026-09-13T18:00:27.451Z",
+        "window_start": "2026-09-13T17:00:00.000Z",
+        "window_end": "2026-09-13T18:00:00.000Z",
+        "score": 6,
+        "reason": "importance_score_rank"
       }
     },
     "e1b41748-fda9-42d9-bf83-f7f7668a4211": {
@@ -116558,6 +116576,620 @@
         "at": null,
         "retry_count": 0
       }
+    },
+    "5310bf6e-9440-458d-9026-2a9a551c4f9a": {
+      "story_id": "5310bf6e-9440-458d-9026-2a9a551c4f9a",
+      "status": "queued",
+      "merged_into": null,
+      "created_at": "2026-09-13T18:00:42.887Z",
+      "updated_at": "2026-09-13T18:00:42.890Z",
+      "content_package_version": 2,
+      "publishing_preferences": {
+        "instagram_feed": true,
+        "instagram_story": true
+      },
+      "source_story": {
+        "post_headline": "JOSH ALLEN RUNS FOR 21-YARD TD",
+        "base_image_url": "https://nbcsports.brightspotcdn.com/dims4/default/9a732f7/2147483647/strip/true/crop/3000x1688+0+0/resize/1440x810!/quality/90/?url=https%3A%2F%2Fnbc-sports-production-nbc-sports.s3.us-east-1.amazonaws.com%2Fbrightspot%2F9c%2F4f%2Fe074357c43dfa68e79df7185f1c8%2F2295073194.jpg",
+        "source_name": "Pro Football Talk",
+        "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-allen-runs-for-21-yard-td-10-7-bills-lead",
+        "category": "league_news",
+        "teams": [
+          "Buffalo Bills",
+          "Houston Texans"
+        ],
+        "players": [
+          "Josh Allen"
+        ],
+        "description": "Josh Allen is aware of his 0-4 record in Houston.",
+        "is_rumor": false
+      },
+      "artwork": {
+        "status": "not_created",
+        "image_url": null,
+        "created_at": null,
+        "provider": null
+      },
+      "validation": {
+        "status": "not_run",
+        "passed": null,
+        "issues": []
+      },
+      "story_artwork": {
+        "status": "not_created",
+        "image_url": null,
+        "storage_key": null,
+        "width": null,
+        "height": null,
+        "mime_type": null,
+        "size_bytes": null,
+        "provider": null,
+        "created_at": null,
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null
+        },
+        "validation": {
+          "status": "not_run",
+          "passed": null,
+          "issues": []
+        }
+      },
+      "approval": {
+        "status": "pending",
+        "decided_at": null,
+        "approved_at": null,
+        "rejected_at": null,
+        "rejection_reason": null,
+        "actor": null,
+        "request_id": null,
+        "decision_source": null
+      },
+      "caption": {
+        "status": "not_created",
+        "text": null,
+        "last_candidate_text": null,
+        "hashtags": [],
+        "attribution_line": null,
+        "source_url": null,
+        "provider": null,
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null
+        },
+        "claim_attempt_count": 0,
+        "created_at": null
+      },
+      "publishing": {
+        "status": "not_posted",
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null,
+          "retry_count": 0
+        },
+        "instagram": {
+          "feed": {
+            "status": "not_posted",
+            "provider": null,
+            "storage_key": null,
+            "jpeg_url": null,
+            "caption_used": null,
+            "container_id": null,
+            "container_created_at": null,
+            "publish_attempted_at": null,
+            "media_id": null,
+            "permalink": null,
+            "published_at": null,
+            "last_http_outcome": null,
+            "last_reconciled_at": null,
+            "buffer": {
+              "post_id": null,
+              "channel_id": null,
+              "status": null,
+              "due_at": null,
+              "sent_at": null
+            }
+          },
+          "story": {
+            "status": "not_posted",
+            "provider": null,
+            "storage_key": null,
+            "jpeg_url": null,
+            "caption_used": null,
+            "container_id": null,
+            "container_created_at": null,
+            "publish_attempted_at": null,
+            "media_id": null,
+            "permalink": null,
+            "published_at": null,
+            "last_http_outcome": null,
+            "last_reconciled_at": null,
+            "buffer": {
+              "post_id": null,
+              "channel_id": null,
+              "status": null,
+              "due_at": null,
+              "sent_at": null
+            }
+          }
+        },
+        "facebook": {
+          "status": "not_posted",
+          "post_id": null,
+          "post_url": null
+        },
+        "posted_at": null
+      },
+      "last_error": {
+        "stage": null,
+        "message": null,
+        "at": null,
+        "retry_count": 0
+      }
+    },
+    "bcec2cba-8d0c-472a-b1ed-4e5f5f89bcb9": {
+      "story_id": "bcec2cba-8d0c-472a-b1ed-4e5f5f89bcb9",
+      "status": "queued",
+      "merged_into": null,
+      "created_at": "2026-09-13T18:00:42.888Z",
+      "updated_at": "2026-09-13T18:00:42.890Z",
+      "content_package_version": 2,
+      "publishing_preferences": {
+        "instagram_feed": true,
+        "instagram_story": true
+      },
+      "source_story": {
+        "post_headline": "BIJAN ROBINSON 23-YARD TOUCHDOWN GIVES FALCONS 7-3 LEAD",
+        "base_image_url": "https://nbcsports.brightspotcdn.com/dims4/default/5524fa6/2147483647/strip/true/crop/4915x2765+0+0/resize/1440x810!/quality/90/?url=https%3A%2F%2Fnbc-sports-production-nbc-sports.s3.us-east-1.amazonaws.com%2Fbrightspot%2F83%2F32%2F048a9e054496bda00040171a70eb%2F2291908303.jpg",
+        "source_name": "Pro Football Talk",
+        "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bijan-robinson-23-yard-touchdown-gives-falcons-7-3-lead",
+        "category": "league_news",
+        "teams": [
+          "Atlanta Falcons"
+        ],
+        "players": [],
+        "description": "The Falcons have picked up a turnover and taken the lead.",
+        "is_rumor": false
+      },
+      "artwork": {
+        "status": "not_created",
+        "image_url": null,
+        "created_at": null,
+        "provider": null
+      },
+      "validation": {
+        "status": "not_run",
+        "passed": null,
+        "issues": []
+      },
+      "story_artwork": {
+        "status": "not_created",
+        "image_url": null,
+        "storage_key": null,
+        "width": null,
+        "height": null,
+        "mime_type": null,
+        "size_bytes": null,
+        "provider": null,
+        "created_at": null,
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null
+        },
+        "validation": {
+          "status": "not_run",
+          "passed": null,
+          "issues": []
+        }
+      },
+      "approval": {
+        "status": "pending",
+        "decided_at": null,
+        "approved_at": null,
+        "rejected_at": null,
+        "rejection_reason": null,
+        "actor": null,
+        "request_id": null,
+        "decision_source": null
+      },
+      "caption": {
+        "status": "not_created",
+        "text": null,
+        "last_candidate_text": null,
+        "hashtags": [],
+        "attribution_line": null,
+        "source_url": null,
+        "provider": null,
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null
+        },
+        "claim_attempt_count": 0,
+        "created_at": null
+      },
+      "publishing": {
+        "status": "not_posted",
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null,
+          "retry_count": 0
+        },
+        "instagram": {
+          "feed": {
+            "status": "not_posted",
+            "provider": null,
+            "storage_key": null,
+            "jpeg_url": null,
+            "caption_used": null,
+            "container_id": null,
+            "container_created_at": null,
+            "publish_attempted_at": null,
+            "media_id": null,
+            "permalink": null,
+            "published_at": null,
+            "last_http_outcome": null,
+            "last_reconciled_at": null,
+            "buffer": {
+              "post_id": null,
+              "channel_id": null,
+              "status": null,
+              "due_at": null,
+              "sent_at": null
+            }
+          },
+          "story": {
+            "status": "not_posted",
+            "provider": null,
+            "storage_key": null,
+            "jpeg_url": null,
+            "caption_used": null,
+            "container_id": null,
+            "container_created_at": null,
+            "publish_attempted_at": null,
+            "media_id": null,
+            "permalink": null,
+            "published_at": null,
+            "last_http_outcome": null,
+            "last_reconciled_at": null,
+            "buffer": {
+              "post_id": null,
+              "channel_id": null,
+              "status": null,
+              "due_at": null,
+              "sent_at": null
+            }
+          }
+        },
+        "facebook": {
+          "status": "not_posted",
+          "post_id": null,
+          "post_url": null
+        },
+        "posted_at": null
+      },
+      "last_error": {
+        "stage": null,
+        "message": null,
+        "at": null,
+        "retry_count": 0
+      }
+    },
+    "5d864f64-9194-4410-a37d-6b20b504b678": {
+      "story_id": "5d864f64-9194-4410-a37d-6b20b504b678",
+      "status": "queued",
+      "merged_into": null,
+      "created_at": "2026-09-13T18:00:42.888Z",
+      "updated_at": "2026-09-13T18:00:42.890Z",
+      "content_package_version": 2,
+      "publishing_preferences": {
+        "instagram_feed": true,
+        "instagram_story": true
+      },
+      "source_story": {
+        "post_headline": "BEARS TAKE 14-7 LEAD AS CALEB WILLIAMS",
+        "base_image_url": "https://nbcsports.brightspotcdn.com/dims4/default/478b417/2147483647/strip/true/crop/4487x2524+0+235/resize/1440x810!/quality/90/?url=https%3A%2F%2Fnbc-sports-production-nbc-sports.s3.us-east-1.amazonaws.com%2Fbrightspot%2F5f%2Fcd%2F2dfb743347eab93ac04bd4f71862%2F2295075862.jpg",
+        "source_name": "Pro Football Talk",
+        "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-take-14-7-lead-as-caleb-williams-dandre-swift-run-for-touchdowns",
+        "category": "league_news",
+        "teams": [
+          "Carolina Panthers",
+          "Chicago Bears"
+        ],
+        "players": [],
+        "description": "The Bears are running the ball at will in Carolina.",
+        "is_rumor": false
+      },
+      "artwork": {
+        "status": "not_created",
+        "image_url": null,
+        "created_at": null,
+        "provider": null
+      },
+      "validation": {
+        "status": "not_run",
+        "passed": null,
+        "issues": []
+      },
+      "story_artwork": {
+        "status": "not_created",
+        "image_url": null,
+        "storage_key": null,
+        "width": null,
+        "height": null,
+        "mime_type": null,
+        "size_bytes": null,
+        "provider": null,
+        "created_at": null,
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null
+        },
+        "validation": {
+          "status": "not_run",
+          "passed": null,
+          "issues": []
+        }
+      },
+      "approval": {
+        "status": "pending",
+        "decided_at": null,
+        "approved_at": null,
+        "rejected_at": null,
+        "rejection_reason": null,
+        "actor": null,
+        "request_id": null,
+        "decision_source": null
+      },
+      "caption": {
+        "status": "not_created",
+        "text": null,
+        "last_candidate_text": null,
+        "hashtags": [],
+        "attribution_line": null,
+        "source_url": null,
+        "provider": null,
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null
+        },
+        "claim_attempt_count": 0,
+        "created_at": null
+      },
+      "publishing": {
+        "status": "not_posted",
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null,
+          "retry_count": 0
+        },
+        "instagram": {
+          "feed": {
+            "status": "not_posted",
+            "provider": null,
+            "storage_key": null,
+            "jpeg_url": null,
+            "caption_used": null,
+            "container_id": null,
+            "container_created_at": null,
+            "publish_attempted_at": null,
+            "media_id": null,
+            "permalink": null,
+            "published_at": null,
+            "last_http_outcome": null,
+            "last_reconciled_at": null,
+            "buffer": {
+              "post_id": null,
+              "channel_id": null,
+              "status": null,
+              "due_at": null,
+              "sent_at": null
+            }
+          },
+          "story": {
+            "status": "not_posted",
+            "provider": null,
+            "storage_key": null,
+            "jpeg_url": null,
+            "caption_used": null,
+            "container_id": null,
+            "container_created_at": null,
+            "publish_attempted_at": null,
+            "media_id": null,
+            "permalink": null,
+            "published_at": null,
+            "last_http_outcome": null,
+            "last_reconciled_at": null,
+            "buffer": {
+              "post_id": null,
+              "channel_id": null,
+              "status": null,
+              "due_at": null,
+              "sent_at": null
+            }
+          }
+        },
+        "facebook": {
+          "status": "not_posted",
+          "post_id": null,
+          "post_url": null
+        },
+        "posted_at": null
+      },
+      "last_error": {
+        "stage": null,
+        "message": null,
+        "at": null,
+        "retry_count": 0
+      }
+    },
+    "84919b1b-b677-48da-99c5-4ab0b427951c": {
+      "story_id": "84919b1b-b677-48da-99c5-4ab0b427951c",
+      "status": "new",
+      "merged_into": null,
+      "created_at": "2026-09-13T18:00:42.889Z",
+      "updated_at": "2026-09-13T18:00:42.889Z",
+      "content_package_version": 2,
+      "publishing_preferences": {
+        "instagram_feed": true,
+        "instagram_story": true
+      },
+      "source_story": {
+        "post_headline": null,
+        "base_image_url": null,
+        "source_name": null,
+        "source_url": null,
+        "category": null,
+        "teams": [],
+        "players": [],
+        "description": null,
+        "is_rumor": false
+      },
+      "artwork": {
+        "status": "not_created",
+        "image_url": null,
+        "created_at": null,
+        "provider": null
+      },
+      "validation": {
+        "status": "not_run",
+        "passed": null,
+        "issues": []
+      },
+      "story_artwork": {
+        "status": "not_created",
+        "image_url": null,
+        "storage_key": null,
+        "width": null,
+        "height": null,
+        "mime_type": null,
+        "size_bytes": null,
+        "provider": null,
+        "created_at": null,
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null
+        },
+        "validation": {
+          "status": "not_run",
+          "passed": null,
+          "issues": []
+        }
+      },
+      "approval": {
+        "status": "pending",
+        "decided_at": null,
+        "approved_at": null,
+        "rejected_at": null,
+        "rejection_reason": null,
+        "actor": null,
+        "request_id": null,
+        "decision_source": null
+      },
+      "caption": {
+        "status": "not_created",
+        "text": null,
+        "last_candidate_text": null,
+        "hashtags": [],
+        "attribution_line": null,
+        "source_url": null,
+        "provider": null,
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null
+        },
+        "claim_attempt_count": 0,
+        "created_at": null
+      },
+      "publishing": {
+        "status": "not_posted",
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null,
+          "retry_count": 0
+        },
+        "instagram": {
+          "feed": {
+            "status": "not_posted",
+            "provider": null,
+            "storage_key": null,
+            "jpeg_url": null,
+            "caption_used": null,
+            "container_id": null,
+            "container_created_at": null,
+            "publish_attempted_at": null,
+            "media_id": null,
+            "permalink": null,
+            "published_at": null,
+            "last_http_outcome": null,
+            "last_reconciled_at": null,
+            "buffer": {
+              "post_id": null,
+              "channel_id": null,
+              "status": null,
+              "due_at": null,
+              "sent_at": null
+            }
+          },
+          "story": {
+            "status": "not_posted",
+            "provider": null,
+            "storage_key": null,
+            "jpeg_url": null,
+            "caption_used": null,
+            "container_id": null,
+            "container_created_at": null,
+            "publish_attempted_at": null,
+            "media_id": null,
+            "permalink": null,
+            "published_at": null,
+            "last_http_outcome": null,
+            "last_reconciled_at": null,
+            "buffer": {
+              "post_id": null,
+              "channel_id": null,
+              "status": null,
+              "due_at": null,
+              "sent_at": null
+            }
+          }
+        },
+        "facebook": {
+          "status": "not_posted",
+          "post_id": null,
+          "post_url": null
+        },
+        "posted_at": null
+      },
+      "last_error": {
+        "stage": null,
+        "message": null,
+        "at": null,
+        "retry_count": 0
+      }
     }
   },
   "selection_activated_at": "2026-09-10T01:00:27.709Z",
@@ -117182,6 +117814,24 @@
       "status": "selected",
       "story_id": "c4e543cb-108c-48b4-8841-6b95483a3d9a",
       "processed_at": "2026-09-13T17:00:28.052Z"
+    },
+    "feed:2026-09-13T14:00:00-04:00": {
+      "destination": "feed",
+      "slot_time": "2026-09-13T18:00:00.000Z",
+      "window_start": "2026-09-13T16:00:00.000Z",
+      "window_end": "2026-09-13T18:00:00.000Z",
+      "status": "selected",
+      "story_id": "a4947aeb-6390-4748-91bc-20c6ac26cae0",
+      "processed_at": "2026-09-13T18:00:27.451Z"
+    },
+    "story:2026-09-13T14:00:00-04:00": {
+      "destination": "story",
+      "slot_time": "2026-09-13T18:00:00.000Z",
+      "window_start": "2026-09-13T17:00:00.000Z",
+      "window_end": "2026-09-13T18:00:00.000Z",
+      "status": "selected",
+      "story_id": "d08d23ab-60c9-4db3-be86-63493a015154",
+      "processed_at": "2026-09-13T18:00:27.451Z"
     }
   }
 }
