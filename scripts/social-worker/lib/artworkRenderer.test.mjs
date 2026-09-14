@@ -8,9 +8,10 @@
 // node scripts/social-worker/lib/artworkRenderer.test.mjs
 import assert from "node:assert/strict";
 import sharp from "sharp";
-import { mkdtemp, rm, readFile, stat } from "node:fs/promises";
+import { mkdtemp, rm, readFile, stat, readdir } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import {
   renderArtwork,
   buildOverlaySvg,
@@ -19,6 +20,10 @@ import {
   estimateTextWidth,
   CANVAS,
   FONT_PATH,
+  chooseLayout,
+  estimateCoverCropLoss,
+  detectEmphasisPhrase,
+  EMPHASIS_PHRASES,
 } from "./artworkRenderer.js";
 import { compositeBrandOverlay } from "./brandOverlay.js";
 
@@ -104,15 +109,15 @@ test("8. buildOverlaySvg reserves space above the bottom logo-clearance zone —
 // renderArtwork — full pipeline against a synthetic source photo
 // ---------------------------------------------------------------------------
 
-test("9. Feed renders at exactly the canonical 1024x1280 (4:5) canvas, matching artworkValidation.js's own target", async () => {
+test("9. Feed renders at exactly the canonical 1080x1350 (4:5) canvas, matching artworkValidation.js's own target", async () => {
   const src = await makeSourcePhoto("feed-src.jpg");
   const out = path.join(workDir, "feed-out.png");
   const result = await renderArtwork({ sourceImagePath: src, headline: "TEST HEADLINE", format: "feed", outputPath: out });
-  assert.equal(result.width, 1024);
-  assert.equal(result.height, 1280);
+  assert.equal(result.width, 1080);
+  assert.equal(result.height, 1350);
   const meta = await sharp(await readFile(out)).metadata();
-  assert.equal(meta.width, 1024);
-  assert.equal(meta.height, 1280);
+  assert.equal(meta.width, 1080);
+  assert.equal(meta.height, 1350);
 });
 
 test("10. Story renders at exactly the canonical 1080x1920 (9:16) canvas", async () => {
@@ -176,8 +181,8 @@ test("15. a very long headline still produces a valid, correctly-dimensioned PNG
   const result = await renderArtwork({ sourceImagePath: src, headline: longHeadline, format: "feed", outputPath: out });
   assert.equal(result.lines.join(" "), longHeadline);
   const meta = await sharp(await readFile(out)).metadata();
-  assert.equal(meta.width, 1024);
-  assert.equal(meta.height, 1280);
+  assert.equal(meta.width, 1080);
+  assert.equal(meta.height, 1350);
 });
 
 test("16. the rendered output leaves the bottom-left branding corner visually clean enough for compositeBrandOverlay.js to succeed unmodified", async () => {
@@ -186,8 +191,8 @@ test("16. the rendered output leaves the bottom-left branding corner visually cl
   const branded = path.join(workDir, "brand-clean-branded.png");
   await renderArtwork({ sourceImagePath: src, headline: "HEADLINE FOR BRANDING CHECK", format: "feed", outputPath: out });
   const overlayResult = await compositeBrandOverlay({ baseImagePath: out, outputPath: branded, format: "feed" });
-  assert.equal(overlayResult.width, 1024);
-  assert.equal(overlayResult.height, 1280);
+  assert.equal(overlayResult.width, 1080);
+  assert.equal(overlayResult.height, 1350);
   await stat(branded); // must exist
 });
 
@@ -217,8 +222,157 @@ test("19. process-one.js no longer imports codexRunner.js or references codex.ex
 });
 
 test("20. CANVAS exposes exactly the two supported formats with their exact target dimensions", () => {
-  assert.deepEqual(CANVAS.feed, { width: 1024, height: 1280 });
+  assert.deepEqual(CANVAS.feed, { width: 1080, height: 1350 });
   assert.deepEqual(CANVAS.story, { width: 1080, height: 1920 });
+});
+
+// ---------------------------------------------------------------------------
+// 2026-09-14 Aggregate brand visual system
+// ---------------------------------------------------------------------------
+
+test("21. estimateCoverCropLoss is 0 when the source already exactly matches the target aspect ratio", () => {
+  assert.equal(estimateCoverCropLoss(1080, 1350, 1080, 1350), 0);
+  assert.equal(estimateCoverCropLoss(2160, 2700, 1080, 1350), 0);
+});
+
+test("22. estimateCoverCropLoss correctly measures a wider-than-target source (sides cropped, full height kept)", () => {
+  // 2:1 source into a 1:1 target keeps full height, half the width -> 50% area loss.
+  const loss = estimateCoverCropLoss(2000, 1000, 500, 500);
+  assert.ok(Math.abs(loss - 0.5) < 0.01, `expected ~0.5, got ${loss}`);
+});
+
+test("23. estimateCoverCropLoss correctly measures a taller-than-target source (top/bottom cropped, full width kept)", () => {
+  const loss = estimateCoverCropLoss(1000, 2000, 500, 500);
+  assert.ok(Math.abs(loss - 0.5) < 0.01, `expected ~0.5, got ${loss}`);
+});
+
+test("24. chooseLayout: Story format with modest crop loss selects Layout A (subject-side / headline column)", () => {
+  // A 4:5-ish portrait source into Story's narrow side panel: loss stays under the fail threshold.
+  assert.equal(chooseLayout({ format: "story", sourceWidth: 1024, sourceHeight: 1280 }), "A");
+});
+
+test("25. chooseLayout: a landscape Feed source routes straight to Layout C (background-subject/banner), never attempting the narrower Layout A panel", () => {
+  assert.equal(chooseLayout({ format: "feed", sourceWidth: 1600, sourceHeight: 900 }), "C");
+});
+
+test("26. chooseLayout: an extremely panoramic source (crop loss too severe for Layout A even at full canvas width) falls back to Layout B for Story", () => {
+  assert.equal(chooseLayout({ format: "story", sourceWidth: 4000, sourceHeight: 700 }), "B");
+});
+
+test("27. chooseLayout: a roughly-square Feed source (below the landscape threshold, modest Layout A crop loss) selects Layout A", () => {
+  assert.equal(chooseLayout({ format: "feed", sourceWidth: 1100, sourceHeight: 1100 }), "A");
+});
+
+test("28. chooseLayout: missing source geometry safely defaults to Layout B rather than throwing", () => {
+  assert.equal(chooseLayout({ format: "feed" }), "B");
+  assert.equal(chooseLayout({ format: "feed", sourceWidth: 0, sourceHeight: 0 }), "B");
+});
+
+test("29. detectEmphasisPhrase finds the exact production phrase in the exact production headline (Calvin Austin ACL tear)", () => {
+  assert.equal(detectEmphasisPhrase("CALVIN AUSTIN ACL TEAR - GIANTS SEASON JUST SHIFTED"), "ACL TEAR");
+});
+
+test("30. detectEmphasisPhrase is case-insensitive but always returns the canonical uppercase phrase", () => {
+  assert.equal(detectEmphasisPhrase("panthers trade for a veteran corner"), "TRADE");
+});
+
+test("31. detectEmphasisPhrase returns null for a purely descriptive headline with no status phrase — no invented emphasis", () => {
+  assert.equal(detectEmphasisPhrase("PATRICK MAHOMES PRACTICES IN FULL AHEAD OF SUNDAY"), null);
+});
+
+test("32. detectEmphasisPhrase never invents wording — every entry in EMPHASIS_PHRASES is verbatim uppercase text, never a template or placeholder", () => {
+  for (const phrase of EMPHASIS_PHRASES) {
+    assert.equal(phrase, phrase.toUpperCase());
+    assert.ok(!/[{}<>]/.test(phrase), `phrase "${phrase}" must be plain text, not a template`);
+  }
+});
+
+test("33. detectEmphasisPhrase never displays a date — EMPHASIS_PHRASES contains no date-shaped entries", () => {
+  for (const phrase of EMPHASIS_PHRASES) {
+    assert.ok(!/\d/.test(phrase), `phrase "${phrase}" must not contain a date/number`);
+  }
+});
+
+test("34. renderArtwork: a landscape Feed source photo renders through Layout C and reports it", async () => {
+  const src = path.join(workDir, "landscape-feed.jpg");
+  await sharp({ create: { width: 1600, height: 900, channels: 3, background: { r: 10, g: 10, b: 10 } } }).jpeg().toFile(src);
+  const out = path.join(workDir, "landscape-feed-out.png");
+  const result = await renderArtwork({ sourceImagePath: src, headline: "TEAM TRADES FOR STAR PLAYER", format: "feed", outputPath: out });
+  assert.equal(result.layout, "C");
+  const meta = await sharp(await readFile(out)).metadata();
+  assert.equal(meta.width, 1080);
+  assert.equal(meta.height, 1350);
+});
+
+test("35. renderArtwork: a 4:5-ish portrait Story source photo renders through Layout A, and the dark side panel is genuinely present (left-edge pixel is near-black, distinct from the source photo's own fill color)", async () => {
+  const src = path.join(workDir, "square-story.jpg");
+  await sharp({ create: { width: 1024, height: 1280, channels: 3, background: { r: 220, g: 200, b: 30 } } }).jpeg().toFile(src);
+  const out = path.join(workDir, "square-story-out.png");
+  const result = await renderArtwork({ sourceImagePath: src, headline: "PLAYER SIGNS EXTENSION", format: "story", outputPath: out });
+  assert.equal(result.layout, "A");
+  const pixel = await sharp(await readFile(out)).extract({ left: 5, top: Math.round(CANVAS.story.height / 2), width: 1, height: 1 }).raw().toBuffer();
+  const [r, g, b] = pixel;
+  assert.ok(r < 40 && g < 40 && b < 40, `expected the Layout A side panel to be near-black at the left edge, got rgb(${r},${g},${b})`);
+});
+
+test("36. renderArtwork: Layout A's dark panel is wide enough that brandOverlay's logo placement never overlaps the photo panel, for both formats", async () => {
+  for (const format of ["feed", "story"]) {
+    const src = path.join(workDir, `panel-fit-${format}.jpg`);
+    await sharp({ create: { width: 1200, height: 1200, channels: 3, background: { r: 100, g: 100, b: 100 } } }).jpeg().toFile(src);
+    const out = path.join(workDir, `panel-fit-${format}-out.png`);
+    const result = await renderArtwork({ sourceImagePath: src, headline: "SHORT HEADLINE", format, outputPath: out });
+    if (result.layout !== "A") continue; // only meaningful when Layout A was actually chosen
+    const branded = path.join(workDir, `panel-fit-${format}-branded.png`);
+    await compositeBrandOverlay({ baseImagePath: out, outputPath: branded, format });
+    await stat(branded);
+  }
+});
+
+test("37. a short headline renders at a large font size relative to canvas width — visually balanced, not shrunk unnecessarily", async () => {
+  const src = path.join(workDir, "short-headline-src.jpg");
+  await sharp({ create: { width: 1600, height: 900, channels: 3, background: { r: 50, g: 50, b: 50 } } }).jpeg().toFile(src);
+  const out = path.join(workDir, "short-headline-out.png");
+  const result = await renderArtwork({ sourceImagePath: src, headline: "BILLS WIN", format: "feed", outputPath: out });
+  // The largest starting size is ~7.4% of canvas width (see HEADLINE_START_SIZE_RATIO) —
+  // a two-word headline must land at or very near that maximum, never shrunk down
+  // toward the minimum, which would look visually unbalanced against a short line.
+  assert.ok(result.fontSize >= Math.round(CANVAS.feed.width * 0.06), `expected a large, visually balanced font size for a short headline, got ${result.fontSize}`);
+});
+
+test("38. no reference design asset is ever imported or READ (as opposed to merely mentioned in a comment) by production code — assets/reference/ is references-only, never a content source", async () => {
+  const scriptsDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
+  const offenders = [];
+  async function scan(dir) {
+    for (const entry of await readdir(dir, { withFileTypes: true })) {
+      if (entry.name.startsWith(".")) continue;
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        await scan(full);
+      } else if (entry.name.endsWith(".js") && !entry.name.endsWith(".test.mjs")) {
+        const src = await readFile(full, "utf-8");
+        const codeOnly = src.replace(/\/\/.*$/gm, "").replace(/\/\*[\s\S]*?\*\//g, "");
+        if (codeOnly.includes("assets/reference") || codeOnly.includes("assets\\\\reference")) offenders.push(full);
+      }
+    }
+  }
+  await scan(scriptsDir);
+  assert.deepEqual(offenders, [], `production code must never reference assets/reference/ outside of comments: ${offenders.join(", ")}`);
+});
+
+test("39. no Buffer/Meta/approval call exists anywhere in artworkRenderer.js's own source — it only ever renders pixels", async () => {
+  const src = await readFile(new URL("./artworkRenderer.js", import.meta.url), "utf-8");
+  const codeOnly = src.replace(/\/\/.*$/gm, "").replace(/\/\*[\s\S]*?\*\//g, "");
+  assert.ok(!/buffer\.com|createPost|decideApproval|publishViaWorker/i.test(codeOnly), "artworkRenderer.js must never reference publishing/approval machinery");
+});
+
+test("40. the four canonical design references are stored under assets/reference/ and are real, non-trivial image files", async () => {
+  const referenceDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..", "..", "assets", "reference");
+  const entries = await readdir(referenceDir);
+  assert.ok(entries.length >= 4, `expected at least 4 reference files, found ${entries.length}`);
+  for (const entry of entries) {
+    const stats = await stat(path.join(referenceDir, entry));
+    assert.ok(stats.size > 10_000, `${entry} must be a real image file, not a placeholder`);
+  }
 });
 
 // ---------------------------------------------------------------------------

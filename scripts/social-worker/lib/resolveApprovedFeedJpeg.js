@@ -18,6 +18,7 @@
 // via the explicitly injected `fetchImpl`; there is no live-network
 // fallback.
 import { convertToJpegDerivative, validateJpegDerivative, deriveJpegStorageKey, inspectAlpha, deriveCornerBackgroundFill, flattenPerimeterAlpha } from "./jpegDerivative.js";
+import { CANVAS } from "./artworkRenderer.js";
 
 /**
  * Best-effort, read-only check for an already-uploaded, reusable JPEG at
@@ -156,8 +157,12 @@ export async function resolveApprovedFeedJpeg(record, { fetchImpl, uploadJpeg, b
   }
   if (!converted.ok) return { ok: false, error: converted.error };
 
-  // 5. Validate with the existing deterministic validator before ever uploading.
-  const validation = await validateJpegDerivative(converted.buffer, bufferToConvert);
+  // 5. Validate with the existing deterministic validator before ever
+  // uploading — expected dimensions explicit from CANVAS.feed (the single
+  // source of truth artworkRenderer.js exports), not this validator's own
+  // legacy 1024x1280 default, which is now stale relative to the 2026-09-14
+  // brand-system update's 1080x1350 Feed canvas.
+  const validation = await validateJpegDerivative(converted.buffer, bufferToConvert, { expectedWidth: CANVAS.feed.width, expectedHeight: CANVAS.feed.height });
   if (!validation.passed) return { ok: false, error: `jpeg_invalid:${validation.issues.join(",")}` };
 
   // 7. Upload through the Worker/R2 architecture — never direct R2 credentials here.

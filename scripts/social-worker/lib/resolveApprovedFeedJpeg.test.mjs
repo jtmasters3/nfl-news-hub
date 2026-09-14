@@ -17,8 +17,12 @@ function test(name, fn) {
   cases.push({ name, fn });
 }
 
-const WIDTH = 1024;
-const HEIGHT = 1280;
+// 2026-09-14 brand-system update: Feed's canonical canvas moved from
+// 1024x1280 to 1080x1350 (same 4:5 ratio) — see artworkRenderer.js's
+// CANVAS.feed, which resolveApprovedFeedJpeg.js now passes explicitly into
+// validateJpegDerivative()'s expected dimensions.
+const WIDTH = 1080;
+const HEIGHT = 1350;
 const PNG_URL = "https://pub-1705b19e159c4434ba94af4ae6799f97.r2.dev/social-artwork/story-1.png";
 const EXPECTED_JPEG_URL = "https://pub-1705b19e159c4434ba94af4ae6799f97.r2.dev/social-artwork-jpeg/story-1.jpg";
 
