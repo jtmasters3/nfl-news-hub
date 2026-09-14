@@ -97,8 +97,52 @@
 // duplicate deliveries into false-alarm red builds. The retry exists only
 // to give the checkout-staleness scenario a fair chance to resolve; a
 // mismatch that persists past that is treated exactly as it always was.
-const STALE_CHECKOUT_RETRY_ATTEMPTS = 5;
-const STALE_CHECKOUT_RETRY_INTERVAL_MS = 3000;
+//
+// ==========================================================================
+// 2026-09-14 durability fix #3 — retry budget too short for queued siblings
+// (caption-claimed -> caption-completed)
+// ==========================================================================
+// Root cause (proven against a real production run, story_id
+// 0cba51db-8c38-436f-ae48-a4af46e9f6bd, claim_id
+// bffb0dee-f833-4f7f-a7d2-3419eadedf18, via exact GitHub Actions job/step
+// timestamps — not inferred): the caption-completed run's own checkout
+// (18:40:39-41Z) predated the caption-claimed commit (18:41:12Z) by over 30
+// seconds, so applyCaptionCompleteEvent's claim_id check legitimately
+// returned "claim_mismatch" on every attempt. The retry loop DID engage
+// (claim_mismatch is retryable) and DID use a fresh, SHA-pinned read each
+// time — it was not a coverage gap (mechanism A) — but it exhausted its
+// then-5x3000ms=15s budget at 18:40:59Z, 13 seconds before the sibling
+// commit landed. Confirmed via the jobs API that the sibling claimed run
+// (34882248213) did not even START until 18:41:06Z, itself 7 seconds AFTER
+// this job's retry had already given up — because both events'
+// repository_dispatch webhooks reached GitHub only ~1 second apart
+// (created_at 18:40:35Z vs 18:40:36Z) and the single global
+// `concurrency: group: social-artwork-event` queue happened to run the
+// COMPLETED job first, serializing the CLAIMED job's entire run (checkout,
+// npm install, apply, commit, push) behind it. This is mechanism B ("retry
+// budget expired before the prerequisite state became visible"), made
+// materially worse by making caption composition itself deterministic and
+// fast (see the 2026-09-14 invalid_state fix above for the same dynamic on
+// the artwork side): claim and completion can now be dispatched close
+// enough together that ordinary webhook-delivery jitter can queue them in
+// EITHER order, and the shared concurrency group means a job can be
+// serialized entirely behind an unrelated sibling before it even starts.
+//
+// Fix: raise the retry budget from 15s to 60s (20x3000ms), matching the
+// SAME DURABLE_COMMIT_POLL_MAX_ATTEMPTS/INTERVAL_MS budget
+// waitForDurableCommit.js already uses for exactly this class of "dispatch
+// accepted, wait for it to become durable" polling elsewhere in this
+// system — not a new, arbitrary number. 60s comfortably covers the
+// observed ~32s real-world gap (retry start to sibling commit landing)
+// with margin for a slower npm install or a second queued job ahead of it.
+// This does not weaken claim matching or allow a stale claim to be
+// accepted — the reducer's own claim_id equality check is untouched; only
+// how long we wait for the CORRECT claim to become visible changes. See
+// verify-durable-push.js for the companion post-push durable-verification
+// check this fix pairs with (Section 4's "if durable verification fails,
+// the workflow must fail RED" requirement).
+export const STALE_CHECKOUT_RETRY_ATTEMPTS = 20;
+export const STALE_CHECKOUT_RETRY_INTERVAL_MS = 3000;
 
 /** True for exactly the two error shapes proven to sometimes be pure checkout staleness rather than a genuine, permanent rejection. */
 function isRetryableStalenessError(error) {
@@ -142,8 +186,8 @@ import {
   applyPostingManuallyConfirmedPostedEvent,
 } from "../lib/postingEvents.js";
 import { generatePostsForApproval } from "../generate-posts-for-approval.js";
-import { writeFile } from "node:fs/promises";
-import { SOCIAL_ARTWORK_QUEUE_JSON_PATH } from "../lib/store.js";
+import { writeFile, mkdir } from "node:fs/promises";
+import { SOCIAL_ARTWORK_QUEUE_JSON_PATH, DURABLE_EXPECTATION_PATH } from "../lib/store.js";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -357,6 +401,33 @@ export function determineApplyOutcome(result, { eventType, storyId, retryAttempt
   return { action: "apply", message: null };
 }
 
+/**
+ * Companion to the 2026-09-14 durability fix #3 above (retry budget). Even
+ * with a generous retry budget, "this job's local write succeeded" is not
+ * the same claim as "this reached origin/main" — the actual commit/push
+ * happens in a LATER, separate step of the workflow YAML, outside this
+ * process. Computes the one fact worth re-verifying, from a genuinely
+ * FRESH post-push GitHub read, before the workflow is allowed to report
+ * success for a caption-completed event: that the exact caption text this
+ * job just accepted is the caption text that actually landed. Scoped
+ * narrowly to caption-completed (the event this incident was about) rather
+ * than generalized to every completion event type, and only for the
+ * validation-passed branch — a server-side-rejected candidate's own
+ * retry/re-claim behavior is already covered by applyCaptionFailEvent's
+ * existing, separately-tested contract and isn't part of this durability
+ * gap. Returns null when there is nothing new worth verifying (every other
+ * event type, or a caption-completed whose validation did not pass).
+ * @param {string} eventType
+ * @param {object} payload
+ * @param {{ok: boolean, validation?: {passed: boolean}}|null} result - a successful applyEventWithStalenessRetry result
+ * @returns {{path: string[], expected: string}|null}
+ */
+export function computeDurableExpectation(eventType, payload, result) {
+  if (eventType !== "caption-completed") return null;
+  if (!result?.ok || result.validation?.passed !== true) return null;
+  return { path: ["caption", "text"], expected: payload.text };
+}
+
 async function main() {
   const eventType = process.env.ARTWORK_EVENT_TYPE;
   const payloadRaw = process.env.ARTWORK_EVENT_PAYLOAD;
@@ -405,6 +476,12 @@ async function main() {
 
   await writeSocialState(result.state);
   await regenerateDerivedFiles(result.state);
+
+  const durableExpectation = computeDurableExpectation(eventType, payload, result);
+  if (durableExpectation) {
+    await mkdir(path.dirname(DURABLE_EXPECTATION_PATH), { recursive: true });
+    await writeFile(DURABLE_EXPECTATION_PATH, JSON.stringify({ story_id: payload.story_id, ...durableExpectation }, null, 2) + "\n", "utf-8");
+  }
 
   const finalStatus = result.record?.status ?? result.state.stories[payload.story_id]?.status;
   console.log(`Applied ${eventType} for ${payload.story_id} -> ${finalStatus}`);

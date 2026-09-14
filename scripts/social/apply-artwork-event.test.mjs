@@ -16,7 +16,13 @@
 // file or timers.
 // Run with: node scripts/social/apply-artwork-event.test.mjs
 import assert from "node:assert/strict";
-import { applyEventWithStalenessRetry, determineApplyOutcome } from "./apply-artwork-event.js";
+import {
+  applyEventWithStalenessRetry,
+  determineApplyOutcome,
+  computeDurableExpectation,
+  STALE_CHECKOUT_RETRY_ATTEMPTS,
+  STALE_CHECKOUT_RETRY_INTERVAL_MS,
+} from "./apply-artwork-event.js";
 
 const cases = [];
 function test(name, fn) {
@@ -332,6 +338,102 @@ test("19. an invalid_transition:* error is never retried against fresh state —
   );
   assert.equal(result.error, "invalid_transition:approved->approved");
   assert.equal(fetchCalled, false, "invalid_transition must stay an immediate, unretried skip, exactly as before this fix");
+});
+
+// ---------------------------------------------------------------------------
+// 2026-09-14 durability fix #3 — retry budget too short for queued siblings
+// (proven against story_id 0cba51db-8c38-436f-ae48-a4af46e9f6bd, claim_id
+// bffb0dee-f833-4f7f-a7d2-3419eadedf18)
+// ---------------------------------------------------------------------------
+
+test("20. the default retry budget is 60 seconds (20 attempts x 3000ms), matching waitForDurableCommit.js's own DURABLE_COMMIT_POLL_MAX_ATTEMPTS/INTERVAL_MS convention — not the old, proven-too-short 15s", () => {
+  assert.equal(STALE_CHECKOUT_RETRY_ATTEMPTS, 20);
+  assert.equal(STALE_CHECKOUT_RETRY_INTERVAL_MS, 3000);
+  assert.equal(STALE_CHECKOUT_RETRY_ATTEMPTS * STALE_CHECKOUT_RETRY_INTERVAL_MS, 60_000);
+});
+
+test("21. THE EXACT PRODUCTION SEQUENCE — a caption-completed run's checkout predates its own prerequisite caption-claimed commit by ~32 real seconds (the proven 0cba51db gap): under the OLD 5x3000ms=15s budget this never resolves and the workflow would incorrectly fail; under the NEW default 20x3000ms=60s budget the exact same sequence resolves once the sibling commit becomes visible, applies exactly once, and reaches durable caption-ready", async () => {
+  // Model elapsed time in whole retry intervals: the sibling claimed commit
+  // "lands" only once 11 retry intervals have elapsed (~33s at 3000ms/attempt
+  // — comfortably bracketing the real ~32s gap measured via the GitHub Actions
+  // jobs API for runs 34882247733 (completion, retried 18:40:44-18:40:59) and
+  // 34882248213 (claim, committed 18:41:12-16)).
+  const SIBLING_COMMIT_VISIBLE_AFTER_ATTEMPT = 11;
+  let applyCallCount = 0;
+  let fetchCallCount = 0;
+
+  function makeReducer() {
+    return async (state) => {
+      applyCallCount++;
+      if (!state.captionClaimed) return { ok: false, error: "claim_mismatch" };
+      return { ok: true, state: { stories: { s1: { status: "awaiting_approval", caption: { status: "ready", text: "final caption", claim: { claim_id: "claim-1" } } } } }, record: { status: "awaiting_approval" }, validation: { passed: true, issues: [] } };
+    };
+  }
+  function makeFetcher() {
+    return async () => {
+      fetchCallCount++;
+      return { captionClaimed: fetchCallCount > SIBLING_COMMIT_VISIBLE_AFTER_ATTEMPT };
+    };
+  }
+
+  // OLD budget (5 attempts) — proven insufficient; must still be unresolved.
+  applyCallCount = 0;
+  fetchCallCount = 0;
+  const oldBudgetResult = await applyEventWithStalenessRetry(
+    { captionClaimed: false },
+    "caption-completed",
+    { story_id: "s1", claim_id: "claim-1", text: "final caption" },
+    { applyEventByTypeImpl: makeReducer(), fetchFreshStateImpl: makeFetcher(), sleepImpl: async () => {}, attempts: 5, intervalMs: 3000 }
+  );
+  assert.equal(oldBudgetResult.ok, false, "the old 15s budget must NOT bridge the real ~32s gap — this is the exact bug, not a hypothetical");
+  assert.equal(oldBudgetResult.error, "claim_mismatch");
+  const oldOutcome = determineApplyOutcome(oldBudgetResult, { eventType: "caption-completed", storyId: "s1", retryAttempts: 5 });
+  assert.equal(oldOutcome.action, "claim_mismatch_unresolved", "under the old budget this correctly fails RED — reproducing the exact observed job conclusion");
+
+  // NEW default budget (no attempts/intervalMs override — the real defaults).
+  applyCallCount = 0;
+  fetchCallCount = 0;
+  const newBudgetResult = await applyEventWithStalenessRetry(
+    { captionClaimed: false },
+    "caption-completed",
+    { story_id: "s1", claim_id: "claim-1", text: "final caption" },
+    { applyEventByTypeImpl: makeReducer(), fetchFreshStateImpl: makeFetcher(), sleepImpl: async () => {} }
+  );
+  assert.equal(newBudgetResult.ok, true, "the new 60s default budget must bridge the real ~32s gap");
+  assert.equal(newBudgetResult.record.status, "awaiting_approval");
+  assert.equal(applyCallCount, SIBLING_COMMIT_VISIBLE_AFTER_ATTEMPT + 2, "applied exactly once on the first attempt (fail) plus exactly once more per subsequent retry until success — never re-applied after success");
+
+  const newOutcome = determineApplyOutcome(newBudgetResult, { eventType: "caption-completed", storyId: "s1" });
+  assert.equal(newOutcome.action, "apply", "reaching durable caption-ready must report success, never a skip or failure");
+});
+
+test("22. computeDurableExpectation: a caption-completed event whose server-side validation passed produces the exact expectation the post-push verification step will check", () => {
+  const expectation = computeDurableExpectation(
+    "caption-completed",
+    { story_id: "s1", claim_id: "claim-1", text: "final caption text" },
+    { ok: true, validation: { passed: true, issues: [] }, record: { status: "awaiting_approval" } }
+  );
+  assert.deepEqual(expectation, { path: ["caption", "text"], expected: "final caption text" });
+});
+
+test("23. computeDurableExpectation: a caption-completed event rejected by server-side validation produces no expectation — that outcome is already covered by applyCaptionFailEvent's own separately-tested contract", () => {
+  const expectation = computeDurableExpectation(
+    "caption-completed",
+    { story_id: "s1", claim_id: "claim-1", text: "candidate that failed validation" },
+    { ok: true, validation: { passed: false, issues: ["too_long"] }, record: { status: "artwork_ready" } }
+  );
+  assert.equal(expectation, null);
+});
+
+test("24. computeDurableExpectation: every other event type produces no expectation — this durability check is scoped narrowly to caption-completed only", () => {
+  assert.equal(computeDurableExpectation("artwork-completed", { story_id: "s1", image_url: "https://x/y.png" }, { ok: true, validation: { passed: true, issues: [] } }), null);
+  assert.equal(computeDurableExpectation("caption-claimed", { story_id: "s1" }, { ok: true }), null);
+  assert.equal(computeDurableExpectation("approval-approved", { story_id: "s1" }, { ok: true }), null);
+});
+
+test("25. computeDurableExpectation: a failed apply (ok:false) never produces an expectation, regardless of event type", () => {
+  assert.equal(computeDurableExpectation("caption-completed", { story_id: "s1", text: "x" }, { ok: false, error: "claim_mismatch" }), null);
+  assert.equal(computeDurableExpectation("caption-completed", { story_id: "s1", text: "x" }, null), null);
 });
 
 // ---------------------------------------------------------------------------

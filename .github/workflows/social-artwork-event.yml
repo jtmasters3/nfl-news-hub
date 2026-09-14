@@ -48,8 +48,14 @@ on:
 permissions:
   contents: write
 
-# One event applied at a time, in delivery order, so two dispatches for the
-# same story_id can't race each other into the same working tree.
+# One event applied at a time — never two jobs touching the working tree
+# concurrently — but NOT necessarily in dispatch order: two repository_dispatch
+# calls fired moments apart can have their webhooks reach GitHub, and their
+# runs get queued, in either order (proven 2026-09-14 against story_id
+# 0cba51db-8c38-436f-ae48-a4af46e9f6bd: a caption-completed run started and
+# fully exhausted its own retry budget before its own prerequisite
+# caption-claimed run had even begun). apply-artwork-event.js's fresh-state
+# retry (see that file's own header) exists specifically to tolerate this.
 concurrency:
   group: social-artwork-event
   cancel-in-progress: false
@@ -88,7 +94,15 @@ jobs:
               exit 0
             fi
             echo "Push rejected (attempt $attempt) — pulling latest main and retrying."
-            git pull --rebase origin main
+            if ! git pull --rebase origin main; then
+              echo "git pull --rebase failed (upstream drift could not be safely reconciled) — aborting the rebase rather than pushing from an unresolved state." >&2
+              git rebase --abort || true
+              echo "Failed to push after $attempt attempt(s): rebase conflict." >&2
+              exit 1
+            fi
           done
           echo "Failed to push after 3 attempts." >&2
           exit 1
+
+      - name: Verify durable push (caption-completed only — see verify-durable-push.js)
+        run: node scripts/social/verify-durable-push.js

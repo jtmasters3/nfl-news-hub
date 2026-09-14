@@ -25,6 +25,13 @@ export const SOCIAL_CONFIG_PATH = path.join(ROOT, "data", "social-config.json");
 // every refresh from social-state.json, never itself the source of truth.
 export const SOCIAL_ARTWORK_QUEUE_JSON_PATH = path.join(ROOT, "social-artwork-queue.json");
 export const POSTS_FOR_APPROVAL_HTML_PATH = path.join(ROOT, "posts-for-approval.html");
+// Scratch-only handoff between apply-artwork-event.js and the workflow's
+// own separate "Verify durable push" step (see verify-durable-push.js) —
+// lives under social-output/ (already gitignored, never committed), never
+// read by anything else. Written only when a completion event's durable
+// postcondition is worth re-checking after the job's OWN commit/push step
+// runs (apply-artwork-event.js itself never pushes).
+export const DURABLE_EXPECTATION_PATH = path.join(ROOT, "social-output", ".durable-expectation.json");
 
 const MAX_STORY_AGE_DAYS = 7; // stories older than this drop out of news.json
 const MAX_STORIES = 300; // hard cap regardless of age
