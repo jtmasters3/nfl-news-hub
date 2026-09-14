@@ -246,26 +246,29 @@ test("23. estimateCoverCropLoss correctly measures a taller-than-target source (
   assert.ok(Math.abs(loss - 0.5) < 0.01, `expected ~0.5, got ${loss}`);
 });
 
-test("24. chooseLayout: Story format with modest crop loss selects Layout A (subject-side / headline column)", () => {
-  // A 4:5-ish portrait source into Story's narrow side panel: loss stays under the fail threshold.
-  assert.equal(chooseLayout({ format: "story", sourceWidth: 1024, sourceHeight: 1280 }), "A");
+test("24. chooseLayout: a genuinely tall/narrow portrait Story source (well under the stricter 0.5 crop-loss threshold) selects the 'panel' layout", () => {
+  assert.equal(chooseLayout({ format: "story", sourceWidth: 800, sourceHeight: 1600 }), "panel");
 });
 
-test("25. chooseLayout: a landscape Feed source routes straight to Layout C (background-subject/banner), never attempting the narrower Layout A panel", () => {
-  assert.equal(chooseLayout({ format: "feed", sourceWidth: 1600, sourceHeight: 900 }), "C");
+test("24b. chooseLayout: a 4:5-ish portrait Story source, whose panel crop loss now EXCEEDS the stricter 0.5 threshold, falls back to 'editorial' — proving the tightened threshold actually bites, per the explicit direction to avoid over-tight crops", () => {
+  assert.equal(chooseLayout({ format: "story", sourceWidth: 1024, sourceHeight: 1280 }), "editorial");
 });
 
-test("26. chooseLayout: an extremely panoramic source (crop loss too severe for Layout A even at full canvas width) falls back to Layout B for Story", () => {
-  assert.equal(chooseLayout({ format: "story", sourceWidth: 4000, sourceHeight: 700 }), "B");
+test("25. chooseLayout: a landscape Feed source routes straight to 'editorial' (full-bleed), never attempting the narrower panel column", () => {
+  assert.equal(chooseLayout({ format: "feed", sourceWidth: 1600, sourceHeight: 900 }), "editorial");
 });
 
-test("27. chooseLayout: a roughly-square Feed source (below the landscape threshold, modest Layout A crop loss) selects Layout A", () => {
-  assert.equal(chooseLayout({ format: "feed", sourceWidth: 1100, sourceHeight: 1100 }), "A");
+test("26. chooseLayout: an extremely panoramic source (crop loss too severe for the panel column even at full canvas width) falls back to 'editorial' for Story", () => {
+  assert.equal(chooseLayout({ format: "story", sourceWidth: 4000, sourceHeight: 700 }), "editorial");
 });
 
-test("28. chooseLayout: missing source geometry safely defaults to Layout B rather than throwing", () => {
-  assert.equal(chooseLayout({ format: "feed" }), "B");
-  assert.equal(chooseLayout({ format: "feed", sourceWidth: 0, sourceHeight: 0 }), "B");
+test("27. chooseLayout: a tall Feed source (below the landscape threshold, modest panel crop loss) selects 'panel'", () => {
+  assert.equal(chooseLayout({ format: "feed", sourceWidth: 900, sourceHeight: 1400 }), "panel");
+});
+
+test("28. chooseLayout: missing source geometry safely defaults to 'editorial' rather than throwing", () => {
+  assert.equal(chooseLayout({ format: "feed" }), "editorial");
+  assert.equal(chooseLayout({ format: "feed", sourceWidth: 0, sourceHeight: 0 }), "editorial");
 });
 
 test("29. detectEmphasisPhrase finds the exact production phrase in the exact production headline (Calvin Austin ACL tear)", () => {
@@ -293,35 +296,35 @@ test("33. detectEmphasisPhrase never displays a date — EMPHASIS_PHRASES contai
   }
 });
 
-test("34. renderArtwork: a landscape Feed source photo renders through Layout C and reports it", async () => {
+test("34. renderArtwork: a landscape Feed source photo renders through the 'editorial' layout and reports it", async () => {
   const src = path.join(workDir, "landscape-feed.jpg");
   await sharp({ create: { width: 1600, height: 900, channels: 3, background: { r: 10, g: 10, b: 10 } } }).jpeg().toFile(src);
   const out = path.join(workDir, "landscape-feed-out.png");
   const result = await renderArtwork({ sourceImagePath: src, headline: "TEAM TRADES FOR STAR PLAYER", format: "feed", outputPath: out });
-  assert.equal(result.layout, "C");
+  assert.equal(result.layout, "editorial");
   const meta = await sharp(await readFile(out)).metadata();
   assert.equal(meta.width, 1080);
   assert.equal(meta.height, 1350);
 });
 
-test("35. renderArtwork: a 4:5-ish portrait Story source photo renders through Layout A, and the dark side panel is genuinely present (left-edge pixel is near-black, distinct from the source photo's own fill color)", async () => {
-  const src = path.join(workDir, "square-story.jpg");
-  await sharp({ create: { width: 1024, height: 1280, channels: 3, background: { r: 220, g: 200, b: 30 } } }).jpeg().toFile(src);
-  const out = path.join(workDir, "square-story-out.png");
+test("35. renderArtwork: a genuinely tall/narrow portrait Story source photo renders through the 'panel' layout, and the dark side panel is genuinely present (left-edge pixel is near-black, distinct from the source photo's own fill color)", async () => {
+  const src = path.join(workDir, "tall-story.jpg");
+  await sharp({ create: { width: 800, height: 1600, channels: 3, background: { r: 220, g: 200, b: 30 } } }).jpeg().toFile(src);
+  const out = path.join(workDir, "tall-story-out.png");
   const result = await renderArtwork({ sourceImagePath: src, headline: "PLAYER SIGNS EXTENSION", format: "story", outputPath: out });
-  assert.equal(result.layout, "A");
+  assert.equal(result.layout, "panel");
   const pixel = await sharp(await readFile(out)).extract({ left: 5, top: Math.round(CANVAS.story.height / 2), width: 1, height: 1 }).raw().toBuffer();
   const [r, g, b] = pixel;
-  assert.ok(r < 40 && g < 40 && b < 40, `expected the Layout A side panel to be near-black at the left edge, got rgb(${r},${g},${b})`);
+  assert.ok(r < 40 && g < 40 && b < 40, `expected the panel layout's side column to be near-black at the left edge, got rgb(${r},${g},${b})`);
 });
 
-test("36. renderArtwork: Layout A's dark panel is wide enough that brandOverlay's logo placement never overlaps the photo panel, for both formats", async () => {
+test("36. renderArtwork: the panel layout's dark column is wide enough that brandOverlay's logo placement never overlaps the photo column, for both formats", async () => {
   for (const format of ["feed", "story"]) {
     const src = path.join(workDir, `panel-fit-${format}.jpg`);
-    await sharp({ create: { width: 1200, height: 1200, channels: 3, background: { r: 100, g: 100, b: 100 } } }).jpeg().toFile(src);
+    await sharp({ create: { width: 800, height: 1600, channels: 3, background: { r: 100, g: 100, b: 100 } } }).jpeg().toFile(src);
     const out = path.join(workDir, `panel-fit-${format}-out.png`);
     const result = await renderArtwork({ sourceImagePath: src, headline: "SHORT HEADLINE", format, outputPath: out });
-    if (result.layout !== "A") continue; // only meaningful when Layout A was actually chosen
+    if (result.layout !== "panel") continue; // only meaningful when the panel layout was actually chosen
     const branded = path.join(workDir, `panel-fit-${format}-branded.png`);
     await compositeBrandOverlay({ baseImagePath: out, outputPath: branded, format });
     await stat(branded);
@@ -333,10 +336,19 @@ test("37. a short headline renders at a large font size relative to canvas width
   await sharp({ create: { width: 1600, height: 900, channels: 3, background: { r: 50, g: 50, b: 50 } } }).jpeg().toFile(src);
   const out = path.join(workDir, "short-headline-out.png");
   const result = await renderArtwork({ sourceImagePath: src, headline: "BILLS WIN", format: "feed", outputPath: out });
-  // The largest starting size is ~7.4% of canvas width (see HEADLINE_START_SIZE_RATIO) —
+  // The largest starting size is ~11% of canvas width (see HEADLINE_START_SIZE_RATIO) —
   // a two-word headline must land at or very near that maximum, never shrunk down
   // toward the minimum, which would look visually unbalanced against a short line.
-  assert.ok(result.fontSize >= Math.round(CANVAS.feed.width * 0.06), `expected a large, visually balanced font size for a short headline, got ${result.fontSize}`);
+  assert.ok(result.fontSize >= Math.round(CANVAS.feed.width * 0.09), `expected a large, visually balanced font size for a short headline, got ${result.fontSize}`);
+});
+
+test("37b. a short headline in the 'panel' layout also renders large, and the kicker+divider+headline block is vertically centered (not pinned to a fixed top anchor leaving a large empty gap) when it doesn't fill the available column height", async () => {
+  const src = path.join(workDir, "short-headline-panel-src.jpg");
+  await sharp({ create: { width: 800, height: 1600, channels: 3, background: { r: 50, g: 50, b: 50 } } }).jpeg().toFile(src);
+  const out = path.join(workDir, "short-headline-panel-out.png");
+  const result = await renderArtwork({ sourceImagePath: src, headline: "BILLS WIN", format: "story", outputPath: out });
+  assert.equal(result.layout, "panel");
+  assert.ok(result.fontSize >= Math.round(CANVAS.story.width * 0.09), `expected a large font size, got ${result.fontSize}`);
 });
 
 test("38. no reference design asset is ever imported or READ (as opposed to merely mentioned in a comment) by production code — assets/reference/ is references-only, never a content source", async () => {

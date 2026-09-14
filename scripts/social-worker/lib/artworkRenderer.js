@@ -66,15 +66,23 @@ export const CANVAS = {
 };
 
 const BRAND_RED = "#e0102a";
-const HEADLINE_START_SIZE_RATIO = 0.074; // relative to canvas width
-const HEADLINE_MIN_SIZE_RATIO = 0.039;
-const HEADLINE_LINE_HEIGHT_RATIO = 1.08;
-const HEADLINE_MAX_LINES = 5;
+// 2026-09-14 brand-system revision: raised substantially (0.074->0.11)
+// after direct pixel measurement against the four canonical design
+// references (assets/reference/) — their own headlines run roughly
+// 0.09-0.11 of canvas width, and the prior ratio read as noticeably
+// smaller/weaker than every reference. See fitHeadline(): this is only
+// the STARTING attempt: a genuinely long headline still shrinks toward
+// HEADLINE_MIN_SIZE_RATIO before ever truncating a word.
+const HEADLINE_START_SIZE_RATIO = 0.11; // relative to canvas width
+const HEADLINE_MIN_SIZE_RATIO = 0.055;
+const HEADLINE_LINE_HEIGHT_RATIO = 1.0; // tightened from 1.08 — the references set lines almost touching cap-to-baseline
+const HEADLINE_MAX_LINES = { editorial: 4, panel: 6 }; // panel's narrower column is expected to wrap into more, still-large lines, matching the vertical references' own 5-6 line headlines
 // Fraction of canvas height reserved at the bottom for the logo
 // compositeBrandOverlay.js adds afterward, PLUS breathing room above it —
 // derived from the SAME PLACEMENT ratios that step itself uses (see
-// brandOverlay.js), never a second, independently-guessed number.
-const LOGO_CLEARANCE_RATIO = { feed: 0.1, story: 0.14 };
+// brandOverlay.js), never a second, independently-guessed number. Tightened
+// alongside PLACEMENT's own 2026-09-14 revision (bigger logo, smaller padding).
+const LOGO_CLEARANCE_RATIO = { feed: 0.1, story: 0.12 };
 // Anton is a very uniform-width condensed display font — this ratio
 // (average glyph advance width ÷ font size) was empirically measured
 // against its own metrics and is deliberately a slight OVERESTIMATE, so
@@ -85,26 +93,48 @@ const LOGO_CLEARANCE_RATIO = { feed: 0.1, story: 0.14 };
 export const AVG_CHAR_WIDTH_RATIO = 0.64;
 
 // ==========================================================================
-// 2026-09-14 Aggregate brand visual system
+// 2026-09-14 Aggregate brand visual system (revised same day after visual
+// review: the first pass's 3-layout system was rejected as too weak — too
+// much empty space, headlines too small, accents that looked pasted on
+// rather than designed. This revision replaces it with exactly TWO layout
+// families, each rebuilt from concrete pixel measurements taken directly
+// against the four canonical design references in assets/reference/
+// (REFERENCE ONLY — never a content source; nothing in this pipeline ever
+// reads a source photo from that directory, enforced by this file's own
+// test suite).
 // ==========================================================================
-// Derived from four canonical design references (see assets/reference/ —
-// REFERENCE ONLY, never a content source: nothing in this pipeline ever
-// reads a source photo from that directory) covering three recurring
-// compositions. All three reuse the SAME full-bleed "attention"-strategy
-// cover-crop already proven safe by imageMatch.js's direct-evidence gate
-// (see this file's own pre-existing header above) — only Layout A departs
-// from that, cropping the photo into a narrower side panel instead of the
-// full canvas, which is why it alone needs the crop-loss safety check
-// below.
+//
+// Measurements taken (approximate, read off the actual reference pixels):
+//   - Headline font size ~9-11% of canvas width, tight line spacing
+//     (~1.0x font size cap-to-cap), full use of the available column width.
+//   - Logo lockup ~32-38% of canvas width — a real branding element, not a
+//     small footer mark (see brandOverlay.js's own 2026-09-14 PLACEMENT
+//     revision, raised from 0.28/0.30 to 0.34 for both formats).
+//   - Diagonal accents are THIN edge/corner marks (a few percent of canvas
+//     width), never thick blocks laid over the subject's face or torso.
+//   - The "editorial" family (Texans Trade / Calvin Austin square) is
+//     full-bleed photography with a strong, fast-transitioning dark
+//     gradient — by roughly 60% down the gradient span it is already
+//     near-opaque black, not a slow 55%-opacity fade.
+//   - The "panel" family (Calvin Austin vertical references) devotes
+//     ~55-60% of canvas width to the photo and ~40-45% to a dark editorial
+//     column that the headline fills aggressively — kicker sits close
+//     above the headline, not floating with a large gap.
+//
+// Both families reuse the SAME "attention"-strategy cover-crop proven safe
+// by imageMatch.js's direct-evidence gate (see this file's own
+// pre-existing header above) — only "panel" departs from full-bleed,
+// cropping the photo into a narrower side column instead of the full
+// canvas, which is why it alone needs the crop-loss safety check below.
 //
 // A curated, non-exhaustive list of editorially meaningful status
-// phrases — used for BOTH the optional kicker label (Layouts A/C) and
-// inline headline emphasis (Layout B). Deliberately just a phrase-presence
-// check against the ALREADY-WRITTEN headline text: never invents wording,
-// never asserts urgency the headline doesn't already state, and (unlike
-// the reference images' own "BREAKING: <date>" treatment) never displays a
-// date, since this pipeline has no reliable, editorially-approved date to
-// show. Ordered most-specific-first so a longer, more precise phrase is
+// phrases — used for BOTH the kicker label (both layouts) and inline
+// headline emphasis. Deliberately just a phrase-presence check against the
+// ALREADY-WRITTEN headline text: never invents wording, never asserts
+// urgency the headline doesn't already state, and (unlike the reference
+// images' own "BREAKING: <date>" treatment) never displays a date, since
+// this pipeline has no reliable, editorially-approved date to show.
+// Ordered most-specific-first so a longer, more precise phrase is
 // preferred over a shorter one it contains (e.g. "OUT FOR SEASON" is
 // checked before a hypothetical bare "OUT").
 export const EMPHASIS_PHRASES = Object.freeze([
@@ -173,58 +203,61 @@ export function estimateCoverCropLoss(sourceWidth, sourceHeight, targetWidth, ta
   return 1 - visibleArea / sourceArea;
 }
 
-// Fraction of canvas width Layout A's photo panel occupies — sized with
-// deliberate margin so the dark side panel it leaves is always wide enough
-// to hold brandOverlay.js's own logo placement (PLACEMENT.<format>) without
-// the two ever overlapping: feed's logo needs >=0.34 of canvas width
-// (0.06 padding + 0.28 logo width), story's needs >=0.36 (0.06 + 0.30) —
-// both comfortably inside the panels reserved here (0.40 and 0.42).
-const LAYOUT_A_PHOTO_WIDTH_RATIO = { feed: 0.6, story: 0.58 };
+// Fraction of canvas width the "panel" layout's photo column occupies —
+// sized within the user-specified 55-65% range, with deliberate margin so
+// the dark panel it leaves (1 - this ratio) is always wide enough to hold
+// brandOverlay.js's own (now larger, 0.34-width) logo placement without
+// the two ever overlapping: both formats' logos need
+// >=0.39 of canvas width (0.05 padding + 0.34 logo width); the panel
+// reserved here is 0.42 for both, a real but modest margin.
+const PANEL_PHOTO_WIDTH_RATIO = { feed: 0.58, story: 0.58 };
 // Beyond this fraction of the original photo discarded, a crop is
 // considered too destructive to trust — chooseLayout() below falls back to
-// a full-bleed layout instead (which crops far less, and is what this
-// pipeline already used exclusively before this brand-system update) —
-// never a hard failure, since a safe fallback layout always exists for
-// every real photo geometry. This is deliberately NOT a subject-detection
-// claim: it is a plain, honest measurement of surviving photo area, used
-// only to prefer the layout that keeps more of the actual photo on screen.
-const LAYOUT_CROP_LOSS_FAIL_THRESHOLD = 0.6;
+// the full-bleed "editorial" layout instead (which crops far less). Never a
+// hard failure, since a safe fallback layout always exists for every real
+// photo geometry. This is deliberately NOT a subject-detection claim: it
+// is a plain, honest measurement of surviving photo area, used only to
+// prefer the layout that keeps more of the actual photo on screen — and
+// deliberately stricter than the first pass's 0.6 (lowered to 0.5) per the
+// explicit direction to avoid enormous, over-tight subject crops: when in
+// doubt, prefer full-bleed editorial over a narrow, aggressively-cropped panel.
+const LAYOUT_CROP_LOSS_FAIL_THRESHOLD = 0.5;
 // Feed source photos are, in practice, very often landscape-oriented press
 // photography (see imageMeta.js) — a photo this much wider than the 4:5
 // Feed canvas already loses a large fraction of itself to a full-bleed
-// cover-crop, so cramming it into Layout A's even-narrower side panel
-// would only make that worse. Routing straight to the full-bleed banner
-// treatment (Layout C) for these photos is both simpler and safer than
-// computing (and likely rejecting) the Layout A crop-loss check anyway.
+// cover-crop, so cramming it into the panel layout's even-narrower column
+// would only make that worse. Routing straight to the full-bleed
+// "editorial" treatment for these photos is both simpler and safer than
+// computing (and likely rejecting) the panel crop-loss check anyway.
 const FEED_LANDSCAPE_ASPECT_THRESHOLD = 1.15;
 
 /**
- * Chooses one of the three canonical Aggregate layouts for a render,
+ * Chooses one of the two canonical Aggregate layouts for a render,
  * deterministically, from ONLY the destination and the source photo's own
  * geometry — never from image content, never randomly, never via any AI
  * call. See this file's own 2026-09-14 header for what each layout looks
  * like.
  * @param {{format: "feed"|"story", sourceWidth?: number, sourceHeight?: number}} args
- * @returns {"A"|"B"|"C"}
+ * @returns {"editorial"|"panel"}
  */
 export function chooseLayout({ format, sourceWidth, sourceHeight }) {
-  if (!sourceWidth || !sourceHeight) return "B"; // no geometry available — the safest, plainest default
+  if (!sourceWidth || !sourceHeight) return "editorial"; // no geometry available — the safest, plainest default
   const canvas = CANVAS[format];
-  if (!canvas) return "B";
+  if (!canvas) return "editorial";
 
   if (format === "feed") {
     const sourceAspect = sourceWidth / sourceHeight;
-    if (sourceAspect >= FEED_LANDSCAPE_ASPECT_THRESHOLD) return "C";
+    if (sourceAspect >= FEED_LANDSCAPE_ASPECT_THRESHOLD) return "editorial";
   }
 
-  const photoWidthRatio = LAYOUT_A_PHOTO_WIDTH_RATIO[format];
-  const panelWidth = Math.round(canvas.width * photoWidthRatio);
-  const loss = estimateCoverCropLoss(sourceWidth, sourceHeight, panelWidth, canvas.height);
-  return loss <= LAYOUT_CROP_LOSS_FAIL_THRESHOLD ? "A" : "B";
+  const photoWidthRatio = PANEL_PHOTO_WIDTH_RATIO[format];
+  const panelPhotoWidth = Math.round(canvas.width * photoWidthRatio);
+  const loss = estimateCoverCropLoss(sourceWidth, sourceHeight, panelPhotoWidth, canvas.height);
+  return loss <= LAYOUT_CROP_LOSS_FAIL_THRESHOLD ? "panel" : "editorial";
 }
 
-/** One slanted accent parallelogram — the angular red/black graphic motif shared by every reference layout. */
-function diagonalAccentPolygon({ x, y, width, height, skew, fill }) {
+/** One THIN slanted accent stripe — a restrained edge/corner mark, never a thick block laid over the subject. */
+function diagonalAccentStripe({ x, y, width, height, skew, fill, opacity = 1 }) {
   const points = [
     [x + skew, y],
     [x + skew + width, y],
@@ -233,7 +266,7 @@ function diagonalAccentPolygon({ x, y, width, height, skew, fill }) {
   ]
     .map((p) => p.join(","))
     .join(" ");
-  return `<polygon points="${points}" fill="${fill}"/>`;
+  return `<polygon points="${points}" fill="${fill}" opacity="${opacity}"/>`;
 }
 
 function escapeXml(text) {
@@ -272,7 +305,7 @@ export function wrapLines(text, maxWidth, fontSize) {
  * wrap rather than cutting the headline short.
  * @returns {{fontSize: number, lines: string[]}}
  */
-export function fitHeadline(text, maxWidth, { startSize, minSize, maxLines = HEADLINE_MAX_LINES, step = 2 } = {}) {
+export function fitHeadline(text, maxWidth, { startSize, minSize, maxLines = 5, step = 2 } = {}) {
   for (let size = startSize; size >= minSize; size -= step) {
     const lines = wrapLines(text, maxWidth, size);
     if (lines.length <= maxLines) return { fontSize: size, lines };
@@ -303,133 +336,164 @@ function headlineLineTspan({ line, x, y, emphasisPhrase }) {
   return `<tspan x="${x}" y="${Math.round(y)}">${runs}</tspan>`;
 }
 
-const SCRIM_DEFS = `<linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
-      <stop offset="55%" stop-color="#000000" stop-opacity="0.55"/>
-      <stop offset="100%" stop-color="#000000" stop-opacity="0.93"/>
-    </linearGradient>
-    <linearGradient id="scrimStrong" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
-      <stop offset="35%" stop-color="#000000" stop-opacity="0.65"/>
-      <stop offset="100%" stop-color="#000000" stop-opacity="0.97"/>
-    </linearGradient>
-    <filter id="ts" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000000" flood-opacity="0.6"/>
+const SHADOW_FILTER_DEFS = `<filter id="ts" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="5" flood-color="#000000" flood-opacity="0.7"/>
     </filter>`;
 
-function headlineBlockGeometry({ width, height, headline, format, paddingX, maxTextWidth, reservedBottomRatio }) {
-  const startSize = Math.round(width * HEADLINE_START_SIZE_RATIO);
-  const minSize = Math.round(width * HEADLINE_MIN_SIZE_RATIO);
-  const { fontSize, lines } = fitHeadline(headline, maxTextWidth, { startSize, minSize });
+/** "editorial" layout's gradient — fast-transitioning, near-opaque well before the bottom, matching the Texans Trade / breaking-square references' punchy dark lower section (not a slow 55%-opacity fade). */
+function editorialScrimDefs() {
+  return `<linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="28%" stop-color="#000000" stop-opacity="0.55"/>
+      <stop offset="60%" stop-color="#000000" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.97"/>
+    </linearGradient>${SHADOW_FILTER_DEFS}`;
+}
+
+/** "panel" layout's dark column — a subtle top-to-bottom gradient (never flat #000, which reads as a cheap cutout) plus a soft feather where the photo meets the panel, so the two never look like two rectangles glued together. */
+function panelScrimDefs() {
+  return `<linearGradient id="panelFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d0d0d"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </linearGradient>
+    <linearGradient id="panelFeather" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>${SHADOW_FILTER_DEFS}`;
+}
+
+function headlineBlockGeometry({ headline, maxTextWidth, maxLines, startSizeRatio, canvasWidth }) {
+  const startSize = Math.round(canvasWidth * startSizeRatio);
+  const minSize = Math.round(canvasWidth * HEADLINE_MIN_SIZE_RATIO);
+  const { fontSize, lines } = fitHeadline(headline, maxTextWidth, { startSize, minSize, maxLines });
   const lineHeight = fontSize * HEADLINE_LINE_HEIGHT_RATIO;
-  const reservedBottom = Math.round(height * reservedBottomRatio);
-  const textBlockHeight = lines.length * lineHeight;
-  const textBottomY = height - reservedBottom;
-  const textStartY = textBottomY - textBlockHeight;
-  return { fontSize, lines, lineHeight, textStartY, paddingX };
+  return { fontSize, lines, lineHeight, blockHeight: lines.length * lineHeight };
 }
 
-/** Layout B — full-bleed photo, bottom gradient scrim, headline bottom-left, inline red emphasis. The original renderer design, now brand-accented. */
-function buildLayoutB({ width, height, headline, format }) {
-  const paddingX = Math.round(width * PLACEMENT[format].paddingXRatio);
-  const maxTextWidth = width - paddingX * 2;
-  const { fontSize, lines, lineHeight, textStartY } = headlineBlockGeometry({ width, height, headline, format, paddingX, maxTextWidth, reservedBottomRatio: LOGO_CLEARANCE_RATIO[format] });
-  const gradientTopY = Math.max(0, textStartY - fontSize * 1.6);
-  const accentY = textStartY - fontSize * 0.5;
-  const accentWidth = Math.round(width * 0.16);
-  const emphasisPhrase = detectEmphasisPhrase(headline);
-
-  const tspans = lines.map((line, i) => headlineLineTspan({ line, x: paddingX, y: textStartY + (i + 1) * lineHeight - lineHeight * 0.18, emphasisPhrase })).join("");
-
-  // A single small angular accent, top-right — brand texture without
-  // competing with the subject, which "attention" cropping already
-  // favors keeping roughly centered/upper in a full-bleed photo.
-  const accent = diagonalAccentPolygon({ x: width * 0.86, y: 0, width: width * 0.05, height: height * 0.14, skew: width * 0.03, fill: BRAND_RED });
-
-  const svg = `<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
-  <defs>${SCRIM_DEFS}</defs>
-  <rect x="0" y="${Math.round(gradientTopY)}" width="${width}" height="${Math.round(height - gradientTopY)}" fill="url(#scrim)"/>
-  ${accent}
-  <rect x="${paddingX}" y="${Math.round(accentY)}" width="${accentWidth}" height="6" fill="${BRAND_RED}"/>
-  <text font-family="${FONT_FAMILY}" font-size="${fontSize}" style="text-transform:uppercase" filter="url(#ts)">${tspans}</text>
-</svg>`;
-
-  return { svg, fontSize, lines };
-}
-
-/** Layout C — full-bleed photo, stronger bottom band, a kicker banner strip, then the headline (plain, unemphasized — the banner already carries the emphasis). */
-function buildLayoutC({ width, height, headline, format }) {
+/**
+ * "editorial" layout — full-bleed photo, a fast, strong dark gradient, a
+ * red kicker banner (the detected status phrase, or a neutral "NFL NEWS"
+ * fallback — never inline emphasis here, the banner already carries that
+ * hierarchy), then a LARGE headline anchored to the bottom-left. Matches
+ * the Texans Trade / Calvin Austin square Breaking News references.
+ */
+function buildEditorialLayout({ width, height, headline, format }) {
   const paddingX = Math.round(width * PLACEMENT[format].paddingXRatio);
   const maxTextWidth = width - paddingX * 2;
   const kickerText = detectEmphasisPhrase(headline) ?? "NFL NEWS";
-  const kickerFontSize = Math.round(width * 0.032);
-  const kickerHeight = Math.round(kickerFontSize * 2.1);
-  const kickerWidth = Math.round(kickerText.length * kickerFontSize * AVG_CHAR_WIDTH_RATIO * 0.95 + kickerFontSize * 2);
+  const kickerFontSize = Math.round(width * 0.034);
+  const kickerHeight = Math.round(kickerFontSize * 1.9);
+  const kickerWidth = Math.round(kickerText.length * kickerFontSize * AVG_CHAR_WIDTH_RATIO * 0.95 + kickerFontSize * 1.8);
 
-  const { fontSize, lines, lineHeight, textStartY } = headlineBlockGeometry({
-    width,
-    height,
+  const { fontSize, lines, lineHeight, blockHeight } = headlineBlockGeometry({
     headline,
-    format,
-    paddingX,
     maxTextWidth,
-    // Extra clearance above the logo zone to also fit the kicker banner
-    // sitting just above the headline block.
-    reservedBottomRatio: LOGO_CLEARANCE_RATIO[format],
+    maxLines: HEADLINE_MAX_LINES.editorial,
+    startSizeRatio: HEADLINE_START_SIZE_RATIO,
+    canvasWidth: width,
   });
-  const kickerY = textStartY - kickerHeight - fontSize * 0.35;
-  const gradientTopY = Math.max(0, kickerY - fontSize * 1.4);
 
-  const tspans = lines.map((line, i) => headlineLineTspan({ line, x: paddingX, y: textStartY + (i + 1) * lineHeight - lineHeight * 0.18, emphasisPhrase: null })).join("");
+  const reservedBottom = Math.round(height * LOGO_CLEARANCE_RATIO[format]);
+  const textBottomY = height - reservedBottom;
+  const textStartY = textBottomY - blockHeight;
+  // Tight gap between banner and headline — no floating kicker.
+  const kickerY = textStartY - kickerHeight - fontSize * 0.22;
+  const gradientTopY = Math.max(0, kickerY - fontSize * 1.1);
 
-  // Right-edge diagonal accent stripes, matching the square reference.
-  const stripes = [0, 1]
-    .map((i) => diagonalAccentPolygon({ x: width - width * 0.16 - i * width * 0.09, y: 0, width: width * 0.045, height: height * 0.4, skew: width * 0.05, fill: i === 0 ? BRAND_RED : "#3a3a3a" }))
-    .join("");
+  const tspans = lines.map((line, i) => headlineLineTspan({ line, x: paddingX, y: textStartY + (i + 1) * lineHeight - lineHeight * 0.12, emphasisPhrase: null })).join("");
+
+  // One thin corner accent, top-right — restrained brand texture, never
+  // over the subject (attention-cropping keeps the subject roughly
+  // centered/upper in a full-bleed photo, and this stays clear of that zone).
+  const accent = diagonalAccentStripe({ x: width * 0.9, y: 0, width: width * 0.018, height: height * 0.1, skew: width * 0.02, fill: BRAND_RED });
 
   const svg = `<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
-  <defs>${SCRIM_DEFS}</defs>
-  <rect x="0" y="${Math.round(gradientTopY)}" width="${width}" height="${Math.round(height - gradientTopY)}" fill="url(#scrimStrong)"/>
-  ${stripes}
+  <defs>${editorialScrimDefs()}</defs>
+  <rect x="0" y="${Math.round(gradientTopY)}" width="${width}" height="${Math.round(height - gradientTopY)}" fill="url(#scrim)"/>
+  ${accent}
   <rect x="${paddingX}" y="${Math.round(kickerY)}" width="${kickerWidth}" height="${kickerHeight}" fill="${BRAND_RED}"/>
   <text x="${Math.round(paddingX + kickerWidth / 2)}" y="${Math.round(kickerY + kickerHeight * 0.68)}" font-family="${FONT_FAMILY}" font-size="${kickerFontSize}" fill="#ffffff" text-anchor="middle" style="text-transform:uppercase">${escapeXml(kickerText)}</text>
-  <text font-family="${FONT_FAMILY}" font-size="${fontSize}" style="text-transform:uppercase" filter="url(#ts)">${tspans}</text>
+  <text font-family="${FONT_FAMILY}" font-size="${fontSize}" fill="#ffffff" style="text-transform:uppercase" filter="url(#ts)">${tspans}</text>
 </svg>`;
 
   return { svg, fontSize, lines };
 }
 
-/** Layout A — a dark side panel (always wide enough to hold the logo, see LAYOUT_A_PHOTO_WIDTH_RATIO's own comment) with a kicker, headline column, and divider rule; the photo fills only the remaining panel (cropped separately in renderArtwork, not here — this only draws the panel's own chrome plus the diagonal corner accent). */
-function buildLayoutA({ width, height, headline, format, panelWidth }) {
+/**
+ * "panel" layout — a dark editorial column (subtle gradient, never flat
+ * black) with a kicker set tight above a LARGE headline that fills the
+ * column aggressively, a red divider rule, and a thin corner accent; the
+ * photo fills only the remaining column (cropped separately in
+ * renderArtwork, not here — this only draws the panel's own chrome plus a
+ * feathered seam so the two halves read as one designed composition
+ * rather than two rectangles glued together). The whole kicker+divider+
+ * headline block is VERTICALLY CENTERED within the available space
+ * (between a small top margin and the logo clearance) rather than pinned
+ * to a fixed top anchor — this is what prevents a short headline from
+ * leaving a large, unintentional-looking empty gap in the middle of the
+ * panel. Matches the Calvin Austin vertical references.
+ */
+function buildPanelLayout({ width, height, headline, format, panelWidth }) {
   const paddingX = Math.round(width * PLACEMENT[format].paddingXRatio);
   const maxTextWidth = panelWidth - paddingX * 2;
   const kickerText = detectEmphasisPhrase(headline) ?? "NFL NEWS";
-  const kickerFontSize = Math.round(width * 0.026);
+  const kickerFontSize = Math.round(width * 0.03);
+  const emphasisPhrase = detectEmphasisPhrase(headline);
 
-  const { fontSize, lines, lineHeight, textStartY } = headlineBlockGeometry({
-    width,
-    height,
+  const { fontSize, lines, lineHeight, blockHeight } = headlineBlockGeometry({
     headline,
-    format,
-    paddingX,
     maxTextWidth,
-    reservedBottomRatio: LOGO_CLEARANCE_RATIO[format],
+    maxLines: HEADLINE_MAX_LINES.panel,
+    // Slightly larger starting attempt than editorial: this column is
+    // narrower, but the references still run large, tightly-wrapped text
+    // rather than shrinking to fit — see this file's own 2026-09-14 header.
+    startSizeRatio: HEADLINE_START_SIZE_RATIO * 1.05,
+    canvasWidth: width,
   });
-  const kickerY = Math.max(height * 0.12, textStartY - lines.length * lineHeight * 0.35 - kickerFontSize * 3);
-  const dividerY = textStartY - fontSize * 0.55;
-  const dividerWidth = Math.round(panelWidth * 0.3);
 
-  const tspans = lines.map((line, i) => headlineLineTspan({ line, x: paddingX, y: textStartY + (i + 1) * lineHeight - lineHeight * 0.18, emphasisPhrase: null })).join("");
+  const dividerHeight = Math.round(height * 0.004);
+  const kickerBlockHeight = kickerFontSize * 1.3;
+  const dividerGap = fontSize * 0.3;
+  const contentBlockHeight = kickerBlockHeight + dividerGap + dividerHeight + dividerGap + blockHeight;
 
-  const cornerAccent = diagonalAccentPolygon({ x: 0, y: 0, width: width * 0.05, height: height * 0.09, skew: width * 0.045, fill: BRAND_RED });
+  const topMargin = Math.round(height * 0.08);
+  const bottomClearance = Math.round(height * LOGO_CLEARANCE_RATIO[format]);
+  const availableHeight = height - topMargin - bottomClearance;
+  // Center the whole kicker+divider+headline unit within the available
+  // space when it doesn't fill it (short headline); anchor at the top
+  // margin when it does (long headline, matching the reference's own
+  // long-headline case, which already fills nearly the whole column).
+  const blockTop = topMargin + Math.max(0, (availableHeight - contentBlockHeight) / 2);
+
+  const kickerY = blockTop;
+  const dividerY = kickerY + kickerBlockHeight + dividerGap;
+  const textStartY = dividerY + dividerHeight + dividerGap;
+
+  const tspans = lines.map((line, i) => headlineLineTspan({ line, x: paddingX, y: textStartY + (i + 1) * lineHeight - lineHeight * 0.12, emphasisPhrase })).join("");
+
+  const dividerWidth = Math.round(panelWidth * 0.26);
+  const cornerAccent = diagonalAccentStripe({ x: 0, y: 0, width: width * 0.016, height: height * 0.07, skew: width * 0.02, fill: BRAND_RED });
+  // Soft feather where the panel meets the photo — drawn on the OVERLAY
+  // (which composites on top of the photo layer), fading from the panel's
+  // own black into transparent moving rightward into the photo, so the
+  // seam reads as an intentional transition rather than a hard cut.
+  //
+  // 2026-09-14: an earlier draft also added a large low-opacity diagonal
+  // "texture band" across the panel for depth — removed after visual
+  // review: it read as an arbitrary floating shape rather than subtle
+  // texture, exactly the "scattered decorative bar" problem this revision
+  // was meant to fix. The panel's own subtle top-to-bottom gradient
+  // (panelFill, above) already avoids the flat-black "cutout" look without it.
+  const featherWidth = Math.round(width * 0.06);
 
   const svg = `<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
-  <defs>${SCRIM_DEFS}</defs>
-  <rect x="0" y="0" width="${panelWidth}" height="${height}" fill="#000000"/>
+  <defs>${panelScrimDefs()}</defs>
+  <rect x="0" y="0" width="${panelWidth}" height="${height}" fill="url(#panelFill)"/>
+  <rect x="${panelWidth}" y="0" width="${featherWidth}" height="${height}" fill="url(#panelFeather)"/>
   ${cornerAccent}
-  <rect x="${paddingX - Math.round(kickerFontSize * 0.7)}" y="${Math.round(kickerY)}" width="${Math.round(kickerFontSize * 0.5)}" height="${Math.round(kickerFontSize * 1.1)}" fill="${BRAND_RED}" transform="skewX(-12)"/>
+  <rect x="${paddingX - Math.round(kickerFontSize * 0.6)}" y="${Math.round(kickerY)}" width="${Math.round(kickerFontSize * 0.42)}" height="${Math.round(kickerFontSize * 1.05)}" fill="${BRAND_RED}" transform="skewX(-12)"/>
   <text x="${paddingX}" y="${Math.round(kickerY + kickerFontSize)}" font-family="${FONT_FAMILY}" font-size="${kickerFontSize}" fill="#ffffff" style="text-transform:uppercase">${escapeXml(kickerText)}</text>
-  <rect x="${paddingX}" y="${Math.round(dividerY)}" width="${dividerWidth}" height="4" fill="${BRAND_RED}"/>
+  <rect x="${paddingX}" y="${Math.round(dividerY)}" width="${dividerWidth}" height="${Math.max(3, dividerHeight)}" fill="${BRAND_RED}"/>
   <text font-family="${FONT_FAMILY}" font-size="${fontSize}" fill="#ffffff" style="text-transform:uppercase" filter="url(#ts)">${tspans}</text>
 </svg>`;
 
@@ -439,19 +503,18 @@ function buildLayoutA({ width, height, headline, format, panelWidth }) {
 /**
  * Builds the transparent-background SVG overlay for one canvas — pure
  * string building, no rendering, so the exact markup is independently
- * testable. `layout` selects among the three canonical Aggregate
- * compositions (see this file's own 2026-09-14 header); defaults to "B",
- * the original single-layout design, for any caller that doesn't specify
- * one. `panelWidth` is required only for layout "A" (the photo/panel
- * boundary chooseLayout()+renderArtwork() already computed).
+ * testable. `layout` selects between the two canonical Aggregate
+ * compositions (see this file's own 2026-09-14 header); defaults to
+ * "editorial" for any caller that doesn't specify one. `panelWidth` is
+ * required only for layout "panel" (the photo/panel boundary
+ * chooseLayout()+renderArtwork() already computed).
  */
-export function buildOverlaySvg({ width, height, headline, format, layout = "B", panelWidth }) {
-  if (layout === "A") {
-    const resolvedPanelWidth = panelWidth ?? Math.round(width * (1 - LAYOUT_A_PHOTO_WIDTH_RATIO[format]));
-    return buildLayoutA({ width, height, headline, format, panelWidth: resolvedPanelWidth });
+export function buildOverlaySvg({ width, height, headline, format, layout = "editorial", panelWidth }) {
+  if (layout === "panel") {
+    const resolvedPanelWidth = panelWidth ?? Math.round(width * (1 - PANEL_PHOTO_WIDTH_RATIO[format]));
+    return buildPanelLayout({ width, height, headline, format, panelWidth: resolvedPanelWidth });
   }
-  if (layout === "C") return buildLayoutC({ width, height, headline, format });
-  return buildLayoutB({ width, height, headline, format });
+  return buildEditorialLayout({ width, height, headline, format });
 }
 
 /**
@@ -481,14 +544,15 @@ export function buildOverlaySvg({ width, height, headline, format, layout = "B",
  * the claimed subject/team, so a poor "attention" crop can misframe the
  * right photo but can no longer be run against the WRONG photo.
  *
- * 2026-09-14 brand-system update: chooseLayout() (this file's own header)
- * picks one of three canonical Aggregate compositions from destination +
- * source geometry alone. Layout A crops the photo into a narrower side
- * panel — the one case where cropping loss is actually measured
- * (estimateCoverCropLoss) and, if too destructive, automatically falls
- * back to a full-bleed layout instead of ever forcing an unsafe crop.
+ * 2026-09-14 brand-system update (revised same day after visual review):
+ * chooseLayout() (this file's own header) picks one of TWO canonical
+ * Aggregate compositions from destination + source geometry alone.
+ * "panel" crops the photo into a narrower side column — the one case
+ * where cropping loss is actually measured (estimateCoverCropLoss) and,
+ * if too destructive, automatically falls back to the full-bleed
+ * "editorial" layout instead of ever forcing an unsafe, over-tight crop.
  * @param {{sourceImagePath: string, headline: string, format: "feed"|"story", outputPath: string}} args
- * @returns {Promise<{width: number, height: number, fontSize: number, lines: string[], layout: "A"|"B"|"C"}>}
+ * @returns {Promise<{width: number, height: number, fontSize: number, lines: string[], layout: "editorial"|"panel"}>}
  */
 export async function renderArtwork({ sourceImagePath, headline, format, outputPath }) {
   const canvas = CANVAS[format];
@@ -503,11 +567,11 @@ export async function renderArtwork({ sourceImagePath, headline, format, outputP
 
   let photoBuffer;
   let panelWidth;
-  if (layout === "A") {
-    // The photo fills only the RIGHT panel — the dark left panel (drawn by
-    // buildLayoutA itself, as part of the overlay SVG) holds the kicker,
-    // headline, and (composited afterward, unchanged) the logo.
-    panelWidth = Math.round(canvas.width * (1 - LAYOUT_A_PHOTO_WIDTH_RATIO[format]));
+  if (layout === "panel") {
+    // The photo fills only the RIGHT column — the dark left panel (drawn
+    // by buildPanelLayout itself, as part of the overlay SVG) holds the
+    // kicker, headline, and (composited afterward, unchanged) the logo.
+    panelWidth = Math.round(canvas.width * (1 - PANEL_PHOTO_WIDTH_RATIO[format]));
     const photoPanelWidth = canvas.width - panelWidth;
     const croppedPhoto = await sharp(sourceBytes)
       .resize(photoPanelWidth, canvas.height, { fit: "cover", position: sharp.strategy.attention })

@@ -27,16 +27,25 @@ export const CANONICAL_LOGO_SHA256 = "d73259067ad43caf33c4eff5950c7e3d5d8a3fb541
 // Ratio-based, not fixed pixel values, since Feed is a fixed 1024x1280 but
 // Story's exact dimensions vary within its ratio tolerance (e.g. 941x1672)
 // — a canvas-relative rule scales correctly regardless of the generator's
-// exact output size. Story gets a larger bottom safe-zone specifically
-// because a phone Story viewer's own UI (reply bar, progress indicator)
-// sits closer to the bottom edge than a Feed post ever does.
+// exact output size. Story keeps a larger bottom safe-zone than Feed
+// specifically because a phone Story viewer's own UI (reply bar, progress
+// indicator) sits closer to the bottom edge than a Feed post ever does.
 // Exported so artworkRenderer.js's deterministic headline layout can
 // reserve exactly the same bottom-left footprint this step will later fill
 // — a single source of truth for logo geometry, never a second, drifting
 // copy of these ratios.
+//
+// 2026-09-14 brand-system revision: widthRatio raised from 0.28/0.30 to
+// 0.34 for both formats — direct measurement against the four canonical
+// design references (assets/reference/) puts their own logo lockups at
+// roughly 0.32-0.38 of canvas width; the prior ratios read as a small
+// footer watermark next to that, not the real branding element the
+// references treat it as. paddingXRatio/paddingBottomRatio tightened to
+// match (still comfortably inside brandOverlay's own bounds check below,
+// and still visibly larger than Feed's for Story's phone-UI safety zone).
 export const PLACEMENT = {
-  feed: { widthRatio: 0.28, paddingXRatio: 0.06, paddingBottomRatio: 0.05 },
-  story: { widthRatio: 0.3, paddingXRatio: 0.06, paddingBottomRatio: 0.1 },
+  feed: { widthRatio: 0.34, paddingXRatio: 0.05, paddingBottomRatio: 0.035 },
+  story: { widthRatio: 0.34, paddingXRatio: 0.05, paddingBottomRatio: 0.06 },
 };
 
 async function sha256File(filePath) {
