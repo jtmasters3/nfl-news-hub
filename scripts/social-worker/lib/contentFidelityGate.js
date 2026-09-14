@@ -66,6 +66,86 @@ function stripPunctuation(word) {
   return word.replace(/^[^a-zA-Z0-9.']+|[^a-zA-Z0-9.']+$/g, "");
 }
 
+// ---------------------------------------------------------------------------
+// 2026-09-14 sentence-boundary tokenization fix
+// ---------------------------------------------------------------------------
+// Root cause (proven against the recovered caption for story_id
+// 8e0f60e2-3e8e-4028-b141-05f8286466ce): extractCandidateEntities()'s old
+// multi-word regex, `/\b[A-Z][A-Za-z.'-]*(?:\s+[A-Z][A-Za-z.'-]*)+\b/g`, had
+// no concept of a sentence boundary — it greedily consumed EVERY run of
+// whitespace-separated capitalized tokens, including straight through a
+// real sentence-ending period into the next sentence's own capitalized
+// first word. "...receiver A.J. Brown. The nature..." therefore matched as
+// one candidate, "A.J. Brown. The", which (correctly) failed vocabulary
+// matching since "the" was never going to belong to a person's name — but
+// for the wrong reason: the entity itself, "A.J. Brown", was never actually
+// unsupported.
+//
+// A second, related bug sat right behind the first even once phrase
+// extraction is fixed: isPhraseSupported()'s own word-by-word vocabulary
+// check never stripped a genuine trailing SENTENCE period before comparing
+// a candidate word against the vocabulary built by buildAllowedVocabulary()
+// — so "Brown." (mid-sentence, period retained) would still fail to match
+// the vocabulary's "brown" (the same surname elsewhere in the canonical
+// headline/description, without a trailing period attached there). Fixing
+// only the extraction boundary without also fixing this would have left the
+// exact same false positive in place under a different symptom.
+//
+// The single, narrow distinction both halves of this fix rest on:
+// hasTrailingSentencePeriod() below. A period preceded by exactly ONE
+// letter ("A.", "J.", "T.", "D.") is an abbreviated initial — never a
+// sentence boundary, and never punctuation to strip off the word. A period
+// preceded by TWO OR MORE letters ("Brown.", "Watt.", "Chiefs.") is an
+// ordinary word ending a real sentence — a phrase must stop growing right
+// after it, and the period itself is punctuation, not part of the word, so
+// it must be discarded before any vocabulary comparison. This never weakens
+// entity matching in general: a genuinely unknown/unsupported name is still
+// rejected exactly as before, whether or not it happens to sit at a
+// sentence boundary.
+
+/**
+ * True when `token`'s own trailing period marks a genuine sentence
+ * boundary rather than being part of an abbreviated initial — see this
+ * section's own header above for the exact, narrow distinction.
+ */
+function hasTrailingSentencePeriod(token) {
+  if (!token.endsWith(".")) return false;
+  const before = token.slice(0, -1);
+  const trailingLetters = before.match(/[A-Za-z]+$/);
+  return !!trailingLetters && trailingLetters[0].length >= 2;
+}
+
+// Mirrors the per-token character class the old single regex used
+// (`[A-Z][A-Za-z.'-]*`) — a token qualifies as a name-like capitalized
+// token only if it consists ENTIRELY of letters/periods/apostrophes/
+// hyphens. This is what correctly excludes "Source:" (the caption's own
+// attribution line prefix) from ever chaining into the following "ESPN"/
+// "FOX Sports"/etc — the colon isn't a valid mid-name character, exactly
+// as the original regex's character class already enforced; this must
+// stay a full-token match (`$`), not just a prefix check, or "Source:"
+// would incorrectly qualify via its leading "S".
+const NAME_TOKEN_PATTERN = /^[A-Z][A-Za-z.'-]*$/;
+function isCapitalizedToken(token) {
+  return NAME_TOKEN_PATTERN.test(token);
+}
+
+/**
+ * The single word-normalization step used everywhere a "word" needs to
+ * become vocabulary-comparable: the existing edge-punctuation trim, then a
+ * genuine trailing SENTENCE period is also discarded (it is punctuation,
+ * never part of the word) — while a period that is part of an abbreviated
+ * initial ("A.J.", "T.J.", "D.J.") is always preserved, since removing it
+ * would change the name's own canonical spelling. Used identically for
+ * building the vocabulary AND for checking a candidate word against it, so
+ * a name is compared on equal footing regardless of which side of the
+ * comparison happened to carry a trailing sentence period in the source text.
+ */
+function normalizeWord(word) {
+  let stripped = stripPunctuation(word);
+  if (hasTrailingSentencePeriod(stripped)) stripped = stripped.slice(0, -1);
+  return normalize(stripped);
+}
+
 /**
  * Builds the flat, lowercase word vocabulary a candidate named entity is
  * allowed to be drawn from — every word appearing anywhere in the
@@ -82,7 +162,7 @@ function buildAllowedVocabulary(source) {
   const vocab = new Set();
   for (const part of parts) {
     for (const rawWord of String(part).split(/\s+/)) {
-      const word = normalize(stripPunctuation(rawWord));
+      const word = normalizeWord(rawWord);
       if (word) vocab.add(word);
     }
   }
@@ -99,20 +179,44 @@ function buildAllowedVocabulary(source) {
 function extractCandidateEntities(text) {
   const candidates = [];
 
-  // Multi-word capitalized runs (2+ consecutive capitalized tokens).
-  const multiWordPattern = /\b[A-Z][A-Za-z.'-]*(?:\s+[A-Z][A-Za-z.'-]*)+\b/g;
-  let match;
-  while ((match = multiWordPattern.exec(text))) {
-    candidates.push(match[0]);
+  // Multi-word capitalized runs (2+ consecutive capitalized tokens),
+  // walked manually token-by-token (not one greedy regex) so a genuine
+  // sentence-ending period correctly stops a phrase from growing into the
+  // next sentence, while a period inside an abbreviated initial never
+  // does — see this file's own 2026-09-14 header above.
+  const rawTokens = text.match(/\S+/g) || [];
+  let i = 0;
+  while (i < rawTokens.length) {
+    if (!isCapitalizedToken(rawTokens[i])) {
+      i++;
+      continue;
+    }
+    let j = i;
+    while (j < rawTokens.length && isCapitalizedToken(rawTokens[j])) {
+      const boundary = hasTrailingSentencePeriod(rawTokens[j]);
+      j++;
+      if (boundary) break;
+    }
+    if (j - i >= 2) candidates.push(rawTokens.slice(i, j).join(" "));
+    i = j;
   }
 
-  // Single capitalized words not at a sentence/line start.
+  // Single capitalized words not at a sentence/line start. The STOP_WORDS
+  // membership check uses normalizeWord() (not a bare .toLowerCase()) for
+  // the exact same reason as the vocabulary comparison above: a day-of-
+  // week or other stop word landing at the END of a sentence ("...practice
+  // Wednesday. The Chiefs...") still carries its own trailing sentence
+  // period, which must be discarded before comparing against STOP_WORDS —
+  // otherwise "wednesday." never matches the list's "wednesday" and slips
+  // through as a false candidate. The pushed candidate itself is left as
+  // the original stripped-but-not-period-trimmed word; downstream
+  // isPhraseSupported() normalizes it again anyway.
   const segments = text.split(/(?<=[.!?\n])\s+|\n+/);
   for (const segment of segments) {
     const words = segment.trim().split(/\s+/);
     for (let i = 1; i < words.length; i++) {
       const word = stripPunctuation(words[i]);
-      if (/^[A-Z][a-z'.-]*$/.test(word) && !STOP_WORDS.has(word.toLowerCase())) {
+      if (/^[A-Z][a-z'.-]*$/.test(word) && !STOP_WORDS.has(normalizeWord(word))) {
         candidates.push(word);
       }
     }
@@ -127,7 +231,7 @@ function extractCandidateEntities(text) {
  * @returns {boolean} true if EVERY word in the phrase is present in vocab
  */
 function isPhraseSupported(phrase, vocab) {
-  const words = phrase.split(/\s+/).map((w) => normalize(stripPunctuation(w))).filter(Boolean);
+  const words = phrase.split(/\s+/).map(normalizeWord).filter(Boolean);
   if (words.length === 0) return true;
   return words.every((w) => vocab.has(w));
 }

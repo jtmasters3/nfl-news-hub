@@ -194,6 +194,97 @@ test("19. an empty caption is caught via the re-run of the existing caption vali
 });
 
 // ---------------------------------------------------------------------------
+// 2026-09-14 sentence-boundary tokenization fix
+// ---------------------------------------------------------------------------
+// Proven root cause: extractCandidateEntities()'s old multi-word regex had
+// no concept of a sentence boundary and would run a candidate phrase
+// straight through a real sentence-ending period into the next sentence's
+// own capitalized first word — "A.J. Brown. The nature..." matched as one
+// candidate, "A.J. Brown. The". A second bug sat right behind it:
+// isPhraseSupported() never stripped a genuine trailing sentence period
+// before comparing a word against the vocabulary, so even a correctly
+// extracted "A.J. Brown." would still fail to match the vocabulary's
+// period-free "brown". Both are fixed together — see contentFidelityGate.js's
+// own 2026-09-14 header for the exact distinction (initial period vs
+// sentence-ending period) both halves of the fix rest on.
+
+test("20. the EXACT recovered production caption for story_id 8e0f60e2-3e8e-4028-b141-05f8286466ce no longer false-positives on 'A.J. Brown. The' — the exact bug this fix closes", () => {
+  const record = {
+    source_story: {
+      post_headline: "MIKE VRABEL HAD NO POSTGAME UPDATE ON A.J. BROWN",
+      description: "It's still unclear what kind of injury and recovery Patriots receiver A.J.",
+      source_name: "Pro Football Talk",
+      category: "injury",
+      teams: ["New England Patriots"],
+      players: [],
+    },
+    caption: {
+      text: "Mike Vrabel had no postgame update on Patriots receiver A.J. Brown. The nature of the injury and recovery remains unclear.\n\nSource: Pro Football Talk",
+    },
+  };
+  const result = evaluateContentFidelity(record);
+  assert.ok(!result.issues.some((i) => i.includes("A.J. Brown. The")), `must never produce the exact false-positive entity: ${JSON.stringify(result.issues)}`);
+  assert.equal(result.passed, true, `no OTHER legitimate fidelity issue should remain either: ${JSON.stringify(result.issues)}`);
+});
+
+test("21. T.J. Watt followed by a new sentence is correctly split at the sentence boundary, not fused with the next sentence's capitalized word", () => {
+  const record = baseRecord({
+    source_story: { ...baseRecord().source_story, post_headline: "T.J. WATT RETURNS TO PRACTICE", description: "T.J. Watt practiced Wednesday with the Green Bay Packers.", players: ["T.J. Watt"] },
+    caption: { text: "T.J. Watt returned to practice Wednesday. The Packers hope he plays Sunday.\n\nSource: ESPN" },
+  });
+  const result = evaluateContentFidelity(record);
+  assert.ok(!result.issues.some((i) => i.includes("T.J. Watt. The")), `must never fuse the initial+surname with the next sentence: ${JSON.stringify(result.issues)}`);
+});
+
+test("22. D.J. Moore followed by a new sentence is correctly split at the sentence boundary", () => {
+  const record = baseRecord({
+    source_story: { ...baseRecord().source_story, post_headline: "D.J. MOORE PRACTICES IN FULL", description: "D.J. Moore was a full participant for the Chicago Bears.", teams: ["Chicago Bears"], players: ["D.J. Moore"] },
+    caption: { text: "D.J. Moore was a full participant Wednesday. The Bears are optimistic for Sunday.\n\nSource: ESPN" },
+  });
+  const result = evaluateContentFidelity(record);
+  assert.ok(!result.issues.some((i) => i.includes("D.J. Moore. The")), `must never fuse the initial+surname with the next sentence: ${JSON.stringify(result.issues)}`);
+});
+
+test("23. a plain (non-initial) name followed by a new sentence is correctly split at the sentence boundary — proves this is a general fix, not an initials-only special case", () => {
+  const record = baseRecord({
+    source_story: { ...baseRecord().source_story, post_headline: "PATRICK MAHOMES PRACTICES IN FULL", description: "Patrick Mahomes returned to practice with the Kansas City Chiefs.", teams: ["Kansas City Chiefs"], players: ["Patrick Mahomes"] },
+    caption: { text: "Patrick Mahomes returned to practice Wednesday. The Chiefs are hopeful for Sunday.\n\nSource: ESPN" },
+  });
+  const result = evaluateContentFidelity(record);
+  assert.ok(!result.issues.some((i) => i.includes("Mahomes. The")), `must never fuse a plain surname with the next sentence: ${JSON.stringify(result.issues)}`);
+  assert.equal(result.passed, true, JSON.stringify(result.issues));
+});
+
+test("24. normal sentence boundaries with ordinary lowercase-continuation prose are completely unaffected", () => {
+  const result = evaluateContentFidelity(baseRecord({ caption: { text: "Jordan Love is out with a shoulder injury. He is expected to miss time.\n\nSource: ESPN" } }));
+  assert.equal(result.passed, true, JSON.stringify(result.issues));
+});
+
+test("25. a GENUINELY unsupported entity immediately followed by a sentence boundary is STILL rejected — the fix must never weaken real detection at exactly the position it touches", () => {
+  const result = evaluateContentFidelity(baseRecord({ caption: { text: "Justin Herbert practiced Wednesday. The Chargers are hopeful.\n\nSource: ESPN" } }));
+  assert.equal(result.passed, false);
+  assert.ok(result.issues.some((i) => i.includes("unsupported_named_entity") && i.includes("Herbert")), JSON.stringify(result.issues));
+});
+
+test("26. a genuinely unsupported initial-style name (A.J. Someone, not in canonical data) immediately followed by a sentence boundary is still rejected", () => {
+  const result = evaluateContentFidelity(baseRecord({ caption: { text: "A.J. Someone practiced Wednesday. The Packers are hopeful.\n\nSource: ESPN" } }));
+  assert.equal(result.passed, false);
+  assert.ok(result.issues.some((i) => i.includes("unsupported_named_entity") && i.includes("Someone")), JSON.stringify(result.issues));
+});
+
+test("27. the caption's own 'Source: X' attribution line never chains into a following capitalized word as a false multi-word entity (the colon must break the run, not extend it)", () => {
+  const result = evaluateContentFidelity(baseRecord({ caption: { text: "Jordan Love is out with a shoulder injury.\n\nSource: ESPN" } }));
+  assert.ok(!result.issues.some((i) => i.includes("Source: ESPN")), `'Source:' must never be treated as chaining into the following capitalized word: ${JSON.stringify(result.issues)}`);
+  assert.equal(result.passed, true, JSON.stringify(result.issues));
+});
+
+test("28. an ALL-CAPS acronym immediately after a real sentence boundary is still handled correctly (e.g. a caption ending '...practice. NFL Network reported it first.')", () => {
+  const record = baseRecord({ source_story: { ...baseRecord().source_story, description: "Jordan Love was hurt during practice with the Green Bay Packers, per NFL Network." } });
+  const result = evaluateContentFidelity(record);
+  assert.equal(result.passed, true, JSON.stringify(result.issues));
+});
+
+// ---------------------------------------------------------------------------
 let failures = 0;
 for (const c of cases) {
   try {

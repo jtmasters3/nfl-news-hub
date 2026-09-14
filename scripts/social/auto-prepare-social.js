@@ -41,11 +41,39 @@
 // to any existing human/manual workflow exactly as before.
 //
 // Before scanning the queue at all, this file also checks for an
-// already-awaiting_approval record that already fully qualifies for
-// automatic approval right now (deterministic oldest-selection.selected_at
-// ordering, the same tie-break convention auto-publish-approved-story.js
-// already uses) — finishing already-completed work is strictly cheaper
-// and safer than starting new generation, so it takes priority.
+// already-awaiting_approval, still-pending record — the OLDEST one,
+// regardless of whether it currently passes the full auto-approval gate
+// (2026-09-14 revision, see the section below) — since finishing
+// already-prepared work is strictly cheaper and safer than starting new
+// generation, so it takes priority.
+//
+// ==========================================================================
+// Re-evaluating a previously gate-failed pending record (2026-09-14)
+// ==========================================================================
+// A live run proved a real, narrow content-fidelity parser bug
+// (unsupported_named_entity:"A.J. Brown. The" — a sentence-boundary
+// tokenization defect, since fixed in contentFidelityGate.js) can leave a
+// fully-prepared, otherwise-correct record sitting at awaiting_approval
+// indefinitely. Selection used to permanently exclude any record that
+// failed evaluateAutoApprovalGate() at selection time — meaning a record
+// stuck on a bug like that one would never be reconsidered once the bug
+// was fixed, unless a human happened to re-run/re-approve it manually.
+//
+// The fix is NOT a durable "gate version" field on the record (considered,
+// and deliberately rejected as more architecture than this needs): gate
+// evaluation is a pure, in-memory function of already-fetched data, with
+// zero network/mutation cost, so simply re-evaluating it fresh on EVERY
+// run is free — there is no real cost to "trying again," and a record
+// automatically becomes newly eligible the moment the underlying gate code
+// is fixed and deployed, with no additional state to track anywhere.
+//
+// The one real risk that fix alone doesn't address: if selection always
+// picks the SAME oldest pending record and that record has a genuine,
+// still-unfixed validation problem, a naive "select oldest pending, stop"
+// design would repeat this same free-but-fruitless check every run and
+// NEVER get to newer, otherwise-ready recover-caption/fresh-generation
+// work — see main()'s own comment for the bounded-fallthrough mechanism
+// that prevents this without any durable tracking either.
 //
 // ==========================================================================
 // Caption-completion hands-off recovery (2026-09-14)
@@ -163,24 +191,29 @@ function categorizeIssues(issues) {
  * candidate's FULL eligibility (which requires a DO read) is only ever
  * confirmed later, in main(), immediately before a replay would be
  * attempted; this function only identifies which story_id is even worth
- * checking, from GitHub state alone.
- * @param {{fetchQueue: Function, fetchState: Function}} deps
+ * checking, from GitHub state alone. Priority 1 (approve-only) deliberately
+ * does NOT filter by evaluateAutoApprovalGate() — see this file's own
+ * 2026-09-14 header for why the oldest pending record is always the
+ * candidate regardless of current gate outcome, and see main() for how a
+ * gate failure there still can't block newer recover-caption/generate work.
+ * @param {{fetchQueue: Function, fetchState: Function, excludeStoryIds?: Iterable<string>}} deps
  * @returns {Promise<
  *   {mode: "approve-only"|"recover-caption"|"generate", story_id: string, record: object, queuePosition: number|null, inspectedCount: number|null, skipCounts: object|null} |
  *   {mode: null, story_id: null, record: null, queuePosition: null, inspectedCount: number, skipCounts: object, queueLength: number}
  * >}
  */
-export async function selectAutonomousCandidate({ fetchQueue, fetchState }) {
+export async function selectAutonomousCandidate({ fetchQueue, fetchState, excludeStoryIds }) {
+  const exclude = excludeStoryIds ? new Set(excludeStoryIds) : null;
   const [queue, state] = await Promise.all([fetchQueue(), fetchState()]);
   const stories = state?.stories ?? {};
 
-  // Priority 1: an already-awaiting_approval record that already fully
-  // qualifies for automatic approval right now — no generation needed.
+  // Priority 1: the OLDEST already-awaiting_approval, still-pending record
+  // — evaluated against the CURRENT gate fresh in main(), never pre-
+  // filtered here by whether it happens to pass right now.
   const awaitingCandidates = Object.entries(stories)
-    .filter(([, r]) => r.status === "awaiting_approval")
+    .filter(([story_id, r]) => r.status === "awaiting_approval" && !(exclude && exclude.has(story_id)))
     .map(([story_id, record]) => ({ story_id, record }))
-    .filter(({ record }) => evaluateStaticAutonomousEligibility(record).eligible)
-    .filter(({ record }) => evaluateAutoApprovalGate(record).eligible);
+    .filter(({ record }) => evaluateStaticAutonomousEligibility(record).eligible);
   awaitingCandidates.sort(sortByOldestSelectedAt);
 
   if (awaitingCandidates.length > 0) {
@@ -194,6 +227,7 @@ export async function selectAutonomousCandidate({ fetchQueue, fetchState }) {
   // deferred to main(); this is only a cheap, no-network pre-filter, same
   // spirit as staticAutonomousEligibility.js's pre-generation filter below.
   const recoveryCandidates = Object.entries(stories)
+    .filter(([story_id]) => !(exclude && exclude.has(story_id)))
     .map(([story_id, record]) => ({ story_id, record }))
     .filter(({ record }) => githubSideCaptionRecoveryIssues(record).length === 0);
   recoveryCandidates.sort(sortByOldestSelectedAt);
@@ -207,6 +241,7 @@ export async function selectAutonomousCandidate({ fetchQueue, fetchState }) {
   // whose record passes static eligibility.
   const skipCounts = { legacyMissingCanonical: 0, unsupportedSource: 0, lifecycle: 0 };
   for (let i = 0; i < queue.length; i++) {
+    if (exclude && exclude.has(queue[i].story_id)) continue;
     const record = stories[queue[i].story_id];
     const result = evaluateStaticAutonomousEligibility(record);
     if (result.eligible) {
@@ -371,63 +406,97 @@ export async function main({
   replayCaptionCompletionImpl = replayCaptionCompletion,
   selectCandidateImpl = selectAutonomousCandidate,
 } = {}) {
-  const selection = await selectCandidateImpl({ fetchQueue, fetchState });
+  // 2026-09-14: at most TWO selection attempts per run, never more — the
+  // first is the normal, unqualified selection; the second (only reached
+  // in LIVE mode, only when the first selection was "approve-only" and its
+  // gate check failed) excludes that exact story_id and re-selects, so a
+  // single not-yet-passing pending record can never block recover-caption
+  // or fresh-generation work in the same run. This is NOT an open-ended
+  // retry loop: a second "approve-only" failure (a different, older-next
+  // pending record also failing) simply returns that result — there is no
+  // third attempt, and no mutation ever occurs from a gate-check failure
+  // itself, so this bound can never compound into more than one real
+  // mutating action per run regardless of how many pending records exist.
+  let excludeStoryIds;
+  let firstPendingResult = null;
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    const selection = await selectCandidateImpl({ fetchQueue, fetchState, excludeStoryIds });
 
-  if (!selection.mode) {
-    console.log(
-      `No statically-eligible autonomous candidate found. Inspected ${selection.inspectedCount} of ${selection.queueLength} queue records; skipped — legacy/missing canonical: ${selection.skipCounts.legacyMissingCanonical}, unsupported source: ${selection.skipCounts.unsupportedSource}, lifecycle: ${selection.skipCounts.lifecycle}.`
-    );
-    return { ok: true, selected: null, inspectedCount: selection.inspectedCount, queueLength: selection.queueLength, skipCounts: selection.skipCounts };
+    if (!selection.mode) {
+      // The excluded record (if any) is still the most useful thing to
+      // report here — it was genuinely evaluated and left pending, not
+      // simply "not found." Only fall back to the generic empty-queue
+      // message when there truly was no first attempt to report.
+      if (firstPendingResult) return firstPendingResult;
+      console.log(
+        `No statically-eligible autonomous candidate found. Inspected ${selection.inspectedCount} of ${selection.queueLength} queue records; skipped — legacy/missing canonical: ${selection.skipCounts.legacyMissingCanonical}, unsupported source: ${selection.skipCounts.unsupportedSource}, lifecycle: ${selection.skipCounts.lifecycle}.`
+      );
+      return { ok: true, selected: null, inspectedCount: selection.inspectedCount, queueLength: selection.queueLength, skipCounts: selection.skipCounts };
+    }
+
+    const { mode, story_id: storyId, record, queuePosition, inspectedCount, skipCounts } = selection;
+
+    if (mode === "approve-only") {
+      console.log(`Selected story_id=${storyId} — oldest pending awaiting_approval record; will be evaluated against the CURRENT auto-approval gate now.`);
+    } else if (mode === "recover-caption") {
+      console.log(`Selected story_id=${storyId} — GitHub state alone looks like a stuck, durably-completed-but-unapplied caption; eligibility against the Durable Object will be confirmed before any replay is attempted.`);
+    } else {
+      console.log(`Selected story_id=${storyId} — queue position ${queuePosition} (${inspectedCount - 1} statically-ineligible record(s) skipped before it), the first statically-eligible candidate in existing FIFO order.`);
+    }
+
+    if (!live) {
+      console.log("=== DRY RUN — no artwork generation, no caption generation, no Durable Object read, no replay, no approval, no state mutation ===");
+      const wouldRequire =
+        mode === "approve-only"
+          ? "evaluation against the current auto-approval gate — approved only if every check currently passes"
+          : mode === "recover-caption"
+            ? "Durable Object eligibility verification, then (only if safely eligible) a caption-completion replay recovery — no regeneration — then full post-generation approval-gate evaluation"
+            : "artwork generation, caption generation, then full post-generation approval-gate evaluation";
+      const report = {
+        ok: true,
+        mode,
+        story_id: storyId,
+        destination: record.selection?.destination ?? null,
+        headline: record.source_story?.post_headline ?? null,
+        source_name: record.source_story?.source_name ?? null,
+        source_url: record.source_story?.source_url ?? null,
+        current_status: record.status,
+        selection_slot: record.selection?.slot_id ?? null,
+        teams: record.source_story?.teams ?? null,
+        players: record.source_story?.players ?? null,
+        queue_position: queuePosition,
+        inspected_count: inspectedCount,
+        skip_counts: skipCounts,
+        static_eligibility_passed: true,
+        would_require: wouldRequire,
+      };
+      console.log(JSON.stringify(report, null, 2));
+      return { ok: true, selected: { story_id: storyId, record }, dryRun: report };
+    }
+
+    if (mode === "approve-only") {
+      const result = await tryAutoApprove(storyId, record, { decideApprovalImpl, waitForApprovalCommitImpl, fetchState });
+      if (result.autoApproved || !result.ok || attempt === 2) return result;
+      firstPendingResult = result;
+      console.log(`story_id=${storyId} remains pending after re-evaluation — trying once more, excluding it, so it cannot block recover-caption or fresh-generation work this run.`);
+      excludeStoryIds = [storyId];
+      continue;
+    }
+
+    if (mode === "recover-caption") {
+      return tryRecoverCaption(storyId, record, { getCaptionClaimStatusImpl, replayCaptionCompletionImpl, waitForDurableCommitImpl, decideApprovalImpl, waitForApprovalCommitImpl, fetchState });
+    }
+
+    return runGeneratePipeline(storyId, record, { runPreparationImpl, waitForDurableCommitImpl, decideApprovalImpl, waitForApprovalCommitImpl, fetchState });
   }
+}
 
-  const { mode, story_id: storyId, record, queuePosition, inspectedCount, skipCounts } = selection;
-
-  if (mode === "approve-only") {
-    console.log(`Selected story_id=${storyId} — already awaiting_approval and fully gate-eligible; no artwork/caption generation needed.`);
-  } else if (mode === "recover-caption") {
-    console.log(`Selected story_id=${storyId} — GitHub state alone looks like a stuck, durably-completed-but-unapplied caption; eligibility against the Durable Object will be confirmed before any replay is attempted.`);
-  } else {
-    console.log(`Selected story_id=${storyId} — queue position ${queuePosition} (${inspectedCount - 1} statically-ineligible record(s) skipped before it), the first statically-eligible candidate in existing FIFO order.`);
-  }
-
-  if (!live) {
-    console.log("=== DRY RUN — no artwork generation, no caption generation, no Durable Object read, no replay, no approval, no state mutation ===");
-    const wouldRequire =
-      mode === "approve-only"
-        ? "approval only — artwork and caption already exist and already pass every gate"
-        : mode === "recover-caption"
-          ? "Durable Object eligibility verification, then (only if safely eligible) a caption-completion replay recovery — no regeneration — then full post-generation approval-gate evaluation"
-          : "artwork generation, caption generation, then full post-generation approval-gate evaluation";
-    const report = {
-      ok: true,
-      mode,
-      story_id: storyId,
-      destination: record.selection?.destination ?? null,
-      headline: record.source_story?.post_headline ?? null,
-      source_name: record.source_story?.source_name ?? null,
-      source_url: record.source_story?.source_url ?? null,
-      current_status: record.status,
-      selection_slot: record.selection?.slot_id ?? null,
-      teams: record.source_story?.teams ?? null,
-      players: record.source_story?.players ?? null,
-      queue_position: queuePosition,
-      inspected_count: inspectedCount,
-      skip_counts: skipCounts,
-      static_eligibility_passed: true,
-      would_require: wouldRequire,
-    };
-    console.log(JSON.stringify(report, null, 2));
-    return { ok: true, selected: { story_id: storyId, record }, dryRun: report };
-  }
-
-  if (mode === "approve-only") {
-    return tryAutoApprove(storyId, record, { decideApprovalImpl, waitForApprovalCommitImpl, fetchState });
-  }
-
-  if (mode === "recover-caption") {
-    return tryRecoverCaption(storyId, record, { getCaptionClaimStatusImpl, replayCaptionCompletionImpl, waitForDurableCommitImpl, decideApprovalImpl, waitForApprovalCommitImpl, fetchState });
-  }
-
+/**
+ * The "generate" mode's full live-mode body — extracted from main() only so
+ * the bounded selection-retry loop above stays readable; behavior is
+ * unchanged from before this extraction.
+ */
+async function runGeneratePipeline(storyId, record, { runPreparationImpl, waitForDurableCommitImpl, decideApprovalImpl, waitForApprovalCommitImpl, fetchState }) {
   console.log(`=== LIVE — running the existing artwork+caption generation pipeline for story_id=${storyId} ===`);
   const prepResult = await runPreparationImpl({ storyId });
   console.log(`process-one.js exited with code ${prepResult.exitCode}.`);

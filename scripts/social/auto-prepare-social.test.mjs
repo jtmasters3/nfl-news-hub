@@ -341,7 +341,7 @@ test("24. dry run reports mode='approve-only' and requires no generation when an
     live: false,
   });
   assert.equal(result.dryRun.mode, "approve-only");
-  assert.match(result.dryRun.would_require, /approval only/);
+  assert.match(result.dryRun.would_require, /current auto-approval gate/);
 });
 
 // ---------------------------------------------------------------------------
@@ -1069,6 +1069,135 @@ test("73. this script still never acquires a posting claim, never persists publi
   const src = await readFile(new URL("./auto-prepare-social.js", import.meta.url), "utf-8");
   const codeOnly = src.replace(/\/\/.*$/gm, "").replace(/\/\*[\s\S]*?\*\//g, "");
   assert.ok(!/claimPosting|publish-buffer-feed|publish-buffer-story|executeBufferFeedPublish|publishViaWorker/.test(codeOnly));
+});
+
+// ---------------------------------------------------------------------------
+// 2026-09-14 — re-evaluating a previously gate-failed pending record
+// ---------------------------------------------------------------------------
+// A live run proved a real content-fidelity parser bug could strand a
+// fully-prepared, otherwise-correct record at awaiting_approval forever,
+// because selection used to permanently filter out any record that failed
+// evaluateAutoApprovalGate() at selection time. Fixed by no longer
+// pre-filtering by gate outcome (the oldest pending record is ALWAYS the
+// approve-only candidate, gate-evaluated fresh every run) plus a bounded,
+// single fallthrough so one still-failing record can never block newer
+// recover-caption/generate work. No durable "gate version" field was
+// added — gate evaluation is pure and free, so re-checking it every run
+// costs nothing and automatically benefits from any later code fix.
+
+function ineligibleAwaitingRecord(overrides = {}) {
+  return awaitingApprovalRecord({
+    story_id: "stale1",
+    caption: { status: "ready", text: "Fabricated Player Name is out this week.\n\nSource: ESPN" },
+    ...overrides,
+  });
+}
+
+test("74. a pending record that CURRENTLY fails the gate is still selected as the approve-only candidate (no more pre-filtering by gate outcome)", async () => {
+  const result = await selectAutonomousCandidate({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { stale1: ineligibleAwaitingRecord() } }),
+  });
+  assert.equal(result.mode, "approve-only");
+  assert.equal(result.story_id, "stale1");
+});
+
+test("75. a pending record whose gate NOW passes (e.g. after a parser fix is deployed) is approved automatically on the very next run — no special re-check machinery needed, gate evaluation is simply fresh every time", async () => {
+  let decideCalled = false;
+  const result = await main({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { ready1: awaitingApprovalRecord({ story_id: "ready1" }) } }),
+    live: true,
+    decideApprovalImpl: async () => { decideCalled = true; return { result: "approved" }; },
+  });
+  assert.equal(decideCalled, true);
+  assert.equal(result.autoApproved, true);
+});
+
+test("76. a pending record that STILL fails the gate (with no other candidate anywhere) is left pending after exactly two evaluation attempts — never approved, never mutated", async () => {
+  let decideCalled = false;
+  const result = await main({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { stale1: ineligibleAwaitingRecord() } }),
+    live: true,
+    decideApprovalImpl: async () => { decideCalled = true; return { result: "approved" }; },
+  });
+  assert.equal(decideCalled, false);
+  assert.equal(result.ok, true);
+  assert.equal(result.autoApproved, false);
+  assert.equal(result.selected.story_id, "stale1");
+});
+
+test("77. a permanently-failing oldest pending record NEVER blocks a newer, otherwise-ready recover-caption candidate in the same run", async () => {
+  let replayCalled = false;
+  const result = await main({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { stale1: ineligibleAwaitingRecord(), s1: stuckCaptionRecord() } }),
+    live: true,
+    getCaptionClaimStatusImpl: async () => ({ do_record: completedDoRecord() }),
+    replayCaptionCompletionImpl: async (storyId, claimId) => { replayCalled = true; return { replayed: true }; },
+    waitForDurableCommitImpl: async () => ({ committed: true, record: recoveredReadyRecord() }),
+    decideApprovalImpl: async () => ({ result: "approved" }),
+  });
+  assert.equal(replayCalled, true, "the second selection attempt must reach the recover-caption candidate");
+  assert.equal(result.autoApproved, true);
+});
+
+test("78. a permanently-failing oldest pending record NEVER blocks fresh queue generation in the same run", async () => {
+  let prepCalled = false;
+  const result = await main({
+    fetchQueue: async () => [queueEntry("s1")],
+    fetchState: async () => ({ stories: { stale1: ineligibleAwaitingRecord(), s1: validQueuedRecord() } }),
+    live: true,
+    runPreparationImpl: async () => { prepCalled = true; return { exitCode: 1 }; },
+  });
+  assert.equal(prepCalled, true, "the second selection attempt must reach fresh generation");
+});
+
+test("79. the bound is exactly TWO selection attempts, never three — a second failing candidate is never excluded and retried a third time", async () => {
+  let selectCallCount = 0;
+  const realSelect = selectAutonomousCandidate;
+  const result = await main({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { a: ineligibleAwaitingRecord({ story_id: "a", selection: { destination: "feed", selected_at: "2026-01-01T00:00:00Z" } }), b: ineligibleAwaitingRecord({ story_id: "b", selection: { destination: "feed", selected_at: "2026-01-02T00:00:00Z" } }) } }),
+    live: true,
+    selectCandidateImpl: async (args) => { selectCallCount++; return realSelect(args); },
+  });
+  assert.equal(selectCallCount, 2);
+  assert.equal(result.selected.story_id, "b", "attempt 1 selects the oldest ('a'), fails, and excludes it; attempt 2 selects the next-oldest ('b') and stops there — never a third attempt");
+});
+
+test("80. a failed approve-only re-evaluation never regenerates artwork, never regenerates caption, never creates a new caption claim, and never calls the approval endpoint for the failing record", async () => {
+  let prepCalled = false, statusCalled = false, replayCalled = false, decideCalled = false;
+  await main({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { stale1: ineligibleAwaitingRecord() } }),
+    live: true,
+    runPreparationImpl: async () => { prepCalled = true; return { exitCode: 0 }; },
+    getCaptionClaimStatusImpl: async () => { statusCalled = true; return { do_record: null }; },
+    replayCaptionCompletionImpl: async () => { replayCalled = true; return { replayed: false }; },
+    decideApprovalImpl: async () => { decideCalled = true; return { result: "approved" }; },
+  });
+  assert.equal(prepCalled, false);
+  assert.equal(statusCalled, false);
+  assert.equal(replayCalled, false);
+  assert.equal(decideCalled, false);
+});
+
+test("81. an actual approval-commit-confirmation FAILURE (not just an ineligible gate) still stops the run immediately, never falling through to a second candidate — a real error must never be masked as 'try someone else'", async () => {
+  let selectCallCount = 0;
+  const realSelect = selectAutonomousCandidate;
+  const result = await main({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { ready1: awaitingApprovalRecord({ story_id: "ready1" }) } }),
+    live: true,
+    selectCandidateImpl: async (args) => { selectCallCount++; return realSelect(args); },
+    decideApprovalImpl: async () => ({ result: "pending" }),
+    waitForApprovalCommitImpl: async () => ({ committed: false, status: "timeout" }),
+  });
+  assert.equal(result.ok, false);
+  assert.equal(result.step, "approval_commit_confirmation");
+  assert.equal(selectCallCount, 1, "a genuine failure must never trigger a second selection attempt");
 });
 
 // ---------------------------------------------------------------------------
