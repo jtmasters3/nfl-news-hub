@@ -190,23 +190,26 @@ test("22. a null/undefined record is rejected without throwing", () => {
 // autonomously generated and posted on 2026-09-14 as if it were current).
 // ---------------------------------------------------------------------------
 
-test("23. isSelectionExpired: exactly at window_end + grace is expired (Feed, 2h grace)", () => {
+test("23. isSelectionExpired: exactly at window_end + grace is expired (Feed, 20min grace)", () => {
   const windowEnd = "2026-09-10T16:00:00.000Z"; // the real record's own window_end
-  const expiryMs = Date.parse(windowEnd) + 2 * 60 * 60 * 1000;
+  const expiryMs = Date.parse(windowEnd) + 20 * 60 * 1000;
   assert.equal(isSelectionExpired({ destination: "feed", window_end: windowEnd }, expiryMs), true);
 });
 
 test("24. isSelectionExpired: one millisecond before window_end + grace is NOT yet expired (Feed)", () => {
   const windowEnd = "2026-09-10T16:00:00.000Z";
-  const expiryMs = Date.parse(windowEnd) + 2 * 60 * 60 * 1000;
+  const expiryMs = Date.parse(windowEnd) + 20 * 60 * 1000;
   assert.equal(isSelectionExpired({ destination: "feed", window_end: windowEnd }, expiryMs - 1), false);
 });
 
-test("25. isSelectionExpired: a Story selection uses a 1h grace, not Feed's 2h", () => {
+test("25. isSelectionExpired: Feed and Story both use the SAME 20-minute grace (2026-09-14 tightening — no longer a longer Feed grace)", () => {
   const windowEnd = "2026-09-10T16:00:00.000Z";
-  const oneHourLater = Date.parse(windowEnd) + 60 * 60 * 1000;
-  assert.equal(isSelectionExpired({ destination: "story", window_end: windowEnd }, oneHourLater), true);
-  assert.equal(isSelectionExpired({ destination: "feed", window_end: windowEnd }, oneHourLater), false, "the same elapsed time must NOT expire a Feed selection, which gets the longer 2h grace");
+  const nineteenMinLater = Date.parse(windowEnd) + 19 * 60 * 1000;
+  const twentyOneMinLater = Date.parse(windowEnd) + 21 * 60 * 1000;
+  assert.equal(isSelectionExpired({ destination: "story", window_end: windowEnd }, nineteenMinLater), false);
+  assert.equal(isSelectionExpired({ destination: "feed", window_end: windowEnd }, nineteenMinLater), false);
+  assert.equal(isSelectionExpired({ destination: "story", window_end: windowEnd }, twentyOneMinLater), true);
+  assert.equal(isSelectionExpired({ destination: "feed", window_end: windowEnd }, twentyOneMinLater), true);
 });
 
 test("26. isSelectionExpired: no selection at all is never 'expired' — this predicate only applies once a selection exists", () => {
@@ -229,13 +232,76 @@ test("28. THE EXACT PRODUCTION RECORD — a record shaped exactly like story_id 
   assert.ok(result.issues.includes("selection_window_expired"), JSON.stringify(result.issues));
 });
 
-test("29. a FRESH selection (well within its own slot + one grace period) remains fully eligible — this fix must never block legitimate, timely autonomous processing", () => {
+test("29. a FRESH selection (well within its own slot + the 20-minute grace) remains fully eligible — this fix must never block legitimate, timely autonomous processing", () => {
+  const record = validQueuedRecord({
+    selection: { destination: "feed", slot_id: "feed:2026-09-14T16:00:00-04:00", selected_at: "2026-09-14T16:00:05.000Z", window_start: "2026-09-14T14:00:00.000Z", window_end: "2026-09-14T16:00:00.000Z" },
+  });
+  const fiveMinutesLaterMs = Date.parse("2026-09-14T16:05:00.000Z"); // a single normal 10-minute cron tick, well inside the grace
+  const result = evaluateStaticAutonomousEligibility(record, fiveMinutesLaterMs);
+  assert.equal(result.eligible, true, JSON.stringify(result.issues));
+});
+
+// ---------------------------------------------------------------------------
+// 2026-09-14 tightening — exact user-specified boundary cases (20-minute
+// grace, matching a real 16:00 ET Feed slot and hourly Story slot).
+// ---------------------------------------------------------------------------
+
+test("30. 16:19 (Feed): a 16:00 Feed slot selection is STILL VALID 19 minutes after window_end", () => {
   const record = validQueuedRecord({
     selection: { destination: "feed", slot_id: "feed:2026-09-14T16:00:00-04:00", selected_at: "2026-09-14T20:00:05.000Z", window_start: "2026-09-14T18:00:00.000Z", window_end: "2026-09-14T20:00:00.000Z" },
   });
-  const twentyFiveMinutesLaterMs = Date.parse("2026-09-14T20:25:00.000Z"); // matches the real ~25 minute claim-to-post pipeline duration
-  const result = evaluateStaticAutonomousEligibility(record, twentyFiveMinutesLaterMs);
+  const at1619Ms = Date.parse("2026-09-14T20:19:00.000Z"); // 16:19 ET = 20:19 UTC
+  const result = evaluateStaticAutonomousEligibility(record, at1619Ms);
   assert.equal(result.eligible, true, JSON.stringify(result.issues));
+});
+
+test("31. 16:21 (Feed): the SAME 16:00 Feed slot selection is EXPIRED 21 minutes after window_end", () => {
+  const record = validQueuedRecord({
+    selection: { destination: "feed", slot_id: "feed:2026-09-14T16:00:00-04:00", selected_at: "2026-09-14T20:00:05.000Z", window_start: "2026-09-14T18:00:00.000Z", window_end: "2026-09-14T20:00:00.000Z" },
+  });
+  const at1621Ms = Date.parse("2026-09-14T20:21:00.000Z"); // 16:21 ET = 20:21 UTC
+  const result = evaluateStaticAutonomousEligibility(record, at1621Ms);
+  assert.equal(result.eligible, false);
+  assert.ok(result.issues.includes("selection_window_expired"), JSON.stringify(result.issues));
+});
+
+test("32. Story +19 min: a Story slot selection is STILL VALID 19 minutes after window_end", () => {
+  const record = validQueuedRecord({
+    selection: { destination: "story", slot_id: "story:2026-09-14T16:00:00-04:00", selected_at: "2026-09-14T20:00:05.000Z", window_start: "2026-09-14T19:00:00.000Z", window_end: "2026-09-14T20:00:00.000Z" },
+  });
+  const plus19Ms = Date.parse("2026-09-14T20:19:00.000Z");
+  const result = evaluateStaticAutonomousEligibility(record, plus19Ms);
+  assert.equal(result.eligible, true, JSON.stringify(result.issues));
+});
+
+test("33. Story +21 min: the SAME Story slot selection is EXPIRED 21 minutes after window_end", () => {
+  const record = validQueuedRecord({
+    selection: { destination: "story", slot_id: "story:2026-09-14T16:00:00-04:00", selected_at: "2026-09-14T20:00:05.000Z", window_start: "2026-09-14T19:00:00.000Z", window_end: "2026-09-14T20:00:00.000Z" },
+  });
+  const plus21Ms = Date.parse("2026-09-14T20:21:00.000Z");
+  const result = evaluateStaticAutonomousEligibility(record, plus21Ms);
+  assert.equal(result.eligible, false);
+  assert.ok(result.issues.includes("selection_window_expired"), JSON.stringify(result.issues));
+});
+
+test("34. an expired record at 'queued' fails closed via this pre-generation filter regardless of every other field being otherwise perfect", () => {
+  const record = validQueuedRecord({
+    status: "queued",
+    selection: { destination: "feed", slot_id: "feed:2026-09-14T16:00:00-04:00", window_end: "2026-09-14T16:00:00.000Z" },
+  });
+  const wayLaterMs = Date.parse("2026-09-14T16:00:00.000Z") + 21 * 60 * 1000;
+  assert.equal(evaluateStaticAutonomousEligibility(record, wayLaterMs).eligible, false);
+});
+
+test("35. an expired record at 'awaiting_approval' (approve-only mode's own candidate pool) ALSO fails closed via this same filter", () => {
+  const record = validQueuedRecord({
+    status: "awaiting_approval",
+    selection: { destination: "feed", slot_id: "feed:2026-09-14T16:00:00-04:00", window_end: "2026-09-14T16:00:00.000Z" },
+  });
+  const wayLaterMs = Date.parse("2026-09-14T16:00:00.000Z") + 21 * 60 * 1000;
+  const result = evaluateStaticAutonomousEligibility(record, wayLaterMs);
+  assert.equal(result.eligible, false);
+  assert.ok(result.issues.includes("selection_window_expired"), JSON.stringify(result.issues));
 });
 
 // ---------------------------------------------------------------------------

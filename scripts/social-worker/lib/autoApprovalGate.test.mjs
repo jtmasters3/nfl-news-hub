@@ -271,12 +271,12 @@ test("31. a record whose selection window expired days ago is rejected with sele
   assert.ok(result.issues.includes("selection_window_expired"), JSON.stringify(result.issues));
 });
 
-test("32. a fresh, timely selection (well within its own slot + grace) is NOT rejected for staleness — this fix never blocks legitimate same-cycle approval", () => {
+test("32. a fresh, timely selection (well within its own slot + the 20-minute grace) is NOT rejected for staleness — this fix never blocks legitimate same-cycle approval", () => {
   const record = baseFeedRecord({
     selection: { destination: "feed", slot_id: "feed:2026-09-14T16:00:00-04:00", selected_at: "2026-09-14T20:00:05.000Z", window_start: "2026-09-14T18:00:00.000Z", window_end: "2026-09-14T20:00:00.000Z" },
   });
-  const twentyFiveMinutesLaterMs = Date.parse("2026-09-14T20:25:00.000Z");
-  const result = evaluateAutoApprovalGate(record, twentyFiveMinutesLaterMs);
+  const fiveMinutesLaterMs = Date.parse("2026-09-14T20:05:00.000Z");
+  const result = evaluateAutoApprovalGate(record, fiveMinutesLaterMs);
   assert.equal(result.eligible, true, JSON.stringify(result.issues));
 });
 
@@ -290,7 +290,69 @@ test("33. this staleness check also catches a Story selection reached via a reco
   assert.ok(result.issues.includes("selection_window_expired"), JSON.stringify(result.issues));
 });
 
-test("34. a record with no story_id is rejected", () => {
+// ---------------------------------------------------------------------------
+// 2026-09-14 tightening — exact 20-minute boundary, and explicit proof that
+// EVERY entry path (recovery included) fails closed once expired, since
+// this gate is the universal last check before approval for all four modes.
+// ---------------------------------------------------------------------------
+
+test("34. 16:19 (Feed): still eligible to approve 19 minutes after window_end", () => {
+  const record = baseFeedRecord({
+    selection: { destination: "feed", slot_id: "feed:2026-09-14T16:00:00-04:00", window_start: "2026-09-14T18:00:00.000Z", window_end: "2026-09-14T20:00:00.000Z" },
+  });
+  const result = evaluateAutoApprovalGate(record, Date.parse("2026-09-14T20:19:00.000Z"));
+  assert.equal(result.eligible, true, JSON.stringify(result.issues));
+});
+
+test("35. 16:21 (Feed): rejected 21 minutes after window_end", () => {
+  const record = baseFeedRecord({
+    selection: { destination: "feed", slot_id: "feed:2026-09-14T16:00:00-04:00", window_start: "2026-09-14T18:00:00.000Z", window_end: "2026-09-14T20:00:00.000Z" },
+  });
+  const result = evaluateAutoApprovalGate(record, Date.parse("2026-09-14T20:21:00.000Z"));
+  assert.equal(result.eligible, false);
+  assert.ok(result.issues.includes("selection_window_expired"), JSON.stringify(result.issues));
+});
+
+test("36. Story +19 min: still eligible to approve", () => {
+  const record = baseStoryRecord({
+    selection: { destination: "story", slot_id: "story:2026-09-14T16:00:00-04:00", window_start: "2026-09-14T19:00:00.000Z", window_end: "2026-09-14T20:00:00.000Z" },
+  });
+  const result = evaluateAutoApprovalGate(record, Date.parse("2026-09-14T20:19:00.000Z"));
+  assert.equal(result.eligible, true, JSON.stringify(result.issues));
+});
+
+test("37. Story +21 min: rejected", () => {
+  const record = baseStoryRecord({
+    selection: { destination: "story", slot_id: "story:2026-09-14T16:00:00-04:00", window_start: "2026-09-14T19:00:00.000Z", window_end: "2026-09-14T20:00:00.000Z" },
+  });
+  const result = evaluateAutoApprovalGate(record, Date.parse("2026-09-14T20:21:00.000Z"));
+  assert.equal(result.eligible, false);
+  assert.ok(result.issues.includes("selection_window_expired"), JSON.stringify(result.issues));
+});
+
+test("38. an expired record recovered via the recover-artwork/recover-caption replay path (readiness otherwise perfect, reaching this gate exactly as tryRecoverArtwork/tryRecoverCaption would hand it off) still fails closed here — the final gate catches what the recovery eligibility checks never look at", () => {
+  const record = baseFeedRecord({
+    selection: { destination: "feed", slot_id: "feed:2026-09-10T12:00:00-04:00", window_start: "2026-09-10T14:00:00.000Z", window_end: "2026-09-10T16:00:00.000Z" },
+  });
+  const fourDaysLaterMs = Date.parse("2026-09-14T19:57:41.042Z");
+  const result = evaluateAutoApprovalGate(record, fourDaysLaterMs);
+  assert.equal(result.eligible, false);
+  assert.ok(result.issues.includes("selection_window_expired"), JSON.stringify(result.issues));
+});
+
+test("39. an expired record shaped exactly like the approve-only path's candidate (status already awaiting_approval, approval still pending) still fails closed here", () => {
+  const record = baseFeedRecord({
+    status: "awaiting_approval",
+    approval: { status: "pending" },
+    selection: { destination: "feed", slot_id: "feed:2026-09-14T16:00:00-04:00", window_end: "2026-09-14T16:00:00.000Z" },
+  });
+  const wayLaterMs = Date.parse("2026-09-14T16:00:00.000Z") + 21 * 60 * 1000;
+  const result = evaluateAutoApprovalGate(record, wayLaterMs);
+  assert.equal(result.eligible, false);
+  assert.ok(result.issues.includes("selection_window_expired"), JSON.stringify(result.issues));
+});
+
+test("40. a record with no story_id is rejected", () => {
   const result = evaluateAutoApprovalGate(baseFeedRecord({ story_id: "" }));
   assert.equal(result.eligible, false);
   assert.deepEqual(result.issues, ["invalid_record"]);

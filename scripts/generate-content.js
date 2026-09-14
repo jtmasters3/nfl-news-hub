@@ -199,8 +199,20 @@ function applyVisualMedia(story) {
   const isPerson = visual_subject_type === "player" || visual_subject_type === "coach" || visual_subject_type === "executive";
   const current_team = isPerson ? detectCurrentTeam(story) : null;
 
+  // 2026-09-14 person-specificity tightening (see imageMatch.js's own
+  // header): the headline's own named people, extracted from the ORIGINAL
+  // mixed-case headline (never social.post_headline, which is uppercased
+  // for the graphic and would make every word look "capitalized" to the
+  // same extractor) via the SAME proven name-extraction function
+  // visualSubject.js already trusts for its own headline-fallback subject
+  // detection — not a new heuristic. May contain more than one name (e.g.
+  // "Emmanuel Acho comments spark NFL investigation of Dom DiSandro" ->
+  // both "Emmanuel Acho" and "Dom DiSandro"), unlike visual_subject, which
+  // is only ever a single value.
+  const headline_named_people = extractLikelyPlayerNames(story.headline);
+
   const { image_candidates, primary_image_url, primary_image_source, primary_image_credit, primary_image_alt } =
-    selectStoryImages({ sources: story.sources, visual_subject, visual_subject_type, current_team });
+    selectStoryImages({ sources: story.sources, visual_subject, visual_subject_type, current_team, headline_named_people });
 
   story.visual_subject = visual_subject;
   story.visual_subject_type = visual_subject_type;

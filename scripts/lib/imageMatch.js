@@ -107,20 +107,57 @@ export function scoreImageCandidate(source, matchTarget) {
   return { score, hasDirectEvidence };
 }
 
+// ==========================================================================
+// 2026-09-14 tightening — named-person image relevance must be person-
+// specific
+// ==========================================================================
+// The direct-evidence rule above (does the image's OWN metadata corroborate
+// SOME target) is necessary but not sufficient for a headline centered on
+// one or more named people: it would still accept a photo whose only
+// direct evidence is a matching TEAM name, which proves the photo is from
+// the right team's coverage, never that it depicts the specific named
+// person the headline is actually about. "EMMANUEL ACHO COMMENTS SPARK NFL
+// INVESTIGATION OF DOM DISANDRO" has no team at all as its subject — a
+// generic "Philadelphia Eagles v New England Patriots" photo must fail
+// regardless of any team-fallback logic.
+//
+// headline_named_people (see generate-content.js's applyVisualMedia) is
+// the FULL list of named people extractLikelyPlayerNames() finds in the
+// ORIGINAL mixed-case headline — deliberately not limited to the single
+// visual_subject value, since a headline can genuinely name more than one
+// person (Acho AND DiSandro) and evidence for EITHER is sufficient. When
+// this list is non-empty, selectStoryImages() below scores every source
+// against EVERY named person (never just visual_subject) and accepts a
+// candidate only if it has direct evidence for AT LEAST ONE of them —
+// the current_team fallback is skipped entirely in this branch, since a
+// team match is explicitly not sufficient evidence for a person-centric
+// headline. When the list is empty (team/event-centered headlines, or a
+// headline whose person the extractor couldn't isolate), behavior is
+// completely unchanged from the prior 2026-09-14 fix: score against
+// visual_subject, falling back to current_team.
+//
+// Still no face recognition, no invented image identity, no web scraping,
+// no paid API — this only ever changes which of the ALREADY-FETCHED
+// source photos' own textual metadata is checked against, using the same
+// substring/word matching scoreImageCandidate already does.
+
 /**
  * Builds the ranked image_candidates list and picks primary_image_* for a
- * story. Tries to match the visual subject first; if nothing clears the
- * confidence bar and the subject is a person, falls back to matching the
- * current team (a relevant team photo beats an unrelated/no image). Never
- * picks a rejected candidate (logo/reporter headshot/etc) even as a
- * fallback — those score -100 and are filtered out entirely.
+ * story. For a person-centric headline (headline_named_people non-empty),
+ * requires direct evidence tying the image to at least one of those named
+ * people specifically — never a generic team/event match. Otherwise, tries
+ * to match the visual subject first; if nothing clears the confidence bar
+ * and the subject is a person, falls back to matching the current team (a
+ * relevant team photo beats an unrelated/no image). Never picks a rejected
+ * candidate (logo/reporter headshot/etc) even as a fallback — those score
+ * -100 and are filtered out entirely.
  *
- * @param {{sources: object[], visual_subject: string|null, visual_subject_type: string|null, current_team: string|null}} story
+ * @param {{sources: object[], visual_subject: string|null, visual_subject_type: string|null, current_team: string|null, headline_named_people?: string[]}} story
  */
-export function selectStoryImages({ sources, visual_subject, visual_subject_type, current_team }) {
+export function selectStoryImages({ sources, visual_subject, visual_subject_type, current_team, headline_named_people = [] }) {
   const isPerson = visual_subject_type === "player" || visual_subject_type === "coach" || visual_subject_type === "executive";
 
-  function scoreAll(target) {
+  function scoreAgainst(target) {
     return sources
       .map((s) => ({ source: s, result: scoreImageCandidate(s, target) }))
       .filter((c) => c.result !== null && c.result.score > -100);
@@ -133,15 +170,41 @@ export function selectStoryImages({ sources, visual_subject, visual_subject_type
     return c.result.score >= MIN_ACCEPT_SCORE && c.result.hasDirectEvidence;
   }
 
-  let scored = visual_subject ? scoreAll(visual_subject) : scoreAll(null);
-  let usedTarget = visual_subject;
-  const anyConfidentMatch = scored.some(isAccepted);
+  // The same source photo can be scored multiple times (once per named
+  // person) when a headline names more than one — keep only each source's
+  // single best-scoring result so the ranked candidates list never lists
+  // the same photo twice.
+  function bestPerSource(entries) {
+    const bestByUrl = new Map();
+    for (const c of entries) {
+      const key = c.source.image_url;
+      const existing = bestByUrl.get(key);
+      if (!existing || c.result.score > existing.result.score) bestByUrl.set(key, c);
+    }
+    return [...bestByUrl.values()];
+  }
 
-  if (!anyConfidentMatch && isPerson && current_team) {
-    const teamScored = scoreAll(current_team);
-    if (teamScored.some(isAccepted)) {
-      scored = teamScored;
-      usedTarget = current_team;
+  let scored;
+  let usedTarget;
+
+  if (headline_named_people.length > 0) {
+    const allPersonScored = headline_named_people.flatMap((person) => scoreAgainst(person).map((c) => ({ ...c, person })));
+    scored = bestPerSource(allPersonScored);
+    const topAccepted = scored.filter(isAccepted).sort((a, b) => b.result.score - a.result.score)[0];
+    // Purely for the returned candidates' `subject` label — never affects
+    // acceptance, which is already fully decided above.
+    usedTarget = topAccepted?.person ?? visual_subject ?? headline_named_people[0];
+  } else {
+    scored = visual_subject ? scoreAgainst(visual_subject) : scoreAgainst(null);
+    usedTarget = visual_subject;
+    const anyConfidentMatch = scored.some(isAccepted);
+
+    if (!anyConfidentMatch && isPerson && current_team) {
+      const teamScored = scoreAgainst(current_team);
+      if (teamScored.some(isAccepted)) {
+        scored = teamScored;
+        usedTarget = current_team;
+      }
     }
   }
 

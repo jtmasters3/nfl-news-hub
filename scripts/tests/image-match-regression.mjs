@@ -158,6 +158,104 @@ test("16. og:image status alone is never sufficient — this is the single image
 });
 
 // ---------------------------------------------------------------------------
+// 2026-09-14 tightening — named-person image relevance must be
+// person-specific, not satisfiable by a generic team/event match.
+// ---------------------------------------------------------------------------
+
+test("17. named-person headline + team-only image => REJECT — a photo whose only evidence ties it to a team, never to either named person, must not become primary_image_url", () => {
+  const sources = [
+    source({
+      headline: "Report: Emmanuel Acho comments spark NFL investigation of Dom DiSandro",
+      image_url: "https://nbcsports.example/2291720662.jpg",
+      image_alt: "Philadelphia Eagles v New England Patriots",
+    }),
+  ];
+  const result = selectStoryImages({
+    sources,
+    visual_subject: "Emmanuel Acho",
+    visual_subject_type: "player",
+    current_team: "Philadelphia Eagles", // even if a current_team WERE detected, it must not rescue this
+    headline_named_people: ["Emmanuel Acho", "Dom DiSandro"],
+  });
+  assert.equal(result.primary_image_url, null);
+});
+
+test("18. named-person headline + exact person in alt => ACCEPT", () => {
+  const sources = [
+    source({
+      headline: "Report: Emmanuel Acho comments spark NFL investigation of Dom DiSandro",
+      image_url: "https://nbcsports.example/acho.jpg",
+      image_alt: "Emmanuel Acho speaking on set",
+    }),
+  ];
+  const result = selectStoryImages({
+    sources,
+    visual_subject: "Emmanuel Acho",
+    visual_subject_type: "player",
+    current_team: null,
+    headline_named_people: ["Emmanuel Acho", "Dom DiSandro"],
+  });
+  assert.equal(result.primary_image_url, sources[0].image_url);
+});
+
+test("19. two named people + EITHER ONE directly evidenced => ACCEPT — evidence for the SECOND person (never captured as visual_subject at all) is sufficient on its own", () => {
+  const sources = [
+    source({
+      headline: "Report: Emmanuel Acho comments spark NFL investigation of Dom DiSandro",
+      image_url: "https://nbcsports.example/disandro.jpg",
+      image_alt: "Dom DiSandro, the NFL's head of security operations",
+    }),
+  ];
+  const result = selectStoryImages({
+    sources,
+    visual_subject: "Emmanuel Acho", // visual_subject only ever captures ONE name — DiSandro is not it
+    visual_subject_type: "player",
+    current_team: null,
+    headline_named_people: ["Emmanuel Acho", "Dom DiSandro"],
+  });
+  assert.equal(result.primary_image_url, sources[0].image_url, "evidence for Dom DiSandro alone must be sufficient even though he was never the resolved visual_subject");
+});
+
+test("20. generic team headline (no named people at all) + matching team image => STILL ACCEPTABLE — retains the existing team/event logic, unaffected by this tightening", () => {
+  const sources = [source({ headline: "Eagles sign veteran depth at cornerback", image_alt: "Philadelphia Eagles helmet on the sideline" })];
+  const result = selectStoryImages({
+    sources,
+    visual_subject: "Philadelphia Eagles",
+    visual_subject_type: "team",
+    current_team: null,
+    headline_named_people: [], // no named people extracted — a genuine team/event story
+  });
+  assert.equal(result.primary_image_url, sources[0].image_url);
+});
+
+test("21. no direct evidence for any named person => fail closed / needs_media (primary_image_url null)", () => {
+  const sources = [
+    source({ headline: "Report: Emmanuel Acho comments spark NFL investigation of Dom DiSandro", image_url: "https://a.test/unrelated1.jpg", image_alt: "generic press conference photo" }),
+    source({ headline: "Report: Emmanuel Acho comments spark NFL investigation of Dom DiSandro", image_url: "https://b.test/unrelated2.jpg", image_alt: null, image_caption: null, image_credit: null }),
+  ];
+  const result = selectStoryImages({
+    sources,
+    visual_subject: "Emmanuel Acho",
+    visual_subject_type: "player",
+    current_team: null,
+    headline_named_people: ["Emmanuel Acho", "Dom DiSandro"],
+  });
+  assert.equal(result.primary_image_url, null);
+});
+
+test("22. the same photo is never listed twice in image_candidates when it is scored against multiple named people", () => {
+  const sources = [source({ headline: "Emmanuel Acho and Dom DiSandro", image_alt: "Emmanuel Acho and Dom DiSandro together at NFL Honors" })];
+  const result = selectStoryImages({
+    sources,
+    visual_subject: "Emmanuel Acho",
+    visual_subject_type: "player",
+    current_team: null,
+    headline_named_people: ["Emmanuel Acho", "Dom DiSandro"],
+  });
+  assert.equal(result.image_candidates.length, 1);
+});
+
+// ---------------------------------------------------------------------------
 let failures = 0;
 for (const c of cases) {
   try {

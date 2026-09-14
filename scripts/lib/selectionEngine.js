@@ -148,19 +148,33 @@ export const STORY_SLOT_TIMES = Object.freeze(["09:00", "10:00", "11:00", "12:00
 // import between them (autoApprovalGate.js already re-exports building
 // blocks staticAutonomousEligibility.js imports).
 //
-// A selection expires once `now` has passed the selected slot's own
-// window_end by more than one further slot interval of the same
-// destination (2h for Feed, 1h for Story — derived from FEED_SLOT_TIMES/
-// STORY_SLOT_TIMES above, not an arbitrary number). That gives a real
-// in-flight generation the entirety of its own slot plus one full
-// subsequent slot as operational slack (comfortably more than the ~25
-// minutes a normal run takes) before treating it as unrecoverably stale.
-// An expired record is never mutated or deleted — it simply stops being
-// autonomously actionable, exactly like every other eligibility exclusion
-// in this system, remaining fully available to a human/manual workflow.
+// 2026-09-14 tightening — a full extra slot interval (2h Feed / 1h Story)
+// was too loose for the intended editorial rule: it let a selection remain
+// autonomously actionable all the way through the NEXT Feed/Story
+// interval, which is itself indistinguishable from the backlog-catch-up
+// behavior this whole fix exists to forbid. The grace period exists ONLY
+// to cover the operational pipeline's own real timing, not to grant a
+// second full window of eligibility.
+//
+// The autonomous runner is cron-triggered roughly every 10 minutes (see
+// auto-prepare-social.js's own header), and a real end-to-end
+// claim->artwork->caption->approval->post run has been observed taking
+// ~25 minutes (story_id 33e7e68f-3076-423d-abb9-ce9844426ee1) — but that
+// run started well AFTER its own window_end, from cold, on a backlog item;
+// a run that starts promptly, at or shortly after window_end (the
+// intended, non-backlog case this grace period is actually for), needs
+// only enough slack for one more 10-minute cron tick plus normal
+// generation/approval/publishing time. 20 minutes was chosen as that
+// bound for BOTH destinations: two cron ticks of margin, deliberately far
+// short of the next slot's own window_end (2h Feed / 1h Story away) so a
+// missed slot can never silently ride into the next one's eligibility
+// window. An expired record is never mutated or deleted — it simply stops
+// being autonomously actionable (generated, recovered, approved, or
+// posted), exactly like every other eligibility exclusion in this system,
+// remaining fully available to a human/manual workflow.
 const SELECTION_EXPIRY_GRACE_MS = {
-  feed: 2 * 60 * 60 * 1000,
-  story: 1 * 60 * 60 * 1000,
+  feed: 20 * 60 * 1000,
+  story: 20 * 60 * 1000,
 };
 
 /**
