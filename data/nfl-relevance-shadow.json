@@ -11488,6 +11488,44 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-week-1-was-a-scoring-frenzy-which-teams-are-for-real-and-which-might-not-be",
+      "source_name": "NFL.com",
+      "headline": "NFL Week 1 was a scoring frenzy. Which teams are for real -- and which might not be?",
+      "published_at": "2026-09-13T09:31:04.000Z",
+      "observed_at": "2026-09-14T18:00:30.682Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/los-angeles-rams-myles-garrett-knee-surgery-49ers",
+      "source_name": "FOX Sports",
+      "headline": "Sean McVay: Myles Garrett's Week 1 Play Made Knee Surgery The Obvious Answer",
+      "published_at": "2026-09-14T17:45:30.000Z",
+      "observed_at": "2026-09-14T18:00:30.682Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
