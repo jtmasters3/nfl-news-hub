@@ -72,7 +72,7 @@ import { determineArtworkPlan } from "./lib/artworkPlan.js";
 import { downloadSourceImageWithRetries, cleanupSourceImage } from "./lib/sourceImage.js";
 import { generateWithRetries, MAX_GENERATION_ATTEMPTS } from "./lib/generateWithRetries.js";
 import { waitForCaptionClaim, CAPTION_CLAIM_POLL_MAX_ATTEMPTS, CAPTION_CLAIM_POLL_INTERVAL_MS } from "./lib/waitForCaptionClaim.js";
-import { describeReadinessTimeout } from "./lib/readinessMessages.js";
+import { describeReadinessTimeout, describeArtworkAsset } from "./lib/readinessMessages.js";
 import { waitForStoryArtworkClaim, STORY_ARTWORK_CLAIM_POLL_MAX_ATTEMPTS, STORY_ARTWORK_CLAIM_POLL_INTERVAL_MS } from "./lib/waitForStoryArtworkClaim.js";
 import { shouldSkipArtwork } from "./lib/routeTarget.js";
 import { determineRecoveryAction } from "./lib/routeRecovery.js";
@@ -725,23 +725,38 @@ async function processPackageRegeneration(storyId, { regenerateFeed, regenerateS
 // in any way — a caption failure here cannot regenerate or lose it.
 // ---------------------------------------------------------------------------
 
-async function processCaption(storyId) {
+/**
+ * @param {string} storyId
+ * @param {{destination?: "feed"|"story"}} [opts] - the record's own
+ *   Stage 3A selection.destination, when the caller already has it (the
+ *   fresh-generation and caption-only-recovery call sites both do; the
+ *   legacy paired-assets Story-recovery call site doesn't, and doesn't
+ *   need to — see below). Purely for accurate LOGGING; never changes which
+ *   readiness reasons are polled or retried.
+ */
+async function processCaption(storyId, { destination } = {}) {
   console.log(`Claiming caption work for ${storyId}...`);
   // /social/artwork/complete and /social/story-artwork/complete both
   // returning dispatch_confirmed:true only means GitHub ACCEPTED the
   // repository_dispatch webhook, not that the Action has finished
   // committing the corresponding readiness into data/social-state.json.
   // Poll the same authoritative endpoint instead of assuming, for BOTH
-  // temporary readiness reasons (not_artwork_ready = Feed's own commit
-  // still pending; story_artwork_not_ready = Story's own commit still
-  // pending, v2 only — 2026-09-03 incident: story
+  // temporary readiness reasons: "not_artwork_ready" means the record's
+  // own SINGLE primary asset isn't durably ready yet — Feed's, for any
+  // legacy/Feed-selected record, but Story's for a Stage 3A Story-selected
+  // record (2026-09-14 fix: this reason string was previously always
+  // logged as "Feed artwork", which was actively wrong for a Story-only
+  // record — proven against story_id 0cba51db-8c38-436f-ae48-a4af46e9f6bd,
+  // where Feed is intentionally never attempted at all). "story_artwork_not_ready"
+  // is unambiguous on its own — Story's own commit still pending, v2
+  // legacy-paired records only (2026-09-03 incident: story
   // 6a443992-55a9-4ac5-b57d-ba2993a740e3's Story generated and uploaded
   // successfully, but the claim attempted ~1s later hit
   // story_artwork_not_ready because only "not_artwork_ready" was
   // recognized as retryable at the time).
   const claimResult = await waitForCaptionClaim(claimCaption, storyId, {
     onWaiting: (attempt, attempts, reason) => {
-      const what = reason === "story_artwork_not_ready" ? "Story artwork" : "Feed artwork";
+      const what = describeArtworkAsset({ reason, destination });
       console.log(`${what} not yet committed — waiting ${CAPTION_CLAIM_POLL_INTERVAL_MS}ms before retrying caption claim (attempt ${attempt}/${attempts})...`);
     },
   });
@@ -749,7 +764,7 @@ async function processCaption(storyId) {
   if (!claimResult.claimed) {
     if (claimResult.reason === "readiness_timeout") {
       const totalSeconds = (CAPTION_CLAIM_POLL_MAX_ATTEMPTS * CAPTION_CLAIM_POLL_INTERVAL_MS) / 1000;
-      console.log(describeReadinessTimeout({ lastReason: claimResult.last_reason, storyId, totalSeconds }));
+      console.log(describeReadinessTimeout({ lastReason: claimResult.last_reason, storyId, totalSeconds, destination }));
       process.exitCode = 1;
       return;
     }
@@ -875,7 +890,7 @@ async function main() {
     }
 
     console.log(`${target.story_id} is not in the live artwork queue — attempting caption-only processing (artwork already complete?).`);
-    await processCaption(target.story_id);
+    await processCaption(target.story_id, { destination: record?.selection?.destination });
     return;
   }
 
@@ -885,7 +900,7 @@ async function main() {
     return;
   }
 
-  await processCaption(target.story_id);
+  await processCaption(target.story_id, { destination: target.destination });
 }
 
 main().catch((err) => {

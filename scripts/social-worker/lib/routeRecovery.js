@@ -25,6 +25,22 @@ export function determineRecoveryAction(record) {
   // exactly as in artworkPlan.js's determineArtworkPlan).
   if (record.selection?.destination === "feed") return "caption_only";
 
+  // 2026-09-14 fix: the SAME is true in reverse for a Story-selected
+  // record — reaching "artwork_ready" at all can ONLY have happened via
+  // its own PRIMARY story_artwork completion (applyCompleteEvent routes
+  // Story-selected records through record.story_artwork exclusively), so
+  // status alone already proves it's ready; no further check is needed or
+  // correct here. Falling through to the legacy paired-assets check below
+  // was a latent bug: applyCompleteEvent writes the actual pass/fail
+  // outcome into the record's TOP-LEVEL `validation` field for every
+  // primary completion (Feed or Story alike) — it never populates
+  // `story_artwork.validation` for a Stage 3A Story-selected record — so
+  // that check below would always read passed:null and incorrectly route
+  // an already-successful Story-primary record into "story_only",
+  // reclaiming and regenerating Story artwork that was already valid.
+  // Proven against story_id 0cba51db-8c38-436f-ae48-a4af46e9f6bd.
+  if (record.selection?.destination === "story") return "caption_only";
+
   const version = record.content_package_version ?? 1;
   if (version !== 2) return "caption_only";
 

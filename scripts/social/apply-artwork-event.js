@@ -40,27 +40,70 @@
 // content were already correct. It is purely a "which snapshot of
 // data/social-state.json did this job happen to see" problem.
 //
-// The fix below is a BOUNDED retry, entered ONLY for the specific
-// "claim_mismatch" error (never for "not_found"/"invalid_state"/etc.,
-// which mean the record has legitimately already moved on or never
-// existed and must stay an immediate, silent no-op exactly as before):
-// re-fetch state via a FRESH, SHA-pinned GitHub REST API read (the same
-// proven pattern githubStateReader.js already uses for the Approval
-// Console — never the frozen local checkout, never the mutable
-// raw.githubusercontent.com/main/ URL) and re-apply the SAME reducer.
-// Once the sibling event's commit becomes visible, the retry succeeds and
-// applies the event exactly once — the loop stops immediately on success,
-// never re-applying afterward. If claim_mismatch still persists once the
-// retry budget is exhausted, the workflow now FAILS (non-zero exit)
-// instead of silently succeeding — a required durable state transition
-// that never actually happened must never be reported as a success. This
-// also correctly keeps rejecting (by design, never as a workflow
-// "failure" requiring retry) any completion event whose claim_id belongs
-// to a genuinely different, already-superseded claim — that mismatch
-// reflects real committed state, not staleness, and retrying it changes
-// nothing; see this file's own tests for exactly which case is which.
-const CLAIM_MISMATCH_RETRY_ATTEMPTS = 5;
-const CLAIM_MISMATCH_RETRY_INTERVAL_MS = 3000;
+// The fix below is a BOUNDED retry, entered ONLY for "claim_mismatch" and
+// (see the 2026-09-14 addition further below) "invalid_state:*" — never
+// for "not_found"/"invalid_transition"/"invalid_feed_state"/etc., which
+// mean the record has legitimately already moved on or never existed and
+// must stay an immediate, silent no-op exactly as before: re-fetch state
+// via a FRESH, SHA-pinned GitHub REST API read (the same proven pattern
+// githubStateReader.js already uses for the Approval Console — never the
+// frozen local checkout, never the mutable raw.githubusercontent.com/main/
+// URL) and re-apply the SAME reducer. Once the sibling event's commit
+// becomes visible, the retry succeeds and applies the event exactly once —
+// the loop stops immediately on success, never re-applying afterward. If
+// claim_mismatch still persists once the retry budget is exhausted, the
+// workflow now FAILS (non-zero exit) instead of silently succeeding — a
+// required durable state transition that never actually happened must
+// never be reported as a success. This also correctly keeps rejecting (by
+// design, never as a workflow "failure" requiring retry) any completion
+// event whose claim_id belongs to a genuinely different, already-superseded
+// claim — that mismatch reflects real committed state, not staleness, and
+// retrying it changes nothing; see this file's own tests for exactly which
+// case is which.
+//
+// ==========================================================================
+// 2026-09-14 durability fix — invalid_state checkout-staleness race
+// (artwork-claimed -> artwork-completed)
+// ==========================================================================
+// Root cause (proven against a real production run, story_id
+// 0cba51db-8c38-436f-ae48-a4af46e9f6bd): removing the local Windows Codex
+// dependency (see process-one.js's own header) made artwork generation
+// dramatically faster — a deterministic render instead of a multi-minute
+// AI image-generation call — which shrank the gap between an
+// artwork-claimed dispatch and its own artwork-completed dispatch (both
+// fired from the SAME process-one.js run) to just a couple of seconds.
+// Confirmed via the real GitHub Actions run timestamps: the
+// artwork-completed run started at 16:59:45Z, 7 seconds BEFORE the
+// artwork-claimed run's own commit landed on `main` at 16:59:52Z — so
+// applyCompleteEvent's local-checkout read still showed "queued", not yet
+// "artwork_requested", and its own (unmodified, still-correct) status
+// check legitimately returned "invalid_state:queued". Before this fix,
+// EVERY invalid_state:* error was an immediate, unconditional no-op —
+// exactly the same class of silent data loss the claim_mismatch fix above
+// closed, just reached through a different reducer error string. The
+// downstream symptom was a Story-only record whose caption claim then
+// polled "not_artwork_ready" for the full budget: not a destination-
+// awareness bug in the caption-claim path (which was already correct),
+// but the record genuinely never reaching "artwork_ready" at all.
+//
+// invalid_state:* now gets the SAME bounded retry-against-fresh-state
+// treatment as claim_mismatch. It deliberately does NOT get escalated to a
+// workflow failure if still unresolved after the retry budget, unlike
+// claim_mismatch — invalid_state also legitimately covers ordinary
+// at-least-once-delivery duplicates (a late-arriving event for a record
+// that has since moved on for real, unrelated reasons) far more often than
+// claim_mismatch's narrower "a claim_id genuinely doesn't match" case, so
+// escalating every unresolved invalid_state would turn routine, harmless
+// duplicate deliveries into false-alarm red builds. The retry exists only
+// to give the checkout-staleness scenario a fair chance to resolve; a
+// mismatch that persists past that is treated exactly as it always was.
+const STALE_CHECKOUT_RETRY_ATTEMPTS = 5;
+const STALE_CHECKOUT_RETRY_INTERVAL_MS = 3000;
+
+/** True for exactly the two error shapes proven to sometimes be pure checkout staleness rather than a genuine, permanent rejection. */
+function isRetryableStalenessError(error) {
+  return error === "claim_mismatch" || String(error).startsWith("invalid_state");
+}
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -70,8 +113,8 @@ function sleep(ms) {
  * Reads the ABSOLUTE latest committed data/social-state.json directly via
  * GitHub's REST API, pinned to the latest commit SHA — never the frozen
  * local git checkout, never a long-TTL CDN URL. Used ONLY as the
- * claim_mismatch retry fallback below; the normal fast path still reads
- * the local checkout via readSocialState(), unchanged.
+ * claim_mismatch/invalid_state retry fallback below; the normal fast path
+ * still reads the local checkout via readSocialState(), unchanged.
  */
 async function fetchFreshStateFromGitHub() {
   const token = process.env.GITHUB_TOKEN || process.env.GITHUB_API_TOKEN;
@@ -110,7 +153,12 @@ import { fileURLToPath } from "node:url";
 // genuinely unresolvable mismatch (a real, different, already-committed
 // claim) falls through to a silent no-op, and one that never resolves at
 // all within the retry budget fails the workflow instead of silently
-// succeeding.
+// succeeding. "invalid_state:*" is matched separately (via a prefix check
+// below, same as before) rather than listed here, since it also now goes
+// through the SAME retry path first (see this file's own 2026-09-14
+// header) — unlike claim_mismatch, though, a still-unresolved invalid_state
+// after the retry budget remains this ordinary silent skip, never a
+// workflow failure.
 const SKIPPABLE_ERRORS = new Set([
   "not_found",
   "redirect_loop",
@@ -215,18 +263,19 @@ export async function applyEventByType(state, eventType, payload, { checkReachab
 
 /**
  * Applies one event, transparently retrying against FRESH (never frozen
- * local-checkout) state when the first attempt returns exactly
- * "claim_mismatch" — see this file's own 2026-09-11 header comment for the
- * exact race this closes. Every dependency is injectable so this can be
- * tested deterministically, with no real network call, no real timer, and
- * no dependency on the actual local filesystem checkout.
+ * local-checkout) state when the first attempt returns a retryable
+ * checkout-staleness error — "claim_mismatch" (2026-09-11) or
+ * "invalid_state:*" (2026-09-14) — see this file's own header comments for
+ * the exact two races this closes. Every dependency is injectable so this
+ * can be tested deterministically, with no real network call, no real
+ * timer, and no dependency on the actual local filesystem checkout.
  * @param {object} initialState - the normal (local-checkout) state, already read
  * @param {string} eventType
  * @param {object} payload
  * @param {{applyEventByTypeImpl?: Function, fetchFreshStateImpl?: Function, sleepImpl?: Function, attempts?: number, intervalMs?: number, onRetry?: Function}} [opts]
  * @returns {Promise<object|null>} the SAME shape applyEventByType returns — null for an unrecognized event type, otherwise `{ok, ...}`
  */
-export async function applyEventWithClaimMismatchRetry(
+export async function applyEventWithStalenessRetry(
   initialState,
   eventType,
   payload,
@@ -234,13 +283,13 @@ export async function applyEventWithClaimMismatchRetry(
     applyEventByTypeImpl = applyEventByType,
     fetchFreshStateImpl = fetchFreshStateFromGitHub,
     sleepImpl = sleep,
-    attempts = CLAIM_MISMATCH_RETRY_ATTEMPTS,
-    intervalMs = CLAIM_MISMATCH_RETRY_INTERVAL_MS,
+    attempts = STALE_CHECKOUT_RETRY_ATTEMPTS,
+    intervalMs = STALE_CHECKOUT_RETRY_INTERVAL_MS,
     onRetry,
   } = {}
 ) {
   let result = await applyEventByTypeImpl(initialState, eventType, payload);
-  if (result === null || result.ok || result.error !== "claim_mismatch") {
+  if (result === null || result.ok || !isRetryableStalenessError(result.error)) {
     return result;
   }
 
@@ -255,7 +304,7 @@ export async function applyEventWithClaimMismatchRetry(
     }
     onRetry?.(attempt, attempts, null);
     result = await applyEventByTypeImpl(freshState, eventType, payload);
-    if (result.ok || result.error !== "claim_mismatch") break;
+    if (result.ok || !isRetryableStalenessError(result.error)) break;
   }
 
   return result;
@@ -267,12 +316,15 @@ export async function applyEventWithClaimMismatchRetry(
  * workflow must NEVER report semantic success for an unresolved
  * claim_mismatch") can be tested without any file I/O, network call, or
  * environment variable. Behavior is unchanged from the inline version this
- * replaced; every message string is identical.
- * @param {object|null} result - applyEventWithClaimMismatchRetry's return value
+ * replaced; every message string is identical. invalid_state:* (2026-09-14)
+ * ALSO goes through the retry above, but — unlike claim_mismatch — still
+ * falls through to the ordinary silent skip if it never resolves, per this
+ * file's own 2026-09-14 header comment.
+ * @param {object|null} result - applyEventWithStalenessRetry's return value
  * @param {{eventType: string, storyId: string, retryAttempts?: number}} ctx
  * @returns {{action: "unknown_event"|"claim_mismatch_unresolved"|"skip"|"fail"|"apply", message: string|null}}
  */
-export function determineApplyOutcome(result, { eventType, storyId, retryAttempts = CLAIM_MISMATCH_RETRY_ATTEMPTS }) {
+export function determineApplyOutcome(result, { eventType, storyId, retryAttempts = STALE_CHECKOUT_RETRY_ATTEMPTS }) {
   if (result === null) {
     return { action: "unknown_event", message: `Unknown ARTWORK_EVENT_TYPE: ${eventType}` };
   }
@@ -331,10 +383,10 @@ async function main() {
   }
 
   const state = await readSocialState();
-  const result = await applyEventWithClaimMismatchRetry(state, eventType, payload, {
+  const result = await applyEventWithStalenessRetry(state, eventType, payload, {
     onRetry: (attempt, attempts, err) => {
-      if (err) console.error(`Fresh state fetch failed during claim_mismatch retry (attempt ${attempt}/${attempts}): ${err.message}`);
-      else console.log(`claim_mismatch for ${eventType} on ${payload.story_id} — retrying against fresh, SHA-pinned state (attempt ${attempt}/${attempts})...`);
+      if (err) console.error(`Fresh state fetch failed during checkout-staleness retry (attempt ${attempt}/${attempts}): ${err.message}`);
+      else console.log(`Possible checkout staleness for ${eventType} on ${payload.story_id} — retrying against fresh, SHA-pinned state (attempt ${attempt}/${attempts})...`);
     },
   });
 

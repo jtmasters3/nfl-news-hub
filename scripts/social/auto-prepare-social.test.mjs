@@ -1289,6 +1289,258 @@ test("94. a generator-unavailable-style failure calls zero downstream side effec
 });
 
 // ---------------------------------------------------------------------------
+// 2026-09-14 — PRIMARY artwork-completion hands-off recovery
+// ---------------------------------------------------------------------------
+// The direct sibling of the caption-recovery tests above, for the SAME
+// checkout-staleness race hitting artwork-completed instead of
+// caption-completed — proven against story_id
+// 0cba51db-8c38-436f-ae48-a4af46e9f6bd (a Story-primary completion).
+
+function stuckArtworkRecord(overrides = {}) {
+  return {
+    story_id: "0cba51db-8c38-436f-ae48-a4af46e9f6bd",
+    status: "artwork_requested",
+    merged_into: null,
+    content_package_version: 2,
+    selection: { destination: "story", slot_id: "story:test", selected_at: "2026-01-01T00:00:00Z" },
+    source_story: { post_headline: "TEST HEADLINE", source_name: "ESPN", source_url: "https://espn.test/x", teams: [], players: [], description: "A description." },
+    approval: { status: "pending" },
+    claim: { claim_id: "artwork-claim-1", processor_id: "p1", claimed_at: "2026-01-01T00:00:00Z", claim_expires_at: "2026-01-01T00:50:00Z" },
+    story_artwork: { status: "not_created", image_url: null },
+    publishing: { status: "not_posted", instagram: { feed: { status: "not_posted" }, story: { status: "not_posted" } } },
+    ...overrides,
+  };
+}
+
+function completedArtworkDoRecord(overrides = {}) {
+  return {
+    status: "completed",
+    claim_id: "artwork-claim-1",
+    processor_id: "p1",
+    dispatch_confirmed: true,
+    payload: { story_id: "0cba51db-8c38-436f-ae48-a4af46e9f6bd", claim_id: "artwork-claim-1", image_url: "https://example.test/x.png", storage_key: "social-artwork/x.png", width: 1080, height: 1920, mime_type: "image/png", size_bytes: 500000, provider: "deterministic-renderer" },
+    ...overrides,
+  };
+}
+
+function recoveredArtworkReadyRecord(overrides = {}) {
+  return {
+    ...stuckArtworkRecord(),
+    status: "artwork_ready",
+    validation: { status: "passed", passed: true, issues: [] },
+    story_artwork: { status: "created", image_url: "https://example.test/x.png", width: 1080, height: 1920 },
+    ...overrides,
+  };
+}
+
+test("95. selectAutonomousCandidate recognizes the exact proven stuck PRIMARY-artwork state as a recover-artwork candidate", async () => {
+  const result = await selectAutonomousCandidate({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { s1: stuckArtworkRecord({ story_id: "s1" }) } }),
+  });
+  assert.equal(result.mode, "recover-artwork");
+  assert.equal(result.story_id, "s1");
+});
+
+test("96. dry run for a recover-artwork candidate never touches the Durable Object, never replays, never polls, never runs process-one.js", async () => {
+  let statusCalled = false, replayCalled = false, prepCalled = false;
+  const result = await main({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { s1: stuckArtworkRecord({ story_id: "s1" }) } }),
+    live: false,
+    getArtworkClaimStatusImpl: async () => { statusCalled = true; return { do_record: completedArtworkDoRecord() }; },
+    replayArtworkCompletionImpl: async () => { replayCalled = true; return { replayed: true }; },
+    runPreparationImpl: async () => { prepCalled = true; return { exitCode: 0 }; },
+  });
+  assert.equal(statusCalled, false, "dry run must never read the Durable Object");
+  assert.equal(replayCalled, false);
+  assert.equal(prepCalled, false);
+  assert.equal(result.dryRun.mode, "recover-artwork");
+  assert.match(result.dryRun.would_require, /PRIMARY artwork-completion replay recovery/);
+});
+
+test("97. a successful automatic recovery calls getArtworkClaimStatusImpl and replayArtworkCompletionImpl with EXACTLY the story_id and existing claim_id — no image content supplied by the runner", async () => {
+  let statusArgs, replayArgs;
+  const result = await main({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { s1: stuckArtworkRecord({ story_id: "s1" }) } }),
+    live: true,
+    getArtworkClaimStatusImpl: async (storyId) => { statusArgs = { storyId }; return { do_record: completedArtworkDoRecord({ claim_id: "artwork-claim-1" }) }; },
+    replayArtworkCompletionImpl: async (storyId, claimId) => { replayArgs = { storyId, claimId }; return { replayed: true }; },
+    waitForDurableCommitImpl: async () => ({ committed: true, record: { status: "failed" } }),
+  });
+  assert.equal(statusArgs.storyId, "s1");
+  assert.equal(replayArgs.storyId, "s1");
+  assert.equal(replayArgs.claimId, "artwork-claim-1");
+  assert.equal(Object.keys(replayArgs).length, 2, "replay must be called with exactly (story_id, claim_id) — no image_url, no dimensions, no other content");
+  assert.equal(result.finalStatus, "failed");
+});
+
+test("98. an eligibility failure (e.g. the DO still shows 'claimed', not 'completed') is a successful no-op — no replay attempted, no regeneration, no approval", async () => {
+  let replayCalled = false, prepCalled = false;
+  const result = await main({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { s1: stuckArtworkRecord({ story_id: "s1" }) } }),
+    live: true,
+    getArtworkClaimStatusImpl: async () => ({ do_record: completedArtworkDoRecord({ status: "claimed" }) }),
+    replayArtworkCompletionImpl: async () => { replayCalled = true; return { replayed: true }; },
+    runPreparationImpl: async () => { prepCalled = true; return { exitCode: 0 }; },
+  });
+  assert.equal(result.ok, true, "not-yet-eligible must never turn the workflow red");
+  assert.equal(result.step, "artwork_recovery_eligibility");
+  assert.equal(replayCalled, false);
+  assert.equal(prepCalled, false);
+});
+
+test("99. a wrong/stale DO claim_id blocks replay end-to-end through main()", async () => {
+  let replayCalled = false;
+  const result = await main({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { s1: stuckArtworkRecord({ story_id: "s1" }) } }),
+    live: true,
+    getArtworkClaimStatusImpl: async () => ({ do_record: completedArtworkDoRecord({ claim_id: "some-other-claim" }) }),
+    replayArtworkCompletionImpl: async () => { replayCalled = true; return { replayed: true }; },
+  });
+  assert.equal(result.ok, true);
+  assert.equal(result.step, "artwork_recovery_eligibility");
+  assert.ok(result.eligibility.issues.includes("do_claim_id_mismatch"));
+  assert.equal(replayCalled, false);
+});
+
+test("100. a replay refusal from the Worker fails closed — no approval, no second attempt within this run", async () => {
+  let prepCalled = false;
+  const result = await main({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { s1: stuckArtworkRecord({ story_id: "s1" }) } }),
+    live: true,
+    getArtworkClaimStatusImpl: async () => ({ do_record: completedArtworkDoRecord() }),
+    replayArtworkCompletionImpl: async () => ({ replayed: false, reason: "claim_mismatch" }),
+    runPreparationImpl: async () => { prepCalled = true; return { exitCode: 0 }; },
+  });
+  assert.equal(result.ok, false);
+  assert.equal(result.step, "artwork_recovery_replay");
+  assert.equal(prepCalled, false);
+});
+
+test("101. a durable-confirmation TIMEOUT after a successful replay dispatch fails closed — no regeneration, no second replay, no approval", async () => {
+  let replayCallCount = 0, prepCalled = false;
+  const result = await main({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { s1: stuckArtworkRecord({ story_id: "s1" }) } }),
+    live: true,
+    getArtworkClaimStatusImpl: async () => ({ do_record: completedArtworkDoRecord() }),
+    replayArtworkCompletionImpl: async () => { replayCallCount++; return { replayed: true }; },
+    waitForDurableCommitImpl: async () => ({ committed: false, status: "timeout" }),
+    runPreparationImpl: async () => { prepCalled = true; return { exitCode: 0 }; },
+  });
+  assert.equal(result.ok, false);
+  assert.equal(result.step, "artwork_recovery_durable_poll");
+  assert.equal(replayCallCount, 1, "a poll timeout must never trigger a second replay attempt within the same run");
+  assert.equal(prepCalled, false, "artwork must never be regenerated after a durable-poll timeout");
+});
+
+test("102. a successful replay that durably confirms artwork_ready delegates to the EXISTING generate pipeline (process-one.js), never regenerating artwork itself", async () => {
+  let prepCallArgs;
+  const result = await main({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { s1: stuckArtworkRecord({ story_id: "s1" }) } }),
+    live: true,
+    getArtworkClaimStatusImpl: async () => ({ do_record: completedArtworkDoRecord() }),
+    replayArtworkCompletionImpl: async () => ({ replayed: true }),
+    waitForDurableCommitImpl: async (fetchState, storyId, predicate) => {
+      // First call: the recovery poll waiting for artwork_ready. Second
+      // call (inside runGeneratePipeline): the post-preparation poll.
+      if (predicate({ status: "artwork_ready" })) return { committed: true, record: recoveredArtworkReadyRecord({ story_id: "s1" }) };
+      return { committed: true, record: awaitingApprovalRecord({ story_id: "s1" }) };
+    },
+    runPreparationImpl: async (args) => { prepCallArgs = args; return { exitCode: 0 }; },
+    decideApprovalImpl: async () => ({ result: "approved" }),
+  });
+  assert.equal(prepCallArgs.storyId, "s1", "must delegate to the existing process-one.js pipeline, which itself performs the destination-aware, no-regeneration recovery routing");
+  assert.equal(result.autoApproved, true);
+});
+
+test("103. a replay that durably confirms a genuinely committed 'failed' status (not a timeout) is a clean, non-error outcome — never approved, never regenerated", async () => {
+  let prepCalled = false;
+  const result = await main({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { s1: stuckArtworkRecord({ story_id: "s1" }) } }),
+    live: true,
+    getArtworkClaimStatusImpl: async () => ({ do_record: completedArtworkDoRecord() }),
+    replayArtworkCompletionImpl: async () => ({ replayed: true }),
+    waitForDurableCommitImpl: async () => ({ committed: true, record: { status: "failed" } }),
+    runPreparationImpl: async () => { prepCalled = true; return { exitCode: 0 }; },
+  });
+  assert.equal(result.ok, true);
+  assert.equal(result.prepared, false);
+  assert.equal(result.finalStatus, "failed");
+  assert.equal(prepCalled, false);
+});
+
+test("104. a Durable Object read failure (network error) during artwork recovery fails closed — no replay attempted", async () => {
+  let replayCalled = false;
+  const result = await main({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { s1: stuckArtworkRecord({ story_id: "s1" }) } }),
+    live: true,
+    getArtworkClaimStatusImpl: async () => { throw new Error("network blip"); },
+    replayArtworkCompletionImpl: async () => { replayCalled = true; return { replayed: true }; },
+  });
+  assert.equal(result.ok, false);
+  assert.equal(result.step, "artwork_recovery_status_read");
+  assert.equal(replayCalled, false);
+});
+
+test("105. the NORMAL happy path (fresh queue generation) never touches the artwork-recovery machinery at all", async () => {
+  let statusCalled = false, replayCalled = false;
+  await main({
+    fetchQueue: async () => [queueEntry("s1")],
+    fetchState: statefulFetchState(awaitingApprovalRecord()),
+    live: true,
+    runPreparationImpl: async () => ({ exitCode: 0 }),
+    decideApprovalImpl: async () => ({ result: "approved" }),
+    getArtworkClaimStatusImpl: async () => { statusCalled = true; return { do_record: null }; },
+    replayArtworkCompletionImpl: async () => { replayCalled = true; return { replayed: false }; },
+  });
+  assert.equal(statusCalled, false, "a normal successful generation run must never call the artwork-recovery DO read");
+  assert.equal(replayCalled, false);
+});
+
+test("106. once artwork becomes durably ready (artwork_ready), a duplicate runner invocation no longer selects recover-artwork for the same story — idempotent, never a second replay", async () => {
+  const result = await selectAutonomousCandidate({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { s1: recoveredArtworkReadyRecord({ story_id: "s1" }) } }),
+  });
+  assert.notEqual(result.mode, "recover-artwork");
+});
+
+test("107. an already-approved record is never selected for artwork recovery", async () => {
+  const result = await selectAutonomousCandidate({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { s1: stuckArtworkRecord({ status: "approved", approval: { status: "approved" } }) } }),
+  });
+  assert.notEqual(result.mode, "recover-artwork");
+});
+
+test("108. a posting or posted record is never selected for artwork recovery", async () => {
+  const r1 = await selectAutonomousCandidate({ fetchQueue: async () => [], fetchState: async () => ({ stories: { s1: stuckArtworkRecord({ status: "posting" }) } }) });
+  assert.notEqual(r1.mode, "recover-artwork");
+  const r2 = await selectAutonomousCandidate({ fetchQueue: async () => [], fetchState: async () => ({ stories: { s1: stuckArtworkRecord({ status: "posted" }) } }) });
+  assert.notEqual(r2.mode, "recover-artwork");
+});
+
+test("109. this script still never acquires a posting claim, never calls Buffer, and never invokes either live publisher, even after the artwork-recovery integration", async () => {
+  const { readFile } = await import("node:fs/promises");
+  const src = await readFile(new URL("./auto-prepare-social.js", import.meta.url), "utf-8");
+  const codeOnly = src.replace(/\/\/.*$/gm, "").replace(/\/\*[\s\S]*?\*\//g, "");
+  const mutationName = ["create", "Post"].join("");
+  assert.ok(!codeOnly.includes(mutationName));
+  assert.ok(!/api\.buffer\.com/.test(codeOnly));
+  assert.ok(!/graph\.(facebook|instagram)\.com/i.test(codeOnly));
+  assert.ok(!/claimPosting|publish-buffer-feed|publish-buffer-story|executeBufferFeedPublish|publishViaWorker/.test(codeOnly));
+});
+
+// ---------------------------------------------------------------------------
 let failures = 0;
 for (const c of cases) {
   try {

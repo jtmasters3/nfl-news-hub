@@ -65,6 +65,21 @@ export async function failArtwork(storyId, claimId, stage, message) {
   return postJson("/social/artwork/fail", { story_id: storyId, claim_id: claimId, stage, message });
 }
 
+// --- Primary artwork recovery (2026-09-14 hands-off recovery integration,
+// sibling of the caption recovery pair below) — a read-only DO status
+// check plus the one endpoint that may re-fire an already-DO-completed
+// PRIMARY artwork's dispatch. Never used for a fresh claim or fresh
+// generation; see scripts/social-worker/lib/artworkRecoveryEligibility.js
+// for the fail-closed decision that gates every call to replayArtworkCompletion.
+
+export async function getArtworkClaimStatus(storyId) {
+  return postJson("/social/artwork/claim-status", { story_id: storyId });
+}
+
+export async function replayArtworkCompletion(storyId, claimId) {
+  return postJson("/social/artwork/replay-completion", { story_id: storyId, claim_id: claimId });
+}
+
 // --- Story artwork (Feed+Story phase) — a separate, independent claim
 // lifecycle from Feed above, only ever claimable once a story has reached
 // "artwork_ready" (i.e. Feed already succeeded). Multipart, same shape as
