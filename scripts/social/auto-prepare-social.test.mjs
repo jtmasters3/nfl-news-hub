@@ -1540,6 +1540,32 @@ test("109. this script still never acquires a posting claim, never calls Buffer,
   assert.ok(!/claimPosting|publish-buffer-feed|publish-buffer-story|executeBufferFeedPublish|publishViaWorker/.test(codeOnly));
 });
 
+test("110. a permanently-ineligible recover-artwork candidate (e.g. a pre-cloud-renderer failure whose DO status is 'failed', not 'completed') NEVER blocks a newer, genuinely-recoverable recover-artwork candidate in the same run — the exact real scenario found auditing story_ids 03388ac4-924c-48ac-91c1-987016029881 and 0cba51db-8c38-436f-ae48-a4af46e9f6bd", async () => {
+  const olderIneligible = stuckArtworkRecord({
+    story_id: "older-ineligible",
+    claim: { claim_id: "old-claim-1" },
+    selection: { destination: "feed", slot_id: "feed:test", selected_at: "2026-01-01T00:00:00Z" },
+  });
+  const newerRecoverable = stuckArtworkRecord({
+    story_id: "newer-recoverable",
+    claim: { claim_id: "new-claim-1" },
+    selection: { destination: "story", slot_id: "story:test", selected_at: "2026-01-02T00:00:00Z" },
+  });
+  let replayCalled = false;
+  const result = await main({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { "older-ineligible": olderIneligible, "newer-recoverable": newerRecoverable } }),
+    live: true,
+    getArtworkClaimStatusImpl: async (storyId) =>
+      storyId === "older-ineligible" ? { do_record: completedArtworkDoRecord({ claim_id: "old-claim-1", status: "failed" }) } : { do_record: completedArtworkDoRecord({ claim_id: "new-claim-1" }) },
+    replayArtworkCompletionImpl: async (storyId, claimId) => { replayCalled = { storyId, claimId }; return { replayed: true }; },
+    waitForDurableCommitImpl: async () => ({ committed: true, record: { status: "failed" } }),
+  });
+  assert.ok(replayCalled, "the second selection attempt must reach the genuinely-recoverable candidate");
+  assert.equal(replayCalled.storyId, "newer-recoverable");
+  assert.equal(result.finalStatus, "failed");
+});
+
 // ---------------------------------------------------------------------------
 let failures = 0;
 for (const c of cases) {

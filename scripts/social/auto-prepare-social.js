@@ -615,17 +615,38 @@ export async function main({
       const result = await tryAutoApprove(storyId, record, { decideApprovalImpl, waitForApprovalCommitImpl, fetchState });
       if (result.autoApproved || !result.ok || attempt === 2) return result;
       firstPendingResult = result;
-      console.log(`story_id=${storyId} remains pending after re-evaluation — trying once more, excluding it, so it cannot block recover-caption or fresh-generation work this run.`);
+      console.log(`story_id=${storyId} remains pending after re-evaluation — trying once more, excluding it, so it cannot block recover-artwork, recover-caption, or fresh-generation work this run.`);
       excludeStoryIds = [storyId];
       continue;
     }
 
     if (mode === "recover-artwork") {
-      return tryRecoverArtwork(storyId, record, { getArtworkClaimStatusImpl, replayArtworkCompletionImpl, waitForDurableCommitImpl, runPreparationImpl, decideApprovalImpl, waitForApprovalCommitImpl, fetchState });
+      const result = await tryRecoverArtwork(storyId, record, { getArtworkClaimStatusImpl, replayArtworkCompletionImpl, waitForDurableCommitImpl, runPreparationImpl, decideApprovalImpl, waitForApprovalCommitImpl, fetchState });
+      // Same bounded-fallthrough principle as approve-only above: a pure
+      // "not yet eligible" no-op (no replay ever attempted) must never
+      // permanently block a DIFFERENT, genuinely-recoverable candidate —
+      // proven necessary in practice: a record whose generation failed
+      // BEFORE the cloud renderer existed (DO status "failed", never
+      // "completed") sorts ahead of a genuinely-recoverable one by
+      // selected_at, and would otherwise consume the entire run without
+      // ever reaching it. A genuine failure past eligibility (replay
+      // refused, durable-poll timeout) still stops here immediately.
+      if (result.step !== "artwork_recovery_eligibility" || !result.ok || attempt === 2) return result;
+      firstPendingResult = result;
+      console.log(`story_id=${storyId} artwork is not yet safely recoverable — trying once more, excluding it, so it cannot block other work this run.`);
+      excludeStoryIds = [storyId];
+      continue;
     }
 
     if (mode === "recover-caption") {
-      return tryRecoverCaption(storyId, record, { getCaptionClaimStatusImpl, replayCaptionCompletionImpl, waitForDurableCommitImpl, decideApprovalImpl, waitForApprovalCommitImpl, fetchState });
+      const result = await tryRecoverCaption(storyId, record, { getCaptionClaimStatusImpl, replayCaptionCompletionImpl, waitForDurableCommitImpl, decideApprovalImpl, waitForApprovalCommitImpl, fetchState });
+      // Same bounded-fallthrough principle — see recover-artwork's own
+      // comment just above for the full reasoning.
+      if (result.step !== "caption_recovery_eligibility" || !result.ok || attempt === 2) return result;
+      firstPendingResult = result;
+      console.log(`story_id=${storyId} caption is not yet safely recoverable — trying once more, excluding it, so it cannot block other work this run.`);
+      excludeStoryIds = [storyId];
+      continue;
     }
 
     return runGeneratePipeline(storyId, record, { runPreparationImpl, waitForDurableCommitImpl, decideApprovalImpl, waitForApprovalCommitImpl, fetchState });
