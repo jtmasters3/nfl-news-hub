@@ -11198,6 +11198,44 @@
       "reason_codes": [
         "no_signal_fail_open"
       ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-sept-14",
+      "source_name": "NFL.com",
+      "headline": "NFL news roundup: Latest league updates from Monday, Sept. 14",
+      "published_at": "2026-09-14T03:33:50.000Z",
+      "observed_at": "2026-09-14T15:40:20.376Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/deshaun-watson-says-hell-keep-smiling-regardless-of-whos-against-me-or-whos-with-me",
+      "source_name": "Pro Football Talk",
+      "headline": "Deshaun Watson says he'll \"keep smiling, regardless of who's against me or who's with me\"",
+      "published_at": "2026-09-14T15:30:51.000Z",
+      "observed_at": "2026-09-14T15:40:20.376Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
