@@ -136348,10 +136348,10 @@
     },
     "5163d50a-96a3-4e49-9a5a-bc7c1391bed7": {
       "story_id": "5163d50a-96a3-4e49-9a5a-bc7c1391bed7",
-      "status": "artwork_requested",
+      "status": "artwork_ready",
       "merged_into": null,
       "created_at": "2026-09-14T19:20:32.487Z",
-      "updated_at": "2026-09-14T21:17:26.594Z",
+      "updated_at": "2026-09-14T21:27:27.096Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -136371,14 +136371,19 @@
         "is_rumor": false
       },
       "artwork": {
-        "status": "not_created",
-        "image_url": null,
-        "created_at": null,
-        "provider": null
+        "status": "created",
+        "image_url": "https://pub-1705b19e159c4434ba94af4ae6799f97.r2.dev/social-artwork/5163d50a-96a3-4e49-9a5a-bc7c1391bed7.png",
+        "storage_key": "social-artwork/5163d50a-96a3-4e49-9a5a-bc7c1391bed7.png",
+        "width": 1024,
+        "height": 1280,
+        "mime_type": "image/png",
+        "size_bytes": 2504854,
+        "provider": "chatgpt-codex-local",
+        "created_at": "2026-09-14T21:27:27.094Z"
       },
       "validation": {
-        "status": "not_run",
-        "passed": null,
+        "status": "passed",
+        "passed": true,
         "issues": []
       },
       "story_artwork": {
