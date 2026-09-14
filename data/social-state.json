@@ -88956,10 +88956,10 @@
     },
     "33e7e68f-3076-423d-abb9-ce9844426ee1": {
       "story_id": "33e7e68f-3076-423d-abb9-ce9844426ee1",
-      "status": "approved",
+      "status": "posting",
       "merged_into": null,
       "created_at": "2026-09-10T14:10:31.314Z",
-      "updated_at": "2026-09-14T19:57:53.666Z",
+      "updated_at": "2026-09-14T20:00:37.361Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -89044,13 +89044,17 @@
         "created_at": "2026-09-14T19:57:26.977Z"
       },
       "publishing": {
-        "status": "not_posted",
+        "status": "posting",
         "instagram": {
           "feed": {
-            "status": "not_posted",
+            "status": "claimed",
             "container_id": null,
             "media_id": null,
-            "published_at": null
+            "published_at": null,
+            "provider": "buffer",
+            "storage_key": "social-artwork-jpeg/33e7e68f-3076-423d-abb9-ce9844426ee1.jpg",
+            "jpeg_url": "https://pub-1705b19e159c4434ba94af4ae6799f97.r2.dev/social-artwork-jpeg/33e7e68f-3076-423d-abb9-ce9844426ee1.jpg",
+            "caption_used": "EMMANUEL ACHO COMMENTS SPARK NFL INVESTIGATION OF DOM DISANDRO. Every NFL team has a head of security.\n\nSource: Pro Football Talk\n\n#NFL"
           },
           "story": {
             "status": "not_posted",
@@ -89064,7 +89068,14 @@
           "post_id": null,
           "post_url": null
         },
-        "posted_at": null
+        "posted_at": null,
+        "claim": {
+          "claim_id": "e0dc1216-a324-457f-8f30-cf590d1af4ca",
+          "processor_id": "unknown-processor",
+          "claimed_at": "2026-09-14T20:00:27.352Z",
+          "claim_expires_at": "2026-09-14T20:50:27.352Z",
+          "retry_count": 0
+        }
       },
       "last_error": {
         "stage": null,
