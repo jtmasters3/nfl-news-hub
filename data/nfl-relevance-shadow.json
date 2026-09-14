@@ -10703,6 +10703,67 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/neil-reynolds-week-1-wrap-up-2026",
+      "source_name": "NFL.com",
+      "headline": "Neil Reynolds' Week 1 Wrap Up",
+      "published_at": "2026-09-13T11:57:00.000Z",
+      "observed_at": "2026-09-14T12:10:21.515Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/travis-hunter-played-4-snaps-on-offense-29-on-defense",
+      "source_name": "Pro Football Talk",
+      "headline": "Travis Hunter played 4 snaps on offense, 29 on defense",
+      "published_at": "2026-09-14T12:08:09.000Z",
+      "observed_at": "2026-09-14T12:10:21.515Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE",
+        "JAX"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/zac-taylor-we-felt-the-presence-of-our-defensive-additions-on-sunday",
+      "source_name": "Pro Football Talk",
+      "headline": "Zac Taylor: We felt the presence of our defensive additions on Sunday",
+      "published_at": "2026-09-14T12:07:18.000Z",
+      "observed_at": "2026-09-14T12:10:21.515Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN",
+        "TB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
