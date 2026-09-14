@@ -9,7 +9,7 @@
 // Run with: node scripts/social/auto-prepare-social.test.mjs
 import assert from "node:assert/strict";
 import { installNetworkGuard } from "../social-worker/lib/_networkGuard.mjs";
-import { selectAutonomousCandidate, main, resolveRunMode } from "./auto-prepare-social.js";
+import { selectAutonomousCandidate, main, resolveRunMode, determineExitCode } from "./auto-prepare-social.js";
 
 installNetworkGuard();
 
@@ -865,7 +865,7 @@ test("57. a successful automatic recovery calls getCaptionClaimStatusImpl and re
   assert.equal(result.autoApproved, true);
 });
 
-test("58. an eligibility failure (e.g. the DO still shows 'claimed', not 'completed') fails closed — no replay attempted, no approval", async () => {
+test("58. an eligibility failure (e.g. the DO still shows 'claimed', not 'completed') fails closed on replay/approval, but is reported as a successful no-op (ok:true) — not yet eligible is routine, not an infrastructure failure — 2026-09-14 workflow-semantics fix", async () => {
   let replayCalled = false, decideCalled = false;
   const result = await main({
     fetchQueue: async () => [],
@@ -875,13 +875,13 @@ test("58. an eligibility failure (e.g. the DO still shows 'claimed', not 'comple
     replayCaptionCompletionImpl: async () => { replayCalled = true; return { replayed: true }; },
     decideApprovalImpl: async () => { decideCalled = true; return { result: "approved" }; },
   });
-  assert.equal(result.ok, false);
+  assert.equal(result.ok, true, "not-yet-eligible must never turn the workflow red — see determineExitCode()'s own header");
   assert.equal(result.step, "caption_recovery_eligibility");
   assert.equal(replayCalled, false, "an ineligible record must never be replayed");
   assert.equal(decideCalled, false);
 });
 
-test("59. a wrong/stale DO claim_id blocks replay end-to-end through main(), not just at the pure eligibility check", async () => {
+test("59. a wrong/stale DO claim_id blocks replay end-to-end through main(), not just at the pure eligibility check — still reported as a successful no-op, never a workflow failure", async () => {
   let replayCalled = false;
   const result = await main({
     fetchQueue: async () => [],
@@ -890,7 +890,7 @@ test("59. a wrong/stale DO claim_id blocks replay end-to-end through main(), not
     getCaptionClaimStatusImpl: async () => ({ do_record: completedDoRecord({ claim_id: "some-other-claim" }) }),
     replayCaptionCompletionImpl: async () => { replayCalled = true; return { replayed: true }; },
   });
-  assert.equal(result.ok, false);
+  assert.equal(result.ok, true);
   assert.equal(result.step, "caption_recovery_eligibility");
   assert.ok(result.eligibility.issues.includes("do_claim_id_mismatch"));
   assert.equal(replayCalled, false);
@@ -1198,6 +1198,94 @@ test("81. an actual approval-commit-confirmation FAILURE (not just an ineligible
   assert.equal(result.ok, false);
   assert.equal(result.step, "approval_commit_confirmation");
   assert.equal(selectCallCount, 1, "a genuine failure must never trigger a second selection attempt");
+});
+
+// ---------------------------------------------------------------------------
+// 2026-09-14 workflow semantic-failure fix — determineExitCode()
+// ---------------------------------------------------------------------------
+// Proven production incident: story_id 03388ac4-924c-48ac-91c1-987016029881
+// — codex.exe unavailable on the GitHub Actions runner, generation failed
+// 3/3 attempts, the durable post-preparation poll timed out, main()
+// correctly returned {ok:false,...}, and the workflow STILL showed green
+// because nothing ever read that field. These tests prove every SUCCESS
+// case exits 0 and every FAILURE case exits 1, per the exact taxonomy
+// requested: no-eligible-candidate, successful prepare/approve, and a
+// legitimate gate/eligibility rejection are all SUCCESS; a generator
+// failure, an infrastructure error, or a durable-commit timeout are all
+// FAILURE.
+
+test("82. SUCCESS — no eligible candidate exits 0", () => {
+  assert.equal(determineExitCode({ ok: true, selected: null }), 0);
+});
+
+test("83. SUCCESS — a candidate successfully prepared and auto-approved exits 0", () => {
+  assert.equal(determineExitCode({ ok: true, autoApproved: true }), 0);
+});
+
+test("84. SUCCESS — a legitimate auto-approval-gate rejection (left pending) exits 0", () => {
+  assert.equal(determineExitCode({ ok: true, autoApproved: false, gateIssues: ["fidelity:x"] }), 0);
+});
+
+test("85. SUCCESS — a legitimate caption-recovery eligibility rejection (not yet safe to replay) exits 0", () => {
+  assert.equal(determineExitCode({ ok: true, step: "caption_recovery_eligibility" }), 0);
+});
+
+test("86. SUCCESS — a durably-recorded 'failed' generation outcome (properly finalized, not stuck) exits 0", () => {
+  assert.equal(determineExitCode({ ok: true, prepared: false, finalStatus: "failed" }), 0);
+});
+
+test("87. FAILURE — a post-preparation durable-commit timeout (the exact proven incident) exits 1", () => {
+  assert.equal(determineExitCode({ ok: false, step: "post_prepare_durable_poll" }), 1);
+});
+
+test("88. FAILURE — an approval-commit-confirmation timeout exits 1", () => {
+  assert.equal(determineExitCode({ ok: false, step: "approval_commit_confirmation" }), 1);
+});
+
+test("89. FAILURE — a caption-recovery Durable Object read error (infrastructure) exits 1", () => {
+  assert.equal(determineExitCode({ ok: false, step: "caption_recovery_status_read" }), 1);
+});
+
+test("90. FAILURE — a caption-recovery replay refusal exits 1", () => {
+  assert.equal(determineExitCode({ ok: false, step: "caption_recovery_replay" }), 1);
+});
+
+test("91. FAILURE — a caption-recovery durable-commit timeout exits 1", () => {
+  assert.equal(determineExitCode({ ok: false, step: "caption_recovery_durable_poll" }), 1);
+});
+
+test("92. FAILURE — an unexpected null/undefined result (main() itself misbehaved) exits 1, never silently 0", () => {
+  assert.equal(determineExitCode(null), 1);
+  assert.equal(determineExitCode(undefined), 1);
+});
+
+test("93. end-to-end: a real generator-unavailable-style failure (process-one exits nonzero, durable poll times out) produces ok:false through main() itself, which determineExitCode() then turns into exit 1", async () => {
+  const result = await main({
+    fetchQueue: async () => [queueEntry("s1")],
+    fetchState: async () => ({ stories: { s1: validQueuedRecord() } }),
+    live: true,
+    runPreparationImpl: async () => ({ exitCode: 1 }),
+    waitForDurableCommitImpl: async () => ({ committed: false, status: "timeout" }),
+  });
+  assert.equal(result.ok, false);
+  assert.equal(determineExitCode(result), 1);
+});
+
+test("94. a generator-unavailable-style failure calls zero downstream side effects — no approval, no caption-recovery DO read, no replay — matching the exact proven incident (codex.exe missing on a Linux runner)", async () => {
+  let decideCalled = false, statusCalled = false, replayCalled = false;
+  await main({
+    fetchQueue: async () => [queueEntry("s1")],
+    fetchState: async () => ({ stories: { s1: validQueuedRecord() } }),
+    live: true,
+    runPreparationImpl: async () => ({ exitCode: 1 }),
+    waitForDurableCommitImpl: async () => ({ committed: false, status: "timeout" }),
+    decideApprovalImpl: async () => { decideCalled = true; return { result: "approved" }; },
+    getCaptionClaimStatusImpl: async () => { statusCalled = true; return { do_record: null }; },
+    replayCaptionCompletionImpl: async () => { replayCalled = true; return { replayed: false }; },
+  });
+  assert.equal(decideCalled, false, "a generator failure must never reach approval");
+  assert.equal(statusCalled, false);
+  assert.equal(replayCalled, false);
 });
 
 // ---------------------------------------------------------------------------

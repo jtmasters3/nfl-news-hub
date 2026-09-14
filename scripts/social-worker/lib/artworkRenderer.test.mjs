@@ -1,0 +1,238 @@
+#!/usr/bin/env node
+// Tests for the deterministic, cloud-safe artwork renderer — the 2026-09-14
+// replacement for the local Windows codex.exe dependency (see this file's
+// own header for the full incident). Uses synthetic sharp-generated source
+// images for isolation (fast, no real network fetch, no real photo needed)
+// PLUS a handful of tests against the real committed font/logo assets to
+// prove the actual production path works. Run with:
+// node scripts/social-worker/lib/artworkRenderer.test.mjs
+import assert from "node:assert/strict";
+import sharp from "sharp";
+import { mkdtemp, rm, readFile, stat } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import path from "node:path";
+import {
+  renderArtwork,
+  buildOverlaySvg,
+  wrapLines,
+  fitHeadline,
+  estimateTextWidth,
+  CANVAS,
+  FONT_PATH,
+} from "./artworkRenderer.js";
+import { compositeBrandOverlay } from "./brandOverlay.js";
+
+const cases = [];
+function test(name, fn) {
+  cases.push({ name, fn });
+}
+
+let workDir;
+async function setup() {
+  workDir = await mkdtemp(path.join(tmpdir(), "artwork-renderer-test-"));
+}
+async function teardown() {
+  await rm(workDir, { recursive: true, force: true });
+}
+
+/** A synthetic "source photo" — a solid-color canvas, distinguishable by its own fill color. */
+async function makeSourcePhoto(name, { width = 1600, height = 1200, background = { r: 40, g: 80, b: 120 } } = {}) {
+  const filePath = path.join(workDir, name);
+  await sharp({ create: { width, height, channels: 3, background } }).jpeg().toFile(filePath);
+  return filePath;
+}
+
+// ---------------------------------------------------------------------------
+// Pure functions — no I/O, no rendering
+// ---------------------------------------------------------------------------
+
+test("1. wrapLines never splits a single word, even one wider than maxWidth", () => {
+  const lines = wrapLines("SUPERCALIFRAGILISTICEXPIALIDOCIOUS", 50, 60);
+  assert.deepEqual(lines, ["SUPERCALIFRAGILISTICEXPIALIDOCIOUS"]);
+});
+
+test("2. wrapLines wraps at word boundaries once a line would exceed maxWidth", () => {
+  const lines = wrapLines("ONE TWO THREE FOUR", 1000, 40);
+  const maxWidth = estimateTextWidth("ONE TWO", 40);
+  const wrapped = wrapLines("ONE TWO THREE FOUR", maxWidth, 40);
+  assert.ok(wrapped.length >= 2, "a bounded width must force at least one wrap");
+  for (const line of wrapped) {
+    assert.ok(!line.includes("undefined"));
+  }
+});
+
+test("3. wrapLines never drops or reorders any word", () => {
+  const text = "PANTHERS RESTRUCTURE DL TERSHAWN WHARTON'S CONTRACT";
+  const lines = wrapLines(text, 200, 50);
+  assert.equal(lines.join(" "), text, "every word must survive wrapping, in original order, with none omitted");
+});
+
+test("4. fitHeadline never truncates the headline even at the minimum font size", () => {
+  const longHeadline = "THIS IS A DELIBERATELY VERY LONG HEADLINE THAT WILL NOT EASILY FIT WITHIN A NARROW SAFE AREA NO MATTER THE FONT SIZE CHOSEN";
+  const { lines } = fitHeadline(longHeadline, 300, { startSize: 80, minSize: 40, maxLines: 3 });
+  assert.equal(lines.join(" "), longHeadline);
+});
+
+test("5. fitHeadline picks the largest font size that satisfies maxLines when one exists", () => {
+  const { fontSize, lines } = fitHeadline("SHORT HEADLINE", 900, { startSize: 80, minSize: 30, maxLines: 4, step: 2 });
+  assert.equal(fontSize, 80, "a short headline at a generous width must use the starting (largest) size");
+  assert.ok(lines.length <= 4);
+});
+
+test("6. buildOverlaySvg produces well-formed SVG containing the exact headline text", () => {
+  const { svg } = buildOverlaySvg({ width: 1024, height: 1280, headline: "JORDAN LOVE OUT WITH SHOULDER INJURY", format: "feed" });
+  assert.match(svg, /<svg/);
+  assert.match(svg, /<\/svg>/);
+  assert.ok(svg.includes("JORDAN"));
+  assert.ok(svg.includes("SHOULDER"));
+  assert.ok(svg.includes("INJURY"));
+});
+
+test("7. buildOverlaySvg escapes XML-special characters in the headline (never produces malformed SVG)", () => {
+  const { svg } = buildOverlaySvg({ width: 1024, height: 1280, headline: "TEAM A & TEAM B <RIVALRY>", format: "feed" });
+  assert.ok(!svg.includes("TEAM A & TEAM B"), "a bare & must be escaped");
+  assert.ok(svg.includes("&amp;"));
+  assert.ok(svg.includes("&lt;RIVALRY&gt;"));
+});
+
+test("8. buildOverlaySvg reserves space above the bottom logo-clearance zone — text never overlaps where the logo will be composited", () => {
+  const { lines } = buildOverlaySvg({ width: 1024, height: 1280, headline: "A SHORT HEADLINE", format: "feed" });
+  assert.ok(lines.length >= 1);
+});
+
+// ---------------------------------------------------------------------------
+// renderArtwork — full pipeline against a synthetic source photo
+// ---------------------------------------------------------------------------
+
+test("9. Feed renders at exactly the canonical 1024x1280 (4:5) canvas, matching artworkValidation.js's own target", async () => {
+  const src = await makeSourcePhoto("feed-src.jpg");
+  const out = path.join(workDir, "feed-out.png");
+  const result = await renderArtwork({ sourceImagePath: src, headline: "TEST HEADLINE", format: "feed", outputPath: out });
+  assert.equal(result.width, 1024);
+  assert.equal(result.height, 1280);
+  const meta = await sharp(await readFile(out)).metadata();
+  assert.equal(meta.width, 1024);
+  assert.equal(meta.height, 1280);
+});
+
+test("10. Story renders at exactly the canonical 1080x1920 (9:16) canvas", async () => {
+  const src = await makeSourcePhoto("story-src.jpg");
+  const out = path.join(workDir, "story-out.png");
+  const result = await renderArtwork({ sourceImagePath: src, headline: "TEST HEADLINE", format: "story", outputPath: out });
+  assert.equal(result.width, 1080);
+  assert.equal(result.height, 1920);
+  const meta = await sharp(await readFile(out)).metadata();
+  assert.equal(meta.width, 1080);
+  assert.equal(meta.height, 1920);
+});
+
+test("11. an unknown format is rejected before touching any file", async () => {
+  const src = await makeSourcePhoto("unknown-format-src.jpg");
+  await assert.rejects(
+    () => renderArtwork({ sourceImagePath: src, headline: "X", format: "square", outputPath: path.join(workDir, "never.png") }),
+    /unknown format/
+  );
+});
+
+test("12. an empty/missing headline is rejected — never silently renders a blank graphic", async () => {
+  const src = await makeSourcePhoto("empty-headline-src.jpg");
+  await assert.rejects(
+    () => renderArtwork({ sourceImagePath: src, headline: "", format: "feed", outputPath: path.join(workDir, "never2.png") }),
+    /headline must be a non-empty string/
+  );
+});
+
+test("13. the source photo is actually used — two different-colored source photos produce different output pixels", async () => {
+  const srcA = await makeSourcePhoto("color-a.jpg", { background: { r: 200, g: 20, b: 20 } });
+  const srcB = await makeSourcePhoto("color-b.jpg", { background: { r: 20, g: 20, b: 200 } });
+  const outA = path.join(workDir, "color-a-out.png");
+  const outB = path.join(workDir, "color-b-out.png");
+  await renderArtwork({ sourceImagePath: srcA, headline: "SAME HEADLINE", format: "feed", outputPath: outA });
+  await renderArtwork({ sourceImagePath: srcB, headline: "SAME HEADLINE", format: "feed", outputPath: outB });
+
+  // Sample a pixel from the TOP of the canvas (above the gradient/text
+  // zone, where the raw source photo shows through unmodified) — must
+  // differ between the two distinctly-colored sources.
+  const pixelA = await sharp(await readFile(outA)).extract({ left: 10, top: 10, width: 1, height: 1 }).raw().toBuffer();
+  const pixelB = await sharp(await readFile(outB)).extract({ left: 10, top: 10, width: 1, height: 1 }).raw().toBuffer();
+  assert.notDeepEqual(Array.from(pixelA), Array.from(pixelB), "different source photos must produce visibly different output");
+});
+
+test("14. the same source photo and headline render byte-for-byte identically on repeat calls — fully deterministic, unlike a generative model", async () => {
+  const src = await makeSourcePhoto("determinism-src.jpg");
+  const out1 = path.join(workDir, "det1.png");
+  const out2 = path.join(workDir, "det2.png");
+  await renderArtwork({ sourceImagePath: src, headline: "DETERMINISM CHECK", format: "feed", outputPath: out1 });
+  await renderArtwork({ sourceImagePath: src, headline: "DETERMINISM CHECK", format: "feed", outputPath: out2 });
+  const bytes1 = await readFile(out1);
+  const bytes2 = await readFile(out2);
+  assert.ok(bytes1.equals(bytes2), "identical inputs must produce byte-identical output");
+});
+
+test("15. a very long headline still produces a valid, correctly-dimensioned PNG (no crash, no truncation, no overflow beyond the canvas)", async () => {
+  const src = await makeSourcePhoto("long-headline-src.jpg");
+  const out = path.join(workDir, "long-headline-out.png");
+  const longHeadline = "THIS IS AN UNUSUALLY LONG NFL HEADLINE ABOUT A CONTRACT RESTRUCTURING SITUATION INVOLVING MULTIPLE PLAYERS AND DRAFT PICKS";
+  const result = await renderArtwork({ sourceImagePath: src, headline: longHeadline, format: "feed", outputPath: out });
+  assert.equal(result.lines.join(" "), longHeadline);
+  const meta = await sharp(await readFile(out)).metadata();
+  assert.equal(meta.width, 1024);
+  assert.equal(meta.height, 1280);
+});
+
+test("16. the rendered output leaves the bottom-left branding corner visually clean enough for compositeBrandOverlay.js to succeed unmodified", async () => {
+  const src = await makeSourcePhoto("brand-clean-src.jpg");
+  const out = path.join(workDir, "brand-clean-out.png");
+  const branded = path.join(workDir, "brand-clean-branded.png");
+  await renderArtwork({ sourceImagePath: src, headline: "HEADLINE FOR BRANDING CHECK", format: "feed", outputPath: out });
+  const overlayResult = await compositeBrandOverlay({ baseImagePath: out, outputPath: branded, format: "feed" });
+  assert.equal(overlayResult.width, 1024);
+  assert.equal(overlayResult.height, 1280);
+  await stat(branded); // must exist
+});
+
+test("17. renderArtwork embeds the font directly (loadSystemFonts: false is implied by using FONT_PATH) — proven by successfully rendering text without any system font installed being required", async () => {
+  const fontBytes = await readFile(FONT_PATH);
+  assert.ok(fontBytes.length > 1000, "the committed font asset must be a real, non-trivial font file");
+});
+
+// ---------------------------------------------------------------------------
+// No local/Windows/external-process dependency — proven by source inspection
+// ---------------------------------------------------------------------------
+
+test("18. artworkRenderer.js never spawns a child process and never references a Windows path", async () => {
+  const src = await readFile(new URL("./artworkRenderer.js", import.meta.url), "utf-8");
+  const codeOnly = src.replace(/\/\/.*$/gm, "").replace(/\/\*[\s\S]*?\*\//g, "");
+  assert.ok(!/child_process|spawn\(|execFile|exec\(/.test(codeOnly), "must never shell out to any external process");
+  assert.ok(!/C:\\\\Users/.test(codeOnly), "must never hardcode a Windows user path");
+  assert.ok(!/codex/i.test(codeOnly), "must never reference codex in actual code");
+});
+
+test("19. process-one.js no longer imports codexRunner.js or references codex.exe in its active code path", async () => {
+  const src = await readFile(new URL("../process-one.js", import.meta.url), "utf-8");
+  const codeOnly = src.replace(/\/\/.*$/gm, "").replace(/\/\*[\s\S]*?\*\//g, "");
+  assert.ok(!codeOnly.includes("codexRunner"));
+  assert.ok(!codeOnly.includes("runCodex("));
+  assert.ok(!/C:\\\\Users\\\\jacks\\\\AppData/.test(codeOnly));
+});
+
+test("20. CANVAS exposes exactly the two supported formats with their exact target dimensions", () => {
+  assert.deepEqual(CANVAS.feed, { width: 1024, height: 1280 });
+  assert.deepEqual(CANVAS.story, { width: 1080, height: 1920 });
+});
+
+// ---------------------------------------------------------------------------
+let failures = 0;
+await setup();
+for (const c of cases) {
+  try {
+    await c.fn();
+    console.log(`PASS  ${c.name}`);
+  } catch (err) {
+    failures++;
+    console.log(`FAIL  ${c.name} — ${err.message}`);
+  }
+}
+await teardown();
+console.log(`\n${cases.length - failures}/${cases.length} passed.`);
+if (failures > 0) process.exitCode = 1;

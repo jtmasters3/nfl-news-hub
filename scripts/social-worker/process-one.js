@@ -1,13 +1,30 @@
 #!/usr/bin/env node
-// Local processor: claims exactly one queued story from the live artwork
-// queue (or a specific story_id via --story-id), generates its Feed
+// Cloud-safe processor: claims exactly one queued story from the live
+// artwork queue (or a specific story_id via --story-id), generates its Feed
 // graphic AND (for content_package_version 2 stories) its Story graphic
-// with the already-proven Codex workflow, uploads each through the
-// Cloudflare Worker bridge, then — once BOTH required assets are durably
-// valid — generates and submits its caption through a fully independent
-// claim (see lib/apiClient.js's claim/complete/failCaption).
+// with the deterministic renderer (see lib/artworkRenderer.js), uploads
+// each through the Cloudflare Worker bridge, then — once BOTH required
+// assets are durably valid — composes and submits its caption
+// deterministically (see lib/captionComposer.js) through a fully
+// independent claim (see lib/apiClient.js's claim/complete/failCaption).
 // Never writes to production state directly — every decision is made by
 // the backend, reached only through lib/apiClient.js.
+//
+// ==========================================================================
+// 2026-09-14 removal of the local Windows Codex dependency
+// ==========================================================================
+// The first unattended GitHub Actions run tried to shell out to
+// C:\Users\jacks\AppData\Local\OpenAI\Codex\bin\codex.exe from a Linux
+// runner and failed 3/3 attempts, exactly as it must — that path can never
+// exist there. This file no longer spawns any external process, reads any
+// prompt template, or depends on any path outside this repo for either
+// artwork or captions — see artworkRenderer.js's and captionComposer.js's
+// own headers for the full rationale and the honest, disclosed trade-off
+// (a general-purpose deterministic layout rather than several bespoke
+// AI-interpreted template styles). The retired codex-exec plumbing
+// (codexRunner.js, codexOutcome.js, the three prompt templates) has been
+// deleted, not merely left dormant — nothing in this repo can invoke a
+// local Codex executable anymore, by construction, not by convention.
 //
 // Three entry paths, landing in the same eventual phases:
 //   - No --story-id, or a --story-id currently in the live artwork queue:
@@ -25,8 +42,7 @@
 //   node scripts/social-worker/process-one.js [--story-id=<id>]
 //
 // Required env: ARTWORK_WORKER_BASE_URL, AGGREGATE_ARTWORK_API_TOKEN.
-// See scripts/social-worker/lib/codexRunner.js for CODEX_* env vars.
-import { mkdir, writeFile, readFile, rm } from "node:fs/promises";
+import { mkdir, rm } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import {
@@ -48,12 +64,11 @@ import {
   fetchArtworkQueue,
   fetchSocialState,
 } from "./lib/apiClient.js";
-import { runCodex } from "./lib/codexRunner.js";
+import { renderArtwork } from "./lib/artworkRenderer.js";
 import { readPngDimensions } from "./lib/pngDimensions.js";
 import { compositeBrandOverlay } from "./lib/brandOverlay.js";
 import { selectTarget, missingFixtureFields } from "./lib/selectTarget.js";
 import { determineArtworkPlan } from "./lib/artworkPlan.js";
-import { assertOutputProduced } from "./lib/codexOutcome.js";
 import { downloadSourceImageWithRetries, cleanupSourceImage } from "./lib/sourceImage.js";
 import { generateWithRetries, MAX_GENERATION_ATTEMPTS } from "./lib/generateWithRetries.js";
 import { waitForCaptionClaim, CAPTION_CLAIM_POLL_MAX_ATTEMPTS, CAPTION_CLAIM_POLL_INTERVAL_MS } from "./lib/waitForCaptionClaim.js";
@@ -62,16 +77,10 @@ import { waitForStoryArtworkClaim, STORY_ARTWORK_CLAIM_POLL_MAX_ATTEMPTS, STORY_
 import { shouldSkipArtwork } from "./lib/routeTarget.js";
 import { determineRecoveryAction } from "./lib/routeRecovery.js";
 import { validateCaption } from "../lib/captionValidation.js";
-import { buildHashtags } from "./lib/captionFormatting.js";
+import { buildDeterministicCaption } from "./lib/captionComposer.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
 const SOCIAL_OUTPUT_DIR = path.join(ROOT, "social-output");
-const FEED_TEMPLATE_PATH = path.join(ROOT, "scripts", "social-worker", "templates", "automation-prompt.template.md");
-const STORY_TEMPLATE_PATH = path.join(ROOT, "scripts", "social-worker", "templates", "story-prompt.template.md");
-const CAPTION_TEMPLATE_PATH = path.join(ROOT, "scripts", "social-worker", "templates", "caption-prompt.template.md");
-const DEFAULT_TEMPLATE_PACK_DIR =
-  "C:\\Users\\jacks\\Documents\\Codex\\2026-08-26\\use-this-story-s-headline-and\\outputs\\aggregate-nfl-reference-pack";
-const MAX_CAPTION_ATTEMPTS = 3;
 
 function parseArgs(argv) {
   const args = { storyId: null, regenerateFeed: false, regenerateStory: false };
@@ -91,25 +100,8 @@ function parseArgs(argv) {
 // Phase 1a: Content Creation — Feed (4:5)
 // ---------------------------------------------------------------------------
 
-async function buildFeedPrompt({ storyId, workDir, fixture, sourceImagePath }) {
-  const template = await readFile(FEED_TEMPLATE_PATH, "utf-8");
-  const fixturePath = path.join(workDir, "fixture.json");
-  await writeFile(fixturePath, JSON.stringify(fixture, null, 2) + "\n", "utf-8");
-
-  const outputPath = path.join(SOCIAL_OUTPUT_DIR, `${storyId}.png`);
-  const templatePackDir = process.env.AGGREGATE_TEMPLATE_PACK_DIR || DEFAULT_TEMPLATE_PACK_DIR;
-
-  const promptText = template
-    .replaceAll("{{fixture_path}}", fixturePath)
-    .replaceAll("{{template_pack_dir}}", templatePackDir)
-    .replaceAll("{{output_path}}", outputPath)
-    .replaceAll("{{base_image_path}}", sourceImagePath)
-    .replaceAll("{{source_name}}", fixture.source_name || "the original source");
-
-  const promptFilePath = path.join(workDir, "prompt.md");
-  await writeFile(promptFilePath, promptText, "utf-8");
-
-  return { promptText, outputPath };
+function feedOutputPath(storyId) {
+  return path.join(SOCIAL_OUTPUT_DIR, `${storyId}.png`);
 }
 
 /** @returns {Promise<boolean>} whether Feed completed successfully */
@@ -128,27 +120,14 @@ async function processFeedArtwork({ storyId, workDir, fixture, sourceImagePath }
   console.log(`Feed claimed. claim_id=${claimId}`);
 
   try {
-    const { promptText, outputPath } = await buildFeedPrompt({ storyId, workDir, fixture, sourceImagePath });
+    const outputPath = feedOutputPath(storyId);
 
     await generateWithRetries(
       async (attempt) => {
-        console.log(`Running codex exec for Feed (attempt ${attempt}/${MAX_GENERATION_ATTEMPTS})...`);
+        console.log(`Rendering Feed artwork (attempt ${attempt}/${MAX_GENERATION_ATTEMPTS})...`);
         await rm(outputPath, { force: true });
 
-        let codexResult;
-        try {
-          codexResult = await runCodex({ promptText, addDir: SOCIAL_OUTPUT_DIR });
-        } catch (codexErr) {
-          await writeFile(path.join(workDir, `codex.feed.attempt${attempt}.stdout.log`), codexErr.codexStdout ?? "", "utf-8");
-          await writeFile(path.join(workDir, `codex.feed.attempt${attempt}.stderr.log`), codexErr.codexStderr ?? "", "utf-8");
-          console.error(`codex exec (Feed) failed (exit code ${codexErr.codexExitCode ?? "n/a"}) — see ${workDir}\\codex.feed.attempt${attempt}.std{out,err}.log`);
-          throw codexErr;
-        }
-        await writeFile(path.join(workDir, `codex.feed.attempt${attempt}.stdout.log`), codexResult.stdout, "utf-8");
-        await writeFile(path.join(workDir, `codex.feed.attempt${attempt}.stderr.log`), codexResult.stderr, "utf-8");
-        console.log(`codex exec (Feed) exited 0 (attempt ${attempt}). stdout/stderr written to ${workDir}`);
-
-        await assertOutputProduced(outputPath, codexResult.stdout);
+        await renderArtwork({ sourceImagePath, headline: fixture.post_headline, format: "feed", outputPath });
 
         const attemptDims = await readPngDimensions(outputPath);
         if (!attemptDims || attemptDims.sizeBytes === 0) {
@@ -160,12 +139,12 @@ async function processFeedArtwork({ storyId, workDir, fixture, sourceImagePath }
     );
 
     // Deterministic brand compositing (2026-09 fix — see brandOverlay.js):
-    // Codex is now prompted to leave the branding area clean; the exact
+    // renderArtwork() above leaves the branding area clean; the exact
     // official logo, hash-verified against the canonical asset, is pasted
-    // on here by code — never by image generation. A compositing failure
+    // on here by code, never approximated. A compositing failure
     // (missing/corrupt logo, out-of-bounds placement) fails this whole
-    // attempt exactly like a generation failure — nothing unbranded or
-    // AI-approximated is ever uploaded.
+    // attempt exactly like a rendering failure — nothing unbranded is
+    // ever uploaded.
     const brandedPath = outputPath.replace(/\.png$/i, ".branded.png");
     console.log("Compositing official logo onto Feed...");
     const overlayResult = await compositeBrandOverlay({ baseImagePath: outputPath, outputPath: brandedPath, format: "feed" });
@@ -214,25 +193,8 @@ async function processFeedArtwork({ storyId, workDir, fixture, sourceImagePath }
 // (story-artwork:{story_id}), never touching Feed's own claim/upload.
 // ---------------------------------------------------------------------------
 
-async function buildStoryPrompt({ storyId, workDir, fixture, sourceImagePath }) {
-  const template = await readFile(STORY_TEMPLATE_PATH, "utf-8");
-  const fixturePath = path.join(workDir, "story-fixture.json");
-  await writeFile(fixturePath, JSON.stringify(fixture, null, 2) + "\n", "utf-8");
-
-  const outputPath = path.join(SOCIAL_OUTPUT_DIR, "story", `${storyId}.png`);
-  const templatePackDir = process.env.AGGREGATE_TEMPLATE_PACK_DIR || DEFAULT_TEMPLATE_PACK_DIR;
-
-  const promptText = template
-    .replaceAll("{{fixture_path}}", fixturePath)
-    .replaceAll("{{template_pack_dir}}", templatePackDir)
-    .replaceAll("{{output_path}}", outputPath)
-    .replaceAll("{{base_image_path}}", sourceImagePath)
-    .replaceAll("{{source_name}}", fixture.source_name || "the original source");
-
-  const promptFilePath = path.join(workDir, "story-prompt.md");
-  await writeFile(promptFilePath, promptText, "utf-8");
-
-  return { promptText, outputPath };
+function storyOutputPath(storyId) {
+  return path.join(SOCIAL_OUTPUT_DIR, "story", `${storyId}.png`);
 }
 
 /** @returns {Promise<boolean>} whether Story completed successfully. Never touches Feed. */
@@ -273,27 +235,14 @@ async function processStoryArtwork({ storyId, workDir, fixture, sourceImagePath 
   await mkdir(path.join(SOCIAL_OUTPUT_DIR, "story"), { recursive: true });
 
   try {
-    const { promptText, outputPath } = await buildStoryPrompt({ storyId, workDir, fixture, sourceImagePath });
+    const outputPath = storyOutputPath(storyId);
 
     await generateWithRetries(
       async (attempt) => {
-        console.log(`Running codex exec for Story (attempt ${attempt}/${MAX_GENERATION_ATTEMPTS})...`);
+        console.log(`Rendering Story artwork (attempt ${attempt}/${MAX_GENERATION_ATTEMPTS})...`);
         await rm(outputPath, { force: true });
 
-        let codexResult;
-        try {
-          codexResult = await runCodex({ promptText, addDir: SOCIAL_OUTPUT_DIR });
-        } catch (codexErr) {
-          await writeFile(path.join(workDir, `codex.story.attempt${attempt}.stdout.log`), codexErr.codexStdout ?? "", "utf-8");
-          await writeFile(path.join(workDir, `codex.story.attempt${attempt}.stderr.log`), codexErr.codexStderr ?? "", "utf-8");
-          console.error(`codex exec (Story) failed (exit code ${codexErr.codexExitCode ?? "n/a"}) — see ${workDir}\\codex.story.attempt${attempt}.std{out,err}.log`);
-          throw codexErr;
-        }
-        await writeFile(path.join(workDir, `codex.story.attempt${attempt}.stdout.log`), codexResult.stdout, "utf-8");
-        await writeFile(path.join(workDir, `codex.story.attempt${attempt}.stderr.log`), codexResult.stderr, "utf-8");
-        console.log(`codex exec (Story) exited 0 (attempt ${attempt}). stdout/stderr written to ${workDir}`);
-
-        await assertOutputProduced(outputPath, codexResult.stdout);
+        await renderArtwork({ sourceImagePath, headline: fixture.post_headline, format: "story", outputPath });
 
         const attemptDims = await readPngDimensions(outputPath);
         if (!attemptDims || attemptDims.sizeBytes === 0) {
@@ -379,27 +328,14 @@ async function processPrimaryStoryArtwork({ storyId, workDir, fixture, sourceIma
   await mkdir(path.join(SOCIAL_OUTPUT_DIR, "story"), { recursive: true });
 
   try {
-    const { promptText, outputPath } = await buildStoryPrompt({ storyId, workDir, fixture, sourceImagePath });
+    const outputPath = storyOutputPath(storyId);
 
     await generateWithRetries(
       async (attempt) => {
-        console.log(`Running codex exec for Story-primary (attempt ${attempt}/${MAX_GENERATION_ATTEMPTS})...`);
+        console.log(`Rendering Story-primary artwork (attempt ${attempt}/${MAX_GENERATION_ATTEMPTS})...`);
         await rm(outputPath, { force: true });
 
-        let codexResult;
-        try {
-          codexResult = await runCodex({ promptText, addDir: SOCIAL_OUTPUT_DIR });
-        } catch (codexErr) {
-          await writeFile(path.join(workDir, `codex.story-primary.attempt${attempt}.stdout.log`), codexErr.codexStdout ?? "", "utf-8");
-          await writeFile(path.join(workDir, `codex.story-primary.attempt${attempt}.stderr.log`), codexErr.codexStderr ?? "", "utf-8");
-          console.error(`codex exec (Story-primary) failed (exit code ${codexErr.codexExitCode ?? "n/a"}) — see ${workDir}\\codex.story-primary.attempt${attempt}.std{out,err}.log`);
-          throw codexErr;
-        }
-        await writeFile(path.join(workDir, `codex.story-primary.attempt${attempt}.stdout.log`), codexResult.stdout, "utf-8");
-        await writeFile(path.join(workDir, `codex.story-primary.attempt${attempt}.stderr.log`), codexResult.stderr, "utf-8");
-        console.log(`codex exec (Story-primary) exited 0 (attempt ${attempt}). stdout/stderr written to ${workDir}`);
-
-        await assertOutputProduced(outputPath, codexResult.stdout);
+        await renderArtwork({ sourceImagePath, headline: fixture.post_headline, format: "story", outputPath });
 
         const attemptDims = await readPngDimensions(outputPath);
         if (!attemptDims || attemptDims.sizeBytes === 0) {
@@ -492,7 +428,7 @@ async function processArtwork(target) {
 
   let sourceImagePath;
   try {
-    // Download the base photograph ourselves BEFORE ever invoking Codex —
+    // Download the base photograph ourselves BEFORE ever calling renderArtwork() —
     // see lib/sourceImage.js for why. Reused for BOTH Feed and Story, per
     // "download once per processing lifecycle where practical."
     console.log("Downloading source image locally...");
@@ -607,23 +543,13 @@ async function processFeedRegeneration({ storyId, workDir, fixture, sourceImageP
   console.log(`Feed regeneration claimed. claim_id=${claimId}`);
 
   try {
-    const { promptText, outputPath } = await buildFeedPrompt({ storyId, workDir, fixture, sourceImagePath });
+    const outputPath = feedOutputPath(storyId);
 
     await generateWithRetries(
       async (attempt) => {
-        console.log(`Running codex exec for Feed regeneration (attempt ${attempt}/${MAX_GENERATION_ATTEMPTS})...`);
+        console.log(`Rendering Feed regeneration (attempt ${attempt}/${MAX_GENERATION_ATTEMPTS})...`);
         await rm(outputPath, { force: true });
-        let codexResult;
-        try {
-          codexResult = await runCodex({ promptText, addDir: SOCIAL_OUTPUT_DIR });
-        } catch (codexErr) {
-          await writeFile(path.join(workDir, `codex.feed-regen.attempt${attempt}.stdout.log`), codexErr.codexStdout ?? "", "utf-8");
-          await writeFile(path.join(workDir, `codex.feed-regen.attempt${attempt}.stderr.log`), codexErr.codexStderr ?? "", "utf-8");
-          throw codexErr;
-        }
-        await writeFile(path.join(workDir, `codex.feed-regen.attempt${attempt}.stdout.log`), codexResult.stdout, "utf-8");
-        await writeFile(path.join(workDir, `codex.feed-regen.attempt${attempt}.stderr.log`), codexResult.stderr, "utf-8");
-        await assertOutputProduced(outputPath, codexResult.stdout);
+        await renderArtwork({ sourceImagePath, headline: fixture.post_headline, format: "feed", outputPath });
         const attemptDims = await readPngDimensions(outputPath);
         if (!attemptDims || attemptDims.sizeBytes === 0) throw new Error(`Output PNG missing or empty at ${outputPath}`);
         console.log(`Feed regenerated on attempt ${attempt}: ${outputPath} (${attemptDims.width}x${attemptDims.height}, ${attemptDims.sizeBytes} bytes)`);
@@ -671,23 +597,13 @@ async function processStoryRegeneration({ storyId, workDir, fixture, sourceImage
   await mkdir(path.join(SOCIAL_OUTPUT_DIR, "story"), { recursive: true });
 
   try {
-    const { promptText, outputPath } = await buildStoryPrompt({ storyId, workDir, fixture, sourceImagePath });
+    const outputPath = storyOutputPath(storyId);
 
     await generateWithRetries(
       async (attempt) => {
-        console.log(`Running codex exec for Story regeneration (attempt ${attempt}/${MAX_GENERATION_ATTEMPTS})...`);
+        console.log(`Rendering Story regeneration (attempt ${attempt}/${MAX_GENERATION_ATTEMPTS})...`);
         await rm(outputPath, { force: true });
-        let codexResult;
-        try {
-          codexResult = await runCodex({ promptText, addDir: SOCIAL_OUTPUT_DIR });
-        } catch (codexErr) {
-          await writeFile(path.join(workDir, `codex.story-regen.attempt${attempt}.stdout.log`), codexErr.codexStdout ?? "", "utf-8");
-          await writeFile(path.join(workDir, `codex.story-regen.attempt${attempt}.stderr.log`), codexErr.codexStderr ?? "", "utf-8");
-          throw codexErr;
-        }
-        await writeFile(path.join(workDir, `codex.story-regen.attempt${attempt}.stdout.log`), codexResult.stdout, "utf-8");
-        await writeFile(path.join(workDir, `codex.story-regen.attempt${attempt}.stderr.log`), codexResult.stderr, "utf-8");
-        await assertOutputProduced(outputPath, codexResult.stdout);
+        await renderArtwork({ sourceImagePath, headline: fixture.post_headline, format: "story", outputPath });
         const attemptDims = await readPngDimensions(outputPath);
         if (!attemptDims || attemptDims.sizeBytes === 0) throw new Error(`Output PNG missing or empty at ${outputPath}`);
         console.log(`Story regenerated on attempt ${attempt}: ${outputPath} (${attemptDims.width}x${attemptDims.height}, ${attemptDims.sizeBytes} bytes)`);
@@ -809,28 +725,6 @@ async function processPackageRegeneration(storyId, { regenerateFeed, regenerateS
 // in any way — a caption failure here cannot regenerate or lose it.
 // ---------------------------------------------------------------------------
 
-async function buildCaptionPrompt({ workDir, captionFixture, feedback }) {
-  const template = await readFile(CAPTION_TEMPLATE_PATH, "utf-8");
-  const fixturePath = path.join(workDir, "caption-fixture.json");
-  await writeFile(fixturePath, JSON.stringify(captionFixture, null, 2) + "\n", "utf-8");
-
-  const outputPath = path.join(workDir, "caption.txt");
-  const feedbackSection = feedback
-    ? `\nYour previous attempt was rejected for: ${feedback}. Fix this and try again — do not repeat the same mistake.\n`
-    : "";
-
-  const promptText = template
-    .replaceAll("{{fixture_path}}", fixturePath)
-    .replaceAll("{{output_path}}", outputPath)
-    .replaceAll("{{source_name}}", captionFixture.source_name || "the original source")
-    .replace("{{feedback_section}}", feedbackSection);
-
-  const promptFilePath = path.join(workDir, "caption-prompt.md");
-  await writeFile(promptFilePath, promptText, "utf-8");
-
-  return { promptText, outputPath };
-}
-
 async function processCaption(storyId) {
   console.log(`Claiming caption work for ${storyId}...`);
   // /social/artwork/complete and /social/story-artwork/complete both
@@ -882,57 +776,33 @@ async function processCaption(storyId) {
     is_rumor: sourceStory.is_rumor || false,
   };
 
-  const workDir = path.join(SOCIAL_OUTPUT_DIR, "work", storyId);
-  await mkdir(workDir, { recursive: true });
-
-  let feedback = null;
   let lastCandidateText = null;
-  let finalCaptionText = null;
 
   try {
-    await generateWithRetries(
-      async (attempt) => {
-        console.log(`Running codex exec for caption (attempt ${attempt}/${MAX_CAPTION_ATTEMPTS})...`);
-        const { promptText, outputPath } = await buildCaptionPrompt({ workDir, captionFixture, feedback });
-        await rm(outputPath, { force: true });
+    // Deterministic composition (2026-09-14, see captionComposer.js's own
+    // header) — built ONLY from the verbatim canonical fixture fields
+    // above, so unlike the retired codex-exec path this cannot produce a
+    // DIFFERENT result on a retry; a validation failure here is a genuine
+    // bug (or a truly pathological fixture, e.g. an empty headline) worth
+    // surfacing immediately rather than burning retry attempts on an
+    // identical computation. Still runs through the SAME shared
+    // validateCaption() the server-side gate uses (scripts/lib/captionValidation.js)
+    // as defense in depth — passing here is a strong signal, not a
+    // guarantee — the server-side pass in captionEvents.js is still the
+    // authoritative one.
+    const { text: finalCaptionText, hashtags } = buildDeterministicCaption(captionFixture);
+    lastCandidateText = finalCaptionText;
 
-        let codexResult;
-        try {
-          codexResult = await runCodex({ promptText, addDir: SOCIAL_OUTPUT_DIR });
-        } catch (codexErr) {
-          await writeFile(path.join(workDir, `caption.attempt${attempt}.stdout.log`), codexErr.codexStdout ?? "", "utf-8");
-          await writeFile(path.join(workDir, `caption.attempt${attempt}.stderr.log`), codexErr.codexStderr ?? "", "utf-8");
-          console.error(`codex exec (caption) failed (exit code ${codexErr.codexExitCode ?? "n/a"}) — see ${workDir}\\caption.attempt${attempt}.std{out,err}.log`);
-          throw codexErr;
-        }
-        await writeFile(path.join(workDir, `caption.attempt${attempt}.stdout.log`), codexResult.stdout, "utf-8");
-        await writeFile(path.join(workDir, `caption.attempt${attempt}.stderr.log`), codexResult.stderr, "utf-8");
-
-        await assertOutputProduced(outputPath, codexResult.stdout);
-        const text = (await readFile(outputPath, "utf-8")).trim();
-        lastCandidateText = text;
-
-        // Local validation (bounded retry loop, feedback-driven) — the
-        // SAME shared validateCaption() the server-side gate uses (see
-        // scripts/lib/captionValidation.js), imported directly since this
-        // processor lives in the same repo. Passing here is a strong
-        // signal, not a guarantee — the server-side pass in
-        // scripts/lib/captionEvents.js is still the authoritative one.
-        const { passed, issues } = validateCaption(text, captionFixture);
-        if (!passed) {
-          feedback = issues.join("; ");
-          throw new Error(`Local caption validation rejected: ${feedback}`);
-        }
-        console.log(`Caption generated and locally validated on attempt ${attempt}.`);
-        finalCaptionText = text;
-      },
-      { onAttemptFailure: (attempt, err) => console.error(`Caption attempt ${attempt} failed: ${err.message}`), maxAttempts: MAX_CAPTION_ATTEMPTS }
-    );
+    const { passed, issues } = validateCaption(finalCaptionText, captionFixture);
+    if (!passed) {
+      throw new Error(`Deterministic caption failed local validation: ${issues.join("; ")}`);
+    }
+    console.log("Caption composed deterministically and locally validated.");
 
     console.log("Submitting caption...");
     const completeResult = await completeCaption(storyId, claimId, {
       text: finalCaptionText,
-      hashtags: buildHashtags(captionFixture.teams),
+      hashtags,
       attributionLine: `Source: ${captionFixture.source_name}`,
       sourceUrl: captionFixture.source_url,
     });

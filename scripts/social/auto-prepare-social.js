@@ -340,7 +340,16 @@ async function tryRecoverCaption(storyId, record, { getCaptionClaimStatusImpl, r
 
   if (!eligibility.eligible) {
     console.log(`story_id=${storyId} is NOT safely replayable (${eligibility.issues.join(", ")}). Failing closed: no replay, no regeneration, no approval.`);
-    return { ok: false, step: "caption_recovery_eligibility", selected: { story_id: storyId, record }, eligibility };
+    // ok:true (2026-09-14) — this is an ordinary, expected, frequent
+    // outcome (e.g. the OTHER process still actively generating this
+    // caption simply hasn't reached DO-completed yet), not an
+    // infrastructure problem. It belongs in the SAME "legitimate gate
+    // rejection handled as designed" success bucket as an ineligible
+    // auto-approval-gate result — never a workflow failure. Only a
+    // genuine inability to even READ the Durable Object (the branch
+    // above), a Worker-side replay refusal, or a durable-confirmation
+    // timeout (both below) are real failures worth turning the workflow red.
+    return { ok: true, step: "caption_recovery_eligibility", selected: { story_id: storyId, record }, eligibility };
   }
 
   const claimId = eligibility.claimId;
@@ -562,12 +571,50 @@ export function resolveRunMode({ eventName, inputMode } = {}) {
   return inputMode === "live" ? "live" : "dry-run";
 }
 
+/**
+ * 2026-09-14 workflow semantic-failure fix. Maps main()'s own resolved
+ * result to a process exit code — extracted as a pure function so this
+ * guarantee (a genuine infrastructure/durability failure MUST turn the
+ * GitHub Actions workflow red, never green) is directly unit-testable.
+ *
+ * Before this fix, the CLI entrypoint only ever set a nonzero exit code if
+ * main() itself REJECTED (an uncaught exception) — every one of main()'s
+ * own considered `{ok: false, ...}` returns (a durable-commit timeout, a
+ * caption-recovery replay refusal, an approval-commit-confirmation
+ * timeout) resolved normally and reported a GREEN workflow run despite a
+ * real semantic preparation failure — exactly what happened in production
+ * (story_id 03388ac4-924c-48ac-91c1-987016029881: codex.exe unavailable on
+ * the GitHub Actions runner, 3/3 generation attempts failed, the durable
+ * post-preparation poll timed out, main() correctly returned `ok: false`
+ * — and the workflow still showed green).
+ *
+ * main()'s own `ok` field already encodes exactly the SUCCESS/FAILURE
+ * split this needs — "no eligible candidate," "candidate prepared and
+ * approved," and "a legitimate gate/eligibility rejection handled as
+ * designed" are all `ok: true`; "a durable state was never confirmed" and
+ * "a Worker-side replay was refused" are `ok: false`. This function's only
+ * job is making that field actually reach the process exit code.
+ * @param {{ok: boolean}|null|undefined} result
+ * @returns {0|1}
+ */
+export function determineExitCode(result) {
+  return result && result.ok ? 0 : 1;
+}
+
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const cliLive = process.argv.includes("--live");
   const resolvedMode = resolveRunMode({ eventName: process.env.GITHUB_EVENT_NAME, inputMode: process.env.INPUT_MODE });
   const live = cliLive || resolvedMode === "live";
-  main({ live }).catch((err) => {
-    console.error("auto-prepare-social failed:", err);
-    process.exitCode = 1;
-  });
+  main({ live })
+    .then((result) => {
+      const exitCode = determineExitCode(result);
+      if (exitCode !== 0) {
+        console.error(`auto-prepare-social finished with a non-success result (ok=${result?.ok}, step=${result?.step ?? "n/a"}) — failing the workflow visibly. See the log above for the exact reason.`);
+      }
+      process.exitCode = exitCode;
+    })
+    .catch((err) => {
+      console.error("auto-prepare-social failed:", err);
+      process.exitCode = 1;
+    });
 }

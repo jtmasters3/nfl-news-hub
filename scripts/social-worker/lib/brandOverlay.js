@@ -30,7 +30,11 @@ export const CANONICAL_LOGO_SHA256 = "d73259067ad43caf33c4eff5950c7e3d5d8a3fb541
 // exact output size. Story gets a larger bottom safe-zone specifically
 // because a phone Story viewer's own UI (reply bar, progress indicator)
 // sits closer to the bottom edge than a Feed post ever does.
-const PLACEMENT = {
+// Exported so artworkRenderer.js's deterministic headline layout can
+// reserve exactly the same bottom-left footprint this step will later fill
+// — a single source of truth for logo geometry, never a second, drifting
+// copy of these ratios.
+export const PLACEMENT = {
   feed: { widthRatio: 0.28, paddingXRatio: 0.06, paddingBottomRatio: 0.05 },
   story: { widthRatio: 0.3, paddingXRatio: 0.06, paddingBottomRatio: 0.1 },
 };
