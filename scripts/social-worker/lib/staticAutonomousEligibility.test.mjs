@@ -3,6 +3,7 @@
 // Run with: node scripts/social-worker/lib/staticAutonomousEligibility.test.mjs
 import assert from "node:assert/strict";
 import { evaluateStaticAutonomousEligibility } from "./staticAutonomousEligibility.js";
+import { isSelectionExpired } from "../../lib/selectionEngine.js";
 
 const cases = [];
 function test(name, fn) {
@@ -179,6 +180,62 @@ test("21. a merged story is skipped", () => {
 test("22. a null/undefined record is rejected without throwing", () => {
   assert.equal(evaluateStaticAutonomousEligibility(null).eligible, false);
   assert.equal(evaluateStaticAutonomousEligibility(undefined).eligible, false);
+});
+
+// ---------------------------------------------------------------------------
+// 2026-09-14 durability fix — stale-selection leak (real production post,
+// story_id 33e7e68f-3076-423d-abb9-ce9844426ee1, "EMMANUEL ACHO COMMENTS
+// SPARK NFL INVESTIGATION OF DOM DISANDRO": selected 2026-09-10 for that
+// day's 12:00 PM ET Feed slot, sat at "queued" for four days, then
+// autonomously generated and posted on 2026-09-14 as if it were current).
+// ---------------------------------------------------------------------------
+
+test("23. isSelectionExpired: exactly at window_end + grace is expired (Feed, 2h grace)", () => {
+  const windowEnd = "2026-09-10T16:00:00.000Z"; // the real record's own window_end
+  const expiryMs = Date.parse(windowEnd) + 2 * 60 * 60 * 1000;
+  assert.equal(isSelectionExpired({ destination: "feed", window_end: windowEnd }, expiryMs), true);
+});
+
+test("24. isSelectionExpired: one millisecond before window_end + grace is NOT yet expired (Feed)", () => {
+  const windowEnd = "2026-09-10T16:00:00.000Z";
+  const expiryMs = Date.parse(windowEnd) + 2 * 60 * 60 * 1000;
+  assert.equal(isSelectionExpired({ destination: "feed", window_end: windowEnd }, expiryMs - 1), false);
+});
+
+test("25. isSelectionExpired: a Story selection uses a 1h grace, not Feed's 2h", () => {
+  const windowEnd = "2026-09-10T16:00:00.000Z";
+  const oneHourLater = Date.parse(windowEnd) + 60 * 60 * 1000;
+  assert.equal(isSelectionExpired({ destination: "story", window_end: windowEnd }, oneHourLater), true);
+  assert.equal(isSelectionExpired({ destination: "feed", window_end: windowEnd }, oneHourLater), false, "the same elapsed time must NOT expire a Feed selection, which gets the longer 2h grace");
+});
+
+test("26. isSelectionExpired: no selection at all is never 'expired' — this predicate only applies once a selection exists", () => {
+  assert.equal(isSelectionExpired(null, Date.now()), false);
+  assert.equal(isSelectionExpired(undefined, Date.now()), false);
+});
+
+test("27. isSelectionExpired: a missing/invalid window_end never throws and is treated as not-expired", () => {
+  assert.equal(isSelectionExpired({ destination: "feed" }, Date.now()), false);
+  assert.equal(isSelectionExpired({ destination: "feed", window_end: "not-a-date" }, Date.now()), false);
+});
+
+test("28. THE EXACT PRODUCTION RECORD — a record shaped exactly like story_id 33e7e68f-3076-423d-abb9-ce9844426ee1 (selected 2026-09-10 for the 12:00 PM Feed slot, still 'queued' four days later on 2026-09-14) is REJECTED with selection_window_expired, never silently eligible", () => {
+  const record = validQueuedRecord({
+    selection: { destination: "feed", slot_id: "feed:2026-09-10T12:00:00-04:00", selected_at: "2026-09-10T16:00:27.781Z", window_start: "2026-09-10T14:00:00.000Z", window_end: "2026-09-10T16:00:00.000Z" },
+  });
+  const fourDaysLaterMs = Date.parse("2026-09-14T19:37:17.701Z"); // the real claim timestamp that actually occurred
+  const result = evaluateStaticAutonomousEligibility(record, fourDaysLaterMs);
+  assert.equal(result.eligible, false);
+  assert.ok(result.issues.includes("selection_window_expired"), JSON.stringify(result.issues));
+});
+
+test("29. a FRESH selection (well within its own slot + one grace period) remains fully eligible — this fix must never block legitimate, timely autonomous processing", () => {
+  const record = validQueuedRecord({
+    selection: { destination: "feed", slot_id: "feed:2026-09-14T16:00:00-04:00", selected_at: "2026-09-14T20:00:05.000Z", window_start: "2026-09-14T18:00:00.000Z", window_end: "2026-09-14T20:00:00.000Z" },
+  });
+  const twentyFiveMinutesLaterMs = Date.parse("2026-09-14T20:25:00.000Z"); // matches the real ~25 minute claim-to-post pipeline duration
+  const result = evaluateStaticAutonomousEligibility(record, twentyFiveMinutesLaterMs);
+  assert.equal(result.eligible, true, JSON.stringify(result.issues));
 });
 
 // ---------------------------------------------------------------------------

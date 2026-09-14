@@ -234,18 +234,21 @@ function categorizeIssues(issues) {
  *   {mode: null, story_id: null, record: null, queuePosition: null, inspectedCount: number, skipCounts: object, queueLength: number}
  * >}
  */
-export async function selectAutonomousCandidate({ fetchQueue, fetchState, excludeStoryIds }) {
+export async function selectAutonomousCandidate({ fetchQueue, fetchState, excludeStoryIds, now = Date.now() }) {
   const exclude = excludeStoryIds ? new Set(excludeStoryIds) : null;
   const [queue, state] = await Promise.all([fetchQueue(), fetchState()]);
   const stories = state?.stories ?? {};
 
   // Priority 1: the OLDEST already-awaiting_approval, still-pending record
   // — evaluated against the CURRENT gate fresh in main(), never pre-
-  // filtered here by whether it happens to pass right now.
+  // filtered here by whether it happens to pass right now. Still subject to
+  // evaluateStaticAutonomousEligibility's own selection-expiry check (see
+  // that file's 2026-09-14 header) — a fully-prepared record whose
+  // selection has since gone stale must not be auto-approved either.
   const awaitingCandidates = Object.entries(stories)
     .filter(([story_id, r]) => r.status === "awaiting_approval" && !(exclude && exclude.has(story_id)))
     .map(([story_id, record]) => ({ story_id, record }))
-    .filter(({ record }) => evaluateStaticAutonomousEligibility(record).eligible);
+    .filter(({ record }) => evaluateStaticAutonomousEligibility(record, now).eligible);
   awaitingCandidates.sort(sortByOldestSelectedAt);
 
   if (awaitingCandidates.length > 0) {
@@ -291,7 +294,7 @@ export async function selectAutonomousCandidate({ fetchQueue, fetchState, exclud
   for (let i = 0; i < queue.length; i++) {
     if (exclude && exclude.has(queue[i].story_id)) continue;
     const record = stories[queue[i].story_id];
-    const result = evaluateStaticAutonomousEligibility(record);
+    const result = evaluateStaticAutonomousEligibility(record, now);
     if (result.eligible) {
       return { mode: "generate", story_id: queue[i].story_id, record, queuePosition: i, inspectedCount: i + 1, skipCounts };
     }
@@ -336,8 +339,8 @@ export function runExistingPreparationPipeline({ storyId }) {
  * "approve-only" (already fully prepared) selection modes so the actual
  * decision logic exists in exactly one place.
  */
-async function tryAutoApprove(storyId, record, { decideApprovalImpl, waitForApprovalCommitImpl, fetchState }) {
-  const gate = evaluateAutoApprovalGate(record);
+async function tryAutoApprove(storyId, record, { decideApprovalImpl, waitForApprovalCommitImpl, fetchState, now = Date.now() }) {
+  const gate = evaluateAutoApprovalGate(record, now);
   console.log(`Auto-approval gate result for story_id=${storyId}: ${JSON.stringify(gate)}`);
 
   if (!gate.eligible) {
@@ -374,7 +377,7 @@ async function tryAutoApprove(storyId, record, { decideApprovalImpl, waitForAppr
  * never invents caller-supplied caption content, never approves before the
  * replay is durably confirmed, never retries a second replay within one run.
  */
-async function tryRecoverCaption(storyId, record, { getCaptionClaimStatusImpl, replayCaptionCompletionImpl, waitForDurableCommitImpl, decideApprovalImpl, waitForApprovalCommitImpl, fetchState }) {
+async function tryRecoverCaption(storyId, record, { getCaptionClaimStatusImpl, replayCaptionCompletionImpl, waitForDurableCommitImpl, decideApprovalImpl, waitForApprovalCommitImpl, fetchState, now = Date.now() }) {
   let statusResult;
   try {
     statusResult = await getCaptionClaimStatusImpl(storyId);
@@ -445,7 +448,7 @@ async function tryRecoverCaption(storyId, record, { getCaptionClaimStatusImpl, r
     return { ok: true, selected: { story_id: storyId, record: recoveredRecord }, prepared: false, finalStatus: recoveredRecord.status };
   }
 
-  return tryAutoApprove(storyId, recoveredRecord, { decideApprovalImpl, waitForApprovalCommitImpl, fetchState });
+  return tryAutoApprove(storyId, recoveredRecord, { decideApprovalImpl, waitForApprovalCommitImpl, fetchState, now });
 }
 
 /**
@@ -463,7 +466,7 @@ async function tryRecoverCaption(storyId, record, { getCaptionClaimStatusImpl, r
  * destination-aware recovery routing takes it from there straight into
  * caption work, with zero artwork regeneration.
  */
-async function tryRecoverArtwork(storyId, record, { getArtworkClaimStatusImpl, replayArtworkCompletionImpl, waitForDurableCommitImpl, runPreparationImpl, decideApprovalImpl, waitForApprovalCommitImpl, fetchState }) {
+async function tryRecoverArtwork(storyId, record, { getArtworkClaimStatusImpl, replayArtworkCompletionImpl, waitForDurableCommitImpl, runPreparationImpl, decideApprovalImpl, waitForApprovalCommitImpl, fetchState, now = Date.now() }) {
   let statusResult;
   try {
     statusResult = await getArtworkClaimStatusImpl(storyId);
@@ -519,11 +522,11 @@ async function tryRecoverArtwork(storyId, record, { getArtworkClaimStatusImpl, r
   }
 
   console.log(`story_id=${storyId} artwork durably recovered — continuing into caption work via the existing recovery-aware process-one.js pipeline (no artwork regeneration).`);
-  return runGeneratePipeline(storyId, recoveredRecord, { runPreparationImpl, waitForDurableCommitImpl, decideApprovalImpl, waitForApprovalCommitImpl, fetchState });
+  return runGeneratePipeline(storyId, recoveredRecord, { runPreparationImpl, waitForDurableCommitImpl, decideApprovalImpl, waitForApprovalCommitImpl, fetchState, now });
 }
 
 /**
- * @param {{fetchQueue?: Function, fetchState?: Function, live?: boolean, runPreparationImpl?: Function, decideApprovalImpl?: Function, waitForApprovalCommitImpl?: Function, waitForDurableCommitImpl?: Function, getCaptionClaimStatusImpl?: Function, replayCaptionCompletionImpl?: Function, getArtworkClaimStatusImpl?: Function, replayArtworkCompletionImpl?: Function, selectCandidateImpl?: Function}} [args]
+ * @param {{fetchQueue?: Function, fetchState?: Function, live?: boolean, runPreparationImpl?: Function, decideApprovalImpl?: Function, waitForApprovalCommitImpl?: Function, waitForDurableCommitImpl?: Function, getCaptionClaimStatusImpl?: Function, replayCaptionCompletionImpl?: Function, getArtworkClaimStatusImpl?: Function, replayArtworkCompletionImpl?: Function, selectCandidateImpl?: Function, now?: number}} [args]
  */
 export async function main({
   fetchQueue = fetchArtworkQueue,
@@ -538,6 +541,7 @@ export async function main({
   getArtworkClaimStatusImpl = getArtworkClaimStatus,
   replayArtworkCompletionImpl = replayArtworkCompletion,
   selectCandidateImpl = selectAutonomousCandidate,
+  now = Date.now(),
 } = {}) {
   // 2026-09-14: at most TWO selection attempts per run, never more — the
   // first is the normal, unqualified selection; the second (only reached
@@ -553,7 +557,7 @@ export async function main({
   let excludeStoryIds;
   let firstPendingResult = null;
   for (let attempt = 1; attempt <= 2; attempt++) {
-    const selection = await selectCandidateImpl({ fetchQueue, fetchState, excludeStoryIds });
+    const selection = await selectCandidateImpl({ fetchQueue, fetchState, excludeStoryIds, now });
 
     if (!selection.mode) {
       // The excluded record (if any) is still the most useful thing to
@@ -612,7 +616,7 @@ export async function main({
     }
 
     if (mode === "approve-only") {
-      const result = await tryAutoApprove(storyId, record, { decideApprovalImpl, waitForApprovalCommitImpl, fetchState });
+      const result = await tryAutoApprove(storyId, record, { decideApprovalImpl, waitForApprovalCommitImpl, fetchState, now });
       if (result.autoApproved || !result.ok || attempt === 2) return result;
       firstPendingResult = result;
       console.log(`story_id=${storyId} remains pending after re-evaluation — trying once more, excluding it, so it cannot block recover-artwork, recover-caption, or fresh-generation work this run.`);
@@ -621,7 +625,7 @@ export async function main({
     }
 
     if (mode === "recover-artwork") {
-      const result = await tryRecoverArtwork(storyId, record, { getArtworkClaimStatusImpl, replayArtworkCompletionImpl, waitForDurableCommitImpl, runPreparationImpl, decideApprovalImpl, waitForApprovalCommitImpl, fetchState });
+      const result = await tryRecoverArtwork(storyId, record, { getArtworkClaimStatusImpl, replayArtworkCompletionImpl, waitForDurableCommitImpl, runPreparationImpl, decideApprovalImpl, waitForApprovalCommitImpl, fetchState, now });
       // Same bounded-fallthrough principle as approve-only above: a pure
       // "not yet eligible" no-op (no replay ever attempted) must never
       // permanently block a DIFFERENT, genuinely-recoverable candidate —
@@ -639,7 +643,7 @@ export async function main({
     }
 
     if (mode === "recover-caption") {
-      const result = await tryRecoverCaption(storyId, record, { getCaptionClaimStatusImpl, replayCaptionCompletionImpl, waitForDurableCommitImpl, decideApprovalImpl, waitForApprovalCommitImpl, fetchState });
+      const result = await tryRecoverCaption(storyId, record, { getCaptionClaimStatusImpl, replayCaptionCompletionImpl, waitForDurableCommitImpl, decideApprovalImpl, waitForApprovalCommitImpl, fetchState, now });
       // Same bounded-fallthrough principle — see recover-artwork's own
       // comment just above for the full reasoning.
       if (result.step !== "caption_recovery_eligibility" || !result.ok || attempt === 2) return result;
@@ -649,7 +653,7 @@ export async function main({
       continue;
     }
 
-    return runGeneratePipeline(storyId, record, { runPreparationImpl, waitForDurableCommitImpl, decideApprovalImpl, waitForApprovalCommitImpl, fetchState });
+    return runGeneratePipeline(storyId, record, { runPreparationImpl, waitForDurableCommitImpl, decideApprovalImpl, waitForApprovalCommitImpl, fetchState, now });
   }
 }
 
@@ -658,7 +662,7 @@ export async function main({
  * the bounded selection-retry loop above stays readable; behavior is
  * unchanged from before this extraction.
  */
-async function runGeneratePipeline(storyId, record, { runPreparationImpl, waitForDurableCommitImpl, decideApprovalImpl, waitForApprovalCommitImpl, fetchState }) {
+async function runGeneratePipeline(storyId, record, { runPreparationImpl, waitForDurableCommitImpl, decideApprovalImpl, waitForApprovalCommitImpl, fetchState, now = Date.now() }) {
   console.log(`=== LIVE — running the existing artwork+caption generation pipeline for story_id=${storyId} ===`);
   const prepResult = await runPreparationImpl({ storyId });
   console.log(`process-one.js exited with code ${prepResult.exitCode}.`);
@@ -705,7 +709,7 @@ async function runGeneratePipeline(storyId, record, { runPreparationImpl, waitFo
     return { ok: true, selected: { story_id: storyId, record: freshRecord }, prepared: false, finalStatus: freshRecord.status };
   }
 
-  return tryAutoApprove(storyId, freshRecord, { decideApprovalImpl, waitForApprovalCommitImpl, fetchState });
+  return tryAutoApprove(storyId, freshRecord, { decideApprovalImpl, waitForApprovalCommitImpl, fetchState, now });
 }
 
 /**

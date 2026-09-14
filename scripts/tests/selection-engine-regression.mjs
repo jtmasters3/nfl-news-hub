@@ -218,6 +218,92 @@ test("18. a posted story is excluded from candidacy", () => {
 });
 
 // ---------------------------------------------------------------------------
+// 2026-09-14 forensic audit — EMMANUEL ACHO / DOM DISANDRO Feed post
+// (story_id 33e7e68f-3076-423d-abb9-ce9844426ee1). The user's exact
+// requested regression list, against the real 16:00 ET Feed slot on
+// 2026-09-14 (window [14:00,16:00) ET = UTC [18:00,20:00)). PROVEN by this
+// audit: findWindowCandidates()'s own window check was NEVER the bug — the
+// real story's first_published_at (2026-09-10T14:00:04.000Z, four days
+// earlier) was never in ANY 2026-09-14 window, and this engine correctly
+// selected it back on 2026-09-10 for THAT day's 12:00 PM slot. These tests
+// pin down the window boundary exactly as specified, and confirm a
+// selected-or-legacy-engaged record can never be selected a SECOND time —
+// the real leak (a stale SELECTION surviving to be autonomously posted
+// days later) is a separate, downstream bug; see
+// scripts/lib/selectionEngine.js's isSelectionExpired() and its own tests.
+// ---------------------------------------------------------------------------
+const FEED_16_WINDOW_START_MS = easternWallClockToUtcMillis("2026-09-14", "14:00");
+const FEED_16_WINDOW_END_MS = easternWallClockToUtcMillis("2026-09-14", "16:00");
+
+test("41. a 15:59 ET article qualifies for the 16:00 Feed slot", () => {
+  const s = story({ id: "at-1559", importance_score: 10, first_published_at: et("2026-09-14", "15:59") });
+  const state = stateWithSyncedStories([s]);
+  const candidates = findWindowCandidates([s], state.stories, FEED_16_WINDOW_START_MS, FEED_16_WINDOW_END_MS);
+  assert.equal(candidates.length, 1);
+});
+
+test("42. a 14:00 ET article (the exact inclusive window start) qualifies for the 16:00 Feed slot", () => {
+  const s = story({ id: "at-1400", importance_score: 10, first_published_at: et("2026-09-14", "14:00") });
+  const state = stateWithSyncedStories([s]);
+  const candidates = findWindowCandidates([s], state.stories, FEED_16_WINDOW_START_MS, FEED_16_WINDOW_END_MS);
+  assert.equal(candidates.length, 1);
+});
+
+test("43. a 13:59 ET article (one minute before the window opens) does NOT qualify for the 16:00 Feed slot", () => {
+  const s = story({ id: "at-1359", importance_score: 10, first_published_at: et("2026-09-14", "13:59") });
+  const state = stateWithSyncedStories([s]);
+  const candidates = findWindowCandidates([s], state.stories, FEED_16_WINDOW_START_MS, FEED_16_WINDOW_END_MS);
+  assert.equal(candidates.length, 0);
+});
+
+test("44. an old story already sitting at 'queued' (like the real Acho/DiSandro record) cannot leak into the 16:00 Feed slot merely by being unposted — its own stale first_published_at excludes it from the window regardless of status", () => {
+  const s = story({ id: "old-queued", importance_score: 10, first_published_at: et("2026-09-10", "10:00") });
+  const state = stateWithSyncedStories([s]); // ensureRecord leaves status "new"/"queued" — never "selected"
+  const candidates = findWindowCandidates([s], state.stories, FEED_16_WINDOW_START_MS, FEED_16_WINDOW_END_MS);
+  assert.equal(candidates.length, 0);
+});
+
+test("45. an old story already at 'awaiting_approval' cannot leak into the 16:00 Feed slot — excluded twice over: stale first_published_at AND hasLegacySocialWorkStarted", () => {
+  const s = story({ id: "old-awaiting", importance_score: 10, first_published_at: et("2026-09-10", "10:00") });
+  let state = stateWithSyncedStories([s]);
+  state = withStatus(state, s.id, "awaiting_approval");
+  const candidates = findWindowCandidates([s], state.stories, FEED_16_WINDOW_START_MS, FEED_16_WINDOW_END_MS);
+  assert.equal(candidates.length, 0);
+});
+
+test("46. an old, already-selected-then-recovered story cannot leak into the 16:00 Feed slot — 'already selected' permanently excludes it from ever being selected again, for any slot, at any time", () => {
+  const s = story({ id: "old-recovered", importance_score: 10, first_published_at: et("2026-09-10", "10:00") });
+  let state = stateWithSyncedStories([s]);
+  state = {
+    ...state,
+    stories: {
+      ...state.stories,
+      [s.id]: { ...state.stories[s.id], status: "artwork_ready", selection: { destination: "feed", slot_id: "feed:2026-09-10T12:00:00-04:00", window_start: et("2026-09-10", "10:00"), window_end: et("2026-09-10", "12:00") } },
+    },
+  };
+  const candidates = findWindowCandidates([s], state.stories, FEED_16_WINDOW_START_MS, FEED_16_WINDOW_END_MS);
+  assert.equal(candidates.length, 0);
+});
+
+test("47. zero qualifying stories in the 16:00 window means the slot is recorded no_candidate — there is no backlog catch-up", () => {
+  const old = story({ id: "old-only-candidate", importance_score: 99, first_published_at: et("2026-09-10", "10:00") });
+  const state = stateWithSyncedStories([old]);
+  const result = runSelectionEngine({ state: { ...state, selection_activated_at: et("2026-09-14", "00:00") }, stories: [old], now: et("2026-09-14", "16:00") });
+  const feedSlot16 = result.state.selection_slots["feed:2026-09-14T16:00:00-04:00"];
+  assert.equal(feedSlot16.status, "no_candidate");
+  assert.equal(feedSlot16.story_id, null);
+  assert.equal(result.state.stories["old-only-candidate"].selection, undefined, "the old story must remain completely unselected — never assigned to the 16:00 slot as a fallback");
+});
+
+test("48. one story -> one destination forever remains intact: a story already selected for Feed can never ALSO be selected for a Story slot, even at a much later, otherwise-matching time", () => {
+  const s = story({ id: "one-dest-forever", importance_score: 10, first_published_at: et("2026-09-14", "15:00") });
+  let state = stateWithSyncedStories([s]);
+  state = { ...state, stories: { ...state.stories, [s.id]: { ...state.stories[s.id], selection: { destination: "feed", slot_id: "feed:2026-09-14T16:00:00-04:00" } } } };
+  const storyCandidates = findWindowCandidates([s], state.stories, easternWallClockToUtcMillis("2026-09-14", "14:00"), easternWallClockToUtcMillis("2026-09-14", "15:00"));
+  assert.equal(storyCandidates.length, 0);
+});
+
+// ---------------------------------------------------------------------------
 // LEGACY SOCIAL-WORKFLOW EXCLUSION — hasLegacySocialWorkStarted() predicate,
 // investigated against the actual locked socialState.js STATES/TRANSITIONS.
 // ---------------------------------------------------------------------------

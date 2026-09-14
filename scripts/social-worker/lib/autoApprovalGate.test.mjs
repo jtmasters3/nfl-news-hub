@@ -253,7 +253,44 @@ test("29. a null/undefined record is rejected without throwing", () => {
   assert.equal(evaluateAutoApprovalGate(undefined).eligible, false);
 });
 
-test("30. a record with no story_id is rejected", () => {
+// ---------------------------------------------------------------------------
+// 2026-09-14 durability fix — stale-selection leak, final-gate defense in
+// depth. Proven against story_id 33e7e68f-3076-423d-abb9-ce9844426ee1: this
+// gate is the LAST check before every auto-approval decision, reached by
+// every mode (generate, recover-artwork, recover-caption, approve-only) —
+// see selectionEngine.js's isSelectionExpired() for the shared rule.
+// ---------------------------------------------------------------------------
+
+test("31. a record whose selection window expired days ago is rejected with selection_window_expired, even though it is otherwise fully ready to approve", () => {
+  const record = baseFeedRecord({
+    selection: { destination: "feed", slot_id: "feed:2026-09-10T12:00:00-04:00", selected_at: "2026-09-10T16:00:27.781Z", window_start: "2026-09-10T14:00:00.000Z", window_end: "2026-09-10T16:00:00.000Z" },
+  });
+  const fourDaysLaterMs = Date.parse("2026-09-14T19:57:41.042Z"); // the real approval.decided_at timestamp that actually occurred
+  const result = evaluateAutoApprovalGate(record, fourDaysLaterMs);
+  assert.equal(result.eligible, false);
+  assert.ok(result.issues.includes("selection_window_expired"), JSON.stringify(result.issues));
+});
+
+test("32. a fresh, timely selection (well within its own slot + grace) is NOT rejected for staleness — this fix never blocks legitimate same-cycle approval", () => {
+  const record = baseFeedRecord({
+    selection: { destination: "feed", slot_id: "feed:2026-09-14T16:00:00-04:00", selected_at: "2026-09-14T20:00:05.000Z", window_start: "2026-09-14T18:00:00.000Z", window_end: "2026-09-14T20:00:00.000Z" },
+  });
+  const twentyFiveMinutesLaterMs = Date.parse("2026-09-14T20:25:00.000Z");
+  const result = evaluateAutoApprovalGate(record, twentyFiveMinutesLaterMs);
+  assert.equal(result.eligible, true, JSON.stringify(result.issues));
+});
+
+test("33. this staleness check also catches a Story selection reached via a recovery path (a class of candidate that never passes through staticAutonomousEligibility.js's own pre-generation copy of this check)", () => {
+  const record = baseStoryRecord({
+    selection: { destination: "story", slot_id: "story:2026-09-10T12:00:00-04:00", selected_at: "2026-09-10T16:00:05.000Z", window_start: "2026-09-10T11:00:00.000Z", window_end: "2026-09-10T12:00:00.000Z" },
+  });
+  const fourDaysLaterMs = Date.parse("2026-09-14T19:57:41.042Z");
+  const result = evaluateAutoApprovalGate(record, fourDaysLaterMs);
+  assert.equal(result.eligible, false);
+  assert.ok(result.issues.includes("selection_window_expired"), JSON.stringify(result.issues));
+});
+
+test("34. a record with no story_id is rejected", () => {
   const result = evaluateAutoApprovalGate(baseFeedRecord({ story_id: "" }));
   assert.equal(result.eligible, false);
   assert.deepEqual(result.issues, ["invalid_record"]);

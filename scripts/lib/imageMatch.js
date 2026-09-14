@@ -3,7 +3,42 @@
 // nothing clears the confidence bar. No AI, no paid search API: purely
 // substring/keyword matching over metadata already fetched into each
 // source record (see imageMeta.js).
-
+//
+// ==========================================================================
+// 2026-09-14 fix — headline-only "evidence" was sufficient to accept an
+// unrelated photo
+// ==========================================================================
+// Root cause (proven against a real published post, story_id
+// 33e7e68f-3076-423d-abb9-ce9844426ee1, "EMMANUEL ACHO COMMENTS SPARK NFL
+// INVESTIGATION OF DOM DISANDRO"): the accepted image's own alt text was
+// "Philadelphia Eagles v New England Patriots" — a generic wire/game photo
+// with ZERO textual connection to Emmanuel Acho or Dom DiSandro. It still
+// scored exactly MIN_ACCEPT_SCORE (1 base + 2 for "the CONTAINING
+// ARTICLE's headline happens to mention the subject"). That +2 headline
+// bonus proves nothing about the SPECIFIC photo — every image on that
+// article's page would score it identically, including a stock team photo,
+// a reporter's own byline photo, or (as here) an unrelated wire photo — it
+// only proves the article as a whole is about the subject, which the
+// pipeline already knew before ever looking at any image.
+//
+// Fix: track whether a candidate has DIRECT evidence — a match against the
+// image's OWN metadata (its alt/caption/credit text, scored via
+// haystackLower below) or its own URL (slug/word match) — as opposed to
+// merely CONTEXTUAL evidence (the containing article's headline mentioning
+// the subject, which says nothing about which photo on that page actually
+// depicts them). selectStoryImages() below now requires direct evidence,
+// not just a numeric score, before ever setting primary_image_url — the
+// headline bonus still contributes to the numeric score (kept for ranking
+// image_candidates and because a headline match combined with genuine
+// direct evidence is still meaningful), but it can never, by itself, cross
+// the acceptance bar. A story with no directly-evidenced image gets
+// primary_image_url: null, which socialPayload.js's buildSocialStatus()
+// already turns into social_status: "needs_media" — already-existing,
+// unmodified fail-closed behavior: isEligible() (socialState.js) then
+// excludes the story from selection entirely, so it is never queued, never
+// generates artwork, and is simply skipped rather than published with an
+// unverified photo. No substitute photo is ever invented — this only ever
+// narrows acceptance of the one real source photo already fetched.
 const REJECT_PATTERNS = [
   /\blogo\b/i, /\bsprite\b/i, /\bavatar\b/i, /\bplaceholder\b/i,
   /\bheadshot\b/i, /\breporter\b/i, /\binsider\b/i, /\bauthor\b/i,
@@ -20,36 +55,56 @@ function subjectWords(subject) {
 }
 
 /**
- * @param {object} source one source record (with image_url/image_alt/image_caption fetched)
+ * @param {object} source one source record (with image_url/image_alt/image_caption/image_credit fetched)
  * @param {string} matchTarget the text to match against — the player/coach/team name currently being scored for
- * @returns {number|null} null = no usable image on this source at all; otherwise a score (may be <= 0)
+ * @returns {{score: number, hasDirectEvidence: boolean}|null} null = no usable image on this source at all
  */
 export function scoreImageCandidate(source, matchTarget) {
   if (!source.image_url) return null;
 
-  const haystack = `${source.image_alt || ""} ${source.image_caption || ""}`;
+  // credit lines occasionally name the subject too (e.g. a captioned wire
+  // photo crediting "Emmanuel Acho speaks on ..."), so they count as
+  // direct, image-own evidence exactly like alt/caption — never the
+  // headline, which describes the article, not this specific photo.
+  const haystack = `${source.image_alt || ""} ${source.image_caption || ""} ${source.image_credit || ""}`;
   const urlLower = source.image_url.toLowerCase();
   const headline = source.headline || "";
 
-  if (REJECT_PATTERNS.some((p) => p.test(haystack) || p.test(urlLower))) return -100;
+  if (REJECT_PATTERNS.some((p) => p.test(haystack) || p.test(urlLower))) return { score: -100, hasDirectEvidence: false };
 
   let score = 1; // base: a real, previously-validated image exists
-  if (!matchTarget) return score;
+  let hasDirectEvidence = false;
+  if (!matchTarget) return { score, hasDirectEvidence };
 
   const target = matchTarget.toLowerCase();
   const haystackLower = haystack.toLowerCase();
   const words = subjectWords(matchTarget);
 
-  if (haystackLower.includes(target)) score += 4;
-  else if (words.length && words.every((w) => haystackLower.includes(w))) score += 3;
+  if (haystackLower.includes(target)) {
+    score += 4;
+    hasDirectEvidence = true;
+  } else if (words.length && words.every((w) => haystackLower.includes(w))) {
+    score += 3;
+    hasDirectEvidence = true;
+  }
 
   const slug = target.replace(/[^a-z0-9]+/g, "-");
-  if (slug && urlLower.includes(slug)) score += 3;
-  else if (words.length >= 2 && words.every((w) => urlLower.includes(w))) score += 2;
+  if (slug && urlLower.includes(slug)) {
+    score += 3;
+    hasDirectEvidence = true;
+  } else if (words.length >= 2 && words.every((w) => urlLower.includes(w))) {
+    score += 2;
+    hasDirectEvidence = true;
+  }
 
+  // Contextual only — the containing article mentions the subject. Never
+  // sets hasDirectEvidence: this says nothing about which specific photo on
+  // that page depicts them. Still added to the numeric score, which
+  // continues to drive image_candidates ranking and is meaningful in
+  // combination with genuine direct evidence above.
   if (headline.toLowerCase().includes(target)) score += 2;
 
-  return score;
+  return { score, hasDirectEvidence };
 }
 
 /**
@@ -67,36 +122,44 @@ export function selectStoryImages({ sources, visual_subject, visual_subject_type
 
   function scoreAll(target) {
     return sources
-      .map((s) => ({ source: s, score: scoreImageCandidate(s, target) }))
-      .filter((c) => c.score !== null && c.score > -100);
+      .map((s) => ({ source: s, result: scoreImageCandidate(s, target) }))
+      .filter((c) => c.result !== null && c.result.score > -100);
+  }
+
+  // Accepted (a possible primary) requires BOTH the numeric bar AND direct,
+  // image-own evidence — see this file's own 2026-09-14 header for exactly
+  // why the numeric score alone is not enough.
+  function isAccepted(c) {
+    return c.result.score >= MIN_ACCEPT_SCORE && c.result.hasDirectEvidence;
   }
 
   let scored = visual_subject ? scoreAll(visual_subject) : scoreAll(null);
   let usedTarget = visual_subject;
-  const anyConfidentMatch = scored.some((c) => c.score >= MIN_ACCEPT_SCORE);
+  const anyConfidentMatch = scored.some(isAccepted);
 
   if (!anyConfidentMatch && isPerson && current_team) {
     const teamScored = scoreAll(current_team);
-    if (teamScored.some((c) => c.score >= MIN_ACCEPT_SCORE)) {
+    if (teamScored.some(isAccepted)) {
       scored = teamScored;
       usedTarget = current_team;
     }
   }
 
   const candidates = scored
-    .sort((a, b) => b.score - a.score)
+    .sort((a, b) => b.result.score - a.result.score)
     .slice(0, 5)
-    .map(({ source, score }) => ({
+    .map(({ source, result }) => ({
       url: source.image_url,
       source: source.name,
       subject: usedTarget,
-      match_score: score,
+      match_score: result.score,
+      has_direct_evidence: result.hasDirectEvidence,
       alt: source.image_alt,
       caption: source.image_caption,
       credit: source.image_credit,
     }));
 
-  const primary = candidates.find((c) => c.match_score >= MIN_ACCEPT_SCORE) ?? null;
+  const primary = candidates.find((c) => c.match_score >= MIN_ACCEPT_SCORE && c.has_direct_evidence) ?? null;
 
   return {
     image_candidates: candidates,

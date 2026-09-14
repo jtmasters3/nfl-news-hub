@@ -173,6 +173,22 @@ export function buildOverlaySvg({ width, height, headline, format }) {
  * corner's content beyond the shared dark gradient — compositeBrandOverlay.js
  * still adds the real logo afterward, unchanged, exactly as it already did
  * for the AI-generated path.
+ *
+ * 2026-09-14 disclosed limitation (audited, not fixed here — see
+ * imageMatch.js's own 2026-09-14 header for the actual fix this pairs
+ * with): "attention" is a pixel-saliency heuristic (edges/contrast/skin
+ * tone), not subject recognition — it has no way to know WHICH region of a
+ * photo depicts the headline's named subject, only which region looks
+ * visually busiest. The publisher metadata this pipeline can verify
+ * (alt/caption/credit text) is purely textual and carries no pixel
+ * coordinates, so there is no deterministic way to bias this crop toward
+ * "the subject specifically" without implementing real face/object
+ * detection — explicitly out of scope (no paid vision APIs, no fake
+ * AI-vision claims). The correct, and only implemented, mitigation is
+ * upstream: imageMatch.js's direct-evidence requirement ensures this
+ * renderer is only ever handed a photo already verified to actually depict
+ * the claimed subject/team, so a poor "attention" crop can misframe the
+ * right photo but can no longer be run against the WRONG photo.
  * @param {{sourceImagePath: string, headline: string, format: "feed"|"story", outputPath: string}} args
  * @returns {Promise<{width: number, height: number, fontSize: number, lines: string[]}>}
  */

@@ -121,6 +121,61 @@ function localIsoForSlotId(dateStr, timeStr, utcMillis) {
 export const FEED_SLOT_TIMES = Object.freeze(["08:00", "10:00", "12:00", "14:00", "16:00", "18:00", "20:00", "22:00"]);
 export const STORY_SLOT_TIMES = Object.freeze(["09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00"]);
 
+// ---------------------------------------------------------------------------
+// 2026-09-14 durability fix — stale-selection leak into autonomous posting
+// ---------------------------------------------------------------------------
+// Root cause (proven against a real production post, story_id
+// 33e7e68f-3076-423d-abb9-ce9844426ee1, "EMMANUEL ACHO COMMENTS SPARK NFL
+// INVESTIGATION OF DOM DISANDRO"): this engine's own findWindowCandidates()
+// correctly selected this story ONCE, on 2026-09-10, for that day's 12:00 PM
+// ET Feed slot — its first_published_at (2026-09-10T14:00:04.000Z UTC =
+// 10:00:04 AM ET) genuinely falls inside that slot's [10:00,12:00) ET
+// window, and "no backlog catch-up" was never violated here: a
+// zero-candidate slot is recorded "no_candidate" and a once-selected story
+// (`if (record.selection) return false`, above) can never be re-selected
+// for a later slot. The leak happened entirely DOWNSTREAM of selection: the
+// story sat at status "queued" for four days (unrelated legacy-pipeline
+// stalling), until the autonomous runner's own eligibility/approval gates —
+// which had no concept of a selection going stale — let it be generated and
+// posted on 2026-09-14 as if it were current news.
+//
+// isSelectionExpired() is the shared staleness predicate BOTH
+// staticAutonomousEligibility.js (the pre-generation FIFO/awaiting_approval
+// filter) and autoApprovalGate.js (the final gate immediately before every
+// auto-approval decision, for every mode: generate, recover-artwork,
+// recover-caption, approve-only) now consult — a single choke point,
+// defined here (not in either gate file) specifically to avoid a circular
+// import between them (autoApprovalGate.js already re-exports building
+// blocks staticAutonomousEligibility.js imports).
+//
+// A selection expires once `now` has passed the selected slot's own
+// window_end by more than one further slot interval of the same
+// destination (2h for Feed, 1h for Story — derived from FEED_SLOT_TIMES/
+// STORY_SLOT_TIMES above, not an arbitrary number). That gives a real
+// in-flight generation the entirety of its own slot plus one full
+// subsequent slot as operational slack (comfortably more than the ~25
+// minutes a normal run takes) before treating it as unrecoverably stale.
+// An expired record is never mutated or deleted — it simply stops being
+// autonomously actionable, exactly like every other eligibility exclusion
+// in this system, remaining fully available to a human/manual workflow.
+const SELECTION_EXPIRY_GRACE_MS = {
+  feed: 2 * 60 * 60 * 1000,
+  story: 1 * 60 * 60 * 1000,
+};
+
+/**
+ * @param {{destination?: string, window_end?: string}|null|undefined} selection
+ * @param {number} nowMs
+ * @returns {boolean} true once this selection is too old to autonomously act on
+ */
+export function isSelectionExpired(selection, nowMs) {
+  if (!selection) return false;
+  const windowEndMs = Date.parse(selection.window_end);
+  if (!Number.isFinite(windowEndMs)) return false;
+  const grace = SELECTION_EXPIRY_GRACE_MS[selection.destination] ?? SELECTION_EXPIRY_GRACE_MS.feed;
+  return nowMs >= windowEndMs + grace;
+}
+
 /**
  * Builds every Feed slot definition for one Eastern calendar date. The
  * 08:00 slot's window reaches back to the PREVIOUS day's 22:00 ET (its

@@ -37,6 +37,7 @@ import { assessApprovalReadiness } from "./approvalReadiness.js";
 import { isAutoApprovalAllowedSource } from "../../lib/autoApprovalSourceAllowlist.js";
 import { evaluateContentFidelity } from "./contentFidelityGate.js";
 import { channelKeyFor } from "../../lib/postingEvents.js";
+import { isSelectionExpired } from "../../lib/selectionEngine.js";
 
 export function isNonEmptyString(v) {
   return typeof v === "string" && v.trim().length > 0;
@@ -85,9 +86,10 @@ export function assessPostingCleanState(record) {
  * @param {object} record - a data/social-state.json story record, freshly
  *   read (SHA-pinned) immediately before this gate is evaluated — never a
  *   stale/cached snapshot.
+ * @param {number} [nowMs] - defaults to Date.now(); pass explicitly in tests
  * @returns {{eligible: boolean, issues: string[]}}
  */
-export function evaluateAutoApprovalGate(record) {
+export function evaluateAutoApprovalGate(record, nowMs = Date.now()) {
   const issues = [];
 
   if (!record || !isNonEmptyString(record.story_id)) {
@@ -114,8 +116,21 @@ export function evaluateAutoApprovalGate(record) {
   const destination = record.selection?.destination;
   if (!record.selection) {
     issues.push("no_selection");
-  } else if (destination !== "feed" && destination !== "story") {
-    issues.push(`invalid_destination:${destination ?? "none"}`);
+  } else {
+    if (destination !== "feed" && destination !== "story") {
+      issues.push(`invalid_destination:${destination ?? "none"}`);
+    }
+    // 2026-09-14 durability fix — this is the FINAL gate before every
+    // auto-approval decision (every mode: generate, recover-artwork,
+    // recover-caption, approve-only), so it is where a selection going
+    // stale must be caught even for a record that reached this point via a
+    // recovery path that never consulted staticAutonomousEligibility.js's
+    // own (earlier, pre-generation) copy of this same check. See
+    // isSelectionExpired()'s own header above this import for the incident
+    // this closes and the exact staleness rule.
+    if (isSelectionExpired(record.selection, nowMs)) {
+      issues.push("selection_window_expired");
+    }
   }
 
   // Required source-article fixture fields — the exact same two fields

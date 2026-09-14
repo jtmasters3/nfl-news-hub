@@ -32,6 +32,7 @@
 // as it is, fully available to any existing human/manual workflow.
 import { isAutoApprovalAllowedSource } from "../../lib/autoApprovalSourceAllowlist.js";
 import { isNonEmptyString, isHttpsUrl, assessPostingCleanState } from "./autoApprovalGate.js";
+import { isSelectionExpired } from "../../lib/selectionEngine.js";
 
 // The only two lifecycle states the autonomous runner may ever act on:
 // "queued" (fresh, needs full generation) or "awaiting_approval" (already
@@ -43,11 +44,24 @@ import { isNonEmptyString, isHttpsUrl, assessPostingCleanState } from "./autoApp
 // dropped.
 const AUTONOMOUS_ACTIONABLE_STATUSES = new Set(["queued", "awaiting_approval"]);
 
+// 2026-09-14 durability fix — stale-selection leak into autonomous posting.
+// Proven against a real production post, story_id
+// 33e7e68f-3076-423d-abb9-ce9844426ee1 ("EMMANUEL ACHO COMMENTS SPARK NFL
+// INVESTIGATION OF DOM DISANDRO"): selected correctly on 2026-09-10 for
+// that day's 12:00 PM ET Feed slot, then sat at status "queued" for four
+// days (unrelated legacy-pipeline stalling) until this check — which had
+// no concept of a selection going stale — let the autonomous FIFO queue
+// generate and post it on 2026-09-14 as if it were current news. See
+// isSelectionExpired()'s own header in scripts/lib/selectionEngine.js
+// (shared with autoApprovalGate.js's final pre-approval check, hence its
+// home there rather than here) for the exact staleness rule this applies.
+
 /**
  * @param {object} record - a data/social-state.json story record
+ * @param {number} [nowMs] - defaults to Date.now(); pass explicitly in tests
  * @returns {{eligible: boolean, issues: string[]}}
  */
-export function evaluateStaticAutonomousEligibility(record) {
+export function evaluateStaticAutonomousEligibility(record, nowMs = Date.now()) {
   const issues = [];
 
   if (!record || !isNonEmptyString(record.story_id)) {
@@ -69,6 +83,9 @@ export function evaluateStaticAutonomousEligibility(record) {
     const destination = record.selection.destination;
     if (destination !== "feed" && destination !== "story") {
       issues.push(`invalid_destination:${destination ?? "none"}`);
+    }
+    if (isSelectionExpired(record.selection, nowMs)) {
+      issues.push("selection_window_expired");
     }
   }
 
