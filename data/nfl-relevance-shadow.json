@@ -12334,6 +12334,45 @@
       "reason_codes": [
         "no_signal_fail_open"
       ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/week-1-monday-night-inactives-denver-broncos-at-kansas-city-chiefs",
+      "source_name": "NFL.com",
+      "headline": "Week 1 Monday night inactives: Denver Broncos at Kansas City Chiefs",
+      "published_at": "2026-09-14T10:53:16.000Z",
+      "observed_at": "2026-09-14T23:00:26.322Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "KC"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/espn-nfl-network-now-simulcast-the-same-monday-night-pregame-show",
+      "source_name": "Pro Football Talk",
+      "headline": "ESPN, NFL Network now simulcast the same Monday night pregame show",
+      "published_at": "2026-09-14T22:57:12.000Z",
+      "observed_at": "2026-09-14T23:00:26.322Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
     }
   ]
 }
