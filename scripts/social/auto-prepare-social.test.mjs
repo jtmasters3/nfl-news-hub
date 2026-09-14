@@ -768,6 +768,310 @@ test("54. main() passes the SAME fetchState it uses everywhere else into waitFor
 });
 
 // ---------------------------------------------------------------------------
+// 2026-09-14 hands-off caption-completion recovery integration
+// ---------------------------------------------------------------------------
+// The exact proven-stuck shape: artwork_ready, caption not ready but with a
+// known existing claim_id, publishing clean. The Durable Object side is
+// mocked separately per test via getCaptionClaimStatusImpl.
+
+function stuckCaptionRecord(overrides = {}) {
+  return {
+    story_id: "s1",
+    status: "artwork_ready",
+    merged_into: null,
+    selection: { destination: "feed", slot_id: "feed:test", selected_at: "2026-01-01T00:00:00Z" },
+    source_story: validQueuedRecord().source_story,
+    approval: { status: "pending" },
+    artwork: { status: "created", image_url: "https://example.test/x.png", width: 1024, height: 1280 },
+    validation: { status: "passed", passed: true, issues: [] },
+    caption: { status: "generating", text: null, claim: { claim_id: "claim-recover-1", processor_id: "p1", claimed_at: "2026-01-01T00:00:00Z", claim_expires_at: "2026-01-01T00:50:00Z" } },
+    publishing: { status: "not_posted", instagram: { feed: { status: "not_posted" }, story: { status: "not_posted" } } },
+    ...overrides,
+  };
+}
+
+function completedDoRecord(overrides = {}) {
+  return {
+    status: "completed",
+    claim_id: "claim-recover-1",
+    processor_id: "p1",
+    dispatch_confirmed: true,
+    payload: { story_id: "s1", claim_id: "claim-recover-1", text: "A recovered caption.\n\nSource: ESPN", provider: "chatgpt-codex-local" },
+    ...overrides,
+  };
+}
+
+function recoveredReadyRecord(overrides = {}) {
+  return {
+    ...stuckCaptionRecord(),
+    status: "awaiting_approval",
+    caption: { status: "ready", text: "A recovered caption.\n\nSource: ESPN", claim: { claim_id: "claim-recover-1", processor_id: "p1", claimed_at: "2026-01-01T00:00:00Z", claim_expires_at: "2026-01-01T00:50:00Z" } },
+    ...overrides,
+  };
+}
+
+/** Returns the stuck record on the first fetchState() call (selection) and readyRecord on every subsequent call (the post-replay poll) — mirroring the exact real sequence. */
+function statefulFetchStateForRecovery(readyRecord, storyId = "s1") {
+  let callCount = 0;
+  return async () => {
+    callCount++;
+    if (callCount === 1) return { stories: { [storyId]: stuckCaptionRecord({ story_id: storyId }) } };
+    return { stories: { [storyId]: readyRecord } };
+  };
+}
+
+test("55. selectAutonomousCandidate recognizes the exact proven stuck state as a recover-caption candidate", async () => {
+  const result = await selectAutonomousCandidate({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { s1: stuckCaptionRecord() } }),
+  });
+  assert.equal(result.mode, "recover-caption");
+  assert.equal(result.story_id, "s1");
+});
+
+test("56. dry run for a recover-caption candidate never touches the Durable Object, never replays, never polls, never approves", async () => {
+  let statusCalled = false, replayCalled = false, waitCalled = false, decideCalled = false;
+  const result = await main({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { s1: stuckCaptionRecord() } }),
+    live: false,
+    getCaptionClaimStatusImpl: async () => { statusCalled = true; return { do_record: completedDoRecord() }; },
+    replayCaptionCompletionImpl: async () => { replayCalled = true; return { replayed: true }; },
+    waitForDurableCommitImpl: async () => { waitCalled = true; return { committed: true, record: recoveredReadyRecord() }; },
+    decideApprovalImpl: async () => { decideCalled = true; return { result: "approved" }; },
+  });
+  assert.equal(statusCalled, false, "dry run must never read the Durable Object");
+  assert.equal(replayCalled, false);
+  assert.equal(waitCalled, false);
+  assert.equal(decideCalled, false);
+  assert.equal(result.dryRun.mode, "recover-caption");
+  assert.match(result.dryRun.would_require, /replay recovery/);
+});
+
+test("57. a successful automatic recovery calls getCaptionClaimStatusImpl and replayCaptionCompletionImpl with EXACTLY the story_id and existing claim_id — no caption text supplied by the runner", async () => {
+  let statusArgs, replayArgs;
+  const result = await main({
+    fetchQueue: async () => [],
+    fetchState: statefulFetchStateForRecovery(recoveredReadyRecord()),
+    live: true,
+    getCaptionClaimStatusImpl: async (storyId) => { statusArgs = { storyId }; return { do_record: completedDoRecord() }; },
+    replayCaptionCompletionImpl: async (storyId, claimId) => { replayArgs = { storyId, claimId }; return { replayed: true }; },
+    decideApprovalImpl: async () => ({ result: "approved" }),
+  });
+  assert.equal(statusArgs.storyId, "s1");
+  assert.equal(replayArgs.storyId, "s1");
+  assert.equal(replayArgs.claimId, "claim-recover-1");
+  assert.equal(Object.keys(replayArgs).length, 2, "replay must be called with exactly (story_id, claim_id) — no caption text, no hashtags, no other content");
+  assert.equal(result.autoApproved, true);
+});
+
+test("58. an eligibility failure (e.g. the DO still shows 'claimed', not 'completed') fails closed — no replay attempted, no approval", async () => {
+  let replayCalled = false, decideCalled = false;
+  const result = await main({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { s1: stuckCaptionRecord() } }),
+    live: true,
+    getCaptionClaimStatusImpl: async () => ({ do_record: completedDoRecord({ status: "claimed" }) }),
+    replayCaptionCompletionImpl: async () => { replayCalled = true; return { replayed: true }; },
+    decideApprovalImpl: async () => { decideCalled = true; return { result: "approved" }; },
+  });
+  assert.equal(result.ok, false);
+  assert.equal(result.step, "caption_recovery_eligibility");
+  assert.equal(replayCalled, false, "an ineligible record must never be replayed");
+  assert.equal(decideCalled, false);
+});
+
+test("59. a wrong/stale DO claim_id blocks replay end-to-end through main(), not just at the pure eligibility check", async () => {
+  let replayCalled = false;
+  const result = await main({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { s1: stuckCaptionRecord() } }),
+    live: true,
+    getCaptionClaimStatusImpl: async () => ({ do_record: completedDoRecord({ claim_id: "some-other-claim" }) }),
+    replayCaptionCompletionImpl: async () => { replayCalled = true; return { replayed: true }; },
+  });
+  assert.equal(result.ok, false);
+  assert.equal(result.step, "caption_recovery_eligibility");
+  assert.ok(result.eligibility.issues.includes("do_claim_id_mismatch"));
+  assert.equal(replayCalled, false);
+});
+
+test("60. a replay refusal from the Worker (e.g. reason: claim_mismatch) fails closed — no approval, no second attempt within this run", async () => {
+  let decideCalled = false;
+  const result = await main({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { s1: stuckCaptionRecord() } }),
+    live: true,
+    getCaptionClaimStatusImpl: async () => ({ do_record: completedDoRecord() }),
+    replayCaptionCompletionImpl: async () => ({ replayed: false, reason: "claim_mismatch" }),
+    decideApprovalImpl: async () => { decideCalled = true; return { result: "approved" }; },
+  });
+  assert.equal(result.ok, false);
+  assert.equal(result.step, "caption_recovery_replay");
+  assert.equal(decideCalled, false);
+});
+
+test("61. a durable-confirmation TIMEOUT after a successful replay dispatch fails closed — no regeneration, no second replay, no approval", async () => {
+  let replayCallCount = 0, decideCalled = false;
+  const result = await main({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { s1: stuckCaptionRecord() } }),
+    live: true,
+    getCaptionClaimStatusImpl: async () => ({ do_record: completedDoRecord() }),
+    replayCaptionCompletionImpl: async () => { replayCallCount++; return { replayed: true }; },
+    waitForDurableCommitImpl: async () => ({ committed: false, status: "timeout" }),
+    decideApprovalImpl: async () => { decideCalled = true; return { result: "approved" }; },
+  });
+  assert.equal(result.ok, false);
+  assert.equal(result.step, "caption_recovery_durable_poll");
+  assert.equal(replayCallCount, 1, "a poll timeout must never trigger a second replay attempt within the same run — no replay storm");
+  assert.equal(decideCalled, false);
+});
+
+test("62. the durable-poll predicate requires the SAME claim/completion lineage, caption text present, AND awaiting_approval — not just top-level status alone", async () => {
+  let capturedPredicate;
+  await main({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { s1: stuckCaptionRecord() } }),
+    live: true,
+    getCaptionClaimStatusImpl: async () => ({ do_record: completedDoRecord() }),
+    replayCaptionCompletionImpl: async () => ({ replayed: true }),
+    waitForDurableCommitImpl: async (fetchState, storyId, predicate) => {
+      capturedPredicate = predicate;
+      return { committed: true, record: recoveredReadyRecord() };
+    },
+    decideApprovalImpl: async () => ({ result: "approved" }),
+  });
+  assert.equal(capturedPredicate(recoveredReadyRecord()), true);
+  assert.equal(capturedPredicate({ status: "artwork_ready", caption: { status: "generating" } }), false, "not yet applied must never be mistaken for success");
+  assert.equal(capturedPredicate({ status: "awaiting_approval", caption: { status: "ready", text: "x", claim: { claim_id: "a-DIFFERENT-claim" } } }), false, "a coincidental unrelated success must never be mistaken for THIS replay's own lineage");
+  assert.equal(capturedPredicate({ status: "failed" }), true, "a genuine durably-committed failure is still a recognized end state");
+});
+
+test("63. a successful replay that durably confirms proceeds through the normal auto-approval gate exactly like the generate/approve-only paths", async () => {
+  let decideArgs;
+  const result = await main({
+    fetchQueue: async () => [],
+    fetchState: statefulFetchStateForRecovery(recoveredReadyRecord()),
+    live: true,
+    getCaptionClaimStatusImpl: async () => ({ do_record: completedDoRecord() }),
+    replayCaptionCompletionImpl: async () => ({ replayed: true }),
+    decideApprovalImpl: async (storyId, decision, opts) => { decideArgs = { storyId, decision, opts }; return { result: "approved" }; },
+  });
+  assert.equal(decideArgs.opts.actor, "aggregate-auto-approver");
+  assert.equal(decideArgs.opts.decisionSource, "autonomous-production-gate");
+  assert.equal(result.autoApproved, true);
+});
+
+test("64. the NORMAL happy path (fresh queue generation) never touches the caption-recovery machinery at all", async () => {
+  let statusCalled = false, replayCalled = false;
+  await main({
+    fetchQueue: async () => [queueEntry("s1")],
+    fetchState: statefulFetchState(awaitingApprovalRecord()),
+    live: true,
+    runPreparationImpl: async () => ({ exitCode: 0 }),
+    decideApprovalImpl: async () => ({ result: "approved" }),
+    getCaptionClaimStatusImpl: async () => { statusCalled = true; return { do_record: null }; },
+    replayCaptionCompletionImpl: async () => { replayCalled = true; return { replayed: false }; },
+  });
+  assert.equal(statusCalled, false, "a normal successful generation run must never call the recovery DO read");
+  assert.equal(replayCalled, false, "a normal successful generation run must never call replay");
+});
+
+test("65. the NORMAL approve-only happy path never touches the caption-recovery machinery either", async () => {
+  let statusCalled = false, replayCalled = false;
+  await main({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { ready1: awaitingApprovalRecord({ story_id: "ready1" }) } }),
+    live: true,
+    decideApprovalImpl: async () => ({ result: "approved" }),
+    getCaptionClaimStatusImpl: async () => { statusCalled = true; return { do_record: null }; },
+    replayCaptionCompletionImpl: async () => { replayCalled = true; return { replayed: false }; },
+  });
+  assert.equal(statusCalled, false);
+  assert.equal(replayCalled, false);
+});
+
+test("66. once caption becomes durably ready, a duplicate runner invocation no longer selects recover-caption for the same story — idempotent, never a second replay", async () => {
+  const result = await selectAutonomousCandidate({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { s1: recoveredReadyRecord() } }),
+  });
+  assert.notEqual(result.mode, "recover-caption");
+});
+
+test("67. an already-approved record is never selected for caption recovery, even if it somehow still carries a stale caption.claim", async () => {
+  const result = await selectAutonomousCandidate({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { s1: stuckCaptionRecord({ status: "approved", approval: { status: "approved" } }) } }),
+  });
+  assert.notEqual(result.mode, "recover-caption");
+});
+
+test("68. a posting record is never selected for caption recovery", async () => {
+  const result = await selectAutonomousCandidate({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { s1: stuckCaptionRecord({ status: "posting" }) } }),
+  });
+  assert.notEqual(result.mode, "recover-caption");
+});
+
+test("69. a posted record is never selected for caption recovery", async () => {
+  const result = await selectAutonomousCandidate({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { s1: stuckCaptionRecord({ status: "posted" }) } }),
+  });
+  assert.notEqual(result.mode, "recover-caption");
+});
+
+test("70. a record with an active posting claim or publish_attempted is never selected for caption recovery", async () => {
+  const r1 = await selectAutonomousCandidate({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { s1: stuckCaptionRecord({ publishing: { status: "not_posted", claim: { claim_id: "stray" } } }) } }),
+  });
+  assert.notEqual(r1.mode, "recover-caption");
+
+  const r2 = await selectAutonomousCandidate({
+    fetchQueue: async () => [],
+    fetchState: async () => ({
+      stories: { s1: stuckCaptionRecord({ publishing: { status: "not_posted", instagram: { feed: { status: "not_posted", publish_attempted_at: "2026-01-01T00:00:00Z" } } } }) },
+    }),
+  });
+  assert.notEqual(r2.mode, "recover-caption");
+});
+
+test("71. a Durable Object read failure (network error) during recovery fails closed — no replay attempted", async () => {
+  let replayCalled = false;
+  const result = await main({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { s1: stuckCaptionRecord() } }),
+    live: true,
+    getCaptionClaimStatusImpl: async () => { throw new Error("network blip"); },
+    replayCaptionCompletionImpl: async () => { replayCalled = true; return { replayed: true }; },
+  });
+  assert.equal(result.ok, false);
+  assert.equal(result.step, "caption_recovery_status_read");
+  assert.equal(replayCalled, false);
+});
+
+test("72. this script still never references Buffer's post-creation mutation, Buffer's API host, or Meta directly, even after the recovery integration", async () => {
+  const { readFile } = await import("node:fs/promises");
+  const src = await readFile(new URL("./auto-prepare-social.js", import.meta.url), "utf-8");
+  const codeOnly = src.replace(/\/\/.*$/gm, "").replace(/\/\*[\s\S]*?\*\//g, "");
+  const mutationName = ["create", "Post"].join("");
+  assert.ok(!codeOnly.includes(mutationName));
+  assert.ok(!/api\.buffer\.com/.test(codeOnly));
+  assert.ok(!/graph\.(facebook|instagram)\.com/i.test(codeOnly));
+});
+
+test("73. this script still never acquires a posting claim, never persists publish_attempted, and never invokes either live publisher, even after the recovery integration", async () => {
+  const { readFile } = await import("node:fs/promises");
+  const src = await readFile(new URL("./auto-prepare-social.js", import.meta.url), "utf-8");
+  const codeOnly = src.replace(/\/\/.*$/gm, "").replace(/\/\*[\s\S]*?\*\//g, "");
+  assert.ok(!/claimPosting|publish-buffer-feed|publish-buffer-story|executeBufferFeedPublish|publishViaWorker/.test(codeOnly));
+});
+
+// ---------------------------------------------------------------------------
 let failures = 0;
 for (const c of cases) {
   try {

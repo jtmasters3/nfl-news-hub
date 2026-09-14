@@ -166,6 +166,20 @@ export async function failCaption(storyId, claimId, message, lastCandidateText) 
   return postJson("/social/caption/fail", { story_id: storyId, claim_id: claimId, message, last_candidate_text: lastCandidateText || null });
 }
 
+// --- Caption recovery (2026-09-14 hands-off recovery integration) — a
+// read-only DO status check plus the one endpoint that may re-fire an
+// already-DO-completed caption's dispatch. Never used for a fresh claim or
+// fresh generation; see scripts/social-worker/lib/captionRecoveryEligibility.js
+// for the fail-closed decision that gates every call to replayCaptionCompletion.
+
+export async function getCaptionClaimStatus(storyId) {
+  return postJson("/social/caption/claim-status", { story_id: storyId });
+}
+
+export async function replayCaptionCompletion(storyId, claimId) {
+  return postJson("/social/caption/replay-completion", { story_id: storyId, claim_id: claimId });
+}
+
 // --- Approval (Phase Approval) — a decision-aware claim lifecycle, still
 // on the SAME Durable Object class, key "approval:{story_id}". See
 // cloudflare-worker/src/handlers/approvalDecide.js for the full

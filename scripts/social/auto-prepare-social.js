@@ -45,13 +45,29 @@
 // automatic approval right now (deterministic oldest-selection.selected_at
 // ordering, the same tie-break convention auto-publish-approved-story.js
 // already uses) — finishing already-completed work is strictly cheaper
-// and safer than starting new generation, so it takes priority. This does
-// NOT scan for other mid-pipeline partial states (e.g. artwork done,
-// caption missing, no longer in the live queue) — that broader recovery
-// scan is a deliberately separate, out-of-scope concern for this pass;
-// such records remain reachable via the existing human-operator recovery
-// path (explicit --story-id) exactly as today. Still never more than ONE
-// record acted on per run.
+// and safer than starting new generation, so it takes priority.
+//
+// ==========================================================================
+// Caption-completion hands-off recovery (2026-09-14)
+// ==========================================================================
+// Between that check and the fresh-generation queue scan, this file also
+// looks for a record stuck in exactly the state a real production race
+// proved out: artwork_ready, caption not yet ready, but the caption's
+// completion was already durably recorded "completed" by the Cloudflare
+// Worker's Durable Object (repository_dispatch accepted, dispatch_confirmed
+// true) and simply never landed in data/social-state.json — see
+// scripts/social/apply-artwork-event.js's own 2026-09-11 header for the
+// exact race, and scripts/social-worker/lib/captionRecoveryEligibility.js's
+// own header for the full fail-closed eligibility contract this reuses.
+// Recovering such a record only ever replays the DO's own already-stored
+// completion payload (POST /social/caption/replay-completion) — it NEVER
+// regenerates artwork, NEVER creates a new caption claim, and NEVER invents
+// caption content. This does NOT scan for any OTHER mid-pipeline partial
+// state (e.g. artwork itself stuck, a story no longer in the live queue for
+// unrelated reasons) — that broader recovery scan remains a deliberately
+// separate, out-of-scope concern; such records remain reachable via the
+// existing human-operator recovery path (explicit --story-id) exactly as
+// today. Still never more than ONE record acted on per run.
 //
 // Auto-approval is fail-closed: scripts/social-worker/lib/autoApprovalGate.js
 // re-reads the FRESH post-preparation record and only proceeds through the
@@ -78,8 +94,9 @@ import { fileURLToPath } from "node:url";
 import { spawn } from "node:child_process";
 import { evaluateAutoApprovalGate } from "../social-worker/lib/autoApprovalGate.js";
 import { evaluateStaticAutonomousEligibility } from "../social-worker/lib/staticAutonomousEligibility.js";
+import { githubSideCaptionRecoveryIssues, evaluateCaptionRecoveryEligibility } from "../social-worker/lib/captionRecoveryEligibility.js";
 import { createFreshStateFetcher } from "../social-worker/lib/githubStateReader.js";
-import { fetchArtworkQueue, decideApproval } from "../social-worker/lib/apiClient.js";
+import { fetchArtworkQueue, decideApproval, getCaptionClaimStatus, replayCaptionCompletion } from "../social-worker/lib/apiClient.js";
 import { waitForApprovalCommit } from "../social-worker/lib/waitForApprovalCommit.js";
 import { waitForDurableCommit } from "../social-worker/lib/waitForDurableCommit.js";
 
@@ -141,10 +158,15 @@ function categorizeIssues(issues) {
 }
 
 /**
- * Selects AT MOST ONE candidate for this run. Never mutates anything.
+ * Selects AT MOST ONE candidate for this run. Never mutates anything, and
+ * never performs a Durable Object read itself — a "recover-caption"
+ * candidate's FULL eligibility (which requires a DO read) is only ever
+ * confirmed later, in main(), immediately before a replay would be
+ * attempted; this function only identifies which story_id is even worth
+ * checking, from GitHub state alone.
  * @param {{fetchQueue: Function, fetchState: Function}} deps
  * @returns {Promise<
- *   {mode: "approve-only"|"generate", story_id: string, record: object, queuePosition: number|null, inspectedCount: number|null, skipCounts: object|null} |
+ *   {mode: "approve-only"|"recover-caption"|"generate", story_id: string, record: object, queuePosition: number|null, inspectedCount: number|null, skipCounts: object|null} |
  *   {mode: null, story_id: null, record: null, queuePosition: null, inspectedCount: number, skipCounts: object, queueLength: number}
  * >}
  */
@@ -166,7 +188,22 @@ export async function selectAutonomousCandidate({ fetchQueue, fetchState }) {
     return { mode: "approve-only", story_id, record, queuePosition: null, inspectedCount: null, skipCounts: null };
   }
 
-  // Priority 2: the FIRST entry in the existing, unchanged queue FIFO order
+  // Priority 2: a record whose GitHub-side state alone already looks like
+  // the proven caption-completion-stuck shape (see this file's own header
+  // above). The FULL decision — including the Durable Object read — is
+  // deferred to main(); this is only a cheap, no-network pre-filter, same
+  // spirit as staticAutonomousEligibility.js's pre-generation filter below.
+  const recoveryCandidates = Object.entries(stories)
+    .map(([story_id, record]) => ({ story_id, record }))
+    .filter(({ record }) => githubSideCaptionRecoveryIssues(record).length === 0);
+  recoveryCandidates.sort(sortByOldestSelectedAt);
+
+  if (recoveryCandidates.length > 0) {
+    const { story_id, record } = recoveryCandidates[0];
+    return { mode: "recover-caption", story_id, record, queuePosition: null, inspectedCount: null, skipCounts: null };
+  }
+
+  // Priority 3: the FIRST entry in the existing, unchanged queue FIFO order
   // whose record passes static eligibility.
   const skipCounts = { legacyMissingCanonical: 0, unsupportedSource: 0, lifecycle: 0 };
   for (let i = 0; i < queue.length; i++) {
@@ -244,7 +281,83 @@ async function tryAutoApprove(storyId, record, { decideApprovalImpl, waitForAppr
 }
 
 /**
- * @param {{fetchQueue?: Function, fetchState?: Function, live?: boolean, runPreparationImpl?: Function, decideApprovalImpl?: Function, waitForApprovalCommitImpl?: Function, waitForDurableCommitImpl?: Function, selectCandidateImpl?: Function}} [args]
+ * 2026-09-14 hands-off recovery integration. Handles a "recover-caption"
+ * selection: a record whose caption-completed dispatch was durably
+ * recorded "completed" by the Cloudflare Worker's Durable Object but never
+ * durably applied to data/social-state.json (see this file's own header
+ * and captionRecoveryEligibility.js's own header for the exact race and
+ * the fail-closed contract this enforces). Fails closed at every step:
+ * never regenerates artwork or caption, never creates a new caption claim,
+ * never invents caller-supplied caption content, never approves before the
+ * replay is durably confirmed, never retries a second replay within one run.
+ */
+async function tryRecoverCaption(storyId, record, { getCaptionClaimStatusImpl, replayCaptionCompletionImpl, waitForDurableCommitImpl, decideApprovalImpl, waitForApprovalCommitImpl, fetchState }) {
+  let statusResult;
+  try {
+    statusResult = await getCaptionClaimStatusImpl(storyId);
+  } catch (err) {
+    console.log(`story_id=${storyId} caption recovery: failed to read the Durable Object's claim status (${err.message}). Failing closed: no replay attempted.`);
+    return { ok: false, step: "caption_recovery_status_read", selected: { story_id: storyId, record } };
+  }
+
+  const eligibility = evaluateCaptionRecoveryEligibility(record, statusResult?.do_record ?? null);
+  console.log(`Caption recovery eligibility for story_id=${storyId}: ${JSON.stringify(eligibility)}`);
+
+  if (!eligibility.eligible) {
+    console.log(`story_id=${storyId} is NOT safely replayable (${eligibility.issues.join(", ")}). Failing closed: no replay, no regeneration, no approval.`);
+    return { ok: false, step: "caption_recovery_eligibility", selected: { story_id: storyId, record }, eligibility };
+  }
+
+  const claimId = eligibility.claimId;
+  console.log(`story_id=${storyId} passes every automatic caption-recovery safety check. Replaying the Durable Object's own stored completion (claim_id=${claimId}) — no new claim, no new content, no artwork regeneration.`);
+  const replayResult = await replayCaptionCompletionImpl(storyId, claimId);
+  console.log(`replayCaptionCompletion result: ${JSON.stringify(replayResult)}`);
+
+  if (!replayResult.replayed) {
+    console.log(`story_id=${storyId} caption recovery replay was refused (${replayResult.reason ?? "unknown"}). Failing closed: no retry, no regeneration, no approval. A future run will re-evaluate this exact record fresh.`);
+    return { ok: false, step: "caption_recovery_replay", selected: { story_id: storyId, record }, replayResult };
+  }
+
+  // Bounded durable poll, mirroring the exact same pattern already proven
+  // for post-preparation confirmation below — the replay only proves
+  // GitHub ACCEPTED the re-fired dispatch, never that the Action has
+  // finished committing it. Requires the FULL expected post-condition
+  // (caption ready, text present, same claim/completion lineage as the
+  // one just replayed) before proceeding — never just the top-level
+  // status alone — so a coincidental, unrelated status change can never
+  // be mistaken for this replay's own success.
+  const pollResult = await waitForDurableCommitImpl(
+    fetchState,
+    storyId,
+    (r) =>
+      (r.status === "awaiting_approval" && r.caption?.status === "ready" && typeof r.caption?.text === "string" && r.caption.text.length > 0 && r.caption?.claim?.claim_id === claimId) ||
+      r.status === "failed",
+    {
+      onWaiting: (attempt, attempts, reason) => {
+        console.log(`story_id=${storyId} has not yet durably confirmed the caption recovery replay — waiting (attempt ${attempt}/${attempts}, reason=${reason})...`);
+      },
+    }
+  );
+
+  if (!pollResult.committed) {
+    console.log(
+      `story_id=${storyId} caption recovery replay did not durably confirm within the poll budget (status=${pollResult.status}${pollResult.error ? `, error=${pollResult.error}` : ""}). Failing closed: no second replay, no regeneration, no approval. A future run will re-evaluate this exact record fresh.`
+    );
+    return { ok: false, step: "caption_recovery_durable_poll", selected: { story_id: storyId, record }, pollResult };
+  }
+
+  const recoveredRecord = pollResult.record;
+
+  if (recoveredRecord.status !== "awaiting_approval") {
+    console.log(`story_id=${storyId} reached a durable terminal state of "${recoveredRecord.status}" after replay (not awaiting_approval) — recovery did not fully succeed. No approval attempted.`);
+    return { ok: true, selected: { story_id: storyId, record: recoveredRecord }, prepared: false, finalStatus: recoveredRecord.status };
+  }
+
+  return tryAutoApprove(storyId, recoveredRecord, { decideApprovalImpl, waitForApprovalCommitImpl, fetchState });
+}
+
+/**
+ * @param {{fetchQueue?: Function, fetchState?: Function, live?: boolean, runPreparationImpl?: Function, decideApprovalImpl?: Function, waitForApprovalCommitImpl?: Function, waitForDurableCommitImpl?: Function, getCaptionClaimStatusImpl?: Function, replayCaptionCompletionImpl?: Function, selectCandidateImpl?: Function}} [args]
  */
 export async function main({
   fetchQueue = fetchArtworkQueue,
@@ -254,6 +367,8 @@ export async function main({
   decideApprovalImpl = decideApproval,
   waitForApprovalCommitImpl = waitForApprovalCommit,
   waitForDurableCommitImpl = waitForDurableCommit,
+  getCaptionClaimStatusImpl = getCaptionClaimStatus,
+  replayCaptionCompletionImpl = replayCaptionCompletion,
   selectCandidateImpl = selectAutonomousCandidate,
 } = {}) {
   const selection = await selectCandidateImpl({ fetchQueue, fetchState });
@@ -269,12 +384,20 @@ export async function main({
 
   if (mode === "approve-only") {
     console.log(`Selected story_id=${storyId} — already awaiting_approval and fully gate-eligible; no artwork/caption generation needed.`);
+  } else if (mode === "recover-caption") {
+    console.log(`Selected story_id=${storyId} — GitHub state alone looks like a stuck, durably-completed-but-unapplied caption; eligibility against the Durable Object will be confirmed before any replay is attempted.`);
   } else {
     console.log(`Selected story_id=${storyId} — queue position ${queuePosition} (${inspectedCount - 1} statically-ineligible record(s) skipped before it), the first statically-eligible candidate in existing FIFO order.`);
   }
 
   if (!live) {
-    console.log("=== DRY RUN — no artwork generation, no caption generation, no approval, no state mutation ===");
+    console.log("=== DRY RUN — no artwork generation, no caption generation, no Durable Object read, no replay, no approval, no state mutation ===");
+    const wouldRequire =
+      mode === "approve-only"
+        ? "approval only — artwork and caption already exist and already pass every gate"
+        : mode === "recover-caption"
+          ? "Durable Object eligibility verification, then (only if safely eligible) a caption-completion replay recovery — no regeneration — then full post-generation approval-gate evaluation"
+          : "artwork generation, caption generation, then full post-generation approval-gate evaluation";
     const report = {
       ok: true,
       mode,
@@ -291,7 +414,7 @@ export async function main({
       inspected_count: inspectedCount,
       skip_counts: skipCounts,
       static_eligibility_passed: true,
-      would_require: mode === "approve-only" ? "approval only — artwork and caption already exist and already pass every gate" : "artwork generation, caption generation, then full post-generation approval-gate evaluation",
+      would_require: wouldRequire,
     };
     console.log(JSON.stringify(report, null, 2));
     return { ok: true, selected: { story_id: storyId, record }, dryRun: report };
@@ -299,6 +422,10 @@ export async function main({
 
   if (mode === "approve-only") {
     return tryAutoApprove(storyId, record, { decideApprovalImpl, waitForApprovalCommitImpl, fetchState });
+  }
+
+  if (mode === "recover-caption") {
+    return tryRecoverCaption(storyId, record, { getCaptionClaimStatusImpl, replayCaptionCompletionImpl, waitForDurableCommitImpl, decideApprovalImpl, waitForApprovalCommitImpl, fetchState });
   }
 
   console.log(`=== LIVE — running the existing artwork+caption generation pipeline for story_id=${storyId} ===`);
