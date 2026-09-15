@@ -1,30 +1,36 @@
 #!/usr/bin/env node
-// Cloud-safe processor: claims exactly one queued story from the live
-// artwork queue (or a specific story_id via --story-id), generates its Feed
+// Local processor: claims exactly one queued story from the live artwork
+// queue (or a specific story_id via --story-id), generates its Feed
 // graphic AND (for content_package_version 2 stories) its Story graphic
-// with the deterministic renderer (see lib/artworkRenderer.js), uploads
-// each through the Cloudflare Worker bridge, then — once BOTH required
-// assets are durably valid — composes and submits its caption
-// deterministically (see lib/captionComposer.js) through a fully
-// independent claim (see lib/apiClient.js's claim/complete/failCaption).
-// Never writes to production state directly — every decision is made by
-// the backend, reached only through lib/apiClient.js.
+// with the proven Codex/ChatGPT creative workflow, uploads each through
+// the Cloudflare Worker bridge, then — once BOTH required assets are
+// durably valid — composes and submits its caption deterministically (see
+// lib/captionComposer.js) through a fully independent claim (see
+// lib/apiClient.js's claim/complete/failCaption). Never writes to
+// production state directly — every decision is made by the backend,
+// reached only through lib/apiClient.js.
 //
 // ==========================================================================
-// 2026-09-14 removal of the local Windows Codex dependency
+// 2026-09-15 restoration of the local Codex creative artwork path
 // ==========================================================================
-// The first unattended GitHub Actions run tried to shell out to
-// C:\Users\jacks\AppData\Local\OpenAI\Codex\bin\codex.exe from a Linux
-// runner and failed 3/3 attempts, exactly as it must — that path can never
-// exist there. This file no longer spawns any external process, reads any
-// prompt template, or depends on any path outside this repo for either
-// artwork or captions — see artworkRenderer.js's and captionComposer.js's
-// own headers for the full rationale and the honest, disclosed trade-off
-// (a general-purpose deterministic layout rather than several bespoke
-// AI-interpreted template styles). The retired codex-exec plumbing
-// (codexRunner.js, codexOutcome.js, the three prompt templates) has been
-// deleted, not merely left dormant — nothing in this repo can invoke a
-// local Codex executable anymore, by construction, not by convention.
+// 2026-09-14 briefly replaced this with a deterministic, dependency-free
+// SVG renderer (lib/artworkRenderer.js) after the first unattended GitHub
+// Actions run failed trying to shell out to a local Windows codex.exe from
+// a Linux runner — that path can never exist on a hosted Linux runner.
+// Forensic audit (2026-09-15) confirmed the deterministic renderer was
+// never the desired creative generator: the successful A.J. Brown, Myles
+// Garrett, and Drake Maye graphics were produced by local Codex (GPT-5.6
+// Sol) orchestrating ChatGPT's own built-in image-generation tool against
+// the real source photo + the six-image Aggregate reference pack — genuine
+// creative synthesis, not something a fixed SVG layout can reproduce. The
+// final architecture decision is to keep running this on the existing,
+// always-on Windows PC (never a hosted Linux/cloud runner) and restore the
+// original Codex-based path exactly, rather than automate it on GitHub
+// Actions. codexRunner.js, codexOutcome.js, and both prompt templates are
+// restored verbatim from commit 457ee9a0 (immediately before their
+// removal in 7fa4f6d9). artworkRenderer.js is retired from the creative
+// path — mechanical, non-creative work (sizing, logo compositing) still
+// uses plain sharp, exactly as the proven workflow always did.
 //
 // Three entry paths, landing in the same eventual phases:
 //   - No --story-id, or a --story-id currently in the live artwork queue:
@@ -42,9 +48,10 @@
 //   node scripts/social-worker/process-one.js [--story-id=<id>]
 //
 // Required env: ARTWORK_WORKER_BASE_URL, AGGREGATE_ARTWORK_API_TOKEN.
-import { mkdir, rm } from "node:fs/promises";
+import { mkdir, rm, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import sharp from "sharp";
 import {
   claimStory,
   completeArtwork,
@@ -64,7 +71,8 @@ import {
   fetchArtworkQueue,
   fetchSocialState,
 } from "./lib/apiClient.js";
-import { renderArtwork } from "./lib/artworkRenderer.js";
+import { runCodex } from "./lib/codexRunner.js";
+import { assertOutputProduced } from "./lib/codexOutcome.js";
 import { readPngDimensions } from "./lib/pngDimensions.js";
 import { compositeBrandOverlay } from "./lib/brandOverlay.js";
 import { selectTarget, missingFixtureFields } from "./lib/selectTarget.js";
@@ -78,9 +86,28 @@ import { shouldSkipArtwork } from "./lib/routeTarget.js";
 import { determineRecoveryAction } from "./lib/routeRecovery.js";
 import { validateCaption } from "../lib/captionValidation.js";
 import { buildDeterministicCaption } from "./lib/captionComposer.js";
+import { ASPECT_RATIO_TARGET as FEED_ASPECT_RATIO_TARGET, ASPECT_RATIO_TOLERANCE as FEED_ASPECT_RATIO_TOLERANCE } from "../lib/artworkValidation.js";
+import { ASPECT_RATIO_TARGET as STORY_ASPECT_RATIO_TARGET, ASPECT_RATIO_TOLERANCE as STORY_ASPECT_RATIO_TOLERANCE } from "../lib/storyArtworkValidation.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
 const SOCIAL_OUTPUT_DIR = path.join(ROOT, "social-output");
+const FEED_TEMPLATE_PATH = path.join(ROOT, "scripts", "social-worker", "templates", "automation-prompt.template.md");
+const STORY_TEMPLATE_PATH = path.join(ROOT, "scripts", "social-worker", "templates", "story-prompt.template.md");
+// The proven historical reference pack — still present on this machine
+// (verified 2026-09-15), unchanged since the successful A.J. Brown/Myles
+// Garrett/Drake Maye runs. Overridable via AGGREGATE_TEMPLATE_PACK_DIR,
+// exactly as it always was; never migrated off this machine per the
+// "existing Windows PC stays on" architecture decision.
+const DEFAULT_TEMPLATE_PACK_DIR =
+  "C:\\Users\\jacks\\Documents\\Codex\\2026-08-26\\use-this-story-s-headline-and\\outputs\\aggregate-nfl-reference-pack";
+// Exact target dimensions the historical prompts themselves specify (Feed
+// 1024x1280, Story 1080x1920) — the same numbers proven against real
+// production output. FEED/STORY_ASPECT_RATIO_TARGET/TOLERANCE (imported
+// above) are the SAME tolerance band artworkValidation.js/
+// storyArtworkValidation.js already enforce server-side, reused here (not
+// re-guessed) to decide whether a mechanical resize is actually needed.
+const FEED_TARGET_DIMENSIONS = { width: 1024, height: 1280 };
+const STORY_TARGET_DIMENSIONS = { width: 1080, height: 1920 };
 
 function parseArgs(argv) {
   const args = { storyId: null, regenerateFeed: false, regenerateStory: false };
@@ -104,6 +131,60 @@ function feedOutputPath(storyId) {
   return path.join(SOCIAL_OUTPUT_DIR, `${storyId}.png`);
 }
 
+/** Builds the historical Feed creative prompt — restored verbatim from commit 457ee9a0. */
+async function buildFeedPrompt({ storyId, workDir, fixture, sourceImagePath }) {
+  const template = await readFile(FEED_TEMPLATE_PATH, "utf-8");
+  const fixturePath = path.join(workDir, "fixture.json");
+  await writeFile(fixturePath, JSON.stringify(fixture, null, 2) + "\n", "utf-8");
+
+  const outputPath = feedOutputPath(storyId);
+  const templatePackDir = process.env.AGGREGATE_TEMPLATE_PACK_DIR || DEFAULT_TEMPLATE_PACK_DIR;
+
+  const promptText = template
+    .replaceAll("{{fixture_path}}", fixturePath)
+    .replaceAll("{{template_pack_dir}}", templatePackDir)
+    .replaceAll("{{output_path}}", outputPath)
+    .replaceAll("{{base_image_path}}", sourceImagePath)
+    .replaceAll("{{source_name}}", fixture.source_name || "the original source");
+
+  const promptFilePath = path.join(workDir, "prompt.md");
+  await writeFile(promptFilePath, promptText, "utf-8");
+
+  return { promptText, outputPath };
+}
+
+/**
+ * Mechanical, non-creative safety net — "normalize dimensions as
+ * required." The proven historical workflow never forced an exact pixel
+ * size (the Story prompt itself explicitly tolerates "a nearby valid 9:16
+ * resolution," and real production output like 941x1672 exercised exactly
+ * that): this only resizes when the ACTUAL output falls outside the SAME
+ * aspect-ratio tolerance artworkValidation.js/storyArtworkValidation.js
+ * already enforce server-side, so a normal, already-within-tolerance
+ * creative result is never touched — only a genuine outlier is corrected,
+ * with a plain `cover` crop (never a stretch/distortion), before the
+ * branding step. Overwrites `outputPath` in place.
+ * @param {{outputPath: string, ratioTarget: number, ratioTolerance: number, targetWidth: number, targetHeight: number}} args
+ */
+async function normalizeArtworkDimensionsIfNeeded({ outputPath, ratioTarget, ratioTolerance, targetWidth, targetHeight }) {
+  const dims = await readPngDimensions(outputPath);
+  if (!dims || !dims.width || !dims.height) return dims;
+
+  const ratio = dims.width / dims.height;
+  if (Math.abs(ratio - ratioTarget) <= ratioTolerance) {
+    return dims; // already within the same tolerance the server-side gate enforces — leave the creative output untouched
+  }
+
+  console.log(`Output ${dims.width}x${dims.height} (ratio ${ratio.toFixed(3)}) is outside the ${ratioTarget.toFixed(3)}±${ratioTolerance} tolerance — mechanically normalizing to ${targetWidth}x${targetHeight} (cover crop, never a stretch).`);
+  const normalizedPath = `${outputPath}.normalized.png`;
+  await sharp(outputPath).resize(targetWidth, targetHeight, { fit: "cover" }).png().toFile(normalizedPath);
+  await rm(outputPath, { force: true });
+  await sharp(normalizedPath).toFile(outputPath);
+  await rm(normalizedPath, { force: true });
+
+  return readPngDimensions(outputPath);
+}
+
 /** @returns {Promise<boolean>} whether Feed completed successfully */
 async function processFeedArtwork({ storyId, workDir, fixture, sourceImagePath }) {
   console.log(`Claiming ${storyId} (Feed)...`);
@@ -120,14 +201,27 @@ async function processFeedArtwork({ storyId, workDir, fixture, sourceImagePath }
   console.log(`Feed claimed. claim_id=${claimId}`);
 
   try {
-    const outputPath = feedOutputPath(storyId);
+    const { promptText, outputPath } = await buildFeedPrompt({ storyId, workDir, fixture, sourceImagePath });
 
     await generateWithRetries(
       async (attempt) => {
-        console.log(`Rendering Feed artwork (attempt ${attempt}/${MAX_GENERATION_ATTEMPTS})...`);
+        console.log(`Running codex exec for Feed (attempt ${attempt}/${MAX_GENERATION_ATTEMPTS})...`);
         await rm(outputPath, { force: true });
 
-        await renderArtwork({ sourceImagePath, headline: fixture.post_headline, format: "feed", outputPath });
+        let codexResult;
+        try {
+          codexResult = await runCodex({ promptText, addDir: SOCIAL_OUTPUT_DIR });
+        } catch (codexErr) {
+          await writeFile(path.join(workDir, `codex.feed.attempt${attempt}.stdout.log`), codexErr.codexStdout ?? "", "utf-8");
+          await writeFile(path.join(workDir, `codex.feed.attempt${attempt}.stderr.log`), codexErr.codexStderr ?? "", "utf-8");
+          console.error(`codex exec (Feed) failed (exit code ${codexErr.codexExitCode ?? "n/a"}) — see ${workDir}\\codex.feed.attempt${attempt}.std{out,err}.log`);
+          throw codexErr;
+        }
+        await writeFile(path.join(workDir, `codex.feed.attempt${attempt}.stdout.log`), codexResult.stdout, "utf-8");
+        await writeFile(path.join(workDir, `codex.feed.attempt${attempt}.stderr.log`), codexResult.stderr, "utf-8");
+        console.log(`codex exec (Feed) exited 0 (attempt ${attempt}). stdout/stderr written to ${workDir}`);
+
+        await assertOutputProduced(outputPath, codexResult.stdout);
 
         const attemptDims = await readPngDimensions(outputPath);
         if (!attemptDims || attemptDims.sizeBytes === 0) {
@@ -138,12 +232,20 @@ async function processFeedArtwork({ storyId, workDir, fixture, sourceImagePath }
       { onAttemptFailure: (attempt, err) => console.error(`Feed attempt ${attempt} failed: ${err.message}`) }
     );
 
+    await normalizeArtworkDimensionsIfNeeded({
+      outputPath,
+      ratioTarget: FEED_ASPECT_RATIO_TARGET,
+      ratioTolerance: FEED_ASPECT_RATIO_TOLERANCE,
+      targetWidth: FEED_TARGET_DIMENSIONS.width,
+      targetHeight: FEED_TARGET_DIMENSIONS.height,
+    });
+
     // Deterministic brand compositing (2026-09 fix — see brandOverlay.js):
-    // renderArtwork() above leaves the branding area clean; the exact
+    // Codex is prompted to leave the branding area clean; the exact
     // official logo, hash-verified against the canonical asset, is pasted
-    // on here by code, never approximated. A compositing failure
+    // on here by code, never approximated or AI-drawn. A compositing failure
     // (missing/corrupt logo, out-of-bounds placement) fails this whole
-    // attempt exactly like a rendering failure — nothing unbranded is
+    // attempt exactly like a generation failure — nothing unbranded is
     // ever uploaded.
     const brandedPath = outputPath.replace(/\.png$/i, ".branded.png");
     console.log("Compositing official logo onto Feed...");
@@ -197,6 +299,28 @@ function storyOutputPath(storyId) {
   return path.join(SOCIAL_OUTPUT_DIR, "story", `${storyId}.png`);
 }
 
+/** Builds the historical Story creative prompt — restored verbatim from commit 457ee9a0. */
+async function buildStoryPrompt({ storyId, workDir, fixture, sourceImagePath }) {
+  const template = await readFile(STORY_TEMPLATE_PATH, "utf-8");
+  const fixturePath = path.join(workDir, "story-fixture.json");
+  await writeFile(fixturePath, JSON.stringify(fixture, null, 2) + "\n", "utf-8");
+
+  const outputPath = storyOutputPath(storyId);
+  const templatePackDir = process.env.AGGREGATE_TEMPLATE_PACK_DIR || DEFAULT_TEMPLATE_PACK_DIR;
+
+  const promptText = template
+    .replaceAll("{{fixture_path}}", fixturePath)
+    .replaceAll("{{template_pack_dir}}", templatePackDir)
+    .replaceAll("{{output_path}}", outputPath)
+    .replaceAll("{{base_image_path}}", sourceImagePath)
+    .replaceAll("{{source_name}}", fixture.source_name || "the original source");
+
+  const promptFilePath = path.join(workDir, "story-prompt.md");
+  await writeFile(promptFilePath, promptText, "utf-8");
+
+  return { promptText, outputPath };
+}
+
 /** @returns {Promise<boolean>} whether Story completed successfully. Never touches Feed. */
 async function processStoryArtwork({ storyId, workDir, fixture, sourceImagePath }) {
   console.log(`Claiming ${storyId} (Story)...`);
@@ -235,14 +359,27 @@ async function processStoryArtwork({ storyId, workDir, fixture, sourceImagePath 
   await mkdir(path.join(SOCIAL_OUTPUT_DIR, "story"), { recursive: true });
 
   try {
-    const outputPath = storyOutputPath(storyId);
+    const { promptText, outputPath } = await buildStoryPrompt({ storyId, workDir, fixture, sourceImagePath });
 
     await generateWithRetries(
       async (attempt) => {
-        console.log(`Rendering Story artwork (attempt ${attempt}/${MAX_GENERATION_ATTEMPTS})...`);
+        console.log(`Running codex exec for Story (attempt ${attempt}/${MAX_GENERATION_ATTEMPTS})...`);
         await rm(outputPath, { force: true });
 
-        await renderArtwork({ sourceImagePath, headline: fixture.post_headline, format: "story", outputPath });
+        let codexResult;
+        try {
+          codexResult = await runCodex({ promptText, addDir: SOCIAL_OUTPUT_DIR });
+        } catch (codexErr) {
+          await writeFile(path.join(workDir, `codex.story.attempt${attempt}.stdout.log`), codexErr.codexStdout ?? "", "utf-8");
+          await writeFile(path.join(workDir, `codex.story.attempt${attempt}.stderr.log`), codexErr.codexStderr ?? "", "utf-8");
+          console.error(`codex exec (Story) failed (exit code ${codexErr.codexExitCode ?? "n/a"}) — see ${workDir}\\codex.story.attempt${attempt}.std{out,err}.log`);
+          throw codexErr;
+        }
+        await writeFile(path.join(workDir, `codex.story.attempt${attempt}.stdout.log`), codexResult.stdout, "utf-8");
+        await writeFile(path.join(workDir, `codex.story.attempt${attempt}.stderr.log`), codexResult.stderr, "utf-8");
+        console.log(`codex exec (Story) exited 0 (attempt ${attempt}). stdout/stderr written to ${workDir}`);
+
+        await assertOutputProduced(outputPath, codexResult.stdout);
 
         const attemptDims = await readPngDimensions(outputPath);
         if (!attemptDims || attemptDims.sizeBytes === 0) {
@@ -252,6 +389,14 @@ async function processStoryArtwork({ storyId, workDir, fixture, sourceImagePath 
       },
       { onAttemptFailure: (attempt, err) => console.error(`Story attempt ${attempt} failed: ${err.message}`) }
     );
+
+    await normalizeArtworkDimensionsIfNeeded({
+      outputPath,
+      ratioTarget: STORY_ASPECT_RATIO_TARGET,
+      ratioTolerance: STORY_ASPECT_RATIO_TOLERANCE,
+      targetWidth: STORY_TARGET_DIMENSIONS.width,
+      targetHeight: STORY_TARGET_DIMENSIONS.height,
+    });
 
     // Deterministic brand compositing — same mechanism as Feed, see
     // brandOverlay.js and the comment on the Feed call site above.
@@ -328,14 +473,27 @@ async function processPrimaryStoryArtwork({ storyId, workDir, fixture, sourceIma
   await mkdir(path.join(SOCIAL_OUTPUT_DIR, "story"), { recursive: true });
 
   try {
-    const outputPath = storyOutputPath(storyId);
+    const { promptText, outputPath } = await buildStoryPrompt({ storyId, workDir, fixture, sourceImagePath });
 
     await generateWithRetries(
       async (attempt) => {
-        console.log(`Rendering Story-primary artwork (attempt ${attempt}/${MAX_GENERATION_ATTEMPTS})...`);
+        console.log(`Running codex exec for Story-primary (attempt ${attempt}/${MAX_GENERATION_ATTEMPTS})...`);
         await rm(outputPath, { force: true });
 
-        await renderArtwork({ sourceImagePath, headline: fixture.post_headline, format: "story", outputPath });
+        let codexResult;
+        try {
+          codexResult = await runCodex({ promptText, addDir: SOCIAL_OUTPUT_DIR });
+        } catch (codexErr) {
+          await writeFile(path.join(workDir, `codex.story-primary.attempt${attempt}.stdout.log`), codexErr.codexStdout ?? "", "utf-8");
+          await writeFile(path.join(workDir, `codex.story-primary.attempt${attempt}.stderr.log`), codexErr.codexStderr ?? "", "utf-8");
+          console.error(`codex exec (Story-primary) failed (exit code ${codexErr.codexExitCode ?? "n/a"}) — see ${workDir}\\codex.story-primary.attempt${attempt}.std{out,err}.log`);
+          throw codexErr;
+        }
+        await writeFile(path.join(workDir, `codex.story-primary.attempt${attempt}.stdout.log`), codexResult.stdout, "utf-8");
+        await writeFile(path.join(workDir, `codex.story-primary.attempt${attempt}.stderr.log`), codexResult.stderr, "utf-8");
+        console.log(`codex exec (Story-primary) exited 0 (attempt ${attempt}). stdout/stderr written to ${workDir}`);
+
+        await assertOutputProduced(outputPath, codexResult.stdout);
 
         const attemptDims = await readPngDimensions(outputPath);
         if (!attemptDims || attemptDims.sizeBytes === 0) {
@@ -345,6 +503,14 @@ async function processPrimaryStoryArtwork({ storyId, workDir, fixture, sourceIma
       },
       { onAttemptFailure: (attempt, err) => console.error(`Story-primary attempt ${attempt} failed: ${err.message}`) }
     );
+
+    await normalizeArtworkDimensionsIfNeeded({
+      outputPath,
+      ratioTarget: STORY_ASPECT_RATIO_TARGET,
+      ratioTolerance: STORY_ASPECT_RATIO_TOLERANCE,
+      targetWidth: STORY_TARGET_DIMENSIONS.width,
+      targetHeight: STORY_TARGET_DIMENSIONS.height,
+    });
 
     const brandedPath = outputPath.replace(/\.png$/i, ".branded.png");
     console.log("Compositing official logo onto Story-primary...");
@@ -428,7 +594,7 @@ async function processArtwork(target) {
 
   let sourceImagePath;
   try {
-    // Download the base photograph ourselves BEFORE ever calling renderArtwork() —
+    // Download the base photograph ourselves BEFORE ever invoking Codex —
     // see lib/sourceImage.js for why. Reused for BOTH Feed and Story, per
     // "download once per processing lifecycle where practical."
     console.log("Downloading source image locally...");
@@ -543,19 +709,38 @@ async function processFeedRegeneration({ storyId, workDir, fixture, sourceImageP
   console.log(`Feed regeneration claimed. claim_id=${claimId}`);
 
   try {
-    const outputPath = feedOutputPath(storyId);
+    const { promptText, outputPath } = await buildFeedPrompt({ storyId, workDir, fixture, sourceImagePath });
 
     await generateWithRetries(
       async (attempt) => {
-        console.log(`Rendering Feed regeneration (attempt ${attempt}/${MAX_GENERATION_ATTEMPTS})...`);
+        console.log(`Running codex exec for Feed regeneration (attempt ${attempt}/${MAX_GENERATION_ATTEMPTS})...`);
         await rm(outputPath, { force: true });
-        await renderArtwork({ sourceImagePath, headline: fixture.post_headline, format: "feed", outputPath });
+        let codexResult;
+        try {
+          codexResult = await runCodex({ promptText, addDir: SOCIAL_OUTPUT_DIR });
+        } catch (codexErr) {
+          await writeFile(path.join(workDir, `codex.feed-regen.attempt${attempt}.stdout.log`), codexErr.codexStdout ?? "", "utf-8");
+          await writeFile(path.join(workDir, `codex.feed-regen.attempt${attempt}.stderr.log`), codexErr.codexStderr ?? "", "utf-8");
+          console.error(`codex exec (Feed regeneration) failed (exit code ${codexErr.codexExitCode ?? "n/a"}) — see ${workDir}\\codex.feed-regen.attempt${attempt}.std{out,err}.log`);
+          throw codexErr;
+        }
+        await writeFile(path.join(workDir, `codex.feed-regen.attempt${attempt}.stdout.log`), codexResult.stdout, "utf-8");
+        await writeFile(path.join(workDir, `codex.feed-regen.attempt${attempt}.stderr.log`), codexResult.stderr, "utf-8");
+        await assertOutputProduced(outputPath, codexResult.stdout);
         const attemptDims = await readPngDimensions(outputPath);
         if (!attemptDims || attemptDims.sizeBytes === 0) throw new Error(`Output PNG missing or empty at ${outputPath}`);
         console.log(`Feed regenerated on attempt ${attempt}: ${outputPath} (${attemptDims.width}x${attemptDims.height}, ${attemptDims.sizeBytes} bytes)`);
       },
       { onAttemptFailure: (attempt, err) => console.error(`Feed regeneration attempt ${attempt} failed: ${err.message}`) }
     );
+
+    await normalizeArtworkDimensionsIfNeeded({
+      outputPath,
+      ratioTarget: FEED_ASPECT_RATIO_TARGET,
+      ratioTolerance: FEED_ASPECT_RATIO_TOLERANCE,
+      targetWidth: FEED_TARGET_DIMENSIONS.width,
+      targetHeight: FEED_TARGET_DIMENSIONS.height,
+    });
 
     const brandedPath = outputPath.replace(/\.png$/i, ".branded.png");
     console.log("Compositing official logo onto regenerated Feed...");
@@ -597,19 +782,38 @@ async function processStoryRegeneration({ storyId, workDir, fixture, sourceImage
   await mkdir(path.join(SOCIAL_OUTPUT_DIR, "story"), { recursive: true });
 
   try {
-    const outputPath = storyOutputPath(storyId);
+    const { promptText, outputPath } = await buildStoryPrompt({ storyId, workDir, fixture, sourceImagePath });
 
     await generateWithRetries(
       async (attempt) => {
-        console.log(`Rendering Story regeneration (attempt ${attempt}/${MAX_GENERATION_ATTEMPTS})...`);
+        console.log(`Running codex exec for Story regeneration (attempt ${attempt}/${MAX_GENERATION_ATTEMPTS})...`);
         await rm(outputPath, { force: true });
-        await renderArtwork({ sourceImagePath, headline: fixture.post_headline, format: "story", outputPath });
+        let codexResult;
+        try {
+          codexResult = await runCodex({ promptText, addDir: SOCIAL_OUTPUT_DIR });
+        } catch (codexErr) {
+          await writeFile(path.join(workDir, `codex.story-regen.attempt${attempt}.stdout.log`), codexErr.codexStdout ?? "", "utf-8");
+          await writeFile(path.join(workDir, `codex.story-regen.attempt${attempt}.stderr.log`), codexErr.codexStderr ?? "", "utf-8");
+          console.error(`codex exec (Story regeneration) failed (exit code ${codexErr.codexExitCode ?? "n/a"}) — see ${workDir}\\codex.story-regen.attempt${attempt}.std{out,err}.log`);
+          throw codexErr;
+        }
+        await writeFile(path.join(workDir, `codex.story-regen.attempt${attempt}.stdout.log`), codexResult.stdout, "utf-8");
+        await writeFile(path.join(workDir, `codex.story-regen.attempt${attempt}.stderr.log`), codexResult.stderr, "utf-8");
+        await assertOutputProduced(outputPath, codexResult.stdout);
         const attemptDims = await readPngDimensions(outputPath);
         if (!attemptDims || attemptDims.sizeBytes === 0) throw new Error(`Output PNG missing or empty at ${outputPath}`);
         console.log(`Story regenerated on attempt ${attempt}: ${outputPath} (${attemptDims.width}x${attemptDims.height}, ${attemptDims.sizeBytes} bytes)`);
       },
       { onAttemptFailure: (attempt, err) => console.error(`Story regeneration attempt ${attempt} failed: ${err.message}`) }
     );
+
+    await normalizeArtworkDimensionsIfNeeded({
+      outputPath,
+      ratioTarget: STORY_ASPECT_RATIO_TARGET,
+      ratioTolerance: STORY_ASPECT_RATIO_TOLERANCE,
+      targetWidth: STORY_TARGET_DIMENSIONS.width,
+      targetHeight: STORY_TARGET_DIMENSIONS.height,
+    });
 
     const brandedPath = outputPath.replace(/\.png$/i, ".branded.png");
     console.log("Compositing official logo onto regenerated Story...");

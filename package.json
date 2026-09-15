@@ -12,6 +12,8 @@
     "test:artwork-events": "node scripts/tests/artwork-events-regression.mjs",
     "test:caption-events": "node scripts/tests/caption-events-regression.mjs",
     "test:select-target": "node scripts/social-worker/lib/selectTarget.test.mjs",
+    "test:codex-runner": "node scripts/social-worker/lib/codexRunner.test.mjs",
+    "test:codex-outcome": "node scripts/social-worker/lib/codexOutcome.test.mjs",
     "test:artwork-plan": "node scripts/social-worker/lib/artworkPlan.test.mjs",
     "test:source-image": "node scripts/social-worker/lib/sourceImage.test.mjs",
     "test:generate-retries": "node scripts/social-worker/lib/generateWithRetries.test.mjs",

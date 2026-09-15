@@ -542,6 +542,15 @@ export async function main({
   replayArtworkCompletionImpl = replayArtworkCompletion,
   selectCandidateImpl = selectAutonomousCandidate,
   now = Date.now(),
+  // 2026-09-15 restoration: fresh artwork generation (Priority 4 below)
+  // requires the local Codex/GPT-5.6 Sol creative path (see
+  // process-one.js's own header) — codex.exe can never exist on a GitHub
+  // Actions runner, exactly the original 2026-09-14 incident this whole
+  // restoration traces back to. GITHUB_ACTIONS is set to "true" on every
+  // GitHub-hosted run, unconditionally, by GitHub itself — no new secret,
+  // no new config, and never set on the Windows machine's own local runs.
+  // Injectable only for testing; production never overrides this.
+  isCloudEnvironment = process.env.GITHUB_ACTIONS === "true",
 } = {}) {
   // 2026-09-14: at most TWO selection attempts per run, never more — the
   // first is the normal, unqualified selection; the second (only reached
@@ -651,6 +660,25 @@ export async function main({
       console.log(`story_id=${storyId} caption is not yet safely recoverable — trying once more, excluding it, so it cannot block other work this run.`);
       excludeStoryIds = [storyId];
       continue;
+    }
+
+    // 2026-09-15 restoration guard — this is the ONE selection mode
+    // ("generate": Priority 4, a "queued" record with no existing artwork
+    // at all) that requires the local Codex creative path. Every other
+    // mode above (approve-only, recover-artwork, recover-caption) either
+    // never touches artwork generation or only replays an ALREADY-durably-
+    // completed asset — none of them reach this line. Checked here,
+    // BEFORE runPreparationImpl/runGeneratePipeline ever runs — no claim
+    // has been made for this story_id by anything in this file at this
+    // point, so skipping here can never poison a claim, mark the story
+    // failed, or mutate any state: the story is simply left exactly as it
+    // was, fully available for the Windows artwork runner's own next
+    // (unmodified) run to claim and process normally.
+    if (isCloudEnvironment) {
+      console.log(
+        `story_id=${storyId} requires fresh artwork generation (Priority 4), which needs the local Codex/GPT-5.6 Sol creative path — this GitHub Actions runner cannot perform it. Leaving it untouched; the Windows artwork runner will pick it up normally.`
+      );
+      return { ok: true, step: "generate_requires_local_runner", selected: { story_id: storyId, record } };
     }
 
     return runGeneratePipeline(storyId, record, { runPreparationImpl, waitForDurableCommitImpl, decideApprovalImpl, waitForApprovalCommitImpl, fetchState, now });

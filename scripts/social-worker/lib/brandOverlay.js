@@ -35,17 +35,18 @@ export const CANONICAL_LOGO_SHA256 = "d73259067ad43caf33c4eff5950c7e3d5d8a3fb541
 // — a single source of truth for logo geometry, never a second, drifting
 // copy of these ratios.
 //
-// 2026-09-14 brand-system revision: widthRatio raised from 0.28/0.30 to
-// 0.34 for both formats — direct measurement against the four canonical
-// design references (assets/reference/) puts their own logo lockups at
-// roughly 0.32-0.38 of canvas width; the prior ratios read as a small
-// footer watermark next to that, not the real branding element the
-// references treat it as. paddingXRatio/paddingBottomRatio tightened to
-// match (still comfortably inside brandOverlay's own bounds check below,
-// and still visibly larger than Feed's for Story's phone-UI safety zone).
+// 2026-09-15 restoration: a same-day 2026-09-14 revision briefly raised
+// widthRatio to 0.34/0.34 (paddingXRatio 0.05, paddingBottomRatio
+// 0.035/0.06) as part of a deterministic-artwork-renderer visual redesign.
+// That renderer has since been retired in favor of restoring the ORIGINAL
+// Codex/ChatGPT creative pipeline that actually produced the successful
+// A.J. Brown, Myles Garrett, and Drake Maye graphics — these values are
+// reverted back to exactly what that proven pipeline used (unchanged by
+// commit 7fa4f6d9 itself, which only changed this const's export
+// visibility, never its values).
 export const PLACEMENT = {
-  feed: { widthRatio: 0.34, paddingXRatio: 0.05, paddingBottomRatio: 0.035 },
-  story: { widthRatio: 0.34, paddingXRatio: 0.05, paddingBottomRatio: 0.06 },
+  feed: { widthRatio: 0.28, paddingXRatio: 0.06, paddingBottomRatio: 0.05 },
+  story: { widthRatio: 0.3, paddingXRatio: 0.06, paddingBottomRatio: 0.1 },
 };
 
 async function sha256File(filePath) {

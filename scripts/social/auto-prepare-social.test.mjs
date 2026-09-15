@@ -1567,6 +1567,106 @@ test("110. a permanently-ineligible recover-artwork candidate (e.g. a pre-cloud-
 });
 
 // ---------------------------------------------------------------------------
+// 2026-09-15 restoration guard — GitHub Actions must never attempt fresh
+// artwork generation (Priority 4), which requires the restored local Codex
+// path (process-one.js). Every other selection mode either never touches
+// artwork generation or only replays an ALREADY-durably-completed asset.
+// ---------------------------------------------------------------------------
+
+test("111. GitHub environment + a fresh 'generate' candidate: the run exits ok:true without ever spawning process-one.js, without claiming, and without any state mutation", async () => {
+  let prepCalled = false;
+  let approvalCalled = false;
+  const result = await main({
+    fetchQueue: async () => [queueEntry("s1")],
+    fetchState: async () => ({ stories: { s1: validQueuedRecord({ story_id: "s1" }) } }),
+    live: true,
+    isCloudEnvironment: true,
+    runPreparationImpl: async () => { prepCalled = true; return { exitCode: 0 }; },
+    decideApprovalImpl: async () => { approvalCalled = true; return { result: "approved" }; },
+  });
+  assert.equal(result.ok, true, "must exit successfully — never a false failure");
+  assert.equal(result.step, "generate_requires_local_runner");
+  assert.equal(result.selected.story_id, "s1");
+  assert.equal(prepCalled, false, "process-one.js (and therefore runCodex()) must never be spawned on a GitHub runner");
+  assert.equal(approvalCalled, false, "nothing downstream of generation may run either, since generation never happened");
+});
+
+test("112. the candidate skipped on GitHub remains exactly as it was — no claim consumed, no exclude-and-retry burns it, so the SAME candidate is still selectable next time (by GitHub again, harmlessly, or by the Windows runner)", async () => {
+  const fetchQueue = async () => [queueEntry("s1")];
+  const fetchState = async () => ({ stories: { s1: validQueuedRecord({ story_id: "s1" }) } });
+  const firstRun = await main({ fetchQueue, fetchState, live: true, isCloudEnvironment: true, runPreparationImpl: async () => ({ exitCode: 0 }) });
+  const secondRun = await main({ fetchQueue, fetchState, live: true, isCloudEnvironment: true, runPreparationImpl: async () => ({ exitCode: 0 }) });
+  assert.equal(firstRun.selected.story_id, "s1");
+  assert.equal(secondRun.selected.story_id, "s1", "the exact same untouched candidate must still be selected — nothing about it was consumed or excluded");
+});
+
+test("113. GitHub caption-only recovery is completely unaffected by the cloud guard — it never reaches the generate dispatch at all", async () => {
+  const s1 = { story_id: "s1", status: "artwork_ready", selection: { destination: "feed", slot_id: "feed:test" }, source_story: validQueuedRecord().source_story, approval: { status: "pending" }, publishing: { status: "not_posted", instagram: { feed: { status: "not_posted" }, story: { status: "not_posted" } } }, caption: { status: "generating", claim: { claim_id: "c1" } } };
+  const result = await main({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { s1 } }),
+    live: true,
+    isCloudEnvironment: true,
+    getCaptionClaimStatusImpl: async () => ({ do_record: { status: "completed", claim_id: "c1", payload: { text: "final caption" } } }),
+    replayCaptionCompletionImpl: async () => ({ replayed: true }),
+    waitForDurableCommitImpl: async () => ({ committed: true, record: { status: "awaiting_approval", caption: { status: "ready", text: "final caption", claim: { claim_id: "c1" } } } }),
+    decideApprovalImpl: async () => ({ result: "approved" }),
+  });
+  assert.equal(result.ok, true);
+  assert.notEqual(result.step, "generate_requires_local_runner");
+});
+
+test("114. GitHub approve-only processing is completely unaffected by the cloud guard", async () => {
+  const result = await main({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { s1: awaitingApprovalRecord({ story_id: "s1" }) } }),
+    live: true,
+    isCloudEnvironment: true,
+    decideApprovalImpl: async () => ({ result: "approved" }),
+  });
+  assert.equal(result.ok, true);
+  assert.equal(result.autoApproved, true);
+});
+
+test("115. GitHub recover-artwork: an ALREADY-durably-completed replay still delegates to the generate pipeline (process-one.js) even with isCloudEnvironment:true — that continuation is caption-only in practice (never touches Codex), so the Priority-4 guard correctly does not apply to it", async () => {
+  let prepCallArgs;
+  const result = await main({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { s1: stuckArtworkRecord({ story_id: "s1" }) } }),
+    live: true,
+    isCloudEnvironment: true,
+    getArtworkClaimStatusImpl: async () => ({ do_record: completedArtworkDoRecord() }),
+    replayArtworkCompletionImpl: async () => ({ replayed: true }),
+    waitForDurableCommitImpl: async (fetchState, storyId, predicate) => {
+      if (predicate({ status: "artwork_ready" })) return { committed: true, record: recoveredArtworkReadyRecord({ story_id: "s1" }) };
+      return { committed: true, record: awaitingApprovalRecord({ story_id: "s1" }) };
+    },
+    runPreparationImpl: async (args) => { prepCallArgs = args; return { exitCode: 0 }; },
+    decideApprovalImpl: async () => ({ result: "approved" }),
+  });
+  assert.equal(prepCallArgs.storyId, "s1", "the recovery continuation must still reach process-one.js — it never performs fresh Codex generation, only destination-aware caption-only routing");
+  assert.equal(result.autoApproved, true);
+});
+
+test("116. Windows/local execution (isCloudEnvironment:false, the real production default off GitHub Actions) still reaches the restored generate pipeline normally for a fresh candidate", async () => {
+  let prepCallArgs;
+  await main({
+    fetchQueue: async () => [queueEntry("s1")],
+    fetchState: statefulFetchState(awaitingApprovalRecord()),
+    live: true,
+    isCloudEnvironment: false,
+    runPreparationImpl: async (args) => { prepCallArgs = args; return { exitCode: 0 }; },
+    decideApprovalImpl: async () => ({ result: "approved" }),
+  });
+  assert.equal(prepCallArgs.storyId, "s1", "off GitHub Actions, fresh generation must be dispatched exactly as before this guard existed");
+});
+
+test("117. the cloud-skip result maps to a successful (0) exit code via the existing determineExitCode() — a GitHub run leaving artwork for the Windows runner must never appear as a red build", () => {
+  const outcome = determineExitCode({ ok: true, step: "generate_requires_local_runner", selected: { story_id: "s1" } });
+  assert.equal(outcome, 0);
+});
+
+// ---------------------------------------------------------------------------
 let failures = 0;
 for (const c of cases) {
   try {
