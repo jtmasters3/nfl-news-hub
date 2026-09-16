@@ -44,9 +44,22 @@ export const CANONICAL_LOGO_SHA256 = "d73259067ad43caf33c4eff5950c7e3d5d8a3fb541
 // reverted back to exactly what that proven pipeline used (unchanged by
 // commit 7fa4f6d9 itself, which only changed this const's export
 // visibility, never its values).
+// 2026-09-16 Story spacing fix — the real Keenan Allen Story graphic (a long,
+// 5-line headline) proved the logo's fixed bottom-anchored position doesn't
+// adapt to how far down Codex's own headline text happens to run, so a long
+// headline can land right on top of the logo. paddingBottomRatio controls
+// ONLY the margin BELOW the logo, not the gap above it — moving the logo
+// closer to the canvas edge (lower ratio) is what opens headline/logo
+// separation, at the cost of shrinking that bottom margin. Story's own
+// margin was deliberately larger than Feed's (0.1 vs 0.05) to clear
+// Instagram Story's own reply-bar/progress-indicator UI near the true
+// bottom edge — 0.07 is a moderate reduction that still leaves a real safe
+// margin (still larger than Feed's) while giving headline text meaningfully
+// more breathing room. Feed is untouched: no evidence this same problem
+// exists there.
 export const PLACEMENT = {
   feed: { widthRatio: 0.28, paddingXRatio: 0.06, paddingBottomRatio: 0.05 },
-  story: { widthRatio: 0.3, paddingXRatio: 0.06, paddingBottomRatio: 0.1 },
+  story: { widthRatio: 0.3, paddingXRatio: 0.06, paddingBottomRatio: 0.07 },
 };
 
 async function sha256File(filePath) {
