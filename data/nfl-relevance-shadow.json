@@ -16258,6 +16258,44 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/mike-vrabel-used-to-practice-in-full-pads-twice-a-day-now-he-s-using-gps-to-keep-his-players-healthy",
+      "source_name": "NFL.com",
+      "headline": "Mike Vrabel used to practice in full pads twice a day. Now he's using GPS to keep his players healthy",
+      "published_at": "2026-09-16T10:01:05.000Z",
+      "observed_at": "2026-09-16T22:30:24.273Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jadeveon-clowney-out-of-texans-practice-nico-collins-limited",
+      "source_name": "Pro Football Talk",
+      "headline": "Jadeveon Clowney out of Texans practice, Nico Collins limited",
+      "published_at": "2026-09-16T22:18:37.000Z",
+      "observed_at": "2026-09-16T22:30:24.273Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "HOU"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
