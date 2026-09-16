@@ -69,6 +69,21 @@ function et(dateStr, timeStr) {
   return new Date(easternWallClockToUtcMillis(dateStr, timeStr)).toISOString();
 }
 
+/**
+ * Test-only setup for fallback tests: activates the engine early enough that
+ * the fallback lookback isn't clamped by the activation boundary itself, and
+ * "fast forwards" every slot between activation and one minute before
+ * `targetNow` with an EMPTY story list — so those intervening slots are
+ * already recorded (harmlessly, as no_candidate) and can never intercept a
+ * fallback-pool story via their own ordinary Tier-1 window before the test's
+ * real call (at `targetNow`, with the real stories) ever runs.
+ */
+function activatedStateBefore(targetNow, activationTime) {
+  const activated = runSelectionEngine({ state: emptyState(), stories: [], now: activationTime });
+  const oneMinuteBefore = new Date(Date.parse(targetNow) - 60 * 1000).toISOString();
+  return runSelectionEngine({ state: activated.state, stories: [], now: oneMinuteBefore }).state;
+}
+
 // ---------------------------------------------------------------------------
 // 1-2. Eastern-time slot generation / DST-safe slot IDs
 // ---------------------------------------------------------------------------
@@ -633,6 +648,107 @@ test("40. a malformed existing social-state file fails safely when read through 
     await fsWriteFile(filePath, "{ not valid json", "utf-8");
     await assert.rejects(() => readSocialState(filePath));
   });
+});
+
+// ---------------------------------------------------------------------------
+// 41-46. 2026-09-16 fallback selection (Tier 2) — a slot's own narrow window
+// finding nothing no longer automatically means no_candidate; the engine
+// widens to a 6-hour recent pool before giving up, using the SAME
+// eligibility and ranking rules.
+// ---------------------------------------------------------------------------
+
+test("41A. a Tier-1 winner (inside the slot's own window) wins exactly as before — fallback never runs, reason stays plain", () => {
+  const now = et("2026-09-14", "16:00");
+  const s = story({ id: "tier1-winner", importance_score: 8, first_published_at: et("2026-09-14", "15:30") });
+  const result = runSelectionEngine({ state: stateWithSyncedStories([s]), stories: [s], now });
+  const slot = result.state.selection_slots["feed:2026-09-14T16:00:00-04:00"];
+  assert.equal(slot.status, "selected");
+  assert.equal(slot.story_id, "tier1-winner");
+  assert.equal(result.state.stories["tier1-winner"].selection.reason, "importance_score_rank");
+});
+
+test("41B. Tier-1 empty, acceptable older stories exist within the fallback pool — the highest-ranked one wins via fallback", () => {
+  const now = et("2026-09-14", "16:00"); // feed slot 16:00, own window 14:00-16:00, empty
+  const higher = story({ id: "fallback-higher", importance_score: 5, first_published_at: et("2026-09-14", "11:00") }); // within 10:00-16:00 fallback pool
+  const lower = story({ id: "fallback-lower", importance_score: 3, first_published_at: et("2026-09-14", "12:00") });
+  const activatedState = activatedStateBefore(now, et("2026-09-14", "09:00"));
+  const state = stateWithSyncedStories([higher, lower], activatedState);
+  const result = runSelectionEngine({ state, stories: [higher, lower], now });
+  const slot = result.state.selection_slots["feed:2026-09-14T16:00:00-04:00"];
+  assert.equal(slot.status, "selected");
+  assert.equal(slot.story_id, "fallback-higher");
+  assert.equal(result.state.stories["fallback-higher"].selection.reason, "fallback_recent_pool_importance_score_rank");
+});
+
+test("41C. fallback never weakens hard exclusions — needs_media, already-selected, and beyond-the-lookback-horizon stories are never chosen merely to fill the slot", () => {
+  const now = et("2026-09-14", "16:00"); // feed slot 16:00, own window 14:00-16:00, fallback pool 10:00-16:00
+  const needsMedia = story({ id: "needs-media", importance_score: 20, first_published_at: et("2026-09-14", "11:30"), ready: false });
+  const tooStale = story({ id: "too-stale", importance_score: 20, first_published_at: et("2026-09-14", "09:00") }); // before the 10:00 fallback horizon
+  const alreadySelected = story({ id: "already-selected", importance_score: 20, first_published_at: et("2026-09-14", "11:45") });
+  const acceptable = story({ id: "genuinely-acceptable", importance_score: 1, first_published_at: et("2026-09-14", "12:30") });
+
+  const activatedState = activatedStateBefore(now, et("2026-09-14", "09:00"));
+  let state = stateWithSyncedStories([needsMedia, tooStale, alreadySelected, acceptable], activatedState);
+  state = {
+    ...state,
+    stories: {
+      ...state.stories,
+      "already-selected": {
+        ...state.stories["already-selected"],
+        selection: { destination: "story", slot_id: "story:2026-09-14T12:00:00-04:00", selected_at: now, window_start: now, window_end: now, score: 20, reason: "importance_score_rank" },
+      },
+    },
+  };
+
+  const result = runSelectionEngine({ state, stories: [needsMedia, tooStale, alreadySelected, acceptable], now });
+  const slot = result.state.selection_slots["feed:2026-09-14T16:00:00-04:00"];
+  assert.equal(slot.status, "selected");
+  assert.equal(slot.story_id, "genuinely-acceptable", "the only story with no disqualifying condition must win, despite having the lowest importance score");
+});
+
+test("41D. genuinely zero acceptable stories anywhere in the fallback horizon still produces no_candidate", () => {
+  const now = et("2026-09-14", "16:00");
+  const tooStale = story({ id: "d-too-stale", importance_score: 20, first_published_at: et("2026-09-14", "08:00") });
+  const result = runSelectionEngine({ state: stateWithSyncedStories([tooStale]), stories: [tooStale], now });
+  const slot = result.state.selection_slots["feed:2026-09-14T16:00:00-04:00"];
+  assert.equal(slot.status, "no_candidate");
+  assert.equal(slot.story_id, null);
+});
+
+test("41E. a Story destination slot also receives fallback behavior correctly", () => {
+  // 11:00 deliberately has no coincident Feed slot (Feed only fires on even
+  // hours) — a Story-only slot_time keeps this test isolated to the Story
+  // destination's own fallback pool, with no Feed slot's own fallback
+  // reaching the same story first.
+  const now = et("2026-09-14", "11:00"); // story slot 11:00, own window 10:00-11:00, empty
+  const s = story({ id: "story-fallback-winner", importance_score: 4, first_published_at: et("2026-09-14", "06:00") }); // within the 5:00-11:00 fallback pool
+  const activatedState = activatedStateBefore(now, et("2026-09-14", "04:00"));
+  const state = stateWithSyncedStories([s], activatedState);
+  const result = runSelectionEngine({ state, stories: [s], now });
+  const slot = result.state.selection_slots["story:2026-09-14T11:00:00-04:00"];
+  assert.equal(slot.status, "selected");
+  assert.equal(slot.story_id, "story-fallback-winner");
+  assert.equal(result.state.stories["story-fallback-winner"].selection.destination, "story");
+  assert.equal(result.state.stories["story-fallback-winner"].selection.reason, "fallback_recent_pool_importance_score_rank");
+});
+
+test("41F. a slot already recorded (no_candidate or selected) is never reprocessed later, even once a fallback-eligible story exists — no retroactive rewrite", () => {
+  const t1 = et("2026-09-14", "16:00");
+  const historical = runSelectionEngine({ state: emptyState(), stories: [], now: t1 });
+  const recordedAtT1 = historical.state.selection_slots["feed:2026-09-14T16:00:00-04:00"];
+  assert.equal(recordedAtT1.status, "no_candidate");
+
+  // Advance only 10 minutes (no new slot becomes due) so the only relevant
+  // question is whether the ALREADY-PROCESSED feed:16:00 slot gets touched
+  // — not whether some later, newly-due slot picks the story up instead
+  // (which the fallback feature would correctly allow, and is not what this
+  // test is checking).
+  const t2 = et("2026-09-14", "16:10");
+  const lateStory = story({ id: "arrives-too-late-to-matter", importance_score: 10, first_published_at: et("2026-09-14", "15:00") });
+  const later = runSelectionEngine({ state: stateWithSyncedStories([lateStory], historical.state), stories: [lateStory], now: t2 });
+  const stillAtT1 = later.state.selection_slots["feed:2026-09-14T16:00:00-04:00"];
+  assert.deepEqual(stillAtT1, recordedAtT1, "a once-processed slot's recorded outcome must never change on a later run");
+  assert.equal(later.state.stories["arrives-too-late-to-matter"]?.selection, undefined, "with no newly-due slot, a story cannot be retroactively selected for an already-closed one");
 });
 
 // ---------------------------------------------------------------------------

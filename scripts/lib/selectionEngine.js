@@ -177,6 +177,27 @@ const SELECTION_EXPIRY_GRACE_MS = {
   story: 20 * 60 * 1000,
 };
 
+// ---------------------------------------------------------------------------
+// 2026-09-16 fallback selection — a slot's own window (2h Feed / 1h Story) is
+// narrow by design (see buildFeedSlotsForDate/buildStorySlotsForDate above),
+// and this engine never re-evaluates a slot once processed, so a slot with
+// zero eligible stories inside its own narrow window previously always
+// recorded "no_candidate" — even on days where a perfectly acceptable, only
+// slightly older story existed just outside that window. This engine never
+// enforced an importance THRESHOLD (rankCandidates has no cutoff — the top
+// of the ranking always wins regardless of score), so the actual gap was
+// never "no story cleared a bar," it was "no story fell in a narrow enough
+// window at all." FALLBACK_LOOKBACK_HOURS widens the search only when the
+// slot's own window is empty, reusing the SAME eligibility rules
+// (findWindowCandidates) and the SAME ranking rules (rankCandidates) — this
+// never lowers the bar for what counts as a valid candidate, it only widens
+// how far back the engine looks for one. 6 hours mirrors the editorial
+// judgment already encoded in refresh.js's own STALE_SOURCE_HOURS=6 ("lenient
+// on purpose: quiet windows are normal, not a bug") — reused here rather
+// than inventing a new number, and nowhere near the multi-day staleness this
+// change is explicitly not meant to permit.
+const FALLBACK_LOOKBACK_MS = 6 * 60 * 60 * 1000;
+
 /**
  * @param {{destination?: string, window_end?: string}|null|undefined} selection
  * @param {number} nowMs
@@ -396,7 +417,28 @@ export function runSelectionEngine({ state, stories, now }) {
     const windowEndMs = Date.parse(slot.window_end);
     const candidates = findWindowCandidates(stories, nextStories, windowStartMs, windowEndMs);
     const ranked = rankCandidates(candidates);
-    const winner = ranked[0] ?? null;
+    let winner = ranked[0] ?? null;
+    let reason = "importance_score_rank";
+
+    // Tier 1 (the slot's own window) found nothing — widen to the fallback
+    // lookback pool rather than immediately recording no_candidate. Only
+    // runs when Tier 1 is empty, so an existing high-importance winner is
+    // never displaced, and never searches earlier than the slot's own
+    // window already did (skipped entirely once the fallback start would be
+    // >= the window it's meant to widen), so this can only ever ADD
+    // candidates a bare no_candidate slot didn't already have.
+    if (!winner) {
+      const fallbackStartMs = Math.max(activatedMs, windowEndMs - FALLBACK_LOOKBACK_MS);
+      if (fallbackStartMs < windowStartMs) {
+        const fallbackCandidates = findWindowCandidates(stories, nextStories, fallbackStartMs, windowEndMs);
+        const fallbackRanked = rankCandidates(fallbackCandidates);
+        const fallbackWinner = fallbackRanked[0] ?? null;
+        if (fallbackWinner) {
+          winner = fallbackWinner;
+          reason = "fallback_recent_pool_importance_score_rank";
+        }
+      }
+    }
 
     if (!winner) {
       nextSlots[slot.slot_id] = {
@@ -424,7 +466,7 @@ export function runSelectionEngine({ state, stories, now }) {
           window_start: slot.window_start,
           window_end: slot.window_end,
           score: winner.importance_score,
-          reason: "importance_score_rank",
+          reason,
         },
         updated_at: now,
       },
