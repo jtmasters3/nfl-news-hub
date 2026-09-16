@@ -14502,6 +14502,45 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/neil-reynolds-week-2-power-rankings-2026",
+      "source_name": "NFL.com",
+      "headline": "Neil Reynolds' Week 2 Power rankings",
+      "published_at": "2026-09-16T12:59:12.000Z",
+      "observed_at": "2026-09-16T13:10:19.587Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bills-and-texans-each-fumbled-twice-bills-recovered-all-four-on-way-to-36-31-win",
+      "source_name": "Pro Football Talk",
+      "headline": "Bills and Texans each fumbled twice, Bills recovered all four on way to 36-31 win",
+      "published_at": "2026-09-16T13:05:45.000Z",
+      "observed_at": "2026-09-16T13:10:19.587Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "HOU"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
