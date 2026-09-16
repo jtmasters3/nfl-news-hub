@@ -15946,6 +15946,64 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-how-to-watch-week-2-schedule-key-matchups-and-more-x4041",
+      "source_name": "NFL.com",
+      "headline": "NFL+: How to watch Week 2, schedule, key matchups, and more",
+      "published_at": "2026-09-16T08:36:10.000Z",
+      "observed_at": "2026-09-16T20:40:23.992Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/joey-porter-jr-listed-as-limited-at-steelers-practice-due-to-conditioning",
+      "source_name": "Pro Football Talk",
+      "headline": "Joey Porter Jr. listed as limited at Steelers practice due to conditioning",
+      "published_at": "2026-09-16T20:34:38.000Z",
+      "observed_at": "2026-09-16T20:40:23.992Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/league-wont-allow-daequan-wright-or-zxavian-harris-to-sign-with-nfl-teams",
+      "source_name": "Pro Football Talk",
+      "headline": "League won't allow Dae'Quan Wright or Zxavian Harris to sign with NFL teams",
+      "published_at": "2026-09-16T20:27:52.000Z",
+      "observed_at": "2026-09-16T20:40:23.992Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "medium",
+      "detected_teams": [],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "phrase_signs_with",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_weak_uncontradicted_transaction_evidence"
+      ]
     }
   ]
 }
