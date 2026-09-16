@@ -14170,6 +14170,46 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/mahomes-mountain-week-2-the-prince-who-promised-claims-top-spot",
+      "source_name": "FOX Sports",
+      "headline": "Mahomes Mountain Week 2: 'The Prince Who Was Promised' Claims The Top Spot",
+      "published_at": "2026-09-16T01:17:09.000Z",
+      "observed_at": "2026-09-16T01:40:18.344Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lb-kenneth-murray-to-join-texans-practice-squad",
+      "source_name": "Pro Football Talk",
+      "headline": "LB Kenneth Murray to join Texans' practice squad",
+      "published_at": "2026-09-16T01:34:03.000Z",
+      "observed_at": "2026-09-16T01:40:18.344Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "HOU"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
