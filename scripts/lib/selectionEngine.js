@@ -198,6 +198,13 @@ const SELECTION_EXPIRY_GRACE_MS = {
 // change is explicitly not meant to permit.
 const FALLBACK_LOOKBACK_MS = 6 * 60 * 60 * 1000;
 
+// 2026-09-17 bounded final fallback — one full day, deliberately small and
+// sensible (see runSelectionEngine's own Tier-3 comment for the full
+// reasoning), reached ONLY when both the slot's own window and the 6-hour
+// Tier-2 pool are empty. Never the multi-day/legacy staleness this engine
+// has always refused to resurface.
+const FINAL_FALLBACK_LOOKBACK_MS = 24 * 60 * 60 * 1000;
+
 /**
  * @param {{destination?: string, window_end?: string}|null|undefined} selection
  * @param {number} nowMs
@@ -339,10 +346,18 @@ export function hasLegacySocialWorkStarted(record) {
  * Stories eligible for ONE slot: socialPayload-ready (isEligible, reused
  * from socialState.js, never re-derived), first_published_at within the
  * slot's own half-open [window_start, window_end) window, never already
- * selected for any destination, and never already materially engaged in
- * the legacy social pipeline (see hasLegacySocialWorkStarted above).
+ * materially engaged in the legacy social pipeline (see
+ * hasLegacySocialWorkStarted above), and destination-aware duplicate
+ * protection (2026-09-17 fix — see its own header below).
+ *
+ * @param {Array} stories
+ * @param {object} socialStateStories
+ * @param {number} windowStartMs
+ * @param {number} windowEndMs
+ * @param {"feed"|"story"} destination - the slot currently being filled
+ * @param {number} nowMs - for the same-destination-vs-expired check below
  */
-export function findWindowCandidates(stories, socialStateStories, windowStartMs, windowEndMs) {
+export function findWindowCandidates(stories, socialStateStories, windowStartMs, windowEndMs, destination, nowMs) {
   return stories.filter((story) => {
     if (!isEligible(story)) return false;
     const publishedMs = Date.parse(story.first_published_at);
@@ -356,7 +371,35 @@ export function findWindowCandidates(stories, socialStateStories, windowStartMs,
     // that would be missing status/artwork/etc. and confuse a later
     // ensureRecord()/promoteEligible() call.
     if (!record) return false;
-    if (record.selection) return false; // already selected for a destination — permanently excluded
+    // 2026-09-17 destination-aware duplicate fix — proven necessary by the
+    // real 2026-09-17 2:00 PM Story incident: every otherwise-usable recent
+    // "ready" story in the fallback pool was excluded purely because it had
+    // ALREADY been selected for FEED, even though Feed and Story are
+    // separate scheduled posts with their own separate artwork/caption/
+    // approval/publishing sub-state — a story used once on Feed does not
+    // inherently duplicate a Story post of the SAME story. The rule:
+    //   - a story already selected for THIS SAME destination is always
+    //     excluded (no duplicate Feed-of-Feed or Story-of-Story, ever);
+    //   - a story already selected for the OTHER destination is excluded
+    //     ONLY while that other selection is still live (not yet past its
+    //     own grace window) — reusing it while Feed's own opportunity to
+    //     generate real artwork from it is still open would silently
+    //     starve Feed's own slot to feed Story's. Once that other
+    //     destination's window has genuinely, permanently expired (a
+    //     record that will NEVER receive artwork for it now — the exact
+    //     hasLegacySocialWorkStarted()===false, isSelectionExpired()===true
+    //     case), reusing it for the currently-unfilled destination costs
+    //     the other destination nothing real, since its own fulfillment was
+    //     already lost regardless of what happens here.
+    // hasLegacySocialWorkStarted() below remains an unconditional exclusion
+    // regardless of destination or expiry — once real artwork/caption work
+    // has actually started for a record, its selection can never be
+    // reassigned out from under that in-flight or completed work.
+    if (record.selection) {
+      const sameDestination = record.selection.destination === destination;
+      const otherDestinationStillLive = !sameDestination && !isSelectionExpired(record.selection, nowMs);
+      if (sameDestination || otherDestinationStillLive) return false;
+    }
     if (hasLegacySocialWorkStarted(record)) return false;
     return true;
   });
@@ -415,7 +458,7 @@ export function runSelectionEngine({ state, stories, now }) {
   for (const slot of dueSlots) {
     const windowStartMs = Date.parse(slot.window_start);
     const windowEndMs = Date.parse(slot.window_end);
-    const candidates = findWindowCandidates(stories, nextStories, windowStartMs, windowEndMs);
+    const candidates = findWindowCandidates(stories, nextStories, windowStartMs, windowEndMs, slot.destination, nowMs);
     const ranked = rankCandidates(candidates);
     let winner = ranked[0] ?? null;
     let reason = "importance_score_rank";
@@ -430,12 +473,39 @@ export function runSelectionEngine({ state, stories, now }) {
     if (!winner) {
       const fallbackStartMs = Math.max(activatedMs, windowEndMs - FALLBACK_LOOKBACK_MS);
       if (fallbackStartMs < windowStartMs) {
-        const fallbackCandidates = findWindowCandidates(stories, nextStories, fallbackStartMs, windowEndMs);
+        const fallbackCandidates = findWindowCandidates(stories, nextStories, fallbackStartMs, windowEndMs, slot.destination, nowMs);
         const fallbackRanked = rankCandidates(fallbackCandidates);
         const fallbackWinner = fallbackRanked[0] ?? null;
         if (fallbackWinner) {
           winner = fallbackWinner;
           reason = "fallback_recent_pool_importance_score_rank";
+        }
+      }
+    }
+
+    // Tier 3 (2026-09-17) — a bounded FINAL fallback, only reached when
+    // BOTH the slot's own window and the 6-hour Tier-2 pool are empty.
+    // Widens to 24 hours — a deliberately small, sensible bound (one full
+    // news cycle, never the multi-day/legacy staleness this engine has
+    // always refused to resurface) — using the exact SAME eligibility
+    // (findWindowCandidates) and ranking (rankCandidates) rules as every
+    // other tier, so it can never select an invalid/merged/unsafe/no-media
+    // record, never weakens same-destination duplicate protection, and
+    // still strongly prefers the freshest, highest-importance story within
+    // its own wider pool. Tagged with its own distinct reason so production
+    // can audit exactly how often true slot-fulfillment-of-last-resort is
+    // actually needed. If even THIS pool is empty, no_candidate remains the
+    // honest, correct outcome — this engine still never fabricates a
+    // candidate that doesn't meet every existing rule.
+    if (!winner) {
+      const finalFallbackStartMs = Math.max(activatedMs, windowEndMs - FINAL_FALLBACK_LOOKBACK_MS);
+      if (finalFallbackStartMs < windowEndMs - FALLBACK_LOOKBACK_MS) {
+        const finalCandidates = findWindowCandidates(stories, nextStories, finalFallbackStartMs, windowEndMs, slot.destination, nowMs);
+        const finalRanked = rankCandidates(finalCandidates);
+        const finalWinner = finalRanked[0] ?? null;
+        if (finalWinner) {
+          winner = finalWinner;
+          reason = "final_fallback_recent_pool_importance_score_rank";
         }
       }
     }

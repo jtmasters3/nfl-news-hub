@@ -752,6 +752,127 @@ test("41F. a slot already recorded (no_candidate or selected) is never reprocess
 });
 
 // ---------------------------------------------------------------------------
+// 42A-42F. 2026-09-17 destination-aware duplicate protection + bounded Tier-3
+// final fallback — reproduces the real 2026-09-17 2:00 PM Story incident,
+// where every otherwise-usable recent story was excluded purely because it
+// had already been selected for Feed.
+// ---------------------------------------------------------------------------
+
+test("42A. a story already selected for FEED, still within its OWN live grace window, is NOT reused for a same-cycle Story slot — reusing it would silently starve Feed's own still-fulfillable selection", () => {
+  const now = et("2026-09-17", "14:00"); // story slot 14:00, own window 13:00-14:00
+  const sameCycleFeedWinner = story({ id: "same-cycle-feed", importance_score: 9, first_published_at: et("2026-09-17", "13:58") });
+  const activatedState = activatedStateBefore(now, et("2026-09-17", "07:00"));
+  // Simulate: this exact refresh cycle's Feed slot (14:00, processed first at
+  // ties) already won and recorded this story moments ago, still fully live.
+  let state = stateWithSyncedStories([sameCycleFeedWinner], activatedState);
+  state = {
+    ...state,
+    stories: {
+      ...state.stories,
+      "same-cycle-feed": {
+        ...state.stories["same-cycle-feed"],
+        selection: { destination: "feed", slot_id: "feed:2026-09-17T14:00:00-04:00", selected_at: now, window_start: et("2026-09-17", "12:00"), window_end: et("2026-09-17", "14:00"), score: 9, reason: "importance_score_rank" },
+      },
+    },
+  };
+  const result = runSelectionEngine({ state, stories: [sameCycleFeedWinner], now });
+  const slot = result.state.selection_slots["story:2026-09-17T14:00:00-04:00"];
+  assert.equal(slot.status, "no_candidate", "a still-live Feed selection must not be reused for Story in the same cycle");
+});
+
+test("42B. a story selected for FEED hours earlier, whose Feed grace window has ALREADY expired and whose Feed generation never started, IS eligible for a later Story slot — the exact 2:00 PM incident's fix", () => {
+  const now = et("2026-09-17", "14:00");
+  const longExpiredFeedWinner = story({ id: "expired-feed-reuse", importance_score: 5, first_published_at: et("2026-09-17", "10:33") });
+  const activatedState = activatedStateBefore(now, et("2026-09-17", "07:00"));
+  let state = stateWithSyncedStories([longExpiredFeedWinner], activatedState);
+  state = {
+    ...state,
+    stories: {
+      ...state.stories,
+      "expired-feed-reuse": {
+        ...state.stories["expired-feed-reuse"],
+        // status remains "new"/"queued" via stateWithSyncedStories — Feed
+        // generation genuinely never started for it.
+        selection: { destination: "feed", slot_id: "feed:2026-09-17T10:00:00-04:00", selected_at: et("2026-09-17", "10:00"), window_start: et("2026-09-17", "08:00"), window_end: et("2026-09-17", "10:00"), score: 5, reason: "importance_score_rank" },
+      },
+    },
+  };
+  const result = runSelectionEngine({ state, stories: [longExpiredFeedWinner], now });
+  const slot = result.state.selection_slots["story:2026-09-17T14:00:00-04:00"];
+  assert.equal(slot.status, "selected");
+  assert.equal(slot.story_id, "expired-feed-reuse");
+  assert.equal(result.state.stories["expired-feed-reuse"].selection.destination, "story", "the record's selection is correctly reassigned to Story now that Feed's own chance has permanently lapsed");
+});
+
+test("42C. a story already selected for the SAME destination (Story) remains permanently excluded from Story even after its own window has expired — no same-destination duplicate, ever", () => {
+  const now = et("2026-09-17", "14:00");
+  const alreadyStoryWinner = story({ id: "already-story", importance_score: 5, first_published_at: et("2026-09-17", "10:33") });
+  const activatedState = activatedStateBefore(now, et("2026-09-17", "07:00"));
+  let state = stateWithSyncedStories([alreadyStoryWinner], activatedState);
+  state = {
+    ...state,
+    stories: {
+      ...state.stories,
+      "already-story": {
+        ...state.stories["already-story"],
+        selection: { destination: "story", slot_id: "story:2026-09-17T10:00:00-04:00", selected_at: et("2026-09-17", "10:00"), window_start: et("2026-09-17", "09:00"), window_end: et("2026-09-17", "10:00"), score: 5, reason: "importance_score_rank" },
+      },
+    },
+  };
+  const result = runSelectionEngine({ state, stories: [alreadyStoryWinner], now });
+  const slot = result.state.selection_slots["story:2026-09-17T14:00:00-04:00"];
+  assert.equal(slot.status, "no_candidate", "a story already used for Story, even long expired, must never be selected for Story again");
+});
+
+test("42D. a record whose earlier Feed selection has expired BUT whose Feed generation already started (status advanced past queued) remains excluded from Story reuse — in-flight/completed work is never reassigned", () => {
+  const now = et("2026-09-17", "14:00");
+  const inFlightFeedWinner = story({ id: "in-flight-feed", importance_score: 9, first_published_at: et("2026-09-17", "10:33") });
+  const activatedState = activatedStateBefore(now, et("2026-09-17", "07:00"));
+  let state = stateWithSyncedStories([inFlightFeedWinner], activatedState);
+  state = withStatus(state, "in-flight-feed", "artwork_ready");
+  state = {
+    ...state,
+    stories: {
+      ...state.stories,
+      "in-flight-feed": {
+        ...state.stories["in-flight-feed"],
+        selection: { destination: "feed", slot_id: "feed:2026-09-17T10:00:00-04:00", selected_at: et("2026-09-17", "10:00"), window_start: et("2026-09-17", "08:00"), window_end: et("2026-09-17", "10:00"), score: 9, reason: "importance_score_rank" },
+      },
+    },
+  };
+  const result = runSelectionEngine({ state, stories: [inFlightFeedWinner], now });
+  const slot = result.state.selection_slots["story:2026-09-17T14:00:00-04:00"];
+  assert.equal(slot.status, "no_candidate", "real in-flight/completed Feed work must never be reassigned to Story, expired or not");
+});
+
+test("42E. the bounded 24-hour Tier-3 final fallback selects the best candidate when both the slot window and the 6-hour Tier-2 pool are empty", () => {
+  // 13:00 ET deliberately has no coincident Feed slot (Feed only fires on
+  // even hours) — isolates this test to the Story destination's own Tier-3
+  // pool, with no Feed slot's own Tier-3 fallback reaching the same story
+  // first (Feed sorts before Story at a shared slot_time tie).
+  const now = et("2026-09-17", "13:00"); // story slot 13:00; Tier-1/Tier-2 pool is 07:00-13:00, empty in this test
+  const oldButWithin24h = story({ id: "tier3-candidate", importance_score: 3, first_published_at: et("2026-09-16", "19:00") }); // 18 hours before now
+  const activatedState = activatedStateBefore(now, et("2026-09-16", "17:00"));
+  const state = stateWithSyncedStories([oldButWithin24h], activatedState);
+  const result = runSelectionEngine({ state, stories: [oldButWithin24h], now });
+  const slot = result.state.selection_slots["story:2026-09-17T13:00:00-04:00"];
+  assert.equal(slot.status, "selected");
+  assert.equal(slot.story_id, "tier3-candidate");
+  assert.equal(result.state.stories["tier3-candidate"].selection.reason, "final_fallback_recent_pool_importance_score_rank");
+});
+
+test("42F. even the bounded 24-hour Tier-3 pool being genuinely empty still produces no_candidate — no candidate is ever fabricated", () => {
+  const now = et("2026-09-17", "14:00");
+  const tooOldFor24h = story({ id: "too-old-for-tier3", importance_score: 20, first_published_at: et("2026-09-16", "12:00") }); // 26 hours before now
+  const activatedState = activatedStateBefore(now, et("2026-09-16", "10:00"));
+  const state = stateWithSyncedStories([tooOldFor24h], activatedState);
+  const result = runSelectionEngine({ state, stories: [tooOldFor24h], now });
+  const slot = result.state.selection_slots["story:2026-09-17T14:00:00-04:00"];
+  assert.equal(slot.status, "no_candidate");
+  assert.equal(slot.story_id, null);
+});
+
+// ---------------------------------------------------------------------------
 let failures = 0;
 for (const c of cases) {
   try {
