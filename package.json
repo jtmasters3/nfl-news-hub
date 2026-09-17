@@ -9,6 +9,7 @@
     "serve": "node scripts/serve.js",
     "test:clustering": "node scripts/tests/clustering-regression.mjs",
     "test:social-state": "node scripts/tests/social-state-regression.mjs",
+    "test:same-cycle-queue-visibility": "node scripts/tests/same-cycle-queue-visibility-regression.mjs",
     "test:artwork-events": "node scripts/tests/artwork-events-regression.mjs",
     "test:caption-events": "node scripts/tests/caption-events-regression.mjs",
     "test:select-target": "node scripts/social-worker/lib/selectTarget.test.mjs",

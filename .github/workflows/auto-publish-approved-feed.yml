@@ -72,6 +72,19 @@ jobs:
           # publish-buffer-feed.js's runLive() (only the live mode path
           # needs it at all; dry-run makes no Worker call).
           ARTWORK_WORKER_BASE_URL: https://aggregate-artwork-bridge.jtmasters3.workers.dev
+          # 2026-09-17 GitHub API rate-limit fix — githubStateReader.js's
+          # getLatestCommitSha() (used by createFreshStateFetcher(), this
+          # script's own fetchState) reads process.env.GITHUB_API_TOKEN and
+          # calls api.github.com unauthenticated when it's unset, which
+          # shares a 60-requests/hour-per-IP anonymous pool across every
+          # tenant on GitHub's hosted-runner IP ranges — proven in production
+          # to intermittently 403 with remaining=0 on an otherwise completely
+          # unchanged code path. GITHUB_TOKEN is the same token every
+          # `permissions:` block above already scopes for this job,
+          # automatically provided by GitHub Actions itself — no new secret,
+          # no PAT — mapping it to the name this script already reads moves
+          # these calls onto the much larger authenticated per-repo quota.
+          GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Both consumed by resolveRunMode() inside the script itself — see
           # this workflow's own header comment above.
           INPUT_MODE: ${{ inputs.mode }}

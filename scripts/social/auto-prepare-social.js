@@ -207,6 +207,17 @@ function isPermanentlyFailedRecovery(eligibility) {
   return Boolean(eligibility?.issues?.includes("do_status_not_completed:failed"));
 }
 
+// 2026-09-17 preflight investigation note (no code needed here): checked
+// whether Priority 1 (approve-only) has the same zombie-starvation class of
+// bug — it does not. selectAutonomousCandidate()'s own Priority-1 filter
+// already requires evaluateStaticAutonomousEligibility(record).eligible,
+// which itself already excludes any record with no_selection or an expired
+// selection BEFORE it can ever become "the" approve-only candidate — so a
+// record with either issue can never reach tryAutoApprove() at all, let
+// alone consume one of the two bounded attempts. Confirmed directly against
+// live production data (three such records exist at awaiting_approval, and
+// selectAutonomousCandidate() correctly never selects any of them).
+
 /**
  * Buckets a set of static-eligibility issue codes into the three
  * dry-run-report categories requested: records that are structurally

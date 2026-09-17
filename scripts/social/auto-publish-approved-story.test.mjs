@@ -259,12 +259,16 @@ test("20. the workflow still declares a concurrency group — a second safety la
   assert.match(yaml, /group:\s*auto-publish-approved-story/);
 });
 
-test("21. the workflow references the existing AGGREGATE_ARTWORK_API_TOKEN secret, and no other/new secret", async () => {
+test("21. the workflow references the existing AGGREGATE_ARTWORK_API_TOKEN secret and GitHub Actions' own built-in GITHUB_TOKEN (2026-09-17 rate-limit fix), and no OTHER/new secret", async () => {
   const { readFile } = await import("node:fs/promises");
   const yaml = await readFile(new URL("../../.github/workflows/auto-publish-approved-story.yml", import.meta.url), "utf-8");
   assert.match(yaml, /secrets\.AGGREGATE_ARTWORK_API_TOKEN/);
+  // GITHUB_TOKEN is GitHub Actions' own automatically-provided token, not a
+  // user-created secret requiring any repo configuration — distinct from
+  // the "no additional secret" guarantee this test otherwise enforces.
+  assert.match(yaml, /GITHUB_API_TOKEN:\s*\$\{\{\s*secrets\.GITHUB_TOKEN\s*\}\}/, "githubStateReader.js's fetchState must be authenticated via the built-in token, not left anonymous — this is the exact workflow that hit the real production 403");
   const secretRefs = [...yaml.matchAll(/secrets\.(\w+)/g)].map((m) => m[1]);
-  assert.deepEqual([...new Set(secretRefs)], ["AGGREGATE_ARTWORK_API_TOKEN"], "no additional GitHub secret may be referenced by this workflow");
+  assert.deepEqual([...new Set(secretRefs)].sort(), ["AGGREGATE_ARTWORK_API_TOKEN", "GITHUB_TOKEN"], "no CUSTOM GitHub secret beyond AGGREGATE_ARTWORK_API_TOKEN may be referenced — GITHUB_TOKEN is the one built-in exception");
 });
 
 test("22. GITHUB_EVENT_NAME is never manually overridden (already provided automatically), and inputs.mode is passed through as INPUT_MODE — the exact two inputs resolveRunMode() consumes", async () => {

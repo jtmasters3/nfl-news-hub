@@ -70,6 +70,13 @@ jobs:
           # publish-buffer-story.js's runLive() (only the live mode path
           # needs it at all; dry-run makes no Worker call).
           ARTWORK_WORKER_BASE_URL: https://aggregate-artwork-bridge.jtmasters3.workers.dev
+          # 2026-09-17 GitHub API rate-limit fix — see
+          # auto-publish-approved-feed.yml's own identical comment. This is
+          # the exact workflow that hit the real 403/remaining=0 failure;
+          # GITHUB_TOKEN is GitHub Actions' own automatically-provided
+          # token, already scoped by the `permissions:` block above — no new
+          # secret, no PAT.
+          GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Consumed by resolveRunMode() inside the script itself — see this
           # workflow's own header comment above. GITHUB_EVENT_NAME is always
           # "workflow_dispatch" here since there is no schedule trigger.

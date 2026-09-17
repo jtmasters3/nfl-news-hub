@@ -12,9 +12,17 @@ import { readSocialState, writeSocialState, syncStories, promoteEligible, refres
 
 /**
  * @param {Array} stories - current news.json stories (post-prune, i.e. what writeNews() returned)
+ * @param {{filePath?: string, queueFilePath?: string}} [options] - test-only
+ *   overrides for the social-state and queue-file paths, mirroring
+ *   generate-selection.js's own existing `filePath` convention exactly.
+ *   Both default to the real production paths for every real caller
+ *   (refresh.js never passes either) — this exists purely so a refresh
+ *   cycle's own same-run re-invocation (see refresh.js's 2026-09-17
+ *   same-cycle queue-visibility fix) can be exercised in isolation against
+ *   temp files, never against the live production files.
  */
-export async function generateArtworkQueue(stories) {
-  let state = await readSocialState();
+export async function generateArtworkQueue(stories, { filePath, queueFilePath = SOCIAL_ARTWORK_QUEUE_JSON_PATH } = {}) {
+  let state = await readSocialState(filePath);
 
   const syncResult = syncStories(state, stories, { defaultStatus: "new" });
   state = syncResult.state;
@@ -29,10 +37,10 @@ export async function generateArtworkQueue(stories) {
   const refreshResult = refreshQueuedSnapshots(state, stories);
   state = refreshResult.state;
 
-  await writeSocialState(state);
+  await writeSocialState(state, filePath);
 
   const queueEntries = buildQueueEntries(state);
-  await writeFile(SOCIAL_ARTWORK_QUEUE_JSON_PATH, JSON.stringify(queueEntries, null, 2) + "\n", "utf-8");
+  await writeFile(queueFilePath, JSON.stringify(queueEntries, null, 2) + "\n", "utf-8");
 
   return { count: queueEntries.length, created: syncResult.created, promoted: promoteResult.promoted, refreshed: refreshResult.refreshed };
 }

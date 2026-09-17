@@ -164,6 +164,24 @@ async function main() {
       `[selection] processed ${selectionResult.processedSlots.length} due slot(s) — ${selectionResult.selectedCount} selected, ${selectionResult.noCandidateCount} no_candidate.` +
         (selectionResult.activated ? " (activation boundary established this run)" : "")
     );
+
+    // 2026-09-17 same-cycle queue-visibility fix — buildQueueEntries()'s
+    // destination field (and, for a post-activation record, queue
+    // membership itself — see isArtworkQueueEligible()) both depend on
+    // record.selection, which generateSelection() only just wrote above.
+    // Without this second call, a story selected THIS run would only
+    // become visible to the autonomous artwork queue on the NEXT refresh
+    // cycle (~10 minutes later) — proven in production to leave as little
+    // as 5 minutes of a selection's 20-minute grace window for the local
+    // Windows runner to actually see it. Only re-runs when something was
+    // actually selected this cycle (the common case selects nothing), and
+    // is otherwise identical to — and exactly as idempotent as — the first
+    // call above: same pure sync/promote/refresh steps against the (now
+    // selection-updated) state, then a fresh queue-file rebuild.
+    if (selectionResult.selectedCount > 0) {
+      const { count: requeuedCount } = await generateArtworkQueue(savedStories);
+      console.log(`[refresh] social-artwork-queue.json rebuilt again post-selection (${requeuedCount} entries) so this cycle's ${selectionResult.selectedCount} new selection(s) are immediately queue-visible.`);
+    }
   }
 
   const { count: approvalCount } = await generatePostsForApproval();

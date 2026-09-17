@@ -1832,6 +1832,17 @@ test("124. resolving two zombie recovery candidates plus a fresh candidate never
 });
 
 // ---------------------------------------------------------------------------
+// 2026-09-17 preflight investigation (no new tests needed): confirmed that
+// Priority 1 does NOT have the same zombie-starvation class of bug as
+// Priority 2/3. selectAutonomousCandidate()'s own Priority-1 filter already
+// requires evaluateStaticAutonomousEligibility(record).eligible, which
+// itself already excludes no_selection / expired-selection records before
+// they can ever become "the" approve-only candidate — see test 74 above
+// (existing coverage) and this file's own auto-prepare-social.js header
+// note near isPermanentlyFailedRecovery for the live-data verification.
+// ---------------------------------------------------------------------------
+
+// ---------------------------------------------------------------------------
 let failures = 0;
 for (const c of cases) {
   try {
