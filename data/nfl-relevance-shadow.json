@@ -17633,6 +17633,46 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-teams-cant-sign-zxavian-harris-daequan-wright-lsu",
+      "source_name": "NFL.com",
+      "headline": "NFL says teams can't sign Zxavian Harris, Dae'Quan Wright after they attempted to play for LSU",
+      "published_at": "2026-09-17T07:45:46.000Z",
+      "observed_at": "2026-09-17T19:50:24.043Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/a-j-terrell-chris-lindstrom-return-to-falcons-practice",
+      "source_name": "Pro Football Talk",
+      "headline": "A.J. Terrell, Chris Lindstrom return to Falcons practice",
+      "published_at": "2026-09-17T19:39:10.000Z",
+      "observed_at": "2026-09-17T19:50:24.043Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
