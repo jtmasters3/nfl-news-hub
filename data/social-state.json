@@ -165510,10 +165510,10 @@
     },
     "4bd7962e-2794-454f-9359-668ad6e87f8b": {
       "story_id": "4bd7962e-2794-454f-9359-668ad6e87f8b",
-      "status": "artwork_requested",
+      "status": "failed",
       "merged_into": null,
       "created_at": "2026-09-17T13:40:38.528Z",
-      "updated_at": "2026-09-17T19:05:19.149Z",
+      "updated_at": "2026-09-17T19:07:38.930Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -165657,10 +165657,10 @@
         "posted_at": null
       },
       "last_error": {
-        "stage": null,
-        "message": null,
-        "at": null,
-        "retry_count": 0
+        "stage": "generation",
+        "message": "Generation failed after 3 attempts. attempt 1: codex exec exited 0 but did not produce the expected output file. Codex reported: Validation failed at step 4: the source photograph shows a sideline subject in a hoodie, not a clearly identifiable NFL player as required. No image was generated.\n\nRequested output was not written: `C:\\Users\\jacks\\Desktop\\Claude\\nfl-news-hub\\social-output\\story\\4bd7962e-2794-454f-9359-668ad6e87f8b.png` | attempt 2: codex exec exited 0 but did not produce the expected output file. Codex reported: Validation failed: the supplied photograph shows a coach portrait, not an identifiable NFL player as required by step 4. No image was generated.\n\nOutput not created: `C:\\Users\\jacks\\Desktop\\Claude\\nfl-news-hub\\social-output\\story\\4bd7962e-2794-454f-9359-668ad6e87f8b.png` | attempt 3: codex exec exited 0 but did not produce the expected output file. Codex reported: Validation failed: the supplied photograph shows a person in a black hoodie, not a clearly identifiable NFL player as required by step 4. No image was generated.\n\nOutput not created: `C:\\Users\\jacks\\Desktop\\Claude\\nfl-news-hub\\social-output\\story\\4bd7962e-2794-454f-9359-668ad6e87f8b.png`",
+        "at": "2026-09-17T19:07:38.929Z",
+        "retry_count": 1
       },
       "selection": {
         "destination": "story",
