@@ -37,7 +37,7 @@ import { assessApprovalReadiness } from "./approvalReadiness.js";
 import { isAutoApprovalAllowedSource } from "../../lib/autoApprovalSourceAllowlist.js";
 import { evaluateContentFidelity } from "./contentFidelityGate.js";
 import { channelKeyFor } from "../../lib/postingEvents.js";
-import { isSelectionExpired } from "../../lib/selectionEngine.js";
+import { isSelectionExpiredForApproval } from "../../lib/selectionEngine.js";
 
 export function isNonEmptyString(v) {
   return typeof v === "string" && v.trim().length > 0;
@@ -128,7 +128,7 @@ export function evaluateAutoApprovalGate(record, nowMs = Date.now()) {
     // own (earlier, pre-generation) copy of this same check. See
     // isSelectionExpired()'s own header above this import for the incident
     // this closes and the exact staleness rule.
-    if (isSelectionExpired(record.selection, nowMs)) {
+    if (isSelectionExpiredForApproval(record, nowMs)) {
       issues.push("selection_window_expired");
     }
   }

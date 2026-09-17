@@ -219,6 +219,45 @@ export function isSelectionExpired(selection, nowMs) {
 }
 
 /**
+ * 2026-09-17: the auto-approval-eligibility variant of the check above.
+ * Confirmed live (story 68026926, "SAMMY'S SPORTSBOOK WHISPERS"): a fully
+ * valid, freshly-generated Feed post (real Codex artwork, real validated
+ * caption, both completed within minutes of selection) can still legitimately
+ * finish its caption a little past the normal 20-minute grace when a lost
+ * caption-completed dispatch needs the autonomous recovery mechanism to
+ * step in first — the record itself is not stale, only the clock
+ * comparison is unfairly strict about it. isSelectionExpired() above stays
+ * exactly as-is (still used, unchanged, for selectionEngine.js's own
+ * destination-reuse eligibility in findWindowCandidates — a completely
+ * different, intentionally strict concern). This variant is ONLY for
+ * auto-approval eligibility (staticAutonomousEligibility.js,
+ * autoApprovalGate.js): it measures the same grace window from the LATER
+ * of the selection's own window_end or the record's own most recent real
+ * content-completion timestamp (caption/artwork/story_artwork created_at).
+ * A record whose content was ALSO never refreshed since a stale selection
+ * (the original 2026-09-14 Emmanuel Acho incident this whole check exists
+ * for — sat four days untouched) remains correctly expired here too,
+ * since none of ITS OWN timestamps are recent either — this never widens
+ * eligibility for genuinely neglected content, only for content that just
+ * finished being prepared.
+ * @param {object} record - a data/social-state.json story record
+ * @param {number} nowMs
+ * @returns {boolean}
+ */
+export function isSelectionExpiredForApproval(record, nowMs) {
+  const selection = record?.selection;
+  if (!selection) return false;
+  const windowEndMs = Date.parse(selection.window_end);
+  if (!Number.isFinite(windowEndMs)) return false;
+  const grace = SELECTION_EXPIRY_GRACE_MS[selection.destination] ?? SELECTION_EXPIRY_GRACE_MS.feed;
+  const contentTimestamps = [record?.caption?.created_at, record?.artwork?.created_at, record?.story_artwork?.created_at]
+    .map((t) => Date.parse(t))
+    .filter((t) => Number.isFinite(t));
+  const anchorMs = contentTimestamps.length ? Math.max(windowEndMs, ...contentTimestamps) : windowEndMs;
+  return nowMs >= anchorMs + grace;
+}
+
+/**
  * Builds every Feed slot definition for one Eastern calendar date. The
  * 08:00 slot's window reaches back to the PREVIOUS day's 22:00 ET (its
  * predecessor slot, which does not exist on this same date) — every other

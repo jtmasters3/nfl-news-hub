@@ -32,7 +32,7 @@
 // as it is, fully available to any existing human/manual workflow.
 import { isAutoApprovalAllowedSource } from "../../lib/autoApprovalSourceAllowlist.js";
 import { isNonEmptyString, isHttpsUrl, assessPostingCleanState } from "./autoApprovalGate.js";
-import { isSelectionExpired } from "../../lib/selectionEngine.js";
+import { isSelectionExpiredForApproval } from "../../lib/selectionEngine.js";
 
 // The only two lifecycle states the autonomous runner may ever act on:
 // "queued" (fresh, needs full generation) or "awaiting_approval" (already
@@ -84,7 +84,7 @@ export function evaluateStaticAutonomousEligibility(record, nowMs = Date.now()) 
     if (destination !== "feed" && destination !== "story") {
       issues.push(`invalid_destination:${destination ?? "none"}`);
     }
-    if (isSelectionExpired(record.selection, nowMs)) {
+    if (isSelectionExpiredForApproval(record, nowMs)) {
       issues.push("selection_window_expired");
     }
   }

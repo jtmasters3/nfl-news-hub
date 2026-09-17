@@ -284,6 +284,28 @@ test("33. Story +21 min: the SAME Story slot selection is EXPIRED 21 minutes aft
   assert.ok(result.issues.includes("selection_window_expired"), JSON.stringify(result.issues));
 });
 
+test("33b. 2026-09-17 incident (story 68026926): a Feed selection is 26 minutes past window_end+grace, BUT its caption only just finished (created_at 3 minutes ago, via a recovered dispatch) — NOT expired, because the grace is measured from the later, genuinely fresh completion timestamp", () => {
+  const record = validQueuedRecord({
+    status: "awaiting_approval",
+    selection: { destination: "feed", slot_id: "feed:2026-09-17T16:00:00-04:00", window_start: "2026-09-17T18:00:00.000Z", window_end: "2026-09-17T20:00:00.000Z" },
+    caption: { status: "ready", text: "Real caption.\n\nSource: ESPN", created_at: "2026-09-17T20:43:00.000Z" },
+  });
+  const nowMs = Date.parse("2026-09-17T20:46:00.000Z"); // 46 min past window_end, but only 3 min past the caption actually finishing
+  const result = evaluateStaticAutonomousEligibility(record, nowMs);
+  assert.ok(!result.issues.includes("selection_window_expired"), JSON.stringify(result.issues));
+});
+
+test("33c. content that ALSO never refreshed (the original 2026-09-14 Emmanuel Acho shape: selected and generated days ago, never touched since) remains correctly expired — the 2026-09-17 relaxation never rescues genuinely neglected content", () => {
+  const record = validQueuedRecord({
+    status: "queued",
+    selection: { destination: "feed", slot_id: "feed:2026-09-10T12:00:00-04:00", window_start: "2026-09-10T14:00:00.000Z", window_end: "2026-09-10T16:00:00.000Z" },
+    // No caption/artwork created_at at all on a plain "queued" legacy record — nothing to anchor to but the stale window_end.
+  });
+  const fourDaysLaterMs = Date.parse("2026-09-14T12:00:00.000Z");
+  const result = evaluateStaticAutonomousEligibility(record, fourDaysLaterMs);
+  assert.ok(result.issues.includes("selection_window_expired"), JSON.stringify(result.issues));
+});
+
 test("34. an expired record at 'queued' fails closed via this pre-generation filter regardless of every other field being otherwise perfect", () => {
   const record = validQueuedRecord({
     status: "queued",

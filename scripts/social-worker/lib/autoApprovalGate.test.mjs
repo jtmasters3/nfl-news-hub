@@ -340,6 +340,16 @@ test("38. an expired record recovered via the recover-artwork/recover-caption re
   assert.ok(result.issues.includes("selection_window_expired"), JSON.stringify(result.issues));
 });
 
+test("38b. 2026-09-17 incident (story 68026926): the SAME 4-day-later timestamp as test 38, but the caption genuinely just finished (created_at only 3 minutes before nowMs, via a recovered dispatch) — now correctly NOT expired, since the grace anchors to the real completion time", () => {
+  const record = baseFeedRecord({
+    selection: { destination: "feed", slot_id: "feed:2026-09-10T12:00:00-04:00", window_start: "2026-09-10T14:00:00.000Z", window_end: "2026-09-10T16:00:00.000Z" },
+    caption: { status: "ready", text: "Jordan Love is out with a shoulder injury suffered during Green Bay Packers practice.\n\nSource: ESPN", created_at: "2026-09-14T19:54:41.042Z" },
+  });
+  const nowMs = Date.parse("2026-09-14T19:57:41.042Z"); // same instant as test 38 — only 3 minutes after the caption's own completion
+  const result = evaluateAutoApprovalGate(record, nowMs);
+  assert.ok(!result.issues.includes("selection_window_expired"), JSON.stringify(result.issues));
+});
+
 test("39. an expired record shaped exactly like the approve-only path's candidate (status already awaiting_approval, approval still pending) still fails closed here", () => {
   const record = baseFeedRecord({
     status: "awaiting_approval",
