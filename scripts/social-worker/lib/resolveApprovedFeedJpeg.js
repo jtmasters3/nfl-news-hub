@@ -18,7 +18,7 @@
 // via the explicitly injected `fetchImpl`; there is no live-network
 // fallback.
 import { convertToJpegDerivative, validateJpegDerivative, deriveJpegStorageKey, inspectAlpha, deriveCornerBackgroundFill, flattenPerimeterAlpha } from "./jpegDerivative.js";
-import { CANVAS } from "./artworkRenderer.js";
+import { ASPECT_RATIO_TARGET, ASPECT_RATIO_TOLERANCE, MIN_DIMENSION } from "../../lib/artworkValidation.js";
 
 /**
  * Best-effort, read-only check for an already-uploaded, reusable JPEG at
@@ -158,11 +158,27 @@ export async function resolveApprovedFeedJpeg(record, { fetchImpl, uploadJpeg, b
   if (!converted.ok) return { ok: false, error: converted.error };
 
   // 5. Validate with the existing deterministic validator before ever
-  // uploading — expected dimensions explicit from CANVAS.feed (the single
-  // source of truth artworkRenderer.js exports), not this validator's own
-  // legacy 1024x1280 default, which is now stale relative to the 2026-09-14
-  // brand-system update's 1080x1350 Feed canvas.
-  const validation = await validateJpegDerivative(converted.buffer, bufferToConvert, { expectedWidth: CANVAS.feed.width, expectedHeight: CANVAS.feed.height });
+  // uploading. 2026-09-17: validates against the RECORD'S OWN approved
+  // artwork dimensions (never a fixed CANVAS.feed constant) plus Feed's
+  // ratio/floor tolerance — mirroring resolveApprovedStoryJpeg.js's own,
+  // already-correct pattern. The fixed-constant version required every
+  // approved PNG to be the EXACT 1080x1350 pixel size, but
+  // normalizeArtworkDimensionsIfNeeded() (process-one.js) deliberately
+  // leaves a within-tolerance creative result at Codex's own natural
+  // output size untouched (e.g. 1122x1402, still a valid 4:5) — confirmed
+  // live that this silently rejected every real approved Feed post since
+  // the 2026-09-14 brand-system update (jpeg_invalid:unexpected_dimensions),
+  // well past artwork validation and human/auto-approval, at the very last
+  // publishing step. The approved PNG itself is still never resized here —
+  // only the disposable JPEG re-encoding's OWN dimension check now agrees
+  // with what artwork validation already accepted.
+  const validation = await validateJpegDerivative(converted.buffer, bufferToConvert, {
+    expectedWidth: record.artwork.width,
+    expectedHeight: record.artwork.height,
+    expectedAspectRatio: ASPECT_RATIO_TARGET,
+    aspectRatioTolerance: ASPECT_RATIO_TOLERANCE,
+    minDimension: MIN_DIMENSION,
+  });
   if (!validation.passed) return { ok: false, error: `jpeg_invalid:${validation.issues.join(",")}` };
 
   // 7. Upload through the Worker/R2 architecture — never direct R2 credentials here.

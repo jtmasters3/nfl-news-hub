@@ -33,7 +33,12 @@ function opaquePng(width = WIDTH, height = HEIGHT) {
 function approvedRecord(overrides = {}) {
   return {
     story_id: "story-1",
-    artwork: { status: "created", image_url: PNG_URL },
+    // 2026-09-17: width/height match WIDTH/HEIGHT below (the test PNGs'
+    // own real dimensions) — resolveApprovedFeedJpeg.js now validates the
+    // JPEG derivative against the RECORD'S OWN approved artwork
+    // dimensions (never a fixed CANVAS.feed constant), mirroring real
+    // production shape and resolveApprovedStoryJpeg.js's own pattern.
+    artwork: { status: "created", image_url: PNG_URL, width: WIDTH, height: HEIGHT },
     ...overrides,
   };
 }
@@ -130,6 +135,25 @@ test("6. a source PNG that would produce an invalid derivative (wrong dimensions
   assert.equal(result.ok, false);
   assert.ok(result.error.startsWith("jpeg_invalid:"));
   assert.equal(uploadCalled, false);
+});
+
+test("6b. 2026-09-17 incident (story 996c3257 / Treveyon Henderson): a real approved PNG at Codex's own natural 1122x1402 output (still a valid, within-tolerance 4:5 — normalizeArtworkDimensionsIfNeeded deliberately left it untouched) now resolves successfully, instead of being rejected against a fixed 1080x1350 constant it was never going to match", async () => {
+  const naturalSizePng = await opaquePng(1122, 1402);
+  const record = approvedRecord({ artwork: { status: "created", image_url: PNG_URL, width: 1122, height: 1402 } });
+  const result = await resolveApprovedFeedJpeg(record, { fetchImpl: fetchRouter({ pngBuffer: naturalSizePng }), uploadJpeg: okUploadJpeg() });
+  assert.equal(result.ok, true, `expected success for a genuinely valid, within-tolerance natural size, got: ${JSON.stringify(result)}`);
+});
+
+test("6c. a source PNG whose own aspect ratio is genuinely out of range is still rejected, even though the dimension check now uses the record's own (also-wrong) width/height — the independent ratio/floor checks are never bypassed", async () => {
+  // A record whose OWN recorded width/height already reflect a bad aspect
+  // ratio (e.g. a corrupted/mismeasured record) — the dimension check alone
+  // would trivially agree with itself, so this proves the ratio check is a
+  // real, independent guard, not just dimension-echoing.
+  const badRatioPng = await opaquePng(1000, 1000); // 1:1, nowhere near 4:5
+  const record = approvedRecord({ artwork: { status: "created", image_url: PNG_URL, width: 1000, height: 1000 } });
+  const result = await resolveApprovedFeedJpeg(record, { fetchImpl: fetchRouter({ pngBuffer: badRatioPng }), uploadJpeg: okUploadJpeg() });
+  assert.equal(result.ok, false);
+  assert.ok(result.error.includes("aspect_ratio_out_of_range"), result.error);
 });
 
 // ---------------------------------------------------------------------------
