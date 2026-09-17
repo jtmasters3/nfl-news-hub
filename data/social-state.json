@@ -155298,7 +155298,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-09-16T16:10:35.436Z",
-      "updated_at": "2026-09-16T22:50:28.659Z",
+      "updated_at": "2026-09-17T20:00:44.365Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -155309,10 +155309,11 @@
         "base_image_url": "https://static.www.nfl.com/image/upload/t_editorial_landscape_12_desktop/league/wjstruh6gblypruapc5c",
         "source_name": "NFL.com",
         "source_url": "https://www.nfl.com/news/players-of-the-week-2026-week-1-kenneth-walker-dandre-swift",
-        "category": "league_news",
+        "category": "injury",
         "teams": [
           "Chicago Bears",
-          "Kansas City Chiefs"
+          "Kansas City Chiefs",
+          "Minnesota Vikings"
         ],
         "players": [
           "D'Andre Swift",
@@ -162121,24 +162122,30 @@
     },
     "994dfb71-bc80-4de5-a2e3-eb1b6184546f": {
       "story_id": "994dfb71-bc80-4de5-a2e3-eb1b6184546f",
-      "status": "new",
+      "status": "queued",
       "merged_into": null,
       "created_at": "2026-09-17T00:10:42.709Z",
-      "updated_at": "2026-09-17T00:10:42.709Z",
+      "updated_at": "2026-09-17T20:00:44.364Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
         "instagram_story": true
       },
       "source_story": {
-        "post_headline": null,
-        "base_image_url": null,
-        "source_name": null,
-        "source_url": null,
-        "category": null,
-        "teams": [],
-        "players": [],
-        "description": null,
+        "post_headline": "LEONARD WILLIAMS: \"WE ALL HAVE FAITH\" IN DREW LOCK",
+        "base_image_url": "https://a57.foxsports.com/statics.foxsports.com/www.foxsports.com/content/uploads/2026/09/1294/728/lock3.jpg?ve=1&tl=1",
+        "source_name": "FOX Sports",
+        "source_url": "https://www.foxsports.com/stories/nfl/drew-lock-sam-darnold-injury-seahawks-cardinals",
+        "category": "injury",
+        "teams": [
+          "Seattle Seahawks",
+          "Arizona Cardinals"
+        ],
+        "players": [
+          "Drew Lock",
+          "Sam Darnold"
+        ],
+        "description": "The Seahawks will ride with quarterback Drew Lock until Sam Darnold returns from a glute injury.",
         "is_rumor": false
       },
       "artwork": {
@@ -163356,7 +163363,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-09-17T02:20:36.167Z",
-      "updated_at": "2026-09-17T12:00:35.604Z",
+      "updated_at": "2026-09-17T20:00:27.561Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -163507,13 +163514,13 @@
         "retry_count": 0
       },
       "selection": {
-        "destination": "feed",
-        "slot_id": "feed:2026-09-17T08:00:00-04:00",
-        "selected_at": "2026-09-17T12:00:35.604Z",
-        "window_start": "2026-09-17T02:00:00.000Z",
-        "window_end": "2026-09-17T12:00:00.000Z",
+        "destination": "story",
+        "slot_id": "story:2026-09-17T16:00:00-04:00",
+        "selected_at": "2026-09-17T20:00:27.561Z",
+        "window_start": "2026-09-17T19:00:00.000Z",
+        "window_end": "2026-09-17T20:00:00.000Z",
         "score": 10,
-        "reason": "importance_score_rank"
+        "reason": "final_fallback_recent_pool_importance_score_rank"
       }
     },
     "73debb0c-a539-408a-a6f9-a71c21a141e7": {
@@ -168762,7 +168769,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-09-17T18:40:34.567Z",
-      "updated_at": "2026-09-17T18:40:34.568Z",
+      "updated_at": "2026-09-17T20:00:27.561Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -168910,6 +168917,15 @@
         "message": null,
         "at": null,
         "retry_count": 0
+      },
+      "selection": {
+        "destination": "feed",
+        "slot_id": "feed:2026-09-17T16:00:00-04:00",
+        "selected_at": "2026-09-17T20:00:27.561Z",
+        "window_start": "2026-09-17T18:00:00.000Z",
+        "window_end": "2026-09-17T20:00:00.000Z",
+        "score": 4,
+        "reason": "fallback_recent_pool_importance_score_rank"
       }
     },
     "1118e44d-6cc5-4eae-94c4-5cfc370745ed": {
@@ -169673,6 +169689,157 @@
       "merged_into": null,
       "created_at": "2026-09-17T19:50:42.495Z",
       "updated_at": "2026-09-17T19:50:42.495Z",
+      "content_package_version": 2,
+      "publishing_preferences": {
+        "instagram_feed": true,
+        "instagram_story": true
+      },
+      "source_story": {
+        "post_headline": null,
+        "base_image_url": null,
+        "source_name": null,
+        "source_url": null,
+        "category": null,
+        "teams": [],
+        "players": [],
+        "description": null,
+        "is_rumor": false
+      },
+      "artwork": {
+        "status": "not_created",
+        "image_url": null,
+        "created_at": null,
+        "provider": null
+      },
+      "validation": {
+        "status": "not_run",
+        "passed": null,
+        "issues": []
+      },
+      "story_artwork": {
+        "status": "not_created",
+        "image_url": null,
+        "storage_key": null,
+        "width": null,
+        "height": null,
+        "mime_type": null,
+        "size_bytes": null,
+        "provider": null,
+        "created_at": null,
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null
+        },
+        "validation": {
+          "status": "not_run",
+          "passed": null,
+          "issues": []
+        }
+      },
+      "approval": {
+        "status": "pending",
+        "decided_at": null,
+        "approved_at": null,
+        "rejected_at": null,
+        "rejection_reason": null,
+        "actor": null,
+        "request_id": null,
+        "decision_source": null
+      },
+      "caption": {
+        "status": "not_created",
+        "text": null,
+        "last_candidate_text": null,
+        "hashtags": [],
+        "attribution_line": null,
+        "source_url": null,
+        "provider": null,
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null
+        },
+        "claim_attempt_count": 0,
+        "created_at": null
+      },
+      "publishing": {
+        "status": "not_posted",
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null,
+          "retry_count": 0
+        },
+        "instagram": {
+          "feed": {
+            "status": "not_posted",
+            "provider": null,
+            "storage_key": null,
+            "jpeg_url": null,
+            "caption_used": null,
+            "container_id": null,
+            "container_created_at": null,
+            "publish_attempted_at": null,
+            "media_id": null,
+            "permalink": null,
+            "published_at": null,
+            "last_http_outcome": null,
+            "last_reconciled_at": null,
+            "buffer": {
+              "post_id": null,
+              "channel_id": null,
+              "status": null,
+              "due_at": null,
+              "sent_at": null
+            }
+          },
+          "story": {
+            "status": "not_posted",
+            "provider": null,
+            "storage_key": null,
+            "jpeg_url": null,
+            "caption_used": null,
+            "container_id": null,
+            "container_created_at": null,
+            "publish_attempted_at": null,
+            "media_id": null,
+            "permalink": null,
+            "published_at": null,
+            "last_http_outcome": null,
+            "last_reconciled_at": null,
+            "buffer": {
+              "post_id": null,
+              "channel_id": null,
+              "status": null,
+              "due_at": null,
+              "sent_at": null
+            }
+          }
+        },
+        "facebook": {
+          "status": "not_posted",
+          "post_id": null,
+          "post_url": null
+        },
+        "posted_at": null
+      },
+      "last_error": {
+        "stage": null,
+        "message": null,
+        "at": null,
+        "retry_count": 0
+      }
+    },
+    "c022782f-5cdc-4a4d-998d-6ae0d250add4": {
+      "story_id": "c022782f-5cdc-4a4d-998d-6ae0d250add4",
+      "status": "new",
+      "merged_into": null,
+      "created_at": "2026-09-17T20:00:44.363Z",
+      "updated_at": "2026-09-17T20:00:44.363Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -171188,6 +171355,24 @@
       "status": "selected",
       "story_id": "4bd7962e-2794-454f-9359-668ad6e87f8b",
       "processed_at": "2026-09-17T19:00:28.591Z"
+    },
+    "feed:2026-09-17T16:00:00-04:00": {
+      "destination": "feed",
+      "slot_time": "2026-09-17T20:00:00.000Z",
+      "window_start": "2026-09-17T18:00:00.000Z",
+      "window_end": "2026-09-17T20:00:00.000Z",
+      "status": "selected",
+      "story_id": "68026926-abd8-4f87-ac82-608e1e66c999",
+      "processed_at": "2026-09-17T20:00:27.561Z"
+    },
+    "story:2026-09-17T16:00:00-04:00": {
+      "destination": "story",
+      "slot_time": "2026-09-17T20:00:00.000Z",
+      "window_start": "2026-09-17T19:00:00.000Z",
+      "window_end": "2026-09-17T20:00:00.000Z",
+      "status": "selected",
+      "story_id": "f77944a0-210d-4b61-92aa-ffdad4cebc0f",
+      "processed_at": "2026-09-17T20:00:27.561Z"
     }
   }
 }
