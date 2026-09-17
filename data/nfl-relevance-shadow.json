@@ -17385,6 +17385,47 @@
       "reason_codes": [
         "no_signal_fail_open"
       ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-picks-week-2-2026-nfl-season",
+      "source_name": "NFL.com",
+      "headline": "NFL Week 2 picks: Upset and score predictions, matchup breakdowns for every game",
+      "published_at": "2026-09-17T05:13:59.000Z",
+      "observed_at": "2026-09-17T17:20:26.004Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "DEN",
+        "DET",
+        "HOU"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfls-week-1-total-audience-drops-by-13-percent",
+      "source_name": "Pro Football Talk",
+      "headline": "NFL's Week 1 total audience drops by 13 percent",
+      "published_at": "2026-09-17T17:07:21.000Z",
+      "observed_at": "2026-09-17T17:20:26.004Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
     }
   ]
 }
