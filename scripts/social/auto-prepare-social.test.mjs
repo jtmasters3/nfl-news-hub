@@ -1667,6 +1667,171 @@ test("117. the cloud-skip result maps to a successful (0) exit code via the exis
 });
 
 // ---------------------------------------------------------------------------
+// 118-124. 2026-09-17 zombie-recovery fix — a recover-artwork/recover-caption
+// candidate whose Durable Object claim has already come back authoritatively
+// "failed" must never be able to permanently occupy a selection attempt and
+// starve Priority 4, while a genuinely still-in-progress or genuinely
+// recoverable candidate must behave exactly as before.
+// ---------------------------------------------------------------------------
+
+test("118. a permanently failed (DO status: failed) artwork-recovery candidate does not block Priority-4 generation reaching a fresh candidate", async () => {
+  const zombie = stuckArtworkRecord({ story_id: "zombie-artwork" });
+  const freshQueued = validQueuedRecord({ story_id: "fresh1" });
+  const freshApproved = awaitingApprovalRecord({ story_id: "fresh1", selection: freshQueued.selection });
+  let prepStarted = false;
+  let prepCallArgs, replayCalled = false;
+  const result = await main({
+    fetchQueue: async () => [queueEntry("fresh1")],
+    fetchState: async () => ({ stories: { "zombie-artwork": zombie, fresh1: prepStarted ? freshApproved : freshQueued } }),
+    live: true,
+    isCloudEnvironment: false,
+    getArtworkClaimStatusImpl: async () => ({ do_record: completedArtworkDoRecord({ status: "failed" }) }),
+    replayArtworkCompletionImpl: async () => { replayCalled = true; return { replayed: true }; },
+    runPreparationImpl: async (args) => { prepStarted = true; prepCallArgs = args; return { exitCode: 0 }; },
+    decideApprovalImpl: async () => ({ result: "approved" }),
+  });
+  assert.equal(replayCalled, false, "a permanently-failed recovery must never be replayed");
+  assert.equal(prepCallArgs?.storyId, "fresh1", "Priority 4 must be reached and dispatched for the fresh candidate despite a permanently-dead recovery candidate outranking it");
+  assert.equal(result.autoApproved, true);
+});
+
+test("119. a permanently failed (DO status: failed) caption-recovery candidate does not block Priority-4 generation reaching a fresh candidate", async () => {
+  const zombie = stuckCaptionRecord({ story_id: "zombie-caption" });
+  const freshQueued = validQueuedRecord({ story_id: "fresh1" });
+  const freshApproved = awaitingApprovalRecord({ story_id: "fresh1", selection: freshQueued.selection });
+  let prepStarted = false;
+  let prepCallArgs, replayCalled = false;
+  const result = await main({
+    fetchQueue: async () => [queueEntry("fresh1")],
+    fetchState: async () => ({ stories: { "zombie-caption": zombie, fresh1: prepStarted ? freshApproved : freshQueued } }),
+    live: true,
+    isCloudEnvironment: false,
+    getCaptionClaimStatusImpl: async () => ({ do_record: completedDoRecord({ status: "failed" }) }),
+    replayCaptionCompletionImpl: async () => { replayCalled = true; return { replayed: true }; },
+    runPreparationImpl: async (args) => { prepStarted = true; prepCallArgs = args; return { exitCode: 0 }; },
+    decideApprovalImpl: async () => ({ result: "approved" }),
+  });
+  assert.equal(replayCalled, false, "a permanently-failed recovery must never be replayed");
+  assert.equal(prepCallArgs?.storyId, "fresh1", "Priority 4 must be reached and dispatched for the fresh candidate despite a permanently-dead recovery candidate outranking it");
+  assert.equal(result.autoApproved, true);
+});
+
+test("120. a genuinely COMPLETED artwork recovery still replays and approves exactly as before this fix", async () => {
+  let replayCalled = false;
+  let prepStarted = false;
+  const stuckRecord = stuckArtworkRecord({ story_id: "s1", source_story: { ...stuckArtworkRecord().source_story, base_image_url: "https://example.test/base.jpg" } });
+  const readyRecord = recoveredArtworkReadyRecord({ story_id: "s1", source_story: stuckRecord.source_story });
+  const approvedRecord = { ...readyRecord, status: "awaiting_approval", caption: { status: "ready", text: "Recovered artwork caption.\n\nSource: ESPN" } };
+  const fetchState = async () => {
+    if (!prepStarted) return { stories: { s1: readyRecord } };
+    return { stories: { s1: approvedRecord } };
+  };
+  const result = await main({
+    fetchQueue: async () => [],
+    fetchState: async () => (replayCalled ? fetchState() : { stories: { s1: stuckRecord } }),
+    live: true,
+    getArtworkClaimStatusImpl: async () => ({ do_record: completedArtworkDoRecord() }),
+    replayArtworkCompletionImpl: async () => { replayCalled = true; return { replayed: true }; },
+    runPreparationImpl: async () => { prepStarted = true; return { exitCode: 0 }; },
+    decideApprovalImpl: async () => ({ result: "approved" }),
+  });
+  assert.equal(replayCalled, true, "a genuinely completed recovery must still be replayed — the new zombie check must not interfere");
+  assert.equal(result.autoApproved, true);
+});
+
+test("121. a genuinely COMPLETED caption recovery still replays and approves exactly as before this fix", async () => {
+  let replayCalled = false;
+  const result = await main({
+    fetchQueue: async () => [],
+    fetchState: statefulFetchStateForRecovery(recoveredReadyRecord()),
+    live: true,
+    getCaptionClaimStatusImpl: async () => ({ do_record: completedDoRecord() }),
+    replayCaptionCompletionImpl: async (storyId, claimId) => { replayCalled = true; return { replayed: true }; },
+    decideApprovalImpl: async () => ({ result: "approved" }),
+  });
+  assert.equal(replayCalled, true, "a genuinely completed recovery must still be replayed — the new zombie check must not interfere");
+  assert.equal(result.autoApproved, true);
+});
+
+test("122. existing priority ordering is unchanged: a genuinely recoverable (DO status: completed) record still outranks a fresh Priority-4 candidate", async () => {
+  const fresh = validQueuedRecord({ story_id: "fresh1" });
+  let prepCallArgs, replayCalled = false, prepStarted = false;
+  const readyRecord = recoveredArtworkReadyRecord({ story_id: "recoverable-artwork" });
+  const approvedRecord = { ...readyRecord, status: "awaiting_approval", caption: { status: "ready", text: "Recovered artwork caption.\n\nSource: ESPN" } };
+  await main({
+    fetchQueue: async () => [queueEntry("fresh1")],
+    fetchState: async () => {
+      if (!replayCalled) return { stories: { "recoverable-artwork": stuckArtworkRecord({ story_id: "recoverable-artwork" }), fresh1: fresh } };
+      return { stories: { "recoverable-artwork": prepStarted ? approvedRecord : readyRecord, fresh1: fresh } };
+    },
+    live: true,
+    getArtworkClaimStatusImpl: async () => ({ do_record: completedArtworkDoRecord({ claim_id: "artwork-claim-1" }) }),
+    replayArtworkCompletionImpl: async () => { replayCalled = true; return { replayed: true }; },
+    runPreparationImpl: async (args) => { prepStarted = true; prepCallArgs = args; return { exitCode: 0 }; },
+    decideApprovalImpl: async () => ({ result: "approved" }),
+  });
+  assert.equal(replayCalled, true, "a genuinely recoverable Priority-2 candidate must still win over Priority 4");
+  // A successful recovery legitimately continues into caption-only prep for
+  // the RECOVERED story itself (process-one.js's own recovery routing,
+  // never fresh Codex generation) — the point being verified here is that
+  // Priority 4's fresh1 is never the one selected/prepared while this
+  // genuinely recoverable candidate exists.
+  assert.equal(prepCallArgs?.storyId, "recoverable-artwork", "Priority 4's fresh1 must not be reached while a genuinely recoverable higher-priority candidate exists");
+});
+
+test("123. BOTH a permanently failed artwork-recovery AND a permanently failed caption-recovery candidate together still do not block Priority 4 — the exact real 2026-09-17 incident", async () => {
+  const artworkZombie = stuckArtworkRecord({ story_id: "zombie-artwork" });
+  const captionZombie = stuckCaptionRecord({ story_id: "zombie-caption" });
+  const freshQueued = validQueuedRecord({ story_id: "fresh1" });
+  const freshApproved = awaitingApprovalRecord({ story_id: "fresh1", selection: freshQueued.selection });
+  let prepStarted = false;
+  let prepCallArgs;
+  const result = await main({
+    fetchQueue: async () => [queueEntry("fresh1")],
+    fetchState: async () => ({
+      stories: { "zombie-artwork": artworkZombie, "zombie-caption": captionZombie, fresh1: prepStarted ? freshApproved : freshQueued },
+    }),
+    live: true,
+    isCloudEnvironment: false,
+    getArtworkClaimStatusImpl: async () => ({ do_record: completedArtworkDoRecord({ status: "failed" }) }),
+    getCaptionClaimStatusImpl: async () => ({ do_record: completedDoRecord({ status: "failed" }) }),
+    replayArtworkCompletionImpl: async () => ({ replayed: true }),
+    replayCaptionCompletionImpl: async () => ({ replayed: true }),
+    runPreparationImpl: async (args) => { prepStarted = true; prepCallArgs = args; return { exitCode: 0 }; },
+    decideApprovalImpl: async () => ({ result: "approved" }),
+  });
+  assert.equal(prepCallArgs?.storyId, "fresh1", "two permanently-dead recovery records together must still not exhaust the fixed 2-attempt budget before reaching Priority 4");
+  assert.equal(result.autoApproved, true);
+});
+
+test("124. resolving two zombie recovery candidates plus a fresh candidate never double-generates or double-approves — exactly one prepare and one approval call occur, and neither zombie is ever replayed", async () => {
+  const artworkZombie = stuckArtworkRecord({ story_id: "zombie-artwork" });
+  const captionZombie = stuckCaptionRecord({ story_id: "zombie-caption" });
+  const freshQueued = validQueuedRecord({ story_id: "fresh1" });
+  const freshApproved = awaitingApprovalRecord({ story_id: "fresh1", selection: freshQueued.selection });
+  let prepStarted = false;
+  let prepCallCount = 0, decideCallCount = 0, artworkReplayCount = 0, captionReplayCount = 0;
+  await main({
+    fetchQueue: async () => [queueEntry("fresh1")],
+    fetchState: async () => ({
+      stories: { "zombie-artwork": artworkZombie, "zombie-caption": captionZombie, fresh1: prepStarted ? freshApproved : freshQueued },
+    }),
+    live: true,
+    isCloudEnvironment: false,
+    getArtworkClaimStatusImpl: async () => ({ do_record: completedArtworkDoRecord({ status: "failed" }) }),
+    getCaptionClaimStatusImpl: async () => ({ do_record: completedDoRecord({ status: "failed" }) }),
+    replayArtworkCompletionImpl: async () => { artworkReplayCount++; return { replayed: true }; },
+    replayCaptionCompletionImpl: async () => { captionReplayCount++; return { replayed: true }; },
+    runPreparationImpl: async () => { prepStarted = true; prepCallCount++; return { exitCode: 0 }; },
+    decideApprovalImpl: async () => { decideCallCount++; return { result: "approved" }; },
+  });
+  assert.equal(prepCallCount, 1, "exactly one story must be prepared, never zero and never more than one");
+  assert.equal(decideCallCount, 1, "exactly one approval decision must be made");
+  assert.equal(artworkReplayCount, 0, "a permanently-dead artwork recovery must never be replayed");
+  assert.equal(captionReplayCount, 0, "a permanently-dead caption recovery must never be replayed");
+});
+
+// ---------------------------------------------------------------------------
 let failures = 0;
 for (const c of cases) {
   try {

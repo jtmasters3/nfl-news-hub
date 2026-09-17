@@ -188,6 +188,25 @@ function sortByOldestSelectedAt(a, b) {
   return a.story_id.localeCompare(b.story_id);
 }
 
+// 2026-09-17 zombie-recovery fix — a recover-artwork/recover-caption
+// candidate whose Durable Object claim has already come back
+// authoritatively "failed" has nothing left to ever replay (only
+// "completed" is replayable — see evaluateArtworkRecoveryEligibility's/
+// evaluateCaptionRecoveryEligibility's own do_status_not_completed:<status>
+// issue code). Nothing in the existing GitHub-side pre-filter can tell
+// this apart from a record still genuinely in progress elsewhere, so it
+// keeps winning its priority slot on every single run, forever — proven in
+// production: two such permanently-dead records (one recover-artwork, one
+// recover-caption) consumed BOTH of main()'s bounded 2 selection attempts
+// every run, so fresh Priority-4 work was never reached no matter how many
+// genuinely eligible candidates existed. Distinct from every OTHER
+// ineligibility reason (still pending, DO record not found, claim id
+// mismatch) — those remain genuinely ambiguous and keep the existing
+// fail-closed, retry-once-then-stop behavior completely unchanged.
+function isPermanentlyFailedRecovery(eligibility) {
+  return Boolean(eligibility?.issues?.includes("do_status_not_completed:failed"));
+}
+
 /**
  * Buckets a set of static-eligibility issue codes into the three
  * dry-run-report categories requested: records that are structurally
@@ -565,6 +584,11 @@ export async function main({
   // mutating action per run regardless of how many pending records exist.
   let excludeStoryIds;
   let firstPendingResult = null;
+  // Circuit breaker only for the zombie-recovery skip below — a real run
+  // should never approach this; it exists purely so a future bug can never
+  // turn an unbounded set of dead recovery records into an unbounded loop.
+  let zombieRecoverySkips = 0;
+  const MAX_ZOMBIE_RECOVERY_SKIPS = 20;
   for (let attempt = 1; attempt <= 2; attempt++) {
     const selection = await selectCandidateImpl({ fetchQueue, fetchState, excludeStoryIds, now });
 
@@ -629,36 +653,53 @@ export async function main({
       if (result.autoApproved || !result.ok || attempt === 2) return result;
       firstPendingResult = result;
       console.log(`story_id=${storyId} remains pending after re-evaluation — trying once more, excluding it, so it cannot block recover-artwork, recover-caption, or fresh-generation work this run.`);
-      excludeStoryIds = [storyId];
+      excludeStoryIds = [...(excludeStoryIds ?? []), storyId];
       continue;
     }
 
     if (mode === "recover-artwork") {
       const result = await tryRecoverArtwork(storyId, record, { getArtworkClaimStatusImpl, replayArtworkCompletionImpl, waitForDurableCommitImpl, runPreparationImpl, decideApprovalImpl, waitForApprovalCommitImpl, fetchState, now });
+      if (result.step === "artwork_recovery_eligibility" && isPermanentlyFailedRecovery(result.eligibility) && zombieRecoverySkips < MAX_ZOMBIE_RECOVERY_SKIPS) {
+        // Permanently dead — see isPermanentlyFailedRecovery's own header.
+        // Excluding it must NOT cost one of the two real selection attempts
+        // below (attempt is deliberately decremented so the loop's own
+        // increment leaves it unchanged), or enough dead recovery records
+        // could starve Priority 4 forever regardless of how many attempts
+        // exist — exactly the 2026-09-17 incident this closes.
+        zombieRecoverySkips++;
+        console.log(`story_id=${storyId} artwork recovery is permanently dead (Durable Object status: failed — nothing to replay). Excluding it and re-selecting without spending a selection attempt (skip ${zombieRecoverySkips}/${MAX_ZOMBIE_RECOVERY_SKIPS}).`);
+        excludeStoryIds = [...(excludeStoryIds ?? []), storyId];
+        attempt--;
+        continue;
+      }
       // Same bounded-fallthrough principle as approve-only above: a pure
       // "not yet eligible" no-op (no replay ever attempted) must never
       // permanently block a DIFFERENT, genuinely-recoverable candidate —
-      // proven necessary in practice: a record whose generation failed
-      // BEFORE the cloud renderer existed (DO status "failed", never
-      // "completed") sorts ahead of a genuinely-recoverable one by
-      // selected_at, and would otherwise consume the entire run without
-      // ever reaching it. A genuine failure past eligibility (replay
-      // refused, durable-poll timeout) still stops here immediately.
+      // proven necessary in practice. A genuine failure past eligibility
+      // (replay refused, durable-poll timeout) still stops here immediately.
       if (result.step !== "artwork_recovery_eligibility" || !result.ok || attempt === 2) return result;
       firstPendingResult = result;
       console.log(`story_id=${storyId} artwork is not yet safely recoverable — trying once more, excluding it, so it cannot block other work this run.`);
-      excludeStoryIds = [storyId];
+      excludeStoryIds = [...(excludeStoryIds ?? []), storyId];
       continue;
     }
 
     if (mode === "recover-caption") {
       const result = await tryRecoverCaption(storyId, record, { getCaptionClaimStatusImpl, replayCaptionCompletionImpl, waitForDurableCommitImpl, decideApprovalImpl, waitForApprovalCommitImpl, fetchState, now });
+      if (result.step === "caption_recovery_eligibility" && isPermanentlyFailedRecovery(result.eligibility) && zombieRecoverySkips < MAX_ZOMBIE_RECOVERY_SKIPS) {
+        // Same permanently-dead short-circuit as recover-artwork above.
+        zombieRecoverySkips++;
+        console.log(`story_id=${storyId} caption recovery is permanently dead (Durable Object status: failed — nothing to replay). Excluding it and re-selecting without spending a selection attempt (skip ${zombieRecoverySkips}/${MAX_ZOMBIE_RECOVERY_SKIPS}).`);
+        excludeStoryIds = [...(excludeStoryIds ?? []), storyId];
+        attempt--;
+        continue;
+      }
       // Same bounded-fallthrough principle — see recover-artwork's own
       // comment just above for the full reasoning.
       if (result.step !== "caption_recovery_eligibility" || !result.ok || attempt === 2) return result;
       firstPendingResult = result;
       console.log(`story_id=${storyId} caption is not yet safely recoverable — trying once more, excluding it, so it cannot block other work this run.`);
-      excludeStoryIds = [storyId];
+      excludeStoryIds = [...(excludeStoryIds ?? []), storyId];
       continue;
     }
 
