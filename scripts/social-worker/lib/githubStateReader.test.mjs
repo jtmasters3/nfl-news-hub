@@ -6,7 +6,7 @@
 // story. Run with:
 // node scripts/social-worker/lib/githubStateReader.test.mjs
 import assert from "node:assert/strict";
-import { getLatestCommitSha, fetchStateAtCommit, createFreshStateFetcher } from "./githubStateReader.js";
+import { getLatestCommitSha, fetchStateAtCommit, createFreshStateFetcher, fetchArtworkQueueAtCommit, createFreshArtworkQueueFetcher } from "./githubStateReader.js";
 
 const cases = [];
 function test(name, fn) {
@@ -254,6 +254,103 @@ test("a supplied token never appears anywhere in a fetchStateAtCommit or getLate
     fetchImpl: async () => jsonResponse({ stories: {} }),
   });
   assert.equal(JSON.stringify(state).includes("super-secret-token-xyz"), false);
+});
+
+// ---------------------------------------------------------------------------
+// fetchArtworkQueueAtCommit / createFreshArtworkQueueFetcher — the
+// 2026-09-17 fix for process-one.js reading a stale queue `destination`
+// (story f77944a0 was generated Feed-shaped for a Story-selected record
+// because apiClient.js's fetchArtworkQueue() reads through the GitHub
+// Pages mirror, which has no same-cycle freshness guarantee).
+// ---------------------------------------------------------------------------
+
+test("fetchArtworkQueueAtCommit reads via the IMMUTABLE commit-SHA-pinned raw URL, not the mutable branch-name URL or the GitHub Pages mirror", async () => {
+  const calledUrls = [];
+  const queue = await fetchArtworkQueueAtCommit({
+    commitSha: "35756ac8f95dbf3d608f861f009d734a5057e88c",
+    fetchImpl: async (url) => {
+      calledUrls.push(url);
+      return jsonResponse([{ story_id: "s1", destination: "story" }]);
+    },
+  });
+  assert.equal(calledUrls.length, 1);
+  assert.ok(calledUrls[0].includes("/35756ac8f95dbf3d608f861f009d734a5057e88c/"), "must be pinned to the exact commit SHA");
+  assert.ok(!calledUrls[0].includes("/main/"), "must never read via the mutable branch name");
+  assert.ok(!calledUrls[0].includes("github.io"), "must never read via the GitHub Pages mirror — that path has no same-cycle freshness guarantee");
+  assert.equal(queue[0].destination, "story");
+});
+
+test("fetchArtworkQueueAtCommit requires a commitSha argument", async () => {
+  await assert.rejects(() => fetchArtworkQueueAtCommit({ fetchImpl: async () => jsonResponse([]) }));
+});
+
+test("fetchArtworkQueueAtCommit validates the response shape — a non-array body is rejected rather than silently returned", async () => {
+  await assert.rejects(() => fetchArtworkQueueAtCommit({ commitSha: "sha1", fetchImpl: async () => jsonResponse({ not: "an array" }) }));
+  await assert.rejects(() => fetchArtworkQueueAtCommit({ commitSha: "sha1", fetchImpl: async () => jsonResponse(null) }));
+});
+
+test("fetchArtworkQueueAtCommit throws a clear error on a non-ok HTTP response", async () => {
+  await assert.rejects(() => fetchArtworkQueueAtCommit({ commitSha: "sha1", fetchImpl: async () => jsonResponse(null, { ok: false, status: 404 }) }));
+});
+
+test("createFreshArtworkQueueFetcher's returned function takes no arguments and reflects a destination change made in the SAME cycle — the exact incident this closes", async () => {
+  let contentFetchCalls = 0;
+  const fetchQueue = createFreshArtworkQueueFetcher({
+    fetchImpl: async (url) => {
+      if (url.includes("api.github.com")) {
+        contentFetchCalls++;
+        // A brand-new commit SHA every call — simulating the post-selection
+        // queue rebuild that just landed a fresh destination.
+        return jsonResponse([{ sha: `sha-${contentFetchCalls}` }]);
+      }
+      // Reflects whatever the CURRENT commit says — a real Stage 3A
+      // destination reassignment, not the stale value a GitHub-Pages-mirror
+      // read could still be serving at this same instant.
+      return jsonResponse([{ story_id: "f77944a0", destination: contentFetchCalls === 1 ? "feed" : "story" }]);
+    },
+  });
+
+  const first = await fetchQueue();
+  assert.equal(first[0].destination, "feed");
+  const second = await fetchQueue();
+  assert.equal(second[0].destination, "story", "a fresh commit SHA must trigger a real re-fetch, picking up the corrected destination immediately");
+});
+
+test("createFreshArtworkQueueFetcher skips the expensive re-fetch when the commit SHA hasn't changed", async () => {
+  let commitCheckCalls = 0;
+  let contentFetchCalls = 0;
+  const fetchQueue = createFreshArtworkQueueFetcher({
+    fetchImpl: async (url) => {
+      if (url.includes("api.github.com")) {
+        commitCheckCalls++;
+        return jsonResponse([{ sha: "same-sha-every-time" }]);
+      }
+      contentFetchCalls++;
+      return jsonResponse([{ story_id: "s1", destination: "feed" }]);
+    },
+  });
+
+  await fetchQueue();
+  await fetchQueue();
+  await fetchQueue();
+  assert.equal(commitCheckCalls, 3, "still checks the SHA on every call");
+  assert.equal(contentFetchCalls, 1, "the queue file is only re-fetched when its own commit SHA actually changed");
+});
+
+test("createFreshArtworkQueueFetcher and createFreshStateFetcher check commits for their OWN respective file paths, never each other's", async () => {
+  const checkedPaths = [];
+  const fetchQueue = createFreshArtworkQueueFetcher({
+    fetchImpl: async (url) => {
+      if (url.includes("api.github.com")) {
+        const path = new URL(url).searchParams.get("path");
+        checkedPaths.push(path);
+        return jsonResponse([{ sha: "sha1" }]);
+      }
+      return jsonResponse([]);
+    },
+  });
+  await fetchQueue();
+  assert.deepEqual(checkedPaths, ["social-artwork-queue.json"]);
 });
 
 // ---------------------------------------------------------------------------

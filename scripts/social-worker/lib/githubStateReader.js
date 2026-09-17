@@ -32,6 +32,7 @@ const DEFAULT_OWNER = "jtmasters3";
 const DEFAULT_REPO = "nfl-news-hub";
 const DEFAULT_BRANCH = "main";
 const DEFAULT_FILE_PATH = "data/social-state.json";
+const ARTWORK_QUEUE_FILE_PATH = "social-artwork-queue.json";
 
 function resolveTarget(opts = {}) {
   return {
@@ -125,5 +126,65 @@ export function createFreshStateFetcher(opts = {}) {
       lastSha = sha;
     }
     return lastState;
+  };
+}
+
+/**
+ * Fetches social-artwork-queue.json content pinned to an EXACT commit SHA
+ * — same immutability guarantee as fetchStateAtCommit above, just with an
+ * array-shaped payload instead of the {stories: {...}} document shape.
+ * @param {object} args - commitSha (required) plus owner/repo overrides; also accepts fetchImpl for tests
+ */
+export async function fetchArtworkQueueAtCommit(args = {}) {
+  const { owner, repo } = resolveTarget(args);
+  const { commitSha } = args;
+  if (!commitSha) throw new Error("fetchArtworkQueueAtCommit requires a commitSha");
+  const fetchImpl = args.fetchImpl ?? fetch;
+
+  const url = `https://raw.githubusercontent.com/${owner}/${repo}/${commitSha}/${ARTWORK_QUEUE_FILE_PATH}`;
+  const res = await fetchImpl(url, { cache: "no-store" });
+  if (!res.ok) throw new Error(`Failed to fetch ${ARTWORK_QUEUE_FILE_PATH} at commit ${commitSha}: ${res.status}`);
+
+  let data;
+  try {
+    data = await res.json();
+  } catch {
+    throw new Error(`${ARTWORK_QUEUE_FILE_PATH} at commit ${commitSha} was not valid JSON`);
+  }
+  if (!Array.isArray(data)) {
+    throw new Error(`Unexpected ${ARTWORK_QUEUE_FILE_PATH} shape at commit ${commitSha} (expected an array)`);
+  }
+  return data;
+}
+
+/**
+ * social-artwork-queue.json's own equivalent of createFreshStateFetcher()
+ * above — same SHA-pinning guarantee, applied to the queue file instead of
+ * data/social-state.json. Added 2026-09-17 after the exact staleness class
+ * this file's own header describes was confirmed live for the queue too:
+ * process-one.js's target selection previously read the queue via
+ * apiClient.js's fetchArtworkQueue(), which fetches from the GitHub Pages
+ * mirror (jtmasters3.github.io) — a build+deploy+CDN path with no
+ * same-cycle freshness guarantee at all. A Stage 3A selection that just
+ * (re)assigned a record's destination (e.g. a Tier-2/Tier-3 fallback pick,
+ * which by construction always just happened) could be read back with its
+ * PRIOR destination still in the queue entry, routing process-one.js's
+ * artwork generation to the wrong template/aspect-ratio for that
+ * destination — confirmed in production against story f77944a0 (a
+ * Story-selected record that was generated Feed-shaped, 1122x1402/0.8,
+ * and correctly rejected by validation for the wrong aspect ratio). This
+ * function is immune to that by construction, exactly like
+ * createFreshStateFetcher() already is for data/social-state.json.
+ */
+export function createFreshArtworkQueueFetcher(opts = {}) {
+  let lastSha = null;
+  let lastQueue = null;
+  return async function fetchFreshArtworkQueue() {
+    const sha = await getLatestCommitSha({ ...opts, filePath: ARTWORK_QUEUE_FILE_PATH });
+    if (sha !== lastSha || !lastQueue) {
+      lastQueue = await fetchArtworkQueueAtCommit({ ...opts, commitSha: sha });
+      lastSha = sha;
+    }
+    return lastQueue;
   };
 }

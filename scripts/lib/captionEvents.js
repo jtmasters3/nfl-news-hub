@@ -68,7 +68,25 @@ export function applyCaptionCompleteEvent(state, payload) {
   if (resolved.record.status !== "artwork_ready") {
     return { state, ok: false, error: `invalid_state:${resolved.record.status}` };
   }
-  if (!resolved.record.caption?.claim || resolved.record.caption.claim.claim_id !== claim_id) {
+  // 2026-09-17: a record whose GitHub-side caption.claim.claim_id is
+  // present but DIFFERENT from this event's claim_id is a genuine conflict
+  // (a stale/wrong/superseded claim) and must still be rejected exactly as
+  // before. But a record with NO claim recorded on GitHub at all (never
+  // set — the "caption-claimed" event for THIS claim never durably landed
+  // either, confirmed live for story 68026926: 3 concurrent GitHub Actions
+  // runs writing data/social-state.json in the same window, one of which
+  // hit an unresolvable rebase conflict on its own commit-and-push step)
+  // is not a conflict to reject — apply-artwork-event.js's own bounded
+  // fresh-state retry (this file's own header) can never resolve it,
+  // because there is no later commit anywhere that will ever populate this
+  // field for a claimed-event that permanently never landed. The caller of
+  // this event (a normal Worker-fired caption-completed dispatch, or a
+  // replay-completion recovery, both of which only ever fire from the
+  // Worker's own Durable Object AFTER it independently confirmed a
+  // completed claim) is the actual source of truth here, not this record's
+  // own possibly-incomplete GitHub history.
+  const recordedClaimId = resolved.record.caption?.claim?.claim_id ?? null;
+  if (recordedClaimId && recordedClaimId !== claim_id) {
     return { state, ok: false, error: "claim_mismatch" };
   }
 

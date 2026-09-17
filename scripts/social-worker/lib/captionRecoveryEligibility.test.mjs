@@ -55,6 +55,11 @@ test("2. the GitHub-side pre-filter alone also recognizes the exact proven stuck
   assert.deepEqual(issues, []);
 });
 
+test("2b. 2026-09-17: the GitHub-side pre-filter alone no longer excludes a record with NO caption claim recorded at all — auto-prepare-social.js's selectAutonomousCandidate() must still be able to discover it as a Priority-3 candidate worth a DO status check", () => {
+  const issues = githubSideCaptionRecoveryIssues(stuckRecord({ caption: { status: "not_created" } }));
+  assert.deepEqual(issues, [], "an artwork_ready record with no claim yet must pass the cheap pre-filter — evaluateCaptionRecoveryEligibility's own DO-side check is what correctly separates a genuine recovery case from ordinary in-flight/not-yet-started work");
+});
+
 // ---------------------------------------------------------------------------
 // GitHub-side rejections
 // ---------------------------------------------------------------------------
@@ -89,10 +94,31 @@ test("7. a record whose caption is ALREADY ready is never eligible — nothing t
   assert.ok(result.issues.includes("caption_already_ready"));
 });
 
-test("8. a record with no existing caption claim at all is never eligible — recovery only ever replays a KNOWN claim, never invents one", () => {
+test("8. a record with no existing caption claim on GitHub AND no DO record either is never eligible — recovery only ever replays a KNOWN, DO-confirmed claim, never invents one", () => {
   const result = evaluateCaptionRecoveryEligibility(stuckRecord({ caption: { status: "not_created" } }), null);
   assert.equal(result.eligible, false);
-  assert.ok(result.issues.includes("no_existing_caption_claim"));
+  assert.ok(result.issues.includes("do_record_not_found"));
+});
+
+test("8b. 2026-09-17 incident (story 68026926): GitHub shows NO caption claim at all (claim_attempt_count: 0), but the Durable Object recorded a genuine completed claim+payload for this exact story — now eligible, using the DO's own claim_id", () => {
+  const result = evaluateCaptionRecoveryEligibility(stuckRecord({ caption: { status: "not_created" } }), completedDoRecord());
+  assert.equal(result.eligible, true);
+  assert.equal(result.claimId, "feb3591f-fab7-41c7-8bd8-72b6984f3da0");
+});
+
+test("8c. GitHub shows no claim, and the DO's completed payload belongs to a DIFFERENT story_id — never trusted, blocks eligibility", () => {
+  const result = evaluateCaptionRecoveryEligibility(
+    stuckRecord({ story_id: "s1", caption: { status: "not_created" } }),
+    completedDoRecord({ payload: { ...completedDoRecord().payload, story_id: "some-other-story" } })
+  );
+  assert.equal(result.eligible, false);
+  assert.ok(result.issues.includes("do_payload_story_id_mismatch"));
+});
+
+test("8d. GitHub shows no claim, and the DO record itself is still 'claimed' (in flight, not yet completed) — correctly not yet eligible, not a false recovery", () => {
+  const result = evaluateCaptionRecoveryEligibility(stuckRecord({ caption: { status: "not_created" } }), { status: "claimed", claim_id: "c1", payload: null });
+  assert.equal(result.eligible, false);
+  assert.ok(result.issues.includes("do_status_not_completed:claimed"));
 });
 
 test("9. an active posting claim blocks eligibility", () => {

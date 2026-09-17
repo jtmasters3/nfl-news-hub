@@ -145,6 +145,26 @@ test("Incorrect claim_id is rejected on caption completion, and does not mutate 
   assert.equal(state.stories["TEST-A"].caption.status, "generating");
 });
 
+test("2026-09-17 incident (story 68026926): a caption-completed event arrives with NO claim ever recorded on GitHub's side at all (the original caption-claimed dispatch itself never landed) — trusted and applied rather than permanently rejected", () => {
+  const state = artworkReadyState("TEST-A"); // caption.claim.claim_id is null — no claim event was ever applied
+  assert.equal(state.stories["TEST-A"].caption.claim?.claim_id ?? null, null, "fixture sanity: no claim recorded");
+
+  const result = applyCaptionCompleteEvent(state, { story_id: "TEST-A", claim_id: "do-authoritative-claim", text: GOOD_CAPTION_TEXT, provider: "chatgpt-codex-local" });
+  assert.equal(result.ok, true, "a genuinely valid completion must not be permanently blocked just because GitHub never saw the claim event");
+  assert.equal(result.record.status, "awaiting_approval");
+  assert.equal(result.record.caption.status, "ready");
+  assert.equal(result.record.caption.text, GOOD_CAPTION_TEXT);
+});
+
+test("A caption-completed event with a WRONG claim_id is still rejected even when GitHub's recorded claim is present — the 2026-09-17 relaxation never weakens a genuine conflict", () => {
+  let state = artworkReadyState("TEST-A");
+  state = applyCaptionClaimEvent(state, { story_id: "TEST-A", claim_id: "cap-real", processor_id: "p", claimed_at: "t0", claim_expires_at: "t1" }).state;
+
+  const result = applyCaptionCompleteEvent(state, { story_id: "TEST-A", claim_id: "cap-imposter", text: GOOD_CAPTION_TEXT, provider: "chatgpt-codex-local" });
+  assert.equal(result.ok, false);
+  assert.equal(result.error, "claim_mismatch");
+});
+
 test("Duplicate caption-completed event after a real success is a harmless no-op, never corrupts the record", () => {
   let state = artworkReadyState("TEST-A");
   state = applyCaptionClaimEvent(state, { story_id: "TEST-A", claim_id: "cap-1", processor_id: "p", claimed_at: "t0", claim_expires_at: "t1" }).state;

@@ -68,9 +68,9 @@ import {
   claimStoryRegeneration,
   completeStoryRegeneration,
   failStoryRegeneration,
-  fetchArtworkQueue,
   fetchSocialState,
 } from "./lib/apiClient.js";
+import { createFreshArtworkQueueFetcher } from "./lib/githubStateReader.js";
 import { runCodex } from "./lib/codexRunner.js";
 import { assertOutputProduced } from "./lib/codexOutcome.js";
 import { readPngDimensions } from "./lib/pngDimensions.js";
@@ -1067,7 +1067,15 @@ async function main() {
   // Always fetch the queue, even for an explicit --story-id — the
   // 2026-08-28 f4328222-... incident happened because a bare story_id was
   // once used without ever looking it up. See lib/selectTarget.js.
-  const queue = await fetchArtworkQueue();
+  //
+  // SHA-pinned fresh fetch, not apiClient.js's fetchArtworkQueue() — that
+  // one reads through the GitHub Pages mirror, which has no same-cycle
+  // freshness guarantee and was confirmed (2026-09-17, story f77944a0) to
+  // serve a queue entry's `destination` stale enough to route artwork
+  // generation to the wrong template/aspect-ratio for a Stage 3A
+  // selection that had just (re)assigned it. See
+  // createFreshArtworkQueueFetcher()'s own header for the full incident.
+  const queue = await createFreshArtworkQueueFetcher()();
   const target = selectTarget(queue, requestedStoryId);
 
   if (!target) {
