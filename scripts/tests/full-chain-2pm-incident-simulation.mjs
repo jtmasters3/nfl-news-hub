@@ -143,7 +143,11 @@ test("STEP 3-4: zombies are skipped without consuming a real attempt, Priority 4
   const zombieCaption = {
     story_id: "zombie-caption",
     status: "artwork_ready",
-    selection: { destination: "feed", slot_id: "feed:2", selected_at: "2026-01-01T00:00:00Z" },
+    // window_end matches selected_at — a genuinely old, expired selection
+    // (this zombie must stay permanently dead, never routed through the
+    // 2026-09-17 (part 2) fresh-retry path meant only for a still-relevant
+    // selection like the real 8:00 PM Story slot's own).
+    selection: { destination: "feed", slot_id: "feed:2", selected_at: "2026-01-01T00:00:00Z", window_end: "2026-01-01T00:00:00Z" },
     source_story: { post_headline: "Y", base_image_url: "https://example.test/y.jpg", source_name: "ESPN", source_url: "https://example.test/y" },
     approval: { status: "pending" },
     artwork: { status: "created", image_url: "https://example.test/y.png", width: 1024, height: 1280 },

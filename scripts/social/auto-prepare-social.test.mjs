@@ -1695,8 +1695,37 @@ test("118. a permanently failed (DO status: failed) artwork-recovery candidate d
   assert.equal(result.autoApproved, true);
 });
 
+test("118b. 2026-09-17 (part 2) real incident (story 994dfb71, the 8:00 PM Story slot): a caption whose Durable Object claim genuinely FAILED, but whose Stage 3A selection is still FRESH (not expired), is retried with a brand-new caption attempt via the existing caption-only recovery path — never treated as a permanent zombie, never replayed", async () => {
+  const freshFailedCaption = stuckCaptionRecord({
+    story_id: "s1",
+    // A selection made "now" (fresh) rather than the fixture's own stale
+    // 2026-01-01 default — mirrors the real 8:00 PM slot's own timing.
+    // Destination stays "feed", matching this fixture's own artwork shape
+    // (it has no story_artwork field) — the destination itself is not
+    // what this test is about.
+    selection: { destination: "feed", slot_id: "feed:test", selected_at: new Date().toISOString(), window_start: new Date(Date.now() - 60 * 60 * 1000).toISOString(), window_end: new Date().toISOString() },
+  });
+  const recoveredReady = { ...freshFailedCaption, status: "awaiting_approval", caption: { status: "ready", text: "Real caption.\n\nSource: ESPN" } };
+  let prepStarted = false;
+  let prepCallArgs;
+  let replayCalled = false;
+  const result = await main({
+    fetchQueue: async () => [],
+    fetchState: async () => ({ stories: { s1: prepStarted ? recoveredReady : freshFailedCaption } }),
+    live: true,
+    isCloudEnvironment: false,
+    getCaptionClaimStatusImpl: async () => ({ do_record: { status: "failed", claim_id: "claim-recover-1", processor_id: "p1" } }),
+    replayCaptionCompletionImpl: async () => { replayCalled = true; return { replayed: true }; },
+    runPreparationImpl: async (args) => { prepStarted = true; prepCallArgs = args; return { exitCode: 0 }; },
+    decideApprovalImpl: async () => ({ result: "approved" }),
+  });
+  assert.equal(replayCalled, false, "a genuinely FAILED claim has nothing to replay — this must never call replayCaptionCompletion");
+  assert.equal(prepCallArgs?.storyId, "s1", "the fresh, still-relevant record must be retried via the existing caption-only recovery path (process-one.js --story-id), exactly like a manual invocation would");
+  assert.equal(result.autoApproved, true);
+});
+
 test("119. a permanently failed (DO status: failed) caption-recovery candidate does not block Priority-4 generation reaching a fresh candidate", async () => {
-  const zombie = stuckCaptionRecord({ story_id: "zombie-caption" });
+  const zombie = stuckCaptionRecord({ story_id: "zombie-caption", selection: { destination: "feed", slot_id: "feed:test", selected_at: "2026-01-01T00:00:00Z", window_end: "2026-01-01T00:00:00Z" } });
   const freshQueued = validQueuedRecord({ story_id: "fresh1" });
   const freshApproved = awaitingApprovalRecord({ story_id: "fresh1", selection: freshQueued.selection });
   let prepStarted = false;
@@ -1781,7 +1810,7 @@ test("122. existing priority ordering is unchanged: a genuinely recoverable (DO 
 
 test("123. BOTH a permanently failed artwork-recovery AND a permanently failed caption-recovery candidate together still do not block Priority 4 — the exact real 2026-09-17 incident", async () => {
   const artworkZombie = stuckArtworkRecord({ story_id: "zombie-artwork" });
-  const captionZombie = stuckCaptionRecord({ story_id: "zombie-caption" });
+  const captionZombie = stuckCaptionRecord({ story_id: "zombie-caption", selection: { destination: "feed", slot_id: "feed:test", selected_at: "2026-01-01T00:00:00Z", window_end: "2026-01-01T00:00:00Z" } });
   const freshQueued = validQueuedRecord({ story_id: "fresh1" });
   const freshApproved = awaitingApprovalRecord({ story_id: "fresh1", selection: freshQueued.selection });
   let prepStarted = false;
@@ -1806,7 +1835,7 @@ test("123. BOTH a permanently failed artwork-recovery AND a permanently failed c
 
 test("124. resolving two zombie recovery candidates plus a fresh candidate never double-generates or double-approves — exactly one prepare and one approval call occur, and neither zombie is ever replayed", async () => {
   const artworkZombie = stuckArtworkRecord({ story_id: "zombie-artwork" });
-  const captionZombie = stuckCaptionRecord({ story_id: "zombie-caption" });
+  const captionZombie = stuckCaptionRecord({ story_id: "zombie-caption", selection: { destination: "feed", slot_id: "feed:test", selected_at: "2026-01-01T00:00:00Z", window_end: "2026-01-01T00:00:00Z" } });
   const freshQueued = validQueuedRecord({ story_id: "fresh1" });
   const freshApproved = awaitingApprovalRecord({ story_id: "fresh1", selection: freshQueued.selection });
   let prepStarted = false;

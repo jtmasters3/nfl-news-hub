@@ -147,6 +147,7 @@ import { spawn } from "node:child_process";
 import { evaluateAutoApprovalGate } from "../social-worker/lib/autoApprovalGate.js";
 import { evaluateStaticAutonomousEligibility } from "../social-worker/lib/staticAutonomousEligibility.js";
 import { githubSideCaptionRecoveryIssues, evaluateCaptionRecoveryEligibility } from "../social-worker/lib/captionRecoveryEligibility.js";
+import { isSelectionExpired } from "../lib/selectionEngine.js";
 import { githubSideArtworkRecoveryIssues, evaluateArtworkRecoveryEligibility } from "../social-worker/lib/artworkRecoveryEligibility.js";
 import { createFreshStateFetcher } from "../social-worker/lib/githubStateReader.js";
 import {
@@ -698,9 +699,36 @@ export async function main({
     if (mode === "recover-caption") {
       const result = await tryRecoverCaption(storyId, record, { getCaptionClaimStatusImpl, replayCaptionCompletionImpl, waitForDurableCommitImpl, decideApprovalImpl, waitForApprovalCommitImpl, fetchState, now });
       if (result.step === "caption_recovery_eligibility" && isPermanentlyFailedRecovery(result.eligibility) && zombieRecoverySkips < MAX_ZOMBIE_RECOVERY_SKIPS) {
-        // Same permanently-dead short-circuit as recover-artwork above.
+        // 2026-09-17 (part 2) — confirmed live against the real 8:00 PM
+        // Story selection (994dfb71): unlike a PRIMARY artwork failure
+        // (cloudflare-worker's fail.js explicitly reverts/"unfails" the DO
+        // record on a lost dispatch, since that side is NOT self-healing),
+        // a caption claim's own "failed" Durable Object status is
+        // deliberately self-healing by design — see captionFail.js's own
+        // header: "the top-level story status never leaves artwork_ready
+        // ... the story remains fully claimable again on the next
+        // attempt." A record whose Stage 3A selection is STILL FRESH
+        // (not yet expired) deserves exactly that: a brand-new caption
+        // attempt, routed through process-one.js's own already-existing,
+        // already-correct "caption_only" recovery path (selectTarget()
+        // finding it absent from the live queue -> determineRecoveryAction()
+        // routing to caption-only -> a fresh claimCaption() call, which the
+        // Durable Object's own "fresh" claim mode already allows after a
+        // failed attempt) — the EXACT same path already proven safe for a
+        // manual `--story-id=` invocation, just reached automatically here
+        // instead. Never a replay, never a second claim conflict, never a
+        // new artwork claim. Only a record whose selection has ALSO gone
+        // stale (a genuine, abandoned zombie — e.g. the real Falcons
+        // incident this check was originally built for, where even a
+        // successful caption would still fail auto-approval's own
+        // selection-expiry gate) is still treated as permanently dead and
+        // skipped for free, completely unchanged from before.
+        if (!isSelectionExpired(record.selection, now)) {
+          console.log(`story_id=${storyId} caption claim genuinely failed (Durable Object), but its selection is still fresh — retrying with a brand-new caption attempt via the existing process-one.js caption-only recovery path (never a replay, never a new claim conflict).`);
+          return runGeneratePipeline(storyId, record, { runPreparationImpl, waitForDurableCommitImpl, decideApprovalImpl, waitForApprovalCommitImpl, fetchState, now });
+        }
         zombieRecoverySkips++;
-        console.log(`story_id=${storyId} caption recovery is permanently dead (Durable Object status: failed — nothing to replay). Excluding it and re-selecting without spending a selection attempt (skip ${zombieRecoverySkips}/${MAX_ZOMBIE_RECOVERY_SKIPS}).`);
+        console.log(`story_id=${storyId} caption recovery is permanently dead (Durable Object status: failed, selection also expired — nothing left to retry). Excluding it and re-selecting without spending a selection attempt (skip ${zombieRecoverySkips}/${MAX_ZOMBIE_RECOVERY_SKIPS}).`);
         excludeStoryIds = [...(excludeStoryIds ?? []), storyId];
         attempt--;
         continue;
