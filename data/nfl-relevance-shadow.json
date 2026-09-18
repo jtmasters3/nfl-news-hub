@@ -18514,6 +18514,44 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-allen-registers-10th-game-with-2-rushing-2-passing-touchdowns",
+      "source_name": "Pro Football Talk",
+      "headline": "Josh Allen registers 10th game with 2+ rushing, 2+ passing touchdowns",
+      "published_at": "2026-09-18T02:37:21.000Z",
+      "observed_at": "2026-09-18T02:40:19.827Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bills-rule-out-wr-dj-moore",
+      "source_name": "Pro Football Talk",
+      "headline": "Bills rule out WR DJ Moore",
+      "published_at": "2026-09-18T02:32:31.000Z",
+      "observed_at": "2026-09-18T02:40:19.827Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
