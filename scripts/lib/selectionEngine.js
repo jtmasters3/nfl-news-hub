@@ -399,6 +399,19 @@ export function hasLegacySocialWorkStarted(record) {
 export function findWindowCandidates(stories, socialStateStories, windowStartMs, windowEndMs, destination, nowMs) {
   return stories.filter((story) => {
     if (!isEligible(story)) return false;
+    // 2026-09-18 — transient live-game/play-by-play state is never eligible
+    // for social selection, in ANY tier, regardless of age: a score/lead
+    // can be obsolete minutes later as the game continues, and Tier 3's
+    // 24-hour pool cannot tell a mid-game update from durable news by age
+    // alone. classifyCategory() (scripts/lib/extraction.js) stamps this
+    // deterministically at ingestion; excluding it here — the single choke
+    // point every tier already funnels through — means Tier 1/2/3 all
+    // inherit the exclusion for free, with no tier-specific logic needed.
+    // A pure narrowing of the candidate pool: no ranking, window, or
+    // fallback-tier change. Real incident this closes: story 1d456179
+    // ("LIONS ON THE BOARD, TRAIL 21-7") was selected for the 12 PM Feed
+    // slot the next day via Tier 3 — the game had ended hours earlier.
+    if (story.category === "live_game_state") return false;
     const publishedMs = Date.parse(story.first_published_at);
     if (!Number.isFinite(publishedMs)) return false;
     if (!(publishedMs >= windowStartMs && publishedMs < windowEndMs)) return false;

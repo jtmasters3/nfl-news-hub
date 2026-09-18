@@ -873,6 +873,93 @@ test("42F. even the bounded 24-hour Tier-3 pool being genuinely empty still prod
 });
 
 // ---------------------------------------------------------------------------
+// 43. 2026-09-18 — live-game/play-by-play state exclusion (real incident:
+// story 1d456179, "LIONS ON THE BOARD, TRAIL 21-7", selected via Tier 3 for
+// the 12 PM Feed slot the next day). Tests 11-15 from the user's own list.
+// ---------------------------------------------------------------------------
+
+test("43A (item 11). the exact real incident: a live-game-state headline (classified via the real classifyCategory()) is excluded from the Feed candidate pool outright, in its own Tier-1 window", async () => {
+  const { classifyCategory } = await import("../lib/extraction.js");
+  const headline = "LIONS ON THE BOARD, TRAIL 21-7";
+  assert.equal(classifyCategory(headline), "live_game_state", "fixture sanity: the real classifier must actually flag this headline");
+
+  const now = et("2026-09-18", "12:00");
+  const lionsStory = { ...story({ id: "1d456179-real-incident", first_published_at: et("2026-09-17", "21:23") }), category: classifyCategory(headline) };
+  const state = stateWithSyncedStories([lionsStory]);
+  const candidates = findWindowCandidates([lionsStory], state.stories, Date.parse(et("2026-09-18", "10:00")), Date.parse(now), "feed", Date.parse(now));
+  assert.deepEqual(candidates, [], "a live_game_state story must never be a candidate, even inside its own normal window");
+});
+
+test("43B (item 12). Tier 2 cannot resurrect an excluded live-game-state story — the slot keeps searching rather than settling for it", () => {
+  const now = et("2026-09-18", "12:00");
+  const liveUpdate = { ...story({ id: "live-update-only", importance_score: 20, first_published_at: et("2026-09-18", "10:30") }), category: "live_game_state" };
+  const activatedState = activatedStateBefore(now, et("2026-09-18", "08:00"));
+  const state = stateWithSyncedStories([liveUpdate], activatedState);
+  const result = runSelectionEngine({ state, stories: [liveUpdate], now });
+  const slot = result.state.selection_slots["feed:2026-09-18T12:00:00-04:00"];
+  assert.equal(slot.status, "no_candidate", "the only candidate in the 6h Tier-2 pool is a live-game-state story — it must never be selected, even though nothing else exists");
+  assert.equal(slot.story_id, null);
+});
+
+test("43C (item 13). Tier 3 (24h final fallback) ALSO cannot resurrect an excluded live-game-state story", () => {
+  const now = et("2026-09-18", "12:00");
+  const liveUpdate = { ...story({ id: "live-update-24h", importance_score: 20, first_published_at: et("2026-09-17", "21:00") }), category: "live_game_state" }; // 15h before now, inside 24h but outside 6h
+  const activatedState = activatedStateBefore(now, et("2026-09-17", "10:00"));
+  const state = stateWithSyncedStories([liveUpdate], activatedState);
+  const result = runSelectionEngine({ state, stories: [liveUpdate], now });
+  const slot = result.state.selection_slots["feed:2026-09-18T12:00:00-04:00"];
+  assert.equal(slot.status, "no_candidate", "even the 24-hour Tier-3 pool must never resurrect excluded live-game-state content");
+  assert.equal(slot.story_id, null);
+});
+
+test("43D. inventory behavior: when BOTH a live-game-state story AND an ordinary safe story exist in the same pool, the ordinary story is still selected — exclusion never causes an unnecessary no_candidate", () => {
+  const now = et("2026-09-18", "12:00");
+  const liveUpdate = { ...story({ id: "live-update-with-alt", importance_score: 50, first_published_at: et("2026-09-18", "11:00") }), category: "live_game_state" };
+  const ordinary = story({ id: "ordinary-safe-story", importance_score: 5, first_published_at: et("2026-09-18", "09:00") });
+  const activatedState = activatedStateBefore(now, et("2026-09-18", "08:00"));
+  const state = stateWithSyncedStories([liveUpdate, ordinary], activatedState);
+  const result = runSelectionEngine({ state, stories: [liveUpdate, ordinary], now });
+  const slot = result.state.selection_slots["feed:2026-09-18T12:00:00-04:00"];
+  assert.equal(slot.status, "selected", "a safe ordinary story must still fill the slot even though the highest-importance candidate was excluded");
+  assert.equal(slot.story_id, "ordinary-safe-story");
+});
+
+test("43E (item 14). Feed-first shared-slot selection order is completely unchanged by the live-game-state exclusion", () => {
+  const now = et("2026-09-18", "12:00");
+  const onlySafeStory = story({ id: "shared-hour-only-safe", importance_score: 10, first_published_at: et("2026-09-18", "11:00") });
+  const liveUpdate = { ...story({ id: "shared-hour-live-update", importance_score: 50, first_published_at: et("2026-09-18", "11:30") }), category: "live_game_state" };
+  const activatedState = activatedStateBefore(now, et("2026-09-18", "08:00"));
+  const state = stateWithSyncedStories([onlySafeStory, liveUpdate], activatedState);
+  const result = runSelectionEngine({ state, stories: [onlySafeStory, liveUpdate], now });
+  const feedSlot = result.state.selection_slots["feed:2026-09-18T12:00:00-04:00"];
+  const storySlot = result.state.selection_slots["story:2026-09-18T12:00:00-04:00"];
+  assert.equal(feedSlot.status, "selected");
+  assert.equal(feedSlot.story_id, "shared-hour-only-safe", "Feed must still get first pick of the one safe story, exactly as before");
+  assert.equal(storySlot.status, "no_candidate", "Story correctly finds nothing left — the live-game-state story was never eligible to begin with, not because Feed took it");
+});
+
+test("43F (item 15). existing same-destination/other-destination-live duplicate exclusion is completely unaffected by the live-game-state exclusion", () => {
+  const now = et("2026-09-18", "12:00");
+  const safeStory = story({ id: "duplicate-check-story", importance_score: 10, first_published_at: et("2026-09-18", "11:00") });
+  const activatedState = activatedStateBefore(now, et("2026-09-18", "08:00"));
+  let state = stateWithSyncedStories([safeStory], activatedState);
+  // Pre-select it for Feed, still live, exactly like test 42A's own setup.
+  state = {
+    ...state,
+    stories: {
+      ...state.stories,
+      "duplicate-check-story": {
+        ...state.stories["duplicate-check-story"],
+        selection: { destination: "feed", slot_id: "feed:prior", selected_at: now, window_start: et("2026-09-18", "10:00"), window_end: now },
+      },
+    },
+  };
+  const result = runSelectionEngine({ state, stories: [safeStory], now });
+  const storySlot = result.state.selection_slots["story:2026-09-18T12:00:00-04:00"];
+  assert.equal(storySlot.status, "no_candidate", "the existing other-destination-still-live exclusion must still work exactly as before, independent of the new category check");
+});
+
+// ---------------------------------------------------------------------------
 let failures = 0;
 for (const c of cases) {
   try {

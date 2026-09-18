@@ -5,7 +5,59 @@ import { TEAMS } from "./teams.js";
 // categorization path (no AI, $0 cost).
 // ---------------------------------------------------------------------------
 
+// 2026-09-18: transient live-game/play-by-play state — NEVER durable NFL
+// news, regardless of how recent it is (a score/lead can be obsolete
+// minutes later as the game continues). Checked FIRST, before every other
+// rule, so a headline like "Ravens strike first" can never fall through to
+// a different category by accident. Deliberately does NOT match on a bare
+// numeric score alone — "Lions beat Packers 31-21" (a final result, always
+// durable news) must never be excluded just because it contains a score.
+// Real production incident this closes: story 1d456179 ("LIONS ON THE
+// BOARD, TRAIL 21-7", published mid-game 2026-09-17) was selected for the
+// 12 PM Feed slot the next day via the 24-hour Tier-3 fallback — the
+// selection engine had no way to know the game (and therefore the
+// headline's factual accuracy) had ended hours earlier.
+const LIVE_GAME_STATE_PATTERNS = [
+  /\bon the board\b/i,
+  /\btrail(?:s|ing)?\s+\d+-\d+\b/i,
+  /\btrail(?:s|ing)?\s+by\s+\d+\b/i,
+  /\btake[s]?\s+(?:a\s+)?\d+-\d+\s+(?:lead|advantage)\b/i,
+  /\btake[s]?\s+the\s+lead\b/i,
+  /\btied?\s+it\s+(?:up\s+)?at\s+\d+/i,
+  /\bstrikes?\s+first\b/i,
+  /\b(?:leads?|up)\s+\d+-\d+\s+(?:at|heading into)\s+(?:the\s+)?half/i,
+  /\blead[s]?\s+at\s+halftime\b/i,
+  /\bmakes?\s+it\s+\d+-\d+\b/i,
+  /\bdriving\s+(?:late\s+)?in\s+the\s+(?:first|second|third|fourth)\b/i,
+  /\bgives?\s+\S+\s+the\s+lead\b/i,
+  /\banswers?\s+with\s+a\s+touchdown\b/i,
+  /\bscores?\s+(?:his|her|their)\s+(?:second|third|fourth|fifth)\s+(?:td|touchdown)\b/i,
+  /\bcuts?\s+the\s+deficit\s+to\b/i,
+  /\btied?\s+entering\s+(?:the\s+)?(?:first|second|third|fourth)\s+quarter\b/i,
+  // Transient in-game player status — obsolete the moment the game ends or
+  // the player's own in-game status changes again. Deliberately narrow:
+  // "questionable/doubtful/probable FOR <game/week>" (pre-game, durable news)
+  // and "diagnosed with <injury>" are never matched by these patterns.
+  /\b(?:questionable|doubtful|probable)\s+to\s+return\b/i,
+  /\bwill\s+not\s+return\b/i,
+  /\bruled\s+out\s+for\s+the\s+(?:remainder|rest)\s+of\s+(?:the|this)\s+game\b/i,
+  /\bis\s+out\s+for\s+the\s+(?:rest|remainder)\s+of\s+the\s+game\b/i,
+  /\bhas\s+returned\s+to\s+the\s+game\b/i,
+];
+
+// Guards against a transient-looking word appearing inside genuinely
+// durable news — final-result headlines are the primary case ("Lions beat
+// Packers 31-21" must never be excluded merely for containing a score),
+// but pre-game/diagnostic status phrasing is guarded too for clarity even
+// though none of the patterns above would otherwise match it.
+const LIVE_GAME_STATE_NEGATIVE_PATTERNS = [
+  /\b(?:defeat(?:s|ed)?|beat(?:s)?|beaten|top(?:s|ped)?|outlast(?:s|ed)?|edge(?:s|d)?|down(?:s|ed)?|rout(?:s|ed)?|upset(?:s)?|falls?\s+to|fell\s+to|loses?\s+to|lost\s+to|wins?\s+over|won\s+over)\b/i,
+  /\b(?:questionable|doubtful|probable)\s+for\b/i,
+  /\bdiagnosed\s+with\b/i,
+];
+
 const CATEGORY_RULES = [
+  { category: "live_game_state", patterns: LIVE_GAME_STATE_PATTERNS, negativePatterns: LIVE_GAME_STATE_NEGATIVE_PATTERNS },
   { category: "suspension", patterns: [/\bsuspend(ed|s|ing)?\b/i, /\bbanned\b/i] },
   { category: "retirement", patterns: [/\bretir(e|es|ed|ement|ing)\b/i] },
   { category: "trade", patterns: [/\btrade[sd]?\b/i, /\btrading\b/i, /\bacquire[sd]?\b/i, /\bswap\b/i] },
