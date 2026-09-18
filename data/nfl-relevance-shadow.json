@@ -20252,6 +20252,66 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/state-of-texas-three-south-florida-high-schools-produce-most-nfl-players-on-kickoff-weekend-rosters",
+      "source_name": "NFL.com",
+      "headline": "State of Texas, three South Florida high schools produce most NFL players on Kickoff Weekend rosters",
+      "published_at": "2026-09-18T08:59:13.000Z",
+      "observed_at": "2026-09-18T21:10:20.685Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-steelers-have-received-no-serious-trade-inquiries-about-joey-porter-jr",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Steelers have received no serious trade inquiries about Joey Porter Jr.",
+      "published_at": "2026-09-18T21:07:40.000Z",
+      "observed_at": "2026-09-18T21:10:20.685Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/giants-place-paulson-adebo-on-ir-sign-nikko-reed-from-chargers",
+      "source_name": "Pro Football Talk",
+      "headline": "Giants place Paulson Adebo on IR, sign Nikko Reed from Chargers",
+      "published_at": "2026-09-18T21:00:27.000Z",
+      "observed_at": "2026-09-18T21:10:20.685Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC",
+        "NYG"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
