@@ -20333,6 +20333,54 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/rams-aaron-donald-plans-to-play-monday-night-vs-giants",
+      "source_name": "NFL.com",
+      "headline": "Rams' Aaron Donald plans to play Monday night vs. Giants",
+      "published_at": "2026-09-18T10:17:56.000Z",
+      "observed_at": "2026-09-18T22:20:25.939Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC",
+        "LAR",
+        "NYG",
+        "NYJ"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-college-football-odds-best-bets-lsu-ole-miss-eagles-titans",
+      "source_name": "FOX Sports",
+      "headline": "2026 NFL, College Football Odds: Best Bets For LSU-Ole Miss, Eagles-Titans",
+      "published_at": "2026-09-18T22:05:55.000Z",
+      "observed_at": "2026-09-18T22:20:25.939Z",
+      "decision": "keep",
+      "classification": "nfl_with_college_context",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI",
+        "TEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [
+        "college_football_phrase"
+      ],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
