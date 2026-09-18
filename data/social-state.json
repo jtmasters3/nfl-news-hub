@@ -175055,10 +175055,10 @@
     },
     "26d3bc1a-057f-4c37-832e-003d7a4f1e47": {
       "story_id": "26d3bc1a-057f-4c37-832e-003d7a4f1e47",
-      "status": "artwork_requested",
+      "status": "artwork_ready",
       "merged_into": null,
       "created_at": "2026-09-18T04:00:44.719Z",
-      "updated_at": "2026-09-18T16:08:41.150Z",
+      "updated_at": "2026-09-18T16:11:18.316Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -175087,31 +175087,20 @@
         "provider": null
       },
       "validation": {
-        "status": "not_run",
-        "passed": null,
+        "status": "passed",
+        "passed": true,
         "issues": []
       },
       "story_artwork": {
-        "status": "not_created",
-        "image_url": null,
-        "storage_key": null,
-        "width": null,
-        "height": null,
-        "mime_type": null,
-        "size_bytes": null,
-        "provider": null,
-        "created_at": null,
-        "claim": {
-          "claim_id": null,
-          "processor_id": null,
-          "claimed_at": null,
-          "claim_expires_at": null
-        },
-        "validation": {
-          "status": "not_run",
-          "passed": null,
-          "issues": []
-        }
+        "status": "created",
+        "image_url": "https://pub-1705b19e159c4434ba94af4ae6799f97.r2.dev/social-artwork/26d3bc1a-057f-4c37-832e-003d7a4f1e47.png",
+        "storage_key": "social-artwork/26d3bc1a-057f-4c37-832e-003d7a4f1e47.png",
+        "width": 941,
+        "height": 1672,
+        "mime_type": "image/png",
+        "size_bytes": 2270129,
+        "provider": "chatgpt-codex-local",
+        "created_at": "2026-09-18T16:11:18.313Z"
       },
       "approval": {
         "status": "pending",
