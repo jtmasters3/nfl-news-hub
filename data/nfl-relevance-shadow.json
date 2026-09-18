@@ -19498,6 +19498,88 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/week-2-nfl-shop-offer-terms",
+      "source_name": "NFL.com",
+      "headline": "Wee 2",
+      "published_at": "2026-09-18T04:49:59.000Z",
+      "observed_at": "2026-09-18T16:50:23.723Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/bengals-joe-burrow-texans-back-injury",
+      "source_name": "NFL.com",
+      "headline": "Bengals' Joe Burrow (back) full participant at practice, set to start Sunday vs. Texans",
+      "published_at": "2026-09-18T04:48:40.000Z",
+      "observed_at": "2026-09-18T16:50:23.723Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN",
+        "HOU"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cooper-rush-is-expected-to-start-for-falcons-vs-panthers",
+      "source_name": "Pro Football Talk",
+      "headline": "Cooper Rush is expected to start for Falcons vs. Panthers",
+      "published_at": "2026-09-18T16:41:58.000Z",
+      "observed_at": "2026-09-18T16:50:23.723Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "CAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jalen-coker-has-no-injury-designation-for-sunday",
+      "source_name": "Pro Football Talk",
+      "headline": "Jalen Coker has no injury designation for Sunday",
+      "published_at": "2026-09-18T16:39:41.000Z",
+      "observed_at": "2026-09-18T16:50:23.723Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
