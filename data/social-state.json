@@ -184551,24 +184551,29 @@
     },
     "36dda219-9901-440a-88f3-abf2d0bff8f3": {
       "story_id": "36dda219-9901-440a-88f3-abf2d0bff8f3",
-      "status": "new",
+      "status": "queued",
       "merged_into": null,
       "created_at": "2026-09-19T04:10:30.064Z",
-      "updated_at": "2026-09-19T04:10:30.064Z",
+      "updated_at": "2026-09-19T23:00:45.286Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
         "instagram_story": true
       },
       "source_story": {
-        "post_headline": null,
-        "base_image_url": null,
-        "source_name": null,
-        "source_url": null,
-        "category": null,
-        "teams": [],
-        "players": [],
-        "description": null,
+        "post_headline": "JERRY JONES: THE GIANTS WERE BETTER THAN WE THOUGHT THEY WERE",
+        "base_image_url": "https://static.www.nfl.com/image/upload/t_editorial_landscape_12_desktop/league/d1apd6smebaxxkovtowc",
+        "source_name": "NFL.com",
+        "source_url": "https://www.nfl.com/news/cowboys-jerry-jones-giants-were-better-than-we-thought-they-were-in-season-opener",
+        "category": "league_news",
+        "teams": [
+          "Dallas Cowboys",
+          "New York Giants"
+        ],
+        "players": [
+          "Jerry Jones"
+        ],
+        "description": "Jones seemingly tries to temper expectations for the 2026 Cowboys.",
         "is_rumor": false
       },
       "artwork": {
@@ -188782,7 +188787,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-09-19T22:00:41.539Z",
-      "updated_at": "2026-09-19T22:00:29.413Z",
+      "updated_at": "2026-09-19T23:00:30.640Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -188933,13 +188938,13 @@
         "retry_count": 0
       },
       "selection": {
-        "destination": "feed",
-        "slot_id": "feed:2026-09-19T18:00:00-04:00",
-        "selected_at": "2026-09-19T22:00:29.413Z",
-        "window_start": "2026-09-19T20:00:00.000Z",
-        "window_end": "2026-09-19T22:00:00.000Z",
+        "destination": "story",
+        "slot_id": "story:2026-09-19T19:00:00-04:00",
+        "selected_at": "2026-09-19T23:00:30.640Z",
+        "window_start": "2026-09-19T22:00:00.000Z",
+        "window_end": "2026-09-19T23:00:00.000Z",
         "score": 4,
-        "reason": "importance_score_rank"
+        "reason": "fallback_recent_pool_importance_score_rank"
       }
     }
   },
@@ -190717,6 +190722,15 @@
       "status": "no_candidate",
       "story_id": null,
       "processed_at": "2026-09-19T22:00:29.413Z"
+    },
+    "story:2026-09-19T19:00:00-04:00": {
+      "destination": "story",
+      "slot_time": "2026-09-19T23:00:00.000Z",
+      "window_start": "2026-09-19T22:00:00.000Z",
+      "window_end": "2026-09-19T23:00:00.000Z",
+      "status": "selected",
+      "story_id": "2beb1b1d-e16e-46f8-bb8d-b14aeb9d4c0f",
+      "processed_at": "2026-09-19T23:00:30.640Z"
     }
   }
 }
