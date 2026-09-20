@@ -201011,10 +201011,10 @@
     },
     "7b87f739-9c65-4ce4-ae82-ff124d318d6f": {
       "story_id": "7b87f739-9c65-4ce4-ae82-ff124d318d6f",
-      "status": "artwork_requested",
+      "status": "failed",
       "merged_into": null,
       "created_at": "2026-09-20T23:00:42.340Z",
-      "updated_at": "2026-09-20T23:05:25.984Z",
+      "updated_at": "2026-09-20T23:08:02.351Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -201157,10 +201157,10 @@
         "posted_at": null
       },
       "last_error": {
-        "stage": null,
-        "message": null,
-        "at": null,
-        "retry_count": 0
+        "stage": "generation",
+        "message": "Generation failed after 3 attempts. attempt 1: codex exec exited 0 but did not produce the expected output file. Codex reported: Generation failed validation: `source.jpg` shows a Bears coach, not a clearly identifiable NFL player in uniform with a jersey number as required by step 4.\n\nNo image was generated. The requested output path remains absent:\n\n`C:\\Users\\jacks\\Desktop\\Claude\\nfl-news-hub\\social-output\\story\\7b87f739-9c65-4ce4-ae82-ff124d318d6f.png` | attempt 2: codex exec exited 0 but did not produce the expected output file. Codex reported: Failed validation: the supplied photograph shows a sideline coach wearing a headset, not an identifiable NFL player as required by step 4.\n\nNo image was generated or saved to `C:\\Users\\jacks\\Desktop\\Claude\\nfl-news-hub\\social-output\\story\\7b87f739-9c65-4ce4-ae82-ff124d318d6f.png`. | attempt 3: codex exec exited 0 but did not produce the expected output file. Codex reported: Failed validation: `source.jpg` shows a sideline coach wearing a headset, not an identifiable NFL player as required by step 4. No image was generated or saved.\n\nOutput path: `C:\\Users\\jacks\\Desktop\\Claude\\nfl-news-hub\\social-output\\story\\7b87f739-9c65-4ce4-ae82-ff124d318d6f.png`",
+        "at": "2026-09-20T23:08:02.351Z",
+        "retry_count": 1
       },
       "selection": {
         "destination": "story",
