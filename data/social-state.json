@@ -212249,7 +212249,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-09-21T17:10:41.724Z",
-      "updated_at": "2026-09-21T18:00:33.240Z",
+      "updated_at": "2026-09-21T20:00:27.306Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -212398,13 +212398,13 @@
         "retry_count": 0
       },
       "selection": {
-        "destination": "feed",
-        "slot_id": "feed:2026-09-21T14:00:00-04:00",
-        "selected_at": "2026-09-21T18:00:33.240Z",
-        "window_start": "2026-09-21T16:00:00.000Z",
-        "window_end": "2026-09-21T18:00:00.000Z",
+        "destination": "story",
+        "slot_id": "story:2026-09-21T16:00:00-04:00",
+        "selected_at": "2026-09-21T20:00:27.306Z",
+        "window_start": "2026-09-21T19:00:00.000Z",
+        "window_end": "2026-09-21T20:00:00.000Z",
         "score": 10,
-        "reason": "importance_score_rank"
+        "reason": "fallback_recent_pool_importance_score_rank"
       }
     },
     "5631f18e-c422-479f-a94d-1cbd1ad0eac4": {
@@ -214242,7 +214242,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-09-21T19:10:32.304Z",
-      "updated_at": "2026-09-21T19:10:32.306Z",
+      "updated_at": "2026-09-21T20:00:27.306Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -214391,6 +214391,15 @@
         "message": null,
         "at": null,
         "retry_count": 0
+      },
+      "selection": {
+        "destination": "feed",
+        "slot_id": "feed:2026-09-21T16:00:00-04:00",
+        "selected_at": "2026-09-21T20:00:27.306Z",
+        "window_start": "2026-09-21T18:00:00.000Z",
+        "window_end": "2026-09-21T20:00:00.000Z",
+        "score": 4,
+        "reason": "importance_score_rank"
       }
     },
     "7dabb6d7-7d15-46ec-8061-f77f9dfdb719": {
@@ -216936,6 +216945,24 @@
       "status": "selected",
       "story_id": "b725ce8a-da18-4b51-a148-11ace1d237e5",
       "processed_at": "2026-09-21T19:00:31.803Z"
+    },
+    "feed:2026-09-21T16:00:00-04:00": {
+      "destination": "feed",
+      "slot_time": "2026-09-21T20:00:00.000Z",
+      "window_start": "2026-09-21T18:00:00.000Z",
+      "window_end": "2026-09-21T20:00:00.000Z",
+      "status": "selected",
+      "story_id": "220a02e5-ef93-4eda-99d7-d45f06c6c6bf",
+      "processed_at": "2026-09-21T20:00:27.306Z"
+    },
+    "story:2026-09-21T16:00:00-04:00": {
+      "destination": "story",
+      "slot_time": "2026-09-21T20:00:00.000Z",
+      "window_start": "2026-09-21T19:00:00.000Z",
+      "window_end": "2026-09-21T20:00:00.000Z",
+      "status": "selected",
+      "story_id": "625643b4-b396-4724-8c4e-e80a4ce65c53",
+      "processed_at": "2026-09-21T20:00:27.306Z"
     }
   }
 }
