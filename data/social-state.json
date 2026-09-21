@@ -201657,10 +201657,10 @@
     },
     "a94158fa-78b5-41a5-a76b-dbafe430a71a": {
       "story_id": "a94158fa-78b5-41a5-a76b-dbafe430a71a",
-      "status": "artwork_requested",
+      "status": "failed",
       "merged_into": null,
       "created_at": "2026-09-20T23:20:41.839Z",
-      "updated_at": "2026-09-21T14:05:27.631Z",
+      "updated_at": "2026-09-21T14:07:48.996Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -201807,10 +201807,10 @@
         "posted_at": null
       },
       "last_error": {
-        "stage": null,
-        "message": null,
-        "at": null,
-        "retry_count": 0
+        "stage": "generation",
+        "message": "Generation failed after 3 attempts. attempt 1: codex exec exited 0 but did not produce the expected output file. Codex reported: Validation failed: the supplied photograph shows a coach, not an NFL player as required by step 4. No graphic was generated or saved.\n\nRequested output: `C:\\Users\\jacks\\Desktop\\Claude\\nfl-news-hub\\social-output\\a94158fa-78b5-41a5-a76b-dbafe430a71a.png` | attempt 2: codex exec exited 0 but did not produce the expected output file. Codex reported: Validation failed: the supplied photograph shows a coach, not an identifiable NFL player as required by step 4. No graphic was generated.\n\nOutput not created: `C:\\Users\\jacks\\Desktop\\Claude\\nfl-news-hub\\social-output\\a94158fa-78b5-41a5-a76b-dbafe430a71a.png` | attempt 3: codex exec exited 0 but did not produce the expected output file. Codex reported: Validation failed: `source.jpg` shows a coach, not an identifiable NFL player required by step 4. No image generated; exited with code 1.\n\nRequested output was not written: `C:\\Users\\jacks\\Desktop\\Claude\\nfl-news-hub\\social-output\\a94158fa-78b5-41a5-a76b-dbafe430a71a.png`",
+        "at": "2026-09-21T14:07:48.996Z",
+        "retry_count": 1
       },
       "selection": {
         "destination": "feed",
