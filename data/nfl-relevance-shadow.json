@@ -25715,6 +25715,45 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-college-football-weekend-betting-recap-extremely-rough-week-bettors",
+      "source_name": "FOX Sports",
+      "headline": "NFL, CFB Weekend Betting Recap: 'It Was An Extremely Rough Week For Bettors'",
+      "published_at": "2026-09-21T15:57:09.000Z",
+      "observed_at": "2026-09-21T16:20:21.817Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lions-s-avonte-maddox-out-for-season-with-foot-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Lions S Avonte Maddox out for season with foot injury",
+      "published_at": "2026-09-21T16:09:39.000Z",
+      "observed_at": "2026-09-21T16:20:21.817Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "DET"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
