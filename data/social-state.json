@@ -208983,7 +208983,7 @@
       "status": "posting",
       "merged_into": null,
       "created_at": "2026-09-21T13:00:43.023Z",
-      "updated_at": "2026-09-21T13:22:50.614Z",
+      "updated_at": "2026-09-21T13:23:12.555Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -209091,7 +209091,7 @@
             }
           },
           "story": {
-            "status": "publish_attempted",
+            "status": "ambiguous",
             "provider": "buffer",
             "storage_key": "social-artwork-jpeg-story/43642363-07dc-4d3e-a266-aa087016d7e4.jpg",
             "jpeg_url": "https://pub-1705b19e159c4434ba94af4ae6799f97.r2.dev/social-artwork-jpeg-story/43642363-07dc-4d3e-a266-aa087016d7e4.jpg",
@@ -209102,7 +209102,26 @@
             "media_id": null,
             "permalink": null,
             "published_at": null,
-            "last_http_outcome": null,
+            "last_http_outcome": {
+              "data_is_null": false,
+              "errors": [],
+              "errors_count": 0,
+              "had_parsed_body": true,
+              "has_errors_array": false,
+              "http_status": 200,
+              "message": null,
+              "post": {
+                "dueAt": "2026-09-21T13:22:54.520Z",
+                "id": "6ab12faec22be0f3d1935218",
+                "sentAt": null,
+                "status": "error"
+              },
+              "top_level_keys": [
+                "data"
+              ],
+              "typename": "PostActionSuccess",
+              "category": "unrecognized_buffer_status:error"
+            },
             "last_reconciled_at": null,
             "buffer": {
               "post_id": null,
