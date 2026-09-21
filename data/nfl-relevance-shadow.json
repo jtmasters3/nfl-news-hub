@@ -25191,6 +25191,46 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/neil-reynolds-week-2-wrap-up-2026",
+      "source_name": "NFL.com",
+      "headline": "Neil Reynolds' Week 2 Wrap Up",
+      "published_at": "2026-09-20T11:57:00.000Z",
+      "observed_at": "2026-09-21T12:30:25.654Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/derwin-james-we-have-to-tell-the-truth-we-look-like-trash",
+      "source_name": "Pro Football Talk",
+      "headline": "Derwin James: We have to tell the truth, we look like trash",
+      "published_at": "2026-09-21T12:23:38.000Z",
+      "observed_at": "2026-09-21T12:30:25.654Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI",
+        "LV",
+        "LAC"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
