@@ -206710,7 +206710,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-09-21T05:10:34.131Z",
-      "updated_at": "2026-09-21T05:10:34.132Z",
+      "updated_at": "2026-09-21T16:00:32.515Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -206859,6 +206859,15 @@
         "message": null,
         "at": null,
         "retry_count": 0
+      },
+      "selection": {
+        "destination": "story",
+        "slot_id": "story:2026-09-21T12:00:00-04:00",
+        "selected_at": "2026-09-21T16:00:32.515Z",
+        "window_start": "2026-09-21T15:00:00.000Z",
+        "window_end": "2026-09-21T16:00:00.000Z",
+        "score": 4,
+        "reason": "final_fallback_recent_pool_importance_score_rank"
       }
     },
     "4921e0b3-2a54-4ae6-9dbc-0890f20e5903": {
@@ -210860,7 +210869,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-09-21T15:50:37.096Z",
-      "updated_at": "2026-09-21T15:50:37.097Z",
+      "updated_at": "2026-09-21T16:00:32.515Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -210877,6 +210886,166 @@
         ],
         "players": [],
         "description": "Heading into the season, the Vikings were a distant fourth in the betting odds to win the NFC North.",
+        "is_rumor": false
+      },
+      "artwork": {
+        "status": "not_created",
+        "image_url": null,
+        "created_at": null,
+        "provider": null
+      },
+      "validation": {
+        "status": "not_run",
+        "passed": null,
+        "issues": []
+      },
+      "story_artwork": {
+        "status": "not_created",
+        "image_url": null,
+        "storage_key": null,
+        "width": null,
+        "height": null,
+        "mime_type": null,
+        "size_bytes": null,
+        "provider": null,
+        "created_at": null,
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null
+        },
+        "validation": {
+          "status": "not_run",
+          "passed": null,
+          "issues": []
+        }
+      },
+      "approval": {
+        "status": "pending",
+        "decided_at": null,
+        "approved_at": null,
+        "rejected_at": null,
+        "rejection_reason": null,
+        "actor": null,
+        "request_id": null,
+        "decision_source": null
+      },
+      "caption": {
+        "status": "not_created",
+        "text": null,
+        "last_candidate_text": null,
+        "hashtags": [],
+        "attribution_line": null,
+        "source_url": null,
+        "provider": null,
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null
+        },
+        "claim_attempt_count": 0,
+        "created_at": null
+      },
+      "publishing": {
+        "status": "not_posted",
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null,
+          "retry_count": 0
+        },
+        "instagram": {
+          "feed": {
+            "status": "not_posted",
+            "provider": null,
+            "storage_key": null,
+            "jpeg_url": null,
+            "caption_used": null,
+            "container_id": null,
+            "container_created_at": null,
+            "publish_attempted_at": null,
+            "media_id": null,
+            "permalink": null,
+            "published_at": null,
+            "last_http_outcome": null,
+            "last_reconciled_at": null,
+            "buffer": {
+              "post_id": null,
+              "channel_id": null,
+              "status": null,
+              "due_at": null,
+              "sent_at": null
+            }
+          },
+          "story": {
+            "status": "not_posted",
+            "provider": null,
+            "storage_key": null,
+            "jpeg_url": null,
+            "caption_used": null,
+            "container_id": null,
+            "container_created_at": null,
+            "publish_attempted_at": null,
+            "media_id": null,
+            "permalink": null,
+            "published_at": null,
+            "last_http_outcome": null,
+            "last_reconciled_at": null,
+            "buffer": {
+              "post_id": null,
+              "channel_id": null,
+              "status": null,
+              "due_at": null,
+              "sent_at": null
+            }
+          }
+        },
+        "facebook": {
+          "status": "not_posted",
+          "post_id": null,
+          "post_url": null
+        },
+        "posted_at": null
+      },
+      "last_error": {
+        "stage": null,
+        "message": null,
+        "at": null,
+        "retry_count": 0
+      },
+      "selection": {
+        "destination": "feed",
+        "slot_id": "feed:2026-09-21T12:00:00-04:00",
+        "selected_at": "2026-09-21T16:00:32.515Z",
+        "window_start": "2026-09-21T14:00:00.000Z",
+        "window_end": "2026-09-21T16:00:00.000Z",
+        "score": 4,
+        "reason": "importance_score_rank"
+      }
+    },
+    "38edae2f-2012-4e21-a71c-be249720ad69": {
+      "story_id": "38edae2f-2012-4e21-a71c-be249720ad69",
+      "status": "new",
+      "merged_into": null,
+      "created_at": "2026-09-21T16:00:40.974Z",
+      "updated_at": "2026-09-21T16:00:40.974Z",
+      "content_package_version": 2,
+      "publishing_preferences": {
+        "instagram_feed": true,
+        "instagram_story": true
+      },
+      "source_story": {
+        "post_headline": null,
+        "base_image_url": null,
+        "source_name": null,
+        "source_url": null,
+        "category": null,
+        "teams": [],
+        "players": [],
+        "description": null,
         "is_rumor": false
       },
       "artwork": {
@@ -213044,6 +213213,24 @@
       "status": "selected",
       "story_id": "4921e0b3-2a54-4ae6-9dbc-0890f20e5903",
       "processed_at": "2026-09-21T15:00:28.329Z"
+    },
+    "feed:2026-09-21T12:00:00-04:00": {
+      "destination": "feed",
+      "slot_time": "2026-09-21T16:00:00.000Z",
+      "window_start": "2026-09-21T14:00:00.000Z",
+      "window_end": "2026-09-21T16:00:00.000Z",
+      "status": "selected",
+      "story_id": "31643d6d-f3f1-49e8-a152-117c5a9a73d6",
+      "processed_at": "2026-09-21T16:00:32.515Z"
+    },
+    "story:2026-09-21T12:00:00-04:00": {
+      "destination": "story",
+      "slot_time": "2026-09-21T16:00:00.000Z",
+      "window_start": "2026-09-21T15:00:00.000Z",
+      "window_end": "2026-09-21T16:00:00.000Z",
+      "status": "selected",
+      "story_id": "e68a1748-40db-471e-be77-f161177a09d8",
+      "processed_at": "2026-09-21T16:00:32.515Z"
     }
   }
 }
