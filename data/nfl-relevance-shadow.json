@@ -26682,6 +26682,52 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/rams-wr-puka-nacua-hip-inactive-monday-giants",
+      "source_name": "NFL.com",
+      "headline": "Rams WR Puka Nacua (hip) inactive for Monday's game vs. Giants",
+      "published_at": "2026-09-21T10:44:44.000Z",
+      "observed_at": "2026-09-21T22:50:22.776Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC",
+        "LAR",
+        "NYG"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/te-zach-ertz-reuniting-with-eagles-signing-to-philadelphia-s-practice-squad",
+      "source_name": "NFL.com",
+      "headline": "TE Zach Ertz reuniting with Eagles, signing to Philadelphia's practice squad",
+      "published_at": "2026-09-21T10:44:28.000Z",
+      "observed_at": "2026-09-21T22:50:22.776Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
