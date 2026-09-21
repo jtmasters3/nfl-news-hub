@@ -207623,10 +207623,10 @@
     },
     "68555a02-23dd-4e52-82e7-4d496fd98c4b": {
       "story_id": "68555a02-23dd-4e52-82e7-4d496fd98c4b",
-      "status": "artwork_requested",
+      "status": "failed",
       "merged_into": null,
       "created_at": "2026-09-21T11:20:41.787Z",
-      "updated_at": "2026-09-21T14:08:12.784Z",
+      "updated_at": "2026-09-21T14:10:18.774Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -207771,10 +207771,10 @@
         "posted_at": null
       },
       "last_error": {
-        "stage": null,
-        "message": null,
-        "at": null,
-        "retry_count": 0
+        "stage": "generation",
+        "message": "Generation failed after 3 attempts. attempt 1: codex exec exited 0 but did not produce the expected output file. Codex reported: Validation failed: the supplied photograph shows a coach at a press conference, not an NFL player as required by step 4. No image was generated.\n\nOutput not created: `C:\\Users\\jacks\\Desktop\\Claude\\nfl-news-hub\\social-output\\story\\68555a02-23dd-4e52-82e7-4d496fd98c4b.png` | attempt 2: codex exec exited 0 but did not produce the expected output file. Codex reported: Validation failed: the supplied photograph shows a coach at a press conference, not an NFL player as required by step 4. No image was generated or saved.\n\nRequested output: `C:\\Users\\jacks\\Desktop\\Claude\\nfl-news-hub\\social-output\\story\\68555a02-23dd-4e52-82e7-4d496fd98c4b.png` | attempt 3: codex exec exited 0 but did not produce the expected output file. Codex reported: Validation failed: the supplied photograph shows coach Jim Harbaugh, not an NFL player as required by step 4. No image was generated or saved.\n\nRequested output: `C:\\Users\\jacks\\Desktop\\Claude\\nfl-news-hub\\social-output\\story\\68555a02-23dd-4e52-82e7-4d496fd98c4b.png`",
+        "at": "2026-09-21T14:10:18.773Z",
+        "retry_count": 1
       },
       "selection": {
         "destination": "story",
