@@ -28978,6 +28978,45 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/mahomes-mountain-week-3-josh-allen-takes-over-top-spot",
+      "source_name": "FOX Sports",
+      "headline": "Mahomes Mountain Week 3: Josh Allen Takes Over The Top Spot",
+      "published_at": "2026-09-22T23:15:13.000Z",
+      "observed_at": "2026-09-22T23:30:24.591Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/herd-hierarchy-bills-nfls-best-team-do-seahawks-remain-no-1",
+      "source_name": "FOX Sports",
+      "headline": "Herd Hierarchy: Are The Bills The NFL's Best Team, Or Do Seahawks Remain No. 1?",
+      "published_at": "2026-09-22T23:08:20.000Z",
+      "observed_at": "2026-09-22T23:30:24.591Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
