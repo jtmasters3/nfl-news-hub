@@ -218705,7 +218705,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-09-22T03:10:35.914Z",
-      "updated_at": "2026-09-22T03:10:35.916Z",
+      "updated_at": "2026-09-22T12:00:28.113Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -218849,6 +218849,15 @@
         "message": null,
         "at": null,
         "retry_count": 0
+      },
+      "selection": {
+        "destination": "feed",
+        "slot_id": "feed:2026-09-22T08:00:00-04:00",
+        "selected_at": "2026-09-22T12:00:28.113Z",
+        "window_start": "2026-09-22T02:00:00.000Z",
+        "window_end": "2026-09-22T12:00:00.000Z",
+        "score": 6,
+        "reason": "importance_score_rank"
       }
     },
     "e27cde66-8a07-43b7-9fac-187072d03384": {
@@ -219158,24 +219167,26 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-09-22T03:20:31.168Z",
-      "updated_at": "2026-09-22T03:20:31.170Z",
+      "updated_at": "2026-09-22T12:00:38.346Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
         "instagram_story": true
       },
       "source_story": {
-        "post_headline": "DAVANTE ADAMS DOMINATES THE GIANTS: 3 TAKEAWAYS FROM THE RAMS' WIN",
+        "post_headline": "MATTHEW STAFFORD, DAVANTE ADAMS DOMINATE GIANTS IN RAMS' BLOWOUT WIN",
         "base_image_url": "https://a57.foxsports.com/statics.foxsports.com/www.foxsports.com/content/uploads/2026/09/1294/728/f73f4bd1-nfl-16x9-1.jpg?ve=1&tl=1",
         "source_name": "FOX Sports",
         "source_url": "https://www.foxsports.com/stories/nfl/giants-lose-game-qb-3-takeaways-from-rams-win",
         "category": "league_news",
         "teams": [
           "Los Angeles Rams",
-          "New York Giants"
+          "New York Giants",
+          "Los Angeles Chargers"
         ],
         "players": [
-          "Davante Adams"
+          "Davante Adams",
+          "Matthew Stafford"
         ],
         "description": "Davante Adams scored two touchdowns and powered the Rams offense in a win over the Giants on Monday night.",
         "is_rumor": false
@@ -222839,6 +222850,15 @@
       "status": "selected",
       "story_id": "d462318b-3534-4560-a97f-0a6d17b87bf9",
       "processed_at": "2026-09-22T02:00:28.825Z"
+    },
+    "feed:2026-09-22T08:00:00-04:00": {
+      "destination": "feed",
+      "slot_time": "2026-09-22T12:00:00.000Z",
+      "window_start": "2026-09-22T02:00:00.000Z",
+      "window_end": "2026-09-22T12:00:00.000Z",
+      "status": "selected",
+      "story_id": "5e84f748-1b2d-4a77-a811-ed2637b3d30b",
+      "processed_at": "2026-09-22T12:00:28.113Z"
     }
   }
 }
