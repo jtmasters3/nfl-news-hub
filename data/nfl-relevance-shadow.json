@@ -27303,6 +27303,45 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-week-2-all-stars-clear-early-mvp-frontrunner-has-emerged",
+      "source_name": "FOX Sports",
+      "headline": "NFL Week 2 All-Stars: A Clear Early MVP Frontrunner Has Emerged",
+      "published_at": "2026-09-22T03:25:37.000Z",
+      "observed_at": "2026-09-22T03:30:22.106Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/monday-night-football-rams-roll-giants-28-6-after-jaxson-darts-departure",
+      "source_name": "Pro Football Talk",
+      "headline": "Monday Night Football: Rams roll Giants 28-6 after Jaxson Dart's departure",
+      "published_at": "2026-09-22T03:24:14.000Z",
+      "observed_at": "2026-09-22T03:30:22.106Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR",
+        "NYG"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
