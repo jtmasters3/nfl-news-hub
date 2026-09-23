@@ -30906,6 +30906,45 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-week-3-injury-report-player-statuses-for-all-16-games",
+      "source_name": "NFL.com",
+      "headline": "NFL Week 3 injury report: Player statuses for all 16 games",
+      "published_at": "2026-09-23T08:03:26.000Z",
+      "observed_at": "2026-09-23T20:10:29.835Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/packers-rule-out-lg-aaron-banks-list-dt-javon-hargrave-as-questionable-for-thursday-night",
+      "source_name": "Pro Football Talk",
+      "headline": "Packers rule out LG Aaron Banks, list DT Javon Hargrave as questionable for Thursday night",
+      "published_at": "2026-09-23T20:03:51.000Z",
+      "observed_at": "2026-09-23T20:10:29.835Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "GB"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
