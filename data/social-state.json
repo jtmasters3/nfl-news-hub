@@ -199967,21 +199967,22 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-09-20T22:10:39.032Z",
-      "updated_at": "2026-09-21T19:30:36.153Z",
+      "updated_at": "2026-09-23T17:00:48.535Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
         "instagram_story": true
       },
       "source_story": {
-        "post_headline": "DAN QUINN: COMMANDERS ARE BUMMED FOR JAYDEN DANIELS",
+        "post_headline": "DAN QUINN: NO UPDATE ON JAYDEN DANIELS",
         "base_image_url": "https://a57.foxsports.com/statics.foxsports.com/www.foxsports.com/content/uploads/2026/09/1294/728/jd5.jpg?ve=1&tl=1",
         "source_name": "FOX Sports",
         "source_url": "https://www.foxsports.com/stories/nfl/commanders-qb-jayden-daniels-elbow-injury-update-cowboys",
         "category": "injury",
         "teams": [
           "Dallas Cowboys",
-          "Washington Commanders"
+          "Washington Commanders",
+          "Seattle Seahawks"
         ],
         "players": [
           "Jayden Daniels",
@@ -232341,7 +232342,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-09-23T14:10:48.130Z",
-      "updated_at": "2026-09-23T16:00:34.280Z",
+      "updated_at": "2026-09-23T17:00:35.331Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -232491,13 +232492,13 @@
         "retry_count": 0
       },
       "selection": {
-        "destination": "feed",
-        "slot_id": "feed:2026-09-23T12:00:00-04:00",
-        "selected_at": "2026-09-23T16:00:34.280Z",
-        "window_start": "2026-09-23T14:00:00.000Z",
-        "window_end": "2026-09-23T16:00:00.000Z",
+        "destination": "story",
+        "slot_id": "story:2026-09-23T13:00:00-04:00",
+        "selected_at": "2026-09-23T17:00:35.331Z",
+        "window_start": "2026-09-23T16:00:00.000Z",
+        "window_end": "2026-09-23T17:00:00.000Z",
         "score": 8,
-        "reason": "importance_score_rank"
+        "reason": "fallback_recent_pool_importance_score_rank"
       }
     },
     "7b84b1cf-7d8f-491d-89a4-a5fe3a64fbb5": {
@@ -237942,6 +237943,15 @@
       "status": "selected",
       "story_id": "5e5471fc-fb65-4c0a-9ab1-30fd9a0f9287",
       "processed_at": "2026-09-23T16:00:34.280Z"
+    },
+    "story:2026-09-23T13:00:00-04:00": {
+      "destination": "story",
+      "slot_time": "2026-09-23T17:00:00.000Z",
+      "window_start": "2026-09-23T16:00:00.000Z",
+      "window_end": "2026-09-23T17:00:00.000Z",
+      "status": "selected",
+      "story_id": "c4faf7c0-7703-4a44-b29f-1d50280fc7b0",
+      "processed_at": "2026-09-23T17:00:35.331Z"
     }
   }
 }
