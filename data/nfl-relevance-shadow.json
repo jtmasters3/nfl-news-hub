@@ -30245,6 +30245,84 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-qb-rankings-index-week-3-2026-nfl-season",
+      "source_name": "NFL.com",
+      "headline": "NFL QB rankings, Week 3: Patrick Mahomes, Dak Prescott, Matthew Stafford heating up",
+      "published_at": "2026-09-23T05:29:00.000Z",
+      "observed_at": "2026-09-23T17:40:28.136Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ben-johnson-at-this-point-were-unsure-of-who-will-start-at-qb-on-monday-night",
+      "source_name": "Pro Football Talk",
+      "headline": "Ben Johnson: At this point, we're unsure of who will start at QB on Monday night",
+      "published_at": "2026-09-23T17:31:54.000Z",
+      "observed_at": "2026-09-23T17:40:28.136Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cardinals-put-cb-will-johnson-on-injured-reserve",
+      "source_name": "Pro Football Talk",
+      "headline": "Cardinals put CB Will Johnson on injured reserve",
+      "published_at": "2026-09-23T17:31:41.000Z",
+      "observed_at": "2026-09-23T17:40:28.136Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/senators-cory-booker-chris-murphy-propose-5-million-cap-on-college-coaching-salaries",
+      "source_name": "Pro Football Talk",
+      "headline": "Senators Cory Booker, Chris Murphy propose $5 million cap on college coaching salaries",
+      "published_at": "2026-09-23T17:29:04.000Z",
+      "observed_at": "2026-09-23T17:40:28.136Z",
+      "decision": "reject",
+      "classification": "college_football",
+      "confidence": "medium",
+      "detected_teams": [],
+      "detected_category": "coaching",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [
+        "college_football_phrase"
+      ],
+      "reason_codes": [
+        "college_marker_no_nfl_evidence"
+      ]
     }
   ]
 }
