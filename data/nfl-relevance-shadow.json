@@ -30585,6 +30585,69 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/college-football/favorite-dogs-back-ole-miss-over-florida-jets-over-lions",
+      "source_name": "FOX Sports",
+      "headline": "Favorite 'Dogs: Back Ole Miss Over Florida; Jets Over Lions",
+      "published_at": "2026-09-23T18:28:48.000Z",
+      "observed_at": "2026-09-23T18:40:21.859Z",
+      "decision": "keep",
+      "classification": "nfl_with_college_context",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "NYJ"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [
+        "conference_sec"
+      ],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lions-sign-c-seth-mclaughlin-to-53-man-roster",
+      "source_name": "Pro Football Talk",
+      "headline": "Lions sign C Seth McLaughlin to 53-man roster",
+      "published_at": "2026-09-23T18:35:38.000Z",
+      "observed_at": "2026-09-23T18:40:21.859Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/english-soccer-star-harry-kane-says-he-still-hopes-to-kick-in-the-nfl-some-day",
+      "source_name": "Pro Football Talk",
+      "headline": "English soccer star Harry Kane says he still hopes to kick in the NFL some day",
+      "published_at": "2026-09-23T18:33:34.000Z",
+      "observed_at": "2026-09-23T18:40:21.859Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
     }
   ]
 }
