@@ -32442,6 +32442,45 @@
       "reason_codes": [
         "no_signal_fail_open"
       ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-viewership-is-down-four-percent-through-two-weeks-but-its-still-the-third-highest-on-record",
+      "source_name": "Pro Football Talk",
+      "headline": "NFL viewership is down four percent through two weeks (but it's still the third highest on record)",
+      "published_at": "2026-09-24T17:03:03.000Z",
+      "observed_at": "2026-09-24T17:10:20.856Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brian-schottenheimer-confident-cowboys-will-arrive-in-brazil-rested-and-ready-to-practice",
+      "source_name": "Pro Football Talk",
+      "headline": "Brian Schottenheimer confident Cowboys will arrive in Brazil rested and ready to practice",
+      "published_at": "2026-09-24T17:00:07.000Z",
+      "observed_at": "2026-09-24T17:10:20.856Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "DAL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
