@@ -31886,6 +31886,132 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/what-the-viral-video-missed-about-jayden-daniels-injury-and-his-commanders-teammates-reaction",
+      "source_name": "NFL.com",
+      "headline": "What the viral video missed about Jayden Daniels' injury and his Commanders teammates' reaction",
+      "published_at": "2026-09-24T12:31:05.000Z",
+      "observed_at": "2026-09-24T12:20:23.973Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "WAS"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/matthew-golden-surging-o-line-concerns-grow-for-packers-ahead-of-game-vs-falcons",
+      "source_name": "NFL.com",
+      "headline": "Matthew Golden surging, O-line concerns grow for Packers ahead of game vs. Falcons",
+      "published_at": "2026-09-24T11:16:05.000Z",
+      "observed_at": "2026-09-24T12:20:23.973Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "GB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/can-falcons-finally-get-te-kyle-pitts-going-on-thursday-night-football-vs-packers",
+      "source_name": "NFL.com",
+      "headline": "Can Falcons finally get TE Kyle Pitts going on 'Thursday Night Football' vs. Packers?",
+      "published_at": "2026-09-24T10:16:05.000Z",
+      "observed_at": "2026-09-24T12:20:23.973Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "GB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/seahawks-mike-macdonald-broncos-sean-payton-squash-beef-after-cold-war-video",
+      "source_name": "NFL.com",
+      "headline": "Seahawks' Mike Macdonald, Broncos' Sean Payton squash beef after 'Cold War' video",
+      "published_at": "2026-09-23T08:01:05.000Z",
+      "observed_at": "2026-09-24T12:20:23.973Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-dfs-week-3-best-picks-lineup-advice-value-plays",
+      "source_name": "FOX Sports",
+      "headline": "NFL DFS Week 3: Best Picks, Lineup Advice and Value Plays",
+      "published_at": "2026-09-24T12:00:36.000Z",
+      "observed_at": "2026-09-24T12:20:23.973Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "fantasy",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/trinidad-chambliss-best-qb-college-football-whats-his-nfl-draft-ceiling",
+      "source_name": "FOX Sports",
+      "headline": "Trinidad Chambliss Is The Best QB In College Football. What's His NFL Draft Ceiling?",
+      "published_at": "2026-09-24T12:00:07.000Z",
+      "observed_at": "2026-09-24T12:20:23.973Z",
+      "decision": "keep",
+      "classification": "nfl_with_college_context",
+      "confidence": "high",
+      "detected_teams": [],
+      "detected_category": "draft",
+      "nfl_evidence": [
+        "phrase_nfl_draft",
+        "nfl_preserving_category:draft"
+      ],
+      "non_nfl_evidence": [
+        "college_football_phrase"
+      ],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
