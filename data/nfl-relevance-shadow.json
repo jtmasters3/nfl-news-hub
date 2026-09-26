@@ -35340,6 +35340,29 @@
       "reason_codes": [
         "no_signal_fail_open"
       ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/betting/will-hill-parlay-nfl-college-football-ravens-usc-michigan-oklahoma-iowa",
+      "source_name": "FOX Sports",
+      "headline": "Will Hill's Parlay Of The Week: Ravens In Brazil, Unders In College Football Slate",
+      "published_at": "2026-09-26T00:44:42.000Z",
+      "observed_at": "2026-09-26T01:10:18.236Z",
+      "decision": "keep",
+      "classification": "nfl_with_college_context",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [
+        "college_football_phrase"
+      ],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
