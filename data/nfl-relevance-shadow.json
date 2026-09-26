@@ -35610,6 +35610,44 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/stories-of-the-dan-campbell-aaron-glenn-friendship-three-decades-in-the-making",
+      "source_name": "NFL.com",
+      "headline": "Stories of the Dan Campbell-Aaron Glenn friendship, three decades in the making",
+      "published_at": "2026-09-26T10:16:05.000Z",
+      "observed_at": "2026-09-26T15:40:19.159Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/can-49ers-brock-purdy-prevail-over-team-s-toughest-opponent-the-injured-list",
+      "source_name": "NFL.com",
+      "headline": "Can 49ers' Brock Purdy prevail over team's toughest opponent, the injured list?",
+      "published_at": "2026-09-26T01:16:06.000Z",
+      "observed_at": "2026-09-26T15:40:19.159Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
