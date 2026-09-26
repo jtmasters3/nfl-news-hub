@@ -35669,6 +35669,42 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-saturday-sept-26",
+      "source_name": "NFL.com",
+      "headline": "NFL news roundup: Latest league updates from Saturday, Sept. 26",
+      "published_at": "2026-09-26T04:37:17.000Z",
+      "observed_at": "2026-09-26T16:40:23.266Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nflpa-players-werent-told-about-sudden-decision-to-fine-drinking-celebrations",
+      "source_name": "Pro Football Talk",
+      "headline": "NFLPA: Players weren't told about sudden decision to fine drinking celebrations",
+      "published_at": "2026-09-26T16:33:54.000Z",
+      "observed_at": "2026-09-26T16:40:23.266Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "phrase_nflpa"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
