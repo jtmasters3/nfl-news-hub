@@ -38179,6 +38179,66 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/2026-nfl-season-week-3-what-we-learned-from-sunday-s-games",
+      "source_name": "NFL.com",
+      "headline": "2026 NFL season, Week 3: What We Learned from Sunday's games",
+      "published_at": "2026-09-27T08:48:42.000Z",
+      "observed_at": "2026-09-27T21:00:29.136Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/bills-stay-undefeated-while-chargers-look-defeated-3-takeaways-from-buffalos-win",
+      "source_name": "FOX Sports",
+      "headline": "Bills Stay Undefeated While Chargers Look Defeated: 3 Takeaways From Buffalo's Win",
+      "published_at": "2026-09-27T20:35:36.000Z",
+      "observed_at": "2026-09-27T21:00:29.136Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "LAC"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/justin-jefferson-is-questionable-to-return-with-an-ankle-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Justin Jefferson is questionable to return with an ankle injury",
+      "published_at": "2026-09-27T20:47:45.000Z",
+      "observed_at": "2026-09-27T21:00:29.136Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
