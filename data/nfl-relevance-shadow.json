@@ -38421,6 +38421,44 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/most-disappointing-team-in-the-nfl-second-best-afc-team-our-experts-week-3-takeaways",
+      "source_name": "NFL.com",
+      "headline": "Most disappointing team in the NFL? Second-best AFC team? Our experts' Week 3 takeaways",
+      "published_at": "2026-09-27T09:31:08.000Z",
+      "observed_at": "2026-09-27T21:50:22.181Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kyler-murray-jordan-addison-put-vikings-up-17-10-at-halftime",
+      "source_name": "Pro Football Talk",
+      "headline": "Kyler Murray, Jordan Addison put Vikings up 17-10 at halftime",
+      "published_at": "2026-09-27T21:38:05.000Z",
+      "observed_at": "2026-09-27T21:50:22.181Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN"
+      ],
+      "detected_category": "live_game_state",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
