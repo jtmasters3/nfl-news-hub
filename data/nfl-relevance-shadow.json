@@ -39356,6 +39356,47 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-week-3-defining-stats-records-fall-stars-make-history",
+      "source_name": "FOX Sports",
+      "headline": "NFL Week 3 Defining Stats: Milestones Mount, Unusual Records Fall",
+      "published_at": "2026-09-28T04:10:17.000Z",
+      "observed_at": "2026-09-28T04:10:29.694Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-fallout-week-3-patriots-battling-more-than-super-bowl-hangover",
+      "source_name": "FOX Sports",
+      "headline": "NFL Fallout Week 3: The Patriots Are Battling More Than A Super Bowl Hangover",
+      "published_at": "2026-09-28T04:05:43.000Z",
+      "observed_at": "2026-09-28T04:10:29.694Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "HOU",
+        "LV",
+        "MIN",
+        "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
