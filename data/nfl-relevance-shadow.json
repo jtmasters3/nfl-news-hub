@@ -40570,6 +40570,51 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/why-the-falcons-have-the-most-surprising-pass-rush-in-the-nfl-four-rushing-as-one",
+      "source_name": "NFL.com",
+      "headline": "Why the Falcons have the most surprising pass rush in the NFL: 'Four rushing as one'",
+      "published_at": "2026-09-28T04:46:06.000Z",
+      "observed_at": "2026-09-28T19:00:35.884Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sec-admits-officiating-error-let-tennessee-use-illegal-onside-kick-vs-texas",
+      "source_name": "Pro Football Talk",
+      "headline": "SEC admits officiating error let Tennessee use illegal onside kick vs. Texas",
+      "published_at": "2026-09-28T18:53:56.000Z",
+      "observed_at": "2026-09-28T19:00:35.884Z",
+      "decision": "keep",
+      "classification": "nfl_with_college_context",
+      "confidence": "high",
+      "detected_teams": [
+        "TEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [
+        "college_football_phrase",
+        "conference_sec"
+      ],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
