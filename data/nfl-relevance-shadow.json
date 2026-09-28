@@ -40108,6 +40108,44 @@
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-cfb-weekend-betting-recap-touchdowns-galore-benefit-bettors",
+      "source_name": "FOX Sports",
+      "headline": "NFL, CFB Weekend Betting Recap: Touchdowns Galore Benefit Bettors",
+      "published_at": "2026-09-28T15:03:10.000Z",
+      "observed_at": "2026-09-28T15:20:22.052Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-jalen-coker-questionable-for-week-4-with-a-quad-strain",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Jalen Coker questionable for Week 4 with a quad strain",
+      "published_at": "2026-09-28T15:14:56.000Z",
+      "observed_at": "2026-09-28T15:20:22.052Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
     }
   ]
 }
