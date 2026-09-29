@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/darkside-seahawks-defense-defensive-coordinator-aden-durde",
-      "source_name": "FOX Sports",
-      "headline": "The Darkside 2.0: How Seahawks DC Aden Durde’s Guides NFL’s Best Defense",
-      "published_at": "2026-09-09T15:10:17.000Z",
-      "observed_at": "2026-09-09T15:30:27.213Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/lions-jahmyr-gibbs-fantasy-football-draft",
       "source_name": "FOX Sports",
       "headline": "Lions Star Jahmyr Gibbs: 'For Sure' Take Me With No. 1 Pick In Fantasy Football",
@@ -42072,6 +42051,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/t-j-edwards-got-nothing-from-eavesdropping-on-jalen-hurtss-calls-at-the-line",
+      "source_name": "Pro Football Talk",
+      "headline": "T.J. Edwards got nothing from eavesdropping on Eagles' huddle",
+      "published_at": "2026-09-29T14:50:01.000Z",
+      "observed_at": "2026-09-29T15:00:30.436Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "PHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
