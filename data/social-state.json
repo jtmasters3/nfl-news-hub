@@ -298592,7 +298592,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-09-29T15:10:33.682Z",
-      "updated_at": "2026-09-29T22:00:29.267Z",
+      "updated_at": "2026-09-29T23:00:28.048Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -298738,11 +298738,11 @@
         "retry_count": 0
       },
       "selection": {
-        "destination": "feed",
-        "slot_id": "feed:2026-09-29T18:00:00-04:00",
-        "selected_at": "2026-09-29T22:00:29.267Z",
-        "window_start": "2026-09-29T20:00:00.000Z",
-        "window_end": "2026-09-29T22:00:00.000Z",
+        "destination": "story",
+        "slot_id": "story:2026-09-29T19:00:00-04:00",
+        "selected_at": "2026-09-29T23:00:28.048Z",
+        "window_start": "2026-09-29T22:00:00.000Z",
+        "window_end": "2026-09-29T23:00:00.000Z",
         "score": 4,
         "reason": "final_fallback_recent_pool_importance_score_rank"
       }
@@ -307017,6 +307017,15 @@
       "status": "selected",
       "story_id": "dc8048e4-ddec-4073-811a-16a91f791819",
       "processed_at": "2026-09-29T22:00:29.267Z"
+    },
+    "story:2026-09-29T19:00:00-04:00": {
+      "destination": "story",
+      "slot_time": "2026-09-29T23:00:00.000Z",
+      "window_start": "2026-09-29T22:00:00.000Z",
+      "window_end": "2026-09-29T23:00:00.000Z",
+      "status": "selected",
+      "story_id": "c73522a5-31e5-430c-92d3-986bdfeff9e1",
+      "processed_at": "2026-09-29T23:00:28.048Z"
     }
   }
 }
