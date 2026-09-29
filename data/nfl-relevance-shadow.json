@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/unc-wont-have-recruits-at-home-opener-due-to-2025-infraction",
-      "source_name": "Pro Football Talk",
-      "headline": "UNC won't have recruits at home opener, due to 2025 infraction",
-      "published_at": "2026-09-09T20:18:10.000Z",
-      "observed_at": "2026-09-09T20:30:25.169Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/david-tepper-still-feels-bryce-young-can-win-multiple-super-bowls-in-the-right-situation",
       "source_name": "Pro Football Talk",
       "headline": "David Tepper still feels Bryce Young can win multiple Super Bowls, in the right situation",
@@ -42073,6 +42052,29 @@
       "detected_teams": [
         "HOU",
         "LV"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bucs-sign-qb-brett-rypien-to-the-practice-squad",
+      "source_name": "Pro Football Talk",
+      "headline": "Bucs sign QB Brett Rypien to the practice squad",
+      "published_at": "2026-09-29T22:58:51.000Z",
+      "observed_at": "2026-09-29T23:10:20.288Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "TB"
       ],
       "detected_category": "roster_move",
       "nfl_evidence": [
