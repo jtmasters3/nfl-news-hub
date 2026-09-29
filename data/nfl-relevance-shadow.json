@@ -2,40 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/these-10-nfl-players-are-poised-to-make-the-biggest-impact-on-their-new-teams-in-2026",
-      "source_name": "NFL.com",
-      "headline": "These 10 NFL players are poised to make the biggest impact on their new teams in 2026",
-      "published_at": "2026-09-09T09:46:06.000Z",
-      "observed_at": "2026-09-09T14:50:45.835Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-fantasy-2026-start-em-sit-em-kickers-for-week-1",
-      "source_name": "NFL.com",
-      "headline": "NFL Fantasy 2026 Start 'Em, Sit 'Em: Kickers for Week 1",
-      "published_at": "2026-09-09T02:44:00.000Z",
-      "observed_at": "2026-09-09T14:50:45.835Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "fantasy",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-fantasy-2026-start-em-sit-em-running-backs-for-week-1",
       "source_name": "NFL.com",
       "headline": "NFL Fantasy 2026 Start 'Em, Sit 'Em: Running backs for Week 1",
@@ -42057,6 +42023,48 @@
       "confidence": "high",
       "detected_teams": [
         "MIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/seahawks-rb-jadarian-price-s-fumbling-problem-isn-t-new-but-will-it-keep-him-off-the-field",
+      "source_name": "NFL.com",
+      "headline": "Seahawks RB Jadarian Price's fumbling problem isn't new, but will it keep him off the field?",
+      "published_at": "2026-09-29T12:16:05.000Z",
+      "observed_at": "2026-09-29T14:20:22.888Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/andy-reid-ill-let-you-know-when-josh-simmons-is-coming-back",
+      "source_name": "Pro Football Talk",
+      "headline": "Andy Reid: I'll let you know when Josh Simmons is coming back",
+      "published_at": "2026-09-29T14:09:51.000Z",
+      "observed_at": "2026-09-29T14:20:22.888Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
