@@ -2,48 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/panthers-owner-david-tepper-remains-a-believer-in-bryce-young",
-      "source_name": "NFL.com",
-      "headline": "Panthers owner David Tepper remains a believer in Bryce Young",
-      "published_at": "2026-09-09T08:01:05.000Z",
-      "observed_at": "2026-09-09T20:10:26.354Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-brock-bowers-to-miss-a-game-or-two-after-meniscus-trim",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Brock Bowers to miss \"a game or two\" after meniscus trim",
-      "published_at": "2026-09-09T20:04:40.000Z",
-      "observed_at": "2026-09-09T20:10:26.354Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/john-harbaugh-on-darius-slaytons-release-we-do-whats-in-the-best-interest-of-the-team",
       "source_name": "Pro Football Talk",
       "headline": "John Harbaugh on Darius Slayton's release: We do what's in the best interest of the team",
@@ -42080,6 +42038,50 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brian-schottenheimer-i-hurt-the-team-in-loss-to-the-ravens",
+      "source_name": "Pro Football Talk",
+      "headline": "Brian Schottenheimer: I hurt the team in loss to the Ravens",
+      "published_at": "2026-09-29T21:44:20.000Z",
+      "observed_at": "2026-09-29T21:50:29.769Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "DAL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-sign-lb-kyle-van-noy-to-active-roster-place-te-josh-oliver-on-ir",
+      "source_name": "Pro Football Talk",
+      "headline": "Vikings sign LB Kyle Van Noy to active roster, place TE Josh Oliver on IR",
+      "published_at": "2026-09-29T21:37:10.000Z",
+      "observed_at": "2026-09-29T21:50:29.769Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
