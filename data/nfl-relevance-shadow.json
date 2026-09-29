@@ -2,68 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/former-titans-scout-blaise-taylor-receives-consecutive-life-sentences",
-      "source_name": "Pro Football Talk",
-      "headline": "Former Titans scout Blaise Taylor receives consecutive life sentences",
-      "published_at": "2026-09-09T19:04:43.000Z",
-      "observed_at": "2026-09-09T19:10:25.636Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "TEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/baker-mayfield-didnt-know-contract-talks-were-back-on-until-monday-night",
-      "source_name": "Pro Football Talk",
-      "headline": "Baker Mayfield didn't know contract talks were back on until Monday night",
-      "published_at": "2026-09-09T19:17:55.000Z",
-      "observed_at": "2026-09-09T19:20:20.909Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "TB"
-      ],
-      "detected_category": "contract",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:contract"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lsu-president-confirms-program-will-not-roster-daequan-wright-zxavian-harris",
-      "source_name": "Pro Football Talk",
-      "headline": "LSU president confirms program will not roster Dae’Quan Wright, Zxavian Harris",
-      "published_at": "2026-09-09T19:27:00.000Z",
-      "observed_at": "2026-09-09T19:30:27.397Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "free_agency",
-      "nfl_evidence": [
-        "nfl_preserving_category:free_agency"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/will-hill-favorite-underdogs-michigan-oklahoma-jaguars-browns",
       "source_name": "FOX Sports",
       "headline": "Favorite 'Dogs: Back Michigan Bounce Back; Browns Cover In Week 1",
@@ -42073,6 +42011,72 @@
         "LAR"
       ],
       "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dolphins-sign-ilb-shaka-heyward-off-bengals-practice-squad",
+      "source_name": "Pro Football Talk",
+      "headline": "Dolphins sign ILB Shaka Heyward off Bengals' practice squad",
+      "published_at": "2026-09-29T20:26:52.000Z",
+      "observed_at": "2026-09-29T20:30:23.650Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN",
+        "MIA"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/commanders-announce-austin-ekeler-signing-placement-of-leo-chenal-on-ir",
+      "source_name": "Pro Football Talk",
+      "headline": "Commanders announce Austin Ekeler signing, placement of Leo Chenal on IR",
+      "published_at": "2026-09-29T20:20:47.000Z",
+      "observed_at": "2026-09-29T20:30:23.650Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "WAS"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patriots-place-ol-greg-van-roten-on-injured-reserve",
+      "source_name": "Pro Football Talk",
+      "headline": "Patriots place OL Greg Van Roten on injured reserve",
+      "published_at": "2026-09-29T20:17:41.000Z",
+      "observed_at": "2026-09-29T20:30:23.650Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
