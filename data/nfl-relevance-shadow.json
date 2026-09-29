@@ -2,61 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/are-the-patriots-run-game-and-pass-rush-good-enough-to-compete-with-the-nfl-s-top-teams",
-      "source_name": "NFL.com",
-      "headline": "Are the Patriots' run game and pass rush good enough to compete with the NFL's top teams?",
-      "published_at": "2026-09-09T10:16:07.000Z",
-      "observed_at": "2026-09-09T14:40:26.059Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/pfts-week-1-2026-nfl-picks",
-      "source_name": "Pro Football Talk",
-      "headline": "PFT's Week 1 2026 NFL picks",
-      "published_at": "2026-09-09T14:27:40.000Z",
-      "observed_at": "2026-09-09T14:40:26.059Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-records-and-milestones-on-the-line-in-2026-travis-kelce-on-the-verge-of-history",
-      "source_name": "NFL.com",
-      "headline": "NFL records and milestones on the line in 2026: Travis Kelce on the verge of history",
-      "published_at": "2026-09-09T10:16:07.000Z",
-      "observed_at": "2026-09-09T14:50:45.835Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/these-10-nfl-players-are-poised-to-make-the-biggest-impact-on-their-new-teams-in-2026",
       "source_name": "NFL.com",
       "headline": "These 10 NFL players are poised to make the biggest impact on their new teams in 2026",
@@ -42050,6 +41995,70 @@
         "NO"
       ],
       "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/root-of-eagles-problems-revealed-by-decision-to-punt-in-true-team-loss-to-bears",
+      "source_name": "NFL.com",
+      "headline": "Root of Eagles' problems revealed by decision to punt in 'true team loss' to Bears",
+      "published_at": "2026-09-29T11:16:06.000Z",
+      "observed_at": "2026-09-29T14:10:21.206Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "PHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/browns-coach-todd-monken-sees-room-for-deshaun-watson-to-improve-after-back-to-back-wins",
+      "source_name": "NFL.com",
+      "headline": "Browns coach Todd Monken sees room for Deshaun Watson to improve after back-to-back wins",
+      "published_at": "2026-09-29T02:04:00.000Z",
+      "observed_at": "2026-09-29T14:10:21.206Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/j-j-mccarthy-joins-a-small-group-of-first-round-quarterbacks-who-made-quick-exits",
+      "source_name": "Pro Football Talk",
+      "headline": "J.J. McCarthy joins a small group of first-round quarterbacks who made quick exits",
+      "published_at": "2026-09-29T14:03:27.000Z",
+      "observed_at": "2026-09-29T14:10:21.206Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
