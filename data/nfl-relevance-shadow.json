@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/patriots-qb-drake-maye-cleared-final-hurdle-face-franchise",
-      "source_name": "FOX Sports",
-      "headline": "Drake Maye Had One Final Hurdle To Become Face Of The Franchise. He's Cleared It",
-      "published_at": "2026-09-09T15:44:44.000Z",
-      "observed_at": "2026-09-09T16:00:27.183Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-week-1-picks-best-bets-every-game",
       "source_name": "FOX Sports",
       "headline": "2026 NFL Week 1 Picks: Best Bets For Every Game — Will's Wagers",
@@ -42071,6 +42050,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-tuesday-sept-29",
+      "source_name": "NFL.com",
+      "headline": "NFL news roundup: Latest league updates from Tuesday, Sept. 29",
+      "published_at": "2026-09-29T04:10:16.000Z",
+      "observed_at": "2026-09-29T16:20:22.197Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
