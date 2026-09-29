@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-week-1-picks-best-bets-every-game",
-      "source_name": "FOX Sports",
-      "headline": "2026 NFL Week 1 Picks: Best Bets For Every Game — Will's Wagers",
-      "published_at": "2026-09-09T16:12:13.000Z",
-      "observed_at": "2026-09-09T16:20:21.773Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-place-tyler-smith-on-ir-sign-nick-leverett-to-active-roster",
       "source_name": "Pro Football Talk",
       "headline": "Cowboys place Tyler Smith on IR, sign Nick Leverett to active roster",
@@ -42067,6 +42050,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bengals-waive-wr-keshawn-williams",
+      "source_name": "Pro Football Talk",
+      "headline": "Bengals waive WR Ke'Shawn Williams",
+      "published_at": "2026-09-29T16:35:57.000Z",
+      "observed_at": "2026-09-29T16:40:18.807Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
