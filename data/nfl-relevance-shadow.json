@@ -2,66 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-fantasy-2026-start-em-sit-em-running-backs-for-week-1",
-      "source_name": "NFL.com",
-      "headline": "NFL Fantasy 2026 Start 'Em, Sit 'Em: Running backs for Week 1",
-      "published_at": "2026-09-09T02:43:00.000Z",
-      "observed_at": "2026-09-09T14:50:45.835Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "fantasy",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-fantasy-2026-start-em-sit-em-wide-receivers-for-week-1",
-      "source_name": "NFL.com",
-      "headline": "NFL Fantasy 2026 Start 'Em, Sit 'Em: Wide receivers for Week 1",
-      "published_at": "2026-09-09T02:43:00.000Z",
-      "observed_at": "2026-09-09T14:50:45.835Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "JAX",
-        "PHI"
-      ],
-      "detected_category": "fantasy",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-fantasy-2026-start-em-sit-em-tight-ends-for-week-1",
-      "source_name": "NFL.com",
-      "headline": "NFL Fantasy 2026 Start 'Em, Sit 'Em: Tight ends for Week 1",
-      "published_at": "2026-09-09T02:43:00.000Z",
-      "observed_at": "2026-09-09T14:50:45.835Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL"
-      ],
-      "detected_category": "fantasy",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-fantasy-2026-start-em-sit-em-defenses-for-week-1",
       "source_name": "NFL.com",
       "headline": "NFL Fantasy 2026 Start 'Em, Sit 'Em: Defenses for Week 1",
@@ -42065,6 +42005,70 @@
       "confidence": "high",
       "detected_teams": [
         "KC"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/it-s-time-for-steelers-to-let-jaylen-warren-take-on-a-true-bell-cow-workload",
+      "source_name": "NFL.com",
+      "headline": "It's time for Steelers to let Jaylen Warren take on a true 'bell cow' workload",
+      "published_at": "2026-09-29T09:46:07.000Z",
+      "observed_at": "2026-09-29T14:30:27.293Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ben-johnson-takes-another-dig-at-jared-goffs-mobility",
+      "source_name": "Pro Football Talk",
+      "headline": "Ben Johnson takes another dig at Jared Goff's mobility",
+      "published_at": "2026-09-29T14:24:49.000Z",
+      "observed_at": "2026-09-29T14:30:27.293Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jerry-jones-no-explanation-for-end-of-ravens-loss-that-youre-satisfied-with",
+      "source_name": "Pro Football Talk",
+      "headline": "Jerry Jones: No explanation for end of Ravens loss that you're satisfied with",
+      "published_at": "2026-09-29T14:17:25.000Z",
+      "observed_at": "2026-09-29T14:30:27.293Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "DAL"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
