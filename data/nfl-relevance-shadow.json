@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/drew-lock-on-td-pass-to-jaxon-smith-njigba-definitely-never-practiced-that-play",
-      "source_name": "Pro Football Talk",
-      "headline": "Drew Lock on TD pass to Jaxon Smith-Njigba: Definitely never practiced that play",
-      "published_at": "2026-09-10T10:24:18.000Z",
-      "observed_at": "2026-09-10T10:30:28.231Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/george-kittle-nick-bosa-have-no-injury-designations-for-thursdays-game",
-      "source_name": "Pro Football Talk",
-      "headline": "George Kittle, Nick Bosa have no injury designations for Thursday's game",
-      "published_at": "2026-09-10T10:31:36.000Z",
-      "observed_at": "2026-09-10T10:40:21.032Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/patriots-qb-drake-maye-on-loss-to-seahawks-my-impatience-cost-us-the-game",
       "source_name": "NFL.com",
       "headline": "Patriots QB Drake Maye on loss to Seahawks: My impatience 'cost us the game'",
@@ -42064,6 +42026,46 @@
         "GB"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-qb-rankings-index-week-4-2026-nfl-season",
+      "source_name": "NFL.com",
+      "headline": "NFL QB rankings, Week 4: Brock Purdy climbs to No. 1; Kirk Cousins enters top 10",
+      "published_at": "2026-09-30T04:44:00.000Z",
+      "observed_at": "2026-09-30T16:50:24.445Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ben-johnson-called-jared-goff-after-latest-mobility-dig",
+      "source_name": "Pro Football Talk",
+      "headline": "Ben Johnson called Jared Goff after latest mobility dig",
+      "published_at": "2026-09-30T16:48:45.000Z",
+      "observed_at": "2026-09-30T16:50:24.445Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "DET",
+        "PHI"
+      ],
+      "detected_category": "coaching",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
