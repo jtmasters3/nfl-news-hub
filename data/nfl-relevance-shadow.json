@@ -2,46 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sam-darnold-heads-to-locker-room-with-apparent-leg-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "Sam Darnold heads to locker room with hip injury",
-      "published_at": "2026-09-10T00:42:05.000Z",
-      "observed_at": "2026-09-10T00:50:18.382Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/joey-porter-jr-is-up-in-the-air-for-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "Joey Porter Jr. is \"up in the air\" for Sunday",
-      "published_at": "2026-09-10T00:47:24.000Z",
-      "observed_at": "2026-09-10T01:00:27.709Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE",
-        "SEA"
-      ],
-      "detected_category": "draft",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:draft"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patriots-take-7-0-lead-on-drake-maye-2-yard-touchdown-pass",
       "source_name": "Pro Football Talk",
       "headline": "Patriots take 7-0 lead on Drake Maye 2-yard touchdown pass",
@@ -42080,6 +42040,45 @@
         "nfl_team_detected",
         "phrase_signs_with",
         "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/more-than-100-former-players-object-to-settlement-of-class-action-against-nfl-disability-plan",
+      "source_name": "Pro Football Talk",
+      "headline": "More than 100 former players object to settlement of class action against NFL disability plan",
+      "published_at": "2026-09-30T13:52:36.000Z",
+      "observed_at": "2026-09-30T14:00:43.887Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-rodgers-ties-ben-roethlisberger-with-165-career-wins-fifth-most-ever",
+      "source_name": "Pro Football Talk",
+      "headline": "Aaron Rodgers ties Ben Roethlisberger with 165 career wins, fifth-most ever",
+      "published_at": "2026-09-30T13:52:28.000Z",
+      "observed_at": "2026-09-30T14:00:43.887Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN",
+        "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
