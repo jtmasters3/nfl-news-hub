@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/patriots-seahawks-in-2026-nfl-kickoff-game-what-we-learned-from-seattle-s-13-10-win",
-      "source_name": "NFL.com",
-      "headline": "Patriots-Seahawks in 2026 NFL Kickoff Game: What We Learned from Seattle's 13-10 win",
-      "published_at": "2026-09-10T03:25:30.000Z",
-      "observed_at": "2026-09-10T03:30:26.666Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE",
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-kickoff-2026-seahawks-beat-patriots-13-10-but-lose-sam-darnold-to-hip-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "NFL Kickoff 2026: Seahawks beat Patriots 13-10, but lose Sam Darnold to hip injury",
-      "published_at": "2026-09-10T03:37:33.000Z",
-      "observed_at": "2026-09-10T03:50:19.727Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE",
-        "SEA"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/patriots-seahawks-drake-maye-takeaways",
       "source_name": "FOX Sports",
       "headline": "Oh No, Drake Maye: 3 Takeaways From Seahawks Thrilling Win vs. Patriots",
@@ -42076,6 +42032,45 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/commanders-qb-jayden-daniels-back-practice-too-early-call-london-status",
+      "source_name": "FOX Sports",
+      "headline": "Commanders' QB Jayden Daniels Back At Practice, 'Too Early to Call' London Status",
+      "published_at": "2026-09-30T15:46:39.000Z",
+      "observed_at": "2026-09-30T16:00:30.549Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "WAS"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/hearing-for-antonio-brown-plea-deal-is-postponed-until-october-28",
+      "source_name": "Pro Football Talk",
+      "headline": "Hearing for Antonio Brown plea deal is postponed until October 28",
+      "published_at": "2026-09-30T15:56:40.000Z",
+      "observed_at": "2026-09-30T16:00:30.549Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
