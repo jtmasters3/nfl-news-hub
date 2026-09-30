@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/myles-garrett-estimated-as-a-full-participant-wednesday",
-      "source_name": "Pro Football Talk",
-      "headline": "Myles Garrett estimated as a full participant Wednesday",
-      "published_at": "2026-09-10T01:28:19.000Z",
-      "observed_at": "2026-09-10T01:40:18.942Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-kickoff-2026-patriots-lead-seahawks-7-0-at-halftime",
       "source_name": "Pro Football Talk",
       "headline": "NFL Kickoff 2026: Patriots lead Seahawks 7-0 at halftime",
@@ -42084,6 +42063,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/amazon-extends-kirk-herbstreit-with-a-significant-caveat",
+      "source_name": "Pro Football Talk",
+      "headline": "Amazon extends Kirk Herbstreit, with a significant caveat",
+      "published_at": "2026-09-30T14:15:47.000Z",
+      "observed_at": "2026-09-30T14:20:28.007Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
