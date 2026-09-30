@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/patriots-star-wr-a-j-brown-suffers-ankle-injury-vs-seahawks",
-      "source_name": "FOX Sports",
-      "headline": "Patriots Star WR A.J. Brown Suffers Ankle Injury vs. Seahawks",
-      "published_at": "2026-09-10T02:08:54.000Z",
-      "observed_at": "2026-09-10T02:20:18.715Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE",
-        "SEA"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/a-j-brown-questionable-to-return-with-an-ankle-injury",
       "source_name": "Pro Football Talk",
       "headline": "A.J. Brown questionable to return with an ankle injury",
@@ -42074,6 +42052,27 @@
         "NE"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/buccaneers-place-wr-jalen-mcmillan-on-injured-reserve",
+      "source_name": "Pro Football Talk",
+      "headline": "Buccaneers place WR Jalen McMillan on injured reserve",
+      "published_at": "2026-09-30T14:50:32.000Z",
+      "observed_at": "2026-09-30T15:00:33.334Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "TB"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
