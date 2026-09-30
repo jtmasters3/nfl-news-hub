@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/inside-the-new-baker-mayfield-deal",
-      "source_name": "Pro Football Talk",
-      "headline": "Inside the new Baker Mayfield deal",
-      "published_at": "2026-09-09T21:36:16.000Z",
-      "observed_at": "2026-09-09T21:40:20.373Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "TB"
-      ],
-      "detected_category": "contract",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:contract"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/doctors-recommend-tyreek-hill-hold-off-on-coming-back-until-october",
-      "source_name": "Pro Football Talk",
-      "headline": "Doctors recommend Tyreek Hill hold off on coming back until October",
-      "published_at": "2026-09-09T21:42:15.000Z",
-      "observed_at": "2026-09-09T21:50:24.145Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/raiders-te-brock-bowers-undergoes-meniscus-surgery-expected-miss-1-2-games",
       "source_name": "FOX Sports",
       "headline": "Raiders TE Brock Bowers Reportedly Undergoes Meniscus Surgery, Could Miss 1-2 Games",
@@ -42086,6 +42047,44 @@
         "nfl_team_detected",
         "phrase_practice_squad",
         "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-experience-london-presented-by-american-express-returns-this-october",
+      "source_name": "NFL.com",
+      "headline": "NFL Experience London Presented by American Express Returns This October",
+      "published_at": "2026-09-30T08:43:58.000Z",
+      "observed_at": "2026-09-30T08:50:22.536Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/through-three-games-brock-purdy-still-hasnt-been-sacked",
+      "source_name": "Pro Football Talk",
+      "headline": "Through three games, Brock Purdy still hasn't been sacked",
+      "published_at": "2026-09-30T08:42:41.000Z",
+      "observed_at": "2026-09-30T08:50:22.536Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
