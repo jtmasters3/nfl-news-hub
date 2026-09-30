@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/mike-mcdaniel-chargers-justin-herbert",
-      "source_name": "FOX Sports",
-      "headline": "West Coast Read: Mike McDaniel Is Embracing Best QB He's Coached, Justin Herbert",
-      "published_at": "2026-09-09T23:56:37.000Z",
-      "observed_at": "2026-09-10T00:00:29.412Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-olb-jonathan-greenard-limited-in-wednesdays-practice",
-      "source_name": "Pro Football Talk",
-      "headline": "Eagles OLB Jonathan Greenard limited in Wednesday's practice",
-      "published_at": "2026-09-10T00:13:27.000Z",
-      "observed_at": "2026-09-10T00:20:18.778Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-land-in-melbourne-some-28-hours-before-kickoff",
       "source_name": "Pro Football Talk",
       "headline": "Rams land in Melbourne some 28 hours before kickoff",
@@ -42087,6 +42049,44 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/the-packers-offensive-line-has-been-terrible-can-mekhi-becton-and-laken-tomlinson-help-it",
+      "source_name": "NFL.com",
+      "headline": "The Packers' offensive line has been terrible. Can Mekhi Becton and Laken Tomlinson help it?",
+      "published_at": "2026-09-30T10:01:05.000Z",
+      "observed_at": "2026-09-30T13:10:24.275Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/which-nfl-veterans-are-trending-up-and-down-after-week-3-kyler-murray-nakobe-dean-and-more",
+      "source_name": "NFL.com",
+      "headline": "Which NFL veterans are trending up and down after Week 3? Kyler Murray, Nakobe Dean and more",
+      "published_at": "2026-09-30T09:31:06.000Z",
+      "observed_at": "2026-09-30T13:10:24.275Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
