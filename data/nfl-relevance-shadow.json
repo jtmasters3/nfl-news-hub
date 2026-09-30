@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-land-in-melbourne-some-28-hours-before-kickoff",
-      "source_name": "Pro Football Talk",
-      "headline": "Rams land in Melbourne some 28 hours before kickoff",
-      "published_at": "2026-09-10T00:25:24.000Z",
-      "observed_at": "2026-09-10T00:30:21.959Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR",
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/seahawks-qb-sam-darnold-questionable-to-return-vs-patriots-with-hip-injury-drew-lock-enters-in-relief",
       "source_name": "NFL.com",
       "headline": "Seahawks QB Sam Darnold questionable to return vs. Patriots with hip injury; Drew Lock enters in relief",
@@ -42078,6 +42056,23 @@
       "headline": "Which NFL veterans are trending up and down after Week 3? Kyler Murray, Nakobe Dean and more",
       "published_at": "2026-09-30T09:31:06.000Z",
       "observed_at": "2026-09-30T13:10:24.275Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ufl-shuffles-head-coaches-and-rosters-after-relocation-of-teams",
+      "source_name": "Pro Football Talk",
+      "headline": "UFL shuffles head coaches (and rosters) after relocation of teams",
+      "published_at": "2026-09-30T13:27:03.000Z",
+      "observed_at": "2026-09-30T13:30:30.376Z",
       "decision": "keep",
       "classification": "ambiguous",
       "confidence": "low",
