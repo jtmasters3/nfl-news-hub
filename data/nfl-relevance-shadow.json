@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/can-josh-allen-bills-exorcise-their-houston-demons-in-joe-brady-s-debut",
-      "source_name": "NFL.com",
-      "headline": "Can Josh Allen, Bills exorcise their Houston demons in Joe Brady's debut?",
-      "published_at": "2026-09-10T09:16:08.000Z",
-      "observed_at": "2026-09-10T14:40:28.577Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "HOU"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/drake-maye-postgame-comments-seahawks-patriots-finish",
-      "source_name": "FOX Sports",
-      "headline": "Patriots QB Drake Maye On 3-Pick Night: I 'Lost Patience' And It 'Cost' Us",
-      "published_at": "2026-09-10T14:34:32.000Z",
-      "observed_at": "2026-09-10T14:40:28.577Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE",
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/neil-reynolds-eye-on-the-nfl-week-1-2026",
       "source_name": "NFL.com",
       "headline": "Neil Reynolds' Eye on the NFL - Week 1",
@@ -42059,6 +42015,50 @@
       "confidence": "high",
       "detected_teams": [
         "HOU"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/packers-wr-jayden-reed-reportedly-undergoing-neck-surgery-will-miss-2026-season",
+      "source_name": "FOX Sports",
+      "headline": "Packers WR Jayden Reed Reportedly Undergoing Neck Surgery; Will Miss 2026 Season",
+      "published_at": "2026-09-30T18:31:32.000Z",
+      "observed_at": "2026-09-30T18:40:20.163Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
+        "NYG",
+        "NYJ"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/justin-jefferson-wont-practice-wednesday-with-ankle-sprain",
+      "source_name": "Pro Football Talk",
+      "headline": "Justin Jefferson won't practice Wednesday with ankle sprain",
+      "published_at": "2026-09-30T18:34:54.000Z",
+      "observed_at": "2026-09-30T18:40:20.163Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
