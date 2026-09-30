@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/tua-tagovailoa-sees-falcons-starting-qb-job-as-a-chance-to-change-perceptions",
-      "source_name": "NFL.com",
-      "headline": "Tua Tagovailoa sees Falcons' starting QB job as a chance to change perceptions",
-      "published_at": "2026-09-10T10:16:06.000Z",
-      "observed_at": "2026-09-10T14:10:22.691Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-a-j-brown-believed-to-have-a-high-ankle-sprain",
       "source_name": "Pro Football Talk",
       "headline": "Report: A.J. Brown believed to have a high-ankle sprain",
@@ -42049,6 +42028,27 @@
         "CAR"
       ],
       "detected_category": "fantasy",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lamar-jackson-is-not-practicing-wednesday",
+      "source_name": "Pro Football Talk",
+      "headline": "Lamar Jackson is not practicing Wednesday",
+      "published_at": "2026-09-30T17:44:16.000Z",
+      "observed_at": "2026-09-30T17:50:23.723Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
