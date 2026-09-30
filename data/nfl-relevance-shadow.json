@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/neil-reynolds-eye-on-the-nfl-week-1-2026",
-      "source_name": "NFL.com",
-      "headline": "Neil Reynolds' Eye on the NFL - Week 1",
-      "published_at": "2026-09-08T02:37:00.000Z",
-      "observed_at": "2026-09-10T14:50:29.147Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/strong-possibility-tua-tagovailoa-will-be-cut-if-when-benched",
       "source_name": "Pro Football Talk",
       "headline": "\"Strong possibility\" Tua Tagovailoa will be cut, if/when benched",
@@ -42061,6 +42044,27 @@
         "MIN"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/titans-hc-robert-saleh-cam-ward-has-some-ptsd-from-number-of-sacks-in-rookie-season",
+      "source_name": "NFL.com",
+      "headline": "Titans HC Robert Saleh: Cam Ward has 'some PTSD' from number of sacks in rookie season",
+      "published_at": "2026-09-30T06:46:23.000Z",
+      "observed_at": "2026-09-30T18:50:22.357Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "TEN"
+      ],
+      "detected_category": "coaching",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
