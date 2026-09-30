@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/khosla-family-the-new-seahawks-owners-feels-lucky-to-own-reigning-super-bowl-champs",
-      "source_name": "NFL.com",
-      "headline": "Khosla family, the new Seahawks owners, feels 'lucky' to own reigning Super Bowl champs",
-      "published_at": "2026-09-09T11:01:06.000Z",
-      "observed_at": "2026-09-09T23:10:25.049Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/seahawks-patriots-inactives-s-nick-emmanwori-will-not-play",
-      "source_name": "Pro Football Talk",
-      "headline": "Seahawks-Patriots inactives: S Nick Emmanwori will not play",
-      "published_at": "2026-09-09T23:02:39.000Z",
-      "observed_at": "2026-09-09T23:10:25.049Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE",
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/mike-mcdaniel-chargers-justin-herbert",
       "source_name": "FOX Sports",
       "headline": "West Coast Read: Mike McDaniel Is Embracing Best QB He's Coached, Justin Herbert",
@@ -42088,6 +42045,48 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/after-case-keenum-s-stunning-performance-bears-have-qb-dilemma-who-should-start",
+      "source_name": "NFL.com",
+      "headline": "After Case Keenum's stunning performance, Bears have QB dilemma: Who should start?",
+      "published_at": "2026-09-30T11:01:06.000Z",
+      "observed_at": "2026-09-30T13:00:34.062Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-ravens-c-jovaughn-gwyn-has-a-fractured-fibula",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Ravens C Jovaughn Gwyn has a fractured fibula",
+      "published_at": "2026-09-30T12:48:38.000Z",
+      "observed_at": "2026-09-30T13:00:34.062Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
