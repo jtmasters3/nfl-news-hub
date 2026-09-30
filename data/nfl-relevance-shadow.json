@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-jacobs-pleads-no-contest-to-two-misdemeanor-charges",
-      "source_name": "Pro Football Talk",
-      "headline": "Josh Jacobs pleads no contest to two misdemeanor charges",
-      "published_at": "2026-09-10T16:21:50.000Z",
-      "observed_at": "2026-09-10T16:30:22.721Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/sam-darnold-hip-injury-miss-seahawks-week-2-game-cardinals",
-      "source_name": "NFL.com",
-      "headline": "NFL Network: Sam Darnold expected to miss Seahawks' Week 2 game, but avoids major hip injury",
-      "published_at": "2026-09-10T05:01:53.000Z",
-      "observed_at": "2026-09-10T17:10:23.792Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/sam-darnold-injury-updates-seahawks-patriots-finish",
       "source_name": "FOX Sports",
       "headline": "Sam Darnold Injury Updates: What We Know About Seahawks QB's Hip Issue",
@@ -42057,6 +42019,44 @@
         "PHI"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-week-4-injury-report-player-statuses-for-all-16-games",
+      "source_name": "NFL.com",
+      "headline": "NFL Week 4 injury report: Player statuses for all 16 games",
+      "published_at": "2026-09-30T07:18:29.000Z",
+      "observed_at": "2026-09-30T19:20:22.202Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-rule-joey-porter-jr-out-for-thursday-jalen-ramsey-questionable",
+      "source_name": "Pro Football Talk",
+      "headline": "Steelers rule Joey Porter Jr. out for Thursday, Jalen Ramsey questionable",
+      "published_at": "2026-09-30T19:13:13.000Z",
+      "observed_at": "2026-09-30T19:20:22.202Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
