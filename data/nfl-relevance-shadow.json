@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cam-heyward-blasts-stupid-franchise-tag",
-      "source_name": "Pro Football Talk",
-      "headline": "Cam Heyward blasts \"stupid\" franchise tag",
-      "published_at": "2026-09-09T21:02:42.000Z",
-      "observed_at": "2026-09-09T21:10:22.234Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-backup-og-ajani-cornelius-limited-in-practice",
       "source_name": "Pro Football Talk",
       "headline": "Cowboys backup OG Ajani Cornelius limited in practice",
@@ -42084,6 +42067,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/tom-brady-made-his-first-official-nfl-start-25-years-ago-rest-history",
+      "source_name": "FOX Sports",
+      "headline": "Tom Brady's First Start In The NFL Came 25 Years Ago, And The Rest Is History",
+      "published_at": "2026-09-30T01:15:43.000Z",
+      "observed_at": "2026-09-30T01:30:23.112Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
