@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/alec-pierce-listed-as-limited-on-wednesday",
-      "source_name": "Pro Football Talk",
-      "headline": "Alec Pierce listed as limited on Wednesday",
-      "published_at": "2026-09-09T20:50:07.000Z",
-      "observed_at": "2026-09-09T21:00:34.390Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "IND"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jamarr-chase-tee-higgins-shemar-stewart-listed-as-full-participants-on-wednesday",
-      "source_name": "Pro Football Talk",
-      "headline": "Ja'Marr Chase, Tee Higgins, Shemar Stewart listed as full participants on Wednesday",
-      "published_at": "2026-09-09T21:05:15.000Z",
-      "observed_at": "2026-09-09T21:10:22.234Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CIN"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cam-heyward-blasts-stupid-franchise-tag",
       "source_name": "Pro Football Talk",
       "headline": "Cam Heyward blasts \"stupid\" franchise tag",
@@ -42089,6 +42046,44 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-agree-to-terms-with-dbs-juanyeh-thomas-alex-austin",
+      "source_name": "Pro Football Talk",
+      "headline": "Cowboys agree to terms with DBs Juanyeh Thomas, Alex Austin",
+      "published_at": "2026-09-30T01:00:03.000Z",
+      "observed_at": "2026-09-30T01:10:18.742Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/joe-buck-hopes-troy-aikman-stays-at-espn",
+      "source_name": "Pro Football Talk",
+      "headline": "Joe Buck hopes Troy Aikman stays at ESPN",
+      "published_at": "2026-09-30T00:57:42.000Z",
+      "observed_at": "2026-09-30T01:10:18.742Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
