@@ -2,40 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-a-j-brown-believed-to-have-a-high-ankle-sprain",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: A.J. Brown believed to have a high-ankle sprain",
-      "published_at": "2026-09-10T14:07:24.000Z",
-      "observed_at": "2026-09-10T14:10:22.691Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-emmanuel-acho-comments-spark-nfl-investigation-of-dom-disandro",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Emmanuel Acho comments spark NFL investigation of Dom DiSandro",
-      "published_at": "2026-09-10T14:00:04.000Z",
-      "observed_at": "2026-09-10T14:10:22.691Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bryce-young-contracts-out-of-my-control-im-just-about-football",
       "source_name": "Pro Football Talk",
       "headline": "Bryce Young: Contract's out of my control, I'm just about football",
@@ -42049,6 +42015,49 @@
         "BAL"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/packers-wr-jayden-reed-to-undergo-neck-surgery-miss-rest-of-2026-season",
+      "source_name": "NFL.com",
+      "headline": "Packers WR Jayden Reed to undergo neck surgery, miss rest of 2026 season",
+      "published_at": "2026-09-30T05:31:06.000Z",
+      "observed_at": "2026-09-30T18:00:39.896Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-broncos-attracts-20-8-million",
+      "source_name": "Pro Football Talk",
+      "headline": "Rams-Broncos attracts 20.8 million",
+      "published_at": "2026-09-30T17:46:42.000Z",
+      "observed_at": "2026-09-30T18:00:39.896Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "LAR"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
