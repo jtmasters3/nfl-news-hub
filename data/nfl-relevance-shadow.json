@@ -2,64 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ashton-jeanty-says-his-ankle-feels-really-good-and-is-super-excited-to-play-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "Ashton Jeanty says his ankle feels \"really good\" and is \"super excited\" to play Sunday",
-      "published_at": "2026-09-10T22:27:35.000Z",
-      "observed_at": "2026-09-10T22:30:32.335Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV",
-        "MIA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/former-nfl-player-leshon-johnson-sentenced-to-five-years-in-prison-for-dog-fighting",
-      "source_name": "Pro Football Talk",
-      "headline": "Former NFL player LeShon Johnson sentenced to five years in prison for dog fighting",
-      "published_at": "2026-09-10T22:21:21.000Z",
-      "observed_at": "2026-09-10T22:30:32.335Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/who-next-quarterback-receive-rich-extension",
-      "source_name": "FOX Sports",
-      "headline": "Who Is The Next Quarterback To Receive Rich Extension? Here Are The 8 Candidates",
-      "published_at": "2026-09-10T23:00:55.000Z",
-      "observed_at": "2026-09-10T23:10:24.368Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "contract",
-      "nfl_evidence": [
-        "nfl_preserving_category:contract"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rueben-bain-up-to-full-practice-for-bucs",
       "source_name": "Pro Football Talk",
       "headline": "Rueben Bain up to full practice for Bucs",
@@ -42068,6 +42010,65 @@
       "confidence": "high",
       "detected_teams": [
         "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jim-harbaugh-to-no-surprise-spoke-to-john-harbaugh-before-j-j-mccarthy-trade",
+      "source_name": "Pro Football Talk",
+      "headline": "Jim Harbaugh, to no surprise, spoke to John Harbaugh before J.J. McCarthy trade",
+      "published_at": "2026-09-30T23:14:59.000Z",
+      "observed_at": "2026-09-30T23:20:20.692Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "trade",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/zack-baun-devonta-smith-miss-practice-for-eagles",
+      "source_name": "Pro Football Talk",
+      "headline": "Zack Baun, DeVonta Smith miss practice for Eagles",
+      "published_at": "2026-09-30T23:13:30.000Z",
+      "observed_at": "2026-09-30T23:20:20.692Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/marvin-mims-jaylen-waddle-had-full-participation-wednesday",
+      "source_name": "Pro Football Talk",
+      "headline": "Marvin Mims, Jaylen Waddle had full participation Wednesday",
+      "published_at": "2026-09-30T23:08:57.000Z",
+      "observed_at": "2026-09-30T23:20:20.692Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
