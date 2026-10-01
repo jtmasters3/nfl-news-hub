@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/myles-garrett-this-was-the-worst-version-of-myself-that-ive-put-out-there",
-      "source_name": "Pro Football Talk",
-      "headline": "Myles Garrett: \"This was the worst version of myself that I've put out there\"",
-      "published_at": "2026-09-11T08:41:49.000Z",
-      "observed_at": "2026-09-11T08:50:19.996Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kyle-shanahan-win-or-lose-everyone-would-make-a-big-deal-about-our-travel-schedules",
       "source_name": "Pro Football Talk",
       "headline": "Kyle Shanahan: Win or lose, everyone would make a big deal about our travel schedules",
@@ -42076,6 +42059,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/joey-porter-jr-trade-cowboys-steelers-history",
+      "source_name": "FOX Sports",
+      "headline": "Joey Porter Jr. To Dallas: Every Cowboys-Steelers Trade All Time",
+      "published_at": "2026-10-01T14:54:17.000Z",
+      "observed_at": "2026-10-01T15:10:21.273Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "PIT"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
