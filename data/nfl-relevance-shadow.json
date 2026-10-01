@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/reports-a-j-brown-is-expected-to-miss-at-least-four-weeks",
-      "source_name": "Pro Football Talk",
-      "headline": "Reports: A.J. Brown is expected to miss at least four weeks",
-      "published_at": "2026-09-11T00:33:52.000Z",
-      "observed_at": "2026-09-11T00:40:18.843Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jeremiyah-love-mum-on-his-availability-for-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "Jeremiyah Love mum on his availability for Sunday",
-      "published_at": "2026-09-11T01:25:55.000Z",
-      "observed_at": "2026-09-11T01:30:59.790Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kyren-williams-gives-rams-a-7-3-lead",
       "source_name": "Pro Football Talk",
       "headline": "Kyren Williams gives Rams a 7-3 lead",
@@ -42065,6 +42027,50 @@
       "headline": "Steelers trade Joey Porter Jr. to the Cowboys",
       "published_at": "2026-10-01T03:54:31.000Z",
       "observed_at": "2026-10-01T04:00:28.924Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "PIT"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/steelers-trading-cb-joey-porter-jr-to-cowboys-in-exchange-for-second-sixth-round-picks",
+      "source_name": "NFL.com",
+      "headline": "Steelers trading CB Joey Porter Jr. to Cowboys in exchange for second-, sixth-round picks",
+      "published_at": "2026-10-01T04:04:41.000Z",
+      "observed_at": "2026-10-01T04:10:24.469Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "PIT"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/cowboys-reportedly-acquire-cb-joey-porter-jr-from-steelers",
+      "source_name": "FOX Sports",
+      "headline": "Cowboys Reportedly Acquire CB Joey Porter Jr. From The Steelers",
+      "published_at": "2026-10-01T03:45:03.000Z",
+      "observed_at": "2026-10-01T04:10:24.469Z",
       "decision": "keep",
       "classification": "nfl",
       "confidence": "high",
