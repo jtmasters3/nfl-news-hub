@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-sweat-returns-to-practice-jeremiyah-love-remains-limited",
-      "source_name": "Pro Football Talk",
-      "headline": "Josh Sweat returns to practice, Jeremiyah Love remains limited",
-      "published_at": "2026-09-10T23:06:58.000Z",
-      "observed_at": "2026-09-10T23:20:22.692Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/australia-game-inactives-san-francisco-49ers-at-los-angeles-rams",
       "source_name": "NFL.com",
       "headline": "Australia game inactives: San Francisco 49ers at Los Angeles Rams",
@@ -42077,6 +42056,25 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ted-cruz-claims-the-reaction-to-his-appearance-on-college-gameday-was-overwhelming-positive",
+      "source_name": "Pro Football Talk",
+      "headline": "Ted Cruz claims the reaction to his appearance on College GameDay was \"overwhelming positive\"",
+      "published_at": "2026-09-30T23:52:47.000Z",
+      "observed_at": "2026-10-01T00:10:23.846Z",
+      "decision": "reject",
+      "classification": "college_football",
+      "confidence": "medium",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [
+        "college_football_phrase"
+      ],
+      "reason_codes": [
+        "college_marker_no_nfl_evidence"
       ]
     }
   ]
