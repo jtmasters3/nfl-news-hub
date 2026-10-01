@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/commanders-add-dt-daron-payne-to-injury-report",
-      "source_name": "Pro Football Talk",
-      "headline": "Commanders add DT Daron Payne to injury report",
-      "published_at": "2026-09-11T00:01:18.000Z",
-      "observed_at": "2026-09-11T00:10:20.050Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "WAS"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/puka-nacua-addresses-darkest-times-in-his-life-fueled-by-drowning-in-alcohol",
       "source_name": "Pro Football Talk",
       "headline": "Puka Nacua addresses \"darkest times\" in his life, fueled by \"drowning\" in alcohol",
@@ -42075,6 +42054,26 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/foxtober-mlb-postseason-cfb-chiefs-dodgers-ohio-state",
+      "source_name": "FOX Sports",
+      "headline": "What October 2026 Will Reveal About MLB, The NFL And College Football",
+      "published_at": "2026-10-01T02:09:05.000Z",
+      "observed_at": "2026-10-01T02:20:23.322Z",
+      "decision": "reject",
+      "classification": "other_sport",
+      "confidence": "high",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [
+        "college_football_phrase",
+        "league_mlb"
+      ],
+      "reason_codes": [
+        "other_sport_marker_no_nfl_evidence"
       ]
     }
   ]
