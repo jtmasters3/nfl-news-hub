@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/tua-tagovailoa-injury-falcons-quarterbacks-cooper-rush",
-      "source_name": "FOX Sports",
-      "headline": "Falcons Name Cooper Rush Week 1 QB; Tua Tagovailoa Has Oblique Issue",
-      "published_at": "2026-09-11T18:01:01.000Z",
-      "observed_at": "2026-09-11T18:40:21.353Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dl-t-j-sanders-listed-as-questionable-for-the-bills",
-      "source_name": "Pro Football Talk",
-      "headline": "DL T.J. Sanders listed as questionable for the Bills",
-      "published_at": "2026-09-11T18:32:00.000Z",
-      "observed_at": "2026-09-11T18:40:21.353Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "HOU"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/clocks-ticking-for-joey-porter-jr-and-the-steelers",
       "source_name": "Pro Football Talk",
       "headline": "\"Clock's ticking\" for Joey Porter Jr. and the Steelers",
@@ -42076,6 +42033,44 @@
         "LAC"
       ],
       "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/jayden-daniels-not-concerned-about-reinjury-risk-that-s-what-the-brace-is-for",
+      "source_name": "NFL.com",
+      "headline": "Jayden Daniels not concerned about reinjury risk: 'That's what the brace is for'",
+      "published_at": "2026-10-01T08:16:05.000Z",
+      "observed_at": "2026-10-01T21:50:21.424Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-final-straw-for-steelers-was-joey-porter-jr-s-wednesday-claim-of-back-pain",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: \"Final straw\" for Steelers was Joey Porter Jr.'s Wednesday claim of back pain",
+      "published_at": "2026-10-01T21:38:35.000Z",
+      "observed_at": "2026-10-01T21:50:21.424Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
