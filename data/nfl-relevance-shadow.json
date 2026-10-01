@@ -2,48 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/commanders-release-ot-d-j-humphries",
-      "source_name": "Pro Football Talk",
-      "headline": "Commanders release OT D.J. Humphries",
-      "published_at": "2026-09-11T15:34:13.000Z",
-      "observed_at": "2026-09-11T15:50:22.867Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jets-rule-out-joseph-ossai-list-second-rounder-dangelo-ponds-as-doubtful-for-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "Jets rule out Joseph Ossai, list second-rounder D'Angelo Ponds as doubtful for Sunday",
-      "published_at": "2026-09-11T15:49:43.000Z",
-      "observed_at": "2026-09-11T16:00:28.165Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lb-cedric-gray-out-for-the-titans-in-week-1",
       "source_name": "Pro Football Talk",
       "headline": "LB Cedric Gray out for the Titans in Week 1",
@@ -42074,6 +42032,45 @@
         "CLE"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-opens-pandoras-box-by-supposedly-admitting-dpi-error-to-sean-mcvay",
+      "source_name": "Pro Football Talk",
+      "headline": "NFL opens Pandora's box by supposedly admitting DPI error to Sean McVay",
+      "published_at": "2026-10-01T19:16:48.000Z",
+      "observed_at": "2026-10-01T19:20:22.918Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-glenn-says-he-and-ben-johnson-made-each-other-better-as-coaches",
+      "source_name": "Pro Football Talk",
+      "headline": "Aaron Glenn says he and Ben Johnson made each other better as coaches",
+      "published_at": "2026-10-01T19:09:54.000Z",
+      "observed_at": "2026-10-01T19:20:22.918Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "NYJ"
+      ],
+      "detected_category": "coaching",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
