@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-daily-fantasy-football-week-1-picks-dfs-plays-values",
-      "source_name": "FOX Sports",
-      "headline": "2026 NFL Week 1 Daily Fantasy Football Picks: Best DFS Plays, Values",
-      "published_at": "2026-09-11T03:36:29.000Z",
-      "observed_at": "2026-09-11T03:40:24.114Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "fantasy",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/the-49ers-rams-travel-question-wont-be-fully-resolved-until-week-2-or-beyond",
       "source_name": "Pro Football Talk",
       "headline": "The 49ers-Rams travel question won't be fully resolved until Week 2, or beyond",
@@ -42073,6 +42056,28 @@
       "confidence": "high",
       "detected_teams": [
         "NYG"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/chiefs-patrick-mahomes-maxx-crosby-raiders-week-4-2026",
+      "source_name": "NFL.com",
+      "headline": "Patrick Mahomes eager to face Maxx Crosby after odd offseason: Chiefs-Raiders is 'pure football'",
+      "published_at": "2026-10-01T01:34:33.000Z",
+      "observed_at": "2026-10-01T13:40:22.523Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC",
+        "LV"
       ],
       "detected_category": "injury",
       "nfl_evidence": [
