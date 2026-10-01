@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jason-sanders-will-kick-for-jets-on-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "Jason Sanders will kick for Jets on Sunday",
-      "published_at": "2026-09-11T15:19:18.000Z",
-      "observed_at": "2026-09-11T15:30:29.715Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYJ",
-        "TEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/first-impressions-of-seahawks-new-offense-and-how-it-might-look-if-sam-darnold-misses-time",
-      "source_name": "NFL.com",
-      "headline": "First impressions of Seahawks' new offense, and how it might look if Sam Darnold misses time",
-      "published_at": "2026-09-11T12:16:05.000Z",
-      "observed_at": "2026-09-11T15:40:22.025Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-patriots-are-expected-to-sign-dl-daquan-jones",
       "source_name": "Pro Football Talk",
       "headline": "Report: Patriots are expected to sign DL DaQuan Jones",
@@ -42081,6 +42038,50 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/cowboys-think-joey-porter-jr-fits-well-and-it-s-possible-he-plays-sunday",
+      "source_name": "NFL.com",
+      "headline": "Cowboys think Joey Porter Jr. 'fits well' and it's possible he plays Sunday",
+      "published_at": "2026-10-01T06:01:06.000Z",
+      "observed_at": "2026-10-01T18:40:21.838Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/giants-sign-lb-jihad-ward-off-of-vikings-practice-squad",
+      "source_name": "Pro Football Talk",
+      "headline": "Giants sign LB Jihad Ward off of Vikings practice squad",
+      "published_at": "2026-10-01T18:33:34.000Z",
+      "observed_at": "2026-10-01T18:40:21.838Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN",
+        "NYG"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
