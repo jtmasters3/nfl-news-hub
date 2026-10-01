@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-sept-11",
-      "source_name": "NFL.com",
-      "headline": "NFL news roundup: Patriots expected to sign DT DaQuan Jones; Jason Sanders to kick for Jets on Sunday",
-      "published_at": "2026-09-11T03:21:00.000Z",
-      "observed_at": "2026-09-11T15:30:29.715Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE",
-        "NYJ"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jason-sanders-will-kick-for-jets-on-sunday",
       "source_name": "Pro Football Talk",
       "headline": "Jason Sanders will kick for Jets on Sunday",
@@ -42078,6 +42055,23 @@
       "headline": "FanDuel admits it has used roughly 30 Bryce Harper-style videos",
       "published_at": "2026-10-01T17:12:15.000Z",
       "observed_at": "2026-10-01T17:20:23.049Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-week-4-picks-best-bets-every-game-wills-wagers",
+      "source_name": "FOX Sports",
+      "headline": "2026 NFL Week 4 Picks: Best Bets For Every Game — Will's Wagers",
+      "published_at": "2026-10-01T17:55:22.000Z",
+      "observed_at": "2026-10-01T18:00:32.240Z",
       "decision": "keep",
       "classification": "ambiguous",
       "confidence": "low",
