@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kevin-stefanski-cooper-rush-knows-how-to-prepare",
-      "source_name": "Pro Football Talk",
-      "headline": "Kevin Stefanski: Cooper Rush knows how to prepare",
-      "published_at": "2026-09-11T18:19:28.000Z",
-      "observed_at": "2026-09-11T18:30:31.373Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/tua-tagovailoa-injury-falcons-quarterbacks-cooper-rush",
       "source_name": "FOX Sports",
       "headline": "Falcons Name Cooper Rush Week 1 QB; Tua Tagovailoa Has Oblique Issue",
@@ -42072,6 +42055,27 @@
         "PIT"
       ],
       "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-mcdaniel-im-not-living-in-hope-im-living-in-reality-about-our-offense",
+      "source_name": "Pro Football Talk",
+      "headline": "Mike McDaniel: I'm not living in hope, I'm living in reality about our offense",
+      "published_at": "2026-10-01T21:16:03.000Z",
+      "observed_at": "2026-10-01T21:30:23.617Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC"
+      ],
+      "detected_category": "coaching",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
