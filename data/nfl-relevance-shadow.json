@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brock-purdy-long-ball-to-demarcus-robinson-gives-49ers-the-lead-back",
-      "source_name": "Pro Football Talk",
-      "headline": "Brock Purdy long ball to Demarcus Robinson gives 49ers the lead back",
-      "published_at": "2026-09-11T01:43:39.000Z",
-      "observed_at": "2026-09-11T01:50:19.048Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR",
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dezhaun-stribling-carted-off-ruled-out-with-ankle-injury",
       "source_name": "Pro Football Talk",
       "headline": "De'Zhaun Stribling carted off, ruled out with ankle injury",
@@ -42086,6 +42064,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-dfs-week-4-best-picks-lineup-advice-value-plays",
+      "source_name": "FOX Sports",
+      "headline": "NFL DFS Week 4: Best Picks, Lineup Advice and Value Plays",
+      "published_at": "2026-10-01T09:00:59.000Z",
+      "observed_at": "2026-10-01T09:20:26.100Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "fantasy",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
