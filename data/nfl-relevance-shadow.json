@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/can-saquon-barkley-defy-the-rb-age-curve-his-favorite-back-s-best-season-came-at-29",
-      "source_name": "NFL.com",
-      "headline": "Can Saquon Barkley defy the RB age curve? His favorite back's best season came at 29",
-      "published_at": "2026-09-11T10:16:06.000Z",
-      "observed_at": "2026-09-11T14:30:32.414Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/inside-the-meeting-between-lamar-jackson-and-ravens-coaches-that-set-tone-for-new-era",
-      "source_name": "NFL.com",
-      "headline": "Inside the meeting between Lamar Jackson and Ravens coaches that set tone for new era",
-      "published_at": "2026-09-10T10:16:06.000Z",
-      "observed_at": "2026-09-11T14:30:32.414Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/sean-mcvay-postgame-quotes-49ers-rams-australia-game",
       "source_name": "FOX Sports",
       "headline": "Rams Coach Sean McVay Brutally Honest About 'Humbling' Loss To 49ers",
@@ -42067,6 +42029,49 @@
       "detected_teams": [
         "NYG",
         "TEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/titans-lb-anthony-hill-is-the-defensive-rookie-of-the-month",
+      "source_name": "Pro Football Talk",
+      "headline": "Titans LB Anthony Hill is the defensive rookie of the month",
+      "published_at": "2026-10-01T16:23:39.000Z",
+      "observed_at": "2026-10-01T16:30:27.958Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIA",
+        "TEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-kr-myles-price-named-the-nfc-special-teams-player-of-the-month",
+      "source_name": "Pro Football Talk",
+      "headline": "Vikings KR Myles Price named the NFC special teams player of the month",
+      "published_at": "2026-10-01T16:16:47.000Z",
+      "observed_at": "2026-10-01T16:30:27.958Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
