@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/patriots-wr-a-j-brown-injury-timeline-update",
-      "source_name": "FOX Sports",
-      "headline": "Patriots WR A.J. Brown Reportedly Set To Miss At Least 4 Weeks Due To Ankle Injury",
-      "published_at": "2026-09-11T00:30:02.000Z",
-      "observed_at": "2026-09-11T00:30:23.857Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/reports-a-j-brown-is-expected-to-miss-at-least-four-weeks",
       "source_name": "Pro Football Talk",
       "headline": "Reports: A.J. Brown is expected to miss at least four weeks",
@@ -42072,6 +42051,28 @@
         "MIN"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-trade-joey-porter-jr-to-the-cowboys",
+      "source_name": "Pro Football Talk",
+      "headline": "Steelers trade Joey Porter Jr. to the Cowboys",
+      "published_at": "2026-10-01T03:54:31.000Z",
+      "observed_at": "2026-10-01T04:00:28.924Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "PIT"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
