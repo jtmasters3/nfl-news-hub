@@ -2,51 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jalen-mcmillan-doubtful-for-bucs-but-emeka-egbuka-is-set-to-play",
-      "source_name": "Pro Football Talk",
-      "headline": "Jalen McMillan doubtful for Bucs, but Emeka Egbuka is set to play",
-      "published_at": "2026-09-11T18:43:45.000Z",
-      "observed_at": "2026-09-11T18:50:22.454Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CIN",
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-kyle-shanahan-quietly-signed-contract-extension-with-49ers",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Kyle Shanahan quietly signed contract extension with 49ers",
-      "published_at": "2026-09-11T18:36:49.000Z",
-      "observed_at": "2026-09-11T18:50:22.454Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR",
-        "SF"
-      ],
-      "detected_category": "contract",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:contract"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nnamdi-madubuike-will-not-play-this-week",
       "source_name": "Pro Football Talk",
       "headline": "Nnamdi Madubuike will not play this week",
@@ -42077,6 +42032,45 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/commissioner-roger-goodell-meets-with-illinois-governor-as-bears-continue-pursuit-of-new-stadium",
+      "source_name": "NFL.com",
+      "headline": "Commissioner Roger Goodell meets with Illinois governor as Bears continue pursuit of new stadium",
+      "published_at": "2026-10-01T10:27:14.000Z",
+      "observed_at": "2026-10-01T22:30:32.233Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_nfl_commissioner"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/how-did-tom-brady-learn-say-meatball-sub-how-many-such-passes-did-he-throw",
+      "source_name": "FOX Sports",
+      "headline": "How Did Tom Brady Learn To Say 'Meatball Sub,' And How Many Such Passes Did He Throw?",
+      "published_at": "2026-10-01T22:17:39.000Z",
+      "observed_at": "2026-10-01T22:30:32.233Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
