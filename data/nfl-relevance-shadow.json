@@ -2,68 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/myles-garretts-comments-usage-are-concerning",
-      "source_name": "Pro Football Talk",
-      "headline": "Myles Garrett's comments, usage are concerning",
-      "published_at": "2026-09-11T13:54:42.000Z",
-      "observed_at": "2026-09-11T14:00:32.563Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patrick-mahomes-kenneth-walker-can-break-a-touchdown-at-any-moment",
-      "source_name": "Pro Football Talk",
-      "headline": "Patrick Mahomes: Kenneth Walker can break a touchdown at any moment",
-      "published_at": "2026-09-11T13:58:26.000Z",
-      "observed_at": "2026-09-11T14:10:22.163Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/2026-nfl-draft-quarterback-class-examining-when-fernando-mendoza-eight-others-could-make-first-starts",
-      "source_name": "NFL.com",
-      "headline": "2026 NFL Draft quarterback class: Examining when Fernando Mendoza, eight others could make first starts",
-      "published_at": "2026-09-11T02:17:30.000Z",
-      "observed_at": "2026-09-11T14:20:22.749Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [],
-      "detected_category": "draft",
-      "nfl_evidence": [
-        "phrase_nfl_draft",
-        "nfl_preserving_category:draft"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/can-saquon-barkley-defy-the-rb-age-curve-his-favorite-back-s-best-season-came-at-29",
       "source_name": "NFL.com",
       "headline": "Can Saquon Barkley defy the RB age curve? His favorite back's best season came at 29",
@@ -42071,6 +42009,66 @@
         "PIT"
       ],
       "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/evan-mcpherson-named-afc-special-teams-player-of-the-month-for-september",
+      "source_name": "Pro Football Talk",
+      "headline": "Evan McPherson named AFC special teams player of the month for September",
+      "published_at": "2026-10-01T16:16:18.000Z",
+      "observed_at": "2026-10-01T16:20:21.578Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/greg-rousseau-named-afc-defensive-player-of-the-month",
+      "source_name": "Pro Football Talk",
+      "headline": "Greg Rousseau named AFC defensive player of the month",
+      "published_at": "2026-10-01T16:11:29.000Z",
+      "observed_at": "2026-10-01T16:20:21.578Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/giants-s-jevon-holland-named-the-nfc-defensive-player-of-the-month",
+      "source_name": "Pro Football Talk",
+      "headline": "Giants S Jevon Holland named the NFC defensive player of the month",
+      "published_at": "2026-10-01T16:10:26.000Z",
+      "observed_at": "2026-10-01T16:20:21.578Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG",
+        "TEN"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
