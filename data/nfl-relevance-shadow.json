@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/puka-nacua-addresses-darkest-times-in-his-life-fueled-by-drowning-in-alcohol",
-      "source_name": "Pro Football Talk",
-      "headline": "Puka Nacua addresses \"darkest times\" in his life, fueled by \"drowning\" in alcohol",
-      "published_at": "2026-09-11T00:14:29.000Z",
-      "observed_at": "2026-09-11T00:20:19.440Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/patriots-wr-a-j-brown-injury-timeline-update",
       "source_name": "FOX Sports",
       "headline": "Patriots WR A.J. Brown Reportedly Set To Miss At Least 4 Weeks Due To Ankle Injury",
@@ -42074,6 +42057,27 @@
       ],
       "reason_codes": [
         "other_sport_marker_no_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/3-0-vikings-are-a-game-away-from-a-dubious-record",
+      "source_name": "Pro Football Talk",
+      "headline": "3-0 Vikings are a game away from a dubious record",
+      "published_at": "2026-10-01T02:53:52.000Z",
+      "observed_at": "2026-10-01T03:10:19.948Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
