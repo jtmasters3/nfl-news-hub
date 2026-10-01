@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/australians-love-an-underdog-49ers-qb-brock-purdy-isn-t-one-anymore",
-      "source_name": "NFL.com",
-      "headline": "Australians love an underdog. 49ers QB Brock Purdy isn't one anymore",
-      "published_at": "2026-09-11T11:16:05.000Z",
-      "observed_at": "2026-09-11T14:40:21.675Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/why-jacoby-brissett-the-journeyman-cardinals-qb1-has-earned-respect-at-every-stop",
       "source_name": "NFL.com",
       "headline": "Why Jacoby Brissett, the journeyman Cardinals QB1, has earned respect at every stop",
@@ -42077,6 +42056,28 @@
         "SF"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-bears-racks-up-22-6-million-viewers",
+      "source_name": "Pro Football Talk",
+      "headline": "Eagles-Bears racks up 22.6 million viewers",
+      "published_at": "2026-10-01T16:44:09.000Z",
+      "observed_at": "2026-10-01T17:00:28.524Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "PHI"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
