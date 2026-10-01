@@ -318553,7 +318553,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-10-01T14:20:44.846Z",
-      "updated_at": "2026-10-01T19:00:30.860Z",
+      "updated_at": "2026-10-01T20:00:30.790Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -318699,11 +318699,11 @@
         "retry_count": 0
       },
       "selection": {
-        "destination": "story",
-        "slot_id": "story:2026-10-01T15:00:00-04:00",
-        "selected_at": "2026-10-01T19:00:30.860Z",
+        "destination": "feed",
+        "slot_id": "feed:2026-10-01T16:00:00-04:00",
+        "selected_at": "2026-10-01T20:00:30.790Z",
         "window_start": "2026-10-01T18:00:00.000Z",
-        "window_end": "2026-10-01T19:00:00.000Z",
+        "window_end": "2026-10-01T20:00:00.000Z",
         "score": 8,
         "reason": "fallback_recent_pool_importance_score_rank"
       }
@@ -319166,7 +319166,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-10-01T15:00:50.800Z",
-      "updated_at": "2026-10-01T15:00:50.802Z",
+      "updated_at": "2026-10-01T20:00:30.790Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -319312,6 +319312,15 @@
         "message": null,
         "at": null,
         "retry_count": 0
+      },
+      "selection": {
+        "destination": "story",
+        "slot_id": "story:2026-10-01T16:00:00-04:00",
+        "selected_at": "2026-10-01T20:00:30.790Z",
+        "window_start": "2026-10-01T19:00:00.000Z",
+        "window_end": "2026-10-01T20:00:00.000Z",
+        "score": 4,
+        "reason": "final_fallback_recent_pool_importance_score_rank"
       }
     },
     "4c58c37c-0e61-4b46-90df-7f8bd791f110": {
@@ -326677,6 +326686,24 @@
       "status": "selected",
       "story_id": "cd195881-c96d-45d2-bb98-ec547acf70d5",
       "processed_at": "2026-10-01T19:00:30.860Z"
+    },
+    "feed:2026-10-01T16:00:00-04:00": {
+      "destination": "feed",
+      "slot_time": "2026-10-01T20:00:00.000Z",
+      "window_start": "2026-10-01T18:00:00.000Z",
+      "window_end": "2026-10-01T20:00:00.000Z",
+      "status": "selected",
+      "story_id": "cd195881-c96d-45d2-bb98-ec547acf70d5",
+      "processed_at": "2026-10-01T20:00:30.790Z"
+    },
+    "story:2026-10-01T16:00:00-04:00": {
+      "destination": "story",
+      "slot_time": "2026-10-01T20:00:00.000Z",
+      "window_start": "2026-10-01T19:00:00.000Z",
+      "window_end": "2026-10-01T20:00:00.000Z",
+      "status": "selected",
+      "story_id": "f6fe89ed-e0dd-4789-9087-7bd8c326668c",
+      "processed_at": "2026-10-01T20:00:30.790Z"
     }
   }
 }
