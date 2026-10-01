@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-s-australia-debut-draws-100-021-fans-where-does-that-rank-in-league-history",
-      "source_name": "NFL.com",
-      "headline": "NFL's Australia debut draws 100,021 fans. Where does that rank in league history?",
-      "published_at": "2026-09-11T03:16:04.000Z",
-      "observed_at": "2026-09-11T04:20:20.672Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-agree-to-terms-with-wr-ryan-flournoy-on-one-year-extension",
-      "source_name": "Pro Football Talk",
-      "headline": "Cowboys agree to terms with WR Ryan Flournoy on one-year extension",
-      "published_at": "2026-09-11T04:12:58.000Z",
-      "observed_at": "2026-09-11T04:20:20.672Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL"
-      ],
-      "detected_category": "contract",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:contract"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-wr-dezhaun-striblings-achilles-is-intact-to-undergo-mri-on-ankle",
       "source_name": "Pro Football Talk",
       "headline": "49ers WR De'Zhaun Stribling's Achilles is intact, to undergo MRI on ankle",
@@ -42081,6 +42042,45 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-campbell-jared-goff-is-tough-durable-resilient-which-you-have-to-be-at-qb",
+      "source_name": "Pro Football Talk",
+      "headline": "Dan Campbell: Jared Goff is tough, durable, resilient, which you have to be at QB",
+      "published_at": "2026-10-01T14:17:01.000Z",
+      "observed_at": "2026-10-01T14:20:25.188Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jets-sign-ol-kohl-levao-to-their-active-roster",
+      "source_name": "Pro Football Talk",
+      "headline": "Jets sign OL Kohl Levao to their active roster",
+      "published_at": "2026-10-01T14:12:17.000Z",
+      "observed_at": "2026-10-01T14:20:25.188Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYJ"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:roster_move"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
