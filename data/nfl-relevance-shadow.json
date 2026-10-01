@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/missing-surveillance-video-hovers-over-the-shilo-sanders-bankruptcy-trial",
-      "source_name": "Pro Football Talk",
-      "headline": "Missing surveillance video hovers over the Shilo Sanders bankruptcy trial",
-      "published_at": "2026-09-11T14:23:41.000Z",
-      "observed_at": "2026-09-11T14:30:32.414Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/australians-love-an-underdog-49ers-qb-brock-purdy-isn-t-one-anymore",
       "source_name": "NFL.com",
       "headline": "Australians love an underdog. 49ers QB Brock Purdy isn't one anymore",
@@ -42072,6 +42055,28 @@
         "KC"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/john-lynch-on-nick-bosas-return-calf-injuries-are-sometimes-murky",
+      "source_name": "Pro Football Talk",
+      "headline": "John Lynch on Nick Bosa's return: Calf injuries are sometimes murky",
+      "published_at": "2026-10-01T16:41:36.000Z",
+      "observed_at": "2026-10-01T16:50:22.025Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "SF"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
