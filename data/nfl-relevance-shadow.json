@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/falcons-qb-tua-tagovailoa-oblique-out-vs-steelers-cooper-rush-to-start",
-      "source_name": "NFL.com",
-      "headline": "Falcons QB Tua Tagovailoa (oblique) out vs. Steelers; Cooper Rush to start",
-      "published_at": "2026-09-11T05:30:10.000Z",
-      "observed_at": "2026-09-11T17:40:21.570Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rb-jonathon-brooks-ready-to-go-with-no-limitations-for-panthers",
       "source_name": "Pro Football Talk",
       "headline": "RB Jonathon Brooks ready to go with \"no limitations\" for Panthers",
@@ -42073,6 +42051,27 @@
       "confidence": "high",
       "detected_teams": [
         "TEN"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/saints-put-travis-etienne-on-injured-reserve",
+      "source_name": "Pro Football Talk",
+      "headline": "Saints put Travis Etienne on injured reserve",
+      "published_at": "2026-10-01T20:41:47.000Z",
+      "observed_at": "2026-10-01T20:50:21.613Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NO"
       ],
       "detected_category": "injury",
       "nfl_evidence": [
