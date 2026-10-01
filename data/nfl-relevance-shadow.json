@@ -2,69 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nnamdi-madubuike-will-not-play-this-week",
-      "source_name": "Pro Football Talk",
-      "headline": "Nnamdi Madubuike will not play this week",
-      "published_at": "2026-09-11T18:55:16.000Z",
-      "observed_at": "2026-09-11T19:00:32.583Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/chris-the-bear-fallicas-college-football-week-2-expert-picks-best-bets",
-      "source_name": "FOX Sports",
-      "headline": "Chris 'The Bear' Fallica's College Football Week 2 Expert Picks, Best Bets",
-      "published_at": "2026-09-11T18:40:41.000Z",
-      "observed_at": "2026-09-11T19:10:25.998Z",
-      "decision": "reject",
-      "classification": "college_football",
-      "confidence": "medium",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [
-        "college_football_phrase"
-      ],
-      "reason_codes": [
-        "college_marker_no_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/packers-release-bo-melton-but-will-bring-him-back-on-practice-squad",
-      "source_name": "Pro Football Talk",
-      "headline": "Packers release Bo Melton, but will bring him back on practice squad",
-      "published_at": "2026-09-11T19:00:15.000Z",
-      "observed_at": "2026-09-11T19:10:25.998Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/ativacoes-nfl-rio-game",
       "source_name": "NFL.com",
       "headline": "Tudo sobre as ativações do NFL Rio Game",
@@ -42071,6 +42008,65 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/seahawks-nick-emmanwori-doesn-t-regret-playing-in-super-bowl-despite-lingering-injury",
+      "source_name": "NFL.com",
+      "headline": "Seahawks' Nick Emmanwori doesn't regret playing in Super Bowl, despite lingering injury",
+      "published_at": "2026-10-01T01:01:05.000Z",
+      "observed_at": "2026-10-01T22:40:18.015Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SEA"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-backup-quarterback-rankings",
+      "source_name": "FOX Sports",
+      "headline": "NFL Backup Quarterback Rankings: Which Teams Have The Most Reliable QB2s?",
+      "published_at": "2026-10-01T22:24:54.000Z",
+      "observed_at": "2026-10-01T22:40:18.015Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/wr-devonta-smith-lb-zack-baun-remain-out-of-practice",
+      "source_name": "Pro Football Talk",
+      "headline": "WR DeVonta Smith, LB Zack Baun remain out of practice",
+      "published_at": "2026-10-01T22:26:34.000Z",
+      "observed_at": "2026-10-01T22:40:18.015Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
