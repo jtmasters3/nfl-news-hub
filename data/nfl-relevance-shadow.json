@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/raiders-michael-mayer-agree-to-three-year-extension",
-      "source_name": "Pro Football Talk",
-      "headline": "Raiders, Michael Mayer agree to three-year extension",
-      "published_at": "2026-09-12T15:09:00.000Z",
-      "observed_at": "2026-09-12T15:10:26.492Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV"
-      ],
-      "detected_category": "contract",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:contract"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/packers-tucker-kraft-agree-to-four-year-extension",
       "source_name": "Pro Football Talk",
       "headline": "Packers, Tucker Kraft agree to four-year extension",
@@ -42064,6 +42042,29 @@
         "PIT"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-mccarthy-doesnt-know-whether-the-joey-porter-jr-trade-affected-the-team",
+      "source_name": "Pro Football Talk",
+      "headline": "Mike McCarthy doesn't know whether the Joey Porter Jr. trade affected the team",
+      "published_at": "2026-10-02T14:17:25.000Z",
+      "observed_at": "2026-10-02T14:30:25.317Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE",
+        "DAL",
+        "PIT"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
