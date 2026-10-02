@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/inside-the-michael-mayer-deal",
-      "source_name": "Pro Football Talk",
-      "headline": "Inside the Michael Mayer deal",
-      "published_at": "2026-09-12T16:54:08.000Z",
-      "observed_at": "2026-09-12T17:00:28.767Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV"
-      ],
-      "detected_category": "contract",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:contract"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/broncos-may-have-their-deepest-wr-group-in-years-but-can-they-cut-down-on-drops",
       "source_name": "NFL.com",
       "headline": "Broncos may have their deepest WR group in years, but can they cut down on drops?",
@@ -42057,6 +42035,30 @@
       "detected_teams": [
         "CHI",
         "NYJ"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/browns-and-steelers-mismanaged-the-final-seconds-of-the-game",
+      "source_name": "Pro Football Talk",
+      "headline": "Browns and Steelers mismanaged the final seconds of the game",
+      "published_at": "2026-10-02T15:24:23.000Z",
+      "observed_at": "2026-10-02T15:30:26.427Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "CLE",
+        "DAL",
+        "PIT"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
