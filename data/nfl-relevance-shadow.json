@@ -2,48 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-place-rb-malik-davis-on-injured-reserve",
-      "source_name": "Pro Football Talk",
-      "headline": "Cowboys place RB Malik Davis on injured reserve",
-      "published_at": "2026-09-12T18:44:15.000Z",
-      "observed_at": "2026-09-12T18:50:20.640Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/amon-ra-st-brown-needs-only-33-catches-for-most-ever-through-six-nfl-seasons",
-      "source_name": "Pro Football Talk",
-      "headline": "Amon-Ra St. Brown needs only 33 catches for most ever through six NFL seasons",
-      "published_at": "2026-09-12T18:57:38.000Z",
-      "observed_at": "2026-09-12T19:10:19.461Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/chiefs-qb-patrick-mahomes-knee-has-no-injury-status-cleared-for-comeback-monday-night-vs-broncos",
       "source_name": "NFL.com",
       "headline": "Chiefs QB Patrick Mahomes (knee) has no injury status, cleared for comeback Monday night vs. Broncos",
@@ -42067,6 +42025,44 @@
         "NO"
       ],
       "detected_category": "fantasy",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-trade-grades-evaluating-every-deal-made-ahead-of-the-2026-deadline",
+      "source_name": "NFL.com",
+      "headline": "NFL trade grades: Evaluating every deal made ahead of the 2026 deadline",
+      "published_at": "2026-10-02T04:00:03.000Z",
+      "observed_at": "2026-10-02T16:10:26.363Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "trade",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/packers-dt-warren-brinson-to-miss-significant-time-with-groin-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Packers DT Warren Brinson to miss \"significant time\" with groin injury",
+      "published_at": "2026-10-02T15:58:29.000Z",
+      "observed_at": "2026-10-02T16:10:26.363Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
