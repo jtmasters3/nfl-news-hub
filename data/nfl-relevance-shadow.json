@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/baker-mayfield-hopes-to-extend-starting-record-against-joe-burrow-to-4-0",
-      "source_name": "Pro Football Talk",
-      "headline": "Baker Mayfield hopes to extend starting record against Joe Burrow to 4-0",
-      "published_at": "2026-09-12T02:54:00.000Z",
-      "observed_at": "2026-09-12T03:00:26.279Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CIN",
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-send-oc-to-booth-for-first-time-under-nick-sirianni",
-      "source_name": "Pro Football Talk",
-      "headline": "Eagles send OC to booth, for first time under Nick Sirianni",
-      "published_at": "2026-09-12T03:36:38.000Z",
-      "observed_at": "2026-09-12T03:40:19.444Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/caleb-williams-is-one-game-from-tying-the-franchise-record-for-multiple-td-passes",
       "source_name": "Pro Football Talk",
       "headline": "Caleb Williams is one game from tying the franchise record for multiple TD passes",
@@ -42062,6 +42019,45 @@
       "confidence": "high",
       "detected_teams": [
         "ATL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/kenny-moore-ii-went-from-unsigned-to-teaching-8th-grade-now-he-has-another-nfl-chance",
+      "source_name": "NFL.com",
+      "headline": "Kenny Moore II went from unsigned to teaching 8th grade. Now he has another NFL chance",
+      "published_at": "2026-10-02T10:16:06.000Z",
+      "observed_at": "2026-10-02T13:30:27.788Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/20th-anniversary-of-superdome-reopening-revisiting-key-moments-from-saints-emotional-win-over-falcons",
+      "source_name": "NFL.com",
+      "headline": "20th anniversary of Superdome reopening: Revisiting key moments from Saints' emotional win over Falcons",
+      "published_at": "2026-10-02T01:30:02.000Z",
+      "observed_at": "2026-10-02T13:30:27.788Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "NO"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
