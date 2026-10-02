@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/dandre-swift-bears-extension-chicago-running-backs",
-      "source_name": "FOX Sports",
-      "headline": "Bears Reportedly Extend Starting RB D'Andre Swift On 3-Year Deal",
-      "published_at": "2026-09-11T20:09:54.000Z",
-      "observed_at": "2026-09-11T20:20:28.074Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI"
-      ],
-      "detected_category": "contract",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:contract"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/years-breakout-star-will-tyler-shough-why-scouts-execs-like-saints-qb",
       "source_name": "FOX Sports",
       "headline": "This Year's Breakout Star Will Be ... Tyler Shough? Why Scouts, Execs Like Saints QB",
@@ -42059,6 +42037,27 @@
         "PIT"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-de-derrick-harmon-carted-with-foot-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Steelers DE Derrick Harmon carted with foot injury",
+      "published_at": "2026-10-02T01:28:36.000Z",
+      "observed_at": "2026-10-02T01:40:23.454Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT"
+      ],
+      "detected_category": "live_game_state",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
