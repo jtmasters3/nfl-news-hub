@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/week-1-injuries-sunday-pregame-2026-nfl-season",
-      "source_name": "NFL.com",
-      "headline": "NFL Week 1 injuries to monitor for Sunday's games: Joey Porter Jr., Alvin Kamara unlikely to play",
-      "published_at": "2026-09-13T12:19:01.000Z",
-      "observed_at": "2026-09-13T12:30:25.405Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-lamar-jackson-ravens-have-not-had-substantive-contract-talks",
       "source_name": "Pro Football Talk",
       "headline": "Report: Lamar Jackson, Ravens have not had substantive contract talks",
@@ -42065,6 +42048,28 @@
         "TEN"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/stephen-jones-steelers-initial-asking-price-for-joey-porter-jr-was-a-little-hefty",
+      "source_name": "Pro Football Talk",
+      "headline": "Stephen Jones: Steelers' initial asking price for Joey Porter Jr. was \"a little hefty\"",
+      "published_at": "2026-10-02T21:05:01.000Z",
+      "observed_at": "2026-10-02T21:10:20.868Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "PIT"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
