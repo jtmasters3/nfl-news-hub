@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/49ers-give-hc-kyle-shanahan-multiyear-contract-extension",
-      "source_name": "NFL.com",
-      "headline": "Report: 49ers give HC Kyle Shanahan multiyear contract extension",
-      "published_at": "2026-09-11T07:44:06.000Z",
-      "observed_at": "2026-09-11T19:50:22.348Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "contract",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:contract"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-dandre-swift-agree-to-three-year-contract-extension",
       "source_name": "Pro Football Talk",
       "headline": "Bears, D'Andre Swift agree to three-year contract extension",
@@ -42067,6 +42045,27 @@
         "SF"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rb-jadarian-price-did-not-practice-rb-zach-charbonnet-limited-in-his-return",
+      "source_name": "Pro Football Talk",
+      "headline": "RB Jadarian Price did not practice; RB Zach Charbonnet limited in his return",
+      "published_at": "2026-10-02T00:22:05.000Z",
+      "observed_at": "2026-10-02T00:30:22.625Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SEA"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
