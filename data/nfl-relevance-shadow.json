@@ -2,67 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/cj-stroud-texans-contract-extension-details-update",
-      "source_name": "FOX Sports",
-      "headline": "C.J. Stroud, Texans Reportedly Delaying Contract Extension Talks Until Next Year",
-      "published_at": "2026-09-12T22:51:33.000Z",
-      "observed_at": "2026-09-12T23:10:26.171Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "HOU"
-      ],
-      "detected_category": "contract",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:contract"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/judge-seals-video-in-josh-jacobs-case",
-      "source_name": "Pro Football Talk",
-      "headline": "Judge seals video in Josh Jacobs case",
-      "published_at": "2026-09-12T23:27:09.000Z",
-      "observed_at": "2026-09-12T23:40:18.702Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB"
-      ],
-      "detected_category": "free_agency",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:free_agency"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/naacp-takes-issue-with-espns-handling-of-the-protect-college-sports-act",
-      "source_name": "Pro Football Talk",
-      "headline": "NAACP takes issue with ESPN's handling of the Protect College Sports Act",
-      "published_at": "2026-09-12T23:43:28.000Z",
-      "observed_at": "2026-09-12T23:50:18.639Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/broncos-have-no-injury-designations-for-monday-night",
       "source_name": "Pro Football Talk",
       "headline": "Broncos have no injury designations for Monday night",
@@ -42055,6 +41994,73 @@
         "CHI"
       ],
       "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-college-football-odds-best-bets-osu-iowa-chargers-seahaw",
+      "source_name": "FOX Sports",
+      "headline": "2026 NFL, College Football Odds: Best Bets For OSU-Iowa, Chargers-Seahawks",
+      "published_at": "2026-10-02T17:31:28.000Z",
+      "observed_at": "2026-10-02T17:50:27.513Z",
+      "decision": "keep",
+      "classification": "nfl_with_college_context",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC",
+        "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [
+        "college_football_phrase"
+      ],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/trey-hendrickson-out-for-week-4-after-undergoing-procedure-for-broken-finger",
+      "source_name": "Pro Football Talk",
+      "headline": "Trey Hendrickson out for Week 4 after undergoing procedure for broken finger",
+      "published_at": "2026-10-02T17:44:53.000Z",
+      "observed_at": "2026-10-02T17:50:27.513Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "TEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jalen-coker-is-questionable-for-the-panthers-xavier-legette-ruled-out",
+      "source_name": "Pro Football Talk",
+      "headline": "Jalen Coker is questionable for the Panthers, Xavier Legette ruled out",
+      "published_at": "2026-10-02T17:37:02.000Z",
+      "observed_at": "2026-10-02T17:50:27.513Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
