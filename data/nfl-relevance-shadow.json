@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/espn-continues-its-not-so-subtle-advocacy-for-the-protect-college-sports-act",
-      "source_name": "Pro Football Talk",
-      "headline": "ESPN continues its not-so-subtle advocacy for the Protect College Sports Act",
-      "published_at": "2026-09-12T17:44:26.000Z",
-      "observed_at": "2026-09-12T17:50:21.534Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-place-rb-malik-davis-on-injured-reserve",
       "source_name": "Pro Football Talk",
       "headline": "Cowboys place RB Malik Davis on injured reserve",
@@ -42061,6 +42044,29 @@
         "KC"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-week-4-bold-predictions-brock-bowers-cooks-chiefs-zay-flowers-leads-all-fantasy-scorers",
+      "source_name": "NFL.com",
+      "headline": "NFL Week 4 bold predictions: Brock Bowers cooks Chiefs; Zay Flowers leads all fantasy scorers",
+      "published_at": "2026-10-02T03:55:30.000Z",
+      "observed_at": "2026-10-02T16:00:29.358Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC",
+        "LV",
+        "NO"
+      ],
+      "detected_category": "fantasy",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
