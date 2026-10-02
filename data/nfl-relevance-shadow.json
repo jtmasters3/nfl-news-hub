@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-rule-jonathan-greenard-out-for-week-1",
-      "source_name": "Pro Football Talk",
-      "headline": "Eagles rule Jonathan Greenard out for Week 1",
-      "published_at": "2026-09-11T20:03:18.000Z",
-      "observed_at": "2026-09-11T20:10:20.302Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/bucs-bengals-features-nfl-s-two-biggest-wild-cards-in-2026-plus-three-bounce-back-teams",
       "source_name": "NFL.com",
       "headline": "Bucs-Bengals features NFL's two biggest wild cards in 2026; plus, three bounce-back teams",
@@ -42059,6 +42038,28 @@
         "CLE"
       ],
       "detected_category": "live_game_state",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/browns-convert-aaron-rodgers-int-into-td",
+      "source_name": "Pro Football Talk",
+      "headline": "Browns convert Aaron Rodgers' INT into TD",
+      "published_at": "2026-10-02T01:09:37.000Z",
+      "observed_at": "2026-10-02T01:20:22.805Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE",
+        "PIT"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
