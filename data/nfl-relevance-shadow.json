@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/shemar-stewart-doubtful-jamarr-chase-and-tee-higgins-set-to-play-week-1",
-      "source_name": "Pro Football Talk",
-      "headline": "Shemar Stewart doubtful, Ja'Marr Chase and Tee Higgins set to play Week 1",
-      "published_at": "2026-09-11T19:26:39.000Z",
-      "observed_at": "2026-09-11T19:40:19.515Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CIN",
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/49ers-give-hc-kyle-shanahan-multiyear-contract-extension",
       "source_name": "NFL.com",
       "headline": "Report: 49ers give HC Kyle Shanahan multiyear contract extension",
@@ -42065,6 +42043,30 @@
         "LAR"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/real-fake-3-0-starts-bills-chiefs-49ers-vikes-raiders-legit-mirage",
+      "source_name": "FOX Sports",
+      "headline": "Real Or Fake: Are 3-0 Starts For Bills, Chiefs, 49ers, Vikes & Raiders Legit Or Mirage?",
+      "published_at": "2026-10-01T23:13:17.000Z",
+      "observed_at": "2026-10-02T00:00:31.259Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "KC",
+        "LV",
+        "SF"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
