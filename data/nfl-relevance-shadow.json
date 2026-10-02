@@ -2,66 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-catchup-friday-injury-news-kyle-shanahan-extension",
-      "source_name": "FOX Sports",
-      "headline": "NFL Catchup: Who's In, Who's Out For Sunday; Kyle Shanahan Reportedly Gets Extension",
-      "published_at": "2026-09-11T23:04:02.000Z",
-      "observed_at": "2026-09-11T23:30:21.342Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bills-initial-grass-field-had-major-deformations",
-      "source_name": "Pro Football Talk",
-      "headline": "Bills' initial grass field had \"major deformations\"",
-      "published_at": "2026-09-12T00:37:44.000Z",
-      "observed_at": "2026-09-12T00:50:21.347Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-convert-cb-isaiah-rodgerss-playing-time-incentives-into-a-signing-bonus",
-      "source_name": "Pro Football Talk",
-      "headline": "Vikings convert CB Isaiah Rodgers's playing-time incentives into a signing bonus",
-      "published_at": "2026-09-12T00:51:53.000Z",
-      "observed_at": "2026-09-12T01:00:27.545Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/baker-mayfield-hopes-to-extend-starting-record-against-joe-burrow-to-4-0",
       "source_name": "Pro Football Talk",
       "headline": "Baker Mayfield hopes to extend starting record against Joe Burrow to 4-0",
@@ -42063,6 +42003,65 @@
       "detected_teams": [
         "LAC",
         "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/the-steelers-defense-cracks-in-its-first-test-of-the-post-joey-porter-jr-era",
+      "source_name": "NFL.com",
+      "headline": "The Steelers defense cracks in its first test of the post-Joey Porter Jr. era",
+      "published_at": "2026-10-02T09:16:06.000Z",
+      "observed_at": "2026-10-02T13:20:27.541Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/mike-mccarthy-addresses-heated-profane-aaron-rodgers-exchange-wish-i-wouldn-t-use-those-words",
+      "source_name": "NFL.com",
+      "headline": "Mike McCarthy addresses heated, profane Aaron Rodgers exchange: 'Wish I wouldn't use those words'",
+      "published_at": "2026-10-02T05:01:05.000Z",
+      "observed_at": "2026-10-02T13:20:27.541Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-announce-death-of-ring-of-honor-member-jeff-van-note",
+      "source_name": "Pro Football Talk",
+      "headline": "Falcons announce death of Ring of Honor member Jeff Van Note",
+      "published_at": "2026-10-02T13:13:37.000Z",
+      "observed_at": "2026-10-02T13:20:27.541Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
