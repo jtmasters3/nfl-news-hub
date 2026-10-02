@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/report-texans-qb-c-j-stroud-tabling-extension-talks-until-after-season",
-      "source_name": "NFL.com",
-      "headline": "Report: Texans, QB C.J. Stroud tabling extension talks until after season",
-      "published_at": "2026-09-12T09:30:04.000Z",
-      "observed_at": "2026-09-12T21:40:20.620Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "HOU"
-      ],
-      "detected_category": "contract",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:contract"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/cj-stroud-texans-contract-extension-details-update",
       "source_name": "FOX Sports",
       "headline": "C.J. Stroud, Texans Reportedly Delaying Contract Extension Talks Until Next Year",
@@ -42056,6 +42034,27 @@
         "NE"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ben-johnson-doesnt-announce-starting-qb-for-week-4-but-rules-out-caleb-williams",
+      "source_name": "Pro Football Talk",
+      "headline": "Ben Johnson doesn't announce starting QB for Week 4, but rules out Caleb Williams",
+      "published_at": "2026-10-02T17:32:39.000Z",
+      "observed_at": "2026-10-02T17:40:20.978Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
+      ],
+      "detected_category": "coaching",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
