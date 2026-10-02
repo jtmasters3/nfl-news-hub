@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/espn-offers-a-lame-excuse-for-giving-ted-cruz-unopposed-airtime",
-      "source_name": "Pro Football Talk",
-      "headline": "ESPN offers a lame excuse for giving Ted Cruz unopposed airtime",
-      "published_at": "2026-09-13T13:57:26.000Z",
-      "observed_at": "2026-09-13T14:00:31.396Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/niners-wr-dezhaun-stribling-out-at-least-a-month-ankle-sprain",
       "source_name": "NFL.com",
       "headline": "NFL Network: 49ers rookie WR De'Zhaun Stribling out at least a month with ankle sprain; surgery possible",
@@ -42073,6 +42056,27 @@
       "confidence": "high",
       "detected_teams": [
         "KC"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-fines-quinn-meinerz-14-926-for-a-celebratory-dice-roll",
+      "source_name": "Pro Football Talk",
+      "headline": "NFL fines Quinn Meinerz $14,926 for a celebratory dice roll",
+      "published_at": "2026-10-02T22:59:07.000Z",
+      "observed_at": "2026-10-02T23:10:24.381Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
