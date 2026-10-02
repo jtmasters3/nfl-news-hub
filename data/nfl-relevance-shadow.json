@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-miami-dolphins-vs-las-vegas-raiders-tv-channel-live-stream-september-13-2026",
-      "source_name": "FOX Sports",
-      "headline": "How to Watch Dolphins vs. Raiders: TV Channel, Live Stream, Time",
-      "published_at": "2026-09-13T09:33:35.000Z",
-      "observed_at": "2026-09-13T09:40:23.813Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV",
-        "MIA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-baltimore-ravens-vs-indianapolis-colts-tv-channel-live-stream-september-13-2026",
       "source_name": "FOX Sports",
       "headline": "How to Watch Ravens vs. Colts: TV Channel, Live Stream, Time",
@@ -42072,6 +42050,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/colts-commanders-preview-week-4-london-game",
+      "source_name": "NFL.com",
+      "headline": "Colts vs. Commanders: Three must-know storylines for NFL Week 4 London game",
+      "published_at": "2026-10-02T07:57:27.000Z",
+      "observed_at": "2026-10-02T20:00:29.699Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
