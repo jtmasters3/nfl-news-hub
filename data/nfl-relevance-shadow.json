@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/rams-myles-garrett-surgery-injury-update",
-      "source_name": "FOX Sports",
-      "headline": "Rams Star Myles Garrett Reportedly Undergoes Knee Surgery, Will Go On IR",
-      "published_at": "2026-09-13T15:29:14.000Z",
-      "observed_at": "2026-09-13T15:40:20.234Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAC",
-        "LAR",
-        "SF"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/joey-porter-is-inactive-for-the-steelers",
       "source_name": "Pro Football Talk",
       "headline": "Joey Porter is inactive for the Steelers",
@@ -42096,6 +42073,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/five-teams-face-an-0-4-start-and-only-one-0-4-team-has-ever-made-the-playoffs",
+      "source_name": "Pro Football Talk",
+      "headline": "Five teams face an 0-4 start — and only one 0-4 team has ever made the playoffs",
+      "published_at": "2026-10-03T01:27:49.000Z",
+      "observed_at": "2026-10-03T01:40:22.151Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
