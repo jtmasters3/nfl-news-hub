@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cooper-rush-has-had-a-wild-ride-in-2026",
-      "source_name": "Pro Football Talk",
-      "headline": "Cooper Rush has had a wild ride in 2026",
-      "published_at": "2026-09-13T15:20:05.000Z",
-      "observed_at": "2026-09-13T15:30:23.033Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/rams-myles-garrett-surgery-injury-update",
       "source_name": "FOX Sports",
       "headline": "Rams Star Myles Garrett Reportedly Undergoes Knee Surgery, Will Go On IR",
@@ -42084,6 +42067,27 @@
       "confidence": "high",
       "detected_teams": [
         "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/new-bears-stadium-in-illinois-could-be-publicly-owned",
+      "source_name": "Pro Football Talk",
+      "headline": "New Bears stadium in Illinois could be publicly owned",
+      "published_at": "2026-10-03T01:09:57.000Z",
+      "observed_at": "2026-10-03T01:20:20.335Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
