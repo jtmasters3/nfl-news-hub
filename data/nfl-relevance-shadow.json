@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jets-lead-titans-10-3-at-halftime",
-      "source_name": "Pro Football Talk",
-      "headline": "Jets lead Titans 10-3 at halftime",
-      "published_at": "2026-09-13T18:28:35.000Z",
-      "observed_at": "2026-09-13T18:40:19.998Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYJ",
-        "TEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-capitalize-with-td-after-bears-fail-on-fourth-and-1-at-their-own-21-yard-line",
       "source_name": "Pro Football Talk",
       "headline": "Panthers capitalize with TD after Bears fail on fourth-and-1 at their own 21-yard line",
@@ -42081,6 +42059,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/week-3-featured-three-fines-for-blindside-blocks-two-fines-for-hip-drop-tackles",
+      "source_name": "Pro Football Talk",
+      "headline": "Week 3 featured three fines for blindside blocks, two fines for hip-drop tackles",
+      "published_at": "2026-10-03T20:24:09.000Z",
+      "observed_at": "2026-10-03T20:30:24.741Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
