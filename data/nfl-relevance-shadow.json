@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/joey-porter-is-inactive-for-the-steelers",
-      "source_name": "Pro Football Talk",
-      "headline": "Joey Porter is inactive for the Steelers",
-      "published_at": "2026-09-13T15:39:50.000Z",
-      "observed_at": "2026-09-13T15:40:20.234Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PIT"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/myles-garrett-will-have-knee-surgery-head-to-ir",
       "source_name": "Pro Football Talk",
       "headline": "Myles Garrett will have knee surgery, head to IR",
@@ -42090,6 +42069,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-mcvay-is-0-4-against-nick-sirianni",
+      "source_name": "Pro Football Talk",
+      "headline": "Sean McVay is 0-4 against Nick Sirianni",
+      "published_at": "2026-10-03T02:12:36.000Z",
+      "observed_at": "2026-10-03T02:20:21.756Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
