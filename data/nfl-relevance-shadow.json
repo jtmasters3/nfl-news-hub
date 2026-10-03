@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-trying-all-sorts-of-legal-maneuvers-to-get-josh-jacobs-video",
-      "source_name": "Pro Football Talk",
-      "headline": "NFL \"trying all sorts of legal maneuvers\" to get Josh Jacobs video",
-      "published_at": "2026-09-13T15:03:32.000Z",
-      "observed_at": "2026-09-13T15:10:18.423Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/rams-myles-garrett-knee-surgery-injured-reserve",
       "source_name": "NFL.com",
       "headline": "NFL Network: Rams' Myles Garrett to undergo knee surgery, miss at least 4 games while on IR",
@@ -42080,6 +42063,29 @@
         "SEA"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-network-qb-tyson-bagent-likely-to-start-for-bears-on-sunday-vs-jets",
+      "source_name": "NFL.com",
+      "headline": "NFL Network: QB Tyson Bagent likely to start for Bears on Sunday vs. Jets",
+      "published_at": "2026-10-03T12:15:34.000Z",
+      "observed_at": "2026-10-03T00:20:19.971Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "NYG",
+        "NYJ"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
