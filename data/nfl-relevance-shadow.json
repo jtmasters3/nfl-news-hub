@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-rb-malik-davis-is-out-for-the-year-after-hip-surgery",
-      "source_name": "Pro Football Talk",
-      "headline": "Cowboys RB Malik Davis is out for the year after hip surgery",
-      "published_at": "2026-09-13T16:02:27.000Z",
-      "observed_at": "2026-09-13T16:10:18.633Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/charles-woodsons-week-1-storylines-expectations-kansas-city-chiefs",
       "source_name": "FOX Sports",
       "headline": "Why Patrick Mahomes, Chiefs' Response To Disappointing 2025 Is Top Storyline In 2026",
@@ -42090,6 +42069,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/liam-coen-on-travis-hunters-usage-he-cares-about-winning",
+      "source_name": "Pro Football Talk",
+      "headline": "Liam Coen on Travis Hunter's usage: \"He cares about winning\"",
+      "published_at": "2026-10-03T04:35:16.000Z",
+      "observed_at": "2026-10-03T04:40:21.715Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX"
+      ],
+      "detected_category": "draft",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:draft"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
