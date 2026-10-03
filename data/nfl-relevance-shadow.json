@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-score-opening-drive-touchdown-after-bears-fumble",
-      "source_name": "Pro Football Talk",
-      "headline": "Panthers score opening-drive touchdown after Bears fumble",
-      "published_at": "2026-09-13T17:20:18.000Z",
-      "observed_at": "2026-09-13T17:30:23.349Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR",
-        "CHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaguars-turn-deshaun-watson-interception-into-touchdown-lead-browns-7-0",
-      "source_name": "Pro Football Talk",
-      "headline": "Jaguars turn Deshaun Watson interception into touchdown, lead Browns 7-0",
-      "published_at": "2026-09-13T17:19:16.000Z",
-      "observed_at": "2026-09-13T17:30:23.349Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE",
-        "JAX"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-open-2026-season-with-a-jonathan-taylor-touchdown",
       "source_name": "Pro Football Talk",
       "headline": "Colts open 2026 season with a Jonathan Taylor touchdown",
@@ -42080,6 +42036,45 @@
       "confidence": "high",
       "detected_teams": [
         "GB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-saturday-oct-3",
+      "source_name": "NFL.com",
+      "headline": "NFL news roundup: Latest league updates from Saturday, Oct. 3",
+      "published_at": "2026-10-03T03:02:18.000Z",
+      "observed_at": "2026-10-03T15:10:25.238Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-rule-out-keenan-allen",
+      "source_name": "Pro Football Talk",
+      "headline": "Colts rule out Keenan Allen",
+      "published_at": "2026-10-03T15:03:32.000Z",
+      "observed_at": "2026-10-03T15:10:25.238Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "WAS"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
