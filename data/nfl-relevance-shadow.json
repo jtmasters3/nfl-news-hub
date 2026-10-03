@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/jay-glazer-offseason-changes-eagles-chiefs-jalen-hurts-travis-kelce",
-      "source_name": "FOX Sports",
-      "headline": "Jay Glazer Highlights Two Key Eagles And Chiefs Veterans Ready To Shine In 2026",
-      "published_at": "2026-09-13T16:23:06.000Z",
-      "observed_at": "2026-09-13T16:40:20.400Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/as-clock-ticks-toward-sunday-night-malik-nabers-waits-for-a-sign-from-above",
       "source_name": "Pro Football Talk",
       "headline": "As clock ticks toward Sunday night, Malik Nabers waits for a sign from above",
@@ -42091,6 +42069,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/maxx-crosby-vegas-is-a-different-type-of-city-we-have-to-earn-home-field-advantage",
+      "source_name": "Pro Football Talk",
+      "headline": "Maxx Crosby: Vegas is a different type of city, we have to earn home-field advantage",
+      "published_at": "2026-10-03T10:18:06.000Z",
+      "observed_at": "2026-10-03T10:30:21.706Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
