@@ -2,69 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-open-2026-season-with-a-jonathan-taylor-touchdown",
-      "source_name": "Pro Football Talk",
-      "headline": "Colts open 2026 season with a Jonathan Taylor touchdown",
-      "published_at": "2026-09-13T17:16:02.000Z",
-      "observed_at": "2026-09-13T17:30:23.349Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lamar-jackson-runs-it-in-ravens-lead-7-6",
-      "source_name": "Pro Football Talk",
-      "headline": "Lamar Jackson runs it in, Ravens lead 7-6",
-      "published_at": "2026-09-13T17:24:59.000Z",
-      "observed_at": "2026-09-13T17:40:21.060Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-seahawks-seek-multiple-medical-opinons-on-sam-darnolds-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Seahawks seek multiple medical opinons on Sam Darnold's injury",
-      "published_at": "2026-09-13T17:44:07.000Z",
-      "observed_at": "2026-09-13T17:50:23.764Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/minkah-fitzpatrick-omar-cooper-questionable-to-return-for-jets",
       "source_name": "Pro Football Talk",
       "headline": "Minkah Fitzpatrick, Omar Cooper questionable to return for Jets",
@@ -42075,6 +42012,66 @@
       "detected_teams": [
         "IND",
         "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/eagles-rams-predictions-can-philadelphia-rebound-without-devonta-smith-and-zack-baun",
+      "source_name": "NFL.com",
+      "headline": "Eagles-Rams predictions: Can Philadelphia rebound without DeVonta Smith and Zack Baun?",
+      "published_at": "2026-10-03T10:46:04.000Z",
+      "observed_at": "2026-10-03T15:40:21.090Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR",
+        "PHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/brian-schottenheimer-made-a-costly-leadership-mistake-here-s-why",
+      "source_name": "NFL.com",
+      "headline": "Brian Schottenheimer made a costly leadership mistake. Here's why",
+      "published_at": "2026-10-03T09:16:05.000Z",
+      "observed_at": "2026-10-03T15:40:21.090Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/49ers-new-defensive-linemen-don-t-need-name-tags-as-they-all-share-the-hunger-to-fit-in",
+      "source_name": "NFL.com",
+      "headline": "49ers' new defensive linemen don't need name tags, as they all share the hunger to fit in",
+      "published_at": "2026-10-03T01:01:04.000Z",
+      "observed_at": "2026-10-03T15:40:21.090Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
