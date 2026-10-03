@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/as-clock-ticks-toward-sunday-night-malik-nabers-waits-for-a-sign-from-above",
-      "source_name": "Pro Football Talk",
-      "headline": "As clock ticks toward Sunday night, Malik Nabers waits for a sign from above",
-      "published_at": "2026-09-13T16:36:50.000Z",
-      "observed_at": "2026-09-13T16:40:20.400Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "NYG"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/seahawks-qb-sam-darnold-injury-timetable-jay-glazer",
       "source_name": "FOX Sports",
       "headline": "Jay Glazer Provides Update On Seahawks QB Sam Darnold's Injury And Timeline",
@@ -42086,6 +42063,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-dont-have-a-timeline-on-myles-garretts-return",
+      "source_name": "Pro Football Talk",
+      "headline": "Rams don't have a timeline on Myles Garrett's return",
+      "published_at": "2026-10-03T11:56:07.000Z",
+      "observed_at": "2026-10-03T12:00:29.432Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
