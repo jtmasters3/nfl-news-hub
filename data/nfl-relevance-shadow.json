@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jeremiyah-love-scores-on-cardinals-first-possession",
-      "source_name": "Pro Football Talk",
-      "headline": "Jeremiyah Love scores on Cardinals' first possession",
-      "published_at": "2026-09-13T20:42:59.000Z",
-      "observed_at": "2026-09-13T20:50:21.591Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-beat-panthers-59-37-in-week-1-offensive-frenzy",
       "source_name": "Pro Football Talk",
       "headline": "Bears beat Panthers 59-37 in Week 1 offensive frenzy",
@@ -42054,6 +42033,23 @@
       "confidence": "low",
       "detected_teams": [],
       "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/week-4-injuries-sunday-pregame-2026-nfl-season",
+      "source_name": "NFL.com",
+      "headline": "NFL Week 4 injuries to monitor for Sunday's games",
+      "published_at": "2026-10-04T12:29:29.000Z",
+      "observed_at": "2026-10-04T12:40:19.293Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
       "nfl_evidence": [],
       "non_nfl_evidence": [],
       "reason_codes": [
