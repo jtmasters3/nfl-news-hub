@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sam-darnold-could-miss-4-6-weeks",
-      "source_name": "Pro Football Talk",
-      "headline": "Sam Darnold could miss 4-6 weeks",
-      "published_at": "2026-09-13T22:02:16.000Z",
-      "observed_at": "2026-09-13T22:10:19.248Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/demeco-ryans-c-j-stroud-played-well-enough-for-us-to-win",
-      "source_name": "Pro Football Talk",
-      "headline": "DeMeco Ryans: C.J. Stroud played well enough for us to win",
-      "published_at": "2026-09-13T21:57:54.000Z",
-      "observed_at": "2026-09-13T22:10:19.248Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-lead-commanders-14-9-at-halftime",
       "source_name": "Pro Football Talk",
       "headline": "Eagles lead Commanders 14-9 at halftime",
@@ -42053,6 +42015,44 @@
         "PIT"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-will-surely-want-to-plug-hold-in-loophole-but-it-wont-be-easy",
+      "source_name": "Pro Football Talk",
+      "headline": "NFL will surely want to plug \"hold-in\" loophole, but it won't be easy",
+      "published_at": "2026-10-04T13:39:19.000Z",
+      "observed_at": "2026-10-04T13:50:22.384Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/daniel-jones-fumbles-commanders-score-first-in-london",
+      "source_name": "Pro Football Talk",
+      "headline": "Daniel Jones fumbles, Commanders score first in London",
+      "published_at": "2026-10-04T13:39:11.000Z",
+      "observed_at": "2026-10-04T13:50:22.384Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "WAS"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
