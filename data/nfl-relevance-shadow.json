@@ -2,66 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-mcvay-we-thought-myles-garretts-knee-injury-was-something-he-could-work-through",
-      "source_name": "Pro Football Talk",
-      "headline": "Sean McVay: We thought Myles Garrett's knee injury was something he could work through",
-      "published_at": "2026-09-14T16:40:52.000Z",
-      "observed_at": "2026-09-14T16:50:23.422Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/henry-tootoo-will-be-out-for-some-time-with-shoulder-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "Henry To'oTo'o will be out for \"some time\" with shoulder injury",
-      "published_at": "2026-09-14T16:59:52.000Z",
-      "observed_at": "2026-09-14T17:00:30.741Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "HOU"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-s-malik-hooker-fractured-a-bone-in-his-forearm",
-      "source_name": "Pro Football Talk",
-      "headline": "Cowboys S Malik Hooker fractured a bone in his forearm",
-      "published_at": "2026-09-14T16:55:59.000Z",
-      "observed_at": "2026-09-14T17:00:30.741Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "NYG"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/rams-sean-mcvay-no-timeline-myles-garrett-return-post-knee-surgery",
       "source_name": "NFL.com",
       "headline": "Rams' Sean McVay: No timeline on Myles Garrett's return post knee surgery",
@@ -42063,6 +42003,71 @@
       "confidence": "high",
       "detected_teams": [
         "DEN"
+      ],
+      "detected_category": "live_game_state",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kenneth-walker-76-yard-run-leads-to-td-chiefs-lead-17-13",
+      "source_name": "Pro Football Talk",
+      "headline": "Kenneth Walker 76-yard run leads to TD, Chiefs lead 17-13",
+      "published_at": "2026-10-04T22:45:08.000Z",
+      "observed_at": "2026-10-04T22:50:21.642Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chargers-rule-out-ladd-mcconkey-joe-alt",
+      "source_name": "Pro Football Talk",
+      "headline": "Chargers rule out Ladd McConkey, Joe Alt",
+      "published_at": "2026-10-04T22:42:47.000Z",
+      "observed_at": "2026-10-04T22:50:21.642Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC",
+        "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-recover-fumble-take-10-3-lead-in-denver",
+      "source_name": "Pro Football Talk",
+      "headline": "49ers recover fumble, take 10-3 lead in Denver",
+      "published_at": "2026-10-04T22:38:18.000Z",
+      "observed_at": "2026-10-04T22:50:21.642Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "SF"
       ],
       "detected_category": "live_game_state",
       "nfl_evidence": [
