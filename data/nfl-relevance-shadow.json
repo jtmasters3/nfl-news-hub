@@ -2,25 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-offenses-combine-one-highest-scoring-opening-weeks-history",
-      "source_name": "FOX Sports",
-      "headline": "NFL Offenses Combine For One Of Highest-Scoring Opening Weeks In History",
-      "published_at": "2026-09-14T16:44:03.000Z",
-      "observed_at": "2026-09-14T16:50:23.422Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "draft",
-      "nfl_evidence": [
-        "nfl_preserving_category:draft"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-mcvay-we-thought-myles-garretts-knee-injury-was-something-he-could-work-through",
       "source_name": "Pro Football Talk",
       "headline": "Sean McVay: We thought Myles Garrett's knee injury was something he could work through",
@@ -42063,6 +42044,27 @@
         "PHI"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/broncos-cb-riley-moss-questionable-to-return-with-injured-ribs",
+      "source_name": "Pro Football Talk",
+      "headline": "Broncos CB Riley Moss questionable to return with injured ribs",
+      "published_at": "2026-10-04T22:25:21.000Z",
+      "observed_at": "2026-10-04T22:40:19.064Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN"
+      ],
+      "detected_category": "live_game_state",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
