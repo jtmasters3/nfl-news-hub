@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-top-10-rankings-week-1-monday-morning",
-      "source_name": "FOX Sports",
-      "headline": "Monday Morning NFL Top 10 Rankings: A New No. 1 Emerges From Week 1",
-      "published_at": "2026-09-14T14:10:07.000Z",
-      "observed_at": "2026-09-14T14:20:26.833Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/uk-and-ireland-week-2-broadcast-games",
       "source_name": "NFL.com",
       "headline": "UK and Ireland Week 2 Broadcast Games",
@@ -42042,6 +42025,28 @@
         "TEN"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/seahawks-take-advantage-of-chargers-second-turnover-lead-7-3",
+      "source_name": "Pro Football Talk",
+      "headline": "Seahawks take advantage of Chargers' second turnover, lead 7-3",
+      "published_at": "2026-10-04T20:56:27.000Z",
+      "observed_at": "2026-10-04T21:00:30.895Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC",
+        "SEA"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
