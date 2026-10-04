@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/stefon-diggs-scores-td-but-costs-commanders-chance-to-tie-with-penalty",
-      "source_name": "Pro Football Talk",
-      "headline": "Stefon Diggs scores TD, but costs Commanders chance to tie with penalty",
-      "published_at": "2026-09-13T23:07:55.000Z",
-      "observed_at": "2026-09-13T23:10:19.668Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI",
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-rodgers-awards-mike-mccarthy-game-ball-after-pittsburghs-win",
       "source_name": "Pro Football Talk",
       "headline": "Aaron Rodgers awards Mike McCarthy game ball after Pittsburgh's win",
@@ -42051,6 +42029,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-lead-as-commanders-offense-sputters-behind-third-string-qb-athan-kaliakmanis",
+      "source_name": "Pro Football Talk",
+      "headline": "Colts lead as Commanders' offense sputters behind third-string QB Athan Kaliakmanis",
+      "published_at": "2026-10-04T14:59:07.000Z",
+      "observed_at": "2026-10-04T15:10:21.338Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "WAS"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
