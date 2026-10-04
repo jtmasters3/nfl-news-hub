@@ -2,51 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/inside-bengals-4-forced-turnovers-vs-buccaneers-that-established-a-defensive-vision",
-      "source_name": "NFL.com",
-      "headline": "Inside Bengals' 4 forced turnovers vs. Buccaneers that established a defensive vision",
-      "published_at": "2026-09-14T01:31:04.000Z",
-      "observed_at": "2026-09-14T02:50:18.129Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CIN",
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/dallas-cowboys-vs-new-york-giants-takeaways-september-13",
-      "source_name": "FOX Sports",
-      "headline": "New York Delivers Giant Performance: 3 Takeaways From Cowboys' Season-Opening Loss",
-      "published_at": "2026-09-14T03:35:55.000Z",
-      "observed_at": "2026-09-14T03:40:22.283Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "NYG",
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-odds-week-2-lines-spreads-results-all-16-games",
       "source_name": "FOX Sports",
       "headline": "2026 NFL Odds Week 2: Lines, Spreads, Results For All 16 Games",
@@ -42028,6 +41983,51 @@
         "PHI"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/packers-lead-bucs-10-7-at-halftime-after-jalon-daniels-second-int",
+      "source_name": "Pro Football Talk",
+      "headline": "Packers lead Bucs 10-7 at halftime after Jalon Daniels' second INT",
+      "published_at": "2026-10-04T18:31:59.000Z",
+      "observed_at": "2026-10-04T18:40:24.077Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
+        "TB"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_udfa"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaguars-pick-off-joe-burrow-extend-lead-to-13-3-before-halftime",
+      "source_name": "Pro Football Talk",
+      "headline": "Jaguars pick off Joe Burrow, extend lead to 13-3 before halftime",
+      "published_at": "2026-10-04T18:28:31.000Z",
+      "observed_at": "2026-10-04T18:40:24.077Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN",
+        "JAX"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
