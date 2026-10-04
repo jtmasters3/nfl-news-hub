@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kevin-oconnell-kyler-murray-feels-pretty-good-well-take-it-a-day-at-a-time",
-      "source_name": "Pro Football Talk",
-      "headline": "Kevin O'Connell: Kyler Murray feels \"pretty good,\" we'll take it a day at a time",
-      "published_at": "2026-09-14T18:32:22.000Z",
-      "observed_at": "2026-09-14T18:40:22.089Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brian-thomas-will-be-limited-in-practice-but-jaguars-expect-him-to-play-in-week-2",
       "source_name": "Pro Football Talk",
       "headline": "Brian Thomas will be limited in practice, but Jaguars expect him to play in Week 2",
@@ -42082,6 +42061,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lamar-jackson-is-believed-to-week-to-week-pending-an-mri",
+      "source_name": "Pro Football Talk",
+      "headline": "Lamar Jackson is believed to be \"week to week,\" pending an MRI",
+      "published_at": "2026-10-04T23:24:49.000Z",
+      "observed_at": "2026-10-04T23:30:25.682Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
