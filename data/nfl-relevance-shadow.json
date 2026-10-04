@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/ravens-rb-derrick-henry-passes-marcus-allen-for-third-on-all-time-rushing-td-list",
-      "source_name": "NFL.com",
-      "headline": "Ravens RB Derrick Henry passes Marcus Allen for third on all-time rushing TD list",
-      "published_at": "2026-09-13T07:50:58.000Z",
-      "observed_at": "2026-09-13T20:00:28.262Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "IND"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/deshaun-watson-browns-offense-struggle-34-10-loss-jaguars",
       "source_name": "FOX Sports",
       "headline": "Deshaun Watson Struggles Mightily, Jaguars Blow Out Browns In Week 1",
@@ -42066,6 +42044,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jeremiah-smith-im-the-best-player-in-the-country",
+      "source_name": "Pro Football Talk",
+      "headline": "Jeremiah Smith: \"I'm the best player in the country\"",
+      "published_at": "2026-10-04T01:48:10.000Z",
+      "observed_at": "2026-10-04T02:00:30.255Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
