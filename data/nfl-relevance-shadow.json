@@ -2,70 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kirk-cousins-throws-int-then-third-td-as-raiders-lead-24-13",
-      "source_name": "Pro Football Talk",
-      "headline": "Kirk Cousins throws INT, then third TD as Raiders lead 24-13",
-      "published_at": "2026-09-13T22:19:41.000Z",
-      "observed_at": "2026-09-13T22:30:23.756Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV",
-        "MIA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/tom-brady-details-what-nfl-offensive-playcall-sheet-looks-like",
-      "source_name": "FOX Sports",
-      "headline": "Tom Brady Shows Off Offensive Play Sheet From Super Bowl LI Win Over Falcons",
-      "published_at": "2026-09-13T22:38:17.000Z",
-      "observed_at": "2026-09-13T22:40:23.039Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cam-ward-im-very-disappointed-were-better-than-we-showed-today",
-      "source_name": "Pro Football Talk",
-      "headline": "Cam Ward: I'm very disappointed, we're better than we showed today",
-      "published_at": "2026-09-13T22:29:35.000Z",
-      "observed_at": "2026-09-13T22:40:23.039Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "TEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sunday-night-football-malik-nabers-is-active-for-giants-cowboys",
       "source_name": "Pro Football Talk",
       "headline": "Sunday Night Football: Malik Nabers is active for Giants-Cowboys",
@@ -42051,6 +41987,67 @@
       "detected_teams": [
         "LAR",
         "PHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/notable-injuries-news-sunday-week-4-games",
+      "source_name": "NFL.com",
+      "headline": "Notable injuries, news from Sunday's Week 4 games: Marcus Mariota questionable to return",
+      "published_at": "2026-10-04T02:00:42.000Z",
+      "observed_at": "2026-10-04T14:10:20.750Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "live_game_state",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/marcus-mariota-injured-third-string-quarterback-athan-kaliakmanis-in-for-commanders",
+      "source_name": "Pro Football Talk",
+      "headline": "Marcus Mariota injured, third-string quarterback Athan Kaliakmanis in for Commanders",
+      "published_at": "2026-10-04T13:59:57.000Z",
+      "observed_at": "2026-10-04T14:10:20.750Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "WAS"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/one-year-later-mark-sanchez-criminal-civil-cases-are-not-yet-resolved",
+      "source_name": "Pro Football Talk",
+      "headline": "One year later, Mark Sanchez criminal, civil cases are not yet resolved",
+      "published_at": "2026-10-04T13:58:39.000Z",
+      "observed_at": "2026-10-04T14:10:20.750Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "LV"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
