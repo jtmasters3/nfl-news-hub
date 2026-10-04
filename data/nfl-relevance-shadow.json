@@ -2,62 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-cfb-weekend-betting-recap-bettors-enjoy-champagne-popping-sunday",
-      "source_name": "FOX Sports",
-      "headline": "NFL, CFB Weekend Betting Recap: Bettors Enjoy 'Champagne-Popping' Sunday",
-      "published_at": "2026-09-14T15:18:38.000Z",
-      "observed_at": "2026-09-14T15:30:26.024Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-falcons-dl-dashawn-hand-believed-to-have-a-torn-quad",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Falcons DL Da'Shawn Hand believed to have a torn quad",
-      "published_at": "2026-09-14T15:24:44.000Z",
-      "observed_at": "2026-09-14T15:30:26.024Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cbs-announces-next-two-weeks-of-broadcasters-with-no-tony-romo",
-      "source_name": "Pro Football Talk",
-      "headline": "CBS announces next two weeks of broadcasters, with no Tony Romo",
-      "published_at": "2026-09-14T15:24:01.000Z",
-      "observed_at": "2026-09-14T15:30:26.024Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-sept-14",
       "source_name": "NFL.com",
       "headline": "NFL news roundup: Latest league updates from Monday, Sept. 14",
@@ -42058,6 +42002,66 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/packers-edgerrin-cooper-expected-to-miss-rest-of-season-with-achilles-injury-matt-lafleur-says",
+      "source_name": "NFL.com",
+      "headline": "Packers' Edgerrin Cooper expected to miss rest of season with Achilles injury, Matt LaFleur says",
+      "published_at": "2026-10-04T09:16:05.000Z",
+      "observed_at": "2026-10-04T21:40:20.502Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dak-prescott-took-a-cleat-to-his-throwing-hand-but-says-hes-perfectly-fine",
+      "source_name": "Pro Football Talk",
+      "headline": "Dak Prescott took a cleat to his throwing hand, but says he's \"perfectly fine\"",
+      "published_at": "2026-10-04T21:33:44.000Z",
+      "observed_at": "2026-10-04T21:40:20.502Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "HOU"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-vrabel-ref-flagged-me-because-he-was-sensitive-when-i-told-him-he-made-a-bad-call",
+      "source_name": "Pro Football Talk",
+      "headline": "Mike Vrabel: Ref flagged me because he was sensitive when I told him he made a bad call",
+      "published_at": "2026-10-04T21:31:59.000Z",
+      "observed_at": "2026-10-04T21:40:20.502Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
