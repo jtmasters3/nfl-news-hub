@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-outlast-commanders-for-a-24-22-win",
-      "source_name": "Pro Football Talk",
-      "headline": "Eagles outlast Commanders for a 24-22 win",
-      "published_at": "2026-09-13T23:40:47.000Z",
-      "observed_at": "2026-09-13T23:50:20.695Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI",
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ashton-jeanty-raiders-top-dolphins-27-13",
-      "source_name": "Pro Football Talk",
-      "headline": "Ashton Jeanty, Raiders top Dolphins 27-13",
-      "published_at": "2026-09-13T23:39:39.000Z",
-      "observed_at": "2026-09-13T23:50:20.695Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV",
-        "MIA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/washington-commanders-vs-philadelphia-eagles-takeaways-september-13",
       "source_name": "FOX Sports",
       "headline": "Philly Gets Victory, But Was It Impressive? 3 Takeaways From Eagles Win vs. Commanders",
@@ -42045,6 +42001,51 @@
         "PHI"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lane-johnson-is-inactive-for-the-eagles",
+      "source_name": "Pro Football Talk",
+      "headline": "Lane Johnson is inactive for the Eagles",
+      "published_at": "2026-10-04T15:42:54.000Z",
+      "observed_at": "2026-10-04T15:50:22.440Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR",
+        "PHI"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/joey-porter-jr-will-make-his-cowboys-debut-on-sunday",
+      "source_name": "Pro Football Talk",
+      "headline": "Joey Porter Jr. will make his Cowboys debut on Sunday",
+      "published_at": "2026-10-04T15:37:43.000Z",
+      "observed_at": "2026-10-04T15:50:22.440Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "PIT"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
