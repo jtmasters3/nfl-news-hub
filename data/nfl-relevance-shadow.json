@@ -2,73 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sunday-night-football-jaxson-dart-td-pass-gives-giants-14-7-halftime-lead",
-      "source_name": "Pro Football Talk",
-      "headline": "Sunday Night Football: Jaxson Dart TD pass gives Giants 14-7 halftime lead",
-      "published_at": "2026-09-14T01:56:46.000Z",
-      "observed_at": "2026-09-14T02:00:29.877Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-fallout-week-1-bears-got-gusto-best-offense-football",
-      "source_name": "FOX Sports",
-      "headline": "NFL Fallout Week 1: The Bears Got The Gusto To Be The Best Offense In Football",
-      "published_at": "2026-09-14T02:06:03.000Z",
-      "observed_at": "2026-09-14T02:10:19.451Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "CIN",
-        "LAR",
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/ravens-rookie-wr-ja-kobi-lane-to-miss-several-weeks-with-fractured-wrist",
-      "source_name": "NFL.com",
-      "headline": "Ravens rookie WR Ja'Kobi Lane to miss several weeks with fractured wrist",
-      "published_at": "2026-09-14T02:16:30.000Z",
-      "observed_at": "2026-09-14T02:20:18.973Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "IND"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/isaiah-likelys-second-touchdown-of-the-night-gives-giants-21-7-lead",
       "source_name": "Pro Football Talk",
       "headline": "Isaiah Likely's second touchdown of the night gives Giants 21-7 lead",
@@ -42031,6 +41964,70 @@
         "SEA"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/eagles-rb-saquon-barkley-hamstring-injury-update",
+      "source_name": "FOX Sports",
+      "headline": "Eagles RB Saquon Barkley Exits Game With Hamstring Injury Against Rams",
+      "published_at": "2026-10-04T18:17:07.000Z",
+      "observed_at": "2026-10-04T18:20:24.312Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC",
+        "LAR",
+        "PHI"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/which-mlb-positions-could-todays-nfl-superstars-actually-play",
+      "source_name": "FOX Sports",
+      "headline": "Which MLB Positions Could Today’s NFL Superstars Actually Play?",
+      "published_at": "2026-10-04T18:12:41.000Z",
+      "observed_at": "2026-10-04T18:20:24.312Z",
+      "decision": "reject",
+      "classification": "other_sport",
+      "confidence": "high",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [
+        "league_mlb"
+      ],
+      "reason_codes": [
+        "other_sport_marker_no_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/darius-coopers-outstanding-catch-gives-eagles-13-3-lead-over-rams",
+      "source_name": "Pro Football Talk",
+      "headline": "Darius Cooper's outstanding catch gives Eagles 13-3 lead over Rams",
+      "published_at": "2026-10-04T18:10:37.000Z",
+      "observed_at": "2026-10-04T18:20:24.312Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR",
+        "PHI"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
