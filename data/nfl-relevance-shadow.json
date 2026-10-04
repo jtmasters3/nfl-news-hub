@@ -2,47 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/2027-nfl-draft-odds-no-1-pick",
-      "source_name": "FOX Sports",
-      "headline": "2027 NFL Draft No. 1 Pick Odds: Manning Favored; Could Smith Challenge?",
-      "published_at": "2026-09-14T15:46:18.000Z",
-      "observed_at": "2026-09-14T16:00:29.013Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [],
-      "detected_category": "draft",
-      "nfl_evidence": [
-        "phrase_nfl_draft",
-        "nfl_preserving_category:draft"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sundays-loss-was-the-latest-green-bay-meltdown",
-      "source_name": "Pro Football Talk",
-      "headline": "Sunday's loss was the latest Green Bay meltdown",
-      "published_at": "2026-09-14T16:04:06.000Z",
-      "observed_at": "2026-09-14T16:10:21.224Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/five-storylines-to-know-from-week-1-of-2026-nfl-season",
       "source_name": "NFL.com",
       "headline": "5 storylines to know from Week 1 of 2026 season: Bears, Ravens amaze and a tale of two LaFleurs",
@@ -42062,6 +42021,49 @@
         "SF"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rashee-rice-doubtful-to-return-jalen-nailor-ruled-out",
+      "source_name": "Pro Football Talk",
+      "headline": "Rashee Rice doubtful to return, Jalen Nailor ruled out",
+      "published_at": "2026-10-04T22:13:45.000Z",
+      "observed_at": "2026-10-04T22:20:23.792Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV"
+      ],
+      "detected_category": "live_game_state",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/seahawks-lead-chargers-20-6-at-halftime",
+      "source_name": "Pro Football Talk",
+      "headline": "Seahawks lead Chargers 20-6 at halftime",
+      "published_at": "2026-10-04T22:10:40.000Z",
+      "observed_at": "2026-10-04T22:20:23.792Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC",
+        "SEA"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
