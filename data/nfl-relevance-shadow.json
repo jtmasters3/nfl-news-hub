@@ -2,71 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dak-prescott-1-yard-td-to-ceedee-lamb-ties-cowboys-giants-at-7-7",
-      "source_name": "Pro Football Talk",
-      "headline": "Dak Prescott 1-yard TD to CeeDee Lamb ties Cowboys, Giants at 7-7",
-      "published_at": "2026-09-14T01:24:08.000Z",
-      "observed_at": "2026-09-14T01:30:21.777Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ben-johnson-we-didnt-get-into-this-profession-to-be-mediocre-or-average",
-      "source_name": "Pro Football Talk",
-      "headline": "Ben Johnson: We didn't get into this profession to be mediocre or average",
-      "published_at": "2026-09-14T01:23:29.000Z",
-      "observed_at": "2026-09-14T01:30:21.777Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/jayden-daniels-takes-blame-stefon-diggs-penalty-commanders-loss",
-      "source_name": "FOX Sports",
-      "headline": "Jayden Daniels Takes Blame For Stefon Diggs' Penalty In Commanders' Loss",
-      "published_at": "2026-09-14T01:47:11.000Z",
-      "observed_at": "2026-09-14T01:50:25.152Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI",
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/brady-commanders-2-point-conversion",
       "source_name": "FOX Sports",
       "headline": "Tom Brady Questions Commanders Failed 2-Point Playcall In Loss To Eagles",
@@ -42037,6 +41972,66 @@
         "NYJ"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jamarr-chase-leaves-for-a-concussion-evaluation",
+      "source_name": "Pro Football Talk",
+      "headline": "Ja'Marr Chase leaves for a concussion evaluation",
+      "published_at": "2026-10-04T17:53:14.000Z",
+      "observed_at": "2026-10-04T18:00:27.386Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/matthew-golden-scores-fourth-down-for-7-0-packers-lead",
+      "source_name": "Pro Football Talk",
+      "headline": "Matthew Golden scores fourth-down TD for 7-0 Packers lead",
+      "published_at": "2026-10-04T17:45:54.000Z",
+      "observed_at": "2026-10-04T18:00:27.386Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
+        "TB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/odell-beckham-jr-says-giants-gave-me-the-run-along",
+      "source_name": "Pro Football Talk",
+      "headline": "Odell Beckham Jr. says Giants \"gave me the run along\"",
+      "published_at": "2026-10-04T17:44:57.000Z",
+      "observed_at": "2026-10-04T18:00:27.386Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG"
+      ],
+      "detected_category": "coaching",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
