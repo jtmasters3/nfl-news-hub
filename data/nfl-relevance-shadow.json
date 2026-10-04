@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/t-j-watt-pick-six-gives-steelers-20-10-fourth-quarter-lead",
-      "source_name": "Pro Football Talk",
-      "headline": "T.J. Watt pick-six gives Steelers 20-10 fourth-quarter lead",
-      "published_at": "2026-09-13T19:44:27.000Z",
-      "observed_at": "2026-09-13T19:50:20.317Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/texans-lead-bills-28-27-on-david-montgomerys-third-td",
       "source_name": "Pro Football Talk",
       "headline": "Texans lead Bills 28-27 on David Montgomery's third TD",
@@ -42071,6 +42050,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/yale-qb-dante-reno-has-big-performance-after-his-father-and-former-coach-dies",
+      "source_name": "Pro Football Talk",
+      "headline": "Yale QB Dante Reno has big performance after his father (and former coach) dies",
+      "published_at": "2026-10-04T01:11:06.000Z",
+      "observed_at": "2026-10-04T01:20:23.821Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "coaching",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
