@@ -2,65 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ashton-jeanty-were-building-a-new-culture-thats-going-to-win-games",
-      "source_name": "Pro Football Talk",
-      "headline": "Ashton Jeanty: We're building a new culture that's going to win games",
-      "published_at": "2026-09-14T11:53:29.000Z",
-      "observed_at": "2026-09-14T12:00:31.067Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/quarterback-adversity-has-sparked-growth-for-kevin-oconnell",
-      "source_name": "Pro Football Talk",
-      "headline": "Quarterback adversity has sparked growth for Kevin O'Connell",
-      "published_at": "2026-09-14T11:49:27.000Z",
-      "observed_at": "2026-09-14T12:00:31.067Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/neil-reynolds-week-1-wrap-up-2026",
-      "source_name": "NFL.com",
-      "headline": "Neil Reynolds' Week 1 Wrap Up",
-      "published_at": "2026-09-13T11:57:00.000Z",
-      "observed_at": "2026-09-14T12:10:21.515Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/travis-hunter-played-4-snaps-on-offense-29-on-defense",
       "source_name": "Pro Football Talk",
       "headline": "Travis Hunter played 4 snaps on offense, 29 on defense",
@@ -42033,6 +41974,71 @@
         "BAL"
       ],
       "detected_category": "live_game_state",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaxon-smith-njigba-looks-to-match-a-feat-only-randy-moss-has-achieved",
+      "source_name": "Pro Football Talk",
+      "headline": "Jaxon Smith-Njigba looks to match a feat only Randy Moss has achieved",
+      "published_at": "2026-10-04T19:16:17.000Z",
+      "observed_at": "2026-10-04T19:20:21.728Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SEA"
+      ],
+      "detected_category": "contract",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:contract"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chargers-s-derwin-james-seahawks-s-ty-okada-are-inactive",
+      "source_name": "Pro Football Talk",
+      "headline": "Chargers S Derwin James, Seahawks S Ty Okada are inactive",
+      "published_at": "2026-10-04T19:15:36.000Z",
+      "observed_at": "2026-10-04T19:20:21.728Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC",
+        "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-up-20-6-after-kyle-monangais-second-td",
+      "source_name": "Pro Football Talk",
+      "headline": "Bears up 20-6 after Kyle Monangai's second TD",
+      "published_at": "2026-10-04T19:14:45.000Z",
+      "observed_at": "2026-10-04T19:20:21.728Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
