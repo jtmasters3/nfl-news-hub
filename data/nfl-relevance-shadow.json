@@ -2,72 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/robert-kraft-bans-macklemore-from-performing-at-gillette-stadium-over-hate-speech",
-      "source_name": "Pro Football Talk",
-      "headline": "Robert Kraft bans Macklemore from performing at Gillette Stadium over \"hate speech\"",
-      "published_at": "2026-09-15T17:43:35.000Z",
-      "observed_at": "2026-09-15T17:50:22.063Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-sign-te-brayden-willis-to-active-roster",
-      "source_name": "Pro Football Talk",
-      "headline": "49ers sign TE Brayden Willis to active roster",
-      "published_at": "2026-09-15T18:07:47.000Z",
-      "observed_at": "2026-09-15T18:20:26.784Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/memorable-first-games-in-active-nfl-stadiums-giants-cowboys-thriller-at-jerry-world-tops-list",
-      "source_name": "NFL.com",
-      "headline": "Memorable first games in active NFL stadiums: Giants-Cowboys thriller at Jerry World tops list",
-      "published_at": "2026-09-15T06:28:44.000Z",
-      "observed_at": "2026-09-15T18:30:22.938Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "DAL",
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/with-jaguars-in-denver-cam-little-may-break-his-own-field-goal-record",
       "source_name": "Pro Football Talk",
       "headline": "With Jaguars in Denver, Cam Little may break his own field goal record",
@@ -42113,6 +42047,67 @@
         "HOU"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/cj-gardner-johnson-buffalo-bills-loss-new-england-patriots",
+      "source_name": "FOX Sports",
+      "headline": "Bills' Gardner-Johnson Downplays Efton Chism III’s TD: 'A Practice Squad Player'",
+      "published_at": "2026-10-05T18:43:36.000Z",
+      "observed_at": "2026-10-05T18:50:25.372Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-bye-weeks-schedule-all-32-teams",
+      "source_name": "FOX Sports",
+      "headline": "2026 NFL Bye Weeks Schedule for All 32 Teams",
+      "published_at": "2026-10-05T18:35:18.000Z",
+      "observed_at": "2026-10-05T18:50:25.372Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/antoine-winfield-jr-out-2-4-weeks-with-rib-fracture",
+      "source_name": "Pro Football Talk",
+      "headline": "Antoine Winfield Jr. out 2-4 weeks with rib fracture",
+      "published_at": "2026-10-05T18:41:50.000Z",
+      "observed_at": "2026-10-05T18:50:25.372Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "TB"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
