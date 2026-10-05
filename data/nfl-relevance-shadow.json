@@ -2,68 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/pfts-week-2-2026-nfl-power-rankings",
-      "source_name": "Pro Football Talk",
-      "headline": "PFT's Week 2 2026 NFL power rankings",
-      "published_at": "2026-09-15T13:44:21.000Z",
-      "observed_at": "2026-09-15T13:50:25.181Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-power-rankings-week-2-2026-nfl-season",
-      "source_name": "NFL.com",
-      "headline": "NFL Power Rankings, Week 2: Seahawks leapfrog Broncos and Rams into No. 1 spot; Chiefs hit top 10",
-      "published_at": "2026-09-15T01:52:06.000Z",
-      "observed_at": "2026-09-15T14:00:29.475Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN",
-        "KC",
-        "LAR",
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/sean-payton-never-heard-about-drew-brees-comeback-attempt-with-broncos-in-playoffs",
-      "source_name": "NFL.com",
-      "headline": "Sean Payton 'never heard' about Drew Brees' comeback attempt with Broncos in playoffs",
-      "published_at": "2026-09-15T01:46:04.000Z",
-      "observed_at": "2026-09-15T14:10:22.034Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/demeco-ryans-on-texans-defense-i-dont-believe-in-hype-this-isnt-2025-we-have-to-earn-it",
       "source_name": "Pro Football Talk",
       "headline": "DeMeco Ryans on Texans defense: I don't believe in hype, this isn't 2025, we have to earn it",
@@ -42125,6 +42063,66 @@
         "SF"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-oct-5",
+      "source_name": "NFL.com",
+      "headline": "NFL news roundup: Latest league updates from Monday, Oct. 5",
+      "published_at": "2026-10-05T03:30:01.000Z",
+      "observed_at": "2026-10-05T15:40:23.936Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-commanders-wr-jaylin-lane-fractured-dislocated-ankle-on-sunday",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Commanders WR Jaylin Lane fractured, dislocated ankle on Sunday",
+      "published_at": "2026-10-05T15:31:19.000Z",
+      "observed_at": "2026-10-05T15:40:23.936Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "WAS"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/buccaneers-coach-todd-bowles-could-be-running-out-of-time-to-turn-things-around",
+      "source_name": "Pro Football Talk",
+      "headline": "Buccaneers coach Todd Bowles could be running out of time to turn things around",
+      "published_at": "2026-10-05T15:30:11.000Z",
+      "observed_at": "2026-10-05T15:40:23.936Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "TB"
+      ],
+      "detected_category": "coaching",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
