@@ -369903,7 +369903,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-10-05T21:07:39.607Z",
-      "updated_at": "2026-10-05T22:00:34.438Z",
+      "updated_at": "2026-10-05T23:00:30.133Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -370053,13 +370053,13 @@
         "retry_count": 0
       },
       "selection": {
-        "destination": "feed",
-        "slot_id": "feed:2026-10-05T18:00:00-04:00",
-        "selected_at": "2026-10-05T22:00:34.438Z",
-        "window_start": "2026-10-05T20:00:00.000Z",
-        "window_end": "2026-10-05T22:00:00.000Z",
+        "destination": "story",
+        "slot_id": "story:2026-10-05T19:00:00-04:00",
+        "selected_at": "2026-10-05T23:00:30.133Z",
+        "window_start": "2026-10-05T22:00:00.000Z",
+        "window_end": "2026-10-05T23:00:00.000Z",
         "score": 8,
-        "reason": "importance_score_rank"
+        "reason": "fallback_recent_pool_importance_score_rank"
       }
     },
     "163592e4-6028-43eb-b064-6b2158c03f8c": {
@@ -371592,6 +371592,312 @@
         "teams": [],
         "players": [],
         "description": null,
+        "is_rumor": false
+      },
+      "artwork": {
+        "status": "not_created",
+        "image_url": null,
+        "created_at": null,
+        "provider": null
+      },
+      "validation": {
+        "status": "not_run",
+        "passed": null,
+        "issues": []
+      },
+      "story_artwork": {
+        "status": "not_created",
+        "image_url": null,
+        "storage_key": null,
+        "width": null,
+        "height": null,
+        "mime_type": null,
+        "size_bytes": null,
+        "provider": null,
+        "created_at": null,
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null
+        },
+        "validation": {
+          "status": "not_run",
+          "passed": null,
+          "issues": []
+        }
+      },
+      "approval": {
+        "status": "pending",
+        "decided_at": null,
+        "approved_at": null,
+        "rejected_at": null,
+        "rejection_reason": null,
+        "actor": null,
+        "request_id": null,
+        "decision_source": null
+      },
+      "caption": {
+        "status": "not_created",
+        "text": null,
+        "last_candidate_text": null,
+        "hashtags": [],
+        "attribution_line": null,
+        "source_url": null,
+        "provider": null,
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null
+        },
+        "claim_attempt_count": 0,
+        "created_at": null
+      },
+      "publishing": {
+        "status": "not_posted",
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null,
+          "retry_count": 0
+        },
+        "instagram": {
+          "feed": {
+            "status": "not_posted",
+            "provider": null,
+            "storage_key": null,
+            "jpeg_url": null,
+            "caption_used": null,
+            "container_id": null,
+            "container_created_at": null,
+            "publish_attempted_at": null,
+            "media_id": null,
+            "permalink": null,
+            "published_at": null,
+            "last_http_outcome": null,
+            "last_reconciled_at": null,
+            "buffer": {
+              "post_id": null,
+              "channel_id": null,
+              "status": null,
+              "due_at": null,
+              "sent_at": null
+            }
+          },
+          "story": {
+            "status": "not_posted",
+            "provider": null,
+            "storage_key": null,
+            "jpeg_url": null,
+            "caption_used": null,
+            "container_id": null,
+            "container_created_at": null,
+            "publish_attempted_at": null,
+            "media_id": null,
+            "permalink": null,
+            "published_at": null,
+            "last_http_outcome": null,
+            "last_reconciled_at": null,
+            "buffer": {
+              "post_id": null,
+              "channel_id": null,
+              "status": null,
+              "due_at": null,
+              "sent_at": null
+            }
+          }
+        },
+        "facebook": {
+          "status": "not_posted",
+          "post_id": null,
+          "post_url": null
+        },
+        "posted_at": null
+      },
+      "last_error": {
+        "stage": null,
+        "message": null,
+        "at": null,
+        "retry_count": 0
+      }
+    },
+    "2655df5e-d5bf-46ad-a2da-c899c76a45ba": {
+      "story_id": "2655df5e-d5bf-46ad-a2da-c899c76a45ba",
+      "status": "new",
+      "merged_into": null,
+      "created_at": "2026-10-05T23:00:48.866Z",
+      "updated_at": "2026-10-05T23:00:48.866Z",
+      "content_package_version": 2,
+      "publishing_preferences": {
+        "instagram_feed": true,
+        "instagram_story": true
+      },
+      "source_story": {
+        "post_headline": null,
+        "base_image_url": null,
+        "source_name": null,
+        "source_url": null,
+        "category": null,
+        "teams": [],
+        "players": [],
+        "description": null,
+        "is_rumor": false
+      },
+      "artwork": {
+        "status": "not_created",
+        "image_url": null,
+        "created_at": null,
+        "provider": null
+      },
+      "validation": {
+        "status": "not_run",
+        "passed": null,
+        "issues": []
+      },
+      "story_artwork": {
+        "status": "not_created",
+        "image_url": null,
+        "storage_key": null,
+        "width": null,
+        "height": null,
+        "mime_type": null,
+        "size_bytes": null,
+        "provider": null,
+        "created_at": null,
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null
+        },
+        "validation": {
+          "status": "not_run",
+          "passed": null,
+          "issues": []
+        }
+      },
+      "approval": {
+        "status": "pending",
+        "decided_at": null,
+        "approved_at": null,
+        "rejected_at": null,
+        "rejection_reason": null,
+        "actor": null,
+        "request_id": null,
+        "decision_source": null
+      },
+      "caption": {
+        "status": "not_created",
+        "text": null,
+        "last_candidate_text": null,
+        "hashtags": [],
+        "attribution_line": null,
+        "source_url": null,
+        "provider": null,
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null
+        },
+        "claim_attempt_count": 0,
+        "created_at": null
+      },
+      "publishing": {
+        "status": "not_posted",
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null,
+          "retry_count": 0
+        },
+        "instagram": {
+          "feed": {
+            "status": "not_posted",
+            "provider": null,
+            "storage_key": null,
+            "jpeg_url": null,
+            "caption_used": null,
+            "container_id": null,
+            "container_created_at": null,
+            "publish_attempted_at": null,
+            "media_id": null,
+            "permalink": null,
+            "published_at": null,
+            "last_http_outcome": null,
+            "last_reconciled_at": null,
+            "buffer": {
+              "post_id": null,
+              "channel_id": null,
+              "status": null,
+              "due_at": null,
+              "sent_at": null
+            }
+          },
+          "story": {
+            "status": "not_posted",
+            "provider": null,
+            "storage_key": null,
+            "jpeg_url": null,
+            "caption_used": null,
+            "container_id": null,
+            "container_created_at": null,
+            "publish_attempted_at": null,
+            "media_id": null,
+            "permalink": null,
+            "published_at": null,
+            "last_http_outcome": null,
+            "last_reconciled_at": null,
+            "buffer": {
+              "post_id": null,
+              "channel_id": null,
+              "status": null,
+              "due_at": null,
+              "sent_at": null
+            }
+          }
+        },
+        "facebook": {
+          "status": "not_posted",
+          "post_id": null,
+          "post_url": null
+        },
+        "posted_at": null
+      },
+      "last_error": {
+        "stage": null,
+        "message": null,
+        "at": null,
+        "retry_count": 0
+      }
+    },
+    "d645d513-4793-4815-9db5-6ccf8c7bf33f": {
+      "story_id": "d645d513-4793-4815-9db5-6ccf8c7bf33f",
+      "status": "queued",
+      "merged_into": null,
+      "created_at": "2026-10-05T23:00:48.868Z",
+      "updated_at": "2026-10-05T23:00:48.870Z",
+      "content_package_version": 2,
+      "publishing_preferences": {
+        "instagram_feed": true,
+        "instagram_story": true
+      },
+      "source_story": {
+        "post_headline": "SEAHAWKS 'GOING THROUGH PROCESS' OF SIGNING RB JOE MIXON TO PRACTICE SQUAD",
+        "base_image_url": "https://static.www.nfl.com/image/upload/t_editorial_landscape_12_desktop/league/dv8hqh06ebh2v7usgnll",
+        "source_name": "NFL.com",
+        "source_url": "https://www.nfl.com/news/seahawks-going-through-process-of-signing-rb-joe-mixon-to-practice-squad",
+        "category": "roster_move",
+        "teams": [
+          "Seattle Seahawks"
+        ],
+        "players": [
+          "Joe Mixon"
+        ],
+        "description": "The Seahawks are signing running back Joe Mixon, NFL Network Insider Mike Garafolo reported Monday.  ESPN's Adam Schefter reported that Mixon will start out on Seattle's practice squad once he completes his medical exam.",
         "is_rumor": false
       },
       "artwork": {
@@ -376378,6 +376684,15 @@
       "status": "selected",
       "story_id": "7f834aa4-ac3b-4c7f-b82c-e7c5885fa8a0",
       "processed_at": "2026-10-05T22:00:34.438Z"
+    },
+    "story:2026-10-05T19:00:00-04:00": {
+      "destination": "story",
+      "slot_time": "2026-10-05T23:00:00.000Z",
+      "window_start": "2026-10-05T22:00:00.000Z",
+      "window_end": "2026-10-05T23:00:00.000Z",
+      "status": "selected",
+      "story_id": "66d697b0-9062-482a-b691-8ea4297e66d0",
+      "processed_at": "2026-10-05T23:00:30.133Z"
     }
   }
 }

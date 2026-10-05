@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/arch-manning-apologizes-for-insensitive-comment-about-ai-video-from-saturdays-game",
-      "source_name": "Pro Football Talk",
-      "headline": "Arch Manning apologizes for \"insensitive comment\" about AI video from Saturday's game",
-      "published_at": "2026-09-16T03:18:24.000Z",
-      "observed_at": "2026-09-16T03:20:19.288Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ben-johnson-suggests-he-wanted-bears-to-score-60-points-at-carolina",
-      "source_name": "Pro Football Talk",
-      "headline": "Ben Johnson suggests he wanted Bears to score 60 points at Carolina",
-      "published_at": "2026-09-16T03:35:55.000Z",
-      "observed_at": "2026-09-16T03:40:56.376Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR",
-        "CHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jacoby-brissett-leads-the-nfl-in-passing-yards-since-becoming-the-cardinals-starter",
       "source_name": "Pro Football Talk",
       "headline": "Jacoby Brissett leads the NFL in passing yards since becoming the Cardinals' starter",
@@ -42105,6 +42066,52 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/seahawks-going-through-process-of-signing-rb-joe-mixon-to-practice-squad",
+      "source_name": "NFL.com",
+      "headline": "Seahawks 'going through process' of signing RB Joe Mixon to practice squad",
+      "published_at": "2026-10-05T10:50:27.000Z",
+      "observed_at": "2026-10-05T23:00:30.133Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SEA"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/free-agent-rb-joe-mixon-to-join-seahawks-practice-squad",
+      "source_name": "Pro Football Talk",
+      "headline": "Free agent RB Joe Mixon to join Seahawks' practice squad",
+      "published_at": "2026-10-05T22:50:45.000Z",
+      "observed_at": "2026-10-05T23:00:30.133Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SEA"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:free_agency"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
