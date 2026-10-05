@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patriot-seahawks-opener-averaged-25-1-million-viewers",
-      "source_name": "Pro Football Talk",
-      "headline": "Patriot-Seahawks opener averaged 25.1 million viewers",
-      "published_at": "2026-09-14T21:15:22.000Z",
-      "observed_at": "2026-09-14T21:30:23.947Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/2026-27-nfl-defensive-rookie-year-odds",
-      "source_name": "FOX Sports",
-      "headline": "2026 NFL DROY Odds: Sonny Styles Surges After Impressive Debut",
-      "published_at": "2026-09-14T21:36:07.000Z",
-      "observed_at": "2026-09-14T21:50:21.741Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/kyler-murrays-availability-week-2-uncertain-qb-enters-concussion-protocol",
       "source_name": "FOX Sports",
       "headline": "Kyler Murray’s Availability For Week 2 Uncertain As QB Enters Concussion Protocol",
@@ -42084,6 +42046,45 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cam-skattebo-it-was-dumb-that-we-were-underdogs-to-the-cardinals-at-home",
+      "source_name": "Pro Football Talk",
+      "headline": "Cam Skattebo: It was \"dumb\" that we were underdogs to the Cardinals at home",
+      "published_at": "2026-10-05T01:37:32.000Z",
+      "observed_at": "2026-10-05T01:50:24.111Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI",
+        "NYG"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/officials-continue-to-ignore-the-other-ways-to-finish-a-catch-beyond-taking-a-third-step",
+      "source_name": "Pro Football Talk",
+      "headline": "Officials continue to ignore the other ways to finish a catch, beyond taking a third step",
+      "published_at": "2026-10-05T01:35:22.000Z",
+      "observed_at": "2026-10-05T01:50:24.111Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
