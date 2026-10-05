@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/victim-in-josh-jacobs-case-files-motion-to-permanently-seal-video",
-      "source_name": "Pro Football Talk",
-      "headline": "Victim in Josh Jacobs case files motion to permanently seal video",
-      "published_at": "2026-09-16T02:39:46.000Z",
-      "observed_at": "2026-09-16T02:50:21.281Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-catchup-ben-johnson-explains-bears-scoring-outburst-latest-injury-updates",
-      "source_name": "FOX Sports",
-      "headline": "NFL Catchup: Ben Johnson Explains Bears Scoring Outburst; Latest Injury Updates",
-      "published_at": "2026-09-16T02:58:45.000Z",
-      "observed_at": "2026-09-16T03:00:26.680Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/arch-manning-apologizes-for-insensitive-comment-about-ai-video-from-saturdays-game",
       "source_name": "Pro Football Talk",
       "headline": "Arch Manning apologizes for \"insensitive comment\" about AI video from Saturday's game",
@@ -42095,6 +42057,50 @@
       "confidence": "high",
       "detected_teams": [
         "BUF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/week-4-monday-night-inactives-atlanta-falcons-at-new-orleans-saints",
+      "source_name": "NFL.com",
+      "headline": "Week 4 Monday night inactives: Atlanta Falcons at New Orleans Saints",
+      "published_at": "2026-10-05T10:49:01.000Z",
+      "observed_at": "2026-10-05T22:50:24.106Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "NO"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-mcvay-rams-coaches-will-learn-from-incident-with-eagles-fans",
+      "source_name": "Pro Football Talk",
+      "headline": "Sean McVay: Rams coaches will learn from incident with Eagles fans",
+      "published_at": "2026-10-05T22:37:38.000Z",
+      "observed_at": "2026-10-05T22:50:24.106Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR",
+        "PHI"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
