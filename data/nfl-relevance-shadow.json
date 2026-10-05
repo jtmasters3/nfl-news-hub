@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mansoor-delanes-int-sets-up-patrick-mahomes-td-run",
-      "source_name": "Pro Football Talk",
-      "headline": "Mansoor Delane's INT sets up Patrick Mahomes' TD run",
-      "published_at": "2026-09-15T00:37:25.000Z",
-      "observed_at": "2026-09-15T00:50:20.671Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/seahawks-say-sam-darnolds-very-unique-injury-has-no-firm-timeline",
       "source_name": "Pro Football Talk",
       "headline": "Seahawks say Sam Darnold's \"very unique\" injury has \"no firm timeline\"",
@@ -42092,6 +42075,27 @@
         "JAX"
       ],
       "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tetairoa-mcmillan-everything-just-clicked-on-sunday-night",
+      "source_name": "Pro Football Talk",
+      "headline": "Tetairoa McMillan: Everything just clicked on Sunday night",
+      "published_at": "2026-10-05T10:25:43.000Z",
+      "observed_at": "2026-10-05T10:30:24.362Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
