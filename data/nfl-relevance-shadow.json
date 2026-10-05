@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lb-kenneth-murray-to-join-texans-practice-squad",
-      "source_name": "Pro Football Talk",
-      "headline": "LB Kenneth Murray to join Texans' practice squad",
-      "published_at": "2026-09-16T01:34:03.000Z",
-      "observed_at": "2026-09-16T01:40:18.344Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "HOU"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/senate-advances-the-protect-college-sports-act",
       "source_name": "Pro Football Talk",
       "headline": "Senate advances the Protect College Sports Act",
@@ -42106,6 +42083,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jeremiyah-love-says-coaches-are-managing-the-workload-though-longest-year-of-my-life",
+      "source_name": "Pro Football Talk",
+      "headline": "Jeremiyah Love says coaches are managing the workload though \"longest year of my life\"",
+      "published_at": "2026-10-05T21:39:06.000Z",
+      "observed_at": "2026-10-05T21:50:25.998Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
