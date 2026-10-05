@@ -2,72 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/browns-place-rb-dylan-sampson-on-ir-sign-rb-jaleel-mclaughlin-to-53-man-roster",
-      "source_name": "Pro Football Talk",
-      "headline": "Browns place RB Dylan Sampson on IR, sign RB Jaleel McLaughlin to 53-man roster",
-      "published_at": "2026-09-15T19:35:56.000Z",
-      "observed_at": "2026-09-15T19:40:21.239Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-sign-rb-tyler-goodson-off-falcons-practice-squad",
-      "source_name": "Pro Football Talk",
-      "headline": "Cowboys sign RB Tyler Goodson off Falcons practice squad",
-      "published_at": "2026-09-15T19:45:34.000Z",
-      "observed_at": "2026-09-15T19:50:22.769Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "DAL"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-oc-sean-mannion-well-miss-landon-dickerson-confident-guys-will-step-up",
-      "source_name": "Pro Football Talk",
-      "headline": "Eagles OC Sean Mannion: We'll miss Landon Dickerson, confident guys will step up",
-      "published_at": "2026-09-15T20:03:40.000Z",
-      "observed_at": "2026-09-15T20:10:20.697Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-campbell-i-dont-see-lions-making-a-major-trade-but-cap-space-gives-us-options",
       "source_name": "Pro Football Talk",
       "headline": "Dan Campbell: I don't see Lions making a major trade, but cap space gives us options",
@@ -42107,6 +42041,65 @@
       "detected_teams": [
         "CIN",
         "JAX"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/minnesota-vikings-donovan-jackson-injury",
+      "source_name": "FOX Sports",
+      "headline": "Vikings Likely Lose Left Guard Donovan Jackson For The Regular Season",
+      "published_at": "2026-10-05T19:39:07.000Z",
+      "observed_at": "2026-10-05T20:06:39.123Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-suspends-referee-adrian-hill-line-judge-jeff-seeman-for-unprofessional-conduct-toward-players",
+      "source_name": "Pro Football Talk",
+      "headline": "NFL suspends referee Adrian Hill, line judge Jeff Seeman for unprofessional conduct toward players",
+      "published_at": "2026-10-05T19:58:52.000Z",
+      "observed_at": "2026-10-05T20:06:39.123Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "suspension",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-hopeful-jaelan-phillips-monroe-freeling-can-return-after-week-5-bye",
+      "source_name": "Pro Football Talk",
+      "headline": "Panthers \"hopeful\" Jaelan Phillips, Monroe Freeling can return after Week 5 bye",
+      "published_at": "2026-10-05T19:42:38.000Z",
+      "observed_at": "2026-10-05T20:06:39.123Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR"
       ],
       "detected_category": "injury",
       "nfl_evidence": [
