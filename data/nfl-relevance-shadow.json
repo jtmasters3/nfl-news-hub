@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-rams-from-australia-attracts-21-7-worldwide-viewers",
-      "source_name": "Pro Football Talk",
-      "headline": "49ers-Rams from Australia attracts 21.7 worldwide viewers",
-      "published_at": "2026-09-15T14:43:14.000Z",
-      "observed_at": "2026-09-15T14:50:28.476Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR",
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-payton-says-he-didnt-know-about-the-communication-with-drew-brees",
-      "source_name": "Pro Football Talk",
-      "headline": "Sean Payton says he didn't know about the communication with Drew Brees",
-      "published_at": "2026-09-15T15:05:42.000Z",
-      "observed_at": "2026-09-15T15:10:23.737Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN"
-      ],
-      "detected_category": "retirement",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-tuesday-sept-15",
       "source_name": "NFL.com",
       "headline": "NFL news roundup: Jets' Omar Cooper Jr. week to week; Chiefs' Mansoor Delane to undergo MRI",
@@ -42122,6 +42079,52 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-sign-cb-sean-murphy-bunting-off-bucs-practice-squad",
+      "source_name": "Pro Football Talk",
+      "headline": "Steelers sign CB Sean Murphy-Bunting off Bucs practice squad",
+      "published_at": "2026-10-05T16:33:55.000Z",
+      "observed_at": "2026-10-05T16:40:20.747Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "PIT",
+        "TB"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-kyle-juszczyk-could-miss-a-couple-of-weeks-with-knee-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Kyle Juszczyk could miss a couple of weeks with knee injury",
+      "published_at": "2026-10-05T16:31:58.000Z",
+      "observed_at": "2026-10-05T16:40:20.747Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "SF"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
