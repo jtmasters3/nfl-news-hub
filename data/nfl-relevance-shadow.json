@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/josh-allen-leads-charge-multiple-nfl-players-push-all-grass-fields",
-      "source_name": "FOX Sports",
-      "headline": "Josh Allen Leads The Charge As Multiple NFL Players Push For All-Grass Fields",
-      "published_at": "2026-09-15T16:18:22.000Z",
-      "observed_at": "2026-09-15T16:30:26.591Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-browns-rb-dylan-sampson-is-expected-to-miss-significant-time",
       "source_name": "Pro Football Talk",
       "headline": "Report: Browns RB Dylan Sampson is expected to miss significant time",
@@ -42114,6 +42097,27 @@
         "NYG"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/another-defendant-in-terrion-arnold-case-pleads-guilty-agrees-to-testify",
+      "source_name": "Pro Football Talk",
+      "headline": "Another defendant in Terrion Arnold case pleads guilty, agrees to testify",
+      "published_at": "2026-10-05T17:57:41.000Z",
+      "observed_at": "2026-10-05T18:00:33.339Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SEA"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
