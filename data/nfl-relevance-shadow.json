@@ -2,47 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-week-1-best-plays-josh-allen-kyle-monangai",
-      "source_name": "FOX Sports",
-      "headline": "The Week 1 Plays That Stood Out, From Josh Allen's Heroics To Kyle Monangai's TD",
-      "published_at": "2026-09-15T03:13:48.000Z",
-      "observed_at": "2026-09-15T03:20:19.450Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "HOU",
-        "PHI",
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-power-rankings-week-2-which-teams-suffered-worst-opening-losses",
-      "source_name": "FOX Sports",
-      "headline": "2026 NFL Power Rankings Week 2: Which Teams Suffered The Worst Opening Losses?",
-      "published_at": "2026-09-15T03:27:28.000Z",
-      "observed_at": "2026-09-15T03:30:26.554Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/monday-night-football-kenneth-walker-chiefs-run-by-broncos-31-10-in-patrick-mahomes-return",
       "source_name": "Pro Football Talk",
       "headline": "Monday Night Football: Kenneth Walker, Chiefs run by Broncos 31-10 in Patrick Mahomes' return",
@@ -42106,6 +42065,52 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-falcons-vs-saints-tv-channel-live-stream-time-2026-week-4",
+      "source_name": "FOX Sports",
+      "headline": "How to Watch Falcons vs. Saints: TV Channel, Live Stream, Time",
+      "published_at": "2026-10-05T12:58:59.000Z",
+      "observed_at": "2026-10-05T13:10:22.011Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "NO"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/c-j-gardner-johnson-on-efton-chism-practice-squad-player-made-a-helluva-play",
+      "source_name": "Pro Football Talk",
+      "headline": "C.J. Gardner-Johnson on Efton Chism: Practice squad player made a helluva play",
+      "published_at": "2026-10-05T13:00:25.000Z",
+      "observed_at": "2026-10-05T13:10:22.011Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "NE"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
