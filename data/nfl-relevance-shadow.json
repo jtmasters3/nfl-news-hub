@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-put-landon-dickerson-on-injured-reserve",
-      "source_name": "Pro Football Talk",
-      "headline": "Eagles put Landon Dickerson on injured reserve",
-      "published_at": "2026-09-14T23:06:23.000Z",
-      "observed_at": "2026-09-14T23:10:20.533Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/monday-night-football-no-surprises-among-the-inactives",
       "source_name": "Pro Football Talk",
       "headline": "Monday Night Football: No surprises among the Chiefs-Broncos inactives",
@@ -42101,6 +42080,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-week-4-defining-stats",
+      "source_name": "FOX Sports",
+      "headline": "NFL Week 4 Defining Stats: Mahomes Chases Brady, Nacua Climbs Past Moss",
+      "published_at": "2026-10-05T04:12:44.000Z",
+      "observed_at": "2026-10-05T04:30:26.867Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
