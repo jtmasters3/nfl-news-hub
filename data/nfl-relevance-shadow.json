@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/seahawks-sam-darnold-has-very-unique-soft-tissue-injury-no-firm-timeline-for-return",
-      "source_name": "NFL.com",
-      "headline": "Seahawks: Sam Darnold has 'very unique' soft-tissue injury, no firm timeline for return",
-      "published_at": "2026-09-14T11:36:30.000Z",
-      "observed_at": "2026-09-14T23:40:23.714Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/nfl-week-1-superlatives-cowboys-defense-vikings-defense-sean-mcvay-drake-maye",
       "source_name": "FOX Sports",
       "headline": "NFL Best And Worst: From The Vikings' Pressure Cooker To The Rams’ Head-Scratcher",
@@ -42090,6 +42069,28 @@
         "LAR",
         "NE",
         "PHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-reviewing-incident-between-vikings-eric-wilson-and-ref-adrian-hill",
+      "source_name": "Pro Football Talk",
+      "headline": "NFL reviewing incident between Vikings' Eric Wilson and ref Adrian Hill",
+      "published_at": "2026-10-05T09:13:02.000Z",
+      "observed_at": "2026-10-05T09:20:57.447Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIA",
+        "MIN"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
