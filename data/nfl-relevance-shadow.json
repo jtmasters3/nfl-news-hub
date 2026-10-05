@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/how-bengals-view-lbs-barrett-carter-and-demetrius-knight-jr-s-2026-debuts",
-      "source_name": "NFL.com",
-      "headline": "How Bengals view LBs Barrett Carter and Demetrius Knight Jr.'s 2026 debuts",
-      "published_at": "2026-09-15T10:16:06.000Z",
-      "observed_at": "2026-09-15T16:30:26.591Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/josh-allen-leads-charge-multiple-nfl-players-push-all-grass-fields",
       "source_name": "FOX Sports",
       "headline": "Josh Allen Leads The Charge As Multiple NFL Players Push For All-Grass Fields",
@@ -42120,6 +42099,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-braxton-berrios-will-be-placed-on-ir-with-foot-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Braxton Berrios will be placed on IR with foot injury",
+      "published_at": "2026-10-05T17:44:48.000Z",
+      "observed_at": "2026-10-05T17:50:26.512Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
