@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/drake-maye-channels-bill-belichick-after-loss-to-seahawks-we-re-on-to-pittsburgh",
-      "source_name": "NFL.com",
-      "headline": "Drake Maye channels Bill Belichick after loss to Seahawks: 'We're on to Pittsburgh'",
-      "published_at": "2026-09-16T11:02:26.000Z",
-      "observed_at": "2026-09-16T11:10:21.652Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PIT",
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/joe-brady-no-concerns-about-highmark-stadium-field-for-thursday-night",
-      "source_name": "Pro Football Talk",
-      "headline": "Joe Brady: No concerns about Highmark Stadium field for Thursday night",
-      "published_at": "2026-09-16T10:58:05.000Z",
-      "observed_at": "2026-09-16T11:10:21.652Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/mike-mcglinchey-on-loss-to-chiefs-broncos-must-flush-it-as-fast-as-possible",
       "source_name": "NFL.com",
       "headline": "Mike McGlinchey on loss to Chiefs: Broncos must 'flush it as fast as possible'",
@@ -42112,6 +42069,50 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/big-bets-report-bettors-in-game-chiefs-wager-cashes-2-2-million",
+      "source_name": "FOX Sports",
+      "headline": "Big Bets Report: Bettor's In-Game Chiefs Wager Cashes In For $2.2 Million",
+      "published_at": "2026-10-05T23:26:30.000Z",
+      "observed_at": "2026-10-05T23:30:25.598Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC",
+        "LV"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/seahawks-reportedly-sign-veteran-rb-joe-mixon",
+      "source_name": "FOX Sports",
+      "headline": "Seahawks Add To Their Backfield Amid RB Injuries, Reportedly Signing Joe Mixon",
+      "published_at": "2026-10-05T23:23:15.000Z",
+      "observed_at": "2026-10-05T23:30:25.598Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SEA"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
