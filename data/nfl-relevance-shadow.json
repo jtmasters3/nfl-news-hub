@@ -2,52 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-jets-wr-omar-cooper-week-to-week-with-ankle-sprain",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Jets WR Omar Cooper week-to-week with ankle sprain",
-      "published_at": "2026-09-15T14:15:21.000Z",
-      "observed_at": "2026-09-15T14:20:21.604Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYJ",
-        "TEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/todd-monken-responds-to-mike-tomlin-its-not-browns-being-browns-its-browns-playing-poorly-for-one-week",
-      "source_name": "Pro Football Talk",
-      "headline": "Todd Monken responds to Mike Tomlin: It's not Browns being Browns, it's Browns playing poorly for one week",
-      "published_at": "2026-09-15T14:46:54.000Z",
-      "observed_at": "2026-09-15T14:50:28.476Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE",
-        "DAL",
-        "JAX",
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-rams-from-australia-attracts-21-7-worldwide-viewers",
       "source_name": "Pro Football Talk",
       "headline": "49ers-Rams from Australia attracts 21.7 worldwide viewers",
@@ -42128,6 +42082,46 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-week-4-sunday-aftermath-bears-defense-continues-to-shine-jaguars-are-for-real",
+      "source_name": "NFL.com",
+      "headline": "NFL Week 4 Sunday aftermath: Bears' defense continues to shine, Jaguars are for real",
+      "published_at": "2026-10-05T04:17:49.000Z",
+      "observed_at": "2026-10-05T16:20:21.528Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "JAX",
+        "MIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/2026-nfl-fantasy-football-waiver-wire-week-5-rb-zach-charbonnet-wr-keon-coleman-among-targets",
+      "source_name": "NFL.com",
+      "headline": "2026 NFL fantasy football waiver wire, Week 5: RB Zach Charbonnet, WR Keon Coleman among targets",
+      "published_at": "2026-10-05T04:07:49.000Z",
+      "observed_at": "2026-10-05T16:20:21.528Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "fantasy",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
