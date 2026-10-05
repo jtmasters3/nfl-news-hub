@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/broncos-release-wr-liljordan-humphrey-in-procedural-move",
-      "source_name": "Pro Football Talk",
-      "headline": "Broncos release WR Lil'Jordan Humphrey in procedural move",
-      "published_at": "2026-09-14T21:21:08.000Z",
-      "observed_at": "2026-09-14T21:30:23.947Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN"
-      ],
-      "detected_category": "free_agency",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:free_agency"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patriot-seahawks-opener-averaged-25-1-million-viewers",
       "source_name": "Pro Football Talk",
       "headline": "Patriot-Seahawks opener averaged 25.1 million viewers",
@@ -42079,6 +42057,27 @@
         "MIN"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-take-13-6-lead-with-bryce-youngs-32-yard-td-pass",
+      "source_name": "Pro Football Talk",
+      "headline": "Panthers take 13-6 lead with Bryce Young's 32-yard TD pass",
+      "published_at": "2026-10-05T01:23:56.000Z",
+      "observed_at": "2026-10-05T01:30:24.562Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR"
+      ],
+      "detected_category": "live_game_state",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
