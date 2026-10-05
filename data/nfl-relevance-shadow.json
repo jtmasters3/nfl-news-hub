@@ -2,71 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-browns-rb-dylan-sampson-is-expected-to-miss-significant-time",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Browns RB Dylan Sampson is expected to miss significant time",
-      "published_at": "2026-09-15T16:18:44.000Z",
-      "observed_at": "2026-09-15T16:30:26.591Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE",
-        "JAX"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/who-starts-at-qb-for-the-falcons-stefanski-needs-more-time-after-cooper-rush-struggles",
-      "source_name": "NFL.com",
-      "headline": "Who starts at QB for the Falcons? Stefanski needs more time after Cooper Rush struggles",
-      "published_at": "2026-09-15T10:31:05.000Z",
-      "observed_at": "2026-09-15T16:50:25.205Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-are-favorites-to-win-the-nfc-west-but-rams-remain-favorites-to-win-the-super-bowl",
-      "source_name": "Pro Football Talk",
-      "headline": "49ers are favorites to win the NFC West, but Rams remain favorites to win the Super Bowl",
-      "published_at": "2026-09-15T16:44:05.000Z",
-      "observed_at": "2026-09-15T16:50:25.205Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR",
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/week-2-tv-schedule-gives-jags-coach-liam-coen-more-grist-for-disrespect-mill",
       "source_name": "Pro Football Talk",
       "headline": "Week 2 TV schedule gives Jags coach Liam Coen more grist for \"disrespect\" mill",
@@ -42124,6 +42059,66 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/washington-commanders-jaylin-lane-injury-jayden-daniels",
+      "source_name": "FOX Sports",
+      "headline": "Commanders WR Jaylin Lane Suffers Fractured, Dislocated Ankle",
+      "published_at": "2026-10-05T17:26:17.000Z",
+      "observed_at": "2026-10-05T18:30:26.743Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/donovan-jackson-out-with-torn-meniscus-christian-darrisaw-in-concussion-protocol",
+      "source_name": "Pro Football Talk",
+      "headline": "Donovan Jackson out with torn meniscus, Christian Darrisaw in concussion protocol",
+      "published_at": "2026-10-05T18:23:51.000Z",
+      "observed_at": "2026-10-05T18:30:26.743Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-vrabel-efton-chism-iii-has-earned-more-opportunities",
+      "source_name": "Pro Football Talk",
+      "headline": "Mike Vrabel: Efton Chism III has earned more opportunities",
+      "published_at": "2026-10-05T18:20:36.000Z",
+      "observed_at": "2026-10-05T18:30:26.743Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
