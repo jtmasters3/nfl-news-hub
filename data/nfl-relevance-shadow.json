@@ -2,48 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/vikings-kevin-o-connell-has-learned-that-winning-matters-more-than-looking-good",
-      "source_name": "NFL.com",
-      "headline": "Vikings' Kevin O'Connell has learned that winning matters more than looking good",
-      "published_at": "2026-09-15T10:16:06.000Z",
-      "observed_at": "2026-09-15T14:20:21.604Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/kenyon-sadiq-came-as-advertised-part-of-a-jets-offense-that-was-downright-fun-in-week-1",
-      "source_name": "NFL.com",
-      "headline": "Kenyon Sadiq came as-advertised, part of a Jets offense that was downright fun in Week 1",
-      "published_at": "2026-09-15T10:16:06.000Z",
-      "observed_at": "2026-09-15T14:20:21.604Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-jets-wr-omar-cooper-week-to-week-with-ankle-sprain",
       "source_name": "Pro Football Talk",
       "headline": "Report: Jets WR Omar Cooper week-to-week with ankle sprain",
@@ -42126,6 +42084,50 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/josh-allen-laments-not-throwing-ball-away-after-interception-seals-bills-loss-to-new-england",
+      "source_name": "FOX Sports",
+      "headline": "Costly Turnovers Doom Bills As Josh Allen Admits Mistake Against Patriots",
+      "published_at": "2026-10-05T15:44:31.000Z",
+      "observed_at": "2026-10-05T16:00:32.677Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/klint-kubiak-on-taking-made-fg-off-the-board-i-dont-regret-it-i-regret-not-getting-a-first-down",
+      "source_name": "Pro Football Talk",
+      "headline": "Klint Kubiak on taking made FG off the board: I don't regret it, I regret not getting a first down",
+      "published_at": "2026-10-05T15:57:44.000Z",
+      "observed_at": "2026-10-05T16:00:32.677Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC",
+        "LV"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
