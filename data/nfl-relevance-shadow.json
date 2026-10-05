@@ -2,87 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-tuesday-sept-15",
-      "source_name": "NFL.com",
-      "headline": "NFL news roundup: Jets' Omar Cooper Jr. week to week; Chiefs' Mansoor Delane to undergo MRI",
-      "published_at": "2026-09-15T03:10:00.000Z",
-      "observed_at": "2026-09-15T15:20:25.767Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC",
-        "NYJ"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-odds-comeback-player-year",
-      "source_name": "FOX Sports",
-      "headline": "2026 NFL Comeback Player of Year Odds: Mahomes Favored; Donald In The Mix",
-      "published_at": "2026-09-15T15:24:32.000Z",
-      "observed_at": "2026-09-15T15:40:23.215Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/five-ways-mike-mccarthy-and-a-new-coaching-staff-changed-the-steelers-in-week-1",
-      "source_name": "NFL.com",
-      "headline": "Five ways Mike McCarthy and a new coaching staff changed the Steelers in Week 1",
-      "published_at": "2026-09-15T11:01:05.000Z",
-      "observed_at": "2026-09-15T15:50:20.124Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PIT"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/andy-reid-on-travis-kelce-pretty-good-for-an-old-man",
-      "source_name": "Pro Football Talk",
-      "headline": "Andy Reid on Travis Kelce: \"Pretty good for an old man\"",
-      "published_at": "2026-09-15T15:32:56.000Z",
-      "observed_at": "2026-09-15T15:50:20.124Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/signs-point-for-now-to-cooper-rush-for-the-falcons-on-sunday",
       "source_name": "Pro Football Talk",
       "headline": "Signs point, for now, to Cooper Rush for the Falcons on Sunday",
@@ -42111,6 +42030,93 @@
       "headline": "Report: Kyle Juszczyk could miss a couple of weeks with knee injury",
       "published_at": "2026-10-05T16:31:58.000Z",
       "observed_at": "2026-10-05T16:40:20.747Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "SF"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/saints-remember-katrina-a-punt-block-and-rebirth-as-they-host-falcons-on-monday",
+      "source_name": "NFL.com",
+      "headline": "Saints remember Katrina, a punt block and 'rebirth' as they host Falcons on Monday",
+      "published_at": "2026-10-05T04:58:07.000Z",
+      "observed_at": "2026-10-05T17:00:31.303Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "NO"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-rashawn-slater-believed-to-have-a-high-ankle-sprain",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Rashawn Slater believed to have a high-ankle sprain",
+      "published_at": "2026-10-05T16:55:02.000Z",
+      "observed_at": "2026-10-05T17:00:31.303Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC",
+        "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tyson-bagent-is-expected-to-start-week-5-vs-packers",
+      "source_name": "Pro Football Talk",
+      "headline": "Tyson Bagent is expected to start Week 5 vs. Packers",
+      "published_at": "2026-10-05T16:49:27.000Z",
+      "observed_at": "2026-10-05T17:00:31.303Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/broncos-wr-pat-bryant-is-expected-to-miss-time-with-sprained-ankle",
+      "source_name": "Pro Football Talk",
+      "headline": "Broncos WR Pat Bryant is expected to miss time with sprained ankle",
+      "published_at": "2026-10-05T16:48:25.000Z",
+      "observed_at": "2026-10-05T17:00:31.303Z",
       "decision": "keep",
       "classification": "nfl",
       "confidence": "high",
