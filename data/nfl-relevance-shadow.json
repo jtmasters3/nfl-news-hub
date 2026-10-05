@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sunday-ticket-prices-increase-while-nfl-decreases-the-number-of-sunday-afternoon-games",
-      "source_name": "Pro Football Talk",
-      "headline": "Sunday Ticket prices increase, while NFL decreases the number of Sunday afternoon games",
-      "published_at": "2026-09-15T11:31:47.000Z",
-      "observed_at": "2026-09-15T11:40:29.145Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-lafleur-confidence-is-great-but-we-have-to-reset-and-get-back-to-work",
       "source_name": "Pro Football Talk",
       "headline": "Mike LaFleur: Confidence is great, but we have to reset and get back to work",
@@ -42120,6 +42103,30 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/drew-rosenhaus-tyreek-hill-could-sign-with-a-team-this-week",
+      "source_name": "Pro Football Talk",
+      "headline": "Drew Rosenhaus: Tyreek Hill could sign with a team this week",
+      "published_at": "2026-10-05T14:57:27.000Z",
+      "observed_at": "2026-10-05T15:10:22.788Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI",
+        "KC"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_signs_with",
+        "nfl_preserving_category:roster_move"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
