@@ -2,48 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/travis-kelce-was-a-victim-in-a-ponzi-scheme",
-      "source_name": "Pro Football Talk",
-      "headline": "Travis Kelce was a victim in a Ponzi scheme",
-      "published_at": "2026-09-16T17:30:29.000Z",
-      "observed_at": "2026-09-16T17:50:24.523Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/former-all-pro-lb-fredd-young-dies-at-64",
-      "source_name": "Pro Football Talk",
-      "headline": "Former All-Pro LB Fredd Young dies at 64",
-      "published_at": "2026-09-16T17:50:51.000Z",
-      "observed_at": "2026-09-16T18:00:31.446Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/baker-mayfield-on-playing-browns-ultimately-you-remember-the-good-more-than-the-bad",
       "source_name": "Pro Football Talk",
       "headline": "Baker Mayfield on playing Browns: Ultimately, you remember the good more than the bad",
@@ -42138,6 +42096,44 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-mcvay-says-rams-coaches-need-to-get-the-hell-out-of-the-way-after-sideline-penalty",
+      "source_name": "Pro Football Talk",
+      "headline": "Sean McVay says Rams' coaches need to \"get the hell out of the way\" after sideline penalty",
+      "published_at": "2026-10-06T14:52:10.000Z",
+      "observed_at": "2026-10-06T15:00:30.127Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bijan-robinson-kenneth-walker-iii-should-be-serious-mvp-candidates",
+      "source_name": "Pro Football Talk",
+      "headline": "Bijan Robinson, Kenneth Walker III should be serious MVP candidates",
+      "published_at": "2026-10-06T14:48:30.000Z",
+      "observed_at": "2026-10-06T15:00:30.127Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
