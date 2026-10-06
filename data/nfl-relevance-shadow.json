@@ -2,84 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-to-put-wr-dezhaun-stribling-on-injured-reserve",
-      "source_name": "Pro Football Talk",
-      "headline": "49ers to put WR De'Zhaun Stribling on injured reserve",
-      "published_at": "2026-09-16T16:52:09.000Z",
-      "observed_at": "2026-09-16T17:10:30.030Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR",
-        "SF"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/patrick-mahomes-is-back-to-flexing-that-s-bad-news-for-lamar-jackson-josh-allen-joe-burrow",
-      "source_name": "NFL.com",
-      "headline": "Patrick Mahomes is back to flexing. That's bad news for Lamar Jackson, Josh Allen, Joe Burrow",
-      "published_at": "2026-09-16T10:01:05.000Z",
-      "observed_at": "2026-09-16T17:30:30.610Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/falcons-hc-kevin-stefanski-not-ruling-any-qb-week-2-vs-panthers",
-      "source_name": "NFL.com",
-      "headline": "Falcons HC Kevin Stefanski 'not ruling anybody out' at QB for Week 2 vs. Panthers",
-      "published_at": "2026-09-16T05:17:12.000Z",
-      "observed_at": "2026-09-16T17:30:30.610Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "CAR"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-odds-which-betting-streaks-will-continue",
-      "source_name": "FOX Sports",
-      "headline": "2026 NFL Odds: Which Betting Streaks Will Continue?",
-      "published_at": "2026-09-16T17:21:12.000Z",
-      "observed_at": "2026-09-16T17:30:30.610Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-vrabel-treveyon-henderson-will-increase-practice-workload-on-wednesday",
       "source_name": "Pro Football Talk",
       "headline": "Mike Vrabel: TreVeyon Henderson will increase practice workload on Wednesday",
@@ -42123,6 +42045,92 @@
       "confidence": "high",
       "detected_teams": [
         "IND"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/we-don-t-like-them-49ers-quickly-turn-focus-to-seahawks-after-historic-win-over-broncos",
+      "source_name": "NFL.com",
+      "headline": "'We don't like them': 49ers quickly turn focus to Seahawks after historic win over Broncos",
+      "published_at": "2026-10-06T12:16:05.000Z",
+      "observed_at": "2026-10-06T14:40:24.296Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "SF",
+        "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/three-reasons-ashton-jeanty-and-the-raiders-run-game-are-stalling-again",
+      "source_name": "NFL.com",
+      "headline": "Three reasons Ashton Jeanty and the Raiders' run game are stalling again",
+      "published_at": "2026-10-06T12:16:05.000Z",
+      "observed_at": "2026-10-06T14:40:24.296Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/has-the-cowboys-defense-made-progress-some-but-there-s-still-a-long-way-to-go",
+      "source_name": "NFL.com",
+      "headline": "Has the Cowboys' defense made progress? Some -- but there's still a long way to go",
+      "published_at": "2026-10-06T11:46:04.000Z",
+      "observed_at": "2026-10-06T14:40:24.296Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-mcvay-myles-garrett-is-making-really-good-progress-no-word-on-when-hell-play",
+      "source_name": "Pro Football Talk",
+      "headline": "Sean McVay: Myles Garrett is \"making really good progress,\" no word on when he'll play",
+      "published_at": "2026-10-06T14:34:58.000Z",
+      "observed_at": "2026-10-06T14:40:24.296Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR"
       ],
       "detected_category": "injury",
       "nfl_evidence": [
