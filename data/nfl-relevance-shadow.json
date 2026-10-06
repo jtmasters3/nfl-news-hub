@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/t-j-watt-earns-record-tying-ninth-afc-defensive-player-of-the-week-award",
-      "source_name": "Pro Football Talk",
-      "headline": "T.J. Watt earns record-tying ninth AFC defensive player of the week award",
-      "published_at": "2026-09-16T16:10:02.000Z",
-      "observed_at": "2026-09-16T16:20:21.377Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dandre-swift-named-the-nfc-offensive-player-of-the-week",
       "source_name": "Pro Football Talk",
       "headline": "D'Andre Swift named the NFC offensive player of the week",
@@ -42123,6 +42106,27 @@
         "NO"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jim-harbaugh-not-happy-with-reporter-for-more-insult-than-question-about-justin-herbert",
+      "source_name": "Pro Football Talk",
+      "headline": "Jim Harbaugh not happy with reporter for \"more insult than question\" about Justin Herbert",
+      "published_at": "2026-10-06T09:29:36.000Z",
+      "observed_at": "2026-10-06T09:40:22.330Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC"
+      ],
+      "detected_category": "coaching",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
