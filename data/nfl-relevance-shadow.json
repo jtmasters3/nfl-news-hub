@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nick-sirianni-explains-decision-not-to-put-landon-dickerson-on-injury-report",
-      "source_name": "Pro Football Talk",
-      "headline": "Nick Sirianni explains decision not to put Landon Dickerson on injury report",
-      "published_at": "2026-09-16T16:57:32.000Z",
-      "observed_at": "2026-09-16T17:10:30.030Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-to-put-wr-dezhaun-stribling-on-injured-reserve",
       "source_name": "Pro Football Talk",
       "headline": "49ers to put WR De'Zhaun Stribling on injured reserve",
@@ -42121,6 +42104,27 @@
         "NYJ"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-de-arden-key-to-miss-time-with-hamstring-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Colts DE Arden Key to miss time with hamstring injury",
+      "published_at": "2026-10-06T14:00:37.000Z",
+      "observed_at": "2026-10-06T14:10:25.513Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
