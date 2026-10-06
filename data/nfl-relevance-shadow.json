@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-wednesday-sept-16",
-      "source_name": "NFL.com",
-      "headline": "NFL news roundup: Latest league updates from Wednesday, Sept. 16",
-      "published_at": "2026-09-16T03:54:27.000Z",
-      "observed_at": "2026-09-16T16:00:29.693Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-sign-te-nick-muse-to-53-man-roster-put-dl-dashawn-hand-on-ir",
-      "source_name": "Pro Football Talk",
-      "headline": "Falcons sign TE Nick Muse to 53-man roster, put DL Da'Shawn Hand on IR",
-      "published_at": "2026-09-16T15:47:44.000Z",
-      "observed_at": "2026-09-16T16:00:29.693Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cardinals-to-place-s-kitan-crawford-on-ir",
       "source_name": "Pro Football Talk",
       "headline": "Cardinals to place S Kitan Crawford on IR",
@@ -42114,6 +42076,49 @@
       "headline": "Monday Night Football: Falcons run over Saints 45-24 to ruin New Orleans' celebration",
       "published_at": "2026-10-06T03:32:31.000Z",
       "observed_at": "2026-10-06T03:40:57.170Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "NO"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-week-4-plays-that-stood-out-drake-maye-dak-prescott",
+      "source_name": "FOX Sports",
+      "headline": "NFL Week 4 Plays That Stood Out: Dak Prescott Carves Up Houston; Drake Maye Delivers",
+      "published_at": "2026-10-06T04:01:21.000Z",
+      "observed_at": "2026-10-06T04:20:20.058Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "HOU"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/hello-atlanta-michael-penix-bijan-robinson-3-takeaways-from-falcons-win-vs-saints",
+      "source_name": "FOX Sports",
+      "headline": "Hello, Atlanta, Michael Penix & Bijan Robinson: 3 Takeaways From Falcons Win vs. Saints",
+      "published_at": "2026-10-06T04:01:06.000Z",
+      "observed_at": "2026-10-06T04:20:20.058Z",
       "decision": "keep",
       "classification": "nfl",
       "confidence": "high",
