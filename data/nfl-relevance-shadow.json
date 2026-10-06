@@ -2,47 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/joey-porter-jr-listed-as-limited-at-steelers-practice-due-to-conditioning",
-      "source_name": "Pro Football Talk",
-      "headline": "Joey Porter Jr. listed as limited at Steelers practice due to conditioning",
-      "published_at": "2026-09-16T20:34:38.000Z",
-      "observed_at": "2026-09-16T20:40:23.992Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PIT"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/league-wont-allow-daequan-wright-or-zxavian-harris-to-sign-with-nfl-teams",
-      "source_name": "Pro Football Talk",
-      "headline": "League won't allow Dae'Quan Wright or Zxavian Harris to sign with NFL teams",
-      "published_at": "2026-09-16T20:27:52.000Z",
-      "observed_at": "2026-09-16T20:40:23.992Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "medium",
-      "detected_teams": [],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "phrase_signs_with",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_weak_uncontradicted_transaction_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/bengals-qb-joe-burrow-dealing-with-back-soreness-expects-to-play-week-2-vs-texans",
       "source_name": "NFL.com",
       "headline": "Bengals QB Joe Burrow dealing with back soreness, expects to play Week 2 vs. Texans",
@@ -42135,6 +42094,51 @@
         "SF"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/seahawks-sign-rb-robert-henry-off-commanders-practice-squad",
+      "source_name": "Pro Football Talk",
+      "headline": "Seahawks sign RB Robert Henry off Commanders practice squad",
+      "published_at": "2026-10-06T20:13:37.000Z",
+      "observed_at": "2026-10-06T20:20:22.909Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SEA",
+        "WAS"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-rt-lane-johnson-announces-retirement",
+      "source_name": "Pro Football Talk",
+      "headline": "Eagles RT Lane Johnson announces retirement",
+      "published_at": "2026-10-06T20:10:46.000Z",
+      "observed_at": "2026-10-06T20:20:22.909Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI"
+      ],
+      "detected_category": "retirement",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
