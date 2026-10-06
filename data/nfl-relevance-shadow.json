@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/lions-vs-bills-three-must-know-storylines-for-thursday-s-week-2-prime-time-game",
-      "source_name": "NFL.com",
-      "headline": "Lions vs. Bills: Three must-know storylines for Thursday's Week 2 prime-time game",
-      "published_at": "2026-09-16T12:56:43.000Z",
-      "observed_at": "2026-09-16T13:00:29.332Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "DET"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/neil-reynolds-week-2-power-rankings-2026",
       "source_name": "NFL.com",
       "headline": "Neil Reynolds' Week 2 Power rankings",
@@ -42112,6 +42090,27 @@
         "nfl_team_detected",
         "phrase_practice_squad",
         "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/ben-johnson-nfls-best-coach-why-bears-last-2-wins-suggest-he-might",
+      "source_name": "FOX Sports",
+      "headline": "Is Ben Johnson Bears' Most Important Piece? Why Last 2 Games Suggest He Might Be",
+      "published_at": "2026-10-06T00:25:23.000Z",
+      "observed_at": "2026-10-06T00:30:25.365Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
