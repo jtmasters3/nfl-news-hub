@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/2026-nfl-munich-game-digital-ticket-guide",
-      "source_name": "NFL.com",
-      "headline": "2026 NFL Munich Game Digital Ticket Guide",
-      "published_at": "2026-09-16T01:27:53.000Z",
-      "observed_at": "2026-09-16T13:40:21.933Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/ryan-fitzpatrick-0-17-season-within-reach-2026-dolphins",
       "source_name": "NFL.com",
       "headline": "Ryan Fitzpatrick: 0-17 season 'within reach' for 2026 Dolphins",
@@ -42110,6 +42093,27 @@
       "confidence": "high",
       "detected_teams": [
         "ATL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/alvin-kamara-gets-saints-on-the-scoreboard",
+      "source_name": "Pro Football Talk",
+      "headline": "Alvin Kamara gets Saints on the scoreboard",
+      "published_at": "2026-10-06T01:20:24.000Z",
+      "observed_at": "2026-10-06T01:30:28.617Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NO"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
