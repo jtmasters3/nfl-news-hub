@@ -2,72 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/sam-darnold-injury-update-seahawks-cardinals-news",
-      "source_name": "FOX Sports",
-      "headline": "Seahawks Coach Mike Macdonald Declares QB Sam Darnold Week 2 Status",
-      "published_at": "2026-09-16T19:30:43.000Z",
-      "observed_at": "2026-09-16T19:50:21.615Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI",
-        "SEA"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/joe-burrow-dealing-with-back-tightness-expects-to-play-against-texans",
-      "source_name": "Pro Football Talk",
-      "headline": "Joe Burrow dealing with back tightness, expects to play against Texans",
-      "published_at": "2026-09-16T19:43:42.000Z",
-      "observed_at": "2026-09-16T19:50:21.615Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CIN",
-        "HOU"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/seahawks-sam-darnold-out-week-2-drew-lock-cardinals",
-      "source_name": "NFL.com",
-      "headline": "Seahawks rule out Sam Darnold for Week 2, don't plan to put QB on IR; Drew Lock to start vs. Cards",
-      "published_at": "2026-09-16T07:52:49.000Z",
-      "observed_at": "2026-09-16T20:00:29.533Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI",
-        "SEA"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lions-rt-blake-miller-lg-christian-mahogany-out-for-thursday-vs-bills",
       "source_name": "Pro Football Talk",
       "headline": "Lions RT Blake Miller, LG Christian Mahogany out for Thursday vs. Bills",
@@ -42130,6 +42064,68 @@
         "nfl_team_detected",
         "phrase_practice_squad",
         "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/qb-stock-market-week-5-brock-purdy-doesnt-have-mvp-moment-doesnt-need-one",
+      "source_name": "FOX Sports",
+      "headline": "QB Stock Market Week 5: Brock Purdy Doesn't Have An MVP Moment — And Doesn't Need One",
+      "published_at": "2026-10-06T18:17:02.000Z",
+      "observed_at": "2026-10-06T18:20:25.387Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/seahawks-reportedly-wont-sign-rb-joe-mixon-following-physical",
+      "source_name": "FOX Sports",
+      "headline": "Seahawks Reportedly Won't Sign RB Joe Mixon Following Physical",
+      "published_at": "2026-10-06T18:13:36.000Z",
+      "observed_at": "2026-10-06T18:20:25.387Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SEA"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/cam-jordan-comments-falcons-saints-stats",
+      "source_name": "FOX Sports",
+      "headline": "Cameron Jordan Shreds 'Embarrassing' Saints' Defense After Falcons Blowout",
+      "published_at": "2026-10-06T17:55:43.000Z",
+      "observed_at": "2026-10-06T18:20:25.387Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "NO"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
