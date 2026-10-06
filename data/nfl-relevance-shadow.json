@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/espn-joe-buck-strike-new-deal-worth-more-than-100-million",
-      "source_name": "Pro Football Talk",
-      "headline": "ESPN, Joe Buck strike new deal worth more than $100 million",
-      "published_at": "2026-09-16T15:06:41.000Z",
-      "observed_at": "2026-09-16T15:20:22.256Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PIT"
-      ],
-      "detected_category": "contract",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:contract"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-lb-akeem-davis-gaither-will-wear-helmet-transmitter-this-week",
       "source_name": "Pro Football Talk",
       "headline": "Colts LB Akeem Davis-Gaither will wear helmet transmitter this week",
@@ -42120,6 +42098,27 @@
       "confidence": "high",
       "detected_teams": [
         "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/ceedee-lamb-cowboys-sizzle-eagles-outlook-bleak-travis-hunter",
+      "source_name": "FOX Sports",
+      "headline": "NFL Best And Worst: From CeeDee Lamb’s Sizzle To The Eagles' Offensive Fizzle",
+      "published_at": "2026-10-06T03:22:11.000Z",
+      "observed_at": "2026-10-06T03:30:25.005Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
