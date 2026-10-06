@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-week-2-injury-report-player-statuses-for-all-16-games",
-      "source_name": "NFL.com",
-      "headline": "NFL Week 2 injury report: Player statuses for all 16 games",
-      "published_at": "2026-09-16T07:23:16.000Z",
-      "observed_at": "2026-09-16T19:30:23.592Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/seahawks-rule-sam-darnold-out-for-week-2",
-      "source_name": "Pro Football Talk",
-      "headline": "Seahawks rule Sam Darnold out for Week 2",
-      "published_at": "2026-09-16T19:30:49.000Z",
-      "observed_at": "2026-09-16T19:40:21.649Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-place-jordan-mason-on-ir-sign-deejay-dallas-to-53-man-roster",
       "source_name": "Pro Football Talk",
       "headline": "Vikings place Jordan Mason on IR, sign DeeJay Dallas to 53-man roster",
@@ -42121,6 +42083,48 @@
       "confidence": "high",
       "detected_teams": [
         "NYG"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ravens-te-durham-smythe-out-for-season-with-torn-achilles",
+      "source_name": "Pro Football Talk",
+      "headline": "Ravens TE Durham Smythe out for season with torn Achilles",
+      "published_at": "2026-10-06T17:54:35.000Z",
+      "observed_at": "2026-10-06T18:00:29.426Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lb-demarvion-overshown-a-long-shot-to-play-for-cowboys-thursday",
+      "source_name": "Pro Football Talk",
+      "headline": "LB DeMarvion Overshown a \"long shot\" to play for Cowboys Thursday",
+      "published_at": "2026-10-06T17:49:09.000Z",
+      "observed_at": "2026-10-06T18:00:29.426Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
