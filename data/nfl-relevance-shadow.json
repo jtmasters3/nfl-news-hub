@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/baker-mayfield-on-playing-browns-ultimately-you-remember-the-good-more-than-the-bad",
-      "source_name": "Pro Football Talk",
-      "headline": "Baker Mayfield on playing Browns: Ultimately, you remember the good more than the bad",
-      "published_at": "2026-09-16T18:17:48.000Z",
-      "observed_at": "2026-09-16T18:30:24.903Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE",
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-fantasy-2026-start-em-sit-em-kickers-for-week-2",
       "source_name": "NFL.com",
       "headline": "NFL Fantasy 2026 Start 'Em, Sit 'Em: Kickers for Week 2",
@@ -42134,6 +42112,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/lamar-jackson-injury-update-ravens-schedule-tyler-huntley",
+      "source_name": "FOX Sports",
+      "headline": "Lamar Jackson Reportedly Has Ankle Sprain; What It Could Mean For Ravens Star",
+      "published_at": "2026-10-06T15:01:29.000Z",
+      "observed_at": "2026-10-06T15:10:23.306Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
