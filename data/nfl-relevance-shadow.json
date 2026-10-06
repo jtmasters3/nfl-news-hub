@@ -2,48 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ben-johnson-not-celebrating-bears-59-point-week-1-we-havent-scored-any-points-this-week",
-      "source_name": "Pro Football Talk",
-      "headline": "Ben Johnson not celebrating Bears' 59-point Week 1: We haven't scored any points this week",
-      "published_at": "2026-09-16T18:50:53.000Z",
-      "observed_at": "2026-09-16T19:00:28.316Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brock-bowers-will-not-practice-wednesday",
-      "source_name": "Pro Football Talk",
-      "headline": "Brock Bowers will not practice Wednesday",
-      "published_at": "2026-09-16T18:46:12.000Z",
-      "observed_at": "2026-09-16T19:00:28.316Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/49ers-wr-dezhaun-stribling-injured-reserve-ankle",
       "source_name": "FOX Sports",
       "headline": "49ers Place WR De’Zhaun Stribling On Injured Reserve With Ankle Injury",
@@ -42120,6 +42078,46 @@
       "headline": "NFL has most accepted penalties through four weeks since 1978",
       "published_at": "2026-10-06T16:35:31.000Z",
       "observed_at": "2026-10-06T16:40:24.074Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-add-lb-eric-kendricks-to-practice-squad",
+      "source_name": "Pro Football Talk",
+      "headline": "Rams add LB Eric Kendricks to practice squad",
+      "published_at": "2026-10-06T16:39:30.000Z",
+      "observed_at": "2026-10-06T16:50:23.290Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-referees-association-objects-to-severity-of-suspensions-of-adrian-hill-jeff-seeman",
+      "source_name": "Pro Football Talk",
+      "headline": "NFL Referees Association objects to \"severity\" of suspensions of Adrian Hill, Jeff Seeman",
+      "published_at": "2026-10-06T16:39:03.000Z",
+      "observed_at": "2026-10-06T16:50:23.290Z",
       "decision": "keep",
       "classification": "ambiguous",
       "confidence": "low",
