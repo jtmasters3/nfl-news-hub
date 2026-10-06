@@ -2,65 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-te-jake-tonges-out-for-the-season-wr-dezhaun-stribling-out-around-10-weeks",
-      "source_name": "Pro Football Talk",
-      "headline": "49ers TE Jake Tonges out for the season, WR De'Zhaun Stribling out around 10 weeks",
-      "published_at": "2026-09-16T19:53:14.000Z",
-      "observed_at": "2026-09-16T20:00:29.533Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-qb-rankings-index-week-2-2026-nfl-season",
-      "source_name": "NFL.com",
-      "headline": "NFL QB rankings, Week 2: Caleb Williams, Lamar Jackson and Trevor Lawrence soar into top five",
-      "published_at": "2026-09-16T08:10:34.000Z",
-      "observed_at": "2026-09-16T20:20:20.935Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-fines-azeez-al-shaair-again-for-eye-black-message",
-      "source_name": "Pro Football Talk",
-      "headline": "NFL fines Azeez Al-Shaair again for eye-black message",
-      "published_at": "2026-09-16T20:11:04.000Z",
-      "observed_at": "2026-09-16T20:20:20.935Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "HOU"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bills-list-s-cole-bishop-rb-ty-johnson-dl-t-j-sanders-as-questionable-for-thursday-night",
       "source_name": "Pro Football Talk",
       "headline": "Bills list S Cole Bishop, RB Ty Johnson, DL T.J. Sanders as questionable for Thursday night",
@@ -42121,6 +42062,72 @@
       "confidence": "high",
       "detected_teams": [
         "SEA"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/saints-unsure-if-lb-kaden-elliss-will-return-this-week",
+      "source_name": "Pro Football Talk",
+      "headline": "Saints unsure if LB Kaden Elliss will return this week",
+      "published_at": "2026-10-06T19:14:39.000Z",
+      "observed_at": "2026-10-06T19:20:29.353Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "NO"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/espns-matt-miller-pleads-not-guilty-to-misdemeanor-charge-from-june-car-crash",
+      "source_name": "Pro Football Talk",
+      "headline": "ESPN's Matt Miller pleads not guilty to misdemeanor charge from June car crash",
+      "published_at": "2026-10-06T19:14:29.000Z",
+      "observed_at": "2026-10-06T19:20:29.353Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [],
+      "detected_category": "draft",
+      "nfl_evidence": [
+        "phrase_nfl_draft",
+        "nfl_preserving_category:draft"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaguars-sign-cb-alijah-huzzie-off-texans-practice-squad",
+      "source_name": "Pro Football Talk",
+      "headline": "Jaguars sign CB Alijah Huzzie off Texans practice squad",
+      "published_at": "2026-10-06T19:12:31.000Z",
+      "observed_at": "2026-10-06T19:20:29.353Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "HOU",
+        "JAX"
       ],
       "detected_category": "roster_move",
       "nfl_evidence": [
