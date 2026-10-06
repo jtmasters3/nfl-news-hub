@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/minkah-fitzpatrick-misses-practice-jets-call-him-week-to-week",
-      "source_name": "Pro Football Talk",
-      "headline": "Minkah Fitzpatrick misses practice, Jets call him week-to-week",
-      "published_at": "2026-09-16T20:47:37.000Z",
-      "observed_at": "2026-09-16T21:00:27.487Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB",
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/alvin-kamara-practices-fully-saints-feel-good-about-him-playing-this-week",
-      "source_name": "Pro Football Talk",
-      "headline": "Alvin Kamara practices fully, Saints \"feel good\" about him playing this week",
-      "published_at": "2026-09-16T21:43:59.000Z",
-      "observed_at": "2026-09-16T21:50:21.460Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "NO"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rj-harvey-marvin-mims-listed-as-out-of-practice-wednesday",
       "source_name": "Pro Football Talk",
       "headline": "RJ Harvey, Marvin Mims listed as out of practice Wednesday",
@@ -42147,6 +42103,47 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-sign-cb-terrell-smith-off-of-commanders-practice-squad",
+      "source_name": "Pro Football Talk",
+      "headline": "Steelers sign CB Terrell Smith off of Commanders practice squad",
+      "published_at": "2026-10-06T21:20:29.000Z",
+      "observed_at": "2026-10-06T21:30:24.932Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT",
+        "WAS"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tyreek-hills-ex-wife-testifies-about-alleged-abuse-during-divorce-trial",
+      "source_name": "Pro Football Talk",
+      "headline": "Tyreek Hill's ex-wife testifies about alleged abuse during divorce trial",
+      "published_at": "2026-10-06T21:14:18.000Z",
+      "observed_at": "2026-10-06T21:30:24.932Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
