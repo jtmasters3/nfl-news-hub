@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cardinals-wr-simi-fehoko-is-the-nfc-special-teams-player-of-the-week",
-      "source_name": "Pro Football Talk",
-      "headline": "Cardinals WR Simi Fehoko is the NFC special teams player of the week",
-      "published_at": "2026-09-16T16:17:25.000Z",
-      "observed_at": "2026-09-16T16:30:25.768Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/sean-mcvay-rams-dream-team",
       "source_name": "FOX Sports",
       "headline": "West Coast Read: Can Sean McVay Turn Rams' Nightmare Into Expected Dream Team?",
@@ -42134,6 +42113,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/uk-and-ireland-week-5-broadcast-games",
+      "source_name": "NFL.com",
+      "headline": "UK and Ireland Week 5 Broadcast Games",
+      "published_at": "2026-10-06T12:38:14.000Z",
+      "observed_at": "2026-10-06T12:50:27.642Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
