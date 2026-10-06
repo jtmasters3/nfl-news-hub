@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/michael-penix-im-dying-to-be-out-there-some-goals-i-still-have-to-achieve",
-      "source_name": "Pro Football Talk",
-      "headline": "Michael Penix: I'm dying to be out there, some goals I still have to achieve",
-      "published_at": "2026-09-16T20:16:04.000Z",
-      "observed_at": "2026-09-16T20:30:27.238Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "CAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-how-to-watch-week-2-schedule-key-matchups-and-more-x4041",
-      "source_name": "NFL.com",
-      "headline": "NFL+: How to watch Week 2, schedule, key matchups, and more",
-      "published_at": "2026-09-16T08:36:10.000Z",
-      "observed_at": "2026-09-16T20:40:23.992Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/joey-porter-jr-listed-as-limited-at-steelers-practice-due-to-conditioning",
       "source_name": "Pro Football Talk",
       "headline": "Joey Porter Jr. listed as limited at Steelers practice due to conditioning",
@@ -42130,6 +42091,48 @@
       "confidence": "high",
       "detected_teams": [
         "CLE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/eagles-ot-lane-johnson-announces-retirement-from-nfl-amid-14th-season",
+      "source_name": "NFL.com",
+      "headline": "Eagles OT Lane Johnson announces retirement from NFL amid 14th season",
+      "published_at": "2026-10-06T08:08:30.000Z",
+      "observed_at": "2026-10-06T20:10:21.935Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI"
+      ],
+      "detected_category": "retirement",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-mvp-tracker-49ers-qb-brock-purdy-leads-rankings-through-first-four-weeks",
+      "source_name": "NFL.com",
+      "headline": "NFL MVP tracker: 49ers QB Brock Purdy leads rankings through first four weeks",
+      "published_at": "2026-10-06T08:04:38.000Z",
+      "observed_at": "2026-10-06T20:10:21.935Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
