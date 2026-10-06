@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/neil-reynolds-week-2-power-rankings-2026",
-      "source_name": "NFL.com",
-      "headline": "Neil Reynolds' Week 2 Power rankings",
-      "published_at": "2026-09-16T12:59:12.000Z",
-      "observed_at": "2026-09-16T13:10:19.587Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bills-and-texans-each-fumbled-twice-bills-recovered-all-four-on-way-to-36-31-win",
       "source_name": "Pro Football Talk",
       "headline": "Bills and Texans each fumbled twice, Bills recovered all four on way to 36-31 win",
@@ -42109,6 +42092,27 @@
         "CHI"
       ],
       "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bijan-robinson-puts-a-damper-on-saints-celebration-with-59-yard-td-run",
+      "source_name": "Pro Football Talk",
+      "headline": "Bijan Robinson puts a damper on Saints' celebration with 59-yard TD run",
+      "published_at": "2026-10-06T00:27:01.000Z",
+      "observed_at": "2026-10-06T00:40:21.845Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NO"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
