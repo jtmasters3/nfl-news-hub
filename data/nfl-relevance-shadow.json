@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-fantasy-2026-start-em-sit-em-quarterbacks-for-week-2",
-      "source_name": "NFL.com",
-      "headline": "NFL Fantasy 2026 Start 'Em, Sit 'Em: Quarterbacks for Week 2",
-      "published_at": "2026-09-16T06:33:00.000Z",
-      "observed_at": "2026-09-16T18:40:27.718Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV"
-      ],
-      "detected_category": "fantasy",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/colts-wr-keenan-allen-formally-charged-two-misdemeanors-after-august-arrest",
       "source_name": "FOX Sports",
       "headline": "Colts WR Keenan Allen Formally Charged With Two Misdemeanors After August Arrest",
@@ -42140,6 +42119,25 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/early-nfl-all-rookie-team-which-2026-draft-picks-have-excelled-so-far",
+      "source_name": "NFL.com",
+      "headline": "Early NFL All-Rookie Team: Which 2026 draft picks have excelled so far?",
+      "published_at": "2026-10-06T09:16:04.000Z",
+      "observed_at": "2026-10-06T16:30:27.831Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "draft",
+      "nfl_evidence": [
+        "nfl_preserving_category:draft"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
