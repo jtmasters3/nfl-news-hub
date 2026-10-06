@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patriots-mack-hollins-agreed-to-make-his-2026-incentives-harder-to-earn",
-      "source_name": "Pro Football Talk",
-      "headline": "Patriots, Mack Hollins agreed to make his 2026 incentives harder to earn",
-      "published_at": "2026-09-16T14:29:25.000Z",
-      "observed_at": "2026-09-16T14:40:20.543Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/which-are-the-best-and-worst-nfl-offseason-additions-after-one-week",
       "source_name": "NFL.com",
       "headline": "Which are the best and worst NFL offseason additions after one week?",
@@ -42119,6 +42098,29 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/marcus-davenport-will-retire-from-football",
+      "source_name": "Pro Football Talk",
+      "headline": "Marcus Davenport will retire from football",
+      "published_at": "2026-10-06T02:23:32.000Z",
+      "observed_at": "2026-10-06T02:30:26.065Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
+      ],
+      "detected_category": "retirement",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_signs_with",
+        "phrase_practice_squad"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
