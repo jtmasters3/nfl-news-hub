@@ -2,25 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ncaas-fbs-oversight-committee-finds-replay-error-marred-western-michigan-michigan-game",
-      "source_name": "Pro Football Talk",
-      "headline": "NCAA's FBS Oversight Committee finds replay error marred Western Michigan-Michigan game",
-      "published_at": "2026-09-17T00:12:05.000Z",
-      "observed_at": "2026-09-17T00:20:22.078Z",
-      "decision": "reject",
-      "classification": "college_football",
-      "confidence": "medium",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [
-        "college_ncaa"
-      ],
-      "reason_codes": [
-        "college_marker_no_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/roll-tape-who-has-advantage-ben-johnson-brian-flores-chess-match",
       "source_name": "FOX Sports",
       "headline": "Roll The Tape: Who Has The Advantage In The Ben Johnson-Brian Flores Chess Match?",
@@ -42147,6 +42128,27 @@
       "confidence": "high",
       "detected_teams": [
         "IND"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patriots-worked-out-veteran-rb-jamaal-williams",
+      "source_name": "Pro Football Talk",
+      "headline": "Patriots worked out veteran RB Jamaal Williams",
+      "published_at": "2026-10-07T02:12:03.000Z",
+      "observed_at": "2026-10-07T02:20:21.878Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
