@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-allen-registers-10th-game-with-2-rushing-2-passing-touchdowns",
-      "source_name": "Pro Football Talk",
-      "headline": "Josh Allen registers 10th game with 2+ rushing, 2+ passing touchdowns",
-      "published_at": "2026-09-18T02:37:21.000Z",
-      "observed_at": "2026-09-18T02:40:19.827Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bills-rule-out-wr-dj-moore",
       "source_name": "Pro Football Talk",
       "headline": "Bills rule out WR DJ Moore",
@@ -42134,6 +42117,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-lt-jake-matthews-de-zadarius-smith-did-not-practice-wednesday",
+      "source_name": "Pro Football Talk",
+      "headline": "Falcons LT Jake Matthews, DE Za'Darius Smith did not practice Wednesday",
+      "published_at": "2026-10-07T22:44:44.000Z",
+      "observed_at": "2026-10-07T22:50:24.105Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
