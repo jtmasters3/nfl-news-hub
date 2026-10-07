@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/a-j-terrell-chris-lindstrom-return-to-falcons-practice",
-      "source_name": "Pro Football Talk",
-      "headline": "A.J. Terrell, Chris Lindstrom return to Falcons practice",
-      "published_at": "2026-09-17T19:39:10.000Z",
-      "observed_at": "2026-09-17T19:50:24.043Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/drew-lock-sam-darnold-injury-seahawks-cardinals",
       "source_name": "FOX Sports",
       "headline": "Who Is Drew Lock? 5 Things To Know About Seahawks QB Starting For Sam Darnold",
@@ -42149,6 +42128,23 @@
       "nfl_evidence": [
         "nfl_preserving_category:contract"
       ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-qb-notebook-week-4-joe-burrow-jalen-hurts-dak-prescott-bo-nix-justin-herbert",
+      "source_name": "FOX Sports",
+      "headline": "NFL QB Notebook Week 4: Let Joe Burrow Cook; Diagnosing Jalen Hurts' Struggles",
+      "published_at": "2026-10-07T17:54:37.000Z",
+      "observed_at": "2026-10-07T18:00:30.208Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
