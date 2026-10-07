@@ -2,46 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/a-new-book-accessory-after-the-fact-is-coming",
-      "source_name": "Pro Football Talk",
-      "headline": "A new book, Accessory After The Fact, is coming",
-      "published_at": "2026-09-17T02:18:00.000Z",
-      "observed_at": "2026-09-17T02:30:22.448Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "draft",
-      "nfl_evidence": [
-        "nfl_preserving_category:draft"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-keenan-allens-bac-was-measured-at-0-224-percent",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Keenan Allen's BAC was measured at 0.224 percent",
-      "published_at": "2026-09-17T02:43:56.000Z",
-      "observed_at": "2026-09-17T02:50:19.295Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/cowboys-hc-brian-schottenheimer-on-george-pickens-week-1-drops-i-don-t-worry-about-george",
       "source_name": "NFL.com",
       "headline": "Cowboys HC Brian Schottenheimer on George Pickens' Week 1 drops: 'I don't worry about George'",
@@ -42150,6 +42110,51 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kellen-moore-we-will-definitely-have-a-discussion-about-how-to-start-faster",
+      "source_name": "Pro Football Talk",
+      "headline": "Kellen Moore: We will definitely have a discussion about how to start faster",
+      "published_at": "2026-10-07T11:01:58.000Z",
+      "observed_at": "2026-10-07T11:10:22.170Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "NO"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/demeco-ryans-texans-blocked-cowboys-field-goal-by-doing-the-same-thing-the-ravens-did",
+      "source_name": "Pro Football Talk",
+      "headline": "DeMeco Ryans: Texans blocked Cowboys' field goal by doing the same thing the Ravens did",
+      "published_at": "2026-10-07T10:54:54.000Z",
+      "observed_at": "2026-10-07T11:10:22.170Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "DAL",
+        "HOU"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
