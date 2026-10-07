@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jalen-mcmillan-fully-participates-in-thursdays-practice",
-      "source_name": "Pro Football Talk",
-      "headline": "Jalen McMillan fully participates in Thursday's practice",
-      "published_at": "2026-09-17T20:22:36.000Z",
-      "observed_at": "2026-09-17T20:30:30.924Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-zxavian-harris-daequan-wright-ineligible-2026-lsu",
-      "source_name": "FOX Sports",
-      "headline": "NFL Says Harris, Wright Ineligible In 2026 After Attempt To Play For LSU",
-      "published_at": "2026-09-17T20:26:27.000Z",
-      "observed_at": "2026-09-17T20:40:55.538Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ladd-mcconkey-working-on-the-side-during-thursdays-practice",
       "source_name": "Pro Football Talk",
       "headline": "Ladd McConkey working on the side during Thursday's practice",
@@ -42136,6 +42098,49 @@
       "confidence": "high",
       "detected_teams": [
         "HOU"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-campbell-downplays-concerns-about-sam-laporta-breaking-off-contract-talks-with-lions",
+      "source_name": "Pro Football Talk",
+      "headline": "Dan Campbell downplays concerns about Sam LaPorta breaking off contract talks with Lions",
+      "published_at": "2026-10-07T18:34:53.000Z",
+      "observed_at": "2026-10-07T18:40:23.648Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET"
+      ],
+      "detected_category": "contract",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:contract"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/raiders-open-practice-window-for-wr-donte-thornton",
+      "source_name": "Pro Football Talk",
+      "headline": "Raiders open practice window for WR Dont’e Thornton",
+      "published_at": "2026-10-07T18:29:53.000Z",
+      "observed_at": "2026-10-07T18:40:23.648Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
