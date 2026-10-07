@@ -2,71 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/drew-lock-sam-darnold-injury-seahawks-cardinals",
-      "source_name": "FOX Sports",
-      "headline": "Who Is Drew Lock? 5 Things To Know About Seahawks QB Starting For Sam Darnold",
-      "published_at": "2026-09-17T19:30:18.000Z",
-      "observed_at": "2026-09-17T20:00:27.561Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI",
-        "SEA"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jalen-coker-remains-limited-at-panthers-practice",
-      "source_name": "Pro Football Talk",
-      "headline": "Jalen Coker remains limited at Panthers practice",
-      "published_at": "2026-09-17T19:48:48.000Z",
-      "observed_at": "2026-09-17T20:00:27.561Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dandre-swift-kyle-monangai-remain-limited-on-thursday-injury-report",
-      "source_name": "Pro Football Talk",
-      "headline": "D'Andre Swift, Kyle Monangai remain limited on Thursday injury report",
-      "published_at": "2026-09-17T19:46:01.000Z",
-      "observed_at": "2026-09-17T20:00:27.561Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "MIN"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/commanders-waive-dl-ricky-barber-sign-cb-isaac-yiadom-to-active-roster",
       "source_name": "Pro Football Talk",
       "headline": "Commanders waive DL Ricky Barber, sign CB Isaac Yiadom to active roster",
@@ -42148,6 +42083,66 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-qb-rankings-week-5-2026-nfl-season",
+      "source_name": "NFL.com",
+      "headline": "NFL QB rankings, Week 5: C.J. Stroud, Bryce Young vault into top 10",
+      "published_at": "2026-10-07T05:59:00.000Z",
+      "observed_at": "2026-10-07T18:10:20.455Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brian-branch-cade-mays-return-to-practice-for-lions",
+      "source_name": "Pro Football Talk",
+      "headline": "Brian Branch, Cade Mays return to practice for Lions",
+      "published_at": "2026-10-07T18:05:17.000Z",
+      "observed_at": "2026-10-07T18:10:20.455Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/texans-sign-qb-mark-gronowski-to-active-roster",
+      "source_name": "Pro Football Talk",
+      "headline": "Texans sign QB Mark Gronowski to active roster",
+      "published_at": "2026-10-07T17:58:57.000Z",
+      "observed_at": "2026-10-07T18:10:20.455Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "HOU"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
