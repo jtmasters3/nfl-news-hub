@@ -383173,24 +383173,28 @@
     },
     "56190215-2981-40f9-8c1e-0be3fed878a3": {
       "story_id": "56190215-2981-40f9-8c1e-0be3fed878a3",
-      "status": "new",
+      "status": "queued",
       "merged_into": null,
       "created_at": "2026-10-07T02:20:40.521Z",
-      "updated_at": "2026-10-07T02:20:40.521Z",
+      "updated_at": "2026-10-07T21:00:46.847Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
         "instagram_story": true
       },
       "source_story": {
-        "post_headline": null,
-        "base_image_url": null,
-        "source_name": null,
-        "source_url": null,
-        "category": null,
-        "teams": [],
-        "players": [],
-        "description": null,
+        "post_headline": "PATRIOTS WORKED OUT VETERAN RB JAMAAL WILLIAMS",
+        "base_image_url": "https://a57.foxsports.com/statics.foxsports.com/www.foxsports.com/content/uploads/2026/10/1294/728/jamaal-williams-.jpg?ve=1&tl=1",
+        "source_name": "FOX Sports",
+        "source_url": "https://www.foxsports.com/stories/nfl/jamaal-williams-new-england-patriots-tryout-free-agency",
+        "category": "free_agency",
+        "teams": [
+          "New England Patriots"
+        ],
+        "players": [
+          "Jamaal Williams"
+        ],
+        "description": "Running back Jamaal Williams last played in the NFL in 2024.",
         "is_rumor": false
       },
       "artwork": {
@@ -390632,7 +390636,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-10-07T18:20:36.237Z",
-      "updated_at": "2026-10-07T20:00:31.182Z",
+      "updated_at": "2026-10-07T21:00:28.754Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -390783,13 +390787,13 @@
         "retry_count": 0
       },
       "selection": {
-        "destination": "feed",
-        "slot_id": "feed:2026-10-07T16:00:00-04:00",
-        "selected_at": "2026-10-07T20:00:31.182Z",
-        "window_start": "2026-10-07T18:00:00.000Z",
-        "window_end": "2026-10-07T20:00:00.000Z",
+        "destination": "story",
+        "slot_id": "story:2026-10-07T17:00:00-04:00",
+        "selected_at": "2026-10-07T21:00:28.754Z",
+        "window_start": "2026-10-07T20:00:00.000Z",
+        "window_end": "2026-10-07T21:00:00.000Z",
         "score": 10,
-        "reason": "importance_score_rank"
+        "reason": "fallback_recent_pool_importance_score_rank"
       }
     },
     "f7e6927f-6ac2-4271-a463-1457194f7e18": {
@@ -398500,6 +398504,15 @@
       "status": "selected",
       "story_id": "8cef71c4-6794-492c-b835-2e9796022b36",
       "processed_at": "2026-10-07T20:00:31.182Z"
+    },
+    "story:2026-10-07T17:00:00-04:00": {
+      "destination": "story",
+      "slot_time": "2026-10-07T21:00:00.000Z",
+      "window_start": "2026-10-07T20:00:00.000Z",
+      "window_end": "2026-10-07T21:00:00.000Z",
+      "status": "selected",
+      "story_id": "95f8885a-3bba-4679-935b-45c46bec153c",
+      "processed_at": "2026-10-07T21:00:28.754Z"
     }
   }
 }

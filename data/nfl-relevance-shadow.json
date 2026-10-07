@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-palmer-scores-his-second-td-of-the-season-on-his-second-catch",
-      "source_name": "Pro Football Talk",
-      "headline": "Josh Palmer scores his second TD of the season on his second catch",
-      "published_at": "2026-09-18T00:47:11.000Z",
-      "observed_at": "2026-09-18T01:00:28.498Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/hall-of-fame-announces-its-new-group-of-voters",
       "source_name": "Pro Football Talk",
       "headline": "Hall of Fame announces its new group of voters",
@@ -42128,6 +42111,28 @@
       "detected_category": "coaching",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/jamaal-williams-new-england-patriots-tryout-free-agency",
+      "source_name": "FOX Sports",
+      "headline": "From Rushing Leader To Free Agency: Jamaal Williams Works Out For Patriots",
+      "published_at": "2026-10-07T20:44:07.000Z",
+      "observed_at": "2026-10-07T21:00:28.754Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:free_agency"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
