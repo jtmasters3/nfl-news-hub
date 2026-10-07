@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-dfs-week-2-best-picks-lineup-advice-value-plays",
-      "source_name": "FOX Sports",
-      "headline": "NFL DFS Week 2: Best Picks, Lineup Advice and Value Plays",
-      "published_at": "2026-09-17T13:00:00.000Z",
-      "observed_at": "2026-09-17T13:10:57.095Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "fantasy",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dave-canales-on-not-knowing-falcons-qb-have-to-study-history-of-kevin-stefanskis-offenses",
       "source_name": "Pro Football Talk",
       "headline": "Dave Canales on not knowing Falcons QB: Have to study history of Kevin Stefanski's offenses",
@@ -42142,6 +42125,27 @@
         "CAR"
       ],
       "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/after-lane-johnson-s-retirement-can-eagles-battered-offensive-line-hold-up",
+      "source_name": "NFL.com",
+      "headline": "After Lane Johnson's retirement, can Eagles' battered offensive line hold up?",
+      "published_at": "2026-10-07T10:46:05.000Z",
+      "observed_at": "2026-10-07T14:00:30.810Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI"
+      ],
+      "detected_category": "retirement",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
