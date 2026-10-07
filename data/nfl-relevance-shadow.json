@@ -2,70 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/travis-kelce-knows-he-was-holding-on-patrick-mahomes-touchdown-run",
-      "source_name": "Pro Football Talk",
-      "headline": "Travis Kelce knows he was holding on Patrick Mahomes' touchdown run",
-      "published_at": "2026-09-17T09:03:15.000Z",
-      "observed_at": "2026-09-17T09:10:26.506Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nico-collins-hurt-his-hamstring-in-wednesdays-practice",
-      "source_name": "Pro Football Talk",
-      "headline": "Nico Collins hurt his hamstring in Wednesday's practice",
-      "published_at": "2026-09-17T11:17:04.000Z",
-      "observed_at": "2026-09-17T11:20:25.140Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "HOU"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/caleb-williams-preparing-for-mental-war-with-brian-flores-this-weekend",
-      "source_name": "Pro Football Talk",
-      "headline": "Caleb Williams preparing for \"mental war\" with Brian Flores this weekend",
-      "published_at": "2026-09-17T11:12:07.000Z",
-      "observed_at": "2026-09-17T11:20:25.140Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR",
-        "CHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brian-schottenheimer-i-dont-worry-about-george-pickenss-drops-hell-be-just-fine",
       "source_name": "Pro Football Talk",
       "headline": "Brian Schottenheimer: I don't worry about George Pickens's drops, he'll be just fine",
@@ -42152,6 +42088,67 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/matt-lafleur-doesn-t-need-to-trash-talk-he-just-needs-to-beat-the-bears",
+      "source_name": "NFL.com",
+      "headline": "Matt LaFleur doesn't need to trash talk. He just needs to beat the Bears",
+      "published_at": "2026-10-07T10:16:06.000Z",
+      "observed_at": "2026-10-07T13:20:59.251Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/the-2026-nfl-free-agents-who-have-made-the-most-and-least-impact-through-4-games",
+      "source_name": "NFL.com",
+      "headline": "The 2026 NFL free agents who have made the most (and least) impact through 4 games",
+      "published_at": "2026-10-07T09:46:05.000Z",
+      "observed_at": "2026-10-07T13:20:59.251Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-sign-de-carl-lawson-to-their-practice-squad",
+      "source_name": "Pro Football Talk",
+      "headline": "Colts sign DE Carl Lawson to their practice squad",
+      "published_at": "2026-10-07T13:10:41.000Z",
+      "observed_at": "2026-10-07T13:20:59.251Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
