@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/hall-of-fame-announces-its-new-group-of-voters",
-      "source_name": "Pro Football Talk",
-      "headline": "Hall of Fame announces its new group of voters",
-      "published_at": "2026-09-18T00:46:48.000Z",
-      "observed_at": "2026-09-18T01:00:28.498Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/korn-ferry-tries-to-keep-key-document-in-brian-flores-case-under-seal",
       "source_name": "Pro Football Talk",
       "headline": "Korn Ferry tries to keep key document in Brian Flores case under seal",
@@ -42133,6 +42116,28 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/seahawks-dt-jarran-reed-players-hit-penalty-issues-head-on-in-meeting-this-week",
+      "source_name": "Pro Football Talk",
+      "headline": "Seahawks DT Jarran Reed: Players hit penalty issues \"head on\" in meeting this week",
+      "published_at": "2026-10-07T20:53:50.000Z",
+      "observed_at": "2026-10-07T21:10:24.875Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC",
+        "SEA"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
