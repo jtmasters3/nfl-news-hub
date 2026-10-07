@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/thursday-night-football-josh-allen-bills-running-over-lions-up-27-10-at-halftime",
-      "source_name": "Pro Football Talk",
-      "headline": "Thursday Night Football: Josh Allen, Bills running over Lions, up 27-10 at halftime",
-      "published_at": "2026-09-18T02:01:54.000Z",
-      "observed_at": "2026-09-18T02:10:20.027Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "DET"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/bills-wr-dj-moore-ruled-out-thursday-vs-lions-with-shoulder-injury",
       "source_name": "NFL.com",
       "headline": "Bills WR DJ Moore ruled out Thursday vs. Lions with shoulder injury",
@@ -42139,6 +42117,25 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "nfl_preserving_category:contract"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-nflpa-clarify-celebrations-imitating-drinking-a-beverage-not-considered-violations",
+      "source_name": "NFL.com",
+      "headline": "NFL, NFLPA clarify celebrations 'imitating drinking a beverage' not considered violations",
+      "published_at": "2026-10-07T09:58:10.000Z",
+      "observed_at": "2026-10-07T22:10:18.767Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "phrase_nflpa"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
