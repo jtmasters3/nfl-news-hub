@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/saints-add-chris-olave-chase-young-to-thursday-injury-report",
-      "source_name": "Pro Football Talk",
-      "headline": "Saints add Chris Olave, Chase Young to Thursday injury report",
-      "published_at": "2026-09-17T20:56:53.000Z",
-      "observed_at": "2026-09-17T21:00:32.591Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NO"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cam-ward-remains-confident-that-hes-a-very-good-quarterback",
       "source_name": "Pro Football Talk",
       "headline": "Cam Ward remains confident that he's \"a very good quarterback\"",
@@ -42150,6 +42129,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-week-5-injury-report-player-statuses-for-all-15-games",
+      "source_name": "NFL.com",
+      "headline": "NFL Week 5 injury report: Player statuses for all 15 games",
+      "published_at": "2026-10-07T06:58:11.000Z",
+      "observed_at": "2026-10-07T19:10:23.510Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
