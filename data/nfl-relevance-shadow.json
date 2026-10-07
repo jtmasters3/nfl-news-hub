@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-thursday-sept-17",
-      "source_name": "NFL.com",
-      "headline": "NFL news roundup: Latest league updates from Thursday, Sept. 17",
-      "published_at": "2026-09-17T03:22:18.000Z",
-      "observed_at": "2026-09-17T15:30:22.592Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/next-woman-up-izzy-diaz-harriet-p-irsay-fellow-special-teams-assistant-for-the-indianapolis-colts",
       "source_name": "NFL.com",
       "headline": "Next Woman Up: Izzy Diaz, Harriet P. Irsay Fellow/Special Teams Assistant for the Indianapolis Colts",
@@ -42129,6 +42112,28 @@
       "confidence": "high",
       "detected_teams": [
         "NYG"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-to-sign-rb-dameon-pierce-to-53-man-roster",
+      "source_name": "Pro Football Talk",
+      "headline": "Eagles to sign RB Dameon Pierce to 53-man roster",
+      "published_at": "2026-10-07T15:58:52.000Z",
+      "observed_at": "2026-10-07T16:00:30.349Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI"
       ],
       "detected_category": "roster_move",
       "nfl_evidence": [
