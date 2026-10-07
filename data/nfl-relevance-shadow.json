@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/tom-bradys-nfl-power-rankings-caleb-williams-mvp-watch-has-begun-chiefs-back",
-      "source_name": "FOX Sports",
-      "headline": "Tom Brady's NFL Power Rankings: Caleb Williams MVP Watch Has Begun; Chiefs Are Back",
-      "published_at": "2026-09-17T02:08:02.000Z",
-      "observed_at": "2026-09-17T02:20:25.871Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "KC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/a-new-book-accessory-after-the-fact-is-coming",
       "source_name": "Pro Football Talk",
       "headline": "A new book, Accessory After The Fact, is coming",
@@ -42146,6 +42124,23 @@
       "headline": "Comment vous rendre au NFL Paris Game",
       "published_at": "2026-10-07T09:31:46.000Z",
       "observed_at": "2026-10-07T09:40:22.612Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kyren-williams-kenneth-walker-first-players-since-2016-with-2-td-runs-in-last-4-minutes",
+      "source_name": "Pro Football Talk",
+      "headline": "Kyren Williams, Kenneth Walker: First players since 2016 with 2 TD runs in last 4 minutes",
+      "published_at": "2026-10-07T10:02:35.000Z",
+      "observed_at": "2026-10-07T10:10:20.955Z",
       "decision": "keep",
       "classification": "ambiguous",
       "confidence": "low",
