@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/cowboys-hc-brian-schottenheimer-on-george-pickens-week-1-drops-i-don-t-worry-about-george",
-      "source_name": "NFL.com",
-      "headline": "Cowboys HC Brian Schottenheimer on George Pickens' Week 1 drops: 'I don't worry about George'",
-      "published_at": "2026-09-17T02:47:56.000Z",
-      "observed_at": "2026-09-17T03:00:26.391Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "NYG"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/tom-brady-has-seen-enough-patrick-mahomes-back-being-himself",
       "source_name": "FOX Sports",
       "headline": "Tom Brady Has Seen Enough: Patrick Mahomes Is Back To Being Himself",
@@ -42147,6 +42125,27 @@
         "BAL",
         "DAL",
         "HOU"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/jim-leonhard-bills-defense-complain-home-noise-expletive",
+      "source_name": "NFL.com",
+      "headline": "Jim Leonhard on Bills defense: If we complain about home noise, 'we are (expletive)'",
+      "published_at": "2026-10-07T12:10:12.000Z",
+      "observed_at": "2026-10-07T12:20:24.829Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
