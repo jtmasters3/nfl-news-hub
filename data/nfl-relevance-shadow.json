@@ -2,65 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-macdonald-not-sure-when-sam-darnold-will-be-back-but-im-optimistic",
-      "source_name": "Pro Football Talk",
-      "headline": "Mike Macdonald: Not sure when Sam Darnold will be back, but I'm optimistic",
-      "published_at": "2026-09-18T20:57:37.000Z",
-      "observed_at": "2026-09-18T21:00:30.581Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/state-of-texas-three-south-florida-high-schools-produce-most-nfl-players-on-kickoff-weekend-rosters",
-      "source_name": "NFL.com",
-      "headline": "State of Texas, three South Florida high schools produce most NFL players on Kickoff Weekend rosters",
-      "published_at": "2026-09-18T08:59:13.000Z",
-      "observed_at": "2026-09-18T21:10:20.685Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-steelers-have-received-no-serious-trade-inquiries-about-joey-porter-jr",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Steelers have received no serious trade inquiries about Joey Porter Jr.",
-      "published_at": "2026-09-18T21:07:40.000Z",
-      "observed_at": "2026-09-18T21:10:20.685Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PIT"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/giants-place-paulson-adebo-on-ir-sign-nikko-reed-from-chargers",
       "source_name": "Pro Football Talk",
       "headline": "Giants place Paulson Adebo on IR, sign Nikko Reed from Chargers",
@@ -42127,6 +42068,72 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ashton-jeanty-downgraded-to-limited-practice-on-thursday",
+      "source_name": "Pro Football Talk",
+      "headline": "Ashton Jeanty downgraded to limited practice on Thursday",
+      "published_at": "2026-10-08T22:44:40.000Z",
+      "observed_at": "2026-10-08T22:50:19.266Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/thursday-night-football-cowboys-cb-joey-porter-jr-rule-out-with-an-illness",
+      "source_name": "Pro Football Talk",
+      "headline": "Thursday Night Football: Cowboys CB Joey Porter Jr. ruled out with an illness",
+      "published_at": "2026-10-08T22:40:51.000Z",
+      "observed_at": "2026-10-08T22:50:19.266Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "PIT"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rb-chris-brooks-out-of-practice-packers-sign-pierre-strong-to-53-man-roster",
+      "source_name": "Pro Football Talk",
+      "headline": "RB Chris Brooks out of practice, Packers sign Pierre Strong to 53-man roster",
+      "published_at": "2026-10-08T22:39:02.000Z",
+      "observed_at": "2026-10-08T22:50:19.266Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "GB"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:roster_move"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
