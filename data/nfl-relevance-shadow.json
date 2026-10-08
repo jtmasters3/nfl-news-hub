@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/roger-goodell-europe-is-the-most-likely-destination-for-a-franchise",
-      "source_name": "Pro Football Talk",
-      "headline": "Roger Goodell: Europe is the most likely destination for a franchise",
-      "published_at": "2026-09-18T04:15:26.000Z",
-      "observed_at": "2026-09-18T04:20:21.756Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-campbell-its-a-long-season-lions-need-to-get-better",
       "source_name": "Pro Football Talk",
       "headline": "Dan Campbell: It's a long season, Lions need to get better",
@@ -42145,6 +42128,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/tom-bradys-nfl-power-rankings-nfc-west-domination-has-arrived-ahead-49ers-seahawks",
+      "source_name": "FOX Sports",
+      "headline": "Tom Brady's NFL Power Rankings: NFC West Domination Has Arrived Ahead Of 49ers-Seahawks",
+      "published_at": "2026-10-08T00:49:50.000Z",
+      "observed_at": "2026-10-08T01:00:28.580Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF",
+        "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
