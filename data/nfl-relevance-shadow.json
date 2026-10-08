@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/week-2-nfl-shop-offer-terms",
-      "source_name": "NFL.com",
-      "headline": "Wee 2",
-      "published_at": "2026-09-18T04:49:59.000Z",
-      "observed_at": "2026-09-18T16:50:23.723Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/bengals-joe-burrow-texans-back-injury",
       "source_name": "NFL.com",
       "headline": "Bengals' Joe Burrow (back) full participant at practice, set to start Sunday vs. Texans",
@@ -42164,6 +42147,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tyson-bagent-doesnt-care-if-he-gets-the-credit-as-the-starting-qb-for-last-weeks-win",
+      "source_name": "Pro Football Talk",
+      "headline": "Tyson Bagent doesn't care if he gets the credit as the starting QB for last week's win",
+      "published_at": "2026-10-08T17:00:51.000Z",
+      "observed_at": "2026-10-08T17:10:19.312Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "NYJ"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
