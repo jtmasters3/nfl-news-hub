@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-allen-very-fortunate-to-be-the-qb-to-open-this-stadium",
-      "source_name": "Pro Football Talk",
-      "headline": "Josh Allen: Very fortunate to be the QB to open this stadium",
-      "published_at": "2026-09-18T10:54:48.000Z",
-      "observed_at": "2026-09-18T11:00:31.731Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bo-nix-were-not-freaking-out-about-being-0-1",
       "source_name": "Pro Football Talk",
       "headline": "Bo Nix: We're not freaking out about being 0-1",
@@ -42147,6 +42130,27 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-macdonald-on-joe-mixon-didnt-work-out",
+      "source_name": "Pro Football Talk",
+      "headline": "Mike Macdonald on Joe Mixon: \"Didn't work out\"",
+      "published_at": "2026-10-08T02:33:14.000Z",
+      "observed_at": "2026-10-08T02:40:25.345Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
