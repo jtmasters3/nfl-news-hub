@@ -2,97 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/giants-place-paulson-adebo-on-ir-sign-nikko-reed-from-chargers",
-      "source_name": "Pro Football Talk",
-      "headline": "Giants place Paulson Adebo on IR, sign Nikko Reed from Chargers",
-      "published_at": "2026-09-18T21:00:27.000Z",
-      "observed_at": "2026-09-18T21:10:20.685Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAC",
-        "NYG"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/deshaun-watson-could-lose-seventh-straight-start-on-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "Deshaun Watson could lose seventh straight start on Sunday",
-      "published_at": "2026-09-18T21:42:55.000Z",
-      "observed_at": "2026-09-18T21:50:22.335Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/rams-aaron-donald-plans-to-play-monday-night-vs-giants",
-      "source_name": "NFL.com",
-      "headline": "Rams' Aaron Donald plans to play Monday night vs. Giants",
-      "published_at": "2026-09-18T10:17:56.000Z",
-      "observed_at": "2026-09-18T22:20:25.939Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAC",
-        "LAR",
-        "NYG",
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-college-football-odds-best-bets-lsu-ole-miss-eagles-titans",
-      "source_name": "FOX Sports",
-      "headline": "2026 NFL, College Football Odds: Best Bets For LSU-Ole Miss, Eagles-Titans",
-      "published_at": "2026-09-18T22:05:55.000Z",
-      "observed_at": "2026-09-18T22:20:25.939Z",
-      "decision": "keep",
-      "classification": "nfl_with_college_context",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI",
-        "TEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [
-        "college_football_phrase"
-      ],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-donald-plans-to-play-on-monday-night",
       "source_name": "Pro Football Talk",
       "headline": "Aaron Donald plans to play on Monday night",
@@ -42134,6 +42043,92 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/week-5-thursday-night-inactives-tampa-bay-buccaneers-at-dallas-cowboys",
+      "source_name": "NFL.com",
+      "headline": "Week 5 Thursday night inactives: Tampa Bay Buccaneers at Dallas Cowboys",
+      "published_at": "2026-10-08T10:50:06.000Z",
+      "observed_at": "2026-10-08T23:00:26.043Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "TB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/colin-cowherd-dak-prescott-manager-cowboys-rock-band",
+      "source_name": "FOX Sports",
+      "headline": "Dak Prescott Is The ‘Manager’ Of The Cowboys’ Rock Band",
+      "published_at": "2026-10-08T22:47:25.000Z",
+      "observed_at": "2026-10-08T23:00:26.043Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "TB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/thursday-night-football-cowboys-lg-tyler-smith-is-active",
+      "source_name": "Pro Football Talk",
+      "headline": "Thursday Night Football: Cowboys LG Tyler Smith is active",
+      "published_at": "2026-10-08T22:54:19.000Z",
+      "observed_at": "2026-10-08T23:00:26.043Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tyler-shough-back-to-full-participation-alvin-kamara-and-chris-olave-limited",
+      "source_name": "Pro Football Talk",
+      "headline": "Tyler Shough back to full participation, Alvin Kamara and Chris Olave limited",
+      "published_at": "2026-10-08T22:52:36.000Z",
+      "observed_at": "2026-10-08T23:00:26.043Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NO"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
