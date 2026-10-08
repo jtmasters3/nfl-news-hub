@@ -2,72 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/lions-bills-on-thursday-night-football-what-we-learned-from-buffalo-s-41-31-win",
-      "source_name": "NFL.com",
-      "headline": "Lions-Bills on 'Thursday Night Football': What We Learned from Buffalo's 41-31 win",
-      "published_at": "2026-09-18T03:29:14.000Z",
-      "observed_at": "2026-09-18T03:30:25.666Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "DET"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/lions-bills-josh-allen-nfl-week-2-takeaways",
-      "source_name": "FOX Sports",
-      "headline": "Is Buffalo Super Bowl Bound? 3 Takeaways From Bills' Decisive Win Over Lions",
-      "published_at": "2026-09-18T03:28:55.000Z",
-      "observed_at": "2026-09-18T03:30:25.666Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "DET"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/thursday-night-football-josh-allen-accounts-for-five-tds-in-bills-41-31-win-over-lions",
-      "source_name": "Pro Football Talk",
-      "headline": "Thursday Night Football: Josh Allen accounts for five TDs in Bills' 41-31 win over Lions",
-      "published_at": "2026-09-18T03:35:32.000Z",
-      "observed_at": "2026-09-18T03:50:18.464Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "DET"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/nfl-catchup-aaron-donalds-return-kyler-murray-ladd-mcconkey-injury-updates",
       "source_name": "FOX Sports",
       "headline": "NFL Catchup: Aaron Donald's Return; Kyler Murray, Ladd McConkey Injury Updates",
@@ -42133,6 +42067,74 @@
         "PHI"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-week-5-betting-report-the-falcons-catching-bettors-attention",
+      "source_name": "FOX Sports",
+      "headline": "NFL Week 5 Betting Report: 'The Falcons Are Catching Bettors’ Attention'",
+      "published_at": "2026-10-07T23:50:38.000Z",
+      "observed_at": "2026-10-08T00:00:36.178Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "BUF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/will-hills-parlay-week-back-seahawks-steelers-win-week-5",
+      "source_name": "FOX Sports",
+      "headline": "Will Hill's Parlay Of The Week: Back Seahawks, Steelers To Win In Week 5",
+      "published_at": "2026-10-07T23:45:39.000Z",
+      "observed_at": "2026-10-08T00:00:36.178Z",
+      "decision": "keep",
+      "classification": "nfl_with_college_context",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT",
+        "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [
+        "college_football_phrase"
+      ],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-payton-i-dont-think-patrick-surtain-ii-pat-bryant-will-land-on-ir",
+      "source_name": "Pro Football Talk",
+      "headline": "Sean Payton: I \"don't think\" Patrick Surtain II, Pat Bryant will land on IR",
+      "published_at": "2026-10-07T23:49:25.000Z",
+      "observed_at": "2026-10-08T00:00:36.178Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "SF"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
