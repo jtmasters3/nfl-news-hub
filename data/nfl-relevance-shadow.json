@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chargers-list-ladd-mcconkey-as-questionable",
-      "source_name": "Pro Football Talk",
-      "headline": "Chargers list Ladd McConkey as questionable",
-      "published_at": "2026-09-18T20:40:40.000Z",
-      "observed_at": "2026-09-18T20:50:19.627Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV",
-        "LAC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/raiders-brock-bowers-returns-to-practice-but-doubtful-for-week-2-vs-chargers",
       "source_name": "NFL.com",
       "headline": "Raiders' Brock Bowers returns to practice, but 'doubtful' for Week 2 vs. Chargers",
@@ -42136,6 +42114,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/as-skydance-keeps-growing-the-cbs-nfl-deal-still-hasnt-been-renegotiated",
+      "source_name": "Pro Football Talk",
+      "headline": "As Skydance keeps growing, the CBS-NFL deal still hasn't been renegotiated",
+      "published_at": "2026-10-08T22:02:17.000Z",
+      "observed_at": "2026-10-08T22:10:19.644Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
