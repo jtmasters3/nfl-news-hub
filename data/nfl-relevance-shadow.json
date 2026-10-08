@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-donald-plans-to-play-on-monday-night",
-      "source_name": "Pro Football Talk",
-      "headline": "Aaron Donald plans to play on Monday night",
-      "published_at": "2026-09-18T22:24:52.000Z",
-      "observed_at": "2026-09-18T22:40:21.482Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/two-truths-and-a-lie-ben-johnson-is-the-new-bill-walsh-while-john-harbaugh-has-revived-the-giants",
       "source_name": "NFL.com",
       "headline": "Two truths and a lie: Ben Johnson is the new Bill Walsh, while John Harbaugh has revived the Giants",
@@ -42127,6 +42106,27 @@
         "NO"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-wr-mike-evans-did-not-practice-thursday",
+      "source_name": "Pro Football Talk",
+      "headline": "49ers WR Mike Evans did not practice Thursday",
+      "published_at": "2026-10-08T23:13:59.000Z",
+      "observed_at": "2026-10-08T23:20:18.304Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
