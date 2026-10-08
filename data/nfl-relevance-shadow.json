@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/tampa-bay-buccaneers-baker-mayfield-nfc-south-best-bet",
-      "source_name": "FOX Sports",
-      "headline": "2026 NFL Odds: Are Buccaneers Best Bet To Win NFC South?",
-      "published_at": "2026-09-18T16:06:44.000Z",
-      "observed_at": "2026-09-18T16:10:21.492Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/for-aaron-glenn-an-upcoming-trip-down-memory-lane-will-test-his-play-calling-prowess",
-      "source_name": "NFL.com",
-      "headline": "For Aaron Glenn, an upcoming trip down memory lane will test his play-calling prowess",
-      "published_at": "2026-09-18T10:16:05.000Z",
-      "observed_at": "2026-09-18T16:20:24.549Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/zay-flowers-trey-hendrickson-ronnie-stanley-on-the-field-for-fridays-practice",
       "source_name": "Pro Football Talk",
       "headline": "Zay Flowers, Trey Hendrickson, Ronnie Stanley on the field for Friday's practice",
@@ -42161,6 +42123,49 @@
         "WAS"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/browns-panthers-legit-c-j-stroud-back-kenneth-walker-week-4",
+      "source_name": "FOX Sports",
+      "headline": "NFL Fact or Fiction: Walker, Top RB? Browns Legit? Ruling On Your Week 4 Hot Takes",
+      "published_at": "2026-10-08T15:33:59.000Z",
+      "observed_at": "2026-10-08T15:40:26.094Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR",
+        "CLE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tucker-kraft-on-dropped-passes-im-trying-to-do-too-much",
+      "source_name": "Pro Football Talk",
+      "headline": "Tucker Kraft on dropped passes: I'm trying to do too much",
+      "published_at": "2026-10-08T15:33:38.000Z",
+      "observed_at": "2026-10-08T15:40:26.094Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
