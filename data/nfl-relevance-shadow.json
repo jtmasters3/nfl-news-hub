@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jalen-coker-has-no-injury-designation-for-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "Jalen Coker has no injury designation for Sunday",
-      "published_at": "2026-09-18T16:39:41.000Z",
-      "observed_at": "2026-09-18T16:50:23.723Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/falcons-qb-cooper-rush-start-week-2-panthers",
-      "source_name": "NFL.com",
-      "headline": "NFL Network: Falcons QB Cooper Rush expected to start vs. Panthers with Michael Penix Jr. not ready",
-      "published_at": "2026-09-18T04:54:39.000Z",
-      "observed_at": "2026-09-18T17:00:31.942Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "CAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/week-2-fantasy-sleepers-49ers-rb-kaelon-black-wr-deebo-samuel-offer-upside-vs-lowly-dolphins",
       "source_name": "NFL.com",
       "headline": "Week 2 fantasy sleepers: 49ers RB Kaelon Black, WR Deebo Samuel offer upside vs. lowly Dolphins",
@@ -42161,6 +42118,45 @@
         "nfl_team_detected",
         "phrase_practice_squad",
         "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-argues-to-supreme-court-that-prediction-markets-are-gambling",
+      "source_name": "Pro Football Talk",
+      "headline": "NFL argues to Supreme Court that prediction markets are gambling",
+      "published_at": "2026-10-08T17:22:22.000Z",
+      "observed_at": "2026-10-08T17:30:24.800Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lamar-jackson-remains-out-of-ravens-practice-thursday",
+      "source_name": "Pro Football Talk",
+      "headline": "Lamar Jackson remains out of Ravens practice Thursday",
+      "published_at": "2026-10-08T17:22:15.000Z",
+      "observed_at": "2026-10-08T17:30:24.800Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "BAL"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
