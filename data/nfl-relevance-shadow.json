@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/bengals-joe-burrow-texans-back-injury",
-      "source_name": "NFL.com",
-      "headline": "Bengals' Joe Burrow (back) full participant at practice, set to start Sunday vs. Texans",
-      "published_at": "2026-09-18T04:48:40.000Z",
-      "observed_at": "2026-09-18T16:50:23.723Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CIN",
-        "HOU"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cooper-rush-is-expected-to-start-for-falcons-vs-panthers",
-      "source_name": "Pro Football Talk",
-      "headline": "Cooper Rush is expected to start for Falcons vs. Panthers",
-      "published_at": "2026-09-18T16:41:58.000Z",
-      "observed_at": "2026-09-18T16:50:23.723Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "CAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jalen-coker-has-no-injury-designation-for-sunday",
       "source_name": "Pro Football Talk",
       "headline": "Jalen Coker has no injury designation for Sunday",
@@ -42165,6 +42121,46 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-defensive-rookie-rankings-at-quarter-mark-of-2026-season-sonny-styles-or-arvell-reese-at-no-1",
+      "source_name": "NFL.com",
+      "headline": "NFL defensive rookie rankings at quarter mark of 2026 season: Sonny Styles or Arvell Reese at No. 1?",
+      "published_at": "2026-10-08T05:08:00.000Z",
+      "observed_at": "2026-10-08T17:20:23.404Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/texans-sign-wr-bryce-oliver-to-their-active-roster",
+      "source_name": "Pro Football Talk",
+      "headline": "Texans sign WR Bryce Oliver to their active roster",
+      "published_at": "2026-10-08T17:10:07.000Z",
+      "observed_at": "2026-10-08T17:20:23.404Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "HOU"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
