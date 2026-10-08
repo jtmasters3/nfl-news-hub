@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-campbell-its-a-long-season-lions-need-to-get-better",
-      "source_name": "Pro Football Talk",
-      "headline": "Dan Campbell: It's a long season, Lions need to get better",
-      "published_at": "2026-09-18T08:24:29.000Z",
-      "observed_at": "2026-09-18T08:30:27.023Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-mcvay-myles-garrett-is-like-wolverine-healing-fast-but-we-wont-rush-him-back",
       "source_name": "Pro Football Talk",
       "headline": "Sean McVay: Myles Garrett is like Wolverine, healing fast, but we won't rush him back",
@@ -42150,6 +42129,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-coaching-hot-seat-rankings-todd-bowles-could-soon-out-nick-sirianni-next",
+      "source_name": "FOX Sports",
+      "headline": "NFL Coaching Hot Seat Rankings: Todd Bowles Could Soon Be Out; Nick Sirianni Next?",
+      "published_at": "2026-10-08T01:11:14.000Z",
+      "observed_at": "2026-10-08T01:20:20.847Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "coaching",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
