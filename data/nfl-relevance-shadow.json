@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bills-decision-to-play-canadian-anthem-is-all-about-the-business",
-      "source_name": "Pro Football Talk",
-      "headline": "Bills' decision to play Canadian anthem is \"all about the business\"",
-      "published_at": "2026-09-18T17:11:32.000Z",
-      "observed_at": "2026-09-18T17:20:28.183Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/anthony-richardson-set-to-be-qb2-on-sunday-ashton-dulin-ruled-out",
-      "source_name": "Pro Football Talk",
-      "headline": "Anthony Richardson set to be QB2 on Sunday, Ashton Dulin ruled out",
-      "published_at": "2026-09-18T17:09:08.000Z",
-      "observed_at": "2026-09-18T17:20:28.183Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "KC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/what-can-the-seahawks-expect-from-drew-lock-sky-high-confidence-and-an-edge",
       "source_name": "NFL.com",
       "headline": "What can the Seahawks expect from Drew Lock? Sky-high confidence and an 'edge'",
@@ -42152,6 +42109,44 @@
       "confidence": "high",
       "detected_teams": [
         "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-picks-week-5-2026-nfl-season",
+      "source_name": "NFL.com",
+      "headline": "NFL Week 5 picks: Upset and score predictions, matchup breakdowns for every game",
+      "published_at": "2026-10-08T05:44:26.000Z",
+      "observed_at": "2026-10-08T17:50:20.274Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kenneth-walker-has-most-rushing-yards-in-first-four-games-over-last-15-years",
+      "source_name": "Pro Football Talk",
+      "headline": "Kenneth Walker has most rushing yards in first four games over last 15 years",
+      "published_at": "2026-10-08T17:41:50.000Z",
+      "observed_at": "2026-10-08T17:50:20.274Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
