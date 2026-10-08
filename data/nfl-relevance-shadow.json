@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-dj-moore-day-to-day-with-shoulder-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: DJ Moore day-to-day with shoulder injury",
-      "published_at": "2026-09-18T12:00:05.000Z",
-      "observed_at": "2026-09-18T12:10:26.758Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/ravens-dc-saints-qb-tyler-shough-poor-mans-josh-allen",
       "source_name": "NFL.com",
       "headline": "Ravens DC: Saints QB Tyler Shough reminds me of 'a poor man's Josh Allen'",
@@ -42150,6 +42129,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/through-four-weeks-of-the-season-zero-kickoff-return-touchdowns",
+      "source_name": "Pro Football Talk",
+      "headline": "Through four weeks of the season, zero kickoff return touchdowns",
+      "published_at": "2026-10-08T11:17:36.000Z",
+      "observed_at": "2026-10-08T11:30:22.326Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
