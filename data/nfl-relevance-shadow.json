@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-k-eddy-pineiro-is-questionable-with-an-illness",
-      "source_name": "Pro Football Talk",
-      "headline": "49ers K Eddy Piñeiro is questionable with an illness",
-      "published_at": "2026-09-18T23:31:42.000Z",
-      "observed_at": "2026-09-18T23:40:19.182Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIA",
-        "SF"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-add-wr-puka-nacua-misses-practice-with-a-hip-injury",
       "source_name": "Pro Football Talk",
       "headline": "Rams WR Puka Nacua misses practice with a hip injury",
@@ -42129,6 +42106,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-take-7-0-lead-on-opening-drive",
+      "source_name": "Pro Football Talk",
+      "headline": "Cowboys take 7-0 lead on opening drive",
+      "published_at": "2026-10-09T00:32:05.000Z",
+      "observed_at": "2026-10-09T00:40:54.327Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
+      ],
+      "detected_category": "live_game_state",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
