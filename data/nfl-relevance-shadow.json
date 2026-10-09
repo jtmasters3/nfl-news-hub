@@ -2,47 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/weird-rule-from-saints-lions-wasnt-mentioned-during-afc-championship",
-      "source_name": "Pro Football Talk",
-      "headline": "Weird rule from Saints-Lions wasn't mentioned during AFC Championship",
-      "published_at": "2026-09-19T13:38:17.000Z",
-      "observed_at": "2026-09-19T13:50:19.654Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET",
-        "NO"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/will-sec-whack-lane-kiffin-for-injury-report-shenanigans",
-      "source_name": "Pro Football Talk",
-      "headline": "Will SEC whack Lane Kiffin for injury-report shenanigans?",
-      "published_at": "2026-09-19T14:02:57.000Z",
-      "observed_at": "2026-09-19T14:10:19.507Z",
-      "decision": "reject",
-      "classification": "college_football",
-      "confidence": "medium",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [
-        "conference_sec"
-      ],
-      "reason_codes": [
-        "college_marker_no_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/bijan-robinson-is-carrying-the-falcons-can-drake-london-pitts-get-going-against-panthers",
       "source_name": "NFL.com",
       "headline": "Bijan Robinson is carrying the Falcons. Can Drake London, Pitts get going against Panthers?",
@@ -42113,6 +42072,50 @@
         "ARI"
       ],
       "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/buccaneers-cowboys-on-thursday-night-football-what-we-learned-from-tampa-bay-s-24-16-win",
+      "source_name": "NFL.com",
+      "headline": "Buccaneers-Cowboys on 'Thursday Night Football': What We Learned from Tampa Bay's 24-16 win",
+      "published_at": "2026-10-09T03:21:14.000Z",
+      "observed_at": "2026-10-09T03:30:24.069Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "TB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/thursday-night-football-bucs-upset-cowboys-24-16",
+      "source_name": "Pro Football Talk",
+      "headline": "Thursday Night Football: Bucs upset Cowboys 24-16",
+      "published_at": "2026-10-09T03:26:10.000Z",
+      "observed_at": "2026-10-09T03:30:24.069Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "TB"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
