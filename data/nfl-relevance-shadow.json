@@ -2,51 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chris-olave-chase-young-traveled-to-baltimore-with-the-saints",
-      "source_name": "Pro Football Talk",
-      "headline": "Chris Olave, Chase Young traveled to Baltimore with the Saints",
-      "published_at": "2026-09-19T19:31:46.000Z",
-      "observed_at": "2026-09-19T19:40:18.747Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "NO"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dak-prescott-looks-to-continue-his-home-mastery-of-the-nfc-east",
-      "source_name": "Pro Football Talk",
-      "headline": "Dak Prescott looks to continue his home mastery of the NFC East",
-      "published_at": "2026-09-19T19:23:57.000Z",
-      "observed_at": "2026-09-19T19:40:18.747Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/deonte-banks-micah-mcfadden-questionalbe-for-monday-vs-rams",
       "source_name": "Pro Football Talk",
       "headline": "Deonte Banks, Micah McFadden questionalbe for Monday vs. Rams",
@@ -42120,6 +42075,45 @@
         "PHI"
       ],
       "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/justin-herbert-has-endured-more-hits-than-any-other-qb-since-2020-when-will-it-end",
+      "source_name": "NFL.com",
+      "headline": "Justin Herbert has endured more hits than any other QB since 2020. When will it end?",
+      "published_at": "2026-10-09T12:16:06.000Z",
+      "observed_at": "2026-10-09T13:20:21.727Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/can-the-falcons-top-ranked-run-defense-handle-derrick-henry-and-the-ravens-on-snf",
+      "source_name": "NFL.com",
+      "headline": "Can the Falcons' top-ranked run defense handle Derrick Henry and the Ravens on SNF?",
+      "published_at": "2026-10-09T10:16:06.000Z",
+      "observed_at": "2026-10-09T13:20:21.727Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "BAL"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
