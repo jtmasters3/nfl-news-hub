@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-announces-first-fines-2026-season-including-stefon-diggs-jahmyr-gibbs",
-      "source_name": "FOX Sports",
-      "headline": "NFL Deals Stefon Diggs, Jahmyr Gibbs First 5-Figure Fines Of 2026 Season",
-      "published_at": "2026-09-19T22:51:40.000Z",
-      "observed_at": "2026-09-19T23:20:21.109Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-is-aware-of-potential-issues-with-field-in-brazil-for-ravens-cowboys",
       "source_name": "Pro Football Talk",
       "headline": "NFL is aware of potential issues with field in Brazil for Ravens-Cowboys",
@@ -42102,6 +42085,28 @@
         "HOU"
       ],
       "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/eagles-vs-jaguars-preview-week-5-london-game",
+      "source_name": "NFL.com",
+      "headline": "Eagles vs. Jaguars: Three must-know storylines for NFL Week 5 London game",
+      "published_at": "2026-10-09T04:13:00.000Z",
+      "observed_at": "2026-10-09T16:20:21.388Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX",
+        "PHI"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
