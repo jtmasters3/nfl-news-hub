@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/seahawks-db-nick-emmanwori-questionable-sam-darnold-out-but-on-his-way-back",
-      "source_name": "NFL.com",
-      "headline": "Seahawks DB Nick Emmanwori questionable, Sam Darnold out but 'on his way back'",
-      "published_at": "2026-09-18T11:31:06.000Z",
-      "observed_at": "2026-09-19T15:40:21.161Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/at-32-derrick-henry-is-still-outrunning-nfl-history-his-game-transcends-time",
       "source_name": "NFL.com",
       "headline": "At 32, Derrick Henry is still outrunning NFL history: 'His game transcends time'",
@@ -42117,6 +42096,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/big-upset-big-d-3-takeaways-from-cowboys-stunning-loss-buccaneers",
+      "source_name": "FOX Sports",
+      "headline": "A Big Upset In The Big D: 3 Takeaways From Cowboys' Stunning Loss To Buccaneers",
+      "published_at": "2026-10-09T03:41:55.000Z",
+      "observed_at": "2026-10-09T03:50:19.214Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "TB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
