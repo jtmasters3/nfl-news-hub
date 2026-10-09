@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/week-2-injuries-sunday-pregame-2026-nfl-season",
-      "source_name": "NFL.com",
-      "headline": "NFL Week 2 injuries to monitor for Sunday's games",
-      "published_at": "2026-09-20T01:11:07.000Z",
-      "observed_at": "2026-09-20T13:20:21.340Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sam-darnold-is-recovering-faster-than-anyone-had-anticipated",
       "source_name": "Pro Football Talk",
       "headline": "Sam Darnold is \"recovering faster than anyone had anticipated\"",
@@ -42103,6 +42086,28 @@
         "LAC"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/baltimore-ravens-lamar-jackson-qb-ankle-injury",
+      "source_name": "FOX Sports",
+      "headline": "Ravens' Lamar Jackson Ruled Out For Week 5, Tyler Huntley Set To Start",
+      "published_at": "2026-10-09T19:05:35.000Z",
+      "observed_at": "2026-10-09T19:10:17.612Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "BAL"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
