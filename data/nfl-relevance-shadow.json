@@ -2,48 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/stefon-diggs-fined-for-jumping-on-goalpost-after-week-1-td",
-      "source_name": "Pro Football Talk",
-      "headline": "Stefon Diggs fined for jumping on goalpost after Week 1 TD",
-      "published_at": "2026-09-19T20:15:58.000Z",
-      "observed_at": "2026-09-19T20:30:22.339Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-te-jake-tonges-fined-for-leg-whip-on-same-play-he-tore-his-mcl",
-      "source_name": "Pro Football Talk",
-      "headline": "49ers TE Jake Tonges fined for leg whip on same play he tore his MCL",
-      "published_at": "2026-09-19T20:28:55.000Z",
-      "observed_at": "2026-09-19T20:40:20.621Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lukas-van-ness-fined-for-hit-on-carson-wentz-no-fine-for-hit-on-kyler-murray",
       "source_name": "Pro Football Talk",
       "headline": "Lukas Van Ness fined for hit on Carson Wentz, no fine for hit on Kyler Murray",
@@ -42113,6 +42071,44 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-oct-9",
+      "source_name": "NFL.com",
+      "headline": "NFL news roundup: Latest league updates from Friday, Oct. 9",
+      "published_at": "2026-10-09T02:56:50.000Z",
+      "observed_at": "2026-10-09T15:10:20.755Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jahmyr-gibbs-next-touchdown-ties-barry-sanders-record-for-most-before-age-25",
+      "source_name": "Pro Football Talk",
+      "headline": "Jahmyr Gibbs’ next touchdown ties Barry Sanders’ record for most before age 25",
+      "published_at": "2026-10-09T15:04:42.000Z",
+      "observed_at": "2026-10-09T15:10:20.755Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
