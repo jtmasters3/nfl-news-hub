@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-joey-porter-jr-considering-second-opinion-on-back-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Joey Porter Jr. considering second opinion on back injury",
-      "published_at": "2026-09-20T12:21:39.000Z",
-      "observed_at": "2026-09-20T12:30:26.134Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-michael-penix-jr-could-debut-for-falcons-on-thursday-night",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Michael Penix Jr. could debut for Falcons on Thursday night",
-      "published_at": "2026-09-20T13:08:44.000Z",
-      "observed_at": "2026-09-20T13:10:24.228Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/week-2-injuries-sunday-pregame-2026-nfl-season",
       "source_name": "NFL.com",
       "headline": "NFL Week 2 injuries to monitor for Sunday's games",
@@ -42103,6 +42065,44 @@
         "TB"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-week-5-schedule-how-watch-tv-channels-streaming-game-previews",
+      "source_name": "FOX Sports",
+      "headline": "NFL Week 5 Schedule: How to Watch, TV Channels, Streaming, Game Previews",
+      "published_at": "2026-10-09T18:50:20.000Z",
+      "observed_at": "2026-10-09T19:00:25.525Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chargers-placing-rashawn-slater-on-ir-after-ankle-procedure",
+      "source_name": "Pro Football Talk",
+      "headline": "Chargers placing Rashawn Slater on IR after ankle procedure",
+      "published_at": "2026-10-09T18:59:22.000Z",
+      "observed_at": "2026-10-09T19:00:25.525Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
