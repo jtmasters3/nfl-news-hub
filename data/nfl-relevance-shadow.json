@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/notable-injuries-news-from-sunday-s-week-2-games",
-      "source_name": "NFL.com",
-      "headline": "Notable injuries, news from Sunday's Week 2 games: Packers WR Jayden Reed (neck) carted off vs. Jets",
-      "published_at": "2026-09-20T05:30:58.000Z",
-      "observed_at": "2026-09-20T17:40:19.511Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB",
-        "NYJ"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jayden-reed-ruled-out-with-neck-injury-zach-bako-bewele-out-with-knee-injury",
       "source_name": "Pro Football Talk",
       "headline": "Jayden Reed ruled out with neck injury, Zach Bako-Bewele out with knee injury",
@@ -42122,6 +42100,27 @@
         "LV"
       ],
       "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/injuries-to-lt-tyler-guyton-wr-ceedee-lamb-are-not-serious",
+      "source_name": "Pro Football Talk",
+      "headline": "Injuries to LT Tyler Guyton, WR CeeDee Lamb are not serious",
+      "published_at": "2026-10-09T23:20:45.000Z",
+      "observed_at": "2026-10-09T23:30:21.046Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
