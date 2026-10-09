@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-will-no-longer-allow-patriots-to-use-video-board-to-confuse-opposing-kickers",
-      "source_name": "Pro Football Talk",
-      "headline": "NFL will no longer allow Patriots to use video board to confuse opposing kickers",
-      "published_at": "2026-09-19T21:18:36.000Z",
-      "observed_at": "2026-09-19T21:30:23.095Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE"
-      ],
-      "detected_category": "suspension",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-issues-three-fines-for-player-safety-fouls-that-count-toward-possible-suspensions",
-      "source_name": "Pro Football Talk",
-      "headline": "NFL issues three fines for player safety fouls that count toward possible suspensions",
-      "published_at": "2026-09-19T21:44:21.000Z",
-      "observed_at": "2026-09-19T21:50:20.322Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bill-belichick-and-north-carolina-blow-big-lead-lose-28-20-at-clemson",
       "source_name": "Pro Football Talk",
       "headline": "Bill Belichick and North Carolina blow big lead, lose 28-20 at Clemson",
@@ -42104,6 +42066,49 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/mike-ditka-dies-at-age-86-chicago-bears-icon-shaped-nfl-as-hall-of-fame-player-larger-than-life-coach",
+      "source_name": "NFL.com",
+      "headline": "Mike Ditka dies at age 86: Chicago Bears icon shaped NFL as Hall of Fame player, larger-than-life coach",
+      "published_at": "2026-10-09T03:22:23.000Z",
+      "observed_at": "2026-10-09T15:30:24.366Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nflpa-names-justin-jefferson-their-community-mvp-for-week-5",
+      "source_name": "Pro Football Talk",
+      "headline": "NFLPA names Justin Jefferson their Community MVP for Week 5",
+      "published_at": "2026-10-09T15:21:03.000Z",
+      "observed_at": "2026-10-09T15:30:24.366Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_nflpa"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
