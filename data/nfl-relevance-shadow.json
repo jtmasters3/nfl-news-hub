@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-steelers-vs-patriots-tv-channel-live-stream-2026-week-2",
-      "source_name": "FOX Sports",
-      "headline": "How to Watch Steelers vs. Patriots: TV Channel, Live Stream, Time",
-      "published_at": "2026-09-20T11:57:38.000Z",
-      "observed_at": "2026-09-20T12:00:27.947Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE",
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-seahawks-vs-cardinals-tv-channel-live-stream-2026-week-2",
-      "source_name": "FOX Sports",
-      "headline": "How to Watch Seahawks vs. Cardinals: TV Channel, Live Stream, Time",
-      "published_at": "2026-09-20T11:57:00.000Z",
-      "observed_at": "2026-09-20T12:00:27.947Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI",
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-vikings-vs-bears-tv-channel-live-stream-2026-week-2",
       "source_name": "FOX Sports",
       "headline": "How to Watch Vikings vs. Bears: TV Channel, Live Stream, Time",
@@ -42115,6 +42071,49 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/mike-ditka-dies-at-86-nfl-community-mourns-iconic-hall-of-famer-and-bears-legend",
+      "source_name": "NFL.com",
+      "headline": "Mike Ditka dies at 86: NFL community mourns iconic Hall of Famer and Bears legend",
+      "published_at": "2026-10-09T05:15:28.000Z",
+      "observed_at": "2026-10-09T17:30:24.074Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patriots-rule-out-christian-gonzalez-mack-hollins-carlton-davis",
+      "source_name": "Pro Football Talk",
+      "headline": "Patriots rule out Christian Gonzalez, Mack Hollins, Carlton Davis",
+      "published_at": "2026-10-09T17:16:06.000Z",
+      "observed_at": "2026-10-09T17:30:24.074Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV",
+        "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
