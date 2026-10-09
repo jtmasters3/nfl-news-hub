@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-network-pregame-skips-the-walt-anderson-segment",
-      "source_name": "Pro Football Talk",
-      "headline": "NFL Network pregame skips the Walt Anderson segment",
-      "published_at": "2026-09-20T16:39:16.000Z",
-      "observed_at": "2026-09-20T16:40:20.101Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/former-giants-gm-ernie-accorsi-dies-at-84",
-      "source_name": "Pro Football Talk",
-      "headline": "Former Giants GM Ernie Accorsi dies at 84",
-      "published_at": "2026-09-20T16:41:59.000Z",
-      "observed_at": "2026-09-20T16:50:23.910Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/second-opinions-resulted-in-good-news-for-sam-darnold",
       "source_name": "Pro Football Talk",
       "headline": "Second opinions resulted in good news for Sam Darnold",
@@ -42119,6 +42081,49 @@
         "PHI"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/mike-ditka-stats-bears-records-nfl-super-bowl-head-coaches",
+      "source_name": "FOX Sports",
+      "headline": "The Vest, Leather Jacket And So Much More: Bears Legend Mike Ditka's NFL Legacy",
+      "published_at": "2026-10-09T21:18:23.000Z",
+      "observed_at": "2026-10-09T21:30:22.848Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/eagles-stars-saquon-barkley-and-devonta-smith-ruled-out-of-london-game-against-jaguars",
+      "source_name": "FOX Sports",
+      "headline": "Eagles Head To London Without Saquon Barkley, DeVonta Smith vs. Jaguars",
+      "published_at": "2026-10-09T21:17:46.000Z",
+      "observed_at": "2026-10-09T21:30:22.848Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX",
+        "PHI"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
