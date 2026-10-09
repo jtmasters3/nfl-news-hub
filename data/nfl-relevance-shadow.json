@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/azeez-al-shaair-on-publicizing-hind-rajabs-story-most-of-you-might-know-even-know-who-she-was",
-      "source_name": "Pro Football Talk",
-      "headline": "Azeez Al-Shaair on publicizing Hind Rajab's story: Most of you might know even know who she was",
-      "published_at": "2026-09-19T01:12:38.000Z",
-      "observed_at": "2026-09-19T01:20:19.566Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "HOU"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kirb-herbstreit-offers-flimsy-defense-for-espns-decision-to-interview-ted-cruz-on-college-gameday",
       "source_name": "Pro Football Talk",
       "headline": "Kirb Herbstreit offers flimsy defense for ESPN's decision to interview Ted Cruz on College GameDay",
@@ -42128,6 +42106,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brandon-staley-pushes-back-against-troy-aikmans-criticism-its-not-true",
+      "source_name": "Pro Football Talk",
+      "headline": "Brandon Staley pushes back against Troy Aikman's criticism: It's not true",
+      "published_at": "2026-10-09T01:10:24.000Z",
+      "observed_at": "2026-10-09T01:20:23.380Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
