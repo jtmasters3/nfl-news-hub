@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-week-2-inactives-players-ruled-out-sunday-14-games-2026",
-      "source_name": "NFL.com",
-      "headline": "NFL Week 2 inactives: Players ruled out for Sunday's 14 games",
-      "published_at": "2026-09-20T03:40:23.000Z",
-      "observed_at": "2026-09-20T15:50:22.343Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/with-discipline-coming-soon-jed-york-will-skip-49ers-home-opener",
-      "source_name": "Pro Football Talk",
-      "headline": "With discipline coming \"soon,\" Jed York will skip 49ers' home opener",
-      "published_at": "2026-09-20T15:46:23.000Z",
-      "observed_at": "2026-09-20T15:50:22.343Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/joe-burrow-is-active-for-the-bengals",
       "source_name": "Pro Football Talk",
       "headline": "Joe Burrow is active for the Bengals",
@@ -42112,6 +42074,48 @@
       "confidence": "high",
       "detected_teams": [
         "HOU"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-sign-rb-carson-steele-c-jake-majors-to-active-roster",
+      "source_name": "Pro Football Talk",
+      "headline": "Eagles sign RB Carson Steele, C Jake Majors to active roster",
+      "published_at": "2026-10-09T20:29:46.000Z",
+      "observed_at": "2026-10-09T20:40:26.368Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/saquon-barkley-out-jalen-hurts-calf-added-to-report-but-will-play",
+      "source_name": "Pro Football Talk",
+      "headline": "Saquon Barkley out, Jalen Hurts (calf) added to report but will play",
+      "published_at": "2026-10-09T20:22:28.000Z",
+      "observed_at": "2026-10-09T20:40:26.368Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI"
       ],
       "detected_category": "injury",
       "nfl_evidence": [
