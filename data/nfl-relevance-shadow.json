@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jerry-jones-the-giants-were-better-than-we-thought-they-were",
-      "source_name": "Pro Football Talk",
-      "headline": "Jerry Jones: The Giants were better than we thought they were",
-      "published_at": "2026-09-19T03:58:36.000Z",
-      "observed_at": "2026-09-19T04:10:19.265Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/deforest-buckner-colts-didnt-play-up-to-our-standards-whatsoever",
       "source_name": "Pro Football Talk",
       "headline": "DeForest Buckner: Colts didn't play up to our standards, whatsoever",
@@ -42120,6 +42098,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/tom-brady-remembers-saddest-moment-career-worst-thing-i-couldve-ever-imagined",
+      "source_name": "FOX Sports",
+      "headline": "Tom Brady Remembers The Saddest Moment Of Career: 'Worst Thing I Could've Ever Imagined'",
+      "published_at": "2026-10-09T02:37:58.000Z",
+      "observed_at": "2026-10-09T02:50:17.052Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
