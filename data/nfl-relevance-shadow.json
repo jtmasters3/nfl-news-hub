@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/deion-sanders-wasnt-happy-that-some-players-were-laughing-after-blowout-loss",
-      "source_name": "Pro Football Talk",
-      "headline": "Deion Sanders wasn't happy that some players were laughing after blowout loss",
-      "published_at": "2026-09-20T14:32:29.000Z",
-      "observed_at": "2026-09-20T14:40:19.514Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/falcons-michael-penix-jr-week-3-tua-tagovailoa",
-      "source_name": "NFL.com",
-      "headline": "NFL Network: Falcons' Michael Penix Jr. could start Week 3; Tua Tagovailoa not expected to be moved",
-      "published_at": "2026-09-20T02:55:48.000Z",
-      "observed_at": "2026-09-20T15:00:28.302Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "GB"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nick-sirianni-has-had-plenty-of-success-in-september",
       "source_name": "Pro Football Talk",
       "headline": "Nick Sirianni has had plenty of success in September",
@@ -42106,6 +42067,49 @@
         "GB"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-release-dl-ogbo-okoronkwo",
+      "source_name": "Pro Football Talk",
+      "headline": "49ers release DL Ogbo Okoronkwo",
+      "published_at": "2026-10-09T19:51:41.000Z",
+      "observed_at": "2026-10-09T20:00:24.962Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-broncos-to-put-pat-bryant-on-injured-reserve",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Broncos to put Pat Bryant on injured reserve",
+      "published_at": "2026-10-09T19:48:47.000Z",
+      "observed_at": "2026-10-09T20:00:24.962Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
