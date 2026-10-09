@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/two-truths-and-a-lie-ben-johnson-is-the-new-bill-walsh-while-john-harbaugh-has-revived-the-giants",
-      "source_name": "NFL.com",
-      "headline": "Two truths and a lie: Ben Johnson is the new Bill Walsh, while John Harbaugh has revived the Giants",
-      "published_at": "2026-09-18T11:09:49.000Z",
-      "observed_at": "2026-09-18T23:20:20.923Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-k-eddy-pineiro-is-questionable-with-an-illness",
       "source_name": "Pro Football Talk",
       "headline": "49ers K Eddy Piñeiro is questionable with an illness",
@@ -42133,6 +42112,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/taking-l-what-weve-been-most-wrong-about-through-1st-quarter-nfl-season",
+      "source_name": "FOX Sports",
+      "headline": "Taking The L: What We've Been The Most Wrong About Through 1st Quarter Of NFL Season",
+      "published_at": "2026-10-08T23:56:49.000Z",
+      "observed_at": "2026-10-09T00:10:18.385Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
