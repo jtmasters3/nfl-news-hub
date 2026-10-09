@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/at-32-derrick-henry-is-still-outrunning-nfl-history-his-game-transcends-time",
-      "source_name": "NFL.com",
-      "headline": "At 32, Derrick Henry is still outrunning NFL history: 'His game transcends time'",
-      "published_at": "2026-09-18T09:46:04.000Z",
-      "observed_at": "2026-09-19T16:10:23.299Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bengals-de-shemar-stewart-will-make-season-debut-on-sunday",
       "source_name": "Pro Football Talk",
       "headline": "Bengals DE Shemar Stewart will make season debut on Sunday",
@@ -42112,6 +42095,28 @@
         "TB"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jerry-jones-expresses-confidence-in-christian-parker",
+      "source_name": "Pro Football Talk",
+      "headline": "Jerry Jones expresses confidence in Christian Parker",
+      "published_at": "2026-10-09T04:57:00.000Z",
+      "observed_at": "2026-10-09T05:10:16.745Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "WAS"
+      ],
+      "detected_category": "coaching",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
