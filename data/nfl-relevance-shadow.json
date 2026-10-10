@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jamarr-chase-scores-second-td-of-day",
-      "source_name": "Pro Football Talk",
-      "headline": "Ja'Marr Chase scores second TD of day",
-      "published_at": "2026-09-20T19:27:13.000Z",
-      "observed_at": "2026-09-20T19:40:20.245Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/caleb-williams-appears-to-suffer-non-contact-leg-injury",
       "source_name": "Pro Football Talk",
       "headline": "Caleb Williams appears to suffer non-contact leg injury",
@@ -42107,6 +42090,27 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-wr-michael-pittman-headed-to-ir",
+      "source_name": "Pro Football Talk",
+      "headline": "Steelers WR Michael Pittman headed to IR",
+      "published_at": "2026-10-10T19:41:14.000Z",
+      "observed_at": "2026-10-10T19:50:19.015Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
