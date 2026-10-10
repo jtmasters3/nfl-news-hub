@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patriots-lead-10-0-but-lose-guard-mike-onwenu-with-ankle-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "Patriots lead 10-0 but lose guard Mike Onwenu with ankle injury",
-      "published_at": "2026-09-20T17:47:01.000Z",
-      "observed_at": "2026-09-20T18:00:29.895Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE",
-        "PIT"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/former-giants-gm-ernie-accorsi-dies-at-age-of-84",
       "source_name": "NFL.com",
       "headline": "Former Giants GM Ernie Accorsi dies at age of 84",
@@ -42129,6 +42107,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-rodgers-set-to-move-ahead-of-peyton-manning-on-the-all-time-touchdown-pass-list",
+      "source_name": "Pro Football Talk",
+      "headline": "Aaron Rodgers set to move ahead of Peyton Manning on the all-time touchdown pass list",
+      "published_at": "2026-10-10T08:38:21.000Z",
+      "observed_at": "2026-10-10T08:40:18.775Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
