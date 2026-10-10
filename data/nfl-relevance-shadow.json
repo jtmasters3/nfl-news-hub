@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/saquon-barkley-returns-but-titans-tie-it-17-17-with-cam-wards-second-rushing-td",
-      "source_name": "Pro Football Talk",
-      "headline": "Saquon Barkley returns, but Titans tie it 17-17 with Cam Ward's second rushing TD",
-      "published_at": "2026-09-20T19:10:47.000Z",
-      "observed_at": "2026-09-20T19:20:22.110Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI",
-        "TEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-turn-to-jack-strand-at-qb-with-panthers-up-27-3",
       "source_name": "Pro Football Talk",
       "headline": "Falcons turn to Jack Strand at QB with Panthers up 27-3",
@@ -42114,6 +42092,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-saturday-oct-10",
+      "source_name": "NFL.com",
+      "headline": "NFL news roundup: Latest league updates from Saturday, Oct. 10",
+      "published_at": "2026-10-10T06:15:01.000Z",
+      "observed_at": "2026-10-10T18:20:19.415Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
