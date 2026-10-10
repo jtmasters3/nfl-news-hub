@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jets-packers-head-to-overtime",
-      "source_name": "Pro Football Talk",
-      "headline": "Jets, Packers head to overtime",
-      "published_at": "2026-09-20T20:22:56.000Z",
-      "observed_at": "2026-09-20T20:30:22.648Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB",
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/2026-nfl-season-week-2-what-we-learned-from-sunday-s-games",
       "source_name": "NFL.com",
       "headline": "2026 NFL season, Week 2: What We Learned from Sunday's games",
@@ -42116,6 +42094,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-issues-season-high-10-fines-for-player-safety-fouls-in-week-4",
+      "source_name": "Pro Football Talk",
+      "headline": "NFL issues season-high 10 fines for player safety fouls in Week 4",
+      "published_at": "2026-10-10T21:57:13.000Z",
+      "observed_at": "2026-10-10T22:00:26.089Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
