@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/with-saquon-barkley-sidelined-eagles-lead-titans-14-10-at-halftime",
-      "source_name": "Pro Football Talk",
-      "headline": "With Saquon Barkley sidelined, Eagles lead Titans 14-10 at halftime",
-      "published_at": "2026-09-20T18:20:30.000Z",
-      "observed_at": "2026-09-20T18:31:00.427Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI",
-        "TEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jets-packers-tied-7-7-at-halftime",
       "source_name": "Pro Football Talk",
       "headline": "Jets, Packers tied 7-7 at halftime",
@@ -42120,6 +42098,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brock-purdy-catches-josh-allen-at-3-1-to-win-nfl-mvp",
+      "source_name": "Pro Football Talk",
+      "headline": "Brock Purdy catches Josh Allen at 3-1 to win NFL MVP",
+      "published_at": "2026-10-10T14:05:34.000Z",
+      "observed_at": "2026-10-10T14:10:17.620Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
