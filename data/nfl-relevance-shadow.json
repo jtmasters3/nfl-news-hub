@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/former-giants-gm-ernie-accorsi-dies-at-age-of-84",
-      "source_name": "NFL.com",
-      "headline": "Former Giants GM Ernie Accorsi dies at age of 84",
-      "published_at": "2026-09-20T05:59:17.000Z",
-      "observed_at": "2026-09-20T18:10:21.334Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG",
-        "NYJ"
-      ],
-      "detected_category": "retirement",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/marshawn-lloyds-first-nfl-td-puts-packers-up-7-0",
       "source_name": "Pro Football Talk",
       "headline": "MarShawn Lloyd's first NFL TD puts Packers up 7-0",
@@ -42115,6 +42093,23 @@
       "headline": "Aaron Rodgers set to move ahead of Peyton Manning on the all-time touchdown pass list",
       "published_at": "2026-10-10T08:38:21.000Z",
       "observed_at": "2026-10-10T08:40:18.775Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/alvin-kamara-will-soon-become-the-sixth-nfl-player-with-5-000-yards-rushing-and-receiving",
+      "source_name": "Pro Football Talk",
+      "headline": "Alvin Kamara will soon become the sixth NFL player with 5,000 yards rushing and receiving",
+      "published_at": "2026-10-10T10:52:06.000Z",
+      "observed_at": "2026-10-10T11:00:22.819Z",
       "decision": "keep",
       "classification": "ambiguous",
       "confidence": "low",
