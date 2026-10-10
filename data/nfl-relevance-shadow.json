@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/denzel-boston-55-yard-touchdown-ties-browns-bucs-at-16-16",
-      "source_name": "Pro Football Talk",
-      "headline": "Denzel Boston 55-yard touchdown ties Browns-Bucs at 16-16",
-      "published_at": "2026-09-20T19:22:21.000Z",
-      "observed_at": "2026-09-20T19:30:23.249Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE",
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jets-take-14-7-lead-on-garrett-wilson-touchdown-catch",
       "source_name": "Pro Football Talk",
       "headline": "Jets take 14-7 lead on Garrett Wilson touchdown catch",
@@ -42105,6 +42083,29 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-will-elevate-odell-beckham-jr-from-practice-squad",
+      "source_name": "Pro Football Talk",
+      "headline": "Vikings will elevate Odell Beckham Jr. from practice squad",
+      "published_at": "2026-10-10T19:16:15.000Z",
+      "observed_at": "2026-10-10T19:20:17.650Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
