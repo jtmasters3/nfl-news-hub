@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/marshawn-lloyds-first-nfl-td-puts-packers-up-7-0",
-      "source_name": "Pro Football Talk",
-      "headline": "MarShawn Lloyd's first NFL TD puts Packers up 7-0",
-      "published_at": "2026-09-20T18:05:20.000Z",
-      "observed_at": "2026-09-20T18:10:21.334Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/all-eyes-will-be-on-davis-webb-in-jaguars-broncos",
       "source_name": "Pro Football Talk",
       "headline": "All eyes will be on Davis Webb in Jaguars-Broncos",
@@ -42119,6 +42098,29 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-donald-no-setbacks-i-plan-on-playing-monday",
+      "source_name": "Pro Football Talk",
+      "headline": "Aaron Donald: No setbacks, I plan on playing Monday",
+      "published_at": "2026-10-10T12:53:36.000Z",
+      "observed_at": "2026-10-10T13:00:25.113Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "LAC",
+        "LAR"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
