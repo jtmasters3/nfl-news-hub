@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-had-second-biggest-scoring-dip-ever-from-week-1-to-week-2",
-      "source_name": "Pro Football Talk",
-      "headline": "Bears had second biggest scoring dip ever from Week 1 to Week 2",
-      "published_at": "2026-09-20T22:02:22.000Z",
-      "observed_at": "2026-09-20T22:10:19.567Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/george-kittle-brock-purdy-christian-mccaffrey-all-score-as-49ers-roll-over-dolphins",
       "source_name": "Pro Football Talk",
       "headline": "George Kittle, Brock Purdy, Christian McCaffrey all score as 49ers roll over Dolphins",
@@ -42097,6 +42076,23 @@
       "confidence": "low",
       "detected_teams": [],
       "detected_category": "fantasy",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-week-5-inactives-players-ruled-out-sunday-2026-season",
+      "source_name": "NFL.com",
+      "headline": "NFL Week 5 inactives: Players ruled out for Sunday's 13 games",
+      "published_at": "2026-10-11T12:04:48.000Z",
+      "observed_at": "2026-10-11T12:10:24.807Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
       "nfl_evidence": [],
       "non_nfl_evidence": [],
       "reason_codes": [
