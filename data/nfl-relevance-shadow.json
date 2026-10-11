@@ -2,48 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/alec-pierce-downgraded-to-out-with-heel-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "Alec Pierce downgraded to out with heel injury",
-      "published_at": "2026-09-21T01:24:39.000Z",
-      "observed_at": "2026-09-21T01:30:25.015Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/get-ready-for-three-straight-falcons-prime-time-games-barring-a-week-5-flex",
-      "source_name": "Pro Football Talk",
-      "headline": "Get ready for three straight Falcons prime-time games (barring a Week 5 flex)",
-      "published_at": "2026-09-21T01:31:25.000Z",
-      "observed_at": "2026-09-21T01:40:20.404Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-intends-to-proceed-with-ravens-cowboys-in-brazil-despite-field-concerns",
       "source_name": "Pro Football Talk",
       "headline": "NFL intends to proceed with Ravens-Cowboys in Brazil, despite field concerns",
@@ -42085,6 +42043,45 @@
         "GB"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/marvin-harrison-jr-trade-is-past-the-point-of-no-return",
+      "source_name": "Pro Football Talk",
+      "headline": "Marvin Harrison Jr. trade is past the point of no return",
+      "published_at": "2026-10-11T17:48:24.000Z",
+      "observed_at": "2026-10-11T18:00:25.692Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "trade",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-take-14-6-lead-on-colts-on-aaron-rodgers-second-td-throw",
+      "source_name": "Pro Football Talk",
+      "headline": "Steelers take 14-6 lead on Colts on Aaron Rodgers' second TD throw",
+      "published_at": "2026-10-11T17:49:43.000Z",
+      "observed_at": "2026-10-11T18:00:25.692Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "PIT"
+      ],
+      "detected_category": "live_game_state",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
