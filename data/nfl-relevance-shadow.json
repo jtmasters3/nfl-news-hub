@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/stephen-jones-no-concerns-about-field-in-brazil",
-      "source_name": "Pro Football Talk",
-      "headline": "Stephen Jones: No concerns about field in Brazil",
-      "published_at": "2026-09-21T17:51:02.000Z",
-      "observed_at": "2026-09-21T18:00:33.240Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-kelvin-banks-is-expected-to-have-ankle-surgery",
       "source_name": "Pro Football Talk",
       "headline": "Report: Kelvin Banks is expected to have ankle surgery",
@@ -42108,6 +42086,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jahmyr-gibbs-sets-record-for-most-tds-by-a-player-under-the-age-of-25",
+      "source_name": "Pro Football Talk",
+      "headline": "Jahmyr Gibbs sets record for most TDs by a player under the age of 25",
+      "published_at": "2026-10-11T23:13:24.000Z",
+      "observed_at": "2026-10-11T23:20:20.749Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
