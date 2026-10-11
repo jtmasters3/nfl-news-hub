@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/cowboys-dominate-commanders-lose-qb-3-takeaways-from-dallas-win",
-      "source_name": "FOX Sports",
-      "headline": "Cowboys Dominate As Commanders Lose QB: 3 Takeaways From Dallas' Win",
-      "published_at": "2026-09-20T23:38:53.000Z",
-      "observed_at": "2026-09-20T23:40:20.988Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kirk-cousins-throws-three-tds-raiders-start-2-0-with-26-14-victory-over-chargers",
       "source_name": "Pro Football Talk",
       "headline": "Kirk Cousins throws three TDs, Raiders start 2-0 with 26-14 victory over Chargers",
@@ -42085,6 +42063,27 @@
         "WAS"
       ],
       "detected_category": "live_game_state",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-touchdown-drought-isnt-keeping-them-from-winning",
+      "source_name": "Pro Football Talk",
+      "headline": "Vikings' touchdown drought isn't keeping them from winning",
+      "published_at": "2026-10-11T14:21:32.000Z",
+      "observed_at": "2026-10-11T14:30:29.676Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
