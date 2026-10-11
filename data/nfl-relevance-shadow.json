@@ -2,71 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-fallout-week-2-justin-herbert-overrated-now-hes-hurting-chargers",
-      "source_name": "FOX Sports",
-      "headline": "NFL Fallout Week 2: Justin Herbert Is Overrated, And Now He's Hurting The Chargers",
-      "published_at": "2026-09-21T03:19:12.000Z",
-      "observed_at": "2026-09-21T03:30:29.800Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAC",
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sunday-night-football-patrick-mahomes-throws-for-382-yards-3-tds-in-33-30-ot-win",
-      "source_name": "Pro Football Talk",
-      "headline": "Sunday Night Football: Patrick Mahomes throws for 382 yards, 3 TDs in 33-30 OT win",
-      "published_at": "2026-09-21T04:02:48.000Z",
-      "observed_at": "2026-09-21T04:10:22.586Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "KC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-week-2-defining-stats-record-setting-scoring-historic-performances",
-      "source_name": "FOX Sports",
-      "headline": "NFL Week 2 Defining Stats: Records Fall, Stars Make History",
-      "published_at": "2026-09-21T04:17:24.000Z",
-      "observed_at": "2026-09-21T04:30:59.463Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-odds-week-3-lines-spreads-results-all-16-games",
       "source_name": "FOX Sports",
       "headline": "2026 NFL Odds Week 3: Lines, Spreads, Results For All 16 Games",
@@ -42080,6 +42015,72 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/packers-lead-bears-14-7-at-halftime",
+      "source_name": "Pro Football Talk",
+      "headline": "Packers lead Bears 14-7 at halftime",
+      "published_at": "2026-10-11T18:26:07.000Z",
+      "observed_at": "2026-10-11T18:30:24.701Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "GB"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cardinals-hope-to-avoid-longest-home-losing-streak-in-franchise-history",
+      "source_name": "Pro Football Talk",
+      "headline": "Cardinals hope to avoid longest home losing streak in franchise history",
+      "published_at": "2026-10-11T18:23:08.000Z",
+      "observed_at": "2026-10-11T18:30:24.701Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/saints-lead-vikings-7-6-at-halftime",
+      "source_name": "Pro Football Talk",
+      "headline": "Saints lead Vikings 7-6 at halftime",
+      "published_at": "2026-10-11T18:22:49.000Z",
+      "observed_at": "2026-10-11T18:30:24.701Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN",
+        "NO"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
