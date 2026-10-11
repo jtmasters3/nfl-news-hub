@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/george-kittle-brock-purdy-christian-mccaffrey-all-score-as-49ers-roll-over-dolphins",
-      "source_name": "Pro Football Talk",
-      "headline": "George Kittle, Brock Purdy, Christian McCaffrey all score as 49ers roll over Dolphins",
-      "published_at": "2026-09-20T22:01:49.000Z",
-      "observed_at": "2026-09-20T22:10:19.567Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIA",
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/commanders-qb-jayden-daniels-suffers-left-elbow-injury-vs-cowboys",
       "source_name": "NFL.com",
       "headline": "Commanders QB Jayden Daniels suffers left elbow injury vs. Cowboys",
@@ -42093,6 +42071,23 @@
       "confidence": "low",
       "detected_teams": [],
       "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/week-5-injuries-sunday-pregame-2026-nfl-season",
+      "source_name": "NFL.com",
+      "headline": "NFL Week 5 injuries to monitor for Sunday's games",
+      "published_at": "2026-10-11T12:26:45.000Z",
+      "observed_at": "2026-10-11T12:30:20.937Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
       "nfl_evidence": [],
       "non_nfl_evidence": [],
       "reason_codes": [
