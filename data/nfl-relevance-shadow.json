@@ -2,89 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-odds-week-3-lines-spreads-results-all-16-games",
-      "source_name": "FOX Sports",
-      "headline": "2026 NFL Odds Week 3: Lines, Spreads, Results For All 16 Games",
-      "published_at": "2026-09-21T04:02:51.000Z",
-      "observed_at": "2026-09-21T04:30:59.463Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/indianapolis-colts-vs-kansas-city-chiefs-takeaways-september-20",
-      "source_name": "FOX Sports",
-      "headline": "Kansas City Does It Again In OT: 3 Takeaways From The Chiefs' Win Over The Colts",
-      "published_at": "2026-09-21T03:58:15.000Z",
-      "observed_at": "2026-09-21T04:30:59.463Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "KC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/over-chargers-texans-assessing-which-0-2-teams-need-panic-most",
-      "source_name": "FOX Sports",
-      "headline": "Is It Over For Chargers, Texans? Assessing Which 0-2 Teams Need To Panic The Most",
-      "published_at": "2026-09-21T04:39:18.000Z",
-      "observed_at": "2026-09-21T04:50:19.749Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "HOU",
-        "LAC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/overreaction-monday-cowboys-really-back-chargers-finished",
-      "source_name": "FOX Sports",
-      "headline": "Overreaction Monday: Are The Cowboys Really Back? Are The Chargers Finished?",
-      "published_at": "2026-09-21T04:58:17.000Z",
-      "observed_at": "2026-09-21T05:10:21.476Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "LAC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/why-replay-overturned-colts-fumble-call-vs-chiefs-overtime",
       "source_name": "FOX Sports",
       "headline": "Why Replay Overturned Colts' Fumble Call vs. Chiefs In Overtime",
@@ -42073,6 +41990,94 @@
       "detected_teams": [
         "MIN",
         "NO"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-lead-colts-17-13-at-halftime",
+      "source_name": "Pro Football Talk",
+      "headline": "Steelers lead Colts 17-13 at halftime",
+      "published_at": "2026-10-11T18:33:58.000Z",
+      "observed_at": "2026-10-11T18:40:19.461Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "PIT"
+      ],
+      "detected_category": "live_game_state",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jets-hold-7-6-lead-over-browns-at-halftime",
+      "source_name": "Pro Football Talk",
+      "headline": "Jets hold 7-6 lead over Browns at halftime",
+      "published_at": "2026-10-11T18:33:02.000Z",
+      "observed_at": "2026-10-11T18:40:19.461Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE",
+        "NYJ"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/drake-maye-throws-for-160-yards-and-two-tds-in-first-half-as-patriots-roll-over-raiders",
+      "source_name": "Pro Football Talk",
+      "headline": "Drake Maye throws for 160 yards and two TDs in first half as Patriots roll over Raiders",
+      "published_at": "2026-10-11T18:31:23.000Z",
+      "observed_at": "2026-10-11T18:40:19.461Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV",
+        "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/texans-lead-titans-12-3-at-halftime",
+      "source_name": "Pro Football Talk",
+      "headline": "Texans lead Titans 12-3 at halftime",
+      "published_at": "2026-10-11T18:27:52.000Z",
+      "observed_at": "2026-10-11T18:40:19.461Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "HOU",
+        "TEN"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
