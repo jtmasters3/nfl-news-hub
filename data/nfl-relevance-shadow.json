@@ -2,67 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/neil-reynolds-week-2-wrap-up-2026",
-      "source_name": "NFL.com",
-      "headline": "Neil Reynolds' Week 2 Wrap Up",
-      "published_at": "2026-09-20T11:57:00.000Z",
-      "observed_at": "2026-09-21T12:30:25.654Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/derwin-james-we-have-to-tell-the-truth-we-look-like-trash",
-      "source_name": "Pro Football Talk",
-      "headline": "Derwin James: We have to tell the truth, we look like trash",
-      "published_at": "2026-09-21T12:23:38.000Z",
-      "observed_at": "2026-09-21T12:30:25.654Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI",
-        "LV",
-        "LAC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/49ers-season-couldn-t-have-started-much-better-even-with-injuries-adding-up",
-      "source_name": "NFL.com",
-      "headline": "49ers' season couldn't have started much better, even with injuries adding up",
-      "published_at": "2026-09-21T12:16:07.000Z",
-      "observed_at": "2026-09-21T12:40:23.160Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/dak-prescott-celebrates-record-setting-day-but-dallas-still-needs-more-from-its-defense",
       "source_name": "NFL.com",
       "headline": "Dak Prescott celebrates record-setting day, but Dallas still needs more from its defense",
@@ -42066,6 +42005,72 @@
       "confidence": "high",
       "detected_teams": [
         "CLE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/big-day-for-drake-maye-as-patriots-blow-out-raiders",
+      "source_name": "Pro Football Talk",
+      "headline": "Big day for Drake Maye as Patriots blow out Raiders",
+      "published_at": "2026-10-11T20:04:29.000Z",
+      "observed_at": "2026-10-11T20:10:19.634Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV",
+        "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/texans-get-first-win-blowing-out-titans-26-3-behind-will-anderson-jr",
+      "source_name": "Pro Football Talk",
+      "headline": "Texans get first win, blowing out Titans 26-3 behind Will Anderson Jr.",
+      "published_at": "2026-10-11T20:01:30.000Z",
+      "observed_at": "2026-10-11T20:10:19.634Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "HOU",
+        "TEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-defense-dominates-saints-minnesota-stays-undefeated-with-23-13-win",
+      "source_name": "Pro Football Talk",
+      "headline": "Vikings defense dominates Saints, Minnesota stays undefeated with 23-13 win",
+      "published_at": "2026-10-11T19:59:37.000Z",
+      "observed_at": "2026-10-11T20:10:19.634Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN",
+        "NO"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
