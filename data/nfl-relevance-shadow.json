@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jeff-bezos-owner-of-washington-post-was-rooting-for-cowboys-on-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "Jeff Bezos, owner of Washington Post, was rooting for Cowboys on Sunday",
-      "published_at": "2026-09-20T23:17:32.000Z",
-      "observed_at": "2026-09-20T23:30:23.005Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/jalen-hurts-claps-back-jeffery-simmons-following-eagles-win-over-titans",
       "source_name": "FOX Sports",
       "headline": "Jalen Hurts Claps Back At Jeffery Simmons Following Eagles Win Over Titans",
@@ -42085,6 +42063,28 @@
         "WAS"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/notable-injuries-news-sunday-week-5-games-2026",
+      "source_name": "NFL.com",
+      "headline": "Notable injuries, news from Sunday's Week 5 games: Eagles LB, Jaguars DE ejected on opening kickoff",
+      "published_at": "2026-10-11T01:50:32.000Z",
+      "observed_at": "2026-10-11T14:00:24.293Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX",
+        "PHI"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
