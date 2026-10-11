@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/bears-qb-caleb-williams-considered-week-to-week-after-suffering-hamstring-injury",
-      "source_name": "NFL.com",
-      "headline": "Bears QB Caleb Williams considered 'week to week' after suffering hamstring injury in loss to Vikings",
-      "published_at": "2026-09-21T04:45:00.000Z",
-      "observed_at": "2026-09-21T16:50:23.608Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "MIN"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kevin-stefanski-has-a-decent-idea-of-week-3-starter-but-will-address-with-team-first",
       "source_name": "Pro Football Talk",
       "headline": "Kevin Stefanski has a \"decent idea\" of Week 3 starter, but will address with team first",
@@ -42091,6 +42069,27 @@
       "detected_teams": [
         "ARI",
         "DET"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chargers-up-17-10-after-bo-nix-fumble",
+      "source_name": "Pro Football Talk",
+      "headline": "Chargers up 17-10 after Bo Nix fumble, Kimani Vidal TD",
+      "published_at": "2026-10-11T22:24:26.000Z",
+      "observed_at": "2026-10-11T22:30:21.122Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
