@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/browns-bucs-set-to-resume-at-6-10-p-m-et",
-      "source_name": "Pro Football Talk",
-      "headline": "Browns-Bucs set to resume at 6:10 p.m. ET",
-      "published_at": "2026-09-20T22:05:57.000Z",
-      "observed_at": "2026-09-20T22:10:19.567Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE",
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jayden-daniels-injures-left-arm-on-final-play-of-half-as-cowboys-lead-17-10",
       "source_name": "Pro Football Talk",
       "headline": "Jayden Daniels injures left arm on final play of half as Cowboys lead 17-10",
@@ -42103,6 +42081,26 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jeremiah-smith-is-the-betting-favorite-to-be-the-first-overall-pick-in-the-2027-nfl-draft",
+      "source_name": "Pro Football Talk",
+      "headline": "Jeremiah Smith is the betting favorite to be the first overall pick in the 2027 NFL draft",
+      "published_at": "2026-10-11T08:47:20.000Z",
+      "observed_at": "2026-10-11T08:50:17.765Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [],
+      "detected_category": "draft",
+      "nfl_evidence": [
+        "phrase_nfl_draft",
+        "nfl_preserving_category:draft"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
