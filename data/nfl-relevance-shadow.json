@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaguars-get-out-to-7-0-lead-in-denver",
-      "source_name": "Pro Football Talk",
-      "headline": "Jaguars get out to 7-0 lead in Denver",
-      "published_at": "2026-09-20T20:51:38.000Z",
-      "observed_at": "2026-09-20T21:00:27.650Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN",
-        "JAX"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kevin-stefanski-now-is-not-the-time-to-know-if-michael-penix-will-play-thursday",
       "source_name": "Pro Football Talk",
       "headline": "Kevin Stefanski: Now is not the time to know if Michael Penix will play Thursday",
@@ -42097,6 +42075,27 @@
         "LAR"
       ],
       "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/marvin-harrison-jr-wasnt-present-for-cardinals-team-meetings-on-saturday-night",
+      "source_name": "Pro Football Talk",
+      "headline": "Marvin Harrison Jr. wasn't present for Cardinals team meetings on Saturday night",
+      "published_at": "2026-10-11T04:05:16.000Z",
+      "observed_at": "2026-10-11T04:10:20.597Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
