@@ -2,66 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-caleb-williams-did-not-suffer-major-hamstring-injury-not-ruled-out-for-week-3",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Caleb Williams did not suffer major hamstring injury, not ruled out for Week 3",
-      "published_at": "2026-09-21T16:01:32.000Z",
-      "observed_at": "2026-09-21T16:10:22.324Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-college-football-weekend-betting-recap-extremely-rough-week-bettors",
-      "source_name": "FOX Sports",
-      "headline": "NFL, CFB Weekend Betting Recap: 'It Was An Extremely Rough Week For Bettors'",
-      "published_at": "2026-09-21T15:57:09.000Z",
-      "observed_at": "2026-09-21T16:20:21.817Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lions-s-avonte-maddox-out-for-season-with-foot-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "Lions S Avonte Maddox out for season with foot injury",
-      "published_at": "2026-09-21T16:09:39.000Z",
-      "observed_at": "2026-09-21T16:20:21.817Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "DET"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-week-2-sunday-aftermath-top-5-storylines",
       "source_name": "NFL.com",
       "headline": "NFL Week 2 Sunday aftermath: Surprising Raiders, soaring Chiefs among top 5 storylines",
@@ -42078,6 +42018,72 @@
       "detected_teams": [
         "DEN",
         "LAC"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/jaguars-react-to-last-gasp-field-goal-that-beat-eagles-unreal-feeling-unreal-moment",
+      "source_name": "NFL.com",
+      "headline": "Jaguars react to last-gasp field goal that beat Eagles: 'Unreal feeling, unreal moment'",
+      "published_at": "2026-10-11T09:31:08.000Z",
+      "observed_at": "2026-10-11T22:00:25.785Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX",
+        "PHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/49ers-lb-dre-greenlaw-ejected-after-headbutting-seahawks-ernest-jones-iv",
+      "source_name": "FOX Sports",
+      "headline": "49ers' LB Dre Greenlaw Ejected After Headbutting Seahawks' Ernest Jones IV",
+      "published_at": "2026-10-11T21:55:37.000Z",
+      "observed_at": "2026-10-11T22:00:25.785Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF",
+        "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/fernando-mendoza-makes-nfl-debut",
+      "source_name": "FOX Sports",
+      "headline": "No. 1 Overall Pick Fernando Mendoza Makes NFL Debut For Raiders In Loss To Patriots",
+      "published_at": "2026-10-11T21:48:07.000Z",
+      "observed_at": "2026-10-11T22:00:25.785Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV",
+        "NE"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
