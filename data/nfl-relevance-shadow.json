@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-sept-21",
-      "source_name": "NFL.com",
-      "headline": "NFL news roundup: Latest league updates from Monday, Sept. 21",
-      "published_at": "2026-09-21T03:04:01.000Z",
-      "observed_at": "2026-09-21T15:10:19.863Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/troy-aikman-thought-hed-have-a-new-deal-with-espn-by-now",
       "source_name": "Pro Football Talk",
       "headline": "Troy Aikman thought he'd have a new deal with ESPN by now",
@@ -42084,6 +42067,28 @@
         "DET"
       ],
       "detected_category": "live_game_state",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/commanders-let-clock-run-out-tie-giants-27-27",
+      "source_name": "Pro Football Talk",
+      "headline": "Commanders let clock run out, tie Giants 27-27",
+      "published_at": "2026-10-11T21:00:44.000Z",
+      "observed_at": "2026-10-11T21:10:17.711Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG",
+        "WAS"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
