@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/drake-london-exchanges-words-with-fan-during-sundays-game",
-      "source_name": "Pro Football Talk",
-      "headline": "Drake London exchanges words with fan during Sunday's game",
-      "published_at": "2026-09-20T23:10:06.000Z",
-      "observed_at": "2026-09-20T23:20:24.808Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "CAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/patriots-amid-injuries-and-offensive-struggles-are-finding-an-identity-on-defense",
       "source_name": "NFL.com",
       "headline": "Patriots, amid injuries and offensive struggles, are finding an identity on defense",
@@ -42093,6 +42071,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/marvin-harrison-jr-trade-could-have-bigger-consequences-for-forever-rebuilding-cardinals",
+      "source_name": "NFL.com",
+      "headline": "Marvin Harrison Jr. trade could have bigger consequences for forever-rebuilding Cardinals",
+      "published_at": "2026-10-11T12:16:07.000Z",
+      "observed_at": "2026-10-11T13:20:20.438Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
