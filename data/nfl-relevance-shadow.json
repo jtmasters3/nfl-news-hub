@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/todd-monken-browns-are-gonna-browns-f-k-that",
-      "source_name": "Pro Football Talk",
-      "headline": "Todd Monken: \"'Browns are gonna Browns' — f—k that\"",
-      "published_at": "2026-09-20T23:11:57.000Z",
-      "observed_at": "2026-09-20T23:20:24.808Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/drake-london-exchanges-words-with-fan-during-sundays-game",
       "source_name": "Pro Football Talk",
       "headline": "Drake London exchanges words with fan during Sunday's game",
@@ -42097,6 +42076,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-week-5-coaching-rivalries-divisional-shakeups-potential-super-bowl-preview",
+      "source_name": "NFL.com",
+      "headline": "NFL Week 5: Coaching rivalries, divisional shakeups, potential Super Bowl preview",
+      "published_at": "2026-10-11T09:16:06.000Z",
+      "observed_at": "2026-10-11T13:10:17.303Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "coaching",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
