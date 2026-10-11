@@ -2,30 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/jim-harbaugh-not-deterred-after-chargers-0-2-start-following-double-digit-loss-to-raiders",
-      "source_name": "NFL.com",
-      "headline": "Jim Harbaugh 'not deterred' after Chargers 0-2 start following double-digit loss to Raiders",
-      "published_at": "2026-09-21T11:08:05.000Z",
-      "observed_at": "2026-09-21T11:20:25.850Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI",
-        "LV",
-        "LAC",
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/baker-mayfield-loss-stings-because-were-0-2-not-because-it-was-to-browns",
       "source_name": "Pro Football Talk",
       "headline": "Baker Mayfield: Loss stings because we're 0-2, not because it was to Browns",
@@ -42078,6 +42054,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/case-keenum-replaces-tyson-bagent-in-fourth-quarter-packers-lead-bears-31-7",
+      "source_name": "Pro Football Talk",
+      "headline": "Case Keenum replaces Tyson Bagent in fourth quarter, Packers lead Bears 31-7",
+      "published_at": "2026-10-11T19:30:59.000Z",
+      "observed_at": "2026-10-11T19:40:17.629Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "GB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
