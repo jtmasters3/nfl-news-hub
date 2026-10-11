@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-alec-pierces-x-rays-negative-will-undergo-more-testing-on-monday",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Alec Pierce's X-rays negative, will undergo more testing on Monday",
-      "published_at": "2026-09-21T02:51:57.000Z",
-      "observed_at": "2026-09-21T03:00:29.291Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/nfl-fallout-week-2-justin-herbert-overrated-now-hes-hurting-chargers",
       "source_name": "FOX Sports",
       "headline": "NFL Fallout Week 2: Justin Herbert Is Overrated, And Now He's Hurting The Chargers",
@@ -42084,6 +42063,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/fox-nfl-sunday-crew-remembers-mike-ditka",
+      "source_name": "FOX Sports",
+      "headline": "'FOX NFL Sunday' Crew Remembers NFL Legend Mike Ditka As 'One Of One'",
+      "published_at": "2026-10-11T18:07:08.000Z",
+      "observed_at": "2026-10-11T18:20:17.254Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
