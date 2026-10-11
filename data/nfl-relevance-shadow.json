@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jayden-daniels-injures-left-arm-on-final-play-of-half-as-cowboys-lead-17-10",
-      "source_name": "Pro Football Talk",
-      "headline": "Jayden Daniels injures left arm on final play of half as Cowboys lead 17-10",
-      "published_at": "2026-09-20T22:02:29.000Z",
-      "observed_at": "2026-09-20T22:10:19.567Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-had-second-biggest-scoring-dip-ever-from-week-1-to-week-2",
       "source_name": "Pro Football Talk",
       "headline": "Bears had second biggest scoring dip ever from Week 1 to Week 2",
@@ -42105,6 +42084,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-dfs-week-5-best-picks-lineup-advice-value-plays",
+      "source_name": "FOX Sports",
+      "headline": "NFL DFS Week 5: Best Picks, Lineup Advice and Value Plays",
+      "published_at": "2026-10-11T09:00:38.000Z",
+      "observed_at": "2026-10-11T09:20:19.136Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "fantasy",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
