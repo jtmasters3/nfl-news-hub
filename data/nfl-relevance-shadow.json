@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/packers-beat-jets-20-17-in-overtime",
-      "source_name": "Pro Football Talk",
-      "headline": "Packers beat Jets 20-17 in overtime",
-      "published_at": "2026-09-20T20:42:30.000Z",
-      "observed_at": "2026-09-20T20:50:21.369Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB",
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/jay-glazer-rams-plan-start-aaron-donald-against-giants-monday-night",
       "source_name": "FOX Sports",
       "headline": "Jay Glazer Details The Rams' Plan For Aaron Donald On Monday Night vs. Giants",
@@ -42110,6 +42088,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sundays-games-could-become-a-significant-factor-in-the-marvin-harrison-jr-trade",
+      "source_name": "Pro Football Talk",
+      "headline": "Sunday's games could become a significant factor in the Marvin Harrison Jr. trade",
+      "published_at": "2026-10-11T00:58:23.000Z",
+      "observed_at": "2026-10-11T01:00:27.358Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "trade",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
