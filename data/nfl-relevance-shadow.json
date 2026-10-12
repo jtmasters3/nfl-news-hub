@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brian-burns-says-his-low-ankle-sprain-is-nothing-serious",
-      "source_name": "Pro Football Talk",
-      "headline": "Brian Burns says his low ankle sprain is \"nothing serious\"",
-      "published_at": "2026-09-22T08:49:07.000Z",
-      "observed_at": "2026-09-22T09:00:29.462Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-donald-game-wasnt-as-fast-as-i-thought",
       "source_name": "Pro Football Talk",
       "headline": "Aaron Donald: Game wasn't as fast as I thought",
@@ -42103,6 +42086,28 @@
       "detected_teams": [
         "SF",
         "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jahmyr-gibbs-for-sure-trying-to-break-ladainian-tomlinsons-single-season-td-record",
+      "source_name": "Pro Football Talk",
+      "headline": "Jahmyr Gibbs \"for sure\" trying to break LaDainian Tomlinson's single-season TD record",
+      "published_at": "2026-10-12T13:38:53.000Z",
+      "observed_at": "2026-10-12T13:50:24.534Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI",
+        "DET"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
