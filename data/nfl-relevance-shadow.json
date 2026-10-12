@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/eagles-zach-ertz-return-philadelphia-tight-ends",
-      "source_name": "FOX Sports",
-      "headline": "Zach Ertz Talks Being 'Honored' By Eagles Reunion",
-      "published_at": "2026-09-22T15:46:42.000Z",
-      "observed_at": "2026-09-22T16:00:36.775Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/teams-that-win-the-overtime-coin-toss-are-0-3-this-year",
-      "source_name": "Pro Football Talk",
-      "headline": "Teams that win the overtime coin toss are 0-3 this year",
-      "published_at": "2026-09-22T16:13:33.000Z",
-      "observed_at": "2026-09-22T16:20:24.760Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jerry-jones-were-optimistic-about-team-id-work-to-improve-it-in-a-minute-financially",
       "source_name": "Pro Football Talk",
       "headline": "Jerry Jones: We're optimistic about team, I'd \"work to improve it in a minute financially\"",
@@ -42121,6 +42083,42 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dre-greenlaw-suspended-for-one-game",
+      "source_name": "Pro Football Talk",
+      "headline": "Dre Greenlaw suspended for one game",
+      "published_at": "2026-10-12T18:12:42.000Z",
+      "observed_at": "2026-10-12T18:20:19.617Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "suspension",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-micah-parsons-is-not-expected-to-practice-this-week",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Micah Parsons is not expected to practice this week",
+      "published_at": "2026-10-12T18:09:55.000Z",
+      "observed_at": "2026-10-12T18:20:19.617Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
