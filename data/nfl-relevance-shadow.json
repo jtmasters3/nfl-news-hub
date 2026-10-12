@@ -2,51 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-bears-to-sign-ls-scott-daly-off-saints-practice-squad",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Bears to sign LS Scott Daly off Saints practice squad",
-      "published_at": "2026-09-22T19:48:44.000Z",
-      "observed_at": "2026-09-22T20:00:31.061Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "NO"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tua-tagovailoa-returns-to-full-participation-at-falcons-practice",
-      "source_name": "Pro Football Talk",
-      "headline": "Tua Tagovailoa returns to full participation at Falcons practice",
-      "published_at": "2026-09-22T20:06:29.000Z",
-      "observed_at": "2026-09-22T20:10:23.561Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patriots-place-g-mike-onwenu-on-injured-reserve",
       "source_name": "Pro Football Talk",
       "headline": "Patriots place G Mike Onwenu on injured reserve",
@@ -42128,6 +42083,44 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/cowboys-add-veteran-coach-mike-pettine-as-they-search-for-answers-on-defense",
+      "source_name": "NFL.com",
+      "headline": "Cowboys add veteran coach Mike Pettine as they search for answers on defense",
+      "published_at": "2026-10-12T10:31:07.000Z",
+      "observed_at": "2026-10-12T22:40:19.194Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/marvin-harrison-jr-passes-physical-so-trade-is-official",
+      "source_name": "Pro Football Talk",
+      "headline": "Marvin Harrison Jr. passes physical, so trade is official",
+      "published_at": "2026-10-12T22:36:52.000Z",
+      "observed_at": "2026-10-12T22:40:19.194Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "trade",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
