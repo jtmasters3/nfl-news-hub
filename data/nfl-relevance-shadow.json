@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaxson-dart-questionable-to-return-with-knee-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "Jaxson Dart questionable to return with knee injury",
-      "published_at": "2026-09-22T00:39:36.000Z",
-      "observed_at": "2026-09-22T00:50:21.146Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/giants-receiver-malik-nabers-suffers-apparent-arm-injury",
       "source_name": "Pro Football Talk",
       "headline": "Giants receiver Malik Nabers suffers apparent arm injury",
@@ -42090,6 +42069,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/marvin-harrison-deal-was-most-likely-done-before-sundays-games-started",
+      "source_name": "Pro Football Talk",
+      "headline": "Marvin Harrison deal was most likely done before Sunday's games started",
+      "published_at": "2026-10-12T09:44:06.000Z",
+      "observed_at": "2026-10-12T09:50:18.589Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
