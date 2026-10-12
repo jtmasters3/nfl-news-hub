@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/te-zach-ertz-reuniting-with-eagles-signing-to-philadelphia-s-practice-squad",
-      "source_name": "NFL.com",
-      "headline": "TE Zach Ertz reuniting with Eagles, signing to Philadelphia's practice squad",
-      "published_at": "2026-09-21T10:44:28.000Z",
-      "observed_at": "2026-09-21T22:50:22.776Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/week-2-monday-night-inactives-new-york-giants-at-los-angeles-rams",
       "source_name": "NFL.com",
       "headline": "Week 2 Monday night inactives: New York Giants at Los Angeles Rams",
@@ -42112,6 +42089,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/commanders-ot-meltdown-puts-plenty-of-players-in-an-awkward-spot",
+      "source_name": "Pro Football Talk",
+      "headline": "Commanders' OT meltdown puts plenty of players in an awkward spot",
+      "published_at": "2026-10-12T03:09:08.000Z",
+      "observed_at": "2026-10-12T03:20:20.920Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
