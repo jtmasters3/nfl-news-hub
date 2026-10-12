@@ -2,68 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-catchup-caleb-williams-jaxson-dart-jayden-daniels-kyler-murray-injury-updates",
-      "source_name": "FOX Sports",
-      "headline": "NFL Catchup: Caleb Williams Avoids Major Injury; Latest On Other QB Ailments",
-      "published_at": "2026-09-22T03:08:28.000Z",
-      "observed_at": "2026-09-22T03:10:20.565Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-jaxson-dart-wanted-to-return-to-the-game-despite-knee-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Jaxson Dart wanted to return to the game despite knee injury",
-      "published_at": "2026-09-22T03:04:39.000Z",
-      "observed_at": "2026-09-22T03:10:20.565Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/giants-rams-on-monday-night-football-what-we-learned-from-los-angeles-28-6-win",
-      "source_name": "NFL.com",
-      "headline": "Giants-Rams on 'Monday Night Football': What We Learned from Los Angeles' 28-6 win",
-      "published_at": "2026-09-22T03:10:28.000Z",
-      "observed_at": "2026-09-22T03:20:20.447Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAC",
-        "LAR",
-        "NYG",
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-power-rankings-week-3-chiefs-back-bucs-broken",
       "source_name": "FOX Sports",
       "headline": "2026 NFL Power Rankings Week 3: Are The Chiefs Back? Are The Bucs Broken?",
@@ -42095,6 +42033,70 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/the-0-5-chargers-are-stuck-staying-the-course-and-searching-for-answers",
+      "source_name": "NFL.com",
+      "headline": "The 0-5 Chargers are stuck 'staying the course' and searching for answers",
+      "published_at": "2026-10-12T10:46:06.000Z",
+      "observed_at": "2026-10-12T12:40:20.209Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/ravens-find-another-way-to-win-behind-tyler-huntley-one-of-the-coolest-dudes",
+      "source_name": "NFL.com",
+      "headline": "Ravens find another way to win behind Tyler Huntley: 'One of the coolest dudes'",
+      "published_at": "2026-10-12T10:16:07.000Z",
+      "observed_at": "2026-10-12T12:40:20.209Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaguars-are-bringing-a-healthy-long-snapper-to-london-for-week-6",
+      "source_name": "Pro Football Talk",
+      "headline": "Jaguars are bringing a healthy long snapper to London for Week 6",
+      "published_at": "2026-10-12T12:27:58.000Z",
+      "observed_at": "2026-10-12T12:40:20.209Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX",
+        "PHI"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
