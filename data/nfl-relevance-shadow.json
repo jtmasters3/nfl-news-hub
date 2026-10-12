@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/how-rookie-jonah-coleman-s-knockout-blow-in-broncos-first-win-was-born-in-the-ring",
-      "source_name": "NFL.com",
-      "headline": "How rookie Jonah Coleman's knockout blow in Broncos' first win was born in the ring",
-      "published_at": "2026-09-22T12:16:05.000Z",
-      "observed_at": "2026-09-22T14:30:25.656Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/andy-reid-kenneth-walker-wants-the-ball-every-play-doesnt-want-to-be-relieved",
-      "source_name": "Pro Football Talk",
-      "headline": "Andy Reid: Kenneth Walker wants the ball every play, doesn't want to be relieved",
-      "published_at": "2026-09-22T14:19:24.000Z",
-      "observed_at": "2026-09-22T14:30:25.656Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC"
-      ],
-      "detected_category": "free_agency",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:free_agency"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/odell-beckham-jr-was-on-the-field-for-three-plays-on-monday-night",
       "source_name": "Pro Football Talk",
       "headline": "Odell Beckham Jr. was on the field for three plays on Monday night",
@@ -42118,6 +42075,46 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-week-5-sunday-aftermath-commanders-melt-down-in-tie-eagles-rue-costly-last-second-gaffe",
+      "source_name": "NFL.com",
+      "headline": "NFL Week 5 Sunday aftermath: Commanders melt down in tie, Eagles rue costly last-second gaffe",
+      "published_at": "2026-10-12T04:54:51.000Z",
+      "observed_at": "2026-10-12T17:00:26.835Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI",
+        "SF",
+        "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-quinn-remains-employed-for-now-somehow",
+      "source_name": "Pro Football Talk",
+      "headline": "Dan Quinn remains employed for now, somehow",
+      "published_at": "2026-10-12T16:54:57.000Z",
+      "observed_at": "2026-10-12T17:00:26.835Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "coaching",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
