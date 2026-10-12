@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/davante-adams-has-195-yards-two-tds-as-rams-take-21-3-lead",
-      "source_name": "Pro Football Talk",
-      "headline": "Davante Adams has 195 yards, two TDs as Rams take 21-3 lead",
-      "published_at": "2026-09-22T02:23:55.000Z",
-      "observed_at": "2026-09-22T02:40:25.586Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/nfl-catchup-caleb-williams-jaxson-dart-jayden-daniels-kyler-murray-injury-updates",
       "source_name": "FOX Sports",
       "headline": "NFL Catchup: Caleb Williams Avoids Major Injury; Latest On Other QB Ailments",
@@ -42093,6 +42072,29 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/fred-warner-on-mike-evans-unreal-how-he-shows-up-every-week-and-dominates",
+      "source_name": "Pro Football Talk",
+      "headline": "Fred Warner on Mike Evans: Unreal how he shows up every week and dominates",
+      "published_at": "2026-10-12T12:08:20.000Z",
+      "observed_at": "2026-10-12T12:20:20.805Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF",
+        "TB"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:free_agency"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
