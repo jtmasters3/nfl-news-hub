@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cardinals-cb-will-johnson-has-a-neck-injury-that-could-end-his-season",
-      "source_name": "Pro Football Talk",
-      "headline": "Cardinals CB Will Johnson has a neck injury that could end his season",
-      "published_at": "2026-09-21T22:10:23.000Z",
-      "observed_at": "2026-09-21T22:20:21.237Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/rams-wr-puka-nacua-hip-inactive-monday-giants",
-      "source_name": "NFL.com",
-      "headline": "Rams WR Puka Nacua (hip) inactive for Monday's game vs. Giants",
-      "published_at": "2026-09-21T10:44:44.000Z",
-      "observed_at": "2026-09-21T22:50:22.776Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAC",
-        "LAR",
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/te-zach-ertz-reuniting-with-eagles-signing-to-philadelphia-s-practice-squad",
       "source_name": "NFL.com",
       "headline": "TE Zach Ertz reuniting with Eagles, signing to Philadelphia's practice squad",
@@ -42116,6 +42072,46 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-fallout-week-5-eagles-arent-contenders-should-start-rebuilding",
+      "source_name": "FOX Sports",
+      "headline": "NFL Fallout Week 5: The Eagles Aren't Contenders — And They Should Start Rebuilding",
+      "published_at": "2026-10-12T02:38:09.000Z",
+      "observed_at": "2026-10-12T02:50:16.342Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN",
+        "PHI",
+        "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-odds-week-6-lines-spreads-results-all-14-games",
+      "source_name": "FOX Sports",
+      "headline": "2026 NFL Odds Week 6: Lines, Spreads, Results For All 14 Games",
+      "published_at": "2026-10-12T02:27:44.000Z",
+      "observed_at": "2026-10-12T02:50:16.342Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
