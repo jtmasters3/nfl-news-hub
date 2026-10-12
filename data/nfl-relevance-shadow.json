@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/alec-pierce-aggravated-heel-injury-will-miss-at-least-several-weeks",
-      "source_name": "Pro Football Talk",
-      "headline": "Alec Pierce aggravated heel injury, will miss at least several weeks",
-      "published_at": "2026-09-22T00:41:59.000Z",
-      "observed_at": "2026-09-22T00:50:21.146Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaxson-dart-questionable-to-return-with-knee-injury",
       "source_name": "Pro Football Talk",
       "headline": "Jaxson Dart questionable to return with knee injury",
@@ -42094,6 +42073,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/in-5-overtime-games-3-teams-have-chosen-to-kick-2-have-chosen-to-receive",
+      "source_name": "Pro Football Talk",
+      "headline": "In 5 overtime games, 3 teams have chosen to kick, 2 have chosen to receive",
+      "published_at": "2026-10-12T09:11:05.000Z",
+      "observed_at": "2026-10-12T09:20:25.563Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
