@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/pfts-week-3-2026-nfl-power-rankings",
-      "source_name": "Pro Football Talk",
-      "headline": "PFT's Week 3 2026 NFL power rankings",
-      "published_at": "2026-09-22T13:45:58.000Z",
-      "observed_at": "2026-09-22T13:50:24.793Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/the-giants-major-questions-run-deeper-than-injuries-after-blowout-loss-to-rams",
       "source_name": "NFL.com",
       "headline": "The Giants' major questions run deeper than injuries after blowout loss to Rams",
@@ -42114,6 +42093,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-carson-schwesinger-has-grade-1-ankle-sprain-not-ruled-out-for-week-6",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Carson Schwesinger has Grade 1 ankle sprain, not ruled out for Week 6",
+      "published_at": "2026-10-12T15:59:22.000Z",
+      "observed_at": "2026-10-12T16:10:24.401Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE",
+        "NYJ"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
