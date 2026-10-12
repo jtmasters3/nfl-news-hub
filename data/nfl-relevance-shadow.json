@@ -2,66 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/eagles-survive-titans-behind-jalen-hurts-here-s-what-philadelphia-must-fix-next",
-      "source_name": "NFL.com",
-      "headline": "Eagles survive Titans behind Jalen Hurts. Here's what Philadelphia must fix next",
-      "published_at": "2026-09-22T11:16:05.000Z",
-      "observed_at": "2026-09-22T15:30:23.688Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI",
-        "TEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/drew-brees-reverses-course-says-he-texted-the-broncos-about-afc-championship",
-      "source_name": "Pro Football Talk",
-      "headline": "Drew Brees reverses course, says he texted the Broncos about AFC Championship",
-      "published_at": "2026-09-22T15:17:45.000Z",
-      "observed_at": "2026-09-22T15:30:23.688Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/qb-stock-market-week-3-patrick-mahomes-back-has-bryce-young-finally-arrived",
-      "source_name": "FOX Sports",
-      "headline": "QB Stock Market Week 3: Patrick Mahomes Is Back. Has Bryce Young Finally Arrived?",
-      "published_at": "2026-09-22T15:25:25.000Z",
-      "observed_at": "2026-09-22T15:40:22.817Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/klint-kubiak-i-enjoy-that-our-teams-2-0-but-no-ones-made-the-playoffs-going-2-0",
       "source_name": "Pro Football Talk",
       "headline": "Klint Kubiak: I enjoy that our team's 2-0, but no one's made the playoffs going 2-0",
@@ -42107,6 +42047,71 @@
       "detected_teams": [
         "HOU",
         "TEN"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/sam-darnold-seahawks-49ers-super-bowl",
+      "source_name": "FOX Sports",
+      "headline": "Déjà Vu: Seahawks Won't Repeat Unless Sam Darnold Kicks Turnover Bug, Again",
+      "published_at": "2026-10-12T17:07:57.000Z",
+      "observed_at": "2026-10-12T17:30:22.918Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nick-siriannis-mistake-was-confirmed-by-his-kick-coverage-unit",
+      "source_name": "Pro Football Talk",
+      "headline": "Nick Sirianni's mistake was confirmed by his kick-coverage unit",
+      "published_at": "2026-10-12T17:22:57.000Z",
+      "observed_at": "2026-10-12T17:30:22.918Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX",
+        "PHI"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-lions-wr-tom-kennedy-is-expected-to-have-season-ending-mcl-surgery",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Lions WR Tom Kennedy is expected to have season-ending MCL surgery",
+      "published_at": "2026-10-12T17:19:15.000Z",
+      "observed_at": "2026-10-12T17:30:22.918Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI",
+        "DET"
       ],
       "detected_category": "injury",
       "nfl_evidence": [
