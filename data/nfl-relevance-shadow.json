@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/the-three-players-fined-for-the-violating-one-of-the-five-key-safety-rules-have-appealed",
-      "source_name": "Pro Football Talk",
-      "headline": "The three players fined for the violating one of the five key safety rules have appealed",
-      "published_at": "2026-09-22T18:08:49.000Z",
-      "observed_at": "2026-09-22T18:20:22.348Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tyson-bagent-placed-in-concussion-protocol-putting-case-keenum-in-line-to-start-week-3",
-      "source_name": "Pro Football Talk",
-      "headline": "Tyson Bagent placed in concussion protocol, putting Case Keenum in line to start Week 3",
-      "published_at": "2026-09-22T18:22:00.000Z",
-      "observed_at": "2026-09-22T18:30:24.976Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "PHI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/philadelphia-eagles-sign-cornerback-kenny-moore-indianapolis-colts",
       "source_name": "FOX Sports",
       "headline": "Eagles Reportedly Sign Former Pro Bowl CB Kenny Moore II To Practice Squad",
@@ -42111,6 +42072,50 @@
         "TB"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/san-francisco-49ers-deebo-samuel-seahawks-hamstring-injury",
+      "source_name": "FOX Sports",
+      "headline": "49ers WR Deebo Samuel Expected To Miss Multiple Weeks With Hamstring Injury",
+      "published_at": "2026-10-12T20:14:17.000Z",
+      "observed_at": "2026-10-12T20:30:23.618Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF",
+        "SEA"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kevin-stefanski-well-have-a-better-idea-wednesday-about-michael-penix",
+      "source_name": "Pro Football Talk",
+      "headline": "Kevin Stefanski: We'll have a better idea Wednesday about Michael Penix",
+      "published_at": "2026-10-12T20:23:51.000Z",
+      "observed_at": "2026-10-12T20:30:23.618Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "BAL"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
