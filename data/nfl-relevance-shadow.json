@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/davante-adams-gives-rams-7-0-lead-with-his-118th-career-td",
-      "source_name": "Pro Football Talk",
-      "headline": "Davante Adams gives Rams 7-0 lead with his 118th career TD",
-      "published_at": "2026-09-22T00:59:03.000Z",
-      "observed_at": "2026-09-22T01:10:22.599Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/matthew-stafford-moves-to-tie-for-sixth-on-all-time-tds-list-as-rams-take-14-0-lead",
       "source_name": "Pro Football Talk",
       "headline": "Matthew Stafford moves into tie for sixth on all-time TDs list as Rams take 14-0 lead",
@@ -42091,6 +42070,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sunday-ticket-glitch-keeps-customers-from-watching-all-of-certain-late-afternoon-games",
+      "source_name": "Pro Football Talk",
+      "headline": "Sunday Ticket glitch keeps customers from watching all of certain late-afternoon games",
+      "published_at": "2026-10-12T10:24:25.000Z",
+      "observed_at": "2026-10-12T10:30:23.158Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
