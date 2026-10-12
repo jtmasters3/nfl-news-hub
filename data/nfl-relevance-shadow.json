@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-week-2-plays-stood-out-jalen-hurts-patrick-mahomes-jamarr-chase",
-      "source_name": "FOX Sports",
-      "headline": "The Week 2 Plays That Stood Out: Jalen Hurts Delivers Late; Ja'Marr Chase Did What?!",
-      "published_at": "2026-09-22T01:50:46.000Z",
-      "observed_at": "2026-09-22T02:00:28.825Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/monday-night-football-matthew-stafford-davante-adams-have-rams-up-14-3-at-halftime",
       "source_name": "Pro Football Talk",
       "headline": "Monday Night Football: Matthew Stafford, Davante Adams have Rams up 14-3 at halftime",
@@ -42079,6 +42062,28 @@
       "detected_teams": [
         "NYG",
         "NYJ",
+        "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cam-skattebo-i-try-to-fight-for-extra-yards-it-bit-me-on-sunday",
+      "source_name": "Pro Football Talk",
+      "headline": "Cam Skattebo: I try to fight for extra yards, it bit me on Sunday",
+      "published_at": "2026-10-12T10:50:14.000Z",
+      "observed_at": "2026-10-12T11:00:29.443Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG",
         "WAS"
       ],
       "detected_category": "league_news",
