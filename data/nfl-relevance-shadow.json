@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-lafleur-on-marvin-harrison-jr-having-four-targets-its-a-long-season-were-two-games-in",
-      "source_name": "Pro Football Talk",
-      "headline": "Mike LaFleur on Marvin Harrison Jr. having four targets: It's a long season, we're two games in",
-      "published_at": "2026-09-22T16:59:43.000Z",
-      "observed_at": "2026-09-22T17:10:21.151Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-intends-to-proceed-with-ravens-cowboys-in-brazil-but-field-will-look-bad-on-tv",
-      "source_name": "Pro Football Talk",
-      "headline": "NFL intends to proceed with Ravens-Cowboys in Brazil, but field will look bad on TV",
-      "published_at": "2026-09-22T16:53:42.000Z",
-      "observed_at": "2026-09-22T17:10:21.151Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jets-to-sign-will-levis-to-their-practice-squad",
       "source_name": "Pro Football Talk",
       "headline": "Jets to sign Will Levis to their practice squad",
@@ -42114,6 +42075,50 @@
         "SEA"
       ],
       "detected_category": "suspension",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-steelers-wr-roman-wilson-is-expected-to-miss-time-with-finger-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Steelers WR Roman Wilson is expected to miss time with finger injury",
+      "published_at": "2026-10-12T18:35:01.000Z",
+      "observed_at": "2026-10-12T18:40:20.767Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "PIT"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/quinshon-judkins-day-to-day-with-ankle-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Quinshon Judkins day-to-day with ankle injury",
+      "published_at": "2026-10-12T18:29:30.000Z",
+      "observed_at": "2026-10-12T18:40:20.767Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "CLE"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
