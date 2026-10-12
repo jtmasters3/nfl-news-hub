@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/the-giants-major-questions-run-deeper-than-injuries-after-blowout-loss-to-rams",
-      "source_name": "NFL.com",
-      "headline": "The Giants' major questions run deeper than injuries after blowout loss to Rams",
-      "published_at": "2026-09-22T11:46:04.000Z",
-      "observed_at": "2026-09-22T14:10:20.144Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR",
-        "NYG"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/what-s-behind-bryce-young-s-hot-start-confidence-familiar-wrs-and-deep-shots",
-      "source_name": "NFL.com",
-      "headline": "What's behind Bryce Young's hot start? Confidence, familiar WRs -- and deep shots",
-      "published_at": "2026-09-22T10:16:05.000Z",
-      "observed_at": "2026-09-22T14:10:20.144Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/the-seahawks-run-game-is-already-thriving-and-it-s-not-up-to-full-speed-yet",
       "source_name": "NFL.com",
       "headline": "The Seahawks' run game is already thriving (and it's not up to full speed yet)",
@@ -42109,6 +42070,49 @@
         "NYJ"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tests-confirm-packers-dl-javon-hargrave-tore-his-achilles",
+      "source_name": "Pro Football Talk",
+      "headline": "Tests confirm Packers DL Javon Hargrave tore his Achilles",
+      "published_at": "2026-10-12T16:17:32.000Z",
+      "observed_at": "2026-10-12T16:20:20.473Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-vrabel-theres-a-chance-a-j-brown-returns-this-week",
+      "source_name": "Pro Football Talk",
+      "headline": "Mike Vrabel: There's a chance A.J. Brown returns this week",
+      "published_at": "2026-10-12T16:11:43.000Z",
+      "observed_at": "2026-10-12T16:20:20.473Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV",
+        "NE"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
