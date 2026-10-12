@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/sam-darnold-injury-update-seahawks-schedule",
-      "source_name": "FOX Sports",
-      "headline": "Seahawks Coach Mike Macdonald Provides Sam Darnold Injury Update",
-      "published_at": "2026-09-22T13:25:21.000Z",
-      "observed_at": "2026-09-22T13:30:37.833Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/aaron-glenn-defends-late-game-decisions-made-in-jets-loss-to-packers",
-      "source_name": "NFL.com",
-      "headline": "Aaron Glenn defends late-game decisions made in Jets' loss to Packers",
-      "published_at": "2026-09-22T01:31:00.000Z",
-      "observed_at": "2026-09-22T13:40:20.864Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB",
-        "NYJ"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-campbell-on-kerby-joseph-were-trying-to-get-him-back-but-hes-not-ready",
       "source_name": "Pro Football Talk",
       "headline": "Dan Campbell on Kerby Joseph: We're trying to get him back, but he's not ready",
@@ -42112,6 +42069,49 @@
         "TEN"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-oct-12",
+      "source_name": "NFL.com",
+      "headline": "NFL news roundup: Eagles RB Will Shipley, Steelers WR Roman Wilson out multiple weeks",
+      "published_at": "2026-10-12T03:24:07.000Z",
+      "observed_at": "2026-10-12T15:30:23.968Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI",
+        "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-rb-will-shipley-out-multiple-weeks-with-foot-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Eagles RB Will Shipley out multiple weeks with foot injury",
+      "published_at": "2026-10-12T15:20:11.000Z",
+      "observed_at": "2026-10-12T15:30:23.968Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
