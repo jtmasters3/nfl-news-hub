@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/falcons-michael-penix-jr-starting-quarterback-week-3-game-vs-packers",
-      "source_name": "NFL.com",
-      "headline": "Falcons name Michael Penix Jr. starting quarterback for Week 3 game vs. Packers",
-      "published_at": "2026-09-21T08:38:14.000Z",
-      "observed_at": "2026-09-21T20:40:21.817Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/aaron-glenn-has-no-regrets-after-jets-ot-collapse-vs-packers-not-one-bit",
       "source_name": "FOX Sports",
       "headline": "Aaron Glenn Has No Regrets After Jets' OT Collapse vs. Packers: 'Not One Bit'",
@@ -42104,6 +42082,28 @@
         "MIN"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/why-cooper-kupp-ruled-short-1st-down-marker-49ers-win-vs-seahawks",
+      "source_name": "FOX Sports",
+      "headline": "Why Cooper Kupp Was Ruled Short Of 1st-Down Marker In 49ers' Win vs. Seahawks",
+      "published_at": "2026-10-12T00:52:23.000Z",
+      "observed_at": "2026-10-12T01:00:26.350Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF",
+        "SEA"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
