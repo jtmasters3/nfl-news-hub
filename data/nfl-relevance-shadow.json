@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jerry-jones-were-optimistic-about-team-id-work-to-improve-it-in-a-minute-financially",
-      "source_name": "Pro Football Talk",
-      "headline": "Jerry Jones: We're optimistic about team, I'd \"work to improve it in a minute financially\"",
-      "published_at": "2026-09-22T16:28:36.000Z",
-      "observed_at": "2026-09-22T16:40:21.162Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-lafleur-on-marvin-harrison-jr-having-four-targets-its-a-long-season-were-two-games-in",
       "source_name": "Pro Football Talk",
       "headline": "Mike LaFleur on Marvin Harrison Jr. having four targets: It's a long season, we're two games in",
@@ -42119,6 +42098,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-suspends-49ers-lb-dre-greenlaw-one-game-unsportsmanlike-conduct",
+      "source_name": "NFL.com",
+      "headline": "NFL suspends 49ers LB Dre Greenlaw one game for head-butting Seahawks' Ernest Jones IV",
+      "published_at": "2026-10-12T06:20:51.000Z",
+      "observed_at": "2026-10-12T18:30:24.808Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF",
+        "SEA"
+      ],
+      "detected_category": "suspension",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
