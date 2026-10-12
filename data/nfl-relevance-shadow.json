@@ -2,52 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/zach-ertz-returning-to-philadelphia-will-sign-with-eagles-practice-squad",
-      "source_name": "Pro Football Talk",
-      "headline": "Zach Ertz returning to Philadelphia, will sign with Eagles' practice squad",
-      "published_at": "2026-09-21T22:54:25.000Z",
-      "observed_at": "2026-09-21T23:10:21.795Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_signs_with",
-        "phrase_practice_squad",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/eagles-reportedly-set-bring-back-zach-ertz-after-dallas-goedert-injury",
-      "source_name": "FOX Sports",
-      "headline": "Eagles Reportedly Set To Bring Back TE Zach Ertz After Dallas Goedert Injury",
-      "published_at": "2026-09-21T23:11:54.000Z",
-      "observed_at": "2026-09-21T23:30:25.150Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "PHI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/giants-qb-jaxson-dart-suffers-apparent-knee-injury-on-first-drive-vs-rams",
       "source_name": "NFL.com",
       "headline": "Giants QB Jaxson Dart (knee) questionable to return to Monday's game vs. Rams",
@@ -42102,6 +42056,45 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-week-5-defining-stats",
+      "source_name": "FOX Sports",
+      "headline": "NFL Week 5 Defining Stats: Gibbs Makes History, Herbert Hits New Lows",
+      "published_at": "2026-10-12T03:53:25.000Z",
+      "observed_at": "2026-10-12T04:10:25.146Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sunday-night-football-ravens-come-back-to-beat-falcons-in-ot-30-23",
+      "source_name": "Pro Football Talk",
+      "headline": "Sunday Night Football: Ravens come back to beat Falcons in OT, 30-23",
+      "published_at": "2026-10-12T04:04:37.000Z",
+      "observed_at": "2026-10-12T04:10:25.146Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "BAL"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
