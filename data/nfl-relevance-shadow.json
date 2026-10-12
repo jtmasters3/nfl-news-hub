@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/matthew-stafford-davante-adams-dominate-giants-in-rams-blowout-win",
-      "source_name": "NFL.com",
-      "headline": "Matthew Stafford, Davante Adams dominate Giants in Rams' blowout win",
-      "published_at": "2026-09-22T11:46:52.000Z",
-      "observed_at": "2026-09-22T12:00:28.113Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAC",
-        "LAR",
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/todd-monken-message-to-team-after-win-is-so-what-now-what",
       "source_name": "Pro Football Talk",
       "headline": "Todd Monken: Message to team after win is \"So what, now what?\"",
@@ -42111,6 +42088,28 @@
         "DET"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lions-tom-kennedy-devin-white-will-both-miss-time-with-injuries-suffered-sunday",
+      "source_name": "Pro Football Talk",
+      "headline": "Lions' Tom Kennedy, Devin White will both miss time with injuries suffered Sunday",
+      "published_at": "2026-10-12T14:40:19.000Z",
+      "observed_at": "2026-10-12T14:50:24.671Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI",
+        "DET"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
