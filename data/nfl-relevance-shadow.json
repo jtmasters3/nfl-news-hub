@@ -2,30 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jets-to-sign-will-levis-to-their-practice-squad",
-      "source_name": "Pro Football Talk",
-      "headline": "Jets to sign Will Levis to their practice squad",
-      "published_at": "2026-09-22T16:55:07.000Z",
-      "observed_at": "2026-09-22T17:10:21.151Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYJ",
-        "TEN"
-      ],
-      "detected_category": "free_agency",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad",
-        "nfl_preserving_category:free_agency"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-put-a-j-terrell-on-injured-reserve",
       "source_name": "Pro Football Talk",
       "headline": "Falcons put A.J. Terrell on injured reserve",
@@ -42119,6 +42095,27 @@
         "CLE"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jags-davon-hamilton-on-filling-it-at-long-snapper-youve-got-to-do-a-job-get-it-done",
+      "source_name": "Pro Football Talk",
+      "headline": "Jags' DaVon Hamilton on filling it at long snapper: \"You've got to do a job? Get it done\"",
+      "published_at": "2026-10-12T18:48:12.000Z",
+      "observed_at": "2026-10-12T18:50:26.358Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
