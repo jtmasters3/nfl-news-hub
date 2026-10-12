@@ -2,91 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/philadelphia-eagles-sign-cornerback-kenny-moore-indianapolis-colts",
-      "source_name": "FOX Sports",
-      "headline": "Eagles Reportedly Sign Former Pro Bowl CB Kenny Moore II To Practice Squad",
-      "published_at": "2026-09-22T18:31:07.000Z",
-      "observed_at": "2026-09-22T18:40:21.769Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "PHI"
-      ],
-      "detected_category": "free_agency",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad",
-        "phrase_released_by",
-        "nfl_preserving_category:free_agency"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/upon-further-review-bengals-have-flipped-script-upgraded-defense",
-      "source_name": "FOX Sports",
-      "headline": "Upon Further Review: Bengals Have Flipped The Script With Upgraded Defense",
-      "published_at": "2026-09-22T18:21:32.000Z",
-      "observed_at": "2026-09-22T18:40:21.769Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-mcvay-hopeful-but-unsure-of-puka-nacuas-availability-for-week-3",
-      "source_name": "Pro Football Talk",
-      "headline": "Sean McVay hopeful, but unsure of Puka Nacua's availability for Week 3",
-      "published_at": "2026-09-22T18:39:39.000Z",
-      "observed_at": "2026-09-22T18:50:23.728Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR",
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/through-two-weeks-four-starting-quarterbacks-have-been-injured",
-      "source_name": "Pro Football Talk",
-      "headline": "Through two weeks, four starting quarterbacks have been injured",
-      "published_at": "2026-09-22T18:33:21.000Z",
-      "observed_at": "2026-09-22T18:50:23.728Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-network-bears-qb-tyson-bagent-in-concussion-protocol-case-keenum-could-start-week-3",
       "source_name": "NFL.com",
       "headline": "NFL Network: Bears QB Tyson Bagent in concussion protocol; Case Keenum could start Week 3",
@@ -42116,6 +42031,91 @@
         "BAL"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/matt-lafleur-on-micah-parsons-as-soon-as-they-give-us-the-green-light-hell-be-out-there",
+      "source_name": "Pro Football Talk",
+      "headline": "Matt LaFleur on Micah Parsons: As soon as they give us the green light, he'll be out there",
+      "published_at": "2026-10-12T20:42:25.000Z",
+      "observed_at": "2026-10-12T20:50:19.683Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/seahawks-list-jaxon-smith-njigba-as-limited-on-mondays-practice-report",
+      "source_name": "Pro Football Talk",
+      "headline": "Seahawks list Jaxon Smith-Njigba as limited on Monday's practice report",
+      "published_at": "2026-10-12T20:41:48.000Z",
+      "observed_at": "2026-10-12T20:50:19.683Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF",
+        "SEA"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-quinn-the-day-after-the-clock-debacle-weve-got-a-lot-of-shit-to-clean-up-on",
+      "source_name": "Pro Football Talk",
+      "headline": "Dan Quinn, the day after the clock debacle: \"We've got a lot of shit to clean up on\"",
+      "published_at": "2026-10-12T20:38:47.000Z",
+      "observed_at": "2026-10-12T20:50:19.683Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "WAS"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-hire-mike-pettine-as-a-defensive-assistant",
+      "source_name": "Pro Football Talk",
+      "headline": "Cowboys hire Mike Pettine as a defensive assistant",
+      "published_at": "2026-10-12T20:35:13.000Z",
+      "observed_at": "2026-10-12T20:50:19.683Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
