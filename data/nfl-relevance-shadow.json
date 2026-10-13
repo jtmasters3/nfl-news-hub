@@ -2,93 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/when-backups-become-qb1-carson-wentz-matt-cassel-dan-orlovsky",
-      "source_name": "FOX Sports",
-      "headline": "Inside The 'Psychological Warfare' When NFL Backups Suddenly Become QB1",
-      "published_at": "2026-09-23T14:38:33.000Z",
-      "observed_at": "2026-09-23T14:40:21.984Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/as-nfl-quarterbacks-go-down-here-are-some-potential-targets-for-teams-in-need",
-      "source_name": "NFL.com",
-      "headline": "As NFL quarterbacks go down, here are some potential targets for teams in need",
-      "published_at": "2026-09-23T02:01:05.000Z",
-      "observed_at": "2026-09-23T15:00:33.251Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ben-johnson-could-be-calling-plays-for-a-qb-other-than-the-first-pick-in-the-draft-for-the-first-time",
-      "source_name": "Pro Football Talk",
-      "headline": "Ben Johnson could be calling plays for a QB other than the first pick in the draft, for the first time",
-      "published_at": "2026-09-23T14:59:53.000Z",
-      "observed_at": "2026-09-23T15:10:21.916Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "draft",
-      "nfl_evidence": [
-        "nfl_preserving_category:draft"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/2026-nfl-mexico-city-pregame-entertainment-announced",
-      "source_name": "NFL.com",
-      "headline": "2026 NFL Mexico City pregame entertainment announced",
-      "published_at": "2026-09-23T03:10:25.000Z",
-      "observed_at": "2026-09-23T15:20:22.798Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-how-to-watch-week-3-schedule-rio-game-details-and-more",
-      "source_name": "NFL.com",
-      "headline": "NFL+: How to watch Week 3, schedule, Rio game details, and more",
-      "published_at": "2026-09-23T03:22:37.000Z",
-      "observed_at": "2026-09-23T15:30:28.250Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/christian-mccaffrey-joins-marshall-faulk-randy-moss-as-players-with-50-tds-on-two-teams",
       "source_name": "Pro Football Talk",
       "headline": "Christian McCaffrey joins Marshall Faulk, Randy Moss as players with 50 TDs on two teams",
@@ -42128,6 +42041,111 @@
         "PHI"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/david-bailey-jets-flamethrower-is-the-defensive-rookie-of-the-year-favorite-after-sunday",
+      "source_name": "NFL.com",
+      "headline": "David Bailey, Jets' 'flamethrower,' is the Defensive Rookie of the Year favorite after Sunday",
+      "published_at": "2026-10-13T09:46:06.000Z",
+      "observed_at": "2026-10-13T16:20:23.852Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYJ"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-tuesday-oct-13",
+      "source_name": "NFL.com",
+      "headline": "NFL news roundup: Latest league updates from Tuesday, Oct. 13",
+      "published_at": "2026-10-13T04:17:25.000Z",
+      "observed_at": "2026-10-13T16:20:23.852Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-power-rankings-week-6-2026-nfl-season",
+      "source_name": "NFL.com",
+      "headline": "NFL Power Rankings, Week 6: Vikings, Patriots enter top 10; Eagles, Saints in free fall",
+      "published_at": "2026-10-13T04:16:19.000Z",
+      "observed_at": "2026-10-13T16:20:23.852Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN",
+        "NE",
+        "NO",
+        "PHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-campbell-lions-fans-took-over-the-stadium-in-arizona",
+      "source_name": "Pro Football Talk",
+      "headline": "Dan Campbell: Lions fans took over the stadium in Arizona",
+      "published_at": "2026-10-13T16:18:57.000Z",
+      "observed_at": "2026-10-13T16:20:23.852Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI",
+        "DET"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/key-korn-ferry-document-in-brian-flores-case-becomes-public",
+      "source_name": "Pro Football Talk",
+      "headline": "Key Korn Ferry document in Brian Flores case becomes public",
+      "published_at": "2026-10-13T16:13:24.000Z",
+      "observed_at": "2026-10-13T16:20:23.852Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIA"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
