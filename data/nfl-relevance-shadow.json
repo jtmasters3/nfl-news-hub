@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/derrick-henry-says-ravens-werent-good-enough-but-not-complaining-about-lack-of-carries",
-      "source_name": "Pro Football Talk",
-      "headline": "Derrick Henry says Ravens weren't good enough, but not complaining about lack of carries",
-      "published_at": "2026-09-23T08:37:43.000Z",
-      "observed_at": "2026-09-23T08:50:22.547Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "NO"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/michael-penix-being-healthy-was-my-target-i-feel-im-where-i-want-to-be",
-      "source_name": "Pro Football Talk",
-      "headline": "Michael Penix: Being healthy was my target, I feel I'm where I want to be",
-      "published_at": "2026-09-23T10:57:04.000Z",
-      "observed_at": "2026-09-23T11:00:29.709Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/ex-ravens-rb-jamal-lewis-on-derrick-henry-s-lack-of-carries-in-loss-don-t-make-that-mistake-again",
       "source_name": "NFL.com",
       "headline": "Ex-Ravens RB Jamal Lewis on Derrick Henry's lack of carries in loss: 'Don't make that mistake again'",
@@ -42129,6 +42085,44 @@
       "detected_teams": [
         "BUF",
         "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-paris-game-your-digital-ticket",
+      "source_name": "NFL.com",
+      "headline": "NFL Paris Game: Your Digital Ticket",
+      "published_at": "2026-10-13T01:32:45.000Z",
+      "observed_at": "2026-10-13T13:40:21.539Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/pfts-week-6-2026-nfl-power-rankings",
+      "source_name": "Pro Football Talk",
+      "headline": "PFT's Week 6 2026 NFL power rankings",
+      "published_at": "2026-10-13T13:26:46.000Z",
+      "observed_at": "2026-10-13T13:40:21.539Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
