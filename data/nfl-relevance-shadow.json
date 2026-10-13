@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/michael-penix-jr-set-to-return-to-the-field-for-falcons-i-m-where-i-want-to-be",
-      "source_name": "NFL.com",
-      "headline": "Michael Penix Jr. set to return to the field for Falcons: 'I'm where I want to be'",
-      "published_at": "2026-09-23T10:16:06.000Z",
-      "observed_at": "2026-09-23T14:00:30.302Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/understanding-aaron-glenn-s-decision-making-process-why-jets-really-lost-to-packers",
-      "source_name": "NFL.com",
-      "headline": "Understanding Aaron Glenn's decision-making process: Why Jets really lost to Packers",
-      "published_at": "2026-09-23T09:46:05.000Z",
-      "observed_at": "2026-09-23T14:00:30.302Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB",
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/do-giants-still-have-a-chance-with-jameis-winston-if-he-struggles-do-they-have-options",
       "source_name": "NFL.com",
       "headline": "Do Giants still have a chance with Jameis Winston? If he struggles, do they have options?",
@@ -42134,6 +42091,44 @@
       "detected_teams": [
         "DAL",
         "TB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/sam-darnold-hasn-t-picked-up-where-he-left-off-how-concerning-is-his-sluggish-start",
+      "source_name": "NFL.com",
+      "headline": "Sam Darnold hasn't picked up where he left off. How concerning is his sluggish start?",
+      "published_at": "2026-10-13T12:16:04.000Z",
+      "observed_at": "2026-10-13T15:00:28.612Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/why-packers-christian-watson-and-matthew-golden-could-be-the-nfl-s-next-top-wr-duo",
+      "source_name": "NFL.com",
+      "headline": "Why Packers' Christian Watson and Matthew Golden could be the NFL's next top WR duo",
+      "published_at": "2026-10-13T10:46:05.000Z",
+      "observed_at": "2026-10-13T15:00:28.612Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
