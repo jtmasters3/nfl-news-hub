@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/christian-mccaffrey-joins-marshall-faulk-randy-moss-as-players-with-50-tds-on-two-teams",
-      "source_name": "Pro Football Talk",
-      "headline": "Christian McCaffrey joins Marshall Faulk, Randy Moss as players with 50 TDs on two teams",
-      "published_at": "2026-09-23T15:13:18.000Z",
-      "observed_at": "2026-09-23T15:30:28.250Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-wednesday-sept-23",
       "source_name": "NFL.com",
       "headline": "NFL news roundup: Latest league updates from Wednesday, Sept. 23",
@@ -42146,6 +42129,27 @@
         "MIA"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/will-campbell-is-week-to-week-after-tests-show-he-avoided-a-major-knee-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Will Campbell is week-to-week after tests show he avoided a major knee injury",
+      "published_at": "2026-10-13T16:46:34.000Z",
+      "observed_at": "2026-10-13T17:00:26.207Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
