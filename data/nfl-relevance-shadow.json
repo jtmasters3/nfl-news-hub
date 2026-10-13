@@ -2,51 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-giants-could-re-sign-brandon-allen-as-their-third-qb",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Giants could re-sign Brandon Allen as their third QB",
-      "published_at": "2026-09-22T22:54:43.000Z",
-      "observed_at": "2026-09-22T23:00:26.628Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/wr-brandin-cooks-to-sign-with-49ers-practice-squad",
-      "source_name": "Pro Football Talk",
-      "headline": "WR Brandin Cooks to sign with 49ers practice squad",
-      "published_at": "2026-09-22T22:49:49.000Z",
-      "observed_at": "2026-09-22T23:00:26.628Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_signs_with",
-        "phrase_practice_squad",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/mahomes-mountain-week-3-josh-allen-takes-over-top-spot",
       "source_name": "FOX Sports",
       "headline": "Mahomes Mountain Week 3: Josh Allen Takes Over The Top Spot",
@@ -42111,6 +42066,52 @@
         "MIA"
       ],
       "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/bills-rams-on-monday-night-football-what-we-learned-from-buffalo-s-37-34-overtime-win",
+      "source_name": "NFL.com",
+      "headline": "Bills-Rams on 'Monday Night Football': What We Learned from Buffalo's 37-34 overtime win",
+      "published_at": "2026-10-13T03:49:40.000Z",
+      "observed_at": "2026-10-13T04:00:28.734Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/seahawks-49ers-thriller-giants-commanders-mess-packers-patriots",
+      "source_name": "FOX Sports",
+      "headline": "NFL Best And Worst: From 49ers-Seahawks Thriller To Giants-Commanders Blunder",
+      "published_at": "2026-10-13T03:56:10.000Z",
+      "observed_at": "2026-10-13T04:00:28.734Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG",
+        "SF",
+        "SEA",
+        "WAS"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
