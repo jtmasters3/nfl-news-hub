@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jets-place-three-players-on-injured-reserve",
-      "source_name": "Pro Football Talk",
-      "headline": "Jets place three players on injured reserve",
-      "published_at": "2026-09-22T20:42:09.000Z",
-      "observed_at": "2026-09-22T20:50:20.891Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYJ"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-bears-sign-p-johnny-hekker",
       "source_name": "Pro Football Talk",
       "headline": "Report: Bears sign P Johnny Hekker",
@@ -42128,6 +42107,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jim-harbaugh-blames-justin-herberts-rough-start-to-desperation-time",
+      "source_name": "Pro Football Talk",
+      "headline": "Jim Harbaugh blames Justin Herbert's rough start to \"desperation time\"",
+      "published_at": "2026-10-13T01:31:59.000Z",
+      "observed_at": "2026-10-13T01:40:22.452Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "retirement",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
