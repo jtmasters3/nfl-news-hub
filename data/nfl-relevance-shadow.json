@@ -2,67 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/a-hit-from-the-texans-popped-joe-burrows-rib-back-into-place",
-      "source_name": "Pro Football Talk",
-      "headline": "A hit from the Texans popped Joe Burrow's rib back into place",
-      "published_at": "2026-09-22T21:24:56.000Z",
-      "observed_at": "2026-09-22T21:30:28.158Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CIN",
-        "HOU"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/hall-of-famer-adam-vinatieri-kicks-world-record-field-goal-in-swiss-alps",
-      "source_name": "NFL.com",
-      "headline": "Hall of Famer Adam Vinatieri kicks world record field goal in Swiss Alps",
-      "published_at": "2026-09-22T10:03:32.000Z",
-      "observed_at": "2026-09-22T22:10:18.844Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-rico-dowdle-day-to-day-with-toe-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Rico Dowdle day-to-day with toe injury",
-      "published_at": "2026-09-22T22:03:21.000Z",
-      "observed_at": "2026-09-22T22:10:18.844Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE",
-        "PIT"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-add-p-johnny-hekker-rb-jaret-patterson-to-practice-squad",
       "source_name": "Pro Football Talk",
       "headline": "Vikings add P Johnny Hekker, RB Jaret Patterson to practice squad",
@@ -42113,6 +42052,65 @@
       "confidence": "high",
       "detected_teams": [
         "BUF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/puka-nacuas-touchdown-gives-rams-a-20-19-lead",
+      "source_name": "Pro Football Talk",
+      "headline": "Puka Nacua's touchdown gives Rams a 20-19 lead",
+      "published_at": "2026-10-13T02:47:29.000Z",
+      "observed_at": "2026-10-13T02:50:19.537Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/teams-should-record-and-save-all-headset-communications",
+      "source_name": "Pro Football Talk",
+      "headline": "Teams should record and save all headset communications",
+      "published_at": "2026-10-13T02:43:22.000Z",
+      "observed_at": "2026-10-13T02:50:19.537Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cardinals-will-discuss-making-carson-beck-active-on-game-day",
+      "source_name": "Pro Football Talk",
+      "headline": "Cardinals will discuss making Carson Beck active on game day",
+      "published_at": "2026-10-13T02:39:01.000Z",
+      "observed_at": "2026-10-13T02:50:19.537Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
