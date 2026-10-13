@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ryan-clark-espn-chose-to-humiliate-me",
-      "source_name": "Pro Football Talk",
-      "headline": "Ryan Clark: ESPN chose to \"humiliate me\"",
-      "published_at": "2026-09-23T15:31:28.000Z",
-      "observed_at": "2026-09-23T15:50:21.600Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-will-place-alec-pierce-on-injured-reserve",
       "source_name": "Pro Football Talk",
       "headline": "Colts will place Alec Pierce on injured reserve",
@@ -42157,6 +42140,28 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-move-on-from-k-harrison-mevis-sign-k-blake-grupe",
+      "source_name": "Pro Football Talk",
+      "headline": "Rams move on from K Harrison Mevis, sign K Blake Grupe",
+      "published_at": "2026-10-13T17:33:39.000Z",
+      "observed_at": "2026-10-13T17:40:19.936Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:roster_move"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
