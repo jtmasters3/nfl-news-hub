@@ -2,62 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/mahomes-mountain-week-3-josh-allen-takes-over-top-spot",
-      "source_name": "FOX Sports",
-      "headline": "Mahomes Mountain Week 3: Josh Allen Takes Over The Top Spot",
-      "published_at": "2026-09-22T23:15:13.000Z",
-      "observed_at": "2026-09-22T23:30:24.591Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/herd-hierarchy-bills-nfls-best-team-do-seahawks-remain-no-1",
-      "source_name": "FOX Sports",
-      "headline": "Herd Hierarchy: Are The Bills The NFL's Best Team, Or Do Seahawks Remain No. 1?",
-      "published_at": "2026-09-22T23:08:20.000Z",
-      "observed_at": "2026-09-22T23:30:24.591Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/adam-vinatieri-sets-guinness-world-record-for-the-highest-fg",
-      "source_name": "Pro Football Talk",
-      "headline": "Adam Vinatieri sets Guinness World Record for the highest FG",
-      "published_at": "2026-09-22T23:41:58.000Z",
-      "observed_at": "2026-09-22T23:50:19.841Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-chiefs-generated-24-3-million-viewers-on-average",
       "source_name": "Pro Football Talk",
       "headline": "Colts-Chiefs generated 24.3 million viewers, on average",
@@ -42110,6 +42054,71 @@
         "SF",
         "SEA",
         "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/josh-allen-superman-3-takeaways-from-bills-overtime-thrilling-win-vs-rams",
+      "source_name": "FOX Sports",
+      "headline": "Josh Allen Is Superman: 3 Takeaways From Bills' Overtime Thrilling Win vs. Rams",
+      "published_at": "2026-10-13T04:07:20.000Z",
+      "observed_at": "2026-10-13T04:10:22.564Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-allens-100th-win-is-also-his-first-ever-in-overtime",
+      "source_name": "Pro Football Talk",
+      "headline": "Josh Allen's 100th win is also his first ever in overtime",
+      "published_at": "2026-10-13T04:02:47.000Z",
+      "observed_at": "2026-10-13T04:10:22.564Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/monday-night-football-bills-beat-rams-37-34-in-overtime-in-instant-classic",
+      "source_name": "Pro Football Talk",
+      "headline": "Monday Night Football: Bills beat Rams 37-34 in overtime in instant classic",
+      "published_at": "2026-10-13T03:58:23.000Z",
+      "observed_at": "2026-10-13T04:10:22.564Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "LAR"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
