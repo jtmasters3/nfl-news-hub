@@ -2,46 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jonathan-owens-simone-biles-had-their-porsche-stolen-in-chicago-by-three-men-in-masks",
-      "source_name": "Pro Football Talk",
-      "headline": "Jonathan Owens, Simone Biles had their Porsche stolen in Chicago by \"three men in masks\"",
-      "published_at": "2026-09-23T00:59:04.000Z",
-      "observed_at": "2026-09-23T01:10:20.199Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "IND"
-      ],
-      "detected_category": "free_agency",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:free_agency"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/qb-notebook-aaron-rodgers-failing-beyond-physical-ability-relax-baker-mayfield",
-      "source_name": "FOX Sports",
-      "headline": "QB Notebook: Aaron Rodgers Failing Beyond Physical Ability; Relax, Baker Mayfield",
-      "published_at": "2026-09-23T01:16:05.000Z",
-      "observed_at": "2026-09-23T01:20:17.555Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/nfl-catchup-jaxson-darts-knee-injury-worse-than-first-believed-out-extended-time",
       "source_name": "FOX Sports",
       "headline": "NFL Catchup: Jaxson Dart Facing Extended Absence, Bears' Tyson Bagent In Protocol",
@@ -42128,6 +42088,51 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/rams-sean-mcvay-fuming-over-special-teams-errors-it-cost-us-the-game-tonight",
+      "source_name": "NFL.com",
+      "headline": "Rams' Sean McVay fuming over special teams errors: 'It cost us the game tonight'",
+      "published_at": "2026-10-13T11:32:26.000Z",
+      "observed_at": "2026-10-13T11:40:22.809Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "LAC",
+        "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-allen-trusting-our-guys-to-be-pros-while-staying-west-on-a-short-week",
+      "source_name": "Pro Football Talk",
+      "headline": "Josh Allen \"trusting our guys to be pros\" while staying West on a short week",
+      "published_at": "2026-10-13T11:28:17.000Z",
+      "observed_at": "2026-10-13T11:40:22.809Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
