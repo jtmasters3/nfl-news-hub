@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-wednesday-sept-23",
-      "source_name": "NFL.com",
-      "headline": "NFL news roundup: Latest league updates from Wednesday, Sept. 23",
-      "published_at": "2026-09-23T03:36:47.000Z",
-      "observed_at": "2026-09-23T15:40:24.074Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kevin-stefanski-tua-tagovailoa-trending-in-the-right-direction-to-be-qb2-on-thursday",
       "source_name": "Pro Football Talk",
       "headline": "Kevin Stefanski: Tua Tagovailoa \"trending in the right direction\" to be QB2 on Thursday",
@@ -42143,6 +42126,27 @@
       "headline": "Will Campbell is week-to-week after tests show he avoided a major knee injury",
       "published_at": "2026-10-13T16:46:34.000Z",
       "observed_at": "2026-10-13T17:00:26.207Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/treveyon-henderson-injury-patriots-running-backs",
+      "source_name": "FOX Sports",
+      "headline": "What We Know About Patriots RB TreVeyon Henderson's Ankle Injury",
+      "published_at": "2026-10-13T17:02:53.000Z",
+      "observed_at": "2026-10-13T17:20:18.359Z",
       "decision": "keep",
       "classification": "nfl",
       "confidence": "high",
