@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/players-of-the-week-2026-week-2-josh-allen-brock-purdy",
-      "source_name": "NFL.com",
-      "headline": "Bills QB Josh Allen, 49ers QB Brock Purdy highlight Players of the Week",
-      "published_at": "2026-09-23T04:00:10.000Z",
-      "observed_at": "2026-09-23T16:10:31.328Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-allen-is-the-afc-offensive-player-of-the-week-for-the-19th-time",
       "source_name": "Pro Football Talk",
       "headline": "Josh Allen is the AFC offensive player of the week for the 19th time",
@@ -42163,6 +42141,33 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/rams-releasing-kicker-harrison-mevis-signing-k-blake-grupe-off-jets-practice-squad",
+      "source_name": "NFL.com",
+      "headline": "NFL Network: Rams releasing kicker Harrison Mevis, signing K Blake Grupe off Jets' practice squad",
+      "published_at": "2026-10-13T05:49:00.000Z",
+      "observed_at": "2026-10-13T18:00:28.453Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "LAC",
+        "LAR",
+        "NYG",
+        "NYJ"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
