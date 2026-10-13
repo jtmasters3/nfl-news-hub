@@ -2,30 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/college-football/favorite-dogs-back-ole-miss-over-florida-jets-over-lions",
-      "source_name": "FOX Sports",
-      "headline": "Favorite 'Dogs: Back Ole Miss Over Florida; Jets Over Lions",
-      "published_at": "2026-09-23T18:28:48.000Z",
-      "observed_at": "2026-09-23T18:40:21.859Z",
-      "decision": "keep",
-      "classification": "nfl_with_college_context",
-      "confidence": "high",
-      "detected_teams": [
-        "DET",
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [
-        "conference_sec"
-      ],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lions-sign-c-seth-mclaughlin-to-53-man-roster",
       "source_name": "Pro Football Talk",
       "headline": "Lions sign C Seth McLaughlin to 53-man roster",
@@ -42190,6 +42166,27 @@
         "LAC"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/its-official-rams-lt-alaric-jackson-suspended-two-games",
+      "source_name": "Pro Football Talk",
+      "headline": "It's official: Rams LT Alaric Jackson suspended two games",
+      "published_at": "2026-10-13T23:30:53.000Z",
+      "observed_at": "2026-10-13T23:40:17.384Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR"
+      ],
+      "detected_category": "suspension",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
