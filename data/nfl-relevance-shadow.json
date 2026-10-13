@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/caleb-williams-memes-funny-his-injury-reaction-totally-justified",
-      "source_name": "FOX Sports",
-      "headline": "The Caleb Williams Memes Are Funny, But His Injury Reaction Was Totally Justified",
-      "published_at": "2026-09-23T00:50:42.000Z",
-      "observed_at": "2026-09-23T01:00:31.774Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/let-caleb-williams-cry-his-authenticity-sensitivity-make-him-superstar",
       "source_name": "FOX Sports",
       "headline": "Let Caleb Williams Cry. His Authenticity And Sensitivity Make Him A Superstar.",
@@ -42123,6 +42106,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-alaric-jackson-punched-bills-bradley-chubb-after-game",
+      "source_name": "Pro Football Talk",
+      "headline": "Rams' Alaric Jackson punched Bills' Bradley Chubb after game",
+      "published_at": "2026-10-13T08:56:41.000Z",
+      "observed_at": "2026-10-13T09:10:19.923Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
