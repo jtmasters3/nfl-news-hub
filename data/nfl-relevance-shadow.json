@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/john-harbaugh-gets-another-chance-to-consider-colin-kaepernick",
-      "source_name": "Pro Football Talk",
-      "headline": "John Harbaugh gets another chance to consider Colin Kaepernick",
-      "published_at": "2026-09-23T13:42:08.000Z",
-      "observed_at": "2026-09-23T13:50:21.602Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/michael-penix-jr-set-to-return-to-the-field-for-falcons-i-m-where-i-want-to-be",
       "source_name": "NFL.com",
       "headline": "Michael Penix Jr. set to return to the field for Falcons: 'I'm where I want to be'",
@@ -42129,6 +42112,28 @@
       "confidence": "high",
       "detected_teams": [
         "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jerry-jones-on-dak-prescotts-postgame-interaction-with-driver-fans-can-express-themselves",
+      "source_name": "Pro Football Talk",
+      "headline": "Jerry Jones on Dak Prescott's postgame interaction with driver: Fans can express themselves",
+      "published_at": "2026-10-13T14:46:46.000Z",
+      "observed_at": "2026-10-13T14:50:21.342Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "TB"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
