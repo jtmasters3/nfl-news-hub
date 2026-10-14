@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-macdonald-i-apologized-to-sean-payton-comments-werent-intended-for-public-use",
-      "source_name": "Pro Football Talk",
-      "headline": "Mike Macdonald: I apologized to Sean Payton, comments weren't intended for public use",
-      "published_at": "2026-09-23T19:40:36.000Z",
-      "observed_at": "2026-09-23T19:50:21.845Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN",
-        "SEA"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dolphins-de-chop-robinson-returns-to-practice",
       "source_name": "Pro Football Talk",
       "headline": "Dolphins DE Chop Robinson returns to practice",
@@ -42169,6 +42147,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/drew-rosenhaus-still-claims-a-tyreek-hill-deal-could-happen-at-any-time",
+      "source_name": "Pro Football Talk",
+      "headline": "Drew Rosenhaus still claims a Tyreek Hill deal \"could happen at any time\"",
+      "published_at": "2026-10-14T09:58:54.000Z",
+      "observed_at": "2026-10-14T10:00:33.349Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
