@@ -2,62 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-people-around-nfl-reacting-young-qb-injuries-holy-s-what-going-on",
-      "source_name": "FOX Sports",
-      "headline": "How People Around NFL Are Reacting To Young QB Injuries: 'Holy S---! What Is Going On?'",
-      "published_at": "2026-09-24T16:22:43.000Z",
-      "observed_at": "2026-09-24T16:30:25.498Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/john-lynch-on-mac-jones-qb-is-a-good-spot-to-be-well-insulated",
-      "source_name": "Pro Football Talk",
-      "headline": "John Lynch on Mac Jones: QB is a good spot to be well insulated",
-      "published_at": "2026-09-24T16:29:35.000Z",
-      "observed_at": "2026-09-24T16:40:22.230Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG",
-        "WAS"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kyle-juszczyk-fined-for-offensive-demonstration-for-imitation-of-chugging-a-beer",
-      "source_name": "Pro Football Talk",
-      "headline": "Kyle Juszczyk fined for offensive demonstration for \"imitation of chugging a beer\"",
-      "published_at": "2026-09-24T16:45:46.000Z",
-      "observed_at": "2026-09-24T16:50:21.172Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/judge-denies-request-to-permanently-seal-evidence-in-josh-jacobs-case",
       "source_name": "Pro Football Talk",
       "headline": "Judge denies request to permanently seal evidence in Josh Jacobs case",
@@ -42135,6 +42079,67 @@
         "PIT"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/marvin-harrison-jr-a-lot-of-factors-why-it-didnt-work-in-arizona-just-looking-forward-now",
+      "source_name": "Pro Football Talk",
+      "headline": "Marvin Harrison Jr.: A lot of factors why it didn't work in Arizona, just looking forward now",
+      "published_at": "2026-10-14T20:15:25.000Z",
+      "observed_at": "2026-10-14T20:20:19.781Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI"
+      ],
+      "detected_category": "draft",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:draft"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-tomlins-interpretation-of-players-only-meetings-i-think-youre-dead",
+      "source_name": "Pro Football Talk",
+      "headline": "Mike Tomlin's interpretation of players-only meetings: \"I think you're dead\"",
+      "published_at": "2026-10-14T20:14:55.000Z",
+      "observed_at": "2026-10-14T20:20:19.781Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/klint-kubiak-ashton-jeanty-will-play-sunday",
+      "source_name": "Pro Football Talk",
+      "headline": "Klint Kubiak: Ashton Jeanty will play Sunday",
+      "published_at": "2026-10-14T20:14:37.000Z",
+      "observed_at": "2026-10-14T20:20:19.781Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "LV"
+      ],
+      "detected_category": "coaching",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
