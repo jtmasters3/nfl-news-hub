@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jonah-coleman-out-of-broncos-practice-j-k-dobbins-rj-harvey-limited",
-      "source_name": "Pro Football Talk",
-      "headline": "Jonah Coleman out of Broncos practice; J.K. Dobbins, RJ Harvey limited",
-      "published_at": "2026-09-23T22:40:32.000Z",
-      "observed_at": "2026-09-23T22:50:19.562Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/travis-etienne-chase-young-limited-in-saints-practice",
       "source_name": "Pro Football Talk",
       "headline": "Travis Etienne, Chase Young limited in Saints practice",
@@ -42151,6 +42130,23 @@
       "confidence": "low",
       "detected_teams": [],
       "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/25-most-important-seconds-football-what-qbs-coaches-say-over-headset",
+      "source_name": "FOX Sports",
+      "headline": "The Most Important 25 Seconds In Football: Inside Coach-To-QB Communication",
+      "published_at": "2026-10-14T14:37:32.000Z",
+      "observed_at": "2026-10-14T14:50:21.483Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "coaching",
       "nfl_evidence": [],
       "non_nfl_evidence": [],
       "reason_codes": [
