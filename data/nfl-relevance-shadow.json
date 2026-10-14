@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brock-bowers-to-practice-wednesday-team-will-monitor-him-throughout-the-week",
-      "source_name": "Pro Football Talk",
-      "headline": "Brock Bowers to practice Wednesday, team will monitor him throughout the week",
-      "published_at": "2026-09-23T18:53:27.000Z",
-      "observed_at": "2026-09-23T19:00:27.695Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV",
-        "NO"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chargers-to-sign-marquez-valdes-scantling-to-active-roster",
       "source_name": "Pro Football Talk",
       "headline": "Chargers to sign Marquez Valdes-Scantling to active roster",
@@ -42179,6 +42157,23 @@
       "headline": "Jury returns mixed verdict in Tyreek Hill civil battery case, awards $500,000 to ex-wife",
       "published_at": "2026-10-14T00:51:46.000Z",
       "observed_at": "2026-10-14T01:00:25.820Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-has-been-monitoring-developments-in-tyreek-hill-case",
+      "source_name": "Pro Football Talk",
+      "headline": "NFL has been \"monitoring developments\" in Tyreek Hill case",
+      "published_at": "2026-10-14T01:04:30.000Z",
+      "observed_at": "2026-10-14T01:10:22.363Z",
       "decision": "keep",
       "classification": "ambiguous",
       "confidence": "low",
