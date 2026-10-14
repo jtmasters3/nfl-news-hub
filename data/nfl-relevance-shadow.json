@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/can-falcons-finally-get-te-kyle-pitts-going-on-thursday-night-football-vs-packers",
-      "source_name": "NFL.com",
-      "headline": "Can Falcons finally get TE Kyle Pitts going on 'Thursday Night Football' vs. Packers?",
-      "published_at": "2026-09-24T10:16:05.000Z",
-      "observed_at": "2026-09-24T12:20:23.973Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/seahawks-mike-macdonald-broncos-sean-payton-squash-beef-after-cold-war-video",
       "source_name": "NFL.com",
       "headline": "Seahawks' Mike Macdonald, Broncos' Sean Payton squash beef after 'Cold War' video",
@@ -42148,6 +42126,27 @@
         "NYJ"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patriots-open-a-j-browns-21-day-window-christian-gonzalez-will-practice-wednesday",
+      "source_name": "Pro Football Talk",
+      "headline": "Patriots open A.J. Brown's 21-day window, Christian Gonzalez will practice Wednesday",
+      "published_at": "2026-10-14T17:15:14.000Z",
+      "observed_at": "2026-10-14T17:20:23.126Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
