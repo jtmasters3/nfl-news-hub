@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-mcvay-well-err-on-the-side-of-caution-with-puka-nacua",
-      "source_name": "Pro Football Talk",
-      "headline": "Sean McVay: We'll err on the side of caution with Puka Nacua",
-      "published_at": "2026-09-23T22:26:53.000Z",
-      "observed_at": "2026-09-23T22:30:25.696Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN",
-        "LAR"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jonah-coleman-out-of-broncos-practice-j-k-dobbins-rj-harvey-limited",
       "source_name": "Pro Football Talk",
       "headline": "Jonah Coleman out of Broncos practice; J.K. Dobbins, RJ Harvey limited",
@@ -42160,6 +42138,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-how-to-watch-week-6-nfl-games-schedule-london-game-details-and-more",
+      "source_name": "NFL.com",
+      "headline": "NFL+: How to watch Week 6 NFL games, schedule, London game details, and more",
+      "published_at": "2026-10-14T02:32:41.000Z",
+      "observed_at": "2026-10-14T14:40:19.041Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
