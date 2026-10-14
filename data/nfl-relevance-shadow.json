@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dolphins-de-chop-robinson-returns-to-practice",
-      "source_name": "Pro Football Talk",
-      "headline": "Dolphins DE Chop Robinson returns to practice",
-      "published_at": "2026-09-23T19:38:03.000Z",
-      "observed_at": "2026-09-23T19:50:21.845Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-announce-signing-of-naquan-jones-placement-of-c-j-west-on-ir",
       "source_name": "Pro Football Talk",
       "headline": "49ers announce signing of Naquan Jones, placement of C.J. West on IR",
@@ -42164,6 +42143,30 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jets-worked-out-matthew-judon",
+      "source_name": "Pro Football Talk",
+      "headline": "Jets worked out Matthew Judon",
+      "published_at": "2026-10-14T10:13:11.000Z",
+      "observed_at": "2026-10-14T10:20:22.975Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYJ",
+        "SF"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
