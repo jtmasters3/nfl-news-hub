@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bills-wr-dj-moore-shoulder-was-limited-wr-keon-coleman-ankle-did-not-practice",
-      "source_name": "Pro Football Talk",
-      "headline": "Bills WR DJ Moore (shoulder) was limited; WR Keon Coleman (ankle) did not practice",
-      "published_at": "2026-09-23T23:54:19.000Z",
-      "observed_at": "2026-09-24T00:10:19.373Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "DET"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/j-j-mccarthy-mac-jones-jimmy-garoppolo-and-4-other-qbs-who-could-help-teams-in-need",
       "source_name": "NFL.com",
       "headline": "J.J. McCarthy, Mac Jones, Jimmy Garoppolo and 4 other QBs who could help teams in need",
@@ -42143,6 +42121,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/micah-parsons-i-want-to-make-sure-all-the-small-things-are-fixed-before-returning",
+      "source_name": "Pro Football Talk",
+      "headline": "Micah Parsons: I want to make sure all the small things are fixed before returning",
+      "published_at": "2026-10-14T15:55:47.000Z",
+      "observed_at": "2026-10-14T16:00:25.645Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
