@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sam-darnold-wont-take-every-rep-wednesday-will-ramp-up-over-course-of-the-week",
-      "source_name": "Pro Football Talk",
-      "headline": "Sam Darnold \"won't take every rep\" Wednesday, will ramp up over course of the week",
-      "published_at": "2026-09-23T19:30:49.000Z",
-      "observed_at": "2026-09-23T19:40:22.309Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/devin-lloyd-jaelan-phillips-out-of-practice-for-panthers",
       "source_name": "Pro Football Talk",
       "headline": "Devin Lloyd, Jaelan Phillips out of practice for Panthers",
@@ -42172,6 +42151,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-campbell-says-pass-protection-shows-why-jahmyr-gibbs-is-different-from-other-backs",
+      "source_name": "Pro Football Talk",
+      "headline": "Dan Campbell says pass protection shows why Jahmyr Gibbs is different from other backs",
+      "published_at": "2026-10-14T08:24:45.000Z",
+      "observed_at": "2026-10-14T08:30:24.849Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
