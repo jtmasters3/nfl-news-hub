@@ -2,70 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rueben-bain-misses-practice-wednesday",
-      "source_name": "Pro Football Talk",
-      "headline": "Rueben Bain misses practice Wednesday",
-      "published_at": "2026-09-23T21:49:02.000Z",
-      "observed_at": "2026-09-23T22:00:32.846Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaxson-dart-could-return-for-the-postseason-if-the-giants-qualify",
-      "source_name": "Pro Football Talk",
-      "headline": "Jaxson Dart could return for the postseason, if the Giants qualify",
-      "published_at": "2026-09-23T22:06:54.000Z",
-      "observed_at": "2026-09-23T22:10:19.751Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/knee-injury-keeps-aaron-jones-out-of-practice-for-vikings",
-      "source_name": "Pro Football Talk",
-      "headline": "Knee injury keeps Aaron Jones out of practice for Vikings",
-      "published_at": "2026-09-23T21:59:13.000Z",
-      "observed_at": "2026-09-23T22:10:19.751Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "MIN"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-mcvay-well-err-on-the-side-of-caution-with-puka-nacua",
       "source_name": "Pro Football Talk",
       "headline": "Sean McVay: We'll err on the side of caution with Puka Nacua",
@@ -42156,6 +42092,66 @@
       "confidence": "high",
       "detected_teams": [
         "DAL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/qb-notebook-whats-going-on-with-sam-darnold-inside-justin-herberts-worst-season",
+      "source_name": "FOX Sports",
+      "headline": "QB Notebook: What's Going On With Sam Darnold; Inside Justin Herbert's Worst Season",
+      "published_at": "2026-10-14T14:16:49.000Z",
+      "observed_at": "2026-10-14T14:30:24.107Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/saints-owner-comments-gayle-benson-kellen-moore-new-orleans-schedule",
+      "source_name": "FOX Sports",
+      "headline": "Saints Owner Gayle Benson Explains Why She Will 'Not Accept' Team's Slow Start",
+      "published_at": "2026-10-14T14:16:18.000Z",
+      "observed_at": "2026-10-14T14:30:24.107Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NO"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-nfl-considers-flexing-eagles-commanders-out-of-prime-time",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: NFL considers flexing Eagles-Commanders out of prime time",
+      "published_at": "2026-10-14T14:16:31.000Z",
+      "observed_at": "2026-10-14T14:30:24.107Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI",
+        "WAS"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
