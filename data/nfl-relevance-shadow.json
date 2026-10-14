@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/how-the-vikings-dl-culture-is-fueling-early-2026-success-enter-young-nasty-university",
-      "source_name": "NFL.com",
-      "headline": "How the Vikings' DL culture is fueling early 2026 success: Enter 'Young Nasty University'",
-      "published_at": "2026-09-24T10:16:05.000Z",
-      "observed_at": "2026-09-24T15:20:24.817Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/pfts-week-3-2026-nfl-picks",
       "source_name": "Pro Football Talk",
       "headline": "PFT's Week 3 2026 NFL picks",
@@ -42132,6 +42111,28 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cardinals-designate-s-kitan-crawford-for-return-sign-te-shawn-bowman-to-active-roster",
+      "source_name": "Pro Football Talk",
+      "headline": "Cardinals designate S Kitan Crawford for return, sign TE Shawn Bowman to active roster",
+      "published_at": "2026-10-14T19:09:49.000Z",
+      "observed_at": "2026-10-14T19:20:24.012Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:roster_move"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
