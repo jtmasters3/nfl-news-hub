@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-thursday-sept-24",
-      "source_name": "NFL.com",
-      "headline": "NFL news roundup: Latest league updates from Thursday, Sept. 24",
-      "published_at": "2026-09-24T07:33:29.000Z",
-      "observed_at": "2026-09-24T19:40:19.064Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/malik-nabers-good-results-on-shoulder-x-ray-ill-be-fine",
-      "source_name": "Pro Football Talk",
-      "headline": "Malik Nabers: Good results on shoulder X-ray, I'll be fine",
-      "published_at": "2026-09-24T19:36:28.000Z",
-      "observed_at": "2026-09-24T19:40:19.064Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR",
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-g-matt-goncalves-was-also-fined-for-beer-related-celebration",
       "source_name": "Pro Football Talk",
       "headline": "Colts G Matt Goncalves was also fined for beer-related celebration",
@@ -42133,6 +42094,48 @@
         "HOU"
       ],
       "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/michael-penix-fully-participated-in-wednesdays-practice",
+      "source_name": "Pro Football Talk",
+      "headline": "Michael Penix fully participated in Wednesday's practice",
+      "published_at": "2026-10-14T21:45:26.000Z",
+      "observed_at": "2026-10-14T21:50:22.275Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lamar-jackson-officially-dnp-s-kyle-hamilton-fully-participated-wednesday",
+      "source_name": "Pro Football Talk",
+      "headline": "Lamar Jackson officially DNP; S Kyle Hamilton fully participated Wednesday",
+      "published_at": "2026-10-14T21:35:54.000Z",
+      "observed_at": "2026-10-14T21:50:22.275Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
