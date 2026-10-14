@@ -2,52 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/trinidad-chambliss-best-qb-college-football-whats-his-nfl-draft-ceiling",
-      "source_name": "FOX Sports",
-      "headline": "Trinidad Chambliss Is The Best QB In College Football. What's His NFL Draft Ceiling?",
-      "published_at": "2026-09-24T12:00:07.000Z",
-      "observed_at": "2026-09-24T12:20:23.973Z",
-      "decision": "keep",
-      "classification": "nfl_with_college_context",
-      "confidence": "high",
-      "detected_teams": [],
-      "detected_category": "draft",
-      "nfl_evidence": [
-        "phrase_nfl_draft",
-        "nfl_preserving_category:draft"
-      ],
-      "non_nfl_evidence": [
-        "college_football_phrase"
-      ],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kyle-hamilton-think-we-have-a-great-plan-to-keep-brazil-travel-from-hindering-us",
-      "source_name": "Pro Football Talk",
-      "headline": "Kyle Hamilton: Think we have a great plan to keep Brazil travel from hindering us",
-      "published_at": "2026-09-24T12:37:29.000Z",
-      "observed_at": "2026-09-24T12:50:23.627Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "DAL",
-        "LAR",
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/giants-jameis-winston-starting-qb-jaxson-dart-injury-dream",
       "source_name": "NFL.com",
       "headline": "Giants' Jameis Winston returns to starting QB role after Jaxson Dart injury: 'This is what I dream of'",
@@ -42153,6 +42107,48 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/baker-mayfield-getting-better-will-test-thumb-with-wednesday-throwing-session",
+      "source_name": "Pro Football Talk",
+      "headline": "Baker Mayfield \"getting better,\" will test thumb with Wednesday throwing session",
+      "published_at": "2026-10-14T18:00:27.000Z",
+      "observed_at": "2026-10-14T18:10:19.415Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "TB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brian-schottenheimer-no-question-christian-parker-is-the-right-guy-to-run-defense",
+      "source_name": "Pro Football Talk",
+      "headline": "Brian Schottenheimer: No question Christian Parker is the right guy to run defense",
+      "published_at": "2026-10-14T17:59:54.000Z",
+      "observed_at": "2026-10-14T18:10:19.415Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
