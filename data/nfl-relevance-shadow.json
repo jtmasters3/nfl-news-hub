@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/giants-rams-on-monday-night-averaged-19-4-million-viewers",
-      "source_name": "Pro Football Talk",
-      "headline": "Giants-Rams on Monday night averaged 19.4 million viewers",
-      "published_at": "2026-09-24T15:10:37.000Z",
-      "observed_at": "2026-09-24T15:20:24.817Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR",
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/cardinals-qb-jacoby-brissett-defends-marvin-harrison-jr-amid-criticism-of-slow-start",
       "source_name": "NFL.com",
       "headline": "Cardinals QB Jacoby Brissett defends Marvin Harrison Jr. amid criticism of slow start",
@@ -42135,6 +42113,27 @@
         "BUF"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lamar-jackson-remains-out-of-practice-wednesday",
+      "source_name": "Pro Football Talk",
+      "headline": "Lamar Jackson remains out of practice Wednesday",
+      "published_at": "2026-10-14T19:37:07.000Z",
+      "observed_at": "2026-10-14T19:50:20.071Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
