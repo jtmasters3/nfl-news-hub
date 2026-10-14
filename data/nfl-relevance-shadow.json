@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/travis-etienne-chase-young-limited-in-saints-practice",
-      "source_name": "Pro Football Talk",
-      "headline": "Travis Etienne, Chase Young limited in Saints practice",
-      "published_at": "2026-09-23T22:49:29.000Z",
-      "observed_at": "2026-09-23T23:00:30.145Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV",
-        "NO"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/john-harbaugh-keeping-all-options-open-qb-replace-injured-jaxson-dart",
       "source_name": "FOX Sports",
       "headline": "John Harbaugh: Giants Keeping All Options Open At QB To Replace Injured Jaxson Dart",
@@ -42147,6 +42125,23 @@
       "confidence": "low",
       "detected_teams": [],
       "detected_category": "coaching",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-wednesday-oct-14",
+      "source_name": "NFL.com",
+      "headline": "NFL news roundup: Latest league updates from Wednesday, Oct. 14",
+      "published_at": "2026-10-14T02:54:15.000Z",
+      "observed_at": "2026-10-14T15:00:32.377Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
       "nfl_evidence": [],
       "non_nfl_evidence": [],
       "reason_codes": [
