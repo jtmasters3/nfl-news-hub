@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/seahawks-sign-rodney-thomas-to-53-place-anthony-bradford-on-ir",
-      "source_name": "Pro Football Talk",
-      "headline": "Seahawks sign Rodney Thomas to 53, place Anthony Bradford on IR",
-      "published_at": "2026-09-23T19:21:27.000Z",
-      "observed_at": "2026-09-23T19:30:23.657Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/case-keenum-caleb-williams-tyson-bagent-injury-update-bears-quarterbacks",
       "source_name": "FOX Sports",
       "headline": "Case Keenum Practices For Bears Amid Caleb Williams, Tyson Bagent Uncertainty",
@@ -42168,6 +42147,23 @@
       "headline": "Joe Brady wishes he'd taken two knees before Monday night's game-winning field goal",
       "published_at": "2026-10-14T02:06:27.000Z",
       "observed_at": "2026-10-14T02:10:26.274Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bo-nix-playing-good-and-playing-bad-its-a-narrative-and-something-made-up",
+      "source_name": "Pro Football Talk",
+      "headline": "Bo Nix: Playing good and playing bad, it’s a narrative and something made up",
+      "published_at": "2026-10-14T02:42:03.000Z",
+      "observed_at": "2026-10-14T02:50:20.215Z",
       "decision": "keep",
       "classification": "ambiguous",
       "confidence": "low",
