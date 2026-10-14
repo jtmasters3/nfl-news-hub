@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bills-dt-t-j-sanders-underwent-appendectomy",
-      "source_name": "Pro Football Talk",
-      "headline": "Bills DT T.J. Sanders underwent appendectomy",
-      "published_at": "2026-09-23T18:39:58.000Z",
-      "observed_at": "2026-09-23T18:50:29.897Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brock-bowers-to-practice-wednesday-team-will-monitor-him-throughout-the-week",
       "source_name": "Pro Football Talk",
       "headline": "Brock Bowers to practice Wednesday, team will monitor him throughout the week",
@@ -42192,6 +42171,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jury-returns-mixed-verdict-in-tyreek-hill-civil-battery-case-awards-500-000-to-ex-wife",
+      "source_name": "Pro Football Talk",
+      "headline": "Jury returns mixed verdict in Tyreek Hill civil battery case, awards $500,000 to ex-wife",
+      "published_at": "2026-10-14T00:51:46.000Z",
+      "observed_at": "2026-10-14T01:00:25.820Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
