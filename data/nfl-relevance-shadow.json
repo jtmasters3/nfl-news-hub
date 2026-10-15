@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bijan-robinsons-td-has-falcons-tied-7-7-with-packers",
-      "source_name": "Pro Football Talk",
-      "headline": "Bijan Robinson's TD has Falcons tied 7-7 with Packers",
-      "published_at": "2026-09-25T00:58:01.000Z",
-      "observed_at": "2026-09-25T01:00:32.630Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/christian-watson-scores-his-fourth-td-of-the-season-giving-green-bay-a-7-0-lead",
       "source_name": "Pro Football Talk",
       "headline": "Christian Watson scores his fourth TD of the season, giving Green Bay a 7-0 lead",
@@ -42138,6 +42116,28 @@
         "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/2027-nfl-draft-top-10-senior-bowl-prospects-at-midway-point-of-college-football-season",
+      "source_name": "NFL.com",
+      "headline": "2027 NFL Draft: Top 10 Senior Bowl prospects at midway point of college football season",
+      "published_at": "2026-10-15T01:23:00.000Z",
+      "observed_at": "2026-10-15T13:30:25.932Z",
+      "decision": "keep",
+      "classification": "nfl_with_college_context",
+      "confidence": "high",
+      "detected_teams": [],
+      "detected_category": "draft",
+      "nfl_evidence": [
+        "phrase_nfl_draft",
+        "nfl_preserving_category:draft"
+      ],
+      "non_nfl_evidence": [
+        "college_football_phrase"
+      ],
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
