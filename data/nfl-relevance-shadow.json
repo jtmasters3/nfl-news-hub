@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/derwin-james-rashawn-slater-up-to-full-practices-for-chargers",
-      "source_name": "Pro Football Talk",
-      "headline": "Derwin James, Rashawn Slater up to full practices for Chargers",
-      "published_at": "2026-09-24T21:55:56.000Z",
-      "observed_at": "2026-09-24T22:00:31.013Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jamarr-chase-tee-higgins-fined-for-celebrations-the-league-deemed-obscene",
-      "source_name": "Pro Football Talk",
-      "headline": "Ja'Marr Chase, Tee Higgins fined for celebrations the league deemed obscene",
-      "published_at": "2026-09-24T22:02:28.000Z",
-      "observed_at": "2026-09-24T22:10:21.088Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chase-young-returns-to-full-participation-in-saints-practice",
       "source_name": "Pro Football Talk",
       "headline": "Chase Young returns to full participation in Saints' practice",
@@ -42125,6 +42087,49 @@
         "BUF",
         "CHI",
         "LV"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/2026-super-bowl-odds",
+      "source_name": "FOX Sports",
+      "headline": "2026 Super Bowl Odds: Rams Have Company At Top After Loss To Bills",
+      "published_at": "2026-10-13T04:19:59.000Z",
+      "observed_at": "2026-10-15T01:20:19.558Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/four-men-arrested-in-shooting-of-49ers-dl-keion-white-in-february",
+      "source_name": "Pro Football Talk",
+      "headline": "Four men arrested in shooting of 49ers DL Keion White in February",
+      "published_at": "2026-10-15T01:09:03.000Z",
+      "observed_at": "2026-10-15T01:20:19.558Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
