@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/seahawks-sam-darnold-a-full-participant-at-practice-striving-to-start-vs-commanders",
-      "source_name": "NFL.com",
-      "headline": "Seahawks' Sam Darnold a full participant at practice, 'striving' to start vs. Commanders",
-      "published_at": "2026-09-25T12:46:06.000Z",
-      "observed_at": "2026-09-25T13:40:19.256Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA",
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/wr-brandin-cooks-excited-to-get-a-chance-with-49ers-his-childhood-team",
       "source_name": "NFL.com",
       "headline": "WR Brandin Cooks excited to get a chance with 49ers, his childhood team",
@@ -42121,6 +42099,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lamar-jackson-remains-out-of-practice-on-thursday-for-week-6",
+      "source_name": "Pro Football Talk",
+      "headline": "Lamar Jackson remains out of practice on Thursday for Week 6",
+      "published_at": "2026-10-15T17:20:28.000Z",
+      "observed_at": "2026-10-15T17:30:24.579Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
