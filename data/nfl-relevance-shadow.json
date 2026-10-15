@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/the-patriots-have-started-strong-on-defense-what-s-sustainable-and-what-isn-t",
-      "source_name": "NFL.com",
-      "headline": "The Patriots have started strong on defense. What's sustainable, and what isn't?",
-      "published_at": "2026-09-24T11:16:05.000Z",
-      "observed_at": "2026-09-25T02:30:26.929Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-rolling-taking-a-24-7-lead-on-the-packers",
-      "source_name": "Pro Football Talk",
-      "headline": "Falcons rolling, taking a 24-7 lead on the Packers",
-      "published_at": "2026-09-25T02:28:37.000Z",
-      "observed_at": "2026-09-25T02:30:26.929Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ruling-on-key-sealed-document-in-brian-flores-case-is-also-under-seal-for-now",
       "source_name": "Pro Football Talk",
       "headline": "Ruling on key sealed document in Brian Flores case is also under seal, for now",
@@ -42141,6 +42098,40 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/troy-aikman-seems-to-confirm-hell-be-leaving-espn",
+      "source_name": "Pro Football Talk",
+      "headline": "Troy Aikman seems to confirm he'll be leaving ESPN",
+      "published_at": "2026-10-15T13:55:51.000Z",
+      "observed_at": "2026-10-15T14:00:25.450Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/john-harbaugh-wed-be-negligent-if-we-didnt-see-if-j-j-mccarthy-can-help-us",
+      "source_name": "Pro Football Talk",
+      "headline": "John Harbaugh: We'd be negligent if we didn't see if J.J. McCarthy can help us",
+      "published_at": "2026-10-15T13:50:12.000Z",
+      "observed_at": "2026-10-15T14:00:25.450Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
