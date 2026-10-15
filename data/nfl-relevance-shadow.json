@@ -2,47 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/the-madden-trailer-gets-people-talking-largely-for-the-wrong-reasons",
-      "source_name": "Pro Football Talk",
-      "headline": "The Madden trailer gets people talking, largely for the wrong reasons",
-      "published_at": "2026-09-25T16:44:48.000Z",
-      "observed_at": "2026-09-25T16:50:21.604Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-campbell-jets-hiring-aaron-glenn-was-one-of-the-best-and-worst-days-of-my-life",
-      "source_name": "Pro Football Talk",
-      "headline": "Dan Campbell: Jets hiring Aaron Glenn was one of the best and worst days of my life",
-      "published_at": "2026-09-25T16:53:12.000Z",
-      "observed_at": "2026-09-25T17:00:32.113Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "DET",
-        "NO",
-        "NYJ"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rueben-bain-josiah-trotter-ruled-out-for-buccaneers",
       "source_name": "Pro Football Talk",
       "headline": "Rueben Bain, Josiah Trotter ruled out for Buccaneers",
@@ -42112,6 +42071,49 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ravens-add-zay-flowers-to-injury-report-as-limited-participant",
+      "source_name": "Pro Football Talk",
+      "headline": "Ravens add Zay Flowers to injury report as limited participant",
+      "published_at": "2026-10-15T20:51:05.000Z",
+      "observed_at": "2026-10-15T21:00:29.127Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ravens-falcons-game-without-lamar-jackson-averages-17-million-viewers",
+      "source_name": "Pro Football Talk",
+      "headline": "Ravens-Falcons game without Lamar Jackson averages 17 million viewers",
+      "published_at": "2026-10-15T20:48:49.000Z",
+      "observed_at": "2026-10-15T21:00:29.127Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "BAL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
