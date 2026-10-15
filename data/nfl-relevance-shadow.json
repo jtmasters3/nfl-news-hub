@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/amon-ra-st-brown-says-he-was-fined-nearly-60-000-for-four-smoking-related-celebrations",
-      "source_name": "Pro Football Talk",
-      "headline": "Amon-Ra St. Brown says he was fined nearly $60,000 for four smoking-related celebrations",
-      "published_at": "2026-09-24T22:49:55.000Z",
-      "observed_at": "2026-09-24T23:00:28.133Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/joe-flacco-i-have-no-reason-to-believe-im-getting-traded",
       "source_name": "Pro Football Talk",
       "headline": "Joe Flacco: I have no reason to believe I'm getting traded",
@@ -42137,6 +42120,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaguars-are-first-team-since-the-merger-not-to-allow-a-40-yard-rusher-in-first-five-games",
+      "source_name": "Pro Football Talk",
+      "headline": "Jaguars are first team since the merger not to allow a 40-yard rusher in first five games",
+      "published_at": "2026-10-15T08:10:55.000Z",
+      "observed_at": "2026-10-15T08:20:21.388Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
