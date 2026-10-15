@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/devin-lloyd-out-jalen-coker-questionable-for-panthers",
-      "source_name": "Pro Football Talk",
-      "headline": "Devin Lloyd out, Jalen Coker questionable for Panthers",
-      "published_at": "2026-09-25T16:34:44.000Z",
-      "observed_at": "2026-09-25T16:40:20.478Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/the-madden-trailer-gets-people-talking-largely-for-the-wrong-reasons",
       "source_name": "Pro Football Talk",
       "headline": "The Madden trailer gets people talking, largely for the wrong reasons",
@@ -42116,6 +42095,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-defensive-player-year-odds",
+      "source_name": "FOX Sports",
+      "headline": "2026 NFL DPOY Odds: Favorite Will Anderson Jr. Separating From The Field",
+      "published_at": "2026-10-13T18:56:14.000Z",
+      "observed_at": "2026-10-15T20:50:21.366Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
