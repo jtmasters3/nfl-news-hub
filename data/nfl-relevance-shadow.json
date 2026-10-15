@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nflpa-names-shedeur-sanders-their-community-mvp-for-week-3",
-      "source_name": "Pro Football Talk",
-      "headline": "NFLPA names Shedeur Sanders their Community MVP for Week 3",
-      "published_at": "2026-09-25T15:50:05.000Z",
-      "observed_at": "2026-09-25T16:00:31.456Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_nflpa"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jake-ferguson-gets-a-beer-miming-fine-too",
-      "source_name": "Pro Football Talk",
-      "headline": "Jake Ferguson gets a beer-miming fine, too",
-      "published_at": "2026-09-25T16:04:31.000Z",
-      "observed_at": "2026-09-25T16:10:22.277Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/broncos-jahdae-barron-is-playing-less-an-nfl-personnel-trend-is-one-reason-why",
       "source_name": "NFL.com",
       "headline": "Broncos' Jahdae Barron is playing less. An NFL personnel trend is one reason why",
@@ -42117,6 +42078,44 @@
       "confidence": "low",
       "detected_teams": [],
       "detected_category": "fantasy",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/dc-christian-parker-likely-staying-on-sideline-says-cowboys-issues-very-fixable",
+      "source_name": "NFL.com",
+      "headline": "DC Christian Parker likely staying on sideline, says Cowboys' issues 'very fixable'",
+      "published_at": "2026-10-15T06:16:06.000Z",
+      "observed_at": "2026-10-15T20:20:20.582Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/top-10-nfl-coordinators-ready-become-head-coaches",
+      "source_name": "FOX Sports",
+      "headline": "Top 10 NFL Coordinators Ready To Become Head Coaches",
+      "published_at": "2026-10-15T20:03:15.000Z",
+      "observed_at": "2026-10-15T20:20:20.582Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "coaching",
       "nfl_evidence": [],
       "non_nfl_evidence": [],
       "reason_codes": [
