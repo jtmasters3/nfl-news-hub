@@ -2,48 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/matt-lafleur-on-ugly-loss-to-falcons-it-was-a-butt-whooping",
-      "source_name": "Pro Football Talk",
-      "headline": "Matt LaFleur on ugly loss to Falcons: \"It was a butt-whooping\"",
-      "published_at": "2026-09-25T04:05:18.000Z",
-      "observed_at": "2026-09-25T04:20:20.516Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tucker-kraft-disappointing-that-fans-booed-us-at-lambeau-field-wont-help-us-win",
-      "source_name": "Pro Football Talk",
-      "headline": "Tucker Kraft: Disappointing that fans booed us at Lambeau Field, won't help us win",
-      "published_at": "2026-09-25T08:22:32.000Z",
-      "observed_at": "2026-09-25T08:30:26.921Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/zach-ertz-i-never-wanted-to-leave-philadelphia-glad-to-be-back-to-my-favorite-place",
       "source_name": "Pro Football Talk",
       "headline": "Zach Ertz: I never wanted to leave Philadelphia, glad to be back to my favorite place",
@@ -42131,6 +42089,44 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/patriots-get-good-news-on-injuries-will-a-j-brown-christian-gonzalez-be-ready-to-go",
+      "source_name": "NFL.com",
+      "headline": "Patriots get good news on injuries: Will A.J. Brown, Christian Gonzalez be ready to go?",
+      "published_at": "2026-10-15T10:16:06.000Z",
+      "observed_at": "2026-10-15T15:20:35.596Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/pfts-week-6-2026-nfl-picks",
+      "source_name": "Pro Football Talk",
+      "headline": "PFT's Week 6 2026 NFL picks",
+      "published_at": "2026-10-15T15:17:17.000Z",
+      "observed_at": "2026-10-15T15:20:35.596Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
