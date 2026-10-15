@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/manningcast-dips-to-661-000-viewers-for-week-2",
-      "source_name": "Pro Football Talk",
-      "headline": "ManningCast dips to 661,000 viewers for Week 2",
-      "published_at": "2026-09-25T14:53:21.000Z",
-      "observed_at": "2026-09-25T15:00:30.519Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-sept-25",
       "source_name": "NFL.com",
       "headline": "NFL news roundup: Latest league updates from Friday, Sept. 25",
@@ -42112,6 +42095,28 @@
         "nfl_team_detected",
         "phrase_practice_squad",
         "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/fox-window-led-by-49ers-seahawks-averages-26-697-million-viewers",
+      "source_name": "Pro Football Talk",
+      "headline": "Fox window led by 49ers-Seahawks averages 26.697 million viewers",
+      "published_at": "2026-10-15T18:57:28.000Z",
+      "observed_at": "2026-10-15T19:10:22.848Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF",
+        "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
