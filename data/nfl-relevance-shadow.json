@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/zach-ertz-i-never-wanted-to-leave-philadelphia-glad-to-be-back-to-my-favorite-place",
-      "source_name": "Pro Football Talk",
-      "headline": "Zach Ertz: I never wanted to leave Philadelphia, glad to be back to my favorite place",
-      "published_at": "2026-09-25T08:53:03.000Z",
-      "observed_at": "2026-09-25T09:00:28.095Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bijan-robinson-and-drake-london-had-a-historic-night-with-194-yards-each",
       "source_name": "Pro Football Talk",
       "headline": "Bijan Robinson and Drake London had a historic night, with 194 yards each",
@@ -42127,6 +42106,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/game-changer-mike-evans-proving-worth-for-49ers-through-first-five-games-of-season",
+      "source_name": "NFL.com",
+      "headline": "'Game-changer' Mike Evans proving worth for 49ers through first five games of season",
+      "published_at": "2026-10-15T03:28:35.000Z",
+      "observed_at": "2026-10-15T15:40:26.885Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
