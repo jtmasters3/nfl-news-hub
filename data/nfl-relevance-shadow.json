@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chargers-add-trey-lance-to-injury-report-list-him-as-questionable-for-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "Chargers add Trey Lance to injury report, list him as questionable for Sunday",
-      "published_at": "2026-09-25T18:42:18.000Z",
-      "observed_at": "2026-09-25T18:50:25.478Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "LAC"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brock-bowers-questionable-to-face-saints",
-      "source_name": "Pro Football Talk",
-      "headline": "Brock Bowers questionable to face Saints",
-      "published_at": "2026-09-25T18:59:27.000Z",
-      "observed_at": "2026-09-25T19:10:21.525Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV",
-        "NO"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/john-harbaugh-sunday-would-be-the-perfect-time-to-get-odell-beckham-involved",
       "source_name": "Pro Football Talk",
       "headline": "John Harbaugh: Sunday would be the perfect time to get Odell Beckham involved",
@@ -42109,6 +42065,47 @@
       "confidence": "high",
       "detected_teams": [
         "NO"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/2027-nfl-draft-qb-power-rankings-has-trinidad-chambliss-usurped-arch-manning",
+      "source_name": "FOX Sports",
+      "headline": "2027 NFL Draft QB Power Rankings: Has Trinidad Chambliss Usurped Arch Manning?",
+      "published_at": "2026-10-15T22:28:30.000Z",
+      "observed_at": "2026-10-15T22:30:26.360Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [],
+      "detected_category": "draft",
+      "nfl_evidence": [
+        "phrase_nfl_draft",
+        "nfl_preserving_category:draft"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/joe-alt-derwin-james-remain-out-of-practice-for-chargers",
+      "source_name": "Pro Football Talk",
+      "headline": "Joe Alt, Derwin James remain out of practice for Chargers",
+      "published_at": "2026-10-15T22:25:39.000Z",
+      "observed_at": "2026-10-15T22:30:26.360Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
