@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-week-3-bold-predictions-raiders-upset-saints-to-improve-to-3-0-baker-mayfield-bounces-back",
-      "source_name": "NFL.com",
-      "headline": "NFL Week 3 bold predictions: Raiders upset Saints to improve to 3-0! Baker Mayfield bounces back",
-      "published_at": "2026-09-25T03:52:57.000Z",
-      "observed_at": "2026-09-25T16:00:31.456Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV",
-        "NO"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nflpa-names-shedeur-sanders-their-community-mvp-for-week-3",
       "source_name": "Pro Football Talk",
       "headline": "NFLPA names Shedeur Sanders their Community MVP for Week 3",
@@ -42126,6 +42104,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-dfs-week-6-best-picks-lineup-advice-value-plays",
+      "source_name": "FOX Sports",
+      "headline": "NFL DFS Week 6: Best Picks, Lineup Advice and Value Plays",
+      "published_at": "2026-10-15T19:24:32.000Z",
+      "observed_at": "2026-10-15T20:10:22.444Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "fantasy",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
