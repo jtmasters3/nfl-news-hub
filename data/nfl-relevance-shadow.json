@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cam-skattebo-our-crowds-gotta-be-lit-we-have-a-really-good-shot-at-this",
-      "source_name": "Pro Football Talk",
-      "headline": "Cam Skattebo: Our crowd's gotta be lit, we have a really good shot at this",
-      "published_at": "2026-09-25T12:42:28.000Z",
-      "observed_at": "2026-09-25T12:50:25.702Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/joe-flacco-doesnt-expect-bengals-giants-trade-jaxson-dart-injury",
-      "source_name": "NFL.com",
-      "headline": "Bengals backup Joe Flacco doesn't expect trade to Giants after Jaxson Dart injury: 'Not true'",
-      "published_at": "2026-09-25T12:56:22.000Z",
-      "observed_at": "2026-09-25T13:10:24.067Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CIN",
-        "NYG"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/surgery-not-on-table-for-jayden-daniels-commanders-havent-discussed-ir",
       "source_name": "Pro Football Talk",
       "headline": "Surgery not on table for Jayden Daniels, Commanders haven't discussed IR",
@@ -42123,6 +42080,46 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-quinn-on-jayden-daniels-even-through-tough-weeks-he-is-really-resilient",
+      "source_name": "Pro Football Talk",
+      "headline": "Dan Quinn on Jayden Daniels: Even through tough weeks, he is really resilient",
+      "published_at": "2026-10-15T17:03:56.000Z",
+      "observed_at": "2026-10-15T17:10:19.723Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG",
+        "SF",
+        "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jalen-hurts-is-out-for-sunday-with-a-blood-clot-in-his-leg",
+      "source_name": "Pro Football Talk",
+      "headline": "Jalen Hurts is out for Sunday with a blood clot in his leg",
+      "published_at": "2026-10-15T17:00:13.000Z",
+      "observed_at": "2026-10-15T17:10:19.723Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
