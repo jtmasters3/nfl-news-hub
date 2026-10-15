@@ -2,71 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/browns-list-cb-tyson-campbell-s-grant-delpit-as-questionable-for-week-3",
-      "source_name": "Pro Football Talk",
-      "headline": "Browns list CB Tyson Campbell, S Grant Delpit as questionable for Week 3",
-      "published_at": "2026-09-25T19:40:12.000Z",
-      "observed_at": "2026-09-25T19:50:22.764Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR",
-        "CLE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/packers-owners-have-an-absolute-right-to-boo",
-      "source_name": "Pro Football Talk",
-      "headline": "Packers \"owners\" have an absolute right to boo",
-      "published_at": "2026-09-25T19:37:41.000Z",
-      "observed_at": "2026-09-25T19:50:22.764Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/caleb-williams-tyson-bagent-out-of-practice-friday",
-      "source_name": "Pro Football Talk",
-      "headline": "Caleb Williams, Tyson Bagent out of practice Friday",
-      "published_at": "2026-09-25T19:58:56.000Z",
-      "observed_at": "2026-09-25T20:10:42.961Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/giants-list-brian-burns-as-questionable",
       "source_name": "Pro Football Talk",
       "headline": "Giants list Brian Burns as questionable",
@@ -42108,6 +42043,66 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/asktom-which-team-would-tom-brady-most-want-play-for-can-brock-purdy-win-super-bowl",
+      "source_name": "FOX Sports",
+      "headline": "#AskTom: Which Team Would Tom Brady Most Want To Play For? Can Brock Purdy Win Super Bowl?",
+      "published_at": "2026-10-15T23:33:15.000Z",
+      "observed_at": "2026-10-15T23:50:20.475Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-add-s-kam-curl-to-practice-report-with-an-ankle-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Rams add S Kam Curl to practice report with an ankle injury",
+      "published_at": "2026-10-15T23:43:17.000Z",
+      "observed_at": "2026-10-15T23:50:20.475Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jeremiyah-love-missed-practice-again-on-thursday",
+      "source_name": "Pro Football Talk",
+      "headline": "Jeremiyah Love missed practice again on Thursday",
+      "published_at": "2026-10-15T23:41:30.000Z",
+      "observed_at": "2026-10-15T23:50:20.475Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI",
+        "LAR"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
