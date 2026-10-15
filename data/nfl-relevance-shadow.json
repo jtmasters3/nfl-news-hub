@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ravens-wr-zay-flowers-returns-to-practice-friday",
-      "source_name": "Pro Football Talk",
-      "headline": "Ravens WR Zay Flowers returns to practice Friday",
-      "published_at": "2026-09-25T19:42:12.000Z",
-      "observed_at": "2026-09-25T19:50:22.764Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/browns-list-cb-tyson-campbell-s-grant-delpit-as-questionable-for-week-3",
       "source_name": "Pro Football Talk",
       "headline": "Browns list CB Tyson Campbell, S Grant Delpit as questionable for Week 3",
@@ -42112,6 +42091,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/caleb-williams-confirms-he-tore-his-hamstring-doesnt-know-his-status-for-sunday",
+      "source_name": "Pro Football Talk",
+      "headline": "Caleb Williams confirms he tore his hamstring, doesn't know his status for Sunday",
+      "published_at": "2026-10-15T23:31:16.000Z",
+      "observed_at": "2026-10-15T23:40:20.363Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
