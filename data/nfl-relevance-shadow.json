@@ -2,67 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/ravens-cowboys-preview-week-3-2026-brazil-game",
-      "source_name": "NFL.com",
-      "headline": "Ravens vs. Cowboys: Three must-know storylines for NFL's first-ever game in Rio de Janeiro",
-      "published_at": "2026-09-25T02:27:24.000Z",
-      "observed_at": "2026-09-25T14:40:22.119Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/work-continues-on-field-for-ravens-cowboys",
-      "source_name": "Pro Football Talk",
-      "headline": "Work continues on field for Ravens-Cowboys",
-      "published_at": "2026-09-25T14:37:55.000Z",
-      "observed_at": "2026-09-25T14:40:22.119Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaxson-dart-to-undergo-meniscus-surgery-on-friday",
-      "source_name": "Pro Football Talk",
-      "headline": "Jaxson Dart to undergo meniscus surgery on Friday",
-      "published_at": "2026-09-25T14:36:21.000Z",
-      "observed_at": "2026-09-25T14:40:22.119Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/manningcast-dips-to-661-000-viewers-for-week-2",
       "source_name": "Pro Football Talk",
       "headline": "ManningCast dips to 661,000 viewers for Week 2",
@@ -42112,6 +42051,67 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/como-llegar-a-nfl-hasta-la-muerte",
+      "source_name": "NFL.com",
+      "headline": "Cómo llegar a NFL Hasta la Muerte",
+      "published_at": "2026-10-15T06:45:21.000Z",
+      "observed_at": "2026-10-15T19:00:28.200Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-allen-will-soon-become-the-fifth-qb-in-nfl-history-with-5-000-rushing-yards",
+      "source_name": "Pro Football Talk",
+      "headline": "Josh Allen will soon become the fifth QB in NFL history with 5,000 rushing yards",
+      "published_at": "2026-10-15T18:51:32.000Z",
+      "observed_at": "2026-10-15T19:00:28.200Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-andy-dalton-mulling-multiple-offers-unsure-of-next-destination",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Andy Dalton mulling multiple offers, unsure of next destination",
+      "published_at": "2026-10-15T18:49:26.000Z",
+      "observed_at": "2026-10-15T19:00:28.200Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:free_agency"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
