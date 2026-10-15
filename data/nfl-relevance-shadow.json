@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jets-add-wr-adonai-mitchell-to-injury-report-as-a-limited-participant",
-      "source_name": "Pro Football Talk",
-      "headline": "Jets add WR Adonai Mitchell to injury report as a limited participant",
-      "published_at": "2026-09-24T21:07:42.000Z",
-      "observed_at": "2026-09-24T21:20:23.510Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYJ"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/texans-ot-trent-brown-returns-to-practice-thursday",
       "source_name": "Pro Football Talk",
       "headline": "Texans OT Trent Brown returns to practice Thursday",
@@ -42129,6 +42108,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-lb-nate-landman-was-limited-in-wednesdays-practice",
+      "source_name": "Pro Football Talk",
+      "headline": "Rams LB Nate Landman was limited in Wednesday's practice",
+      "published_at": "2026-10-15T00:44:15.000Z",
+      "observed_at": "2026-10-15T00:50:21.409Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
