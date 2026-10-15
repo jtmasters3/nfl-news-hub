@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/asktom-tom-brady-embarrassed-piss-missile-quote-who-rest-nfl-should-fear",
-      "source_name": "FOX Sports",
-      "headline": "#AskTom: Tom Brady Embarrassed By Piss Missile Quote; Who Should NFL Should Fear?",
-      "published_at": "2026-09-24T22:09:25.000Z",
-      "observed_at": "2026-09-24T22:20:21.559Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/week-3-thursday-night-inactives-atlanta-falcons-at-green-bay-packers",
       "source_name": "NFL.com",
       "headline": "Week 3 Thursday night inactives: Atlanta Falcons at Green Bay Packers",
@@ -42132,6 +42115,27 @@
         "LAR"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-catchup-saquon-barkley-among-24-eagles-injury-report-caleb-williams-returns",
+      "source_name": "FOX Sports",
+      "headline": "NFL Catchup: Saquon Barkley Among 24 Eagles On Injury Report; Caleb Williams Returns",
+      "published_at": "2026-10-15T01:36:43.000Z",
+      "observed_at": "2026-10-15T01:50:18.233Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
