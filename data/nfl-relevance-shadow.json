@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/puka-nacua-doubtful-to-play-on-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "Puka Nacua doubtful to play on Sunday",
-      "published_at": "2026-09-25T18:15:22.000Z",
-      "observed_at": "2026-09-25T18:30:26.780Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chargers-add-trey-lance-to-injury-report-list-him-as-questionable-for-sunday",
       "source_name": "Pro Football Talk",
       "headline": "Chargers add Trey Lance to injury report, list him as questionable for Sunday",
@@ -42107,6 +42090,27 @@
         "SEA"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chris-olave-misses-second-straight-practice-with-an-illness",
+      "source_name": "Pro Football Talk",
+      "headline": "Chris Olave misses second straight practice with an illness",
+      "published_at": "2026-10-15T22:10:31.000Z",
+      "observed_at": "2026-10-15T22:20:19.036Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NO"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
