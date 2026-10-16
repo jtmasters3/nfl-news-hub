@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bucs-elevate-s-ifeatu-melifonwu-from-practice-squad",
-      "source_name": "Pro Football Talk",
-      "headline": "Bucs elevate S Ifeatu Melifonwu from practice squad",
-      "published_at": "2026-09-26T20:16:20.000Z",
-      "observed_at": "2026-09-26T20:30:25.262Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "TB"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/wr-devonta-smith-rb-saquon-barkley-have-no-injury-designation-for-monday-night",
-      "source_name": "Pro Football Talk",
-      "headline": "WR DeVonta Smith, RB Saquon Barkley have no injury designation for Monday night",
-      "published_at": "2026-09-26T20:26:33.000Z",
-      "observed_at": "2026-09-26T20:40:19.257Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/roquan-smith-fined-for-facemask-on-tyler-shough-on-game-winning-qb-sneak",
       "source_name": "Pro Football Talk",
       "headline": "Roquan Smith fined for facemask on Tyler Shough on game-winning QB sneak",
@@ -42067,6 +42023,45 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/2026-27-nfl-offensive-rookie-year-odds",
+      "source_name": "FOX Sports",
+      "headline": "2026 NFL OROY Odds: Denzel Boston Jumps Jeremiyah Love As Favorite",
+      "published_at": "2026-10-14T17:56:56.000Z",
+      "observed_at": "2026-10-16T18:20:20.437Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rashee-rice-josh-simmons-ruled-out-for-the-chiefs",
+      "source_name": "Pro Football Talk",
+      "headline": "Rashee Rice, Josh Simmons ruled out for the Chiefs",
+      "published_at": "2026-10-16T18:09:57.000Z",
+      "observed_at": "2026-10-16T18:20:20.437Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC",
+        "LAC"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
