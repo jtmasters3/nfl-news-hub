@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/charvarius-ward-questionable-ashton-dulin-out-for-colts-texans",
-      "source_name": "Pro Football Talk",
-      "headline": "Charvarius Ward questionable, Ashton Dulin out for Colts-Texans",
-      "published_at": "2026-09-25T20:03:22.000Z",
-      "observed_at": "2026-09-25T20:20:23.620Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "HOU",
-        "IND"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/sam-darnold-glute-seahawks-commanders",
       "source_name": "NFL.com",
       "headline": "Sam Darnold (glute) to return Sunday for Seahawks vs. Commanders",
@@ -42096,6 +42074,28 @@
         "SF"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/broncos-take-7-3-lead-over-seahawks-in-second-quarter",
+      "source_name": "Pro Football Talk",
+      "headline": "Broncos take 7-3 lead over Seahawks in second quarter",
+      "published_at": "2026-10-16T01:02:30.000Z",
+      "observed_at": "2026-10-16T01:10:23.575Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "SEA"
+      ],
+      "detected_category": "live_game_state",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
