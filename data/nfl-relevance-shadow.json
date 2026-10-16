@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-put-alec-pierce-on-ir-sign-anthony-gould-to-active-roster",
-      "source_name": "Pro Football Talk",
-      "headline": "Colts put Alec Pierce on IR, sign Anthony Gould to active roster",
-      "published_at": "2026-09-26T16:20:09.000Z",
-      "observed_at": "2026-09-26T16:20:21.296Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-saturday-sept-26",
-      "source_name": "NFL.com",
-      "headline": "NFL news roundup: Latest league updates from Saturday, Sept. 26",
-      "published_at": "2026-09-26T04:37:17.000Z",
-      "observed_at": "2026-09-26T16:40:23.266Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nflpa-players-werent-told-about-sudden-decision-to-fine-drinking-celebrations",
       "source_name": "Pro Football Talk",
       "headline": "NFLPA: Players weren't told about sudden decision to fine drinking celebrations",
@@ -42067,6 +42029,51 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-week-6-bold-predictions-david-bailey-doubles-down-giants-rb-cam-skattebo-enjoys-career-day",
+      "source_name": "NFL.com",
+      "headline": "NFL Week 6 bold predictions: David Bailey doubles down; Giants RB Cam Skattebo enjoys career day",
+      "published_at": "2026-10-16T02:54:44.000Z",
+      "observed_at": "2026-10-16T15:00:47.078Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE",
+        "NYG",
+        "NYJ"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/breece-hall-adonai-mitchell-among-those-ruled-out-for-jets",
+      "source_name": "Pro Football Talk",
+      "headline": "Breece Hall, Adonai Mitchell among those ruled out for Jets",
+      "published_at": "2026-10-16T14:50:25.000Z",
+      "observed_at": "2026-10-16T15:00:47.078Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE",
+        "NYJ"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
