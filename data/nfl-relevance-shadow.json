@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/deion-sanders-says-colorado-is-better-than-the-score-shows-after-another-loss",
-      "source_name": "Pro Football Talk",
-      "headline": "Deion Sanders says Colorado is better than the score shows after another loss",
-      "published_at": "2026-09-26T21:58:36.000Z",
-      "observed_at": "2026-09-26T22:10:20.102Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "coaching",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/broncos-rookie-rb-jonah-coleman-heading-to-ir-with-ankle-injury",
       "source_name": "NFL.com",
       "headline": "Broncos rookie RB Jonah Coleman heading to IR with ankle injury",
@@ -42060,6 +42043,28 @@
         "CHI"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bucs-add-lb-josiah-trotter-to-injury-report-list-him-as-questionable",
+      "source_name": "Pro Football Talk",
+      "headline": "Bucs add LB Josiah Trotter to injury report, list him as questionable",
+      "published_at": "2026-10-16T19:25:15.000Z",
+      "observed_at": "2026-10-16T19:30:25.092Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT",
+        "TB"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
