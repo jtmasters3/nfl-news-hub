@@ -2,84 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jim-harbaugh-hopes-to-rebound-from-first-0-2-start-as-a-head-coach",
-      "source_name": "Pro Football Talk",
-      "headline": "Jim Harbaugh hopes to rebound from first 0-2 start as a head coach",
-      "published_at": "2026-09-26T14:12:03.000Z",
-      "observed_at": "2026-09-26T14:20:36.815Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "coaching",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jets-suddenly-stout-defense-gets-a-big-test-at-lions",
-      "source_name": "Pro Football Talk",
-      "headline": "Jets' suddenly stout defense gets a big test at Lions",
-      "published_at": "2026-09-26T14:44:57.000Z",
-      "observed_at": "2026-09-26T14:50:20.273Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET",
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-says-field-in-brazil-is-good-to-go-for-ravens-cowboys-on-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "NFL says field in Brazil is good to go for Ravens-Cowboys on Sunday",
-      "published_at": "2026-09-26T15:00:16.000Z",
-      "observed_at": "2026-09-26T15:10:20.186Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/stories-of-the-dan-campbell-aaron-glenn-friendship-three-decades-in-the-making",
-      "source_name": "NFL.com",
-      "headline": "Stories of the Dan Campbell-Aaron Glenn friendship, three decades in the making",
-      "published_at": "2026-09-26T10:16:05.000Z",
-      "observed_at": "2026-09-26T15:40:19.159Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/can-49ers-brock-purdy-prevail-over-team-s-toughest-opponent-the-injured-list",
       "source_name": "NFL.com",
       "headline": "Can 49ers' Brock Purdy prevail over team's toughest opponent, the injured list?",
@@ -42060,6 +41982,89 @@
         "DAL"
       ],
       "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/examining-the-49ers-early-season-feat-generating-pressure-without-nick-bosa",
+      "source_name": "NFL.com",
+      "headline": "Examining the 49ers' early-season feat: Generating pressure without Nick Bosa",
+      "published_at": "2026-10-16T12:31:06.000Z",
+      "observed_at": "2026-10-16T14:30:26.528Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/cam-little-is-the-nfl-s-record-breaking-kicker-but-football-wasn-t-his-first-choice",
+      "source_name": "NFL.com",
+      "headline": "Cam Little is the NFL's record-breaking kicker, but football wasn't his first choice",
+      "published_at": "2026-10-16T01:46:06.000Z",
+      "observed_at": "2026-10-16T14:30:26.528Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/khalil-mack-keeps-faith-in-chargers-amid-trade-buzz-i-m-still-ring-chasing-here",
+      "source_name": "NFL.com",
+      "headline": "Khalil Mack keeps faith in Chargers amid trade buzz: 'I'm still ring chasing here'",
+      "published_at": "2026-10-15T11:31:05.000Z",
+      "observed_at": "2026-10-16T14:30:26.528Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-week-6-best-bets-expert-picks-back-cowboys-chiefs-teaser",
+      "source_name": "FOX Sports",
+      "headline": "2026 NFL Week 6 Best Bets, Expert Picks: Back Cowboys-Chiefs Teaser",
+      "published_at": "2026-10-16T14:26:37.000Z",
+      "observed_at": "2026-10-16T14:30:26.528Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "CHI",
+        "DAL",
+        "KC"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
