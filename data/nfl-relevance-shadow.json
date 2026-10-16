@@ -2,30 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-college-football-odds-best-bets-ole-miss-florida-chargers-bills",
-      "source_name": "FOX Sports",
-      "headline": "2026 NFL, College Football Odds: Best Bets For Ole Miss-Florida, Chargers-Bills",
-      "published_at": "2026-09-25T23:10:41.000Z",
-      "observed_at": "2026-09-25T23:20:19.806Z",
-      "decision": "keep",
-      "classification": "nfl_with_college_context",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "LAC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [
-        "college_football_phrase"
-      ],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/can-anyone-stop-the-bills-offense-block-the-vikings-defense-plus-three-disappointing-units",
       "source_name": "NFL.com",
       "headline": "Can anyone stop the Bills' offense? Block the Vikings' defense? Plus, three disappointing units",
@@ -42081,6 +42057,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sam-darnold-unfair-to-our-team-that-i-keep-turning-the-ball-over-i-have-to-be-better",
+      "source_name": "Pro Football Talk",
+      "headline": "Sam Darnold: Unfair to our team that I keep turning the ball over, I have to be better",
+      "published_at": "2026-10-16T08:29:53.000Z",
+      "observed_at": "2026-10-16T08:40:20.856Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
