@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-jets-vs-lions-tv-channel-live-stream-time-2026-week-3",
-      "source_name": "FOX Sports",
-      "headline": "How to Watch Jets vs. Lions: TV Channel, Live Stream, Time",
-      "published_at": "2026-09-27T11:43:25.000Z",
-      "observed_at": "2026-09-27T12:00:28.929Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET",
-        "NYG",
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-chargers-vs-bills-tv-channel-live-stream-time-2026-week-3",
       "source_name": "FOX Sports",
       "headline": "How to Watch Chargers vs. Bills: TV Channel, Live Stream, Time",
@@ -42057,6 +42034,30 @@
       "detected_teams": [
         "CLE",
         "NYJ"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfc-north-rankings-how-do-bears-lions-packers-and-vikings-stack-up-in-highly-competitive-division",
+      "source_name": "NFL.com",
+      "headline": "NFC North rankings: How do Bears, Lions, Packers and Vikings stack up in highly competitive division?",
+      "published_at": "2026-10-16T10:40:17.000Z",
+      "observed_at": "2026-10-16T22:50:21.200Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "DET",
+        "GB",
+        "MIN"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
