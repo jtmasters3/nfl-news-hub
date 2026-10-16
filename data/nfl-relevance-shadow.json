@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/former-oklahoma-teammates-kyler-murray-baker-mayfield-meet-again",
-      "source_name": "Pro Football Talk",
-      "headline": "Former Oklahoma teammates Kyler Murray, Baker Mayfield meet again",
-      "published_at": "2026-09-27T02:20:22.000Z",
-      "observed_at": "2026-09-27T02:30:24.327Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN",
-        "TB"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/a-win-on-sunday-would-tie-dak-prescott-with-roger-staubach-for-second-on-cowboys-all-time-list",
-      "source_name": "Pro Football Talk",
-      "headline": "A win on Sunday would tie Dak Prescott with Roger Staubach for second on Cowboys' all-time list",
-      "published_at": "2026-09-27T02:40:30.000Z",
-      "observed_at": "2026-09-27T02:50:21.645Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-rodgers-has-gone-seven-straight-games-without-multiple-td-passes",
       "source_name": "Pro Football Talk",
       "headline": "Aaron Rodgers has gone seven straight games without multiple TD passes",
@@ -42076,6 +42033,45 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/a-j-brown-treveyon-henderson-will-campbell-all-questionable-for-sunday-vs-jets",
+      "source_name": "Pro Football Talk",
+      "headline": "A.J. Brown, TreVeyon Henderson, Will Campbell all questionable for Sunday vs. Jets",
+      "published_at": "2026-10-16T20:00:59.000Z",
+      "observed_at": "2026-10-16T20:10:19.196Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE",
+        "NYJ"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-jacobs-will-be-removed-from-paid-leave-on-monday",
+      "source_name": "Pro Football Talk",
+      "headline": "Josh Jacobs will be removed from paid leave on Monday",
+      "published_at": "2026-10-16T20:00:17.000Z",
+      "observed_at": "2026-10-16T20:10:19.196Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
