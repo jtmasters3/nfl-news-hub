@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lt-josh-simmons-out-cb-mansoor-delane-set-to-play-for-chiefs-dolphins",
-      "source_name": "Pro Football Talk",
-      "headline": "LT Josh Simmons out, CB Mansoor Delane set to play for Chiefs-Dolphins",
-      "published_at": "2026-09-25T20:52:25.000Z",
-      "observed_at": "2026-09-25T21:00:30.470Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC",
-        "MIA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_udfa"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/wr-zay-flowers-questionable-ot-ronnie-stanley-out-for-ravens",
       "source_name": "Pro Football Talk",
       "headline": "WR Zay Flowers questionable, OT Ronnie Stanley out for Ravens",
@@ -42090,6 +42067,25 @@
       "detected_category": "roster_move",
       "nfl_evidence": [
         "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/troy-aikman-it-seems-like-espn-is-going-to-go-in-a-different-direction",
+      "source_name": "Pro Football Talk",
+      "headline": "Troy Aikman: It seems like ESPN is going to go in a different direction",
+      "published_at": "2026-10-16T02:06:54.000Z",
+      "observed_at": "2026-10-16T02:10:20.441Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "contract",
+      "nfl_evidence": [
+        "nfl_preserving_category:contract"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
