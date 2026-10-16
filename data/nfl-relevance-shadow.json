@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/j-k-dobbins-rj-harvey-on-track-to-play-sunday-night",
-      "source_name": "Pro Football Talk",
-      "headline": "J.K. Dobbins, RJ Harvey on track to play Sunday night",
-      "published_at": "2026-09-25T20:42:25.000Z",
-      "observed_at": "2026-09-25T21:00:30.470Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN",
-        "LAR"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/titans-rb-tony-pollard-has-no-injury-designation-but-rb-tyjae-spears-is-questionable",
       "source_name": "Pro Football Talk",
       "headline": "Titans RB Tony Pollard has no injury designation, but RB Tyjae Spears is questionable",
@@ -42091,6 +42069,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-says-it-will-be-selective-about-playing-on-wednesdays",
+      "source_name": "Pro Football Talk",
+      "headline": "NFL says it will be \"selective\" about playing on Wednesdays",
+      "published_at": "2026-10-16T02:52:37.000Z",
+      "observed_at": "2026-10-16T03:00:25.742Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
