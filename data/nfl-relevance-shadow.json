@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bud-light-leans-in-to-fines-for-beer-celebrations",
-      "source_name": "Pro Football Talk",
-      "headline": "Bud Light leans in to fines for beer celebrations",
-      "published_at": "2026-09-25T23:54:07.000Z",
-      "observed_at": "2026-09-26T00:00:29.227Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/betting/will-hill-parlay-nfl-college-football-ravens-usc-michigan-oklahoma-iowa",
       "source_name": "FOX Sports",
       "headline": "Will Hill's Parlay Of The Week: Ravens In Brazil, Unders In College Football Slate",
@@ -42065,6 +42048,28 @@
       "confidence": "high",
       "detected_teams": [
         "PHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/broncos-beat-seahawks-overtime-168-yard-output-bo-nix",
+      "source_name": "NFL.com",
+      "headline": "Broncos beat Seahawks in overtime despite 168-yard output from Bo Nix's offense",
+      "published_at": "2026-10-16T12:21:36.000Z",
+      "observed_at": "2026-10-16T12:30:26.755Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "SEA"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
