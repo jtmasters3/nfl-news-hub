@@ -2,26 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dante-moore-knocked-out-with-brutal-hit-to-the-head-while-sliding",
-      "source_name": "Pro Football Talk",
-      "headline": "Dante Moore knocked out with brutal hit to the head while sliding",
-      "published_at": "2026-09-27T00:39:10.000Z",
-      "observed_at": "2026-09-27T00:50:19.151Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [],
-      "detected_category": "draft",
-      "nfl_evidence": [
-        "phrase_nfl_draft",
-        "nfl_preserving_category:draft"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steve-sarkisian-blames-society-for-colin-simmonss-bizarre-unsportsmanlike-conduct-foul",
       "source_name": "Pro Football Talk",
       "headline": "Steve Sarkisian blames \"society\" for Colin Simmons's bizarre unsportsmanlike conduct foul",
@@ -42074,6 +42054,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/devonta-smith-says-his-hamstring-is-good-but-his-availability-is-up-to-the-doctors",
+      "source_name": "Pro Football Talk",
+      "headline": "DeVonta Smith says his hamstring is \"good,\" but his availability is \"up to the doctors\"",
+      "published_at": "2026-10-16T19:46:16.000Z",
+      "observed_at": "2026-10-16T19:50:20.584Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
