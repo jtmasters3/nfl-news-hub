@@ -2,87 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/broncos-rookie-rb-jonah-coleman-heading-to-ir-with-ankle-injury",
-      "source_name": "NFL.com",
-      "headline": "Broncos rookie RB Jonah Coleman heading to IR with ankle injury",
-      "published_at": "2026-09-26T09:31:04.000Z",
-      "observed_at": "2026-09-26T22:20:24.177Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/close-up-images-of-field-at-maracana-stadium-a-day-before-ravens-cowboys",
-      "source_name": "Pro Football Talk",
-      "headline": "Close-up images of field at Maracanã Stadium, a day before Ravens-Cowboys",
-      "published_at": "2026-09-26T22:17:01.000Z",
-      "observed_at": "2026-09-26T22:30:24.621Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rules-permit-12th-player-to-hold-ball-on-kickoffs-without-tee-regardless-of-weather",
-      "source_name": "Pro Football Talk",
-      "headline": "Rules permit 12th player to hold ball on kickoffs without tee, regardless of weather",
-      "published_at": "2026-09-26T22:38:22.000Z",
-      "observed_at": "2026-09-26T22:50:18.393Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/cardinals-jeremiyah-love-on-humbling-start-to-career-i-m-used-to-going-crazy-every-week",
-      "source_name": "NFL.com",
-      "headline": "Cardinals' Jeremiyah Love on 'humbling' start to career: I'm used to 'going crazy every week'",
-      "published_at": "2026-09-26T11:02:50.000Z",
-      "observed_at": "2026-09-26T23:10:25.464Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dante-moore-knocked-out-with-brutal-hit-to-the-head-while-sliding",
       "source_name": "Pro Football Talk",
       "headline": "Dante Moore knocked out with brutal hit to the head while sliding",
@@ -42063,6 +41982,90 @@
       "detected_teams": [
         "PIT",
         "TB"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/jalen-hurts-health-is-of-utmost-importance-as-eagles-sign-ex-cowboys-qb-joe-milton",
+      "source_name": "NFL.com",
+      "headline": "Jalen Hurts' health is of 'utmost importance' as Eagles sign ex-Cowboys QB Joe Milton",
+      "published_at": "2026-10-16T05:46:05.000Z",
+      "observed_at": "2026-10-16T19:40:21.869Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "PHI"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/david-blough-takes-responsibility-for-clock-debacle",
+      "source_name": "Pro Football Talk",
+      "headline": "David Blough takes responsibility for clock debacle",
+      "published_at": "2026-10-16T19:36:50.000Z",
+      "observed_at": "2026-10-16T19:40:21.869Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dk-metcalf-is-questionable-for-sunday-after-missing-practice-with-an-illness",
+      "source_name": "Pro Football Talk",
+      "headline": "DK Metcalf is questionable for Sunday after missing practice with an illness",
+      "published_at": "2026-10-16T19:33:37.000Z",
+      "observed_at": "2026-10-16T19:40:21.869Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT",
+        "TB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ladd-mcconkey-quentin-johnston-off-injury-report-set-to-play-vs-chiefs",
+      "source_name": "Pro Football Talk",
+      "headline": "Ladd McConkey, Quentin Johnston off injury report, set to play vs. Chiefs",
+      "published_at": "2026-10-16T19:31:07.000Z",
+      "observed_at": "2026-10-16T19:40:21.869Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC",
+        "LAC"
       ],
       "detected_category": "injury",
       "nfl_evidence": [
