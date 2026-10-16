@@ -2,30 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-week-3-best-bets-expert-picks-back-buccaneers-bounce-back",
-      "source_name": "FOX Sports",
-      "headline": "2026 NFL Week 3 Best Bets, Expert Picks: Back Tampa Bay To Cover Against Vikings",
-      "published_at": "2026-09-25T21:23:46.000Z",
-      "observed_at": "2026-09-25T21:30:23.521Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN",
-        "NYG",
-        "TB",
-        "TEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bills-sign-wr-greg-dortch-to-active-roster-place-db-jordan-hancock-on-ir",
       "source_name": "Pro Football Talk",
       "headline": "Bills sign WR Greg Dortch to active roster, place DB Jordan Hancock on IR",
@@ -42087,6 +42063,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/new-report-links-greg-olsen-to-monday-night-football-in-2027",
+      "source_name": "Pro Football Talk",
+      "headline": "New report links Greg Olsen to Monday Night Football in 2027",
+      "published_at": "2026-10-16T03:10:38.000Z",
+      "observed_at": "2026-10-16T03:20:21.115Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
