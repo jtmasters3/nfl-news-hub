@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/sam-darnold-glute-seahawks-commanders",
-      "source_name": "NFL.com",
-      "headline": "Sam Darnold (glute) to return Sunday for Seahawks vs. Commanders",
-      "published_at": "2026-09-25T08:27:23.000Z",
-      "observed_at": "2026-09-25T20:30:24.740Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA",
-        "WAS"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/texans-rule-out-jadeveon-clowney-nico-collins",
       "source_name": "Pro Football Talk",
       "headline": "Texans rule out Jadeveon Clowney, Nico Collins",
@@ -42102,6 +42080,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfc-east-predictions-eagles-giants-cowboys-commanders",
+      "source_name": "FOX Sports",
+      "headline": "Does Anyone Actually Want To Win NFC (L)East? Predicting NFL's New Worst Division",
+      "published_at": "2026-10-16T01:09:15.000Z",
+      "observed_at": "2026-10-16T01:20:20.244Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
