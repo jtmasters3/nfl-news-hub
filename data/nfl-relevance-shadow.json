@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/week-2-saw-one-fine-for-a-hip-drop-tackle-two-fines-for-hits-on-defenseless-players",
-      "source_name": "Pro Football Talk",
-      "headline": "Week 2 saw one fine for a hip-drop tackle, two fines for hits on defenseless players",
-      "published_at": "2026-09-26T21:21:30.000Z",
-      "observed_at": "2026-09-26T21:30:24.181Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-fined-49ers-fb-kyle-juszczyk-twice-for-imitating-chugging-a-beer",
       "source_name": "Pro Football Talk",
       "headline": "NFL fined 49ers FB Kyle Juszczyk twice for imitating chugging a beer",
@@ -42060,6 +42043,30 @@
         "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-college-football-odds-best-bets-notre-dame-byu-jets-patriots",
+      "source_name": "FOX Sports",
+      "headline": "2026 NFL, College Football Odds: Best Bets For Notre Dame-BYU, Jets-Patriots",
+      "published_at": "2026-10-16T18:49:41.000Z",
+      "observed_at": "2026-10-16T18:50:21.407Z",
+      "decision": "keep",
+      "classification": "nfl_with_college_context",
+      "confidence": "high",
+      "detected_teams": [
+        "NE",
+        "NYJ"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [
+        "college_football_phrase"
+      ],
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
