@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-bengals-vs-steelers-tv-channel-live-stream-time-2026-week-3",
-      "source_name": "FOX Sports",
-      "headline": "How to Watch Bengals vs. Steelers: TV Channel, Live Stream, Time",
-      "published_at": "2026-09-27T11:49:44.000Z",
-      "observed_at": "2026-09-27T12:00:28.929Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CIN",
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-texans-vs-colts-tv-channel-live-stream-time-2026-week-3",
-      "source_name": "FOX Sports",
-      "headline": "How to Watch Texans vs. Colts: TV Channel, Live Stream, Time",
-      "published_at": "2026-09-27T11:48:25.000Z",
-      "observed_at": "2026-09-27T12:00:28.929Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "HOU",
-        "IND"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-patriots-vs-jaguars-tv-channel-live-stream-time-2026-week-3",
       "source_name": "FOX Sports",
       "headline": "How to Watch Patriots vs. Jaguars: TV Channel, Live Stream, Time",
@@ -42078,6 +42034,45 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/trent-mcduffie-kam-curl-questionable-for-rams-cardinals",
+      "source_name": "Pro Football Talk",
+      "headline": "Trent McDuffie, Kam Curl questionable for Rams-Cardinals",
+      "published_at": "2026-10-16T21:04:43.000Z",
+      "observed_at": "2026-10-16T21:10:19.662Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI",
+        "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/john-lynch-george-kittle-asked-me-if-were-trying-to-trade-for-khalil-mack",
+      "source_name": "Pro Football Talk",
+      "headline": "John Lynch: George Kittle asked me if we're trying to trade for Khalil Mack",
+      "published_at": "2026-10-16T20:59:31.000Z",
+      "observed_at": "2026-10-16T21:10:19.662Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "trade",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
