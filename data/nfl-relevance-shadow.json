@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/seven-teams-face-an-0-3-hole-and-only-seven-0-3-teams-have-ever-made-the-playoffs",
-      "source_name": "Pro Football Talk",
-      "headline": "Seven teams face an 0-3 hole — and only seven 0-3 teams have ever made the playoffs",
-      "published_at": "2026-09-26T03:39:03.000Z",
-      "observed_at": "2026-09-26T03:40:18.567Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/commanders-announce-marcus-mariota-will-be-a-team-captain-for-the-rest-of-the-season",
       "source_name": "Pro Football Talk",
       "headline": "Commanders announce Marcus Mariota will be a team captain for the rest of the season",
@@ -42075,6 +42058,25 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/mlb/brewers-history-world-series-winners-1982-sports-facts",
+      "source_name": "FOX Sports",
+      "headline": "What Was Going On In Sports, Pop Culture Last Time Brewers Reached World Series?",
+      "published_at": "2026-10-16T13:10:26.000Z",
+      "observed_at": "2026-10-16T13:30:24.417Z",
+      "decision": "reject",
+      "classification": "other_sport",
+      "confidence": "high",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [
+        "league_mlb"
+      ],
+      "reason_codes": [
+        "other_sport_marker_no_nfl_evidence"
       ]
     }
   ]
