@@ -2,51 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-qb-tyson-bagent-has-cleared-concussion-protocol",
-      "source_name": "Pro Football Talk",
-      "headline": "Bears QB Tyson Bagent has cleared concussion protocol",
-      "published_at": "2026-09-26T17:09:59.000Z",
-      "observed_at": "2026-09-26T17:20:55.253Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-packers-to-sign-g-laken-tomlinson-off-cowboys-practice-squad",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Packers to sign G Laken Tomlinson off Cowboys practice squad",
-      "published_at": "2026-09-26T17:44:31.000Z",
-      "observed_at": "2026-09-26T17:50:25.492Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "DAL",
-        "GB"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jordan-love-continues-to-have-low-completion-percentage",
       "source_name": "Pro Football Talk",
       "headline": "Jordan Love continues to have low completion percentage",
@@ -42076,6 +42031,45 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/texans-vs-jaguars-preview-week-6-london-game",
+      "source_name": "NFL.com",
+      "headline": "Texans vs. Jaguars: Three must-know storylines for NFL Week 6 London game",
+      "published_at": "2026-10-16T04:27:57.000Z",
+      "observed_at": "2026-10-16T16:40:21.300Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "HOU",
+        "JAX"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lamar-jackson-out-of-fridays-practice-tyler-huntley-in-line-to-start",
+      "source_name": "Pro Football Talk",
+      "headline": "Lamar Jackson out of Friday's practice, Tyler Huntley in line to start",
+      "published_at": "2026-10-16T16:30:14.000Z",
+      "observed_at": "2026-10-16T16:40:21.300Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
