@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/giants-hope-to-add-one-possibly-two-quarterbacks-as-early-as-monday",
-      "source_name": "Pro Football Talk",
-      "headline": "Giants hope to add one, possibly two, quarterbacks as early as Monday",
-      "published_at": "2026-09-27T17:01:06.000Z",
-      "observed_at": "2026-09-27T17:10:20.654Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG",
-        "TEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/jay-glazer-giants-pretty-aggressive-search-qb-upgrade",
-      "source_name": "FOX Sports",
-      "headline": "Jay Glazer: Giants Plan To Be ‘Pretty Aggressive’ In Search For QB Upgrade",
-      "published_at": "2026-09-27T17:14:43.000Z",
-      "observed_at": "2026-09-27T17:20:19.486Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG",
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/case-keenum-start-qb-bears-against-eagles-instead-tyson-bagent",
       "source_name": "FOX Sports",
       "headline": "Case Keenum To Start At QB For Bears Against Eagles Instead Of Tyson Bagent",
@@ -42068,6 +42024,47 @@
         "LAR"
       ],
       "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/arch-manning-struggles-and-colin-simmons-is-carted-as-texas-loses-to-florida",
+      "source_name": "Pro Football Talk",
+      "headline": "Arch Manning struggles and Colin Simmons is carted as Texas loses to Florida",
+      "published_at": "2026-10-17T19:22:15.000Z",
+      "observed_at": "2026-10-17T19:30:22.903Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [],
+      "detected_category": "draft",
+      "nfl_evidence": [
+        "phrase_nfl_draft",
+        "nfl_preserving_category:draft"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-put-roman-wilson-on-injured-reserve",
+      "source_name": "Pro Football Talk",
+      "headline": "Steelers put Roman Wilson on injured reserve",
+      "published_at": "2026-10-17T19:19:59.000Z",
+      "observed_at": "2026-10-17T19:30:22.903Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
