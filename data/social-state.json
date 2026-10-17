@@ -476828,7 +476828,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-10-15T17:10:26.069Z",
-      "updated_at": "2026-10-16T15:50:31.184Z",
+      "updated_at": "2026-10-17T14:00:46.797Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -476839,7 +476839,7 @@
         "base_image_url": "https://a57.foxsports.com/statics.foxsports.com/www.foxsports.com/content/uploads/2026/10/1294/728/hurts.jpg?ve=1&tl=1",
         "source_name": "FOX Sports",
         "source_url": "https://www.foxsports.com/stories/nfl/jalen-hurts-injury-panthers-eagles-schedule-tanner-mckee",
-        "category": "free_agency",
+        "category": "injury",
         "teams": [
           "Carolina Panthers",
           "Philadelphia Eagles",
@@ -488103,7 +488103,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-10-16T18:50:34.573Z",
-      "updated_at": "2026-10-17T00:00:28.396Z",
+      "updated_at": "2026-10-17T14:00:28.268Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -488254,13 +488254,13 @@
         "retry_count": 0
       },
       "selection": {
-        "destination": "feed",
-        "slot_id": "feed:2026-10-16T20:00:00-04:00",
-        "selected_at": "2026-10-17T00:00:28.396Z",
-        "window_start": "2026-10-16T22:00:00.000Z",
-        "window_end": "2026-10-17T00:00:00.000Z",
+        "destination": "story",
+        "slot_id": "story:2026-10-17T10:00:00-04:00",
+        "selected_at": "2026-10-17T14:00:28.268Z",
+        "window_start": "2026-10-17T13:00:00.000Z",
+        "window_end": "2026-10-17T14:00:00.000Z",
         "score": 4,
-        "reason": "fallback_recent_pool_importance_score_rank"
+        "reason": "final_fallback_recent_pool_importance_score_rank"
       }
     },
     "d34340f1-eaca-4077-a0e5-b3ad1805f279": {
@@ -492210,7 +492210,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-10-17T10:40:27.360Z",
-      "updated_at": "2026-10-17T13:00:28.824Z",
+      "updated_at": "2026-10-17T14:00:28.268Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -492358,13 +492358,13 @@
         "retry_count": 0
       },
       "selection": {
-        "destination": "story",
-        "slot_id": "story:2026-10-17T09:00:00-04:00",
-        "selected_at": "2026-10-17T13:00:28.824Z",
-        "window_start": "2026-10-17T00:00:00.000Z",
-        "window_end": "2026-10-17T13:00:00.000Z",
+        "destination": "feed",
+        "slot_id": "feed:2026-10-17T10:00:00-04:00",
+        "selected_at": "2026-10-17T14:00:28.268Z",
+        "window_start": "2026-10-17T12:00:00.000Z",
+        "window_end": "2026-10-17T14:00:00.000Z",
         "score": 4,
-        "reason": "importance_score_rank"
+        "reason": "fallback_recent_pool_importance_score_rank"
       }
     },
     "953fd755-02bb-41b9-86bd-ae43e11ddea0": {
@@ -499207,6 +499207,24 @@
       "status": "selected",
       "story_id": "659dd1d7-3542-4061-a1dd-aadc4e66e806",
       "processed_at": "2026-10-17T13:00:28.824Z"
+    },
+    "feed:2026-10-17T10:00:00-04:00": {
+      "destination": "feed",
+      "slot_time": "2026-10-17T14:00:00.000Z",
+      "window_start": "2026-10-17T12:00:00.000Z",
+      "window_end": "2026-10-17T14:00:00.000Z",
+      "status": "selected",
+      "story_id": "659dd1d7-3542-4061-a1dd-aadc4e66e806",
+      "processed_at": "2026-10-17T14:00:28.268Z"
+    },
+    "story:2026-10-17T10:00:00-04:00": {
+      "destination": "story",
+      "slot_time": "2026-10-17T14:00:00.000Z",
+      "window_start": "2026-10-17T13:00:00.000Z",
+      "window_end": "2026-10-17T14:00:00.000Z",
+      "status": "selected",
+      "story_id": "df084612-0111-4789-a32e-dd31572a50e7",
+      "processed_at": "2026-10-17T14:00:28.268Z"
     }
   }
 }
