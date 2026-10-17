@@ -2,83 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/what-to-watch-in-nfl-week-3-desperate-teams-backup-qbs-and-a-battle-of-the-seans",
-      "source_name": "NFL.com",
-      "headline": "What to watch in NFL Week 3: Desperate teams, backup QBs and a battle of the Seans",
-      "published_at": "2026-09-27T09:46:06.000Z",
-      "observed_at": "2026-09-27T14:00:54.427Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/through-two-weeks-several-seats-are-heating-up",
-      "source_name": "Pro Football Talk",
-      "headline": "Through two weeks, several seats are heating up",
-      "published_at": "2026-09-27T14:14:04.000Z",
-      "observed_at": "2026-09-27T14:20:57.735Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/giants-considering-veteran-qb-addition",
-      "source_name": "NFL.com",
-      "headline": "NFL Network: Giants considering veteran QB addition, with Garoppolo, McCarthy among targets",
-      "published_at": "2026-09-27T02:24:47.000Z",
-      "observed_at": "2026-09-27T14:30:25.721Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jack-bech-prepares-for-emotional-game-in-new-orleans-where-his-brother-was-killed",
-      "source_name": "Pro Football Talk",
-      "headline": "Jack Bech prepares for emotional game in New Orleans, where his brother was killed",
-      "published_at": "2026-09-27T14:31:44.000Z",
-      "observed_at": "2026-09-27T14:40:24.305Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV",
-        "NO"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dj-moore-will-play-for-the-bills-on-sunday",
       "source_name": "Pro Football Talk",
       "headline": "DJ Moore will play for the Bills on Sunday",
@@ -42061,6 +41984,83 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/how-the-rams-are-trying-to-eliminate-bad-football-and-fix-special-teams",
+      "source_name": "NFL.com",
+      "headline": "How the Rams are trying to 'eliminate bad football' and fix special teams",
+      "published_at": "2026-10-17T11:16:04.000Z",
+      "observed_at": "2026-10-17T17:20:23.518Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/jayden-daniels-has-to-bounce-back-from-a-blunder-donovan-mcnabb-knows-what-that-takes",
+      "source_name": "NFL.com",
+      "headline": "Jayden Daniels has to bounce back from a blunder. Donovan McNabb knows what that takes",
+      "published_at": "2026-10-17T10:16:05.000Z",
+      "observed_at": "2026-10-17T17:20:23.518Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/parker-washington-s-emergence-leaves-jaguars-with-a-welcome-dilemma",
+      "source_name": "NFL.com",
+      "headline": "Parker Washington's emergence leaves Jaguars with a welcome dilemma",
+      "published_at": "2026-10-17T10:16:05.000Z",
+      "observed_at": "2026-10-17T17:20:23.518Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX",
+        "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/garrett-wilson-thought-he-was-just-meeting-a-young-fan-he-ended-up-helping-her-find-her-way-back",
+      "source_name": "NFL.com",
+      "headline": "Garrett Wilson thought he was just meeting a young fan. He ended up helping her find her way back",
+      "published_at": "2026-10-17T07:46:04.000Z",
+      "observed_at": "2026-10-17T17:20:23.518Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
