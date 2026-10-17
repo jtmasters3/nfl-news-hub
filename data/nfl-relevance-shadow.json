@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-caleb-williams-has-a-grade-2-hamstring-strain",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Caleb Williams has a Grade 2 hamstring strain",
-      "published_at": "2026-09-27T13:09:15.000Z",
-      "observed_at": "2026-09-27T13:20:20.602Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-evans-is-expected-to-play-on-sunday",
       "source_name": "Pro Football Talk",
       "headline": "Mike Evans is expected to play on Sunday",
@@ -42065,6 +42048,25 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/college-football-player-tyler-ulrich-dies-five-days-after-suffering-traumatic-injury-during-a-game",
+      "source_name": "Pro Football Talk",
+      "headline": "College football player Tyler Ulrich dies five days after suffering traumatic injury during a game",
+      "published_at": "2026-10-17T14:29:30.000Z",
+      "observed_at": "2026-10-17T14:40:18.606Z",
+      "decision": "reject",
+      "classification": "college_football",
+      "confidence": "medium",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [
+        "college_football_phrase"
+      ],
+      "reason_codes": [
+        "college_marker_no_nfl_evidence"
       ]
     }
   ]
