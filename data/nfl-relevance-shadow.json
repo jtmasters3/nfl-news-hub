@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-evans-is-expected-to-play-on-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "Mike Evans is expected to play on Sunday",
-      "published_at": "2026-09-27T13:28:19.000Z",
-      "observed_at": "2026-09-27T13:40:20.985Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI",
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-are-expected-to-have-jalen-coker-sunday",
       "source_name": "Pro Football Talk",
       "headline": "Panthers are expected to have Jalen Coker Sunday",
@@ -42067,6 +42045,27 @@
       ],
       "reason_codes": [
         "college_marker_no_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-network-eagles-not-planning-to-place-jalen-hurts-on-ir-as-they-gather-info-on-his-blood-clot",
+      "source_name": "NFL.com",
+      "headline": "NFL Network: Eagles not planning to place Jalen Hurts on IR as they gather info on his blood clot",
+      "published_at": "2026-10-17T03:43:41.000Z",
+      "observed_at": "2026-10-17T15:50:18.982Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
