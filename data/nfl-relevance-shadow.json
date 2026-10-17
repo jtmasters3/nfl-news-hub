@@ -2,48 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-k-spencer-shrader-questionable-to-return-with-groin-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "Colts K Spencer Shrader questionable to return with groin injury",
-      "published_at": "2026-09-27T17:22:46.000Z",
-      "observed_at": "2026-09-27T17:30:23.335Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/deshaun-watson-avoids-boos-in-first-drive-back-in-cleveland-since-2024",
-      "source_name": "Pro Football Talk",
-      "headline": "Deshaun Watson avoids boos in first drive back in Cleveland since 2024",
-      "published_at": "2026-09-27T17:20:46.000Z",
-      "observed_at": "2026-09-27T17:30:23.335Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/devon-achane-questionable-to-return-with-knee-injury",
       "source_name": "Pro Football Talk",
       "headline": "De'Von Achane questionable to return with knee injury",
@@ -42073,6 +42031,45 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patriots-activate-a-j-brown",
+      "source_name": "Pro Football Talk",
+      "headline": "Patriots activate A.J. Brown",
+      "published_at": "2026-10-17T20:09:14.000Z",
+      "observed_at": "2026-10-17T20:20:18.904Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jalen-hurts-will-go-on-injured-reserve-miss-at-least-four-games-and-possibly-more",
+      "source_name": "Pro Football Talk",
+      "headline": "Jalen Hurts will go on injured reserve, miss at least four games and possibly more",
+      "published_at": "2026-10-17T20:08:32.000Z",
+      "observed_at": "2026-10-17T20:20:18.904Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
