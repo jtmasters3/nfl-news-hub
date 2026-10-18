@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-lose-mike-evans-with-rib-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "49ers lose Mike Evans with rib injury",
-      "published_at": "2026-09-27T21:59:14.000Z",
-      "observed_at": "2026-09-27T22:10:22.852Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-allen-is-fourth-player-with-two-or-more-rushing-td-in-each-of-first-three-games",
       "source_name": "Pro Football Talk",
       "headline": "Josh Allen is fourth player with two or more rushing TD in each of first three games",
@@ -42055,6 +42034,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/deion-sanders-colorado-nearly-upset-no-11-utah",
+      "source_name": "Pro Football Talk",
+      "headline": "Deion Sanders, Colorado nearly upset No. 11 Utah",
+      "published_at": "2026-10-18T14:20:59.000Z",
+      "observed_at": "2026-10-18T14:30:27.345Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
