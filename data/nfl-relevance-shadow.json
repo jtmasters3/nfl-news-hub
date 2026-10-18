@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-take-28-24-lead-after-fourth-down-stop-of-ravens",
-      "source_name": "Pro Football Talk",
-      "headline": "Cowboys take 28-24 lead after fourth-down stop of Ravens",
-      "published_at": "2026-09-27T23:13:40.000Z",
-      "observed_at": "2026-09-27T23:20:23.044Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-beat-bucs-23-16-baker-mayfield-injured-late-in-game",
       "source_name": "Pro Football Talk",
       "headline": "Vikings beat Bucs 23-16, Baker Mayfield injured late in game",
@@ -42046,6 +42024,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/caleb-williams-throws-touchdown-pass-on-first-possession-since-return-from-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Caleb Williams throws touchdown pass on first possession since return from injury",
+      "published_at": "2026-10-18T17:16:13.000Z",
+      "observed_at": "2026-10-18T17:20:20.410Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
