@@ -2,30 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-fallout-week-3-patriots-battling-more-than-super-bowl-hangover",
-      "source_name": "FOX Sports",
-      "headline": "NFL Fallout Week 3: The Patriots Are Battling More Than A Super Bowl Hangover",
-      "published_at": "2026-09-28T04:05:43.000Z",
-      "observed_at": "2026-09-28T04:10:29.694Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "HOU",
-        "LV",
-        "MIN",
-        "NE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sunday-night-football-broncos-complete-comeback-defeat-rams-30-26",
       "source_name": "Pro Football Talk",
       "headline": "Sunday Night Football: Broncos complete comeback, defeat Rams 30-26",
@@ -42029,6 +42005,27 @@
         "LV"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sauce-gardner-questionable-to-return-with-calf-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Sauce Gardner questionable to return with calf injury",
+      "published_at": "2026-10-18T19:18:57.000Z",
+      "observed_at": "2026-10-18T19:30:20.822Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND"
+      ],
+      "detected_category": "live_game_state",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
