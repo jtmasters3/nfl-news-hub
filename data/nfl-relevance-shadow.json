@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/commanders-leo-chenal-carted-off-on-stretcher-with-apparent-neck-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "Commanders' Leo Chenal carted off on stretcher with apparent neck injury",
-      "published_at": "2026-09-27T18:28:50.000Z",
-      "observed_at": "2026-09-27T18:40:21.253Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA",
-        "WAS"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ivan-pace-active-for-vikings-rakeem-nunez-roches-out-for-bucs",
       "source_name": "Pro Football Talk",
       "headline": "Ivan Pace active for Vikings, Rakeem Nunez-Roches out for Bucs",
@@ -42064,6 +42042,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aqib-talib-tees-off-on-ryan-fitzpatrick-for-his-comments-about-bo-nix",
+      "source_name": "Pro Football Talk",
+      "headline": "Aqib Talib tees off on Ryan Fitzpatrick for his comments about Bo Nix",
+      "published_at": "2026-10-18T01:04:58.000Z",
+      "observed_at": "2026-10-18T01:20:19.318Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
