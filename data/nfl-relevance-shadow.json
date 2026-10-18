@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/neil-reynolds-week-3-wrap-up-2026",
-      "source_name": "NFL.com",
-      "headline": "Neil Reynolds' Week 3 Wrap Up",
-      "published_at": "2026-09-28T01:28:30.000Z",
-      "observed_at": "2026-09-28T13:40:21.865Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/monday-morning-nfl-top-10-rankings-week-3-2026",
       "source_name": "FOX Sports",
       "headline": "Monday Morning NFL Top 10 Rankings: Undefeated Teams Shoot Up The Rankings",
@@ -42016,6 +41999,27 @@
       "detected_teams": [
         "BUF",
         "LV"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cam-skattebo-i-got-punished-for-fumble-and-i-understand-why-giants-did-that",
+      "source_name": "Pro Football Talk",
+      "headline": "Cam Skattebo: I got punished for fumble and I understand why Giants did that",
+      "published_at": "2026-10-18T22:06:41.000Z",
+      "observed_at": "2026-10-18T22:10:21.267Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
