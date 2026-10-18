@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/devon-achane-downgraded-to-out-with-knee-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "De'Von Achane downgraded to out with knee injury",
-      "published_at": "2026-09-27T18:53:52.000Z",
-      "observed_at": "2026-09-27T19:00:27.266Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC",
-        "MIA"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lions-stretch-lead-to-24-10-on-two-jahmyr-gibbs-touchdowns",
       "source_name": "Pro Football Talk",
       "headline": "Lions stretch lead to 24-10 on two Jahmyr Gibbs touchdowns",
@@ -42059,6 +42037,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/notre-dame-gets-screwed-twice-on-final-play-at-byu",
+      "source_name": "Pro Football Talk",
+      "headline": "Notre Dame gets screwed, twice, on \"final\" play at BYU",
+      "published_at": "2026-10-18T03:43:59.000Z",
+      "observed_at": "2026-10-18T03:50:19.493Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
