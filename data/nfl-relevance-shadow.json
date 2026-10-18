@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/baker-mayfield-dislocated-his-thumb-will-have-an-mri",
-      "source_name": "Pro Football Talk",
-      "headline": "Baker Mayfield dislocated his thumb, will have an MRI",
-      "published_at": "2026-09-27T23:50:30.000Z",
-      "observed_at": "2026-09-28T00:00:30.590Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN",
-        "TB"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/vikings-buccaneers-takeaways-baker-mayfield-todd-bowles-kyler-murray",
-      "source_name": "FOX Sports",
-      "headline": "Another Brutal Buccaneers Loss: 3 Takeaways From Vikings' Win In Tampa Bay",
-      "published_at": "2026-09-28T00:00:35.000Z",
-      "observed_at": "2026-09-28T00:10:18.525Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN",
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kirk-cousins-throws-3-tds-raiders-move-to-3-0-with-35-27-victory-over-saints",
       "source_name": "Pro Football Talk",
       "headline": "Kirk Cousins throws 3 TDs, Raiders move to 3-0 with 35-27 victory over Saints",
@@ -42029,6 +41985,45 @@
       "detected_teams": [
         "BAL",
         "CLE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/notable-injuries-news-sunday-week-6-games-2026",
+      "source_name": "NFL.com",
+      "headline": "Notable injuries, news from Sunday's Week 6 games",
+      "published_at": "2026-10-18T05:35:55.000Z",
+      "observed_at": "2026-10-18T17:40:19.741Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/drake-maye-romeo-doubs-put-patriots-up-7-3",
+      "source_name": "Pro Football Talk",
+      "headline": "Drake Maye, Romeo Doubs put Patriots up 7-3",
+      "published_at": "2026-10-18T17:35:10.000Z",
+      "observed_at": "2026-10-18T17:40:19.741Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE",
+        "NYJ"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
