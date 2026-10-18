@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-allen-is-fourth-player-with-two-or-more-rushing-td-in-each-of-first-three-games",
-      "source_name": "Pro Football Talk",
-      "headline": "Josh Allen is fourth player with two or more rushing TD in each of first three games",
-      "published_at": "2026-09-27T22:00:52.000Z",
-      "observed_at": "2026-09-27T22:10:22.852Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ravens-lead-cowboys-17-13-at-halftime-in-brazil",
       "source_name": "Pro Football Talk",
       "headline": "Ravens lead Cowboys 17-13 at halftime in Brazil",
@@ -42051,6 +42034,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-s-malik-mustaphas-illegal-hit-if-flagged-would-have-extended-seattles-final-drive",
+      "source_name": "Pro Football Talk",
+      "headline": "49ers S Malik Mustapha's illegal hit, if flagged, would have extended Seattle's final drive",
+      "published_at": "2026-10-18T14:56:35.000Z",
+      "observed_at": "2026-10-18T15:00:26.486Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF",
+        "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
