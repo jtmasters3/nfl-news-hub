@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/buccaneers-have-lost-an-unprecedented-12-consecutive-games-against-the-spread",
-      "source_name": "Pro Football Talk",
-      "headline": "Buccaneers have lost an unprecedented 12 consecutive games against the spread",
-      "published_at": "2026-09-28T09:21:17.000Z",
-      "observed_at": "2026-09-28T09:30:33.300Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-network-commanders-expected-to-sign-rb-austin-ekeler",
       "source_name": "NFL.com",
       "headline": "NFL Network: Commanders expected to sign RB Austin Ekeler",
@@ -42029,6 +42008,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/bloomingtons-heavyweight-matchup-an-inside-look-at-ohio-state-vs-indiana",
+      "source_name": "FOX Sports",
+      "headline": "Bloomington’s Heavyweight Matchup: An Inside Look At Ohio State vs. Indiana",
+      "published_at": "2026-10-18T19:08:18.000Z",
+      "observed_at": "2026-10-18T20:00:31.409Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
