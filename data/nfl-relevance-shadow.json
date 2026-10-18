@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/saints-end-first-quarter-with-a-lead-for-the-first-time-since-dec-2024",
-      "source_name": "Pro Football Talk",
-      "headline": "Saints end first quarter with a lead for the first time since Dec. 2024",
-      "published_at": "2026-09-27T20:58:49.000Z",
-      "observed_at": "2026-09-27T21:10:23.032Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NO"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dolphins-not-optimistic-about-devon-achanes-knee-injury",
       "source_name": "Pro Football Talk",
       "headline": "Dolphins not optimistic about De'Von Achane's knee injury",
@@ -42051,6 +42030,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/from-hawaii-to-england-to-japan-nfl-fans-share-similar-experiences-just-at-different-times",
+      "source_name": "NFL.com",
+      "headline": "From Hawaii to England to Japan, NFL fans share similar experiences, just at different times",
+      "published_at": "2026-10-17T09:46:05.000Z",
+      "observed_at": "2026-10-18T13:30:21.820Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
