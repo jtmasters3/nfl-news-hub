@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-jalen-coker-questionable-for-week-4-with-a-quad-strain",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Jalen Coker questionable for Week 4 with a quad strain",
-      "published_at": "2026-09-28T15:14:56.000Z",
-      "observed_at": "2026-09-28T15:20:22.052Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-sept-28",
-      "source_name": "NFL.com",
-      "headline": "NFL news roundup: Latest league updates from Monday, Sept. 28",
-      "published_at": "2026-09-28T03:16:12.000Z",
-      "observed_at": "2026-09-28T15:30:29.462Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mekhi-becton-worked-out-for-the-packers",
       "source_name": "Pro Football Talk",
       "headline": "Mekhi Becton worked out for the Packers",
@@ -42035,6 +41997,51 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/john-harbaugh-no-giants-qb-decision-yet-after-j-j-mccarthy-replaces-jameis-winston-vs-saints",
+      "source_name": "NFL.com",
+      "headline": "John Harbaugh: No Giants QB decision yet after J.J. McCarthy replaces Jameis Winston vs. Saints",
+      "published_at": "2026-10-18T10:35:31.000Z",
+      "observed_at": "2026-10-18T22:40:20.827Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "HOU",
+        "NO",
+        "NYG",
+        "NYJ"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-allens-magic-act-gives-bills-23-13-lead",
+      "source_name": "Pro Football Talk",
+      "headline": "Josh Allen's magic act gives Bills 23-13 lead",
+      "published_at": "2026-10-18T22:34:27.000Z",
+      "observed_at": "2026-10-18T22:40:20.827Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
