@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/2026-nfl-fantasy-football-waiver-wire-week-4-te-juwan-johnson-rb-braelon-allen-headline-targets",
-      "source_name": "NFL.com",
-      "headline": "2026 NFL fantasy football waiver wire, Week 4: TE Juwan Johnson, RB Braelon Allen headline targets",
-      "published_at": "2026-09-28T04:26:20.000Z",
-      "observed_at": "2026-09-28T16:30:25.304Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/jj-mccarthy-giants-vikings-trade",
       "source_name": "NFL.com",
       "headline": "NFL Network: Giants to trade for Vikings QB J.J. McCarthy following Jaxson Dart injury",
@@ -42034,6 +42017,28 @@
       "detected_teams": [
         "KC",
         "LAC"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kirk-cousins-td-pass-has-raiders-tied-with-bills-23-23",
+      "source_name": "Pro Football Talk",
+      "headline": "Kirk Cousins' TD pass has Raiders tied with Bills 23-23",
+      "published_at": "2026-10-18T23:07:20.000Z",
+      "observed_at": "2026-10-18T23:10:18.163Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "LV"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
