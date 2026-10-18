@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chiefs-lead-dolphins-14-7-at-halftime",
-      "source_name": "Pro Football Talk",
-      "headline": "Chiefs lead Dolphins 14-7 at halftime",
-      "published_at": "2026-09-27T18:33:20.000Z",
-      "observed_at": "2026-09-27T18:40:21.253Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC",
-        "MIA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-allen-1-yard-td-ties-bills-chargers-10-10-at-halftime",
       "source_name": "Pro Football Talk",
       "headline": "Josh Allen 1-yard TD ties Bills-Chargers 10-10 at halftime",
@@ -42070,6 +42048,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steve-sarkisian-doesnt-rule-out-benching-arch-manning",
+      "source_name": "Pro Football Talk",
+      "headline": "Steve Sarkisian doesn't rule out benching Arch Manning",
+      "published_at": "2026-10-18T00:00:18.000Z",
+      "observed_at": "2026-10-18T00:10:21.568Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
