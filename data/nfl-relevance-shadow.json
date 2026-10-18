@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/giants-reportedly-trade-qb-j-j-mccarthy",
-      "source_name": "FOX Sports",
-      "headline": "Vikings Trade QB J.J. McCarthy To Giants For Fifth-Round Draft Pick",
-      "published_at": "2026-09-28T16:36:09.000Z",
-      "observed_at": "2026-09-28T16:50:19.966Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN",
-        "NYG",
-        "NYJ"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/todd-bowles-baker-mayfield-out-a-minimum-of-three-weeks-with-thumb-dislocation",
       "source_name": "Pro Football Talk",
       "headline": "Todd Bowles: Baker Mayfield out a minimum of three weeks with thumb dislocation",
@@ -42042,6 +42019,29 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/patriots-ground-jets-despite-not-playing-their-best-why-that-s-a-good-sign-going-forward",
+      "source_name": "NFL.com",
+      "headline": "Patriots ground Jets despite not playing their best. Why that's a good sign going forward",
+      "published_at": "2026-10-18T11:31:06.000Z",
+      "observed_at": "2026-10-18T23:50:20.629Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE",
+        "NYJ"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:roster_move"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
