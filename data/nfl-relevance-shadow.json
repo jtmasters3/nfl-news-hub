@@ -2,66 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/monday-morning-nfl-top-10-rankings-week-3-2026",
-      "source_name": "FOX Sports",
-      "headline": "Monday Morning NFL Top 10 Rankings: Undefeated Teams Shoot Up The Rankings",
-      "published_at": "2026-09-28T14:17:41.000Z",
-      "observed_at": "2026-09-28T14:40:21.014Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/dolphins-rb-devon-achane-miss-2026-season-acl-tear",
-      "source_name": "NFL.com",
-      "headline": "NFL Network: Dolphins RB De'Von Achane to miss rest of season after tearing ACL in loss to Chiefs",
-      "published_at": "2026-09-28T02:40:29.000Z",
-      "observed_at": "2026-09-28T14:50:22.165Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC",
-        "MIA"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/despite-1-2-start-rams-remain-favorites-to-win-the-super-bowl",
-      "source_name": "Pro Football Talk",
-      "headline": "Despite 1-2 start, Rams remain favorites to win the Super Bowl",
-      "published_at": "2026-09-28T14:57:33.000Z",
-      "observed_at": "2026-09-28T15:00:30.834Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/devon-achane-out-for-season-with-torn-acl",
       "source_name": "Pro Football Talk",
       "headline": "De'Von Achane out for season with torn ACL",
@@ -42022,6 +41962,72 @@
         "NYG"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/mike-mccarthy-spends-halftime-of-steelers-bucs-game-in-medical-tent-i-don-t-recommend-it",
+      "source_name": "NFL.com",
+      "headline": "Mike McCarthy spends halftime of Steelers-Bucs game in medical tent: 'I don't recommend it'",
+      "published_at": "2026-10-18T07:16:08.000Z",
+      "observed_at": "2026-10-18T22:20:19.621Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT",
+        "TB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/c-j-gardner-johnson-ejected-bills-raiders-spit-video",
+      "source_name": "FOX Sports",
+      "headline": "Bills DB C.J. Gardner-Johnson Ejected vs. Raiders For Apparent Spit",
+      "published_at": "2026-10-18T22:18:44.000Z",
+      "observed_at": "2026-10-18T22:20:19.621Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "LV"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/caleb-williams-returns-from-injury-earns-lfg-player-game-vs-falcons",
+      "source_name": "FOX Sports",
+      "headline": "Bears Star Caleb Williams Plays Stellar Football In Return, Earning LFG Player Of The Game",
+      "published_at": "2026-10-18T22:12:09.000Z",
+      "observed_at": "2026-10-18T22:20:19.621Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "CHI"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
