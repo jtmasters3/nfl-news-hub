@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/deebo-samuel-makes-nfl-history-with-0-catches-for-80-receiving-yards-and-1-td",
-      "source_name": "Pro Football Talk",
-      "headline": "Deebo Samuel makes NFL history with 0 catches for 80 receiving yards and 1 TD",
-      "published_at": "2026-09-28T00:48:35.000Z",
-      "observed_at": "2026-09-28T01:00:35.034Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/oregon-says-dante-moores-ct-scan-and-mri-were-clean",
-      "source_name": "Pro Football Talk",
-      "headline": "Oregon says Dante Moore's CT scan and MRI were \"clean\"",
-      "published_at": "2026-09-28T00:48:19.000Z",
-      "observed_at": "2026-09-28T01:00:35.034Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/symptoms-of-old-bengals-raise-flag-of-concern-in-mistake-filled-loss-to-steelers",
       "source_name": "NFL.com",
       "headline": "Symptoms of old Bengals raise flag of concern in mistake-filled loss to Steelers",
@@ -42017,6 +41979,50 @@
       "detected_teams": [
         "BAL",
         "CLE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bucs-lead-steelers-13-3-at-halftime",
+      "source_name": "Pro Football Talk",
+      "headline": "Bucs lead Steelers 13-3 at halftime",
+      "published_at": "2026-10-18T18:39:43.000Z",
+      "observed_at": "2026-10-18T18:50:18.211Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT",
+        "TB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/saints-tie-giants-10-10-just-before-halftime",
+      "source_name": "Pro Football Talk",
+      "headline": "Saints tie Giants 10-10 just before halftime",
+      "published_at": "2026-10-18T18:38:46.000Z",
+      "observed_at": "2026-10-18T18:50:18.211Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NO",
+        "NYG"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
