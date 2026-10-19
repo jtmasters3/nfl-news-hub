@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/commanders-qb-jayden-daniels-expected-to-travel-practice-in-london",
-      "source_name": "NFL.com",
-      "headline": "Commanders QB Jayden Daniels expected to travel, practice in London",
-      "published_at": "2026-09-28T07:31:06.000Z",
-      "observed_at": "2026-09-28T20:50:25.551Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-mike-evans-considered-day-to-day-with-rib-injury",
       "source_name": "Pro Football Talk",
       "headline": "Report: Mike Evans considered day-to-day with rib injury",
@@ -42052,6 +42031,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-odds-week-7-lines-spreads-results-all-14-games",
+      "source_name": "FOX Sports",
+      "headline": "2026 NFL Odds Week 7: Lines, Spreads, Results For All 14 Games",
+      "published_at": "2026-10-19T04:33:00.000Z",
+      "observed_at": "2026-10-19T04:40:20.122Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
