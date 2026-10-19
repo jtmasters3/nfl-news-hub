@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-mcvay-updates-injuries-to-tes-colby-parkinson-terrance-ferguson",
-      "source_name": "Pro Football Talk",
-      "headline": "Sean McVay updates injuries to TEs Colby Parkinson, Terrance Ferguson",
-      "published_at": "2026-09-28T22:43:45.000Z",
-      "observed_at": "2026-09-28T22:50:20.779Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN",
-        "LAR"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/week-3-monday-night-inactives-philadelphia-eagles-at-chicago-bears",
-      "source_name": "NFL.com",
-      "headline": "Week 3 Monday night inactives: Philadelphia Eagles at Chicago Bears",
-      "published_at": "2026-09-28T10:47:49.000Z",
-      "observed_at": "2026-09-28T23:00:28.190Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/as-fervor-of-pulsating-win-over-cowboys-fades-ravens-face-crisis-at-center",
       "source_name": "NFL.com",
       "headline": "As fervor of pulsating win over Cowboys fades, Ravens face crisis at center",
@@ -42055,6 +42011,46 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kenneth-walker-on-pace-to-break-nfl-records-for-rushing-yards-yards-from-scrimmage",
+      "source_name": "Pro Football Talk",
+      "headline": "Kenneth Walker on pace to break NFL records for rushing yards, yards from scrimmage",
+      "published_at": "2026-10-19T12:28:10.000Z",
+      "observed_at": "2026-10-19T12:30:23.890Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC",
+        "SEA"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/liam-coen-on-brian-thomas-not-playing-in-second-half-guys-have-to-make-plays",
+      "source_name": "Pro Football Talk",
+      "headline": "Liam Coen on Brian Thomas not playing in second half: Guys have to make plays",
+      "published_at": "2026-10-19T12:18:31.000Z",
+      "observed_at": "2026-10-19T12:30:23.890Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
