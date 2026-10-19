@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-mike-evans-considered-day-to-day-with-rib-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Mike Evans considered day-to-day with rib injury",
-      "published_at": "2026-09-28T20:45:04.000Z",
-      "observed_at": "2026-09-28T20:50:25.551Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI",
-        "SF"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/travis-etienne-set-to-miss-time-due-to-hamstring-injury",
       "source_name": "Pro Football Talk",
       "headline": "Travis Etienne set to miss time due to hamstring injury",
@@ -42048,6 +42026,29 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/overreaction-monday-rams-will-miss-playoffs-cowboys-cooked",
+      "source_name": "FOX Sports",
+      "headline": "Overreaction Monday: Rams Will Miss The Playoffs? Are The Cowboys Cooked?",
+      "published_at": "2026-10-19T04:47:49.000Z",
+      "observed_at": "2026-10-19T05:00:27.655Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "DAL",
+        "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
