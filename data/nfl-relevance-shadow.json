@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/giants-release-odell-beckham-jr-stats",
-      "source_name": "FOX Sports",
-      "headline": "Reunion Over: Giants Reportedly Releasing Odell Beckham Jr.",
-      "published_at": "2026-09-29T17:08:53.000Z",
-      "observed_at": "2026-09-29T17:20:20.983Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG",
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-packers-game-in-week-5-moved-to-1-p-m-et-kickoff",
-      "source_name": "Pro Football Talk",
-      "headline": "Bears-Packers game in Week 5 moved to 1 p.m. ET kickoff",
-      "published_at": "2026-09-29T17:14:54.000Z",
-      "observed_at": "2026-09-29T17:20:20.983Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-sign-qb-max-brosmer-to-53-man-roster",
       "source_name": "Pro Football Talk",
       "headline": "Vikings sign QB Max Brosmer to 53-man roster",
@@ -42030,6 +41986,50 @@
       "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/sean-payton-is-sticking-with-bo-nix-will-improving-finer-things-jolt-broncos-qb",
+      "source_name": "NFL.com",
+      "headline": "Sean Payton is sticking with Bo Nix. Will improving 'finer things' jolt Broncos QB?",
+      "published_at": "2026-10-19T07:31:05.000Z",
+      "observed_at": "2026-10-19T21:40:18.859Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/raiders-cut-ol-evan-neal-from-the-practice-squad",
+      "source_name": "Pro Football Talk",
+      "headline": "Raiders cut OL Evan Neal from the practice squad",
+      "published_at": "2026-10-19T21:31:26.000Z",
+      "observed_at": "2026-10-19T21:40:18.859Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:free_agency"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
