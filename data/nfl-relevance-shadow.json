@@ -2,72 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brian-schottenheimer-explains-time-management-game-management-issues-at-end-of-loss",
-      "source_name": "Pro Football Talk",
-      "headline": "Brian Schottenheimer explains time management, game management issues at end of loss",
-      "published_at": "2026-09-28T20:19:07.000Z",
-      "observed_at": "2026-09-28T20:30:24.221Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/justin-jefferson-vikings-ankle-injury-update",
-      "source_name": "FOX Sports",
-      "headline": "Vikings WR Justin Jefferson Reportedly Avoids Long-Term Damage on Ankle",
-      "published_at": "2026-09-28T20:35:36.000Z",
-      "observed_at": "2026-09-28T20:40:20.387Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN",
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/big-bets-report-rams-broncos-cost-bettor-300k-another-turns-2-10k",
-      "source_name": "FOX Sports",
-      "headline": "Big Bets Report: Rams-Broncos Cost Bettor $300k; Another Turns $2 Into $10k",
-      "published_at": "2026-09-28T20:22:35.000Z",
-      "observed_at": "2026-09-28T20:40:20.387Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN",
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/commanders-qb-jayden-daniels-expected-to-travel-practice-in-london",
       "source_name": "NFL.com",
       "headline": "Commanders QB Jayden Daniels expected to travel, practice in London",
@@ -42049,6 +41983,67 @@
         "HOU",
         "LAR",
         "NYG"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-week-6-defining-stats-mahomes-matches-brady-travis-hunter-history",
+      "source_name": "FOX Sports",
+      "headline": "NFL Week 6 Defining Stats: Mahomes Matches Brady, Travis Hunter Makes History",
+      "published_at": "2026-10-19T03:56:43.000Z",
+      "observed_at": "2026-10-19T04:00:23.605Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/cowboys-packers-sunday-night-football-takeaways",
+      "source_name": "FOX Sports",
+      "headline": "Stay Hot, Wisconsin: 3 Takeaways As Packers Continue Win Streak In Victory vs. Cowboys",
+      "published_at": "2026-10-19T03:52:27.000Z",
+      "observed_at": "2026-10-19T04:00:23.605Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "GB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sunday-night-football-packers-move-to-4-2-with-23-13-victory-over-cowboys",
+      "source_name": "Pro Football Talk",
+      "headline": "Sunday Night Football: Packers move to 4-2 with 23-13 victory over Cowboys",
+      "published_at": "2026-10-19T03:53:47.000Z",
+      "observed_at": "2026-10-19T04:00:23.605Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "GB"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
