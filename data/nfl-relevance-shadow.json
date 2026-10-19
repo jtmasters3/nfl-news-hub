@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/qb-stock-market-week-4-trevor-lawrence-finally-who-we-thought-he-was",
-      "source_name": "FOX Sports",
-      "headline": "QB Stock Market Week 4: Is Trevor Lawrence Finally Who We Thought He Was?",
-      "published_at": "2026-09-29T16:25:49.000Z",
-      "observed_at": "2026-09-29T16:50:22.439Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/buccaneers-sign-s-ifeatu-melifonwu-to-53-man-roster",
       "source_name": "Pro Football Talk",
       "headline": "Buccaneers sign S Ifeatu Melifonwu to 53-man roster",
@@ -42025,6 +42008,27 @@
         "BUF"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/micah-parsons-wont-practice-this-week-packers-dont-rule-out-week-8-return",
+      "source_name": "Pro Football Talk",
+      "headline": "Micah Parsons won't practice this week, Packers don't rule out Week 8 return",
+      "published_at": "2026-10-19T21:00:12.000Z",
+      "observed_at": "2026-10-19T21:10:22.883Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
