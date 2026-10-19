@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/buccaneers-wr-jalen-mcmillan-is-expected-to-miss-6-8-weeks-with-knee-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "Buccaneers WR Jalen McMillan is expected to miss 6-8 weeks with knee injury",
-      "published_at": "2026-09-29T10:35:20.000Z",
-      "observed_at": "2026-09-29T10:40:23.102Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "TB"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaguars-got-football-from-travis-hunters-first-interception-after-sideline-squabble",
       "source_name": "Pro Football Talk",
       "headline": "Jaguars got football from Travis Hunter's first interception after sideline squabble",
@@ -42033,6 +42012,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patrick-mahomes-ties-tom-brady-for-fewest-games-to-100-qb-wins",
+      "source_name": "Pro Football Talk",
+      "headline": "Patrick Mahomes ties Tom Brady for fewest games to 100 QB wins",
+      "published_at": "2026-10-19T16:20:12.000Z",
+      "observed_at": "2026-10-19T16:30:48.346Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
