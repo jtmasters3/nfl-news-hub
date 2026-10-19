@@ -2,65 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-gm-nolan-teasley-j-j-mccarthy-trade-was-the-best-decision-for-the-vikings",
-      "source_name": "Pro Football Talk",
-      "headline": "Vikings GM Nolan Teasley: J.J. McCarthy trade was the best decision for the Vikings",
-      "published_at": "2026-09-28T19:33:08.000Z",
-      "observed_at": "2026-09-28T19:40:25.263Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-asks-department-of-homeland-security-to-remove-video-featuring-brian-dawkins-highlights",
-      "source_name": "Pro Football Talk",
-      "headline": "NFL asks Department of Homeland Security to remove video featuring Brian Dawkins highlights",
-      "published_at": "2026-09-28T19:27:54.000Z",
-      "observed_at": "2026-09-28T19:40:25.263Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-confirm-te-josh-oliver-tore-his-biceps",
-      "source_name": "Pro Football Talk",
-      "headline": "Vikings confirm TE Josh Oliver tore his biceps",
-      "published_at": "2026-09-28T19:44:54.000Z",
-      "observed_at": "2026-09-28T19:50:23.544Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ravens-lt-ronnie-stanley-is-closer-to-a-return-this-week",
       "source_name": "Pro Football Talk",
       "headline": "Ravens LT Ronnie Stanley is closer to a return this week",
@@ -42037,6 +41978,73 @@
       "detected_teams": [
         "BUF",
         "LV"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/john-harbaugh-denies-benching-cam-skattebo-after-giants-loss-saints",
+      "source_name": "FOX Sports",
+      "headline": "John Harbaugh Denies Benching Cam Skattebo After Giants’ Loss To Saints",
+      "published_at": "2026-10-19T02:01:35.000Z",
+      "observed_at": "2026-10-19T02:10:21.997Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NO",
+        "NYG",
+        "NYJ"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-k-blake-grupe-left-sofi-stadium-with-crutches-and-a-brace-on-his-leg",
+      "source_name": "Pro Football Talk",
+      "headline": "Rams K Blake Grupe left SoFi Stadium with crutches and a brace on his leg",
+      "published_at": "2026-10-19T01:59:34.000Z",
+      "observed_at": "2026-10-19T02:10:21.997Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sunday-night-football-jordan-love-td-gives-packers-17-0-halftime-lead",
+      "source_name": "Pro Football Talk",
+      "headline": "Sunday Night Football: Jordan Love TD gives Packers 17-0 halftime lead",
+      "published_at": "2026-10-19T01:57:22.000Z",
+      "observed_at": "2026-10-19T02:10:21.997Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "GB"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
