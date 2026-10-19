@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/t-j-edwards-got-nothing-from-eavesdropping-on-jalen-hurtss-calls-at-the-line",
-      "source_name": "Pro Football Talk",
-      "headline": "T.J. Edwards got nothing from eavesdropping on Eagles' huddle",
-      "published_at": "2026-09-29T14:50:01.000Z",
-      "observed_at": "2026-09-29T15:00:30.436Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-afc-nfc-title-odds",
-      "source_name": "FOX Sports",
-      "headline": "2026 NFL AFC, NFC Title Odds: Contenders Cratering Early In The Season",
-      "published_at": "2026-09-29T15:02:42.000Z",
-      "observed_at": "2026-09-29T15:10:22.435Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/jim-harbaugh-justin-herbert-quote-chargers-schedule",
       "source_name": "FOX Sports",
       "headline": "Chargers Coach Jim Harbaugh's Message To Justin Herbert: 'Be Better\"",
@@ -42028,6 +41989,48 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nick-sirianni-sean-mannion-will-remain-the-play-caller",
+      "source_name": "Pro Football Talk",
+      "headline": "Nick Sirianni: Sean Mannion will remain the play caller",
+      "published_at": "2026-10-19T20:10:50.000Z",
+      "observed_at": "2026-10-19T20:20:19.408Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-place-k-blake-grupe-on-ir",
+      "source_name": "Pro Football Talk",
+      "headline": "Rams place K Blake Grupe on IR",
+      "published_at": "2026-10-19T20:06:04.000Z",
+      "observed_at": "2026-10-19T20:20:19.408Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
