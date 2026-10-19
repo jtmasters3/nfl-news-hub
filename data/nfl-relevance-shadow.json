@@ -2,69 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/senate-passes-the-protect-college-sports-act",
-      "source_name": "Pro Football Talk",
-      "headline": "Senate passes the Protect College Sports Act",
-      "published_at": "2026-09-29T02:33:57.000Z",
-      "observed_at": "2026-09-29T02:40:21.671Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/eagles-bears-on-monday-night-football-what-we-learned-from-chicago-s-27-7-win-over-philadelphia",
-      "source_name": "NFL.com",
-      "headline": "Eagles-Bears on 'Monday Night Football': What We Learned from Chicago's 27-7 win over Philadelphia",
-      "published_at": "2026-09-29T03:11:29.000Z",
-      "observed_at": "2026-09-29T03:20:20.859Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/falcons-raiders-rise-packers-patriots-searching-solutions",
-      "source_name": "FOX Sports",
-      "headline": "NFL Best And Worst: Falcons Turn It Around; No Answers For Packers, Patriots",
-      "published_at": "2026-09-29T03:04:32.000Z",
-      "observed_at": "2026-09-29T03:20:20.859Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "GB",
-        "LV",
-        "NE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/plays-that-stood-out-nfl-week-3-justin-herbert-lamar-jackson",
       "source_name": "FOX Sports",
       "headline": "The Plays That Stood Out In Week 3, From A 'Meatball Sub' To Lamar Jackson's Game-Winner",
@@ -42041,6 +41978,65 @@
         "BUF"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-oct-19",
+      "source_name": "NFL.com",
+      "headline": "NFL news roundup: Latest league updates from Monday, Oct. 19",
+      "published_at": "2026-10-19T02:42:01.000Z",
+      "observed_at": "2026-10-19T14:50:22.006Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/eagles-qb-jalen-hurts-out-2026-season-blood-clots",
+      "source_name": "NFL.com",
+      "headline": "NFL Network: Eagles QB Jalen Hurts likely out for rest of 2026 season due to blood clots",
+      "published_at": "2026-10-19T02:33:38.000Z",
+      "observed_at": "2026-10-19T14:50:22.006Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/philadelphia-eagles-jalen-hurts-blood-clots-lungs",
+      "source_name": "FOX Sports",
+      "headline": "Eagles QB Jalen Hurts Ruled Out For The Season After More Blood Clots Discovered",
+      "published_at": "2026-10-19T14:38:32.000Z",
+      "observed_at": "2026-10-19T14:50:22.006Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
