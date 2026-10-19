@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/giants-to-waive-qb-jake-haener-intend-to-re-sign-him-to-practice-squad",
-      "source_name": "Pro Football Talk",
-      "headline": "Giants to waive QB Jake Haener, intend to re-sign him to practice squad",
-      "published_at": "2026-09-28T17:24:39.000Z",
-      "observed_at": "2026-09-28T17:30:24.296Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/the-rams-felt-they-should-have-beaten-the-broncos-the-reality-is-they-re-1-2",
       "source_name": "NFL.com",
       "headline": "The Rams felt they should have beaten the Broncos. The reality is they're 1-2",
@@ -42045,6 +42023,27 @@
       "detected_teams": [
         "BAL",
         "CLE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/a-j-brown-im-much-better-than-what-i-put-on-display",
+      "source_name": "Pro Football Talk",
+      "headline": "A.J. Brown: I'm much better than what I put on display",
+      "published_at": "2026-10-19T00:34:47.000Z",
+      "observed_at": "2026-10-19T00:40:23.259Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
