@@ -2,51 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sec-admits-officiating-error-let-tennessee-use-illegal-onside-kick-vs-texas",
-      "source_name": "Pro Football Talk",
-      "headline": "SEC admits officiating error let Tennessee use illegal onside kick vs. Texas",
-      "published_at": "2026-09-28T18:53:56.000Z",
-      "observed_at": "2026-09-28T19:00:35.884Z",
-      "decision": "keep",
-      "classification": "nfl_with_college_context",
-      "confidence": "high",
-      "detected_teams": [
-        "TEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [
-        "college_football_phrase",
-        "conference_sec"
-      ],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-breece-hall-week-to-week-with-quad-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Breece Hall week-to-week with quad injury",
-      "published_at": "2026-09-28T19:12:14.000Z",
-      "observed_at": "2026-09-28T19:20:21.021Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYJ"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-s-jalen-thompson-to-miss-four-plus-weeks-with-hamstring-injury",
       "source_name": "Pro Football Talk",
       "headline": "Cowboys S Jalen Thompson to miss four-plus weeks with hamstring injury",
@@ -42033,6 +41988,49 @@
       "confidence": "high",
       "detected_teams": [
         "CAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/why-didn-t-giants-rb-cam-skattebo-tally-a-carry-vs-saints-i-got-punished-for-what-i-did",
+      "source_name": "NFL.com",
+      "headline": "Why didn't Giants RB Cam Skattebo tally a carry vs. Saints? 'I got punished for what I did'",
+      "published_at": "2026-10-19T12:31:06.000Z",
+      "observed_at": "2026-10-19T01:10:22.869Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NO",
+        "NYG"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/referee-shawn-smith-umpire-tra-blake-witnessed-c-j-gardner-johnson-spitting-on-an-opponent",
+      "source_name": "Pro Football Talk",
+      "headline": "Referee Shawn Smith: Umpire Tra Blake witnessed C.J. Gardner-Johnson spitting on an opponent",
+      "published_at": "2026-10-19T01:00:54.000Z",
+      "observed_at": "2026-10-19T01:10:22.869Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
