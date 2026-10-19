@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/todd-bowles-baker-mayfield-out-a-minimum-of-three-weeks-with-thumb-dislocation",
-      "source_name": "Pro Football Talk",
-      "headline": "Todd Bowles: Baker Mayfield out a minimum of three weeks with thumb dislocation",
-      "published_at": "2026-09-28T16:51:53.000Z",
-      "observed_at": "2026-09-28T17:00:29.849Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN",
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-week-3-sunday-aftermath-tyler-loop-drake-maye-brock-purdy-raiders",
-      "source_name": "NFL.com",
-      "headline": "NFL Week 3 Sunday aftermath: Tyler Loop's heroics, Drake Maye concerns, Brock Purdy's MVP form",
-      "published_at": "2026-09-28T04:59:06.000Z",
-      "observed_at": "2026-09-28T17:10:20.743Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/buccaneers-qb-baker-mayfield-thumb-out-at-least-three-weeks-jalon-daniels",
       "source_name": "NFL.com",
       "headline": "Buccaneers QB Baker Mayfield out at least 3 weeks with thumb injury; rookie Jalon Daniels to start",
@@ -42041,6 +42002,51 @@
       "detected_category": "roster_move",
       "nfl_evidence": [
         "nfl_team_detected",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/rams-cardinals-unnecessary-roughness-penalty-explanation",
+      "source_name": "FOX Sports",
+      "headline": "Why Officiating Expert Disagrees With Penalty That Set Cardinals Up For Game-Winner vs. Rams",
+      "published_at": "2026-10-19T00:00:37.000Z",
+      "observed_at": "2026-10-19T00:10:19.481Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI",
+        "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/andy-dalton-tells-eagles-no-thanks-will-sign-with-another-team-soon",
+      "source_name": "Pro Football Talk",
+      "headline": "Andy Dalton tells Eagles \"no thanks,\" will sign with another team soon",
+      "published_at": "2026-10-19T00:01:41.000Z",
+      "observed_at": "2026-10-19T00:10:19.481Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_signs_with",
         "nfl_preserving_category:roster_move"
       ],
       "non_nfl_evidence": [],
