@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chop-robinson-not-sure-why-i-got-called-for-roughing-patrick-mahomes-but-i-had-to-play-on",
-      "source_name": "Pro Football Talk",
-      "headline": "Chop Robinson: Not sure why I got called for roughing Patrick Mahomes, but I had to play on",
-      "published_at": "2026-09-29T15:39:16.000Z",
-      "observed_at": "2026-09-29T15:50:21.427Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-tuesday-sept-29",
-      "source_name": "NFL.com",
-      "headline": "NFL news roundup: Latest league updates from Tuesday, Sept. 29",
-      "published_at": "2026-09-29T04:10:16.000Z",
-      "observed_at": "2026-09-29T16:20:22.197Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bengals-waive-wr-keshawn-williams",
       "source_name": "Pro Football Talk",
       "headline": "Bengals waive WR Ke'Shawn Williams",
@@ -42021,6 +41983,48 @@
         "WAS"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-designate-rb-jordan-mason-to-return-to-practice",
+      "source_name": "Pro Football Talk",
+      "headline": "Vikings designate RB Jordan Mason to return to practice",
+      "published_at": "2026-10-19T20:45:02.000Z",
+      "observed_at": "2026-10-19T20:50:18.994Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-rule-out-wr-christian-kirk-elevate-two-players",
+      "source_name": "Pro Football Talk",
+      "headline": "49ers rule out WR Christian Kirk, elevate two players",
+      "published_at": "2026-10-19T20:40:04.000Z",
+      "observed_at": "2026-10-19T20:50:18.994Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
