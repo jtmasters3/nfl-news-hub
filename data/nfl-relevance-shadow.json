@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/plays-that-stood-out-nfl-week-3-justin-herbert-lamar-jackson",
-      "source_name": "FOX Sports",
-      "headline": "The Plays That Stood Out In Week 3, From A 'Meatball Sub' To Lamar Jackson's Game-Winner",
-      "published_at": "2026-09-29T03:04:27.000Z",
-      "observed_at": "2026-09-29T03:20:20.859Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/monday-night-football-case-keenum-bears-beat-eagles-27-7",
       "source_name": "Pro Football Talk",
       "headline": "Monday Night Football: Case Keenum, Bears beat Eagles 27-7",
@@ -42035,6 +42018,27 @@
       "confidence": "high",
       "detected_teams": [
         "PHI"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bengals-put-tanner-hudson-on-ir",
+      "source_name": "Pro Football Talk",
+      "headline": "Bengals put Tanner Hudson on IR",
+      "published_at": "2026-10-19T14:47:43.000Z",
+      "observed_at": "2026-10-19T15:00:27.147Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN"
       ],
       "detected_category": "injury",
       "nfl_evidence": [
