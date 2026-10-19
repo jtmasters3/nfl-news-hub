@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-mcvay-apologizes-for-sunday-night-press-conference-cameo",
-      "source_name": "Pro Football Talk",
-      "headline": "Sean McVay apologizes for Sunday night press conference cameo",
-      "published_at": "2026-09-29T03:42:01.000Z",
-      "observed_at": "2026-09-29T03:50:19.304Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN",
-        "LAR"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nick-sirianni-regrets-his-emotional-outburst-after-hit-on-jalen-hurts",
       "source_name": "Pro Football Talk",
       "headline": "Nick Sirianni regrets his emotional outburst after hit on Jalen Hurts",
@@ -42035,6 +42013,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/vikings-will-be-active-ahead-of-the-nfl-trade-deadline-what-moves-are-realistic",
+      "source_name": "NFL.com",
+      "headline": "Vikings will be active ahead of the NFL trade deadline. What moves are realistic?",
+      "published_at": "2026-10-19T11:01:05.000Z",
+      "observed_at": "2026-10-19T16:00:35.359Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
