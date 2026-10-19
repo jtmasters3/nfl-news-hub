@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/browns-coach-todd-monken-sees-room-for-deshaun-watson-to-improve-after-back-to-back-wins",
-      "source_name": "NFL.com",
-      "headline": "Browns coach Todd Monken sees room for Deshaun Watson to improve after back-to-back wins",
-      "published_at": "2026-09-29T02:04:00.000Z",
-      "observed_at": "2026-09-29T14:10:21.206Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/j-j-mccarthy-joins-a-small-group-of-first-round-quarterbacks-who-made-quick-exits",
       "source_name": "Pro Football Talk",
       "headline": "J.J. McCarthy joins a small group of first-round quarterbacks who made quick exits",
@@ -42027,6 +42006,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/commanders-gm-adam-peters-praises-team-culture-leadership-a-week-after-giants-ot-gaffe",
+      "source_name": "NFL.com",
+      "headline": "Commanders GM Adam Peters praises team culture, leadership a week after Giants OT gaffe",
+      "published_at": "2026-10-19T05:16:04.000Z",
+      "observed_at": "2026-10-19T18:40:23.370Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG",
+        "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
