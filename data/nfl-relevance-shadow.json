@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-fantasy-2026-start-em-sit-em-defenses-for-week-4",
-      "source_name": "NFL.com",
-      "headline": "NFL Fantasy 2026 Start 'Em, Sit 'Em: Defenses for Week 4",
-      "published_at": "2026-09-30T05:38:14.000Z",
-      "observed_at": "2026-09-30T17:40:44.196Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "fantasy",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-fantasy-2026-start-em-sit-em-tight-ends-for-week-4",
       "source_name": "NFL.com",
       "headline": "NFL Fantasy 2026 Start 'Em, Sit 'Em: Tight ends for Week 4",
@@ -42038,6 +42021,28 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-waive-ot-albert-reese",
+      "source_name": "Pro Football Talk",
+      "headline": "Panthers waive OT Albert Reese",
+      "published_at": "2026-10-20T20:03:45.000Z",
+      "observed_at": "2026-10-20T20:10:20.245Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:free_agency"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
