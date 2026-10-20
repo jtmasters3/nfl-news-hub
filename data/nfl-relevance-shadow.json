@@ -2,30 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dolphins-sign-ilb-shaka-heyward-off-bengals-practice-squad",
-      "source_name": "Pro Football Talk",
-      "headline": "Dolphins sign ILB Shaka Heyward off Bengals' practice squad",
-      "published_at": "2026-09-29T20:26:52.000Z",
-      "observed_at": "2026-09-29T20:30:23.650Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CIN",
-        "MIA"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/commanders-announce-austin-ekeler-signing-placement-of-leo-chenal-on-ir",
       "source_name": "Pro Football Talk",
       "headline": "Commanders announce Austin Ekeler signing, placement of Leo Chenal on IR",
@@ -42024,6 +42000,27 @@
         "NE"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/christian-mccaffreys-td-run-has-49ers-up-13-3",
+      "source_name": "Pro Football Talk",
+      "headline": "Christian McCaffrey's TD run has 49ers up 13-3",
+      "published_at": "2026-10-20T00:52:07.000Z",
+      "observed_at": "2026-10-20T01:00:26.720Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
