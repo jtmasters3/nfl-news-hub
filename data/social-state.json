@@ -522120,7 +522120,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-10-19T21:20:42.966Z",
-      "updated_at": "2026-10-20T17:00:26.664Z",
+      "updated_at": "2026-10-20T18:00:27.531Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -522272,11 +522272,11 @@
         "retry_count": 0
       },
       "selection": {
-        "destination": "story",
-        "slot_id": "story:2026-10-20T13:00:00-04:00",
-        "selected_at": "2026-10-20T17:00:26.664Z",
+        "destination": "feed",
+        "slot_id": "feed:2026-10-20T14:00:00-04:00",
+        "selected_at": "2026-10-20T18:00:27.531Z",
         "window_start": "2026-10-20T16:00:00.000Z",
-        "window_end": "2026-10-20T17:00:00.000Z",
+        "window_end": "2026-10-20T18:00:00.000Z",
         "score": 8,
         "reason": "final_fallback_recent_pool_importance_score_rank"
       }
@@ -527315,7 +527315,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-10-20T04:30:29.357Z",
-      "updated_at": "2026-10-20T16:00:35.101Z",
+      "updated_at": "2026-10-20T18:00:27.531Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -527470,6 +527470,15 @@
         "message": null,
         "at": null,
         "retry_count": 0
+      },
+      "selection": {
+        "destination": "story",
+        "slot_id": "story:2026-10-20T14:00:00-04:00",
+        "selected_at": "2026-10-20T18:00:27.531Z",
+        "window_start": "2026-10-20T17:00:00.000Z",
+        "window_end": "2026-10-20T18:00:00.000Z",
+        "score": 4,
+        "reason": "final_fallback_recent_pool_importance_score_rank"
       }
     },
     "62a5c0db-79b6-47dc-b16d-9599a39499ed": {
@@ -532159,6 +532168,157 @@
       "merged_into": null,
       "created_at": "2026-10-20T17:50:27.927Z",
       "updated_at": "2026-10-20T17:50:27.927Z",
+      "content_package_version": 2,
+      "publishing_preferences": {
+        "instagram_feed": true,
+        "instagram_story": true
+      },
+      "source_story": {
+        "post_headline": null,
+        "base_image_url": null,
+        "source_name": null,
+        "source_url": null,
+        "category": null,
+        "teams": [],
+        "players": [],
+        "description": null,
+        "is_rumor": false
+      },
+      "artwork": {
+        "status": "not_created",
+        "image_url": null,
+        "created_at": null,
+        "provider": null
+      },
+      "validation": {
+        "status": "not_run",
+        "passed": null,
+        "issues": []
+      },
+      "story_artwork": {
+        "status": "not_created",
+        "image_url": null,
+        "storage_key": null,
+        "width": null,
+        "height": null,
+        "mime_type": null,
+        "size_bytes": null,
+        "provider": null,
+        "created_at": null,
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null
+        },
+        "validation": {
+          "status": "not_run",
+          "passed": null,
+          "issues": []
+        }
+      },
+      "approval": {
+        "status": "pending",
+        "decided_at": null,
+        "approved_at": null,
+        "rejected_at": null,
+        "rejection_reason": null,
+        "actor": null,
+        "request_id": null,
+        "decision_source": null
+      },
+      "caption": {
+        "status": "not_created",
+        "text": null,
+        "last_candidate_text": null,
+        "hashtags": [],
+        "attribution_line": null,
+        "source_url": null,
+        "provider": null,
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null
+        },
+        "claim_attempt_count": 0,
+        "created_at": null
+      },
+      "publishing": {
+        "status": "not_posted",
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null,
+          "retry_count": 0
+        },
+        "instagram": {
+          "feed": {
+            "status": "not_posted",
+            "provider": null,
+            "storage_key": null,
+            "jpeg_url": null,
+            "caption_used": null,
+            "container_id": null,
+            "container_created_at": null,
+            "publish_attempted_at": null,
+            "media_id": null,
+            "permalink": null,
+            "published_at": null,
+            "last_http_outcome": null,
+            "last_reconciled_at": null,
+            "buffer": {
+              "post_id": null,
+              "channel_id": null,
+              "status": null,
+              "due_at": null,
+              "sent_at": null
+            }
+          },
+          "story": {
+            "status": "not_posted",
+            "provider": null,
+            "storage_key": null,
+            "jpeg_url": null,
+            "caption_used": null,
+            "container_id": null,
+            "container_created_at": null,
+            "publish_attempted_at": null,
+            "media_id": null,
+            "permalink": null,
+            "published_at": null,
+            "last_http_outcome": null,
+            "last_reconciled_at": null,
+            "buffer": {
+              "post_id": null,
+              "channel_id": null,
+              "status": null,
+              "due_at": null,
+              "sent_at": null
+            }
+          }
+        },
+        "facebook": {
+          "status": "not_posted",
+          "post_id": null,
+          "post_url": null
+        },
+        "posted_at": null
+      },
+      "last_error": {
+        "stage": null,
+        "message": null,
+        "at": null,
+        "retry_count": 0
+      }
+    },
+    "f42b1941-714b-427f-9793-70d777c4b9b1": {
+      "story_id": "f42b1941-714b-427f-9793-70d777c4b9b1",
+      "status": "new",
+      "merged_into": null,
+      "created_at": "2026-10-20T18:00:37.804Z",
+      "updated_at": "2026-10-20T18:00:37.804Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -539587,6 +539747,24 @@
       "status": "selected",
       "story_id": "7e88f076-ca92-40ab-8920-8f672e7b4985",
       "processed_at": "2026-10-20T17:00:26.664Z"
+    },
+    "feed:2026-10-20T14:00:00-04:00": {
+      "destination": "feed",
+      "slot_time": "2026-10-20T18:00:00.000Z",
+      "window_start": "2026-10-20T16:00:00.000Z",
+      "window_end": "2026-10-20T18:00:00.000Z",
+      "status": "selected",
+      "story_id": "7e88f076-ca92-40ab-8920-8f672e7b4985",
+      "processed_at": "2026-10-20T18:00:27.531Z"
+    },
+    "story:2026-10-20T14:00:00-04:00": {
+      "destination": "story",
+      "slot_time": "2026-10-20T18:00:00.000Z",
+      "window_start": "2026-10-20T17:00:00.000Z",
+      "window_end": "2026-10-20T18:00:00.000Z",
+      "status": "selected",
+      "story_id": "372f4332-ebbf-40ce-b0b7-159120c657ee",
+      "processed_at": "2026-10-20T18:00:27.531Z"
     }
   }
 }
