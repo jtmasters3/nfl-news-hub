@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-experience-london-presented-by-american-express-returns-this-october",
-      "source_name": "NFL.com",
-      "headline": "NFL Experience London Presented by American Express Returns This October",
-      "published_at": "2026-09-30T08:43:58.000Z",
-      "observed_at": "2026-09-30T08:50:22.536Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/through-three-games-brock-purdy-still-hasnt-been-sacked",
-      "source_name": "Pro Football Talk",
-      "headline": "Through three games, Brock Purdy still hasn't been sacked",
-      "published_at": "2026-09-30T08:42:41.000Z",
-      "observed_at": "2026-09-30T08:50:22.536Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/commanders-rule-out-g-sam-cosmi-s-nick-cross-for-week-4",
       "source_name": "Pro Football Talk",
       "headline": "Commanders rule out G Sam Cosmi, S Nick Cross for Week 4",
@@ -42017,6 +41979,48 @@
         "NYJ"
       ],
       "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/terry-mclaurin-believed-to-have-season-ending-knee-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Terry McLaurin believed to have season-ending knee injury",
+      "published_at": "2026-10-20T11:17:20.000Z",
+      "observed_at": "2026-10-20T11:20:17.763Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "WAS"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/stefon-diggs-its-still-wide-open-for-us",
+      "source_name": "Pro Football Talk",
+      "headline": "Stefon Diggs: It's still wide open for us",
+      "published_at": "2026-10-20T11:07:40.000Z",
+      "observed_at": "2026-10-20T11:20:17.763Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "WAS"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
