@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/titans-hc-robert-saleh-cam-ward-has-some-ptsd-from-number-of-sacks-in-rookie-season",
-      "source_name": "NFL.com",
-      "headline": "Titans HC Robert Saleh: Cam Ward has 'some PTSD' from number of sacks in rookie season",
-      "published_at": "2026-09-30T06:46:23.000Z",
-      "observed_at": "2026-09-30T18:50:22.357Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "TEN"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-how-to-watch-week-4-schedule-london-game-details-and-more",
-      "source_name": "NFL.com",
-      "headline": "NFL+: How to watch Week 4, schedule, London game details, and more",
-      "published_at": "2026-09-30T06:51:07.000Z",
-      "observed_at": "2026-09-30T19:00:36.258Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/andy-reid-on-having-most-wins-in-las-vegas-of-any-coach-i-didnt-know-that-and-i-dont-care",
       "source_name": "Pro Football Talk",
       "headline": "Andy Reid on having most wins in Las Vegas of any coach: I didn't know that and I don't care",
@@ -42048,6 +42010,49 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-list-jonah-jackson-as-a-limited-practice-participant",
+      "source_name": "Pro Football Talk",
+      "headline": "Bears list Jonah Jackson as a limited practice participant",
+      "published_at": "2026-10-20T21:41:21.000Z",
+      "observed_at": "2026-10-20T21:50:18.943Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-release-dl-naquan-jones",
+      "source_name": "Pro Football Talk",
+      "headline": "49ers release DL Naquan Jones",
+      "published_at": "2026-10-20T21:37:39.000Z",
+      "observed_at": "2026-10-20T21:50:18.943Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:free_agency"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
