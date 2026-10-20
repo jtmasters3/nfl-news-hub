@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brock-bowers-is-the-afc-offensive-player-of-the-week",
-      "source_name": "Pro Football Talk",
-      "headline": "Brock Bowers is the AFC offensive player of the week",
-      "published_at": "2026-09-30T16:12:50.000Z",
-      "observed_at": "2026-09-30T16:20:21.538Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sonny-styles-wins-first-nfc-defensive-player-of-the-week-award",
       "source_name": "Pro Football Talk",
       "headline": "Sonny Styles wins first NFC defensive player of the week award",
@@ -42037,6 +42016,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-umpire-larry-smith-out-for-season-after-slipping-on-wembley-stadium-grass",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Umpire Larry Smith out for season after slipping on Wembley Stadium grass",
+      "published_at": "2026-10-20T16:51:45.000Z",
+      "observed_at": "2026-10-20T17:00:26.664Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
