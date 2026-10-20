@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/giants-dont-plan-to-add-odell-beckham-jr-to-the-practice-squad-at-this-time",
-      "source_name": "Pro Football Talk",
-      "headline": "Giants don't plan to add Odell Beckham Jr. to the practice squad \"at this time\"",
-      "published_at": "2026-09-30T04:02:58.000Z",
-      "observed_at": "2026-09-30T04:20:23.194Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-experience-london-presented-by-american-express-returns-this-october",
       "source_name": "NFL.com",
       "headline": "NFL Experience London Presented by American Express Returns This October",
@@ -42019,6 +41996,27 @@
         "SF"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-glenn-frank-reich-is-doing-a-good-job-as-offensive-coordinator",
+      "source_name": "Pro Football Talk",
+      "headline": "Aaron Glenn: Frank Reich is doing a good job as offensive coordinator",
+      "published_at": "2026-10-20T10:53:25.000Z",
+      "observed_at": "2026-10-20T11:00:25.896Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYJ"
+      ],
+      "detected_category": "coaching",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
