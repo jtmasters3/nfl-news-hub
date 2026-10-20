@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jets-sign-k-jason-sanders-to-the-active-roster-cut-k-blake-grupe",
-      "source_name": "Pro Football Talk",
-      "headline": "Jets sign K Jason Sanders to the active roster, cut K Blake Grupe",
-      "published_at": "2026-09-29T21:13:47.000Z",
-      "observed_at": "2026-09-29T21:20:21.299Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYJ"
-      ],
-      "detected_category": "free_agency",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:free_agency"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-sign-g-torricelli-simpkins-to-their-53-man-roster",
       "source_name": "Pro Football Talk",
       "headline": "Panthers sign G Torricelli Simpkins to their 53-man roster",
@@ -42025,6 +42003,28 @@
         "nfl_team_detected",
         "phrase_practice_squad",
         "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/terry-mclaurin-carted-off-apparent-knee-injury-loss-49ers",
+      "source_name": "FOX Sports",
+      "headline": "Commanders WR Terry McLaurin Carted Off, Ruled Out With Knee Injury vs. 49ers",
+      "published_at": "2026-10-20T01:22:25.000Z",
+      "observed_at": "2026-10-20T01:40:18.863Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF",
+        "WAS"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
