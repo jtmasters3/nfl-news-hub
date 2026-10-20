@@ -2,86 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/which-nfl-veterans-are-trending-up-and-down-after-week-3-kyler-murray-nakobe-dean-and-more",
-      "source_name": "NFL.com",
-      "headline": "Which NFL veterans are trending up and down after Week 3? Kyler Murray, Nakobe Dean and more",
-      "published_at": "2026-09-30T09:31:06.000Z",
-      "observed_at": "2026-09-30T13:10:24.275Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ufl-shuffles-head-coaches-and-rosters-after-relocation-of-teams",
-      "source_name": "Pro Football Talk",
-      "headline": "UFL shuffles head coaches (and rosters) after relocation of teams",
-      "published_at": "2026-09-30T13:27:03.000Z",
-      "observed_at": "2026-09-30T13:30:30.376Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-wednesday-sept-30",
-      "source_name": "NFL.com",
-      "headline": "NFL news roundup: Packers signing guard Kevin Zeitler; Ravens' Jovaughn Gwyn out 2-3 months",
-      "published_at": "2026-09-30T01:29:42.000Z",
-      "observed_at": "2026-09-30T13:40:22.740Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "GB"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kevin-zeitler-agrees-to-sign-with-packers",
-      "source_name": "Pro Football Talk",
-      "headline": "Kevin Zeitler agrees to sign with Packers",
-      "published_at": "2026-09-30T13:32:53.000Z",
-      "observed_at": "2026-09-30T13:40:22.740Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_signs_with",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/more-than-100-former-players-object-to-settlement-of-class-action-against-nfl-disability-plan",
       "source_name": "Pro Football Talk",
       "headline": "More than 100 former players object to settlement of class action against NFL disability plan",
@@ -42012,6 +41932,92 @@
       "confidence": "high",
       "detected_teams": [
         "NYG"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/against-49ers-jayden-daniels-shows-commanders-what-they-have-and-what-they-lack",
+      "source_name": "NFL.com",
+      "headline": "Against 49ers, Jayden Daniels shows Commanders what they have and what they lack",
+      "published_at": "2026-10-20T11:16:06.000Z",
+      "observed_at": "2026-10-20T14:30:27.682Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF",
+        "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bengals-sign-s-russ-yeast-to-their-active-roster",
+      "source_name": "Pro Football Talk",
+      "headline": "Bengals sign S Russ Yeast to their active roster",
+      "published_at": "2026-10-20T14:27:34.000Z",
+      "observed_at": "2026-10-20T14:30:27.682Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-quinns-fourth-down-explanation-exposes-a-different-failure-of-attention-to-detail",
+      "source_name": "Pro Football Talk",
+      "headline": "Dan Quinn's fourth-down explanation exposes a different failure of attention to detail",
+      "published_at": "2026-10-20T14:23:36.000Z",
+      "observed_at": "2026-10-20T14:30:27.682Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "WAS"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/titans-release-dt-jordan-elliott-after-incident-at-teams-facility",
+      "source_name": "Pro Football Talk",
+      "headline": "Titans release DT Jordan Elliott after incident at team's facility",
+      "published_at": "2026-10-20T14:18:20.000Z",
+      "observed_at": "2026-10-20T14:30:27.682Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "TEN"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
