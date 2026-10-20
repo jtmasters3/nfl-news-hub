@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-allen-remains-the-mvp-favorite-but-brock-purdy-is-lurking",
-      "source_name": "Pro Football Talk",
-      "headline": "Josh Allen remains the MVP favorite, but Brock Purdy is lurking",
-      "published_at": "2026-09-30T00:35:20.000Z",
-      "observed_at": "2026-09-30T00:50:21.619Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "LAC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/herd-hierarchy-raiders-legit-seahawks-fall-while-bills-49ers-rise",
       "source_name": "FOX Sports",
       "headline": "Herd Hierarchy: Are The Raiders Legit? Seahawks Fall, While Bills & 49ers Rise",
@@ -42026,6 +42004,28 @@
         "SF"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/seahawks-broncos-in-week-6-draws-16-26-million-on-prime-video",
+      "source_name": "Pro Football Talk",
+      "headline": "Seahawks-Broncos in Week 6 draws 16.26 million on Prime Video",
+      "published_at": "2026-10-20T09:36:26.000Z",
+      "observed_at": "2026-10-20T09:40:19.636Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "SEA"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
