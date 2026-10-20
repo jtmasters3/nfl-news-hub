@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jalen-hurts-i-felt-fine-during-concussion-check-wish-they-could-have-expedited-things",
-      "source_name": "Pro Football Talk",
-      "headline": "Jalen Hurts: I felt fine during concussion check, wish they could have expedited things",
-      "published_at": "2026-09-29T21:15:19.000Z",
-      "observed_at": "2026-09-29T21:20:21.299Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "PHI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jets-sign-k-jason-sanders-to-the-active-roster-cut-k-blake-grupe",
       "source_name": "Pro Football Talk",
       "headline": "Jets sign K Jason Sanders to the active roster, cut K Blake Grupe",
@@ -42024,6 +42002,29 @@
       "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-to-sign-wr-marquez-valdes-scantling-to-practice-squad",
+      "source_name": "Pro Football Talk",
+      "headline": "Steelers to sign WR Marquez Valdes-Scantling to practice squad",
+      "published_at": "2026-10-20T01:20:14.000Z",
+      "observed_at": "2026-10-20T01:30:22.257Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
