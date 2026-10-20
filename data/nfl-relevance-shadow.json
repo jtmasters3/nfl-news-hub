@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/aaron-rodgers-steelers-offense-still-has-room-to-grow-but-there-s-some-vibes",
-      "source_name": "NFL.com",
-      "headline": "Aaron Rodgers: Steelers offense still has room to grow 'but there's some vibes'",
-      "published_at": "2026-09-30T11:16:28.000Z",
-      "observed_at": "2026-09-30T11:20:22.088Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CIN",
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/greg-rousseau-is-first-player-since-1998-with-2-sacks-in-first-three-games-of-a-season",
-      "source_name": "Pro Football Talk",
-      "headline": "Greg Rousseau is first player since 1998 with 2+ sacks in first three games of a season",
-      "published_at": "2026-09-30T11:43:15.000Z",
-      "observed_at": "2026-09-30T11:50:25.022Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/roll-tape-how-packers-offense-rams-defense-drake-maye-can-rebound",
       "source_name": "FOX Sports",
       "headline": "Roll The Tape: How The Packers' Offense, Rams' Defense And Drake Maye Can Rebound",
@@ -42026,6 +41983,40 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/u2-to-headline-halftime-of-nfl-s-first-ever-thanksgiving-eve-gameday-live-on-netflix",
+      "source_name": "NFL.com",
+      "headline": "U2 to headline halftime of NFL's first-ever Thanksgiving Eve Gameday live on Netflix",
+      "published_at": "2026-10-20T11:47:28.000Z",
+      "observed_at": "2026-10-20T12:00:30.154Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brock-purdy-is-the-nfls-all-time-record-holder-for-highest-career-passer-rating",
+      "source_name": "Pro Football Talk",
+      "headline": "Brock Purdy is the NFL's all-time record holder for highest career passer rating",
+      "published_at": "2026-10-20T11:48:31.000Z",
+      "observed_at": "2026-10-20T12:00:30.154Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
