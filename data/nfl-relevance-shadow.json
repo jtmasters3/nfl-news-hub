@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-sign-g-torricelli-simpkins-to-their-53-man-roster",
-      "source_name": "Pro Football Talk",
-      "headline": "Panthers sign G Torricelli Simpkins to their 53-man roster",
-      "published_at": "2026-09-29T21:26:32.000Z",
-      "observed_at": "2026-09-29T21:40:20.068Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nick-saban-tiptoes-around-obvious-issue-with-capping-player-pay-but-not-coach-pay",
       "source_name": "Pro Football Talk",
       "headline": "Nick Saban tiptoes around obvious issue with capping player pay but not coach pay",
@@ -42023,6 +42001,27 @@
         "WAS"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/monday-night-football-49ers-lead-20-3-at-halftime-but-mike-evans-leaves-early",
+      "source_name": "Pro Football Talk",
+      "headline": "Monday Night Football: 49ers lead 20-3 at halftime, but Mike Evans leaves early",
+      "published_at": "2026-10-20T01:46:26.000Z",
+      "observed_at": "2026-10-20T01:50:21.883Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "live_game_state",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
