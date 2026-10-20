@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-simmons-dealing-with-bulging-disc-will-not-practice-on-wednesday",
-      "source_name": "Pro Football Talk",
-      "headline": "Josh Simmons dealing with bulging disc, will not practice on Wednesday",
-      "published_at": "2026-09-30T17:06:12.000Z",
-      "observed_at": "2026-09-30T17:10:21.105Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/minkah-fitzpatrick-has-really-good-chance-of-returning-to-jets-lineup-this-week",
       "source_name": "Pro Football Talk",
       "headline": "Minkah Fitzpatrick has \"really good chance\" of returning to Jets lineup this week",
@@ -42039,6 +42018,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/qb-stock-market-week-7-c-j-stroud-back-patrick-mahomes-evolving",
+      "source_name": "FOX Sports",
+      "headline": "QB Stock Market Week 7: Is C.J. Stroud Back? Is Patrick Mahomes Evolving?",
+      "published_at": "2026-10-20T18:36:52.000Z",
+      "observed_at": "2026-10-20T18:50:20.747Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
