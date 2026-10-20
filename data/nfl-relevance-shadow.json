@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-week-4-injury-report-player-statuses-for-all-16-games",
-      "source_name": "NFL.com",
-      "headline": "NFL Week 4 injury report: Player statuses for all 16 games",
-      "published_at": "2026-09-30T07:18:29.000Z",
-      "observed_at": "2026-09-30T19:20:22.202Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-rule-joey-porter-jr-out-for-thursday-jalen-ramsey-questionable",
       "source_name": "Pro Football Talk",
       "headline": "Steelers rule Joey Porter Jr. out for Thursday, Jalen Ramsey questionable",
@@ -42054,6 +42037,28 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-put-davante-adams-poona-ford-on-ir",
+      "source_name": "Pro Football Talk",
+      "headline": "Rams put Davante Adams, Poona Ford on IR",
+      "published_at": "2026-10-20T22:29:12.000Z",
+      "observed_at": "2026-10-20T22:40:20.787Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI",
+        "LAR"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
