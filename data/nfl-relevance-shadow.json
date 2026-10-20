@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/lost-in-j-j-mccarthy-trade-hubbub-jameis-winston-still-has-power-to-render-it-irrelevant",
-      "source_name": "NFL.com",
-      "headline": "Lost in J.J. McCarthy trade hubbub: Jameis Winston still has power to render it irrelevant",
-      "published_at": "2026-09-30T09:31:06.000Z",
-      "observed_at": "2026-09-30T12:50:22.574Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "trade",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/after-case-keenum-s-stunning-performance-bears-have-qb-dilemma-who-should-start",
-      "source_name": "NFL.com",
-      "headline": "After Case Keenum's stunning performance, Bears have QB dilemma: Who should start?",
-      "published_at": "2026-09-30T11:01:06.000Z",
-      "observed_at": "2026-09-30T13:00:34.062Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-ravens-c-jovaughn-gwyn-has-a-fractured-fibula",
       "source_name": "Pro Football Talk",
       "headline": "Report: Ravens C Jovaughn Gwyn has a fractured fibula",
@@ -42007,6 +41969,49 @@
       "confidence": "high",
       "detected_teams": [
         "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/packers-head-coach-matt-lafleur-says-josh-jacobs-game-status-for-week-7-to-be-determined",
+      "source_name": "NFL.com",
+      "headline": "Packers head coach Matt LaFleur says Josh Jacobs' game status for Week 7 to be determined",
+      "published_at": "2026-10-20T01:47:00.000Z",
+      "observed_at": "2026-10-20T14:00:27.626Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "GB"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/alec-pierce-not-ready-to-return-to-practice-this-week",
+      "source_name": "Pro Football Talk",
+      "headline": "Alec Pierce not ready to return to practice this week",
+      "published_at": "2026-10-20T13:58:18.000Z",
+      "observed_at": "2026-10-20T14:00:27.626Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [

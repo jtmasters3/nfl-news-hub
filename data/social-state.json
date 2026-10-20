@@ -516787,7 +516787,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-10-19T14:50:30.955Z",
-      "updated_at": "2026-10-19T18:30:27.286Z",
+      "updated_at": "2026-10-20T14:00:27.626Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -516937,13 +516937,13 @@
         "retry_count": 0
       },
       "selection": {
-        "destination": "story",
-        "slot_id": "story:2026-10-19T14:00:00-04:00",
-        "selected_at": "2026-10-19T18:30:27.286Z",
-        "window_start": "2026-10-19T17:00:00.000Z",
-        "window_end": "2026-10-19T18:00:00.000Z",
+        "destination": "feed",
+        "slot_id": "feed:2026-10-20T10:00:00-04:00",
+        "selected_at": "2026-10-20T14:00:27.626Z",
+        "window_start": "2026-10-20T12:00:00.000Z",
+        "window_end": "2026-10-20T14:00:00.000Z",
         "score": 10,
-        "reason": "fallback_recent_pool_importance_score_rank"
+        "reason": "final_fallback_recent_pool_importance_score_rank"
       }
     },
     "983d52bd-3f2d-4e5d-9b9b-49a30faae43f": {
@@ -522113,7 +522113,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-10-19T21:20:42.966Z",
-      "updated_at": "2026-10-20T00:00:28.979Z",
+      "updated_at": "2026-10-20T14:00:27.626Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -522265,13 +522265,13 @@
         "retry_count": 0
       },
       "selection": {
-        "destination": "feed",
-        "slot_id": "feed:2026-10-19T20:00:00-04:00",
-        "selected_at": "2026-10-20T00:00:28.979Z",
-        "window_start": "2026-10-19T22:00:00.000Z",
-        "window_end": "2026-10-20T00:00:00.000Z",
+        "destination": "story",
+        "slot_id": "story:2026-10-20T10:00:00-04:00",
+        "selected_at": "2026-10-20T14:00:27.626Z",
+        "window_start": "2026-10-20T13:00:00.000Z",
+        "window_end": "2026-10-20T14:00:00.000Z",
         "score": 8,
-        "reason": "fallback_recent_pool_importance_score_rank"
+        "reason": "final_fallback_recent_pool_importance_score_rank"
       }
     },
     "9d2c65d8-ecba-4943-94b5-894fd29dcfe4": {
@@ -522729,24 +522729,31 @@
     },
     "601ddba9-5013-4d96-bc26-97a8dfd21d4e": {
       "story_id": "601ddba9-5013-4d96-bc26-97a8dfd21d4e",
-      "status": "new",
+      "status": "queued",
       "merged_into": null,
       "created_at": "2026-10-19T22:00:49.966Z",
-      "updated_at": "2026-10-19T22:00:49.966Z",
+      "updated_at": "2026-10-20T14:00:51.164Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
         "instagram_story": true
       },
       "source_story": {
-        "post_headline": null,
-        "base_image_url": null,
-        "source_name": null,
-        "source_url": null,
-        "category": null,
-        "teams": [],
-        "players": [],
-        "description": null,
+        "post_headline": "JOSH JACOBS TO GET FULL WEEK OF PRACTICE",
+        "base_image_url": "https://static.www.nfl.com/image/upload/t_editorial_landscape_12_desktop/league/co8hvlav42rtr9no0nhb",
+        "source_name": "NFL.com",
+        "source_url": "https://www.nfl.com/news/packers-head-coach-matt-lafleur-says-josh-jacobs-game-status-for-week-7-to-be-determined",
+        "category": "coaching",
+        "teams": [
+          "Detroit Lions",
+          "Green Bay Packers"
+        ],
+        "players": [
+          "Micah Parsons",
+          "Josh Jacobs",
+          "Matt LaFleur"
+        ],
+        "description": "The Packers won't have defensive end Micah Parsons back at practice this week, but they will have running back Josh Jacobs on the field as they prepare to face the Lions.",
         "is_rumor": false
       },
       "artwork": {
@@ -528959,6 +528966,157 @@
       "merged_into": null,
       "created_at": "2026-10-20T13:20:43.977Z",
       "updated_at": "2026-10-20T13:20:43.977Z",
+      "content_package_version": 2,
+      "publishing_preferences": {
+        "instagram_feed": true,
+        "instagram_story": true
+      },
+      "source_story": {
+        "post_headline": null,
+        "base_image_url": null,
+        "source_name": null,
+        "source_url": null,
+        "category": null,
+        "teams": [],
+        "players": [],
+        "description": null,
+        "is_rumor": false
+      },
+      "artwork": {
+        "status": "not_created",
+        "image_url": null,
+        "created_at": null,
+        "provider": null
+      },
+      "validation": {
+        "status": "not_run",
+        "passed": null,
+        "issues": []
+      },
+      "story_artwork": {
+        "status": "not_created",
+        "image_url": null,
+        "storage_key": null,
+        "width": null,
+        "height": null,
+        "mime_type": null,
+        "size_bytes": null,
+        "provider": null,
+        "created_at": null,
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null
+        },
+        "validation": {
+          "status": "not_run",
+          "passed": null,
+          "issues": []
+        }
+      },
+      "approval": {
+        "status": "pending",
+        "decided_at": null,
+        "approved_at": null,
+        "rejected_at": null,
+        "rejection_reason": null,
+        "actor": null,
+        "request_id": null,
+        "decision_source": null
+      },
+      "caption": {
+        "status": "not_created",
+        "text": null,
+        "last_candidate_text": null,
+        "hashtags": [],
+        "attribution_line": null,
+        "source_url": null,
+        "provider": null,
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null
+        },
+        "claim_attempt_count": 0,
+        "created_at": null
+      },
+      "publishing": {
+        "status": "not_posted",
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null,
+          "retry_count": 0
+        },
+        "instagram": {
+          "feed": {
+            "status": "not_posted",
+            "provider": null,
+            "storage_key": null,
+            "jpeg_url": null,
+            "caption_used": null,
+            "container_id": null,
+            "container_created_at": null,
+            "publish_attempted_at": null,
+            "media_id": null,
+            "permalink": null,
+            "published_at": null,
+            "last_http_outcome": null,
+            "last_reconciled_at": null,
+            "buffer": {
+              "post_id": null,
+              "channel_id": null,
+              "status": null,
+              "due_at": null,
+              "sent_at": null
+            }
+          },
+          "story": {
+            "status": "not_posted",
+            "provider": null,
+            "storage_key": null,
+            "jpeg_url": null,
+            "caption_used": null,
+            "container_id": null,
+            "container_created_at": null,
+            "publish_attempted_at": null,
+            "media_id": null,
+            "permalink": null,
+            "published_at": null,
+            "last_http_outcome": null,
+            "last_reconciled_at": null,
+            "buffer": {
+              "post_id": null,
+              "channel_id": null,
+              "status": null,
+              "due_at": null,
+              "sent_at": null
+            }
+          }
+        },
+        "facebook": {
+          "status": "not_posted",
+          "post_id": null,
+          "post_url": null
+        },
+        "posted_at": null
+      },
+      "last_error": {
+        "stage": null,
+        "message": null,
+        "at": null,
+        "retry_count": 0
+      }
+    },
+    "57fd1f92-3c63-4818-b37c-854c69ce6379": {
+      "story_id": "57fd1f92-3c63-4818-b37c-854c69ce6379",
+      "status": "new",
+      "merged_into": null,
+      "created_at": "2026-10-20T14:00:51.161Z",
+      "updated_at": "2026-10-20T14:00:51.161Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -536333,6 +536491,24 @@
       "status": "selected",
       "story_id": "3cb50551-2c69-4936-b0ec-9b8deab3a254",
       "processed_at": "2026-10-20T13:00:29.288Z"
+    },
+    "feed:2026-10-20T10:00:00-04:00": {
+      "destination": "feed",
+      "slot_time": "2026-10-20T14:00:00.000Z",
+      "window_start": "2026-10-20T12:00:00.000Z",
+      "window_end": "2026-10-20T14:00:00.000Z",
+      "status": "selected",
+      "story_id": "b9b2904d-ee52-47ae-94fc-25e9ae5407bc",
+      "processed_at": "2026-10-20T14:00:27.626Z"
+    },
+    "story:2026-10-20T10:00:00-04:00": {
+      "destination": "story",
+      "slot_time": "2026-10-20T14:00:00.000Z",
+      "window_start": "2026-10-20T13:00:00.000Z",
+      "window_end": "2026-10-20T14:00:00.000Z",
+      "status": "selected",
+      "story_id": "7e88f076-ca92-40ab-8920-8f672e7b4985",
+      "processed_at": "2026-10-20T14:00:27.626Z"
     }
   }
 }
