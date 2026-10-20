@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-rule-joey-porter-jr-out-for-thursday-jalen-ramsey-questionable",
-      "source_name": "Pro Football Talk",
-      "headline": "Steelers rule Joey Porter Jr. out for Thursday, Jalen Ramsey questionable",
-      "published_at": "2026-09-30T19:13:13.000Z",
-      "observed_at": "2026-09-30T19:20:22.202Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/tom-bradys-nfl-power-rankings-49ers-bills-chiefs-no-1-raiders-top-5",
       "source_name": "FOX Sports",
       "headline": "Tom Brady's NFL Power Rankings: 49ers, Bills Or Chiefs At No. 1? Raiders Top 5?",
@@ -42063,6 +42042,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sundays-late-afternoon-window-on-cbs-averaged-26-368-million-viewers",
+      "source_name": "Pro Football Talk",
+      "headline": "Sunday's late-afternoon window on CBS averaged 26.368 million viewers",
+      "published_at": "2026-10-20T23:01:05.000Z",
+      "observed_at": "2026-10-20T23:10:18.300Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
