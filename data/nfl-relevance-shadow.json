@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brian-schottenheimer-i-hurt-the-team-in-loss-to-the-ravens",
-      "source_name": "Pro Football Talk",
-      "headline": "Brian Schottenheimer: I hurt the team in loss to the Ravens",
-      "published_at": "2026-09-29T21:44:20.000Z",
-      "observed_at": "2026-09-29T21:50:29.769Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-sign-lb-kyle-van-noy-to-active-roster-place-te-josh-oliver-on-ir",
       "source_name": "Pro Football Talk",
       "headline": "Vikings sign LB Kyle Van Noy to active roster, place TE Josh Oliver on IR",
@@ -42028,6 +42006,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-wr-mike-evans-is-quetsionable-to-return-after-aggravating-achilles",
+      "source_name": "Pro Football Talk",
+      "headline": "49ers WR Mike Evans is questionable to return after aggravating Achilles",
+      "published_at": "2026-10-20T01:58:43.000Z",
+      "observed_at": "2026-10-20T02:10:19.039Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "live_game_state",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
