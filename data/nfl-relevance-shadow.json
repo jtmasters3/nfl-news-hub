@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-qb-rankings-index-week-4-2026-nfl-season",
-      "source_name": "NFL.com",
-      "headline": "NFL QB rankings, Week 4: Brock Purdy climbs to No. 1; Kirk Cousins enters top 10",
-      "published_at": "2026-09-30T04:44:00.000Z",
-      "observed_at": "2026-09-30T16:50:24.445Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ben-johnson-called-jared-goff-after-latest-mobility-dig",
       "source_name": "Pro Football Talk",
       "headline": "Ben Johnson called Jared Goff after latest mobility dig",
@@ -42026,6 +42009,28 @@
       "detected_teams": [
         "BAL",
         "CIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-campbell-i-expect-kerby-joseph-to-play-this-year-but-no-timetable",
+      "source_name": "Pro Football Talk",
+      "headline": "Dan Campbell: I expect Kerby Joseph to play this year, but no timetable",
+      "published_at": "2026-10-20T18:15:07.000Z",
+      "observed_at": "2026-10-20T18:30:24.100Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "GB"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
