@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-fantasy-2026-start-em-sit-em-kickers-in-week-4",
-      "source_name": "NFL.com",
-      "headline": "NFL Fantasy 2026 Start 'Em, Sit 'Em: Kickers in Week 4",
-      "published_at": "2026-09-30T05:38:22.000Z",
-      "observed_at": "2026-09-30T17:40:44.196Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "fantasy",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-fantasy-2026-start-em-sit-em-defenses-for-week-4",
       "source_name": "NFL.com",
       "headline": "NFL Fantasy 2026 Start 'Em, Sit 'Em: Defenses for Week 4",
@@ -42033,6 +42016,28 @@
         "nfl_team_detected",
         "phrase_practice_squad",
         "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-lb-demarvion-overshown-says-he-will-return-to-the-lineup-this-week",
+      "source_name": "Pro Football Talk",
+      "headline": "Cowboys LB DeMarvion Overshown says he will return to the lineup this week",
+      "published_at": "2026-10-20T19:48:22.000Z",
+      "observed_at": "2026-10-20T20:00:25.733Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "GB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
