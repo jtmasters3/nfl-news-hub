@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/roll-tape-how-packers-offense-rams-defense-drake-maye-can-rebound",
-      "source_name": "FOX Sports",
-      "headline": "Roll The Tape: How The Packers' Offense, Rams' Defense And Drake Maye Can Rebound",
-      "published_at": "2026-09-30T12:00:31.000Z",
-      "observed_at": "2026-09-30T12:10:21.826Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB",
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-rodgers-we-had-a-decent-offensive-performance-vibes-start-to-flow-with-a-couple",
       "source_name": "Pro Football Talk",
       "headline": "Aaron Rodgers: We had a decent offensive performance, vibes start to flow with a couple",
@@ -42017,6 +41995,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cardinals-two-wins-are-the-two-biggest-upsets-in-the-nfl-this-season",
+      "source_name": "Pro Football Talk",
+      "headline": "Cardinals' two wins are the two biggest upsets in the NFL this season",
+      "published_at": "2026-10-20T12:16:04.000Z",
+      "observed_at": "2026-10-20T12:20:21.781Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
