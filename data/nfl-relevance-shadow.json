@@ -2,93 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/3-0-vikings-are-a-game-away-from-a-dubious-record",
-      "source_name": "Pro Football Talk",
-      "headline": "3-0 Vikings are a game away from a dubious record",
-      "published_at": "2026-10-01T02:53:52.000Z",
-      "observed_at": "2026-10-01T03:10:19.948Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-trade-joey-porter-jr-to-the-cowboys",
-      "source_name": "Pro Football Talk",
-      "headline": "Steelers trade Joey Porter Jr. to the Cowboys",
-      "published_at": "2026-10-01T03:54:31.000Z",
-      "observed_at": "2026-10-01T04:00:28.924Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "PIT"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/steelers-trading-cb-joey-porter-jr-to-cowboys-in-exchange-for-second-sixth-round-picks",
-      "source_name": "NFL.com",
-      "headline": "Steelers trading CB Joey Porter Jr. to Cowboys in exchange for second-, sixth-round picks",
-      "published_at": "2026-10-01T04:04:41.000Z",
-      "observed_at": "2026-10-01T04:10:24.469Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "PIT"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/cowboys-reportedly-acquire-cb-joey-porter-jr-from-steelers",
-      "source_name": "FOX Sports",
-      "headline": "Cowboys Reportedly Acquire CB Joey Porter Jr. From The Steelers",
-      "published_at": "2026-10-01T03:45:03.000Z",
-      "observed_at": "2026-10-01T04:10:24.469Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "PIT"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-send-steelers-2027-sixth-round-pick-and-2028-second-round-pick-for-joey-porter-jr",
       "source_name": "Pro Football Talk",
       "headline": "Cowboys send Steelers 2027 sixth-round pick and 2028 second-round pick for Joey Porter Jr.",
@@ -42009,6 +41922,88 @@
       "confidence": "high",
       "detected_teams": [
         "NO"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/week-5-schedule-change",
+      "source_name": "NFL.com",
+      "headline": "Week 5 schedule change",
+      "published_at": "2026-10-21T04:04:29.000Z",
+      "observed_at": "2026-10-21T16:10:23.823Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/players-of-the-week-2026-week-6-cj-stroud-caleb-williams",
+      "source_name": "NFL.com",
+      "headline": "Texans QB C.J. Stroud, Bears QB Caleb Williams highlight Players of the Week",
+      "published_at": "2026-10-21T04:00:43.000Z",
+      "observed_at": "2026-10-21T16:10:23.823Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "HOU"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/c-j-stroud-named-the-afc-offensive-player-of-the-week",
+      "source_name": "Pro Football Talk",
+      "headline": "C.J. Stroud named the AFC offensive player of the week",
+      "published_at": "2026-10-21T16:05:35.000Z",
+      "observed_at": "2026-10-21T16:10:23.823Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "HOU"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/caleb-williams-wins-nfc-offensive-player-of-the-week",
+      "source_name": "Pro Football Talk",
+      "headline": "Caleb Williams wins NFC offensive player of the week",
+      "published_at": "2026-10-21T16:05:21.000Z",
+      "observed_at": "2026-10-21T16:10:23.823Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "CHI"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
