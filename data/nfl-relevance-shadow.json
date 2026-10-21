@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-donald-misses-practice-with-a-sore-back",
-      "source_name": "Pro Football Talk",
-      "headline": "Aaron Donald misses practice with a sore back",
-      "published_at": "2026-09-30T22:53:42.000Z",
-      "observed_at": "2026-09-30T23:10:21.365Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jim-harbaugh-to-no-surprise-spoke-to-john-harbaugh-before-j-j-mccarthy-trade",
       "source_name": "Pro Football Talk",
       "headline": "Jim Harbaugh, to no surprise, spoke to John Harbaugh before J.J. McCarthy trade",
@@ -42028,6 +42007,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/c-j-gardner-johnson-suspended-one-game",
+      "source_name": "NFL.com",
+      "headline": "C.J. Gardner-Johnson Suspended One Game",
+      "published_at": "2026-10-19T07:04:00.000Z",
+      "observed_at": "2026-10-21T15:00:30.842Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "suspension",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
