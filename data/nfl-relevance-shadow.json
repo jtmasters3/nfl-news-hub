@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/los-angeles-rams-expect-wr-puka-nacua-to-play-in-week-4-vs-eagles",
-      "source_name": "NFL.com",
-      "headline": "Rams head coach Sean McVay: WR Puka Nacua (hip/groin) expected to return for Rams Sunday vs. Eagles",
-      "published_at": "2026-09-30T09:37:40.000Z",
-      "observed_at": "2026-09-30T21:50:19.331Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAC",
-        "LAR",
-        "PHI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/derrick-henry-facing-the-titans-will-be-a-crazy-moment",
       "source_name": "Pro Football Talk",
       "headline": "Derrick Henry: Facing the Titans will be \"a crazy moment\"",
@@ -42036,6 +42013,27 @@
         "nfl_team_detected",
         "phrase_nfl_draft",
         "nfl_preserving_category:draft"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-campbell-packers-offense-will-make-plays-we-have-to-make-more",
+      "source_name": "Pro Football Talk",
+      "headline": "Dan Campbell: Packers offense will make plays, we have to make more",
+      "published_at": "2026-10-21T12:43:52.000Z",
+      "observed_at": "2026-10-21T12:50:24.017Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
