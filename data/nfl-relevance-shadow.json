@@ -2,70 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brock-purdy-is-the-nfc-offensive-player-of-the-month",
-      "source_name": "Pro Football Talk",
-      "headline": "Brock Purdy is the NFC offensive player of the month",
-      "published_at": "2026-10-01T16:05:38.000Z",
-      "observed_at": "2026-10-01T16:10:20.544Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-joey-porter-jr-trade-has-a-term-that-protects-against-an-ongoing-hold-in",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Joey Porter Jr. trade has a term that protects against an ongoing hold-in",
-      "published_at": "2026-10-01T15:57:39.000Z",
-      "observed_at": "2026-10-01T16:10:20.544Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "PIT"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/evan-mcpherson-named-afc-special-teams-player-of-the-month-for-september",
-      "source_name": "Pro Football Talk",
-      "headline": "Evan McPherson named AFC special teams player of the month for September",
-      "published_at": "2026-10-01T16:16:18.000Z",
-      "observed_at": "2026-10-01T16:20:21.578Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/greg-rousseau-named-afc-defensive-player-of-the-month",
       "source_name": "Pro Football Talk",
       "headline": "Greg Rousseau named AFC defensive player of the month",
@@ -42012,6 +41948,66 @@
         "ATL"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-week-7-injury-report-2026-season",
+      "source_name": "NFL.com",
+      "headline": "NFL Week 7 injury report: Player statuses for all 14 games",
+      "published_at": "2026-10-21T07:19:30.000Z",
+      "observed_at": "2026-10-21T19:30:23.516Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/dallas-cowboys-jerry-jones-coaching-hires-roster-changes",
+      "source_name": "FOX Sports",
+      "headline": "Jerry Jones Rules Out More Cowboys Coaching Changes, Open to Trades",
+      "published_at": "2026-10-21T19:16:20.000Z",
+      "observed_at": "2026-10-21T19:30:23.516Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kyle-monangai-ruled-out-jonah-jackson-set-to-play-vs-patriots",
+      "source_name": "Pro Football Talk",
+      "headline": "Kyle Monangai ruled out, Jonah Jackson set to play vs. Patriots",
+      "published_at": "2026-10-21T19:22:01.000Z",
+      "observed_at": "2026-10-21T19:30:23.516Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "NE"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
