@@ -2,67 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/greg-rousseau-named-afc-defensive-player-of-the-month",
-      "source_name": "Pro Football Talk",
-      "headline": "Greg Rousseau named AFC defensive player of the month",
-      "published_at": "2026-10-01T16:11:29.000Z",
-      "observed_at": "2026-10-01T16:20:21.578Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/giants-s-jevon-holland-named-the-nfc-defensive-player-of-the-month",
-      "source_name": "Pro Football Talk",
-      "headline": "Giants S Jevon Holland named the NFC defensive player of the month",
-      "published_at": "2026-10-01T16:10:26.000Z",
-      "observed_at": "2026-10-01T16:20:21.578Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG",
-        "TEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/titans-lb-anthony-hill-is-the-defensive-rookie-of-the-month",
-      "source_name": "Pro Football Talk",
-      "headline": "Titans LB Anthony Hill is the defensive rookie of the month",
-      "published_at": "2026-10-01T16:23:39.000Z",
-      "observed_at": "2026-10-01T16:30:27.958Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIA",
-        "TEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-kr-myles-price-named-the-nfc-special-teams-player-of-the-month",
       "source_name": "Pro Football Talk",
       "headline": "Vikings KR Myles Price named the NFC special teams player of the month",
@@ -42014,6 +41953,67 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/jordan-elliott-released-by-titans-after-pulling-out-gun-in-parking-lot-robert-saleh-says",
+      "source_name": "NFL.com",
+      "headline": "Jordan Elliott released by Titans after pulling out gun in parking lot, Robert Saleh says",
+      "published_at": "2026-10-21T07:33:52.000Z",
+      "observed_at": "2026-10-21T19:50:19.317Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "TEN"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_released_by",
+        "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/a-j-brown-on-sundays-rough-outing-im-moving-forward",
+      "source_name": "Pro Football Talk",
+      "headline": "A.J. Brown on Sunday's rough outing: I'm moving forward",
+      "published_at": "2026-10-21T19:36:59.000Z",
+      "observed_at": "2026-10-21T19:50:19.317Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/john-harbaugh-starting-j-j-mccarthy-is-the-plan-going-forward",
+      "source_name": "Pro Football Talk",
+      "headline": "John Harbaugh: Starting J.J. McCarthy is the plan going forward",
+      "published_at": "2026-10-21T19:36:10.000Z",
+      "observed_at": "2026-10-21T19:50:19.317Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
