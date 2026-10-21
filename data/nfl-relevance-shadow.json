@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jim-harbaugh-to-no-surprise-spoke-to-john-harbaugh-before-j-j-mccarthy-trade",
-      "source_name": "Pro Football Talk",
-      "headline": "Jim Harbaugh, to no surprise, spoke to John Harbaugh before J.J. McCarthy trade",
-      "published_at": "2026-09-30T23:14:59.000Z",
-      "observed_at": "2026-09-30T23:20:20.692Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "trade",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/zack-baun-devonta-smith-miss-practice-for-eagles",
-      "source_name": "Pro Football Talk",
-      "headline": "Zack Baun, DeVonta Smith miss practice for Eagles",
-      "published_at": "2026-09-30T23:13:30.000Z",
-      "observed_at": "2026-09-30T23:20:20.692Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/marvin-mims-jaylen-waddle-had-full-participation-wednesday",
       "source_name": "Pro Football Talk",
       "headline": "Marvin Mims, Jaylen Waddle had full participation Wednesday",
@@ -42024,6 +41986,49 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-sign-anthony-tyus-to-53-open-practice-window-for-bam-martin-scott",
+      "source_name": "Pro Football Talk",
+      "headline": "Panthers sign Anthony Tyus to 53, open practice window for Bam Martin-Scott",
+      "published_at": "2026-10-21T15:14:05.000Z",
+      "observed_at": "2026-10-21T15:20:20.909Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ben-johnson-wants-to-see-caleb-williams-stack-good-performances-back-to-back",
+      "source_name": "Pro Football Talk",
+      "headline": "Ben Johnson wants to see Caleb Williams stack good performances back to back",
+      "published_at": "2026-10-21T15:11:17.000Z",
+      "observed_at": "2026-10-21T15:20:20.909Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
