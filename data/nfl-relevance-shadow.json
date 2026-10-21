@@ -2,48 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-kr-myles-price-named-the-nfc-special-teams-player-of-the-month",
-      "source_name": "Pro Football Talk",
-      "headline": "Vikings KR Myles Price named the NFC special teams player of the month",
-      "published_at": "2026-10-01T16:16:47.000Z",
-      "observed_at": "2026-10-01T16:30:27.958Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chiefs-lt-kahlil-benson-named-offensive-rookie-of-the-month",
-      "source_name": "Pro Football Talk",
-      "headline": "Chiefs LT Kahlil Benson named offensive rookie of the month",
-      "published_at": "2026-10-01T16:29:44.000Z",
-      "observed_at": "2026-10-01T16:40:20.967Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/john-lynch-on-nick-bosas-return-calf-injuries-are-sometimes-murky",
       "source_name": "Pro Football Talk",
       "headline": "John Lynch on Nick Bosa's return: Calf injuries are sometimes murky",
@@ -42014,6 +41972,49 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/tennessee-titans-jordan-elliot-firearm-released",
+      "source_name": "FOX Sports",
+      "headline": "Saleh Reveals Titans Released Jordan Elliott After He Pulled Gun In Parking Lot",
+      "published_at": "2026-10-21T19:43:02.000Z",
+      "observed_at": "2026-10-21T20:00:32.037Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "TEN"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bucs-list-baker-mayfield-as-full-participant-on-wednesday",
+      "source_name": "Pro Football Talk",
+      "headline": "Bucs list Baker Mayfield as full participant on Wednesday",
+      "published_at": "2026-10-21T19:48:25.000Z",
+      "observed_at": "2026-10-21T20:00:32.037Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "TB"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]

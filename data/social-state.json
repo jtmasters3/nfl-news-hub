@@ -541905,24 +541905,29 @@
     },
     "b175abcb-63b2-4397-9d1c-4b3d4a3761e4": {
       "story_id": "b175abcb-63b2-4397-9d1c-4b3d4a3761e4",
-      "status": "new",
+      "status": "queued",
       "merged_into": null,
       "created_at": "2026-10-21T17:10:29.461Z",
-      "updated_at": "2026-10-21T17:10:29.461Z",
+      "updated_at": "2026-10-21T20:00:32.037Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
         "instagram_story": true
       },
       "source_story": {
-        "post_headline": null,
-        "base_image_url": null,
-        "source_name": null,
-        "source_url": null,
-        "category": null,
-        "teams": [],
-        "players": [],
-        "description": null,
+        "post_headline": "SALEH REVEALS TITANS RELEASED JORDAN ELLIOTT",
+        "base_image_url": "https://a57.foxsports.com/statics.foxsports.com/www.foxsports.com/content/uploads/2026/10/1294/728/titans-2.jpg?ve=1&tl=1",
+        "source_name": "FOX Sports",
+        "source_url": "https://www.foxsports.com/stories/nfl/tennessee-titans-jordan-elliot-firearm-released",
+        "category": "free_agency",
+        "teams": [
+          "Tennessee Titans"
+        ],
+        "players": [
+          "Robert Saleh",
+          "Jordan Elliott"
+        ],
+        "description": "Titans head coach Robert Saleh spent a large portion of his Wednesday press conference discussing the incident that led to defensive tackle Jordan Elliott's release earlier this week.",
         "is_rumor": false
       },
       "artwork": {
@@ -542052,6 +542057,15 @@
         "message": null,
         "at": null,
         "retry_count": 0
+      },
+      "selection": {
+        "destination": "story",
+        "slot_id": "story:2026-10-21T16:00:00-04:00",
+        "selected_at": "2026-10-21T20:00:32.037Z",
+        "window_start": "2026-10-21T19:00:00.000Z",
+        "window_end": "2026-10-21T20:00:00.000Z",
+        "score": 8,
+        "reason": "final_fallback_recent_pool_importance_score_rank"
       }
     },
     "5f2fe093-f1ef-4e07-af26-be010cec71d0": {
@@ -544791,7 +544805,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-10-21T19:50:38.330Z",
-      "updated_at": "2026-10-21T19:50:38.344Z",
+      "updated_at": "2026-10-21T20:00:32.037Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -544937,6 +544951,15 @@
         "message": null,
         "at": null,
         "retry_count": 0
+      },
+      "selection": {
+        "destination": "feed",
+        "slot_id": "feed:2026-10-21T16:00:00-04:00",
+        "selected_at": "2026-10-21T20:00:32.037Z",
+        "window_start": "2026-10-21T18:00:00.000Z",
+        "window_end": "2026-10-21T20:00:00.000Z",
+        "score": 4,
+        "reason": "importance_score_rank"
       }
     },
     "403b8d44-d4f6-4626-87d9-5d449cd81815": {
@@ -552580,6 +552603,24 @@
       "status": "selected",
       "story_id": "68f8852b-2b61-45dd-a03b-fbd4875d57d3",
       "processed_at": "2026-10-21T19:00:28.520Z"
+    },
+    "feed:2026-10-21T16:00:00-04:00": {
+      "destination": "feed",
+      "slot_time": "2026-10-21T20:00:00.000Z",
+      "window_start": "2026-10-21T18:00:00.000Z",
+      "window_end": "2026-10-21T20:00:00.000Z",
+      "status": "selected",
+      "story_id": "390ad47d-d5a7-4f87-926a-1c4c64e2f327",
+      "processed_at": "2026-10-21T20:00:32.037Z"
+    },
+    "story:2026-10-21T16:00:00-04:00": {
+      "destination": "story",
+      "slot_time": "2026-10-21T20:00:00.000Z",
+      "window_start": "2026-10-21T19:00:00.000Z",
+      "window_end": "2026-10-21T20:00:00.000Z",
+      "status": "selected",
+      "story_id": "b175abcb-63b2-4397-9d1c-4b3d4a3761e4",
+      "processed_at": "2026-10-21T20:00:32.037Z"
     }
   }
 }
