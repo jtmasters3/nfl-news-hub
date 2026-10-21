@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jameson-williams-wont-be-charged-following-assault-investigation",
-      "source_name": "Pro Football Talk",
-      "headline": "Jameson Williams won't be charged, following assault investigation",
-      "published_at": "2026-09-30T20:42:02.000Z",
-      "observed_at": "2026-09-30T20:50:25.622Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chris-godwin-yaya-diaby-among-buccaneers-out-of-practice-wednesday",
       "source_name": "Pro Football Talk",
       "headline": "Chris Godwin, Yaya Diaby among Buccaneers out of practice Wednesday",
@@ -42044,6 +42023,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-steve-tisch-was-present-for-nfl-quarterly-ownership-meetings",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Steve Tisch was present for NFL quarterly ownership meetings",
+      "published_at": "2026-10-21T10:29:40.000Z",
+      "observed_at": "2026-10-21T10:40:23.687Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
