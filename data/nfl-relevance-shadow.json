@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lamar-jackson-dealing-with-something-small-wound-up-limited-at-practice",
-      "source_name": "Pro Football Talk",
-      "headline": "Lamar Jackson \"dealing with something small,\" wound up limited at practice",
-      "published_at": "2026-09-30T19:50:09.000Z",
-      "observed_at": "2026-09-30T20:00:35.052Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/george-kittle-on-mike-evans-injury-fractured-ribs-suck",
       "source_name": "Pro Football Talk",
       "headline": "George Kittle on Mike Evans' injury: Fractured ribs suck",
@@ -42050,6 +42029,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-looking-to-play-10-international-games-in-2027-possibly-with-one-in-asia",
+      "source_name": "Pro Football Talk",
+      "headline": "NFL looking to play 10 international games in 2027, possibly with one in Asia",
+      "published_at": "2026-10-21T00:58:03.000Z",
+      "observed_at": "2026-10-21T01:00:26.527Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
