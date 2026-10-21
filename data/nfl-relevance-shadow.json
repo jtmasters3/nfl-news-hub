@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/gervon-dexter-falcons-reportedly-agree-4-year-78-million-extension",
-      "source_name": "FOX Sports",
-      "headline": "Gervon Dexter, Falcons Reportedly Agree On 4-Year, $78 Million Extension",
-      "published_at": "2026-09-30T22:50:29.000Z",
-      "observed_at": "2026-09-30T23:10:21.365Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-donald-misses-practice-with-a-sore-back",
       "source_name": "Pro Football Talk",
       "headline": "Aaron Donald misses practice with a sore back",
@@ -42022,6 +42001,27 @@
         "TEN"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/sam-franklin-jr-suspended-one-game",
+      "source_name": "NFL.com",
+      "headline": "Sam Franklin Jr. Suspended One Game",
+      "published_at": "2026-10-21T02:16:00.000Z",
+      "observed_at": "2026-10-21T14:50:19.840Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF"
+      ],
+      "detected_category": "suspension",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
