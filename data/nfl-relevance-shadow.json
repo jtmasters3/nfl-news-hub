@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-opens-pandoras-box-by-supposedly-admitting-dpi-error-to-sean-mcvay",
-      "source_name": "Pro Football Talk",
-      "headline": "NFL opens Pandora's box by supposedly admitting DPI error to Sean McVay",
-      "published_at": "2026-10-01T19:16:48.000Z",
-      "observed_at": "2026-10-01T19:20:22.918Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-glenn-says-he-and-ben-johnson-made-each-other-better-as-coaches",
       "source_name": "Pro Football Talk",
       "headline": "Aaron Glenn says he and Ben Johnson made each other better as coaches",
@@ -42006,6 +41989,28 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "nfl_preserving_category:contract"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/former-cowboys-db-broncos-scout-cornell-green-dies-at-86",
+      "source_name": "Pro Football Talk",
+      "headline": "Former Cowboys DB, Broncos scout Cornell Green dies at 86",
+      "published_at": "2026-10-21T21:08:52.000Z",
+      "observed_at": "2026-10-21T21:20:19.739Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "DEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
