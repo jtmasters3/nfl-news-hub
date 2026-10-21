@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ashton-dulin-remains-sidelined-by-ankle-injury-for-wednesdays-practice",
-      "source_name": "Pro Football Talk",
-      "headline": "Ashton Dulin remains sidelined by ankle injury for Wednesday's practice",
-      "published_at": "2026-09-30T20:09:19.000Z",
-      "observed_at": "2026-09-30T20:20:22.428Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "WAS"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jayden-daniels-is-one-of-10-commanders-limited-in-wednesdays-practice",
       "source_name": "Pro Football Talk",
       "headline": "Jayden Daniels is one of 10 Commanders limited in Wednesday's practice",
@@ -42041,6 +42019,25 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-week-6-qb-notebook-jordan-love-mvp-race-cj-stroud-extension",
+      "source_name": "FOX Sports",
+      "headline": "QB Notebook: Jordan Love Enters The MVP Race; C.J. Stroud Earning Big Extension",
+      "published_at": "2026-10-21T03:53:03.000Z",
+      "observed_at": "2026-10-21T04:10:19.528Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "contract",
+      "nfl_evidence": [
+        "nfl_preserving_category:contract"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
