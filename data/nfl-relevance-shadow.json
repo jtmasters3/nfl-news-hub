@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/patriots-drake-maye-giants-vikings-jj-mccarthy-trade",
-      "source_name": "FOX Sports",
-      "headline": "Scouts Unsure How To Fix Drake Maye: 'He Looks Like A Rookie, And Not A Particularly Good One'",
-      "published_at": "2026-10-01T20:45:43.000Z",
-      "observed_at": "2026-10-01T21:00:36.608Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "trade",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bucs-get-chris-godwin-yaya-diaby-back-at-practice",
       "source_name": "Pro Football Talk",
       "headline": "Bucs get Chris Godwin, Yaya Diaby back at practice",
@@ -42000,6 +41983,27 @@
       "confidence": "high",
       "detected_teams": [
         "DEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/senator-lisa-blunt-rochester-seeks-answers-from-roger-goodell-regarding-the-jalen-hurts-situation",
+      "source_name": "Pro Football Talk",
+      "headline": "Senator Lisa Blunt Rochester seeks answers from Roger Goodell regarding the Jalen Hurts situation",
+      "published_at": "2026-10-21T23:38:18.000Z",
+      "observed_at": "2026-10-21T23:50:18.805Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
