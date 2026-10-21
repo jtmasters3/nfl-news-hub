@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lamar-jackson-was-limited-with-back-injury-in-wednesdays-practice",
-      "source_name": "Pro Football Talk",
-      "headline": "Lamar Jackson was limited with back injury in Wednesday's practice",
-      "published_at": "2026-09-30T20:45:09.000Z",
-      "observed_at": "2026-09-30T20:50:25.622Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jameson-williams-wont-be-charged-following-assault-investigation",
       "source_name": "Pro Football Talk",
       "headline": "Jameson Williams won't be charged, following assault investigation",
@@ -42035,6 +42018,28 @@
       "detected_category": "coaching",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/reports-titans-released-dt-jordan-elliott-after-he-went-to-car-to-get-gun",
+      "source_name": "Pro Football Talk",
+      "headline": "Reports: Titans released DT Jordan Elliott after he went to car to get gun",
+      "published_at": "2026-10-21T09:57:56.000Z",
+      "observed_at": "2026-10-21T10:10:19.688Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "TEN"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:free_agency"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
