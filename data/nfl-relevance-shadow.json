@@ -2,48 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-thursday-oct-1",
-      "source_name": "NFL.com",
-      "headline": "NFL news roundup: Commanders' Jayden Daniels provides update on elbow",
-      "published_at": "2026-10-01T03:17:10.000Z",
-      "observed_at": "2026-10-01T15:30:31.061Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/chargers-by-the-numbers-finding-what-jim-harbaugh-mike-mcdaniel-must-fix-on-offense",
-      "source_name": "NFL.com",
-      "headline": "Chargers by the numbers: Finding what Jim Harbaugh, Mike McDaniel must fix on offense",
-      "published_at": "2026-10-01T01:46:05.000Z",
-      "observed_at": "2026-10-01T15:30:31.061Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/why-kyren-williams-versatility-can-at-times-be-a-conundrum-for-the-rams",
       "source_name": "NFL.com",
       "headline": "Why Kyren Williams' versatility can at times be a conundrum for the Rams",
@@ -42016,6 +41974,44 @@
         "SEA"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-how-to-watch-week-7-nfl-games-schedule-paris-game-details-and-more",
+      "source_name": "NFL.com",
+      "headline": "NFL+: How to watch Week 7 NFL games, schedule, Paris game details, and more",
+      "published_at": "2026-10-21T06:30:35.000Z",
+      "observed_at": "2026-10-21T18:40:19.755Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-designate-a-j-terrell-for-return-from-injured-reserve",
+      "source_name": "Pro Football Talk",
+      "headline": "Falcons designate A.J. Terrell for return from injured reserve",
+      "published_at": "2026-10-21T18:24:50.000Z",
+      "observed_at": "2026-10-21T18:40:19.755Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
