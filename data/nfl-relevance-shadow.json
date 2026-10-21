@@ -2,26 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/foxtober-mlb-postseason-cfb-chiefs-dodgers-ohio-state",
-      "source_name": "FOX Sports",
-      "headline": "What October 2026 Will Reveal About MLB, The NFL And College Football",
-      "published_at": "2026-10-01T02:09:05.000Z",
-      "observed_at": "2026-10-01T02:20:23.322Z",
-      "decision": "reject",
-      "classification": "other_sport",
-      "confidence": "high",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [
-        "college_football_phrase",
-        "league_mlb"
-      ],
-      "reason_codes": [
-        "other_sport_marker_no_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/3-0-vikings-are-a-game-away-from-a-dubious-record",
       "source_name": "Pro Football Talk",
       "headline": "3-0 Vikings are a game away from a dubious record",
@@ -42016,6 +41996,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/new-orleans-saints-mickey-loomis-gayle-benson",
+      "source_name": "FOX Sports",
+      "headline": "Saints GM Addresses Criticism From Team Owner: 'It’s Not Good Enough Yet'",
+      "published_at": "2026-10-21T15:48:34.000Z",
+      "observed_at": "2026-10-21T16:00:31.069Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NO"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
