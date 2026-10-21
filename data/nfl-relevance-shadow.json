@@ -2,87 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-picks-week-4-2026-nfl-season",
-      "source_name": "NFL.com",
-      "headline": "NFL Week 4 picks: Upset and score predictions, matchup breakdowns for every game",
-      "published_at": "2026-10-01T05:06:29.000Z",
-      "observed_at": "2026-10-01T17:20:23.049Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE",
-        "KC",
-        "LV",
-        "LAR",
-        "PHI",
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/fanduel-admits-it-has-used-roughly-30-bryce-harper-style-videos",
-      "source_name": "Pro Football Talk",
-      "headline": "FanDuel admits it has used roughly 30 Bryce Harper-style videos",
-      "published_at": "2026-10-01T17:12:15.000Z",
-      "observed_at": "2026-10-01T17:20:23.049Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-week-4-picks-best-bets-every-game-wills-wagers",
-      "source_name": "FOX Sports",
-      "headline": "2026 NFL Week 4 Picks: Best Bets For Every Game — Will's Wagers",
-      "published_at": "2026-10-01T17:55:22.000Z",
-      "observed_at": "2026-10-01T18:00:32.240Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/cowboys-think-joey-porter-jr-fits-well-and-it-s-possible-he-plays-sunday",
-      "source_name": "NFL.com",
-      "headline": "Cowboys think Joey Porter Jr. 'fits well' and it's possible he plays Sunday",
-      "published_at": "2026-10-01T06:01:06.000Z",
-      "observed_at": "2026-10-01T18:40:21.838Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/giants-sign-lb-jihad-ward-off-of-vikings-practice-squad",
       "source_name": "Pro Football Talk",
       "headline": "Giants sign LB Jihad Ward off of Vikings practice squad",
@@ -42000,6 +41919,89 @@
       "confidence": "high",
       "detected_teams": [
         "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/college-football/sammys-sportsbook-whispers-ucla-bruins-best-betting-story-season",
+      "source_name": "FOX Sports",
+      "headline": "Sammy’s Sportsbook Whispers: Why UCLA Is The Best Betting Story Of The Season",
+      "published_at": "2026-10-21T20:39:13.000Z",
+      "observed_at": "2026-10-21T20:40:20.246Z",
+      "decision": "reject",
+      "classification": "college_football",
+      "confidence": "medium",
+      "detected_teams": [],
+      "detected_category": "coaching",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [
+        "college_football_phrase"
+      ],
+      "reason_codes": [
+        "college_marker_no_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-packers-generates-24-656-million-on-sunday-night",
+      "source_name": "Pro Football Talk",
+      "headline": "Cowboys-Packers generates 24.656 million on Sunday night",
+      "published_at": "2026-10-21T20:36:00.000Z",
+      "observed_at": "2026-10-21T20:40:20.246Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "GB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jordan-love-listed-as-limited-with-back-injury-on-wednesday",
+      "source_name": "Pro Football Talk",
+      "headline": "Jordan Love listed as limited with back injury on Wednesday",
+      "published_at": "2026-10-21T20:35:53.000Z",
+      "observed_at": "2026-10-21T20:40:20.246Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/adonai-mitchell-returns-to-practice-for-jets",
+      "source_name": "Pro Football Talk",
+      "headline": "Adonai Mitchell returns to practice for Jets",
+      "published_at": "2026-10-21T20:26:52.000Z",
+      "observed_at": "2026-10-21T20:40:20.246Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYJ"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
