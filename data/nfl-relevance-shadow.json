@@ -2,32 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-week-4-picks-upset-and-score-predictions-matchup-breakdowns-for-every-game",
-      "source_name": "NFL.com",
-      "headline": "NFL Week 4 picks: Upset and score predictions, matchup breakdowns for every game",
-      "published_at": "2026-10-01T05:06:29.000Z",
-      "observed_at": "2026-10-01T17:10:19.731Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE",
-        "KC",
-        "LV",
-        "LAR",
-        "PHI",
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/zach-charbonnet-designated-to-return-to-practice",
       "source_name": "Pro Football Talk",
       "headline": "Zach Charbonnet designated to return to practice",
@@ -42007,6 +41981,27 @@
         "SF"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tyler-warren-did-not-practice-on-wednesday-with-groin-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Tyler Warren did not practice on Wednesday with groin injury",
+      "published_at": "2026-10-21T20:11:37.000Z",
+      "observed_at": "2026-10-21T20:20:23.060Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
