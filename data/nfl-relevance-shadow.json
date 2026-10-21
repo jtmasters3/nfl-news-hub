@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patrick-mahomes-mutual-respect-with-maxx-crosby-brings-out-the-best-in-both-of-us",
-      "source_name": "Pro Football Talk",
-      "headline": "Patrick Mahomes: Mutual respect with Maxx Crosby brings out the best in both of us",
-      "published_at": "2026-10-01T14:53:10.000Z",
-      "observed_at": "2026-10-01T15:00:28.955Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/joey-porter-jr-trade-cowboys-steelers-history",
       "source_name": "FOX Sports",
       "headline": "Joey Porter Jr. To Dallas: Every Cowboys-Steelers Trade All Time",
@@ -42012,6 +41995,27 @@
         "CAR"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-put-kobie-turner-on-injured-reserve",
+      "source_name": "Pro Football Talk",
+      "headline": "Rams put Kobie Turner on injured reserve",
+      "published_at": "2026-10-21T18:03:30.000Z",
+      "observed_at": "2026-10-21T18:10:21.844Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
