@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/patriots-drake-maye-shoulder-not-impacting-throws-no-rift-with-hc-mike-vrabel",
-      "source_name": "NFL.com",
-      "headline": "Patriots' Drake Maye: Shoulder not impacting throws; no rift with HC Mike Vrabel",
-      "published_at": "2026-09-30T10:44:53.000Z",
-      "observed_at": "2026-09-30T22:50:20.481Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/john-harbaugh-on-why-giants-cut-odell-beckham-jr-we-weren-t-getting-enough",
-      "source_name": "NFL.com",
-      "headline": "John Harbaugh on why Giants cut Odell Beckham Jr.: 'We weren't getting enough'",
-      "published_at": "2026-09-30T07:46:06.000Z",
-      "observed_at": "2026-09-30T23:00:26.820Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG"
-      ],
-      "detected_category": "free_agency",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:free_agency"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/can-dream-team-rams-really-miss-playoffs-why-case-building",
       "source_name": "FOX Sports",
       "headline": "West Coast Read: Can Dream Team Rams Really Miss The Playoffs? Why The Case Is Building",
@@ -42034,6 +41991,45 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ben-johnson-drake-maye-is-an-elite-deep-ball-thrower-can-crush-you-with-his-legs",
+      "source_name": "Pro Football Talk",
+      "headline": "Ben Johnson: Drake Maye is an elite deep ball thrower, can crush you with his legs",
+      "published_at": "2026-10-21T13:58:01.000Z",
+      "observed_at": "2026-10-21T14:00:25.763Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/diego-pavia-expresses-intention-to-play-in-the-ufl",
+      "source_name": "Pro Football Talk",
+      "headline": "Diego Pavia expresses intention to play in the UFL",
+      "published_at": "2026-10-21T13:49:53.000Z",
+      "observed_at": "2026-10-21T14:00:25.763Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
