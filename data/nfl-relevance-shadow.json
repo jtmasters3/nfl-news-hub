@@ -2,70 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ben-johnson-qb-on-sunday-will-be-whoever-gives-us-the-best-chance-to-win",
-      "source_name": "Pro Football Talk",
-      "headline": "Ben Johnson: QB on Sunday will be whoever gives us the best chance to win",
-      "published_at": "2026-09-30T19:28:03.000Z",
-      "observed_at": "2026-09-30T19:30:24.437Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/jayden-daniels-returns-to-practice-but-status-vs-colts-remains-uncertain",
-      "source_name": "NFL.com",
-      "headline": "Jayden Daniels returns to practice, but status vs. Colts remains uncertain",
-      "published_at": "2026-09-30T07:31:06.000Z",
-      "observed_at": "2026-09-30T19:50:26.818Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/new-york-jets-breece-hall-quad-injury",
-      "source_name": "FOX Sports",
-      "headline": "Jets RB Breece Hall, 4 Others 'Week To Week' And Missing Practice With Injuries",
-      "published_at": "2026-09-30T19:39:42.000Z",
-      "observed_at": "2026-09-30T19:50:26.818Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG",
-        "NYJ"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/browns-rule-out-c-elgton-jenkins-for-thursday-vs-steelers",
       "source_name": "Pro Football Talk",
       "headline": "Browns rule out C Elgton Jenkins for Thursday vs. Steelers",
@@ -42052,6 +41988,64 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-trade-deadline-best-available-players",
+      "source_name": "FOX Sports",
+      "headline": "NFL Trade Deadline: Who Are The 10 Best Players That Could Be Available?",
+      "published_at": "2026-10-20T23:54:25.000Z",
+      "observed_at": "2026-10-21T00:10:21.617Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "trade",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/upon-further-review-just-how-off-we-were-rams-chargers-ashton-jeanty-bust",
+      "source_name": "FOX Sports",
+      "headline": "Upon Further Review: Just How Off We Were On Rams, Chargers; Ashton Jeanty A Bust?",
+      "published_at": "2026-10-20T23:53:46.000Z",
+      "observed_at": "2026-10-21T00:10:21.617Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC",
+        "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nflpa-calls-for-full-investigation-into-jalen-hurts-situation",
+      "source_name": "Pro Football Talk",
+      "headline": "NFLPA calls for \"full investigation\" into Jalen Hurts situation",
+      "published_at": "2026-10-21T00:02:01.000Z",
+      "observed_at": "2026-10-21T00:10:21.617Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "phrase_nflpa"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
