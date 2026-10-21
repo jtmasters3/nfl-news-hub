@@ -2,66 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/matthew-stafford-close-to-becoming-the-first-qb-with-150-touchdowns-on-two-teams",
-      "source_name": "Pro Football Talk",
-      "headline": "Matthew Stafford close to becoming the first QB with 150 touchdowns on two teams",
-      "published_at": "2026-10-01T13:53:28.000Z",
-      "observed_at": "2026-10-01T14:10:20.398Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-campbell-jared-goff-is-tough-durable-resilient-which-you-have-to-be-at-qb",
-      "source_name": "Pro Football Talk",
-      "headline": "Dan Campbell: Jared Goff is tough, durable, resilient, which you have to be at QB",
-      "published_at": "2026-10-01T14:17:01.000Z",
-      "observed_at": "2026-10-01T14:20:25.188Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jets-sign-ol-kohl-levao-to-their-active-roster",
-      "source_name": "Pro Football Talk",
-      "headline": "Jets sign OL Kohl Levao to their active roster",
-      "published_at": "2026-10-01T14:12:17.000Z",
-      "observed_at": "2026-10-01T14:20:25.188Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYJ"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/theres-a-chance-joey-porter-jr-will-play-for-the-cowboys-on-sunday",
       "source_name": "Pro Football Talk",
       "headline": "There's \"a chance\" Joey Porter Jr. will play for the Cowboys on Sunday",
@@ -42016,6 +41956,66 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-qb-rankings-index-week-7-2026-nfl-season",
+      "source_name": "NFL.com",
+      "headline": "NFL QB rankings, Week 7: Dak Prescott hits season low; C.J. Stroud eclipses Patrick Mahomes",
+      "published_at": "2026-10-21T05:19:59.000Z",
+      "observed_at": "2026-10-21T17:30:24.762Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-roger-goodell-jalen-hurts-update-eagles-medical-staff",
+      "source_name": "FOX Sports",
+      "headline": "Roger Goodell Explains Why He's 'Comfortable' With Eagles' Handling Of Jalen Hurts",
+      "published_at": "2026-10-21T17:20:06.000Z",
+      "observed_at": "2026-10-21T17:30:24.762Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_nfl_commissioner"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lamar-jackson-remains-out-of-practice-to-start-week-7",
+      "source_name": "Pro Football Talk",
+      "headline": "Lamar Jackson remains out of practice to start Week 7",
+      "published_at": "2026-10-21T17:19:30.000Z",
+      "observed_at": "2026-10-21T17:30:24.762Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
