@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/niners-owner-jed-york-suspended-six-games-fined-500k",
-      "source_name": "NFL.com",
-      "headline": "Niners owner Jed York suspended six games, fined $500K by NFL for violating personal conduct policy",
-      "published_at": "2026-10-02T06:31:16.000Z",
-      "observed_at": "2026-10-02T18:40:26.180Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "suspension",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/justin-jefferson-ruled-out-for-vikings-dolphins",
       "source_name": "Pro Football Talk",
       "headline": "Justin Jefferson ruled out for Vikings-Dolphins",
@@ -41942,6 +41921,28 @@
       "confidence": "high",
       "detected_teams": [
         "TEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patriots-say-christian-gonzalez-is-questionable-tonight-with-an-illness",
+      "source_name": "Pro Football Talk",
+      "headline": "Patriots say Christian Gonzalez is questionable tonight with an illness",
+      "published_at": "2026-10-22T22:20:43.000Z",
+      "observed_at": "2026-10-22T22:30:31.231Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "NE"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
