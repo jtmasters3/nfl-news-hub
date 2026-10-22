@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/christian-gonzalez-christian-barmore-remain-out-of-practice-for-patriots",
-      "source_name": "Pro Football Talk",
-      "headline": "Christian Gonzalez, Christian Barmore remain out of practice for Patriots",
-      "published_at": "2026-10-01T20:49:49.000Z",
-      "observed_at": "2026-10-01T21:00:36.608Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-sign-wr-brandin-cooks-to-active-roster",
-      "source_name": "Pro Football Talk",
-      "headline": "49ers sign WR Brandin Cooks to active roster",
-      "published_at": "2026-10-01T20:46:50.000Z",
-      "observed_at": "2026-10-01T21:00:36.608Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/joey-porter-felt-disrespected-and-underappreciated-by-steelers",
       "source_name": "Pro Football Talk",
       "headline": "Joey Porter Jr. felt \"disrespected\" and \"underappreciated\" by Steelers",
@@ -42003,6 +41959,45 @@
       "confidence": "high",
       "detected_teams": [
         "ARI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-trade-deadline-top-trade-candidate-all-32-teams",
+      "source_name": "FOX Sports",
+      "headline": "NFL Trade Deadline: The Top Trade Candidate On All 32 Teams",
+      "published_at": "2026-10-22T00:49:12.000Z",
+      "observed_at": "2026-10-22T00:50:21.206Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "trade",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/commanders-49ers-attracts-17-9-million-viewers-for-monday-night-football",
+      "source_name": "Pro Football Talk",
+      "headline": "Commanders-49ers attracts 17.9 million viewers for Monday Night Football",
+      "published_at": "2026-10-22T00:41:47.000Z",
+      "observed_at": "2026-10-22T00:50:21.206Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF",
+        "WAS"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
