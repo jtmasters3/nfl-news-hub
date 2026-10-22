@@ -2,87 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/jayden-daniels-not-concerned-about-reinjury-risk-that-s-what-the-brace-is-for",
-      "source_name": "NFL.com",
-      "headline": "Jayden Daniels not concerned about reinjury risk: 'That's what the brace is for'",
-      "published_at": "2026-10-01T08:16:05.000Z",
-      "observed_at": "2026-10-01T21:50:21.424Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-final-straw-for-steelers-was-joey-porter-jr-s-wednesday-claim-of-back-pain",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: \"Final straw\" for Steelers was Joey Porter Jr.'s Wednesday claim of back pain",
-      "published_at": "2026-10-01T21:38:35.000Z",
-      "observed_at": "2026-10-01T21:50:21.424Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/joey-porter-jr-s-back-is-feeling-better-and-he-hopes-to-play-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "Joey Porter Jr.'s back is \"feeling better,\" and he hopes to play Sunday",
-      "published_at": "2026-10-01T22:11:14.000Z",
-      "observed_at": "2026-10-01T22:20:21.162Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/commissioner-roger-goodell-meets-with-illinois-governor-as-bears-continue-pursuit-of-new-stadium",
-      "source_name": "NFL.com",
-      "headline": "Commissioner Roger Goodell meets with Illinois governor as Bears continue pursuit of new stadium",
-      "published_at": "2026-10-01T10:27:14.000Z",
-      "observed_at": "2026-10-01T22:30:32.233Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_nfl_commissioner"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/how-did-tom-brady-learn-say-meatball-sub-how-many-such-passes-did-he-throw",
       "source_name": "FOX Sports",
       "headline": "How Did Tom Brady Learn To Say 'Meatball Sub,' And How Many Such Passes Did He Throw?",
@@ -41998,6 +41917,89 @@
       "detected_teams": [
         "KC",
         "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/te-sam-laporta-prepared-get-paid-somewhere-else-lions-dont-get-deal-done",
+      "source_name": "FOX Sports",
+      "headline": "Lions' Sam LaPorta Is Open To 'Get Paid Somewhere Else’ If Contract Negotiations Loom",
+      "published_at": "2026-10-22T01:32:54.000Z",
+      "observed_at": "2026-10-22T01:50:19.861Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET"
+      ],
+      "detected_category": "contract",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:contract"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-catchup-giants-go-j-j-mccarthy-josh-jacobs-back-practice",
+      "source_name": "FOX Sports",
+      "headline": "NFL Catchup: Giants To Start J.J. McCarthy; Josh Jacobs Back At Packers Practice",
+      "published_at": "2026-10-22T01:31:18.000Z",
+      "observed_at": "2026-10-22T01:50:19.861Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
+        "NYG"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/in-their-sofi-stadium-incident-troy-aikmans-position-to-joe-buck-was-you-f-ked-me-over",
+      "source_name": "Pro Football Talk",
+      "headline": "In their SoFi Stadium incident, Troy Aikman's position to Joe Buck was: \"You f—ked me over!\"",
+      "published_at": "2026-10-22T01:37:58.000Z",
+      "observed_at": "2026-10-22T01:50:19.861Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/after-two-years-rehabbing-tank-dell-overwhelmed-anxious-and-excited",
+      "source_name": "Pro Football Talk",
+      "headline": "After two years rehabbing, Tank Dell overwhelmed, anxious and excited to play again",
+      "published_at": "2026-10-22T01:36:27.000Z",
+      "observed_at": "2026-10-22T01:50:19.861Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "HOU",
+        "KC"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
