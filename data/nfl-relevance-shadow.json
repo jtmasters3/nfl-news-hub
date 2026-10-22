@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/dolphins-kadyn-proctor-vikings-dc-brian-flores-weakest-link",
-      "source_name": "NFL.com",
-      "headline": "Dolphins rookie OL Kadyn Proctor expects heat from Vikings DC Brian Flores: 'I am the weakest link'",
-      "published_at": "2026-10-02T01:40:16.000Z",
-      "observed_at": "2026-10-02T13:50:20.447Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIA",
-        "MIN"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jayden-daniels-out-this-week-marcus-mariota-starts-again",
       "source_name": "Pro Football Talk",
       "headline": "Jayden Daniels out this week, Marcus Mariota starts again",
@@ -41970,6 +41948,27 @@
         "PIT"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/garrett-wilson-doesn-t-just-want-to-win-he-wants-to-win-with-the-jets",
+      "source_name": "NFL.com",
+      "headline": "Garrett Wilson doesn't just want to win. He wants to win with the Jets",
+      "published_at": "2026-10-22T09:46:06.000Z",
+      "observed_at": "2026-10-22T16:30:24.809Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYJ"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
