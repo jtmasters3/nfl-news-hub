@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/chiefs-bills-49ers-raiders-vikings-nfl-last-undefeated-team",
-      "source_name": "FOX Sports",
-      "headline": "Last Man Standing: Which 3-0 Team Will Be The NFL's Last Undefeated?",
-      "published_at": "2026-10-02T00:45:05.000Z",
-      "observed_at": "2026-10-02T00:50:24.562Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-mcdaniels-drake-maye-doesnt-have-an-issue-with-confidence-or-yips",
       "source_name": "Pro Football Talk",
       "headline": "Josh McDaniels: Drake Maye doesn't have an issue with confidence or \"yips\"",
@@ -41995,6 +41978,28 @@
         "CLE"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cam-jurgens-being-traded-while-in-concussion-protocol-is-wild-but-excited-to-be-a-raven",
+      "source_name": "Pro Football Talk",
+      "headline": "Cam Jurgens: Being traded while in concussion protocol is wild, but excited to be a Raven",
+      "published_at": "2026-10-22T11:31:43.000Z",
+      "observed_at": "2026-10-22T11:40:30.389Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "CIN"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
