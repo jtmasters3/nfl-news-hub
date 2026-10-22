@@ -2,31 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/will-hill-parlay-of-the-week-mlb-nfl-college-football",
-      "source_name": "FOX Sports",
-      "headline": "Will Hill's Parlay Of The Week: Back Brewers In Game 1; Lions Over Panthers",
-      "published_at": "2026-10-02T18:28:07.000Z",
-      "observed_at": "2026-10-02T18:30:27.011Z",
-      "decision": "keep",
-      "classification": "nfl_with_college_context",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR",
-        "DET"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [
-        "college_football_phrase",
-        "league_mlb"
-      ],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/niners-owner-jed-york-suspended-six-games-fined-500k",
       "source_name": "NFL.com",
       "headline": "Niners owner Jed York suspended six games, fined $500K by NFL for violating personal conduct policy",
@@ -41948,6 +41923,27 @@
         "PHI"
       ],
       "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/college-football/two-minute-drill-viral-game-tennessee-commanders-giants-nfl",
+      "source_name": "FOX Sports",
+      "headline": "The 20-Year-Old Behind Two-Minute Drill — And A Story Bigger Than The Game",
+      "published_at": "2026-10-22T22:08:05.000Z",
+      "observed_at": "2026-10-22T22:20:18.622Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "TEN"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
