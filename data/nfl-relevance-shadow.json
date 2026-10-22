@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/browns-real-3-takeaways-from-browns-dramatic-win-vs-steelers",
-      "source_name": "FOX Sports",
-      "headline": "Are The Browns For Real? 3 Takeaways From Browns' Dramatic Win vs. Steelers",
-      "published_at": "2026-10-02T04:09:44.000Z",
-      "observed_at": "2026-10-02T04:10:23.040Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE",
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-mccarthy-on-exchange-with-aaron-rodgers-i-wish-i-wouldnt-use-those-words",
       "source_name": "Pro Football Talk",
       "headline": "Mike McCarthy on exchange with Aaron Rodgers: \"I wish I wouldn't use those words\"",
@@ -41990,6 +41968,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/2026-nfl-trade-deadline-10-needs-for-10-contenders",
+      "source_name": "NFL.com",
+      "headline": "2026 NFL trade deadline: 10 needs for 10 contenders",
+      "published_at": "2026-10-22T02:28:00.000Z",
+      "observed_at": "2026-10-22T14:40:19.217Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
