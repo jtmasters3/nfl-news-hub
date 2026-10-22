@@ -2,72 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/cbs-tony-romo-permanent-exit-owi-arrest",
-      "source_name": "NFL.com",
-      "headline": "CBS announces Tony Romo's permanent exit following arrest for operating vehicle while intoxicated",
-      "published_at": "2026-10-02T05:07:52.000Z",
-      "observed_at": "2026-10-02T17:20:22.326Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/terry-mclaurin-added-to-injury-report-listed-as-questionable-for-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "Terry McLaurin added to injury report, listed as questionable for Sunday",
-      "published_at": "2026-10-02T17:10:52.000Z",
-      "observed_at": "2026-10-02T17:20:22.326Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "WAS"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/week-4-fantasy-sleepers-2026-nfl-season",
-      "source_name": "NFL.com",
-      "headline": "Week 4 fantasy sleepers: Commanders QB Marcus Mariota, Panthers TE Darren Waller offer upside",
-      "published_at": "2026-10-02T05:18:56.000Z",
-      "observed_at": "2026-10-02T17:30:25.778Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR",
-        "DET",
-        "WAS"
-      ],
-      "detected_category": "fantasy",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/washington-commanders-jayden-daniels-injury-indianpolis-colts-london",
       "source_name": "FOX Sports",
       "headline": "Commanders Turn To Marcus Mariota In London With Jayden Daniels Sidelined",
@@ -41958,6 +41892,70 @@
         "NE"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-waive-db-malcolm-dewalt-iv",
+      "source_name": "Pro Football Talk",
+      "headline": "Falcons waive DB Malcolm DeWalt IV",
+      "published_at": "2026-10-22T20:38:24.000Z",
+      "observed_at": "2026-10-22T20:40:19.667Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/carson-schwesinger-practices-thursday-quincy-mitchell-does-not",
+      "source_name": "Pro Football Talk",
+      "headline": "Carson Schwesinger practices Thursday, Quincy Mitchell does not",
+      "published_at": "2026-10-22T20:38:11.000Z",
+      "observed_at": "2026-10-22T20:40:19.667Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/breece-hall-returns-to-jets-practice",
+      "source_name": "Pro Football Talk",
+      "headline": "Breece Hall returns to Jets practice",
+      "published_at": "2026-10-22T20:30:16.000Z",
+      "observed_at": "2026-10-22T20:40:19.667Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYJ"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
