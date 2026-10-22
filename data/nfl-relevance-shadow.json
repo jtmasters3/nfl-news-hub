@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/wr-devonta-smith-lb-zack-baun-remain-out-of-practice",
-      "source_name": "Pro Football Talk",
-      "headline": "WR DeVonta Smith, LB Zack Baun remain out of practice",
-      "published_at": "2026-10-01T22:26:34.000Z",
-      "observed_at": "2026-10-01T22:40:18.015Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/week-4-thursday-night-inactives-pittsburgh-steelers-at-cleveland-browns",
       "source_name": "NFL.com",
       "headline": "Week 4 Thursday night inactives: Pittsburgh Steelers at Cleveland Browns",
@@ -42013,6 +41992,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-awards-ballot-mvp-candidates-josh-allen-brock-purdy-patrick-mahomes-kenneth-walker",
+      "source_name": "FOX Sports",
+      "headline": "NFL Awards Ballot: Can Josh Allen Run His Way To MVP? Will Kenneth Walker Buck Trend?",
+      "published_at": "2026-10-22T05:14:48.000Z",
+      "observed_at": "2026-10-22T05:20:19.766Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
