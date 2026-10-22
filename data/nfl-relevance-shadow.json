@@ -2,26 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/10-biggest-risers-fallers-2027-nfl-draft-qb-drew-mestemaker-first-rounder",
-      "source_name": "FOX Sports",
-      "headline": "10 Biggest Risers, Fallers In 2027 NFL Draft: Is QB Drew Mestemaker A First-Rounder?",
-      "published_at": "2026-10-02T18:38:15.000Z",
-      "observed_at": "2026-10-02T18:50:27.426Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [],
-      "detected_category": "draft",
-      "nfl_evidence": [
-        "phrase_nfl_draft",
-        "nfl_preserving_category:draft"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-donald-ruled-out-puka-nacua-set-to-play-vs-eagles",
       "source_name": "Pro Football Talk",
       "headline": "Aaron Donald ruled out, Puka Nacua set to play vs. Eagles",
@@ -41942,6 +41922,28 @@
       "confidence": "high",
       "detected_teams": [
         "LAR"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/saquon-barkley-limited-in-return-to-eagles-practice",
+      "source_name": "Pro Football Talk",
+      "headline": "Saquon Barkley limited in return to Eagles practice",
+      "published_at": "2026-10-22T22:56:07.000Z",
+      "observed_at": "2026-10-22T23:10:22.924Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "PHI"
       ],
       "detected_category": "injury",
       "nfl_evidence": [
