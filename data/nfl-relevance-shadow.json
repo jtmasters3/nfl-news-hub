@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-oct-2",
-      "source_name": "NFL.com",
-      "headline": "NFL news roundup: Latest league updates from Friday, Oct. 2",
-      "published_at": "2026-10-02T03:02:56.000Z",
-      "observed_at": "2026-10-02T15:10:21.710Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/jeff-van-note-dies-falcons-center-age-80",
-      "source_name": "NFL.com",
-      "headline": "Jeff Van Note, six-time Pro Bowl center with Falcons, dies at age 80",
-      "published_at": "2026-10-02T03:12:26.000Z",
-      "observed_at": "2026-10-02T15:20:21.721Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/t-j-watt-steelers-made-it-too-easy-for-browns-to-go-downfield-at-the-end-of-the-game",
       "source_name": "Pro Football Talk",
       "headline": "T.J. Watt: Steelers made it too easy for Browns to go downfield at the end of the game",
@@ -41961,6 +41923,50 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/raiders-rb-ashton-jeanty-trending-like-trent-richardson",
+      "source_name": "FOX Sports",
+      "headline": "The Raiders Are Getting Better, So Why Is RB Ashton Jeanty Getting Worse?",
+      "published_at": "2026-10-22T18:15:54.000Z",
+      "observed_at": "2026-10-22T18:30:24.651Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/seahawks-activate-zach-charbonnet",
+      "source_name": "Pro Football Talk",
+      "headline": "Seahawks activate Zach Charbonnet",
+      "published_at": "2026-10-22T18:20:13.000Z",
+      "observed_at": "2026-10-22T18:30:24.651Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC",
+        "SEA"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
