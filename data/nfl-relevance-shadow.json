@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/steelers-browns-on-thursday-night-football-what-we-learned-from-cleveland-s-27-24-win",
-      "source_name": "NFL.com",
-      "headline": "Steelers-Browns on 'Thursday Night Football': What We Learned from Cleveland's 27-24 win",
-      "published_at": "2026-10-02T03:45:25.000Z",
-      "observed_at": "2026-10-02T03:50:21.154Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE",
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/thursday-night-football-deshaun-watson-leads-browns-to-27-24-win-over-steelers",
       "source_name": "Pro Football Talk",
       "headline": "Thursday Night Football: Deshaun Watson leads Browns to 27-24 win over Steelers",
@@ -41987,6 +41965,28 @@
       "confidence": "high",
       "detected_teams": [
         "PHI"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jordan-love-dealing-with-sore-back-but-expects-to-play-vs-lions",
+      "source_name": "Pro Football Talk",
+      "headline": "Jordan Love dealing with sore back, but expects to play vs. Lions",
+      "published_at": "2026-10-22T13:47:36.000Z",
+      "observed_at": "2026-10-22T14:00:28.152Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "GB"
       ],
       "detected_category": "injury",
       "nfl_evidence": [
