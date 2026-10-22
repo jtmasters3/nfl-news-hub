@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-lt-trent-williams-returns-to-limited-participation-thursday",
-      "source_name": "Pro Football Talk",
-      "headline": "49ers LT Trent Williams returns to limited participation Thursday",
-      "published_at": "2026-10-01T22:48:19.000Z",
-      "observed_at": "2026-10-01T23:00:29.077Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/thursday-night-football-steelers-cb-jalen-ramsey-is-active-vs-browns",
       "source_name": "Pro Football Talk",
       "headline": "Thursday Night Football: Steelers CB Jalen Ramsey is active vs. Browns",
@@ -42004,6 +41983,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dolphins-are-raising-all-season-ticket-prices-for-2027",
+      "source_name": "Pro Football Talk",
+      "headline": "Dolphins are raising all season ticket prices for 2027",
+      "published_at": "2026-10-22T09:47:34.000Z",
+      "observed_at": "2026-10-22T10:00:30.724Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIA"
+      ],
+      "detected_category": "live_game_state",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
