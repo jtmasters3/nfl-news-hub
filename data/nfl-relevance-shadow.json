@@ -2,48 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-mcdaniels-drake-maye-doesnt-have-an-issue-with-confidence-or-yips",
-      "source_name": "Pro Football Talk",
-      "headline": "Josh McDaniels: Drake Maye doesn't have an issue with confidence or \"yips\"",
-      "published_at": "2026-10-02T00:48:05.000Z",
-      "observed_at": "2026-10-02T01:00:27.129Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/browns-dl-mason-graham-questionable-to-return-with-knee-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "Browns DL Mason Graham questionable to return with knee injury",
-      "published_at": "2026-10-02T00:47:42.000Z",
-      "observed_at": "2026-10-02T01:00:27.129Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/browns-convert-aaron-rodgers-int-into-td",
       "source_name": "Pro Football Talk",
       "headline": "Browns convert Aaron Rodgers' INT into TD",
@@ -42000,6 +41958,47 @@
         "CIN"
       ],
       "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/how-texas-qb-arch-manning-fell-from-projected-no-1-pick-potential-benching",
+      "source_name": "FOX Sports",
+      "headline": "How Texas QB Arch Manning Fell From Projected No. 1 Pick To Potential Benching",
+      "published_at": "2026-10-22T12:00:29.000Z",
+      "observed_at": "2026-10-22T12:20:19.993Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [],
+      "detected_category": "draft",
+      "nfl_evidence": [
+        "phrase_nfl_draft",
+        "nfl_preserving_category:draft"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sauce-gardner-says-current-calf-injury-isnt-as-bad-as-last-year",
+      "source_name": "Pro Football Talk",
+      "headline": "Sauce Gardner says current calf injury isn't as bad as last year",
+      "published_at": "2026-10-22T12:08:24.000Z",
+      "observed_at": "2026-10-22T12:20:19.993Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
