@@ -2,72 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jared-verse-after-beating-steelers-i-dont-have-respect-for-anybody-who-plays-dirty",
-      "source_name": "Pro Football Talk",
-      "headline": "Jared Verse after beating Steelers: I don't have respect for anybody who plays dirty",
-      "published_at": "2026-10-02T13:47:44.000Z",
-      "observed_at": "2026-10-02T14:00:32.856Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE",
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/jayden-daniels-left-elbow-out-london-game-qb-marcus-mariota-start-colts",
-      "source_name": "NFL.com",
-      "headline": "Commanders' Jayden Daniels (elbow) ruled out for London game; QB Marcus Mariota to start vs. Colts",
-      "published_at": "2026-10-02T01:58:45.000Z",
-      "observed_at": "2026-10-02T14:10:22.759Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "WAS"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jalen-ramsey-on-joey-porter-jr-unfortunate-it-didnt-work-out-but-im-happy-for-him",
-      "source_name": "Pro Football Talk",
-      "headline": "Jalen Ramsey on Joey Porter Jr.: Unfortunate it didn't work out, but I'm happy for him",
-      "published_at": "2026-10-02T14:15:46.000Z",
-      "observed_at": "2026-10-02T14:20:23.401Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-mccarthy-doesnt-know-whether-the-joey-porter-jr-trade-affected-the-team",
       "source_name": "Pro Football Talk",
       "headline": "Mike McCarthy doesn't know whether the Joey Porter Jr. trade affected the team",
@@ -41969,6 +41903,70 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/2026-nfl-madrid-pregame-entertainment-announced",
+      "source_name": "NFL.com",
+      "headline": "2026 NFL Madrid pregame entertainment announced",
+      "published_at": "2026-10-22T05:39:43.000Z",
+      "observed_at": "2026-10-22T17:50:21.597Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-picks-week-7-2026-nfl-season",
+      "source_name": "NFL.com",
+      "headline": "NFL Week 7 picks: Upset and score predictions, matchup breakdowns for every game",
+      "published_at": "2026-10-22T05:35:33.000Z",
+      "observed_at": "2026-10-22T17:50:21.597Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "DET",
+        "GB",
+        "KC",
+        "NE",
+        "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chiefs-placing-lt-josh-simmons-on-ir-with-disc-issue",
+      "source_name": "Pro Football Talk",
+      "headline": "Chiefs placing LT Josh Simmons on IR with disc issue",
+      "published_at": "2026-10-22T17:45:18.000Z",
+      "observed_at": "2026-10-22T17:50:21.597Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
