@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-backup-quarterback-rankings",
-      "source_name": "FOX Sports",
-      "headline": "NFL Backup Quarterback Rankings: Which Teams Have The Most Reliable QB2s?",
-      "published_at": "2026-10-01T22:24:54.000Z",
-      "observed_at": "2026-10-01T22:40:18.015Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/wr-devonta-smith-lb-zack-baun-remain-out-of-practice",
       "source_name": "Pro Football Talk",
       "headline": "WR DeVonta Smith, LB Zack Baun remain out of practice",
@@ -42005,6 +41988,27 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/roll-tape-has-cb-wr-travis-hunter-arrived-packers-defense-elite",
+      "source_name": "FOX Sports",
+      "headline": "Roll The Tape: Has CB/WR Travis Hunter Arrived? Is Packers' Defense Elite?",
+      "published_at": "2026-10-22T04:41:00.000Z",
+      "observed_at": "2026-10-22T04:50:19.486Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
