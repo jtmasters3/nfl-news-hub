@@ -2,72 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-mccarthy-doesnt-know-whether-the-joey-porter-jr-trade-affected-the-team",
-      "source_name": "Pro Football Talk",
-      "headline": "Mike McCarthy doesn't know whether the Joey Porter Jr. trade affected the team",
-      "published_at": "2026-10-02T14:17:25.000Z",
-      "observed_at": "2026-10-02T14:30:25.317Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE",
-        "DAL",
-        "PIT"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/how-geno-smith-became-the-qb-he-was-always-supposed-to-become-with-the-jets",
-      "source_name": "NFL.com",
-      "headline": "How Geno Smith became the QB he was always supposed to become with the Jets",
-      "published_at": "2026-10-02T09:46:05.000Z",
-      "observed_at": "2026-10-02T15:00:40.389Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/jared-verse-steelers-dirty-browns-records",
-      "source_name": "FOX Sports",
-      "headline": "Jared Verse Explains Why This Isn't The 'Old Browns,' Calls Steelers 'Dirty'",
-      "published_at": "2026-10-02T14:59:17.000Z",
-      "observed_at": "2026-10-02T15:00:40.389Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE",
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-oct-2",
       "source_name": "NFL.com",
       "headline": "NFL news roundup: Latest league updates from Friday, Oct. 2",
@@ -41967,6 +41901,66 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/boye-mafe-is-exactly-what-bengals-defensive-line-needed-post-trey-hendrickson",
+      "source_name": "NFL.com",
+      "headline": "Boye Mafe is exactly what Bengals defensive line needed post-Trey Hendrickson",
+      "published_at": "2026-10-22T10:31:06.000Z",
+      "observed_at": "2026-10-22T18:00:29.771Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lamar-jackson-present-participating-at-start-of-thursday-practice",
+      "source_name": "Pro Football Talk",
+      "headline": "Lamar Jackson present, participating at start of Thursday practice",
+      "published_at": "2026-10-22T17:56:40.000Z",
+      "observed_at": "2026-10-22T18:00:29.771Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "CIN"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/abc-affiliates-arent-happy-with-disneys-plan-for-multiple-super-bowl-options",
+      "source_name": "Pro Football Talk",
+      "headline": "ABC affiliates aren't happy with Disney's plan for multiple Super Bowl options",
+      "published_at": "2026-10-22T17:53:29.000Z",
+      "observed_at": "2026-10-22T18:00:29.771Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
