@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chargers-list-derwin-james-ladd-mcconkey-trey-lance-as-questionable",
-      "source_name": "Pro Football Talk",
-      "headline": "Chargers list Derwin James, Ladd McConkey, Trey Lance as questionable",
-      "published_at": "2026-10-02T21:18:56.000Z",
-      "observed_at": "2026-10-02T21:20:26.947Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cardinals-list-josh-sweat-as-questionable-with-a-groin-injury",
       "source_name": "Pro Football Talk",
       "headline": "Cardinals list Josh Sweat as questionable with a groin injury",
@@ -41939,6 +41918,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ben-johnson-cole-kmets-knee-injury-doesnt-look-good",
+      "source_name": "Pro Football Talk",
+      "headline": "Ben Johnson: Cole Kmet's knee injury doesn't look good",
+      "published_at": "2026-10-23T06:49:02.000Z",
+      "observed_at": "2026-10-23T07:00:26.696Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
