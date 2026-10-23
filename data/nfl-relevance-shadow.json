@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-colts-vs-commanders-tv-channel-live-stream-time-2026-week-4",
-      "source_name": "FOX Sports",
-      "headline": "How to Watch Colts vs. Commanders: TV Channel, Live Stream, Time",
-      "published_at": "2026-10-04T12:59:29.000Z",
-      "observed_at": "2026-10-04T13:10:20.754Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-dolphins-vs-vikings-tv-channel-live-stream-time-2026-week-4",
       "source_name": "FOX Sports",
       "headline": "How to Watch Dolphins vs. Vikings: TV Channel, Live Stream, Time",
@@ -41943,6 +41921,27 @@
         "CHI"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/george-pickens-cobie-durant-tyler-guyton-up-to-full-practices-for-cowboys",
+      "source_name": "Pro Football Talk",
+      "headline": "George Pickens, Cobie Durant, Tyler Guyton up to full practices for Cowboys",
+      "published_at": "2026-10-23T20:34:06.000Z",
+      "observed_at": "2026-10-23T20:40:23.223Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
