@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-put-te-terrance-ferguson-on-injured-reserve",
-      "source_name": "Pro Football Talk",
-      "headline": "Rams put TE Terrance Ferguson on injured reserve",
-      "published_at": "2026-10-02T21:55:59.000Z",
-      "observed_at": "2026-10-02T22:10:20.454Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR",
-        "PHI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-evans-is-going-to-try-to-play-through-his-injured-ribs",
       "source_name": "Pro Football Talk",
       "headline": "Mike Evans is going to try to play through his injured ribs",
@@ -41930,6 +41908,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-tells-teams-that-uncalled-hip-drop-tackle-on-aaron-rodgers-was-clear-example-of-penalty",
+      "source_name": "Pro Football Talk",
+      "headline": "NFL tells teams that uncalled hip-drop tackle on Aaron Rodgers was clear example of penalty",
+      "published_at": "2026-10-23T09:00:55.000Z",
+      "observed_at": "2026-10-23T09:10:18.461Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE",
+        "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
