@@ -2,40 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jeremiah-smith-im-the-best-player-in-the-country",
-      "source_name": "Pro Football Talk",
-      "headline": "Jeremiah Smith: \"I'm the best player in the country\"",
-      "published_at": "2026-10-04T01:48:10.000Z",
-      "observed_at": "2026-10-04T02:00:30.255Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/deion-sanders-colorado-lose-third-in-a-row",
-      "source_name": "Pro Football Talk",
-      "headline": "Deion Sanders, Colorado lose third in a row",
-      "published_at": "2026-10-04T04:17:45.000Z",
-      "observed_at": "2026-10-04T04:30:23.412Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/eagles-vs-rams-prediction-odds-pick-nfl-week-4",
       "source_name": "FOX Sports",
       "headline": "Eagles vs. Rams Prediction, Odds, Pick For NFL Week 4",
@@ -41933,6 +41899,45 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/injuries-could-increase-aaron-donalds-playing-time",
+      "source_name": "Pro Football Talk",
+      "headline": "Injuries could increase Aaron Donald's playing time",
+      "published_at": "2026-10-23T19:35:02.000Z",
+      "observed_at": "2026-10-23T19:40:20.742Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-release-dl-ogbo-okoronkwo-on-friday",
+      "source_name": "Pro Football Talk",
+      "headline": "49ers release DL Ogbo Okoronkwo on Friday",
+      "published_at": "2026-10-23T19:30:25.000Z",
+      "observed_at": "2026-10-23T19:40:20.742Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
