@@ -2,48 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/49ers-new-defensive-linemen-don-t-need-name-tags-as-they-all-share-the-hunger-to-fit-in",
-      "source_name": "NFL.com",
-      "headline": "49ers' new defensive linemen don't need name tags, as they all share the hunger to fit in",
-      "published_at": "2026-10-03T01:01:04.000Z",
-      "observed_at": "2026-10-03T15:40:21.090Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/saints-plan-special-pregame-halftime-festivities-for-20th-anniversary-of-return-to-superdome",
-      "source_name": "NFL.com",
-      "headline": "Saints plan special pregame, halftime festivities for 20th anniversary of return to Superdome",
-      "published_at": "2026-10-03T03:59:51.000Z",
-      "observed_at": "2026-10-03T16:10:20.689Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NO"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bills-sign-lb-joe-andreessen-to-two-year-extension",
       "source_name": "Pro Football Talk",
       "headline": "Bills sign LB Joe Andreessen to two-year extension",
@@ -41936,6 +41894,45 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/bijan-robinson-hopes-to-model-his-career-after-christian-mccaffrey-but-not-completely",
+      "source_name": "NFL.com",
+      "headline": "Bijan Robinson hopes to model his career after Christian McCaffrey -- but not completely",
+      "published_at": "2026-10-23T10:16:07.000Z",
+      "observed_at": "2026-10-23T15:20:22.163Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nflpa-names-laquon-treadwell-their-community-mvp-for-week-7",
+      "source_name": "Pro Football Talk",
+      "headline": "NFLPA names Laquon Treadwell their Community MVP for Week 7",
+      "published_at": "2026-10-23T15:08:58.000Z",
+      "observed_at": "2026-10-23T15:20:22.163Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_nflpa"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
