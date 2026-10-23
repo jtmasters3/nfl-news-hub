@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-lions-vs-panthers-tv-channel-live-stream-time-2026-week-4",
-      "source_name": "FOX Sports",
-      "headline": "How to Watch Lions vs. Panthers: TV Channel, Live Stream, Time",
-      "published_at": "2026-10-04T13:02:16.000Z",
-      "observed_at": "2026-10-04T13:20:22.323Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR",
-        "DET"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-chargers-vs-seahawks-tv-channel-live-stream-time-2026-week-4",
       "source_name": "FOX Sports",
       "headline": "How to Watch Chargers vs. Seahawks: TV Channel, Live Stream, Time",
@@ -41944,6 +41922,29 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-release-rb-deejay-dallas",
+      "source_name": "Pro Football Talk",
+      "headline": "Vikings release RB Deejay Dallas",
+      "published_at": "2026-10-23T21:17:43.000Z",
+      "observed_at": "2026-10-23T21:20:27.478Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "MIN"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:free_agency"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
