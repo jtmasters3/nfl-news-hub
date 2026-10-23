@@ -2,113 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/colts-cam-bynum-ahead-of-his-fourth-international-appearance-these-are-always-my-favorite-games",
-      "source_name": "NFL.com",
-      "headline": "Colts' Cam Bynum ahead of his fourth international appearance: These are 'always my favorite games'",
-      "published_at": "2026-10-03T07:00:03.000Z",
-      "observed_at": "2026-10-03T19:00:28.655Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/victor-wembanyama-will-never-promote-gambling",
-      "source_name": "Pro Football Talk",
-      "headline": "Victor Wembanyama will \"never\" promote gambling",
-      "published_at": "2026-10-03T19:17:27.000Z",
-      "observed_at": "2026-10-03T19:20:21.755Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-list-divine-deablo-samson-ebukam-as-questionable-for-monday-night",
-      "source_name": "Pro Football Talk",
-      "headline": "Falcons list Divine Deablo, Samson Ebukam as questionable for Monday night",
-      "published_at": "2026-10-03T19:19:16.000Z",
-      "observed_at": "2026-10-03T19:30:23.788Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "NO"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/saints-rule-out-kaden-elliss-carl-granderson-for-monday-nights-game",
-      "source_name": "Pro Football Talk",
-      "headline": "Saints rule out Kaden Elliss, Carl Granderson for Monday night's game",
-      "published_at": "2026-10-03T19:42:10.000Z",
-      "observed_at": "2026-10-03T19:50:20.860Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "NO"
-      ],
-      "detected_category": "free_agency",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:free_agency"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-harris-doesnt-rule-out-a-permanent-return-of-the-spear-to-the-commanders-helmet",
-      "source_name": "Pro Football Talk",
-      "headline": "Josh Harris doesn't rule out a permanent return of the spear to the Commanders helmet",
-      "published_at": "2026-10-03T20:03:00.000Z",
-      "observed_at": "2026-10-03T20:10:20.210Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/seahawks-placing-rb-jadarian-price-chest-on-injured-reserve",
       "source_name": "NFL.com",
       "headline": "Report: Seahawks placing RB Jadarian Price (chest) on injured reserve",
@@ -41922,6 +41815,113 @@
       "confidence": "high",
       "detected_teams": [
         "CHI"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/buccaneers-baker-mayfield-thumb-will-start-sunday-vs-panthers-three-game-absence",
+      "source_name": "NFL.com",
+      "headline": "Buccaneers' Baker Mayfield (thumb) will start Sunday vs. Panthers after three-game absence",
+      "published_at": "2026-10-23T04:34:16.000Z",
+      "observed_at": "2026-10-23T16:40:22.031Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR",
+        "TB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bills-s-sam-franklins-suspension-for-spitting-is-reduced-to-a-fine-after-appeal",
+      "source_name": "Pro Football Talk",
+      "headline": "Bills S Sam Franklin's suspension for spitting is reduced to a fine after appeal",
+      "published_at": "2026-10-23T16:28:37.000Z",
+      "observed_at": "2026-10-23T16:40:22.031Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "LV"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-jacobs-appears-on-track-to-play-vs-lions-on-sunday",
+      "source_name": "Pro Football Talk",
+      "headline": "Josh Jacobs appears on track to play vs. Lions on Sunday",
+      "published_at": "2026-10-23T16:27:46.000Z",
+      "observed_at": "2026-10-23T16:40:22.031Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "GB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/roger-goodell-expects-an-nfl-game-in-tokyo-in-2027-or-2028",
+      "source_name": "Pro Football Talk",
+      "headline": "Roger Goodell expects an NFL game in Tokyo in 2027 or 2028",
+      "published_at": "2026-10-23T16:26:27.000Z",
+      "observed_at": "2026-10-23T16:40:22.031Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "phrase_nfl_commissioner"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/zaire-franklin-out-for-week-7-with-shin-injury-suffered-in-practice",
+      "source_name": "Pro Football Talk",
+      "headline": "Zaire Franklin out for Week 7 with shin injury suffered in practice",
+      "published_at": "2026-10-23T16:20:46.000Z",
+      "observed_at": "2026-10-23T16:40:22.031Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "GB"
       ],
       "detected_category": "injury",
       "nfl_evidence": [
