@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-dont-have-a-timeline-on-myles-garretts-return",
-      "source_name": "Pro Football Talk",
-      "headline": "Rams don't have a timeline on Myles Garrett's return",
-      "published_at": "2026-10-03T11:56:07.000Z",
-      "observed_at": "2026-10-03T12:00:29.432Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jerry-jones-on-joey-porter-jr-trade-its-important-to-think-big",
       "source_name": "Pro Football Talk",
       "headline": "Jerry Jones on Joey Porter Jr. trade: \"It's important to think big\"",
@@ -41933,6 +41912,29 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-week-7-bold-predictions-giants-j-j-mccarthy-shreds-texans-kenneth-walker-iii-revenge-game",
+      "source_name": "NFL.com",
+      "headline": "NFL Week 7 bold predictions: Giants' J.J. McCarthy shreds Texans; Kenneth Walker III revenge game?",
+      "published_at": "2026-10-23T02:34:33.000Z",
+      "observed_at": "2026-10-23T14:40:20.363Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "HOU",
+        "NYG",
+        "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
