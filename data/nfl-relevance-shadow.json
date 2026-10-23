@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/yaya-diaby-chris-godwin-set-to-play-for-buccaneers-on-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "Yaya Diaby, Chris Godwin set to play for Buccaneers on Sunday",
-      "published_at": "2026-10-02T19:59:12.000Z",
-      "observed_at": "2026-10-02T20:10:19.762Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB",
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/devonta-smith-out-for-week-4-vs-rams-with-hamstring-injury",
       "source_name": "Pro Football Talk",
       "headline": "DeVonta Smith out for Week 4 vs. Rams with hamstring injury",
@@ -41943,6 +41921,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-lead-patriots-10-0",
+      "source_name": "Pro Football Talk",
+      "headline": "Bears lead Patriots 10-0",
+      "published_at": "2026-10-23T00:57:25.000Z",
+      "observed_at": "2026-10-23T01:10:20.255Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
