@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-chiefs-vs-raiders-tv-channel-live-stream-time-2026-week-4",
-      "source_name": "FOX Sports",
-      "headline": "How to Watch Chiefs vs. Raiders: TV Channel, Live Stream, Time",
-      "published_at": "2026-10-04T13:01:16.000Z",
-      "observed_at": "2026-10-04T13:20:22.323Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC",
-        "LV"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-jaguars-vs-bengals-tv-channel-live-stream-time-2026-week-4",
       "source_name": "FOX Sports",
       "headline": "How to Watch Jaguars vs. Bengals: TV Channel, Live Stream, Time",
@@ -41944,6 +41922,27 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "nfl_preserving_category:contract"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/former-rams-rb-lawrence-mccutcheon-dies-at-76",
+      "source_name": "Pro Football Talk",
+      "headline": "Former Rams RB Lawrence McCutcheon dies at 76",
+      "published_at": "2026-10-23T21:48:36.000Z",
+      "observed_at": "2026-10-23T22:00:28.101Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
