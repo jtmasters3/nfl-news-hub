@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/are-the-0-3-houston-texans-already-cooked-plus-the-emergence-of-greg-rousseau-and-dallas-turner",
-      "source_name": "NFL.com",
-      "headline": "Are the 0-3 Houston Texans already cooked? Plus, the emergence of Greg Rousseau and Dallas Turner",
-      "published_at": "2026-10-03T12:47:55.000Z",
-      "observed_at": "2026-10-03T01:00:29.247Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "HOU"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vinod-khosla-on-a-potential-seahawks-move-never-say-never",
-      "source_name": "Pro Football Talk",
-      "headline": "Vinod Khosla on a potential Seahawks move: \"Never say never\"",
-      "published_at": "2026-10-03T00:44:58.000Z",
-      "observed_at": "2026-10-03T01:00:29.247Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/new-bears-stadium-in-illinois-could-be-publicly-owned",
       "source_name": "Pro Football Talk",
       "headline": "New Bears stadium in Illinois could be publicly owned",
@@ -41919,6 +41876,45 @@
       "confidence": "high",
       "detected_teams": [
         "NYG"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-oct-23",
+      "source_name": "NFL.com",
+      "headline": "NFL news roundup: Latest league updates from Friday, Oct. 23",
+      "published_at": "2026-10-23T01:03:12.000Z",
+      "observed_at": "2026-10-23T13:10:26.321Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-list-rico-dowdle-deshon-elliott-as-questionable",
+      "source_name": "Pro Football Talk",
+      "headline": "Steelers list Rico Dowdle, DeShon Elliott as questionable",
+      "published_at": "2026-10-23T13:00:50.000Z",
+      "observed_at": "2026-10-23T13:10:26.321Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NO",
+        "PIT"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
