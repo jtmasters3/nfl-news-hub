@@ -2,72 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-cowboys-vs-texans-tv-channel-live-stream-time-2026-week-4",
-      "source_name": "FOX Sports",
-      "headline": "How to Watch Cowboys vs. Texans: TV Channel, Live Stream, Time",
-      "published_at": "2026-10-04T12:56:33.000Z",
-      "observed_at": "2026-10-04T13:10:20.754Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "HOU"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-jets-vs-bears-tv-channel-live-stream-time-2026-week-4",
-      "source_name": "FOX Sports",
-      "headline": "How to Watch Jets vs. Bears: TV Channel, Live Stream, Time",
-      "published_at": "2026-10-04T12:55:42.000Z",
-      "observed_at": "2026-10-04T13:10:20.754Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-lions-sam-laporta-break-off-contract-extension-talks",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Lions, Sam LaPorta break off contract extension talks",
-      "published_at": "2026-10-04T13:01:33.000Z",
-      "observed_at": "2026-10-04T13:10:20.754Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET"
-      ],
-      "detected_category": "contract",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:contract"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-lions-vs-panthers-tv-channel-live-stream-time-2026-week-4",
       "source_name": "FOX Sports",
       "headline": "How to Watch Lions vs. Panthers: TV Channel, Live Stream, Time",
@@ -41941,6 +41875,71 @@
       "detected_teams": [
         "KC",
         "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jordan-love-christian-watson-among-packers-off-injury-report-and-set-to-play-vs-lions",
+      "source_name": "Pro Football Talk",
+      "headline": "Jordan Love, Christian Watson among Packers off injury report and set to play vs. Lions",
+      "published_at": "2026-10-23T21:08:01.000Z",
+      "observed_at": "2026-10-23T21:10:21.302Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "GB"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-admits-a-penalty-by-the-cowboys-in-week-5-was-assessed-against-the-bucs",
+      "source_name": "Pro Football Talk",
+      "headline": "NFL admits a penalty by the Cowboys in Week 5 was assessed against the Bucs",
+      "published_at": "2026-10-23T21:07:52.000Z",
+      "observed_at": "2026-10-23T21:10:21.302Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "TB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rb-david-montgomery-db-jalen-pitre-among-texans-out-for-sunday",
+      "source_name": "Pro Football Talk",
+      "headline": "RB David Montgomery, DB Jalen Pitre among Texans out for Sunday",
+      "published_at": "2026-10-23T21:05:54.000Z",
+      "observed_at": "2026-10-23T21:10:21.302Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "HOU"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
