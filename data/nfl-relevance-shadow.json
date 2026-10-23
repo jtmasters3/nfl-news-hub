@@ -2,40 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-week-4-inactives-players-ruled-out-sunday-14-games-2026",
-      "source_name": "NFL.com",
-      "headline": "NFL Week 4 inactives: Players ruled out for Sunday's 14 games",
-      "published_at": "2026-10-04T12:04:37.000Z",
-      "observed_at": "2026-10-04T12:10:19.798Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/week-4-injuries-sunday-pregame-2026-nfl-season",
-      "source_name": "NFL.com",
-      "headline": "NFL Week 4 injuries to monitor for Sunday's games",
-      "published_at": "2026-10-04T12:29:29.000Z",
-      "observed_at": "2026-10-04T12:40:19.293Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/can-bijan-robinson-do-it-again-and-more-questions-for-the-falcons-heading-into-mnf",
       "source_name": "NFL.com",
       "headline": "Can Bijan Robinson do it again? And more questions for the Falcons heading into 'MNF'",
@@ -41928,6 +41894,50 @@
         "CLE"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-list-a-j-and-avieon-terrell-as-questionable-for-sunday",
+      "source_name": "Pro Football Talk",
+      "headline": "Falcons list A.J. and Avieon Terrell as questionable for Sunday",
+      "published_at": "2026-10-23T20:03:02.000Z",
+      "observed_at": "2026-10-23T20:10:18.968Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lamar-jackson-officially-questionable-for-ravens-bengals",
+      "source_name": "Pro Football Talk",
+      "headline": "Lamar Jackson officially questionable for Ravens-Bengals",
+      "published_at": "2026-10-23T20:01:12.000Z",
+      "observed_at": "2026-10-23T20:10:18.968Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "CIN"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
