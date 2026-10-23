@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/five-teams-face-an-0-4-start-and-only-one-0-4-team-has-ever-made-the-playoffs",
-      "source_name": "Pro Football Talk",
-      "headline": "Five teams face an 0-4 start — and only one 0-4 team has ever made the playoffs",
-      "published_at": "2026-10-03T01:27:49.000Z",
-      "observed_at": "2026-10-03T01:40:22.151Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-mcvay-is-0-4-against-nick-sirianni",
-      "source_name": "Pro Football Talk",
-      "headline": "Sean McVay is 0-4 against Nick Sirianni",
-      "published_at": "2026-10-03T02:12:36.000Z",
-      "observed_at": "2026-10-03T02:20:21.756Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/quarterbacks-who-didnt-start-in-week-1-are-6-0",
       "source_name": "Pro Football Talk",
       "headline": "Quarterbacks who didn't start in Week 1 are 6-0",
@@ -41917,6 +41879,48 @@
         "NO"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/broncos-davis-webb-bo-nix-ready-to-go-on-a-little-run-early-season-struggles",
+      "source_name": "NFL.com",
+      "headline": "Broncos' Davis Webb: Bo Nix 'ready to go on a little run' after early season struggles",
+      "published_at": "2026-10-23T01:34:15.000Z",
+      "observed_at": "2026-10-23T13:40:21.344Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-puka-nacuas-calf-injury-not-believed-to-be-serious-but-week-7-status-unclear",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Puka Nacua's calf injury not believed to be serious, but Week 7 status unclear",
+      "published_at": "2026-10-23T13:29:11.000Z",
+      "observed_at": "2026-10-23T13:40:21.344Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
