@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-dl-derrick-harmon-is-expected-to-miss-multiple-weeks-with-foot-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "Steelers DL Derrick Harmon is expected to miss multiple weeks with foot injury",
-      "published_at": "2026-10-04T13:08:38.000Z",
-      "observed_at": "2026-10-04T13:20:22.323Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE",
-        "PIT"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-will-surely-want-to-plug-hold-in-loophole-but-it-wont-be-easy",
       "source_name": "Pro Football Talk",
       "headline": "NFL will surely want to plug \"hold-in\" loophole, but it won't be easy",
@@ -41945,6 +41923,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/matthew-stafford-sam-darnold-and-cam-ward-are-struggling-can-three-high-profile-qbs-get-right",
+      "source_name": "NFL.com",
+      "headline": "Matthew Stafford, Sam Darnold and Cam Ward are struggling: Can three high-profile QBs get right?",
+      "published_at": "2026-10-23T10:32:13.000Z",
+      "observed_at": "2026-10-23T22:40:21.090Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
