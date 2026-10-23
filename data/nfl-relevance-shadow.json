@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/seahawks-place-rb-jadarian-price-on-ir",
-      "source_name": "Pro Football Talk",
-      "headline": "Seahawks place RB Jadarian Price on IR",
-      "published_at": "2026-10-03T20:36:39.000Z",
-      "observed_at": "2026-10-03T20:40:22.962Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaylen-waddle-was-fined-14-926-for-dice-roll-too",
-      "source_name": "Pro Football Talk",
-      "headline": "Jaylen Waddle was fined $14,926 for dice roll, too",
-      "published_at": "2026-10-03T20:31:19.000Z",
-      "observed_at": "2026-10-03T20:40:22.962Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ravens-put-jovaughn-gwyn-ethan-pocic-on-ir",
       "source_name": "Pro Football Talk",
       "headline": "Ravens put Jovaughn Gwyn, Ethan Pocic on IR",
@@ -41926,6 +41888,49 @@
         "JAX"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/anthony-richardson-news-colts-quarterbacks",
+      "source_name": "FOX Sports",
+      "headline": "What We Know About Colts QB Anthony Richardson's Marijuana Possession Charge",
+      "published_at": "2026-10-23T17:35:30.000Z",
+      "observed_at": "2026-10-23T17:50:22.786Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sauce-gardner-tyler-warren-anthony-gould-ruled-out-for-colts-vikings",
+      "source_name": "Pro Football Talk",
+      "headline": "Sauce Gardner, Tyler Warren, Anthony Gould ruled out for Colts-Vikings",
+      "published_at": "2026-10-23T17:39:06.000Z",
+      "observed_at": "2026-10-23T17:50:22.786Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "MIN"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
