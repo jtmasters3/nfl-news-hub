@@ -2,51 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/seahawks-placing-rb-jadarian-price-chest-on-injured-reserve",
-      "source_name": "NFL.com",
-      "headline": "Report: Seahawks placing RB Jadarian Price (chest) on injured reserve",
-      "published_at": "2026-10-03T08:10:08.000Z",
-      "observed_at": "2026-10-03T20:20:22.982Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/joey-porter-jr-will-play-for-cowboys-who-elevate-two-dbs-off-practice-squad",
-      "source_name": "Pro Football Talk",
-      "headline": "Joey Porter Jr. will play for Cowboys, who elevate two DBs off practice squad",
-      "published_at": "2026-10-03T20:16:26.000Z",
-      "observed_at": "2026-10-03T20:20:22.982Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "HOU"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-put-xavier-legette-on-injured-reserve",
       "source_name": "Pro Football Talk",
       "headline": "Panthers put Xavier Legette on injured reserve",
@@ -41924,6 +41879,50 @@
         "GB"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/steelers-vs-saints-preview-week-7-paris-game",
+      "source_name": "NFL.com",
+      "headline": "Steelers vs. Saints: Three must-know storylines for NFL's first-ever Paris game",
+      "published_at": "2026-10-23T04:46:54.000Z",
+      "observed_at": "2026-10-23T16:50:20.775Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NO",
+        "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/baker-mayfield-ready-to-go-emeka-egbuka-is-doubtful-to-play-for-bucs",
+      "source_name": "Pro Football Talk",
+      "headline": "Baker Mayfield \"ready to go,\" Emeka Egbuka is doubtful to play for Bucs",
+      "published_at": "2026-10-23T16:38:17.000Z",
+      "observed_at": "2026-10-23T16:50:20.775Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR",
+        "TB"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
