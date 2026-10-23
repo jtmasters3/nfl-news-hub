@@ -2,67 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/what-to-watch-in-nfl-week-4-preseason-contenders-running-out-of-room-for-error",
-      "source_name": "NFL.com",
-      "headline": "What to watch in NFL Week 4: Preseason contenders running out of room for error",
-      "published_at": "2026-10-04T09:46:04.000Z",
-      "observed_at": "2026-10-04T13:00:29.081Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/terry-mclaurin-out-for-commanders-in-london-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "Terry McLaurin out for Commanders in London Sunday",
-      "published_at": "2026-10-04T12:53:53.000Z",
-      "observed_at": "2026-10-04T13:00:29.081Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-cardinals-vs-giants-tv-channel-live-stream-time-2026-week-4",
-      "source_name": "FOX Sports",
-      "headline": "How to Watch Cardinals vs. Giants: TV Channel, Live Stream, Time",
-      "published_at": "2026-10-04T13:00:11.000Z",
-      "observed_at": "2026-10-04T13:10:20.754Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI",
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-colts-vs-commanders-tv-channel-live-stream-time-2026-week-4",
       "source_name": "FOX Sports",
       "headline": "How to Watch Colts vs. Commanders: TV Channel, Live Stream, Time",
@@ -41937,6 +41876,71 @@
       "detected_teams": [
         "HOU",
         "NYG"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/favorite-dogs-back-ole-miss-over-texas-falcons-upset-49ers",
+      "source_name": "FOX Sports",
+      "headline": "Favorite 'Dogs: Back Ole Miss Over Texas; Falcons To Upset 49ers",
+      "published_at": "2026-10-23T20:11:54.000Z",
+      "observed_at": "2026-10-23T20:30:25.619Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/green-bay-packers-zaire-franklin-injury",
+      "source_name": "FOX Sports",
+      "headline": "Packers LB Zaire Franklin To Miss Sunday's Game Against Lions With Injury",
+      "published_at": "2026-10-23T19:59:19.000Z",
+      "observed_at": "2026-10-23T20:30:25.619Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "GB"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ben-johnson-on-cole-kmet-hes-going-to-be-sorely-missed",
+      "source_name": "Pro Football Talk",
+      "headline": "Ben Johnson on Cole Kmet: He's going to be sorely missed",
+      "published_at": "2026-10-23T20:22:04.000Z",
+      "observed_at": "2026-10-23T20:30:25.619Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
       ],
       "detected_category": "injury",
       "nfl_evidence": [
