@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/devonta-smith-zack-baun-ruled-out-for-eagles-game-against-the-rams",
-      "source_name": "NFL.com",
-      "headline": "DeVonta Smith, Zack Baun ruled out for Eagles' game against the Rams",
-      "published_at": "2026-10-02T08:16:05.000Z",
-      "observed_at": "2026-10-02T23:20:19.438Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/seahawks-rb-jadarian-price-re-aggravated-injury-ruled-out-week-4",
       "source_name": "FOX Sports",
       "headline": "Seahawks RB Jadarian Price 'Re-Aggravated' Injury, Ruled Out Week 4",
@@ -41924,6 +41902,27 @@
         "NE"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-jaguars-ot-anton-harrison-out-for-year-with-a-torn-acl",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Jaguars OT Anton Harrison out for year with a torn ACL",
+      "published_at": "2026-10-23T12:28:37.000Z",
+      "observed_at": "2026-10-23T12:40:20.694Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
