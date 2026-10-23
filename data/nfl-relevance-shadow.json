@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/colts-commanders-preview-week-4-london-game",
-      "source_name": "NFL.com",
-      "headline": "Colts vs. Commanders: Three must-know storylines for NFL Week 4 London game",
-      "published_at": "2026-10-02T07:57:27.000Z",
-      "observed_at": "2026-10-02T20:00:29.699Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cbs-tony-romo-undoubtedly-negotiated-a-contract-settlement",
       "source_name": "Pro Football Talk",
       "headline": "CBS, Tony Romo undoubtedly negotiated a contract settlement",
@@ -41950,6 +41928,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/marshall-faulk-discloses-parkinsons-disease-diagnosis",
+      "source_name": "Pro Football Talk",
+      "headline": "Marshall Faulk discloses Parkinson's disease diagnosis",
+      "published_at": "2026-10-23T00:21:28.000Z",
+      "observed_at": "2026-10-23T00:30:27.724Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "coaching",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
