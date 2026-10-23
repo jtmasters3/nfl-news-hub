@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-tanner-mckee-will-be-the-eagles-no-2-qb-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Tanner McKee will be the Eagles' No. 2 QB Sunday",
-      "published_at": "2026-10-04T13:51:15.000Z",
-      "observed_at": "2026-10-04T14:00:30.063Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/notable-injuries-news-sunday-week-4-games",
       "source_name": "NFL.com",
       "headline": "Notable injuries, news from Sunday's Week 4 games: Marcus Mariota questionable to return",
@@ -41944,6 +41922,30 @@
         "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/college-football/2026-nfl-college-football-odds-best-bets-indiana-michigan-colts-vikings",
+      "source_name": "FOX Sports",
+      "headline": "2026 NFL, College Football Odds: Best Bets For Indiana-Michigan, Colts-Vikings",
+      "published_at": "2026-10-23T23:11:37.000Z",
+      "observed_at": "2026-10-23T23:20:19.468Z",
+      "decision": "keep",
+      "classification": "nfl_with_college_context",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "MIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [
+        "college_football_phrase"
+      ],
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
