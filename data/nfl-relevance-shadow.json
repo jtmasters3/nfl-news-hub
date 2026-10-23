@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-chargers-vs-seahawks-tv-channel-live-stream-time-2026-week-4",
-      "source_name": "FOX Sports",
-      "headline": "How to Watch Chargers vs. Seahawks: TV Channel, Live Stream, Time",
-      "published_at": "2026-10-04T13:01:37.000Z",
-      "observed_at": "2026-10-04T13:20:22.323Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAC",
-        "LAR",
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-chiefs-vs-raiders-tv-channel-live-stream-time-2026-week-4",
       "source_name": "FOX Sports",
       "headline": "How to Watch Chiefs vs. Raiders: TV Channel, Live Stream, Time",
@@ -41945,6 +41922,28 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/lions-te-sam-laporta-walks-back-contract-comments-i-want-to-play-for-this-team",
+      "source_name": "NFL.com",
+      "headline": "Lions TE Sam LaPorta walks back contract comments: 'I want to play for this team'",
+      "published_at": "2026-10-23T09:37:36.000Z",
+      "observed_at": "2026-10-23T21:50:20.820Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET"
+      ],
+      "detected_category": "contract",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:contract"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
