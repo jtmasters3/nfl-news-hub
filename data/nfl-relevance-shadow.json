@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-rams-vs-eagles-tv-channel-live-stream-time-2026-week-4",
-      "source_name": "FOX Sports",
-      "headline": "How to Watch Rams vs. Eagles: TV Channel, Live Stream, Time",
-      "published_at": "2026-10-04T12:56:57.000Z",
-      "observed_at": "2026-10-04T13:10:20.754Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-cowboys-vs-texans-tv-channel-live-stream-time-2026-week-4",
       "source_name": "FOX Sports",
       "headline": "How to Watch Cowboys vs. Texans: TV Channel, Live Stream, Time",
@@ -41945,6 +41923,28 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/seahawks-release-trevon-diggs",
+      "source_name": "Pro Football Talk",
+      "headline": "Seahawks release Trevon Diggs",
+      "published_at": "2026-10-23T20:57:57.000Z",
+      "observed_at": "2026-10-23T21:00:27.454Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC",
+        "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
