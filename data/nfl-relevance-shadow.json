@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/one-year-later-mark-sanchez-criminal-civil-cases-are-not-yet-resolved",
-      "source_name": "Pro Football Talk",
-      "headline": "One year later, Mark Sanchez criminal, civil cases are not yet resolved",
-      "published_at": "2026-10-04T13:58:39.000Z",
-      "observed_at": "2026-10-04T14:10:20.750Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "LV"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cardinals-giants-carries-unexpected-historical-significance",
       "source_name": "Pro Football Talk",
       "headline": "Cardinals-Giants carries unexpected historical significance",
@@ -41952,6 +41930,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/three-teams-could-be-undefeated-through-seven-weeks-which-is-a-rarity",
+      "source_name": "Pro Football Talk",
+      "headline": "Three teams could be undefeated through seven weeks, which is a rarity",
+      "published_at": "2026-10-24T01:20:13.000Z",
+      "observed_at": "2026-10-24T01:30:23.657Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
