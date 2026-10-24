@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-poised-to-be-first-team-since-1997-jaguars-to-start-three-quarterbacks-in-first-four-games",
-      "source_name": "Pro Football Talk",
-      "headline": "Bears poised to be first team since 1997 Jaguars to start three quarterbacks in first four games",
-      "published_at": "2026-10-04T16:12:07.000Z",
-      "observed_at": "2026-10-04T16:20:26.436Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "JAX"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ceedee-lamb-thinks-he-cant-be-guarded-and-it-helps-to-have-george-pickens",
       "source_name": "Pro Football Talk",
       "headline": "CeeDee Lamb thinks he can't be guarded (and it helps to have George Pickens)",
@@ -41949,6 +41927,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/with-troy-aikman-possibly-exiting-broadcasting-he-extends-an-olive-branch-to-jerry-jones",
+      "source_name": "Pro Football Talk",
+      "headline": "With Troy Aikman possibly exiting broadcasting, he extends an olive branch to Jerry Jones",
+      "published_at": "2026-10-24T13:54:26.000Z",
+      "observed_at": "2026-10-24T14:00:28.660Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
