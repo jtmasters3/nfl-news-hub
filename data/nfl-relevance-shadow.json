@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/why-cowboys-shouldnt-regret-micah-parsons-trade-after-dealing-joey-porter-jr",
-      "source_name": "FOX Sports",
-      "headline": "Why Cowboys Shouldn't Regret Micah Parsons Trade After Dealing For Joey Porter Jr.",
-      "published_at": "2026-10-04T17:40:51.000Z",
-      "observed_at": "2026-10-04T17:50:21.637Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/terry-bradshaw-suggests-simple-solution-drake-mayes-scoring-drought",
-      "source_name": "FOX Sports",
-      "headline": "Terry Bradshaw Suggests Simple Solution To End Drake Maye's Struggles: Bench Him",
-      "published_at": "2026-10-04T17:40:47.000Z",
-      "observed_at": "2026-10-04T17:50:21.637Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-up-7-0-after-penalty-wipes-out-jets-interception",
       "source_name": "Pro Football Talk",
       "headline": "Bears up 7-0 after penalty wipes out Jets interception",
@@ -41922,6 +41884,48 @@
       "confidence": "high",
       "detected_teams": [
         "CHI"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/giants-rule-out-s-jevon-holland-te-theo-johnson",
+      "source_name": "Pro Football Talk",
+      "headline": "Giants rule out S Jevon Holland, TE Theo Johnson",
+      "published_at": "2026-10-24T17:55:17.000Z",
+      "observed_at": "2026-10-24T18:00:28.318Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/browns-activate-rb-dylan-sampson-from-ir-place-og-teven-jenkins-on-ir",
+      "source_name": "Pro Football Talk",
+      "headline": "Browns activate RB Dylan Sampson from IR, place OG Teven Jenkins on IR",
+      "published_at": "2026-10-24T17:51:53.000Z",
+      "observed_at": "2026-10-24T18:00:28.318Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE"
       ],
       "detected_category": "injury",
       "nfl_evidence": [
