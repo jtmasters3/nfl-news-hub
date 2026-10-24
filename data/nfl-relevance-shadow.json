@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jim-moras-coaching-staff-had-a-significant-and-bizarre-mid-game-change",
-      "source_name": "Pro Football Talk",
-      "headline": "Jim Mora's coaching staff had a significant, and bizarre, mid-game change",
-      "published_at": "2026-10-04T14:39:06.000Z",
-      "observed_at": "2026-10-04T15:00:27.774Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "coaching",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-lead-as-commanders-offense-sputters-behind-third-string-qb-athan-kaliakmanis",
       "source_name": "Pro Football Talk",
       "headline": "Colts lead as Commanders' offense sputters behind third-string QB Athan Kaliakmanis",
@@ -41938,6 +41921,28 @@
       "confidence": "high",
       "detected_teams": [
         "KC"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/president-trump-on-sundays-game-in-paris-nfl-probably-could-have-postponed",
+      "source_name": "Pro Football Talk",
+      "headline": "President Trump on Sunday's game in Paris: \"The NFL probably could have postponed\"",
+      "published_at": "2026-10-24T02:51:06.000Z",
+      "observed_at": "2026-10-24T03:00:26.064Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NO",
+        "PIT"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
