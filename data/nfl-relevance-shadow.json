@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/joey-porter-jr-will-make-his-cowboys-debut-on-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "Joey Porter Jr. will make his Cowboys debut on Sunday",
-      "published_at": "2026-10-04T15:37:43.000Z",
-      "observed_at": "2026-10-04T15:50:22.440Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "PIT"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-poised-to-be-first-team-since-1997-jaguars-to-start-three-quarterbacks-in-first-four-games",
       "source_name": "Pro Football Talk",
       "headline": "Bears poised to be first team since 1997 Jaguars to start three quarterbacks in first four games",
@@ -41943,6 +41921,30 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/saints-elevate-wr-cedric-tillman-ot-easton-kilty",
+      "source_name": "Pro Football Talk",
+      "headline": "Saints elevate WR Cedric Tillman, OT Easton Kilty",
+      "published_at": "2026-10-24T13:43:10.000Z",
+      "observed_at": "2026-10-24T13:50:20.167Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NO",
+        "PIT"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
