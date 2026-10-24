@@ -2,48 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/eagles-rb-saquon-barkley-hamstring-injury-update",
-      "source_name": "FOX Sports",
-      "headline": "Eagles RB Saquon Barkley Exits Game With Hamstring Injury Against Rams",
-      "published_at": "2026-10-04T18:17:07.000Z",
-      "observed_at": "2026-10-04T18:20:24.312Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAC",
-        "LAR",
-        "PHI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/which-mlb-positions-could-todays-nfl-superstars-actually-play",
-      "source_name": "FOX Sports",
-      "headline": "Which MLB Positions Could Today’s NFL Superstars Actually Play?",
-      "published_at": "2026-10-04T18:12:41.000Z",
-      "observed_at": "2026-10-04T18:20:24.312Z",
-      "decision": "reject",
-      "classification": "other_sport",
-      "confidence": "high",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [
-        "league_mlb"
-      ],
-      "reason_codes": [
-        "other_sport_marker_no_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/darius-coopers-outstanding-catch-gives-eagles-13-3-lead-over-rams",
       "source_name": "Pro Football Talk",
       "headline": "Darius Cooper's outstanding catch gives Eagles 13-3 lead over Rams",
@@ -41928,6 +41886,49 @@
       "confidence": "high",
       "detected_teams": [
         "LV"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/the-dallas-cowboys-cheerleaders-have-unionized",
+      "source_name": "Pro Football Talk",
+      "headline": "The Dallas Cowboys cheerleaders have unionized",
+      "published_at": "2026-10-24T20:01:25.000Z",
+      "observed_at": "2026-10-24T20:10:20.449Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-list-saquon-barkley-as-questionable-devonta-smith-dontayvion-wicks-ruled-out",
+      "source_name": "Pro Football Talk",
+      "headline": "Eagles list Saquon Barkley as questionable; DeVonta Smith, Dontayvion Wicks ruled out",
+      "published_at": "2026-10-24T20:00:52.000Z",
+      "observed_at": "2026-10-24T20:10:20.449Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "PHI"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
