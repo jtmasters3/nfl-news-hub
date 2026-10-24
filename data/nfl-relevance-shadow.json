@@ -2,72 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-have-silver-lining-in-their-offensive-struggles",
-      "source_name": "Pro Football Talk",
-      "headline": "Vikings have silver lining in their offensive struggles",
-      "published_at": "2026-10-04T18:21:54.000Z",
-      "observed_at": "2026-10-04T18:30:24.671Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/saquon-barkley-downgraded-to-out-with-hamstring-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "Saquon Barkley downgraded to out with hamstring injury",
-      "published_at": "2026-10-04T18:16:20.000Z",
-      "observed_at": "2026-10-04T18:30:24.671Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR",
-        "PHI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/packers-lead-bucs-10-7-at-halftime-after-jalon-daniels-second-int",
-      "source_name": "Pro Football Talk",
-      "headline": "Packers lead Bucs 10-7 at halftime after Jalon Daniels' second INT",
-      "published_at": "2026-10-04T18:31:59.000Z",
-      "observed_at": "2026-10-04T18:40:24.077Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB",
-        "TB"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_udfa"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaguars-pick-off-joe-burrow-extend-lead-to-13-3-before-halftime",
       "source_name": "Pro Football Talk",
       "headline": "Jaguars pick off Joe Burrow, extend lead to 13-3 before halftime",
@@ -41933,6 +41867,71 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/packers-activate-rb-josh-jacobs-from-exempt-list-ahead-of-sunday-s-game-vs-lions",
+      "source_name": "NFL.com",
+      "headline": "Packers activate RB Josh Jacobs from exempt list ahead of Sunday's game vs. Lions",
+      "published_at": "2026-10-24T08:18:39.000Z",
+      "observed_at": "2026-10-24T20:30:27.606Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "GB"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/fred-warner-was-fined-for-hit-on-a-defenseless-player-malik-mustapha-was-not",
+      "source_name": "Pro Football Talk",
+      "headline": "Fred Warner was fined for hit on a defenseless player, Malik Mustapha was not",
+      "published_at": "2026-10-24T20:24:32.000Z",
+      "observed_at": "2026-10-24T20:30:27.606Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-activate-cb-a-j-terrell-from-ir",
+      "source_name": "Pro Football Talk",
+      "headline": "Falcons activate CB A.J. Terrell from IR",
+      "published_at": "2026-10-24T20:23:07.000Z",
+      "observed_at": "2026-10-24T20:30:27.606Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
