@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/commanders-qb-marcus-mariota-knee-injury-colts-athan-kaliakmanis",
-      "source_name": "NFL.com",
-      "headline": "Commanders QB Marcus Mariota (knee) ruled out vs. Colts, replaced by rookie Athan Kaliakmanis",
-      "published_at": "2026-10-04T03:10:52.000Z",
-      "observed_at": "2026-10-04T15:20:22.918Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "WAS"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jerry-jones-hints-nfl-could-be-thinking-about-embracing-geographic-rivalries",
       "source_name": "Pro Football Talk",
       "headline": "Jerry Jones hints NFL could be thinking about embracing geographic rivalries",
@@ -41946,6 +41924,28 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lions-sam-laporta-clarifies-contract-comments-i-want-to-play-for-this-team",
+      "source_name": "Pro Football Talk",
+      "headline": "Lions' Sam LaPorta clarifies contract comments: \"I want to play for this team\"",
+      "published_at": "2026-10-24T08:32:36.000Z",
+      "observed_at": "2026-10-24T08:40:24.734Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET"
+      ],
+      "detected_category": "contract",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:contract"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
