@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tyson-bagent-and-case-keenum-started-for-the-bears",
-      "source_name": "Pro Football Talk",
-      "headline": "Tyson Bagent and Case Keenum started for the Bears",
-      "published_at": "2026-10-04T17:19:51.000Z",
-      "observed_at": "2026-10-04T17:30:23.484Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nico-collins-has-two-catches-52-yards-td-on-texans-opening-drive",
       "source_name": "Pro Football Talk",
       "headline": "Nico Collins has two catches, 52 yards, TD on Texans' opening drive",
@@ -41927,6 +41905,23 @@
       "headline": "Jason Garrett: These are the 4 best leaders I coached in the NFL",
       "published_at": "2026-10-24T09:01:08.000Z",
       "observed_at": "2026-10-24T16:20:24.003Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/programa-previo-al-2026-nfl-madrid-game",
+      "source_name": "NFL.com",
+      "headline": "Programa previo al 2026 NFL Madrid Game",
+      "published_at": "2026-10-24T04:24:59.000Z",
+      "observed_at": "2026-10-24T16:30:26.044Z",
       "decision": "keep",
       "classification": "ambiguous",
       "confidence": "low",
