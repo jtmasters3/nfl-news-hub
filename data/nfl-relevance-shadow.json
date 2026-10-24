@@ -2,65 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/history-shows-eagles-face-a-tall-task-without-lane-johnson",
-      "source_name": "Pro Football Talk",
-      "headline": "History shows Eagles face a tall task without Lane Johnson",
-      "published_at": "2026-10-04T16:57:41.000Z",
-      "observed_at": "2026-10-04T17:10:22.161Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/2026-nfl-season-week-4-what-we-learned-from-sunday-s-games",
-      "source_name": "NFL.com",
-      "headline": "2026 NFL season, Week 4: What We Learned from Sunday's games",
-      "published_at": "2026-10-04T05:19:22.000Z",
-      "observed_at": "2026-10-04T17:30:23.484Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/saquon-barkley-questionable-to-return-with-hamstring-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "Saquon Barkley questionable to return with hamstring injury",
-      "published_at": "2026-10-04T17:21:13.000Z",
-      "observed_at": "2026-10-04T17:30:23.484Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tyson-bagent-and-case-keenum-started-for-the-bears",
       "source_name": "Pro Football Talk",
       "headline": "Tyson Bagent and Case Keenum started for the Bears",
@@ -41935,6 +41876,66 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/christian-mccaffrey-vs-bijan-robinson-part-2-rb-duel-could-steal-the-show-in-atlanta",
+      "source_name": "NFL.com",
+      "headline": "Christian McCaffrey vs. Bijan Robinson, Part 2: RB duel could steal the show in Atlanta",
+      "published_at": "2026-10-24T12:16:05.000Z",
+      "observed_at": "2026-10-24T16:20:24.003Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/will-kyler-murray-build-momentum-in-minnesota-s-offense-vikings-colts-predictions",
+      "source_name": "NFL.com",
+      "headline": "Will Kyler Murray build momentum in Minnesota's offense?: Vikings-Colts predictions",
+      "published_at": "2026-10-24T10:16:06.000Z",
+      "observed_at": "2026-10-24T16:20:24.003Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "MIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/jason-garrett-these-are-the-4-best-leaders-i-coached-in-the-nfl",
+      "source_name": "NFL.com",
+      "headline": "Jason Garrett: These are the 4 best leaders I coached in the NFL",
+      "published_at": "2026-10-24T09:01:08.000Z",
+      "observed_at": "2026-10-24T16:20:24.003Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
