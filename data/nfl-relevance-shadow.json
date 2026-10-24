@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/giants-lead-cardinals-19-17-at-halftime",
-      "source_name": "Pro Football Talk",
-      "headline": "Giants lead Cardinals 19-17 at halftime",
-      "published_at": "2026-10-04T18:35:52.000Z",
-      "observed_at": "2026-10-04T18:50:20.256Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI",
-        "NYG"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-dominate-time-of-possession-lead-jets-13-3-at-halftime",
       "source_name": "Pro Football Talk",
       "headline": "Bears dominate time of possession, lead Jets 13-3 at halftime",
@@ -41927,6 +41905,27 @@
       "confidence": "high",
       "detected_teams": [
         "DAL"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-activate-wr-christian-kirk-from-ir",
+      "source_name": "Pro Football Talk",
+      "headline": "49ers activate WR Christian Kirk from IR",
+      "published_at": "2026-10-24T21:00:39.000Z",
+      "observed_at": "2026-10-24T21:10:22.237Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
       ],
       "detected_category": "injury",
       "nfl_evidence": [
