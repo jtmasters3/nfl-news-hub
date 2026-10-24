@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/notable-injuries-news-sunday-week-4-games",
-      "source_name": "NFL.com",
-      "headline": "Notable injuries, news from Sunday's Week 4 games: Marcus Mariota questionable to return",
-      "published_at": "2026-10-04T02:00:42.000Z",
-      "observed_at": "2026-10-04T14:10:20.750Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/marcus-mariota-injured-third-string-quarterback-athan-kaliakmanis-in-for-commanders",
       "source_name": "Pro Football Talk",
       "headline": "Marcus Mariota injured, third-string quarterback Athan Kaliakmanis in for Commanders",
@@ -41946,6 +41929,28 @@
       "non_nfl_evidence": [
         "college_football_phrase"
       ],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/lawrence-mccutcheon-five-time-pro-bowl-running-back-with-rams-dies-at-76",
+      "source_name": "NFL.com",
+      "headline": "Lawrence McCutcheon, five-time Pro Bowl running back with Rams, dies at 76",
+      "published_at": "2026-10-24T12:23:01.000Z",
+      "observed_at": "2026-10-24T00:30:23.683Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC",
+        "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
