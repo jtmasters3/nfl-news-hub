@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/packers-fans-could-take-over-raymond-james-stadium-on-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "Packers fans could take over Raymond James Stadium on Sunday",
-      "published_at": "2026-10-04T16:44:18.000Z",
-      "observed_at": "2026-10-04T16:50:21.333Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB",
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jonathan-taylor-and-the-colts-top-athan-kaliakmanis-and-the-commanders-in-london",
       "source_name": "Pro Football Talk",
       "headline": "Jonathan Taylor and the Colts top Athan Kaliakmanis and the Commanders in London",
@@ -41931,6 +41909,23 @@
       "headline": "The PFT 25th anniversary is coming next weekend",
       "published_at": "2026-10-24T14:52:29.000Z",
       "observed_at": "2026-10-24T15:00:27.447Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-saturday-oct-24",
+      "source_name": "NFL.com",
+      "headline": "NFL news roundup: Latest league updates from Saturday, Oct. 24",
+      "published_at": "2026-10-24T03:13:06.000Z",
+      "observed_at": "2026-10-24T15:20:18.631Z",
       "decision": "keep",
       "classification": "ambiguous",
       "confidence": "low",
