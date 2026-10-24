@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/ravens-lamar-jackson-ankle-injury-titans",
-      "source_name": "NFL.com",
-      "headline": "Ravens quarterback Lamar Jackson exits game vs. Titans due to ankle injury",
-      "published_at": "2026-10-04T06:56:08.000Z",
-      "observed_at": "2026-10-04T19:00:30.726Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "TEN"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tucker-krafts-td-gives-packers-17-7-lead",
       "source_name": "Pro Football Talk",
       "headline": "Tucker Kraft's TD gives Packers 17-7 lead",
@@ -41931,6 +41909,27 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/former-raiders-rb-pete-banaszak-who-won-super-bowl-xi-with-oakland-dies-at-82",
+      "source_name": "NFL.com",
+      "headline": "Former Raiders RB Pete Banaszak, who won Super Bowl XI with Oakland, dies at 82",
+      "published_at": "2026-10-24T11:16:12.000Z",
+      "observed_at": "2026-10-24T23:20:18.714Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
