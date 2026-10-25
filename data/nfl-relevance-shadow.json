@@ -2,94 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/the-patriots-are-back-with-upset-win-over-bills-they-re-back-in-the-race",
-      "source_name": "NFL.com",
-      "headline": "The Patriots are back: With upset win over Bills, they're 'back in the race'",
-      "published_at": "2026-10-04T11:46:04.000Z",
-      "observed_at": "2026-10-05T00:00:28.312Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "NE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/seahawks-escape-chargers-30-23",
-      "source_name": "Pro Football Talk",
-      "headline": "Seahawks escape Chargers 30-23",
-      "published_at": "2026-10-05T00:03:00.000Z",
-      "observed_at": "2026-10-05T00:10:18.873Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAC",
-        "SEA"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kenneth-walker-runs-for-177-two-tds-chiefs-beat-raiders-30-27",
-      "source_name": "Pro Football Talk",
-      "headline": "Kenneth Walker runs for 177, two TDs, Chiefs beat Raiders 30-27",
-      "published_at": "2026-10-04T23:59:05.000Z",
-      "observed_at": "2026-10-05T00:10:18.873Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC",
-        "LV"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kyle-monangai-has-a-thumb-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "Kyle Monangai has a thumb injury",
-      "published_at": "2026-10-04T23:58:07.000Z",
-      "observed_at": "2026-10-05T00:10:18.873Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "NYJ"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-says-it-is-looking-into-an-official-cursing-at-cardinals-te-trey-mcbride",
       "source_name": "NFL.com",
       "headline": "NFL says it is looking into an official cursing at Cardinals TE Trey McBride",
@@ -41883,6 +41795,89 @@
       "detected_teams": [
         "MIA",
         "NYJ"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/jay-glazer-jalen-hurts-health-update-nfl-nflpa-joint-investigation",
+      "source_name": "FOX Sports",
+      "headline": "Jay Glazer Shares Jalen Hurts Health Update, NFL And NFLPA Joint Investigation",
+      "published_at": "2026-10-25T17:17:58.000Z",
+      "observed_at": "2026-10-25T17:20:23.444Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "phrase_nflpa"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jonathan-taylor-puts-colts-up-7-0-after-vikings-fail-on-fourth-down",
+      "source_name": "Pro Football Talk",
+      "headline": "Jonathan Taylor puts Colts up 7-0 after Vikings fail on fourth down",
+      "published_at": "2026-10-25T17:16:22.000Z",
+      "observed_at": "2026-10-25T17:20:23.444Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "MIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dolphins-have-their-first-lead-of-the-2026-season",
+      "source_name": "Pro Football Talk",
+      "headline": "Dolphins have their first lead of the 2026 season",
+      "published_at": "2026-10-25T17:12:20.000Z",
+      "observed_at": "2026-10-25T17:20:23.444Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/zay-flowers-48-yard-touchdown-gives-ravens-early-7-0-lead",
+      "source_name": "Pro Football Talk",
+      "headline": "Zay Flowers 48-yard touchdown gives Ravens early 7-0 lead",
+      "published_at": "2026-10-25T17:10:42.000Z",
+      "observed_at": "2026-10-25T17:20:23.444Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
