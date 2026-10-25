@@ -2,51 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nflpa-issues-statement-on-comments-made-by-line-judge-jeff-seeman-to-cardinals-tight-end-trey-mcbride",
-      "source_name": "Pro Football Talk",
-      "headline": "NFLPA issues statement on comments made by line judge Jeff Seeman to Cardinals tight end Trey McBride",
-      "published_at": "2026-10-04T23:37:03.000Z",
-      "observed_at": "2026-10-04T23:50:19.279Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI",
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_nflpa"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-beat-broncos-24-14-to-move-to-4-0",
-      "source_name": "Pro Football Talk",
-      "headline": "49ers beat Broncos 24-14 to move to 4-0",
-      "published_at": "2026-10-04T23:36:09.000Z",
-      "observed_at": "2026-10-04T23:50:19.279Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN",
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/the-patriots-are-back-with-upset-win-over-bills-they-re-back-in-the-race",
       "source_name": "NFL.com",
       "headline": "The Patriots are back: With upset win over Bills, they're 'back in the race'",
@@ -41889,6 +41844,45 @@
       "detected_teams": [
         "NO",
         "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/which-active-nfl-tight-ends-remind-rob-gronkowski-himself",
+      "source_name": "FOX Sports",
+      "headline": "Which Active TEs Remind Rob Gronkowski Of Himself? His Answer Will Surprise You",
+      "published_at": "2026-10-25T16:34:14.000Z",
+      "observed_at": "2026-10-25T16:50:18.973Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dolphins-jets-bring-plenty-of-futility-into-their-first-meeting-of-the-year",
+      "source_name": "Pro Football Talk",
+      "headline": "Dolphins, Jets bring plenty of futility into their first meeting of the year",
+      "published_at": "2026-10-25T16:36:50.000Z",
+      "observed_at": "2026-10-25T16:50:18.973Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIA",
+        "NYJ"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
