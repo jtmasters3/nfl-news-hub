@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rashee-rice-doubtful-to-return-jalen-nailor-ruled-out",
-      "source_name": "Pro Football Talk",
-      "headline": "Rashee Rice doubtful to return, Jalen Nailor ruled out",
-      "published_at": "2026-10-04T22:13:45.000Z",
-      "observed_at": "2026-10-04T22:20:23.792Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/seahawks-lead-chargers-20-6-at-halftime",
       "source_name": "Pro Football Talk",
       "headline": "Seahawks lead Chargers 20-6 at halftime",
@@ -41901,6 +41880,23 @@
       "confidence": "low",
       "detected_teams": [],
       "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/week-7-injuries-sunday-pregame-2026-nfl-season",
+      "source_name": "NFL.com",
+      "headline": "NFL Week 7 injuries to monitor for Sunday's games",
+      "published_at": "2026-10-25T12:33:54.000Z",
+      "observed_at": "2026-10-25T12:40:23.290Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
       "nfl_evidence": [],
       "non_nfl_evidence": [],
       "reason_codes": [
