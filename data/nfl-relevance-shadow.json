@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/a-win-is-a-win-hard-to-feel-that-way-after-packers-survive-buccaneers",
-      "source_name": "NFL.com",
-      "headline": "A win is a win? Hard to feel that way after Packers survive Buccaneers",
-      "published_at": "2026-10-05T12:31:04.000Z",
-      "observed_at": "2026-10-05T00:50:18.446Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB",
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-odds-week-5-lines-spreads-results-all-15-games",
-      "source_name": "FOX Sports",
-      "headline": "2026 NFL Odds Week 5: Lines, Spreads, Results For All 15 Games",
-      "published_at": "2026-10-05T00:41:03.000Z",
-      "observed_at": "2026-10-05T00:50:18.446Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ceedee-lamb-calls-it-everything-to-have-a-career-day-in-his-return-to-houston",
       "source_name": "Pro Football Talk",
       "headline": "CeeDee Lamb calls it \"everything\" to have a career day in his return to Houston",
@@ -41879,6 +41840,49 @@
         "GB"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/notable-injuries-news-sunday-week-7-games-2026",
+      "source_name": "NFL.com",
+      "headline": "Notable injuries, news from Sunday's Week 7 games: 49ers' Christian McCaffrey suffers thigh injury",
+      "published_at": "2026-10-25T05:51:53.000Z",
+      "observed_at": "2026-10-25T18:00:26.688Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bucs-score-a-defensive-td-to-take-17-0-lead-on-panthers",
+      "source_name": "Pro Football Talk",
+      "headline": "Bucs score a defensive TD to take 17-0 lead on Panthers",
+      "published_at": "2026-10-25T17:53:04.000Z",
+      "observed_at": "2026-10-25T18:00:26.688Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR",
+        "TB"
+      ],
+      "detected_category": "live_game_state",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
