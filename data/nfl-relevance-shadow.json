@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jameis-winston-im-heating-up-and-starting-to-get-better",
-      "source_name": "Pro Football Talk",
-      "headline": "Jameis Winston: I'm heating up and starting to get better",
-      "published_at": "2026-10-05T00:29:34.000Z",
-      "observed_at": "2026-10-05T00:40:19.791Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/not-good-enough-sean-mannion-s-eagles-offense-has-an-identity-crisis",
       "source_name": "NFL.com",
       "headline": "'Not good enough': Sean Mannion's Eagles offense has an identity crisis",
@@ -41877,6 +41856,28 @@
         "SF"
       ],
       "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/j-j-mccarthy-giants-take-7-3-lead-on-texans",
+      "source_name": "Pro Football Talk",
+      "headline": "J.J. McCarthy, Giants take 7-3 lead on Texans",
+      "published_at": "2026-10-25T17:29:11.000Z",
+      "observed_at": "2026-10-25T17:40:19.374Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "HOU",
+        "NYG"
+      ],
+      "detected_category": "live_game_state",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
