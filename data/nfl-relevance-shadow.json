@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kyle-shanahan-passes-bill-walsh-today-for-most-games-as-49ers-coach",
-      "source_name": "Pro Football Talk",
-      "headline": "Kyle Shanahan passes Bill Walsh today for most games as 49ers coach",
-      "published_at": "2026-10-04T19:45:30.000Z",
-      "observed_at": "2026-10-04T20:00:27.851Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/packers-hold-on-for-17-14-win-over-bucs",
-      "source_name": "Pro Football Talk",
-      "headline": "Packers hold on for 17-14 win over Bucs",
-      "published_at": "2026-10-04T20:04:22.000Z",
-      "observed_at": "2026-10-04T20:10:21.114Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB",
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kyle-monangai-tyson-bagent-lead-bears-to-23-12-win-over-jets",
       "source_name": "Pro Football Talk",
       "headline": "Kyle Monangai, Tyson Bagent lead Bears to 23-12 win over Jets",
@@ -41921,6 +41878,44 @@
       "detected_teams": [
         "ATL",
         "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-coach-of-the-year-odds",
+      "source_name": "FOX Sports",
+      "headline": "2026 NFL Coach Of The Year Odds: Shanahan Favored; Monken, Johnson Chasing",
+      "published_at": "2026-10-21T00:51:41.000Z",
+      "observed_at": "2026-10-25T08:10:27.926Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "coaching",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-odds-offensive-player-of-the-year",
+      "source_name": "FOX Sports",
+      "headline": "2026 NFL OPOY Odds: Kansas City's Kenneth Walker III Back On Top As Favorite",
+      "published_at": "2026-10-20T23:18:17.000Z",
+      "observed_at": "2026-10-25T08:10:27.926Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
