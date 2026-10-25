@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chargers-s-derwin-james-seahawks-s-ty-okada-are-inactive",
-      "source_name": "Pro Football Talk",
-      "headline": "Chargers S Derwin James, Seahawks S Ty Okada are inactive",
-      "published_at": "2026-10-04T19:15:36.000Z",
-      "observed_at": "2026-10-04T19:20:21.728Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAC",
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-up-20-6-after-kyle-monangais-second-td",
       "source_name": "Pro Football Talk",
       "headline": "Bears up 20-6 after Kyle Monangai's second TD",
@@ -41928,6 +41906,29 @@
         "nfl_preserving_category:contract"
       ],
       "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bill-belichick-north-carolina-fall-to-syracuse-in-ot-31-30",
+      "source_name": "Pro Football Talk",
+      "headline": "Bill Belichick, North Carolina fall to Syracuse in OT, 31-30",
+      "published_at": "2026-10-25T03:27:43.000Z",
+      "observed_at": "2026-10-25T03:40:17.850Z",
+      "decision": "keep",
+      "classification": "nfl_with_college_context",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [
+        "conference_acc"
+      ],
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
