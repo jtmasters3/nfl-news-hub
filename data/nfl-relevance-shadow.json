@@ -2,66 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-rankings-week-4-monday-morning",
-      "source_name": "FOX Sports",
-      "headline": "Monday Morning NFL Top 10 Rankings: New No. 1 After Hectic Week 4 Sunday",
-      "published_at": "2026-10-05T13:51:23.000Z",
-      "observed_at": "2026-10-05T14:10:23.542Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/the-afc-road-to-l-a-may-go-through-duval",
-      "source_name": "Pro Football Talk",
-      "headline": "The AFC road to L.A. may go through Duval",
-      "published_at": "2026-10-05T14:01:24.000Z",
-      "observed_at": "2026-10-05T14:10:23.542Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "JAX"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-offense-sputters-with-68-net-passing-yards-0-12-on-third-down-vs-rams",
-      "source_name": "Pro Football Talk",
-      "headline": "Eagles' offense sputters with 68 net passing yards, 0-12 on third down vs. Rams",
-      "published_at": "2026-10-05T14:43:46.000Z",
-      "observed_at": "2026-10-05T14:50:24.869Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/joey-porter-jr-i-feel-like-i-showed-why-cowboys-brought-me-here",
       "source_name": "Pro Football Talk",
       "headline": "Joey Porter Jr.: I feel like I showed why Cowboys brought me here",
@@ -41885,6 +41825,72 @@
         "MIN"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/falcons-stun-nfl-but-not-themselves-knocking-off-previously-unbeaten-49ers",
+      "source_name": "NFL.com",
+      "headline": "Falcons stun NFL -- but not themselves -- knocking off previously unbeaten 49ers",
+      "published_at": "2026-10-25T11:16:06.000Z",
+      "observed_at": "2026-10-25T23:40:18.116Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/green-bay-packers-vs-detroit-lions-takeaways-week-7-october-25",
+      "source_name": "FOX Sports",
+      "headline": "Detroit Holds Onto Valuable Win: 3 Takeaways From The Lions' Win Over The Packers",
+      "published_at": "2026-10-25T23:39:14.000Z",
+      "observed_at": "2026-10-25T23:40:18.116Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "GB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/broncos-beat-cardinals-30-16-extend-winning-streak-to-three-games",
+      "source_name": "Pro Football Talk",
+      "headline": "Broncos beat Cardinals 30-16, extend winning streak to three games",
+      "published_at": "2026-10-25T23:30:25.000Z",
+      "observed_at": "2026-10-25T23:40:18.116Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI",
+        "DEN"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
