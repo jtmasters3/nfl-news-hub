@@ -2,87 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-are-third-team-start-4-0-while-not-scoring-a-td-in-multiple-games",
-      "source_name": "Pro Football Talk",
-      "headline": "Vikings are third team start 4-0 while not scoring a TD in multiple games",
-      "published_at": "2026-10-05T01:15:24.000Z",
-      "observed_at": "2026-10-05T01:20:22.519Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-take-13-6-lead-with-bryce-youngs-32-yard-td-pass",
-      "source_name": "Pro Football Talk",
-      "headline": "Panthers take 13-6 lead with Bryce Young's 32-yard TD pass",
-      "published_at": "2026-10-05T01:23:56.000Z",
-      "observed_at": "2026-10-05T01:30:24.562Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cam-skattebo-it-was-dumb-that-we-were-underdogs-to-the-cardinals-at-home",
-      "source_name": "Pro Football Talk",
-      "headline": "Cam Skattebo: It was \"dumb\" that we were underdogs to the Cardinals at home",
-      "published_at": "2026-10-05T01:37:32.000Z",
-      "observed_at": "2026-10-05T01:50:24.111Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI",
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/officials-continue-to-ignore-the-other-ways-to-finish-a-catch-beyond-taking-a-third-step",
-      "source_name": "Pro Football Talk",
-      "headline": "Officials continue to ignore the other ways to finish a catch, beyond taking a third step",
-      "published_at": "2026-10-05T01:35:22.000Z",
-      "observed_at": "2026-10-05T01:50:24.111Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ben-johnsons-decision-to-start-case-keenum-was-a-reaction-to-the-media",
       "source_name": "Pro Football Talk",
       "headline": "Ben Johnson's decision to start Case Keenum was a reaction to the media",
@@ -41888,6 +41807,93 @@
       "detected_teams": [
         "CAR",
         "TB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-take-lead-but-christian-mccaffrey-returns-for-49ers",
+      "source_name": "Pro Football Talk",
+      "headline": "Falcons take lead, but Christian McCaffrey returns for 49ers",
+      "published_at": "2026-10-25T18:46:00.000Z",
+      "observed_at": "2026-10-25T18:50:20.813Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "SF"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/broncos-will-be-without-pat-surtain-ii-for-third-straight-game",
+      "source_name": "Pro Football Talk",
+      "headline": "Broncos will be without Pat Surtain II for third straight game",
+      "published_at": "2026-10-25T18:45:24.000Z",
+      "observed_at": "2026-10-25T18:50:20.813Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/giants-texans-tied-14-14-at-halftime",
+      "source_name": "Pro Football Talk",
+      "headline": "Giants, Texans tied 14-14 at halftime",
+      "published_at": "2026-10-25T18:43:24.000Z",
+      "observed_at": "2026-10-25T18:50:20.813Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "HOU",
+        "NYG"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kc-concepcion-has-129-yards-browns-lead-titans-17-14-at-halftime",
+      "source_name": "Pro Football Talk",
+      "headline": "KC Concepcion has 129 yards, Browns lead Titans 17-14 at halftime",
+      "published_at": "2026-10-25T18:37:39.000Z",
+      "observed_at": "2026-10-25T18:50:20.813Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE",
+        "TEN"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
