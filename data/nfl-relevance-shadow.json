@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaguars-hold-off-bengals-for-22-17-win",
-      "source_name": "Pro Football Talk",
-      "headline": "Jaguars hold off Bengals for 22-17 win",
-      "published_at": "2026-10-04T20:26:22.000Z",
-      "observed_at": "2026-10-04T20:30:27.386Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CIN",
-        "JAX"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-touchdown-with-40-seconds-left-beats-texans-34-30",
       "source_name": "Pro Football Talk",
       "headline": "Cowboys' touchdown with 40 seconds left beats Texans 34-30",
@@ -41919,6 +41897,25 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nflpa-has-yet-to-launch-full-investigation-of-jalen-hurts-situation",
+      "source_name": "Pro Football Talk",
+      "headline": "NFLPA has yet to launch \"full investigation\" of Jalen Hurts situation",
+      "published_at": "2026-10-25T11:33:49.000Z",
+      "observed_at": "2026-10-25T11:40:19.368Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "phrase_nflpa"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
