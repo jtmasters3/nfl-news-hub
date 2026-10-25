@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/five-field-goals-enough-for-vikings-to-beat-dolphins",
-      "source_name": "Pro Football Talk",
-      "headline": "Five field goals enough for Vikings to beat Dolphins",
-      "published_at": "2026-10-04T23:01:27.000Z",
-      "observed_at": "2026-10-04T23:10:20.771Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIA",
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tyquan-thornton-carted-with-lower-leg-injury-chiefs-take-23-19-lead",
       "source_name": "Pro Football Talk",
       "headline": "Tyquan Thornton carted with lower-leg injury, Chiefs take 23-19 lead",
@@ -41889,6 +41867,27 @@
         "PIT"
       ],
       "detected_category": "live_game_state",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jets-rb-breece-hall-is-inactive-for-the-third-straight-game",
+      "source_name": "Pro Football Talk",
+      "headline": "Jets RB Breece Hall is inactive for the third straight game",
+      "published_at": "2026-10-25T15:34:02.000Z",
+      "observed_at": "2026-10-25T15:40:21.907Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYJ"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
