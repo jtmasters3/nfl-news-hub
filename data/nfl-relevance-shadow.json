@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/jonathan-taylor-energizes-colts-offense-but-daniel-jones-turnovers-are-concerning",
-      "source_name": "NFL.com",
-      "headline": "Jonathan Taylor energizes Colts' offense, but Daniel Jones' turnovers are concerning",
-      "published_at": "2026-10-04T10:46:04.000Z",
-      "observed_at": "2026-10-04T23:00:30.202Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/broncos-wr-pat-bryant-carted-off-in-third-quarter",
       "source_name": "Pro Football Talk",
       "headline": "Broncos WR Pat Bryant carted off in third quarter",
@@ -41895,6 +41874,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/saints-benefit-from-questionable-replay-review-on-t-j-watt-strip-sack-of-tyler-shough",
+      "source_name": "Pro Football Talk",
+      "headline": "Saints benefit from questionable replay review on T.J. Watt strip sack of Tyler Shough",
+      "published_at": "2026-10-25T14:32:34.000Z",
+      "observed_at": "2026-10-25T14:40:23.892Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NO"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
