@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/broncos-cb-riley-moss-questionable-to-return-with-injured-ribs",
-      "source_name": "Pro Football Talk",
-      "headline": "Broncos CB Riley Moss questionable to return with injured ribs",
-      "published_at": "2026-10-04T22:25:21.000Z",
-      "observed_at": "2026-10-04T22:40:19.064Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kenneth-walker-76-yard-run-leads-to-td-chiefs-lead-17-13",
       "source_name": "Pro Football Talk",
       "headline": "Kenneth Walker 76-yard run leads to TD, Chiefs lead 17-13",
@@ -41899,6 +41878,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaylen-warren-runs-steelers-to-early-lead-over-saints-in-paris",
+      "source_name": "Pro Football Talk",
+      "headline": "Jaylen Warren runs Steelers to early lead over Saints in Paris",
+      "published_at": "2026-10-25T13:40:58.000Z",
+      "observed_at": "2026-10-25T13:50:18.747Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NO",
+        "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
