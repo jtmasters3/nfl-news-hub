@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/not-good-enough-sean-mannion-s-eagles-offense-has-an-identity-crisis",
-      "source_name": "NFL.com",
-      "headline": "'Not good enough': Sean Mannion's Eagles offense has an identity crisis",
-      "published_at": "2026-10-05T12:31:04.000Z",
-      "observed_at": "2026-10-05T00:50:18.446Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/a-win-is-a-win-hard-to-feel-that-way-after-packers-survive-buccaneers",
       "source_name": "NFL.com",
       "headline": "A win is a win? Hard to feel that way after Packers survive Buccaneers",
@@ -41878,6 +41857,28 @@
         "NYG"
       ],
       "detected_category": "live_game_state",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jared-goff-can-become-first-qb-with-15-or-more-td-passes-no-picks-through-six-games",
+      "source_name": "Pro Football Talk",
+      "headline": "Jared Goff can become first QB with 15 or more TD passes, no picks through six games",
+      "published_at": "2026-10-25T17:41:24.000Z",
+      "observed_at": "2026-10-25T17:50:21.672Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "GB"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
