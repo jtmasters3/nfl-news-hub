@@ -2,87 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/the-rams-were-facing-a-letdown-but-their-internal-belief-propelled-them-to-victory",
-      "source_name": "NFL.com",
-      "headline": "The Rams were facing a letdown, but their internal belief propelled them to victory",
-      "published_at": "2026-10-05T12:31:04.000Z",
-      "observed_at": "2026-10-05T01:10:23.339Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/giants-survive-the-full-jameis-winston-experience-as-qb-says-he-s-heating-up",
-      "source_name": "NFL.com",
-      "headline": "Giants survive the full Jameis Winston experience, as QB says he's 'heating up'",
-      "published_at": "2026-10-05T12:31:04.000Z",
-      "observed_at": "2026-10-05T01:10:23.339Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chuba-hubbards-15-yard-td-gives-panthers-7-3-lead-over-lions",
-      "source_name": "Pro Football Talk",
-      "headline": "Chuba Hubbard's 15-yard TD gives Panthers 7-3 lead over Lions",
-      "published_at": "2026-10-05T00:58:06.000Z",
-      "observed_at": "2026-10-05T01:10:23.339Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR",
-        "DET"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/all-five-0-3-teams-fell-to-0-4",
-      "source_name": "Pro Football Talk",
-      "headline": "All five 0-3 teams fell to 0-4",
-      "published_at": "2026-10-05T00:51:55.000Z",
-      "observed_at": "2026-10-05T01:10:23.339Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-are-third-team-start-4-0-while-not-scoring-a-td-in-multiple-games",
       "source_name": "Pro Football Talk",
       "headline": "Vikings are third team start 4-0 while not scoring a TD in multiple games",
@@ -41882,6 +41801,93 @@
       "detected_teams": [
         "MIA",
         "NYJ"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/49ers-christian-mccaffrey-thigh-injury-update-falcons",
+      "source_name": "FOX Sports",
+      "headline": "49ers RB Christian McCaffrey Departs Early vs. Falcons Due To Thigh Injury",
+      "published_at": "2026-10-25T18:25:59.000Z",
+      "observed_at": "2026-10-25T18:40:20.114Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "SF"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-lead-at-halftime-despite-offense-struggling-without-christian-mccaffrey",
+      "source_name": "Pro Football Talk",
+      "headline": "49ers lead at halftime despite offense struggling without Christian McCaffrey",
+      "published_at": "2026-10-25T18:30:09.000Z",
+      "observed_at": "2026-10-25T18:40:20.114Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "live_game_state",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-take-10-6-lead-just-before-halftime-in-minnesota",
+      "source_name": "Pro Football Talk",
+      "headline": "Colts stretch lead to 10-6 just before halftime in Minnesota",
+      "published_at": "2026-10-25T18:27:58.000Z",
+      "observed_at": "2026-10-25T18:40:20.114Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "MIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/buccaneers-blowing-out-panthers-with-33-6-lead-at-halftime",
+      "source_name": "Pro Football Talk",
+      "headline": "Buccaneers blowing out Panthers with 33-6 halftime lead",
+      "published_at": "2026-10-25T18:27:49.000Z",
+      "observed_at": "2026-10-25T18:40:20.114Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR",
+        "TB"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
