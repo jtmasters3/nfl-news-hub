@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-up-20-6-after-kyle-monangais-second-td",
-      "source_name": "Pro Football Talk",
-      "headline": "Bears up 20-6 after Kyle Monangai's second TD",
-      "published_at": "2026-10-04T19:14:45.000Z",
-      "observed_at": "2026-10-04T19:20:21.728Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/packers-rule-out-lb-edgerrin-cooper-with-an-achilles-injury",
       "source_name": "Pro Football Talk",
       "headline": "Packers rule out LB Edgerrin Cooper with an Achilles injury",
@@ -41931,6 +41910,23 @@
       ],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-dfs-week-7-best-picks-lineup-advice-value-plays",
+      "source_name": "FOX Sports",
+      "headline": "NFL DFS Week 7: Best Picks, Lineup Advice and Value Plays",
+      "published_at": "2026-10-25T04:00:30.000Z",
+      "observed_at": "2026-10-25T04:20:21.012Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "fantasy",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
