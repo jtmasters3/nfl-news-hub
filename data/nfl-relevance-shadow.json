@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/seahawks-lead-chargers-20-6-at-halftime",
-      "source_name": "Pro Football Talk",
-      "headline": "Seahawks lead Chargers 20-6 at halftime",
-      "published_at": "2026-10-04T22:10:40.000Z",
-      "observed_at": "2026-10-04T22:20:23.792Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAC",
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/broncos-db-pat-surtain-exits-game-vs-niners-apparent-leg-injury",
       "source_name": "FOX Sports",
       "headline": "Broncos CB Pat Surtain Exits Game vs. Niners With Apparent Leg Injury",
@@ -41901,6 +41879,31 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/the-colts-could-trade-jonathan-taylor-and-or-others-before-the-deadline",
+      "source_name": "Pro Football Talk",
+      "headline": "The Colts could trade Jonathan Taylor, and/or others, before the deadline",
+      "published_at": "2026-10-25T12:45:15.000Z",
+      "observed_at": "2026-10-25T12:50:19.215Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "GB",
+        "IND",
+        "MIN",
+        "SEA"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
