@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/tom-brady-breaks-down-quarterback-mechanics-rainy-conditions-during-eagles-rams",
-      "source_name": "FOX Sports",
-      "headline": "Tom Brady Breaks Down How QBs Should Throw In The Rain During Rams-Eagles Game",
-      "published_at": "2026-10-04T22:14:05.000Z",
-      "observed_at": "2026-10-04T22:30:23.572Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/broncos-cb-riley-moss-questionable-to-return-with-injured-ribs",
       "source_name": "Pro Football Talk",
       "headline": "Broncos CB Riley Moss questionable to return with injured ribs",
@@ -41904,6 +41882,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-rodgerss-next-touchdown-pass-will-move-him-to-third-all-time",
+      "source_name": "Pro Football Talk",
+      "headline": "Aaron Rodgers's next touchdown pass will move him to third all time",
+      "published_at": "2026-10-25T13:24:21.000Z",
+      "observed_at": "2026-10-25T13:30:24.543Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
