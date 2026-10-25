@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/klint-kubiak-said-the-raiders-would-beat-the-chiefs-he-should-have-been-proven-right",
-      "source_name": "NFL.com",
-      "headline": "Klint Kubiak said the Raiders would beat the Chiefs. He should have been proven right",
-      "published_at": "2026-10-05T12:16:08.000Z",
-      "observed_at": "2026-10-05T12:50:29.764Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC",
-        "LV"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/how-the-vikings-victory-vs-dolphins-captures-the-absurdity-of-team-s-4-0-start",
       "source_name": "NFL.com",
       "headline": "How the Vikings' victory vs. Dolphins captures the absurdity of team's 4-0 start",
@@ -41895,6 +41873,28 @@
         "DEN"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/broncos-up-13-6-at-halftime-in-arizona",
+      "source_name": "Pro Football Talk",
+      "headline": "Broncos up 13-6 at halftime in Arizona",
+      "published_at": "2026-10-25T21:45:09.000Z",
+      "observed_at": "2026-10-25T21:50:19.820Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI",
+        "DEN"
+      ],
+      "detected_category": "live_game_state",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
