@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-recover-fumble-take-10-3-lead-in-denver",
-      "source_name": "Pro Football Talk",
-      "headline": "49ers recover fumble, take 10-3 lead in Denver",
-      "published_at": "2026-10-04T22:38:18.000Z",
-      "observed_at": "2026-10-04T22:50:21.642Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN",
-        "SF"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/jonathan-taylor-energizes-colts-offense-but-daniel-jones-turnovers-are-concerning",
       "source_name": "NFL.com",
       "headline": "Jonathan Taylor energizes Colts' offense, but Daniel Jones' turnovers are concerning",
@@ -41900,6 +41878,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-players-union-working-together-review-handling-jalen-hurts-blood-clot-diagnosis",
+      "source_name": "NFL.com",
+      "headline": "NFL, players' union working together to review handling of Jalen Hurts' blood clot diagnosis",
+      "published_at": "2026-10-25T02:23:36.000Z",
+      "observed_at": "2026-10-25T14:30:22.443Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
