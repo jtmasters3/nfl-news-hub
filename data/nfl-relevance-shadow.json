@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/monday-night-football-saints-te-noah-fant-is-inactive-falcons-lb-samson-ebukam-will-play",
-      "source_name": "Pro Football Talk",
-      "headline": "Monday Night Football: Saints TE Noah Fant is inactive; Falcons LB Samson Ebukam will play",
-      "published_at": "2026-10-05T23:11:08.000Z",
-      "observed_at": "2026-10-05T23:20:21.841Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "NO"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/big-bets-report-bettors-in-game-chiefs-wager-cashes-2-2-million",
-      "source_name": "FOX Sports",
-      "headline": "Big Bets Report: Bettor's In-Game Chiefs Wager Cashes In For $2.2 Million",
-      "published_at": "2026-10-05T23:26:30.000Z",
-      "observed_at": "2026-10-05T23:30:25.598Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC",
-        "LV"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/seahawks-reportedly-sign-veteran-rb-joe-mixon",
       "source_name": "FOX Sports",
       "headline": "Seahawks Add To Their Backfield Amid RB Injuries, Reportedly Signing Joe Mixon",
@@ -41896,6 +41852,40 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/2026-nfl-fantasy-football-waiver-wire-week-8-rookie-wr-kc-concepcion-headlines-top-15-targets",
+      "source_name": "NFL.com",
+      "headline": "2026 NFL fantasy football waiver wire, Week 8: Rookie WR KC Concepcion headlines top 15 targets",
+      "published_at": "2026-10-26T03:51:57.000Z",
+      "observed_at": "2026-10-26T16:00:26.798Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "fantasy",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tom-bradys-criticism-of-officials-tests-limits-of-what-a-team-owner-can-say",
+      "source_name": "Pro Football Talk",
+      "headline": "Tom Brady's criticism of officials tests limits of what a team owner can say",
+      "published_at": "2026-10-26T15:46:13.000Z",
+      "observed_at": "2026-10-26T16:00:26.798Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
