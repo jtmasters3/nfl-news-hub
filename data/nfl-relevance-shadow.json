@@ -2,69 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/has-the-cowboys-defense-made-progress-some-but-there-s-still-a-long-way-to-go",
-      "source_name": "NFL.com",
-      "headline": "Has the Cowboys' defense made progress? Some -- but there's still a long way to go",
-      "published_at": "2026-10-06T11:46:04.000Z",
-      "observed_at": "2026-10-06T14:40:24.296Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-mcvay-myles-garrett-is-making-really-good-progress-no-word-on-when-hell-play",
-      "source_name": "Pro Football Talk",
-      "headline": "Sean McVay: Myles Garrett is \"making really good progress,\" no word on when he'll play",
-      "published_at": "2026-10-06T14:34:58.000Z",
-      "observed_at": "2026-10-06T14:40:24.296Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/george-karlaftis-and-the-chiefs-defense-are-bringing-pressure-so-where-are-the-sacks",
-      "source_name": "NFL.com",
-      "headline": "George Karlaftis and the Chiefs defense are bringing pressure. So where are the sacks?",
-      "published_at": "2026-10-06T11:46:04.000Z",
-      "observed_at": "2026-10-06T14:50:30.817Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/wr-jamari-thrash-to-work-out-for-broncos",
       "source_name": "Pro Football Talk",
       "headline": "WR Jamari Thrash to work out for Broncos",
@@ -41872,6 +41809,67 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/week-7-monday-night-inactives-dallas-cowboys-at-philadelphia-eagles",
+      "source_name": "NFL.com",
+      "headline": "Week 7 Monday night inactives: Dallas Cowboys at Philadelphia Eagles",
+      "published_at": "2026-10-26T10:48:32.000Z",
+      "observed_at": "2026-10-26T23:00:29.045Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "PHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/eagles-rb-saquon-barkley-hamstring-active-for-monday-night-game-vs-cowboys",
+      "source_name": "NFL.com",
+      "headline": "Eagles RB Saquon Barkley (hamstring) active for Monday night game vs. Cowboys",
+      "published_at": "2026-10-26T10:45:54.000Z",
+      "observed_at": "2026-10-26T23:00:29.045Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "PHI"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/big-bets-report-5-8-leg-parlay-narrowly-misses-million-dollar-payday",
+      "source_name": "FOX Sports",
+      "headline": "Big Bets Report: $5, 8-leg Parlay Narrowly Misses Million-Dollar Payday",
+      "published_at": "2026-10-26T22:31:06.000Z",
+      "observed_at": "2026-10-26T23:00:29.045Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
