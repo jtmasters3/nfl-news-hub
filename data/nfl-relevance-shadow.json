@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-elevate-s-jammie-robinson-for-monday-night-football",
-      "source_name": "Pro Football Talk",
-      "headline": "Falcons elevate S Jammie Robinson for Monday Night Football",
-      "published_at": "2026-10-05T21:27:34.000Z",
-      "observed_at": "2026-10-05T21:40:18.889Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-rb-tank-bigsby-to-have-surgery-on-a-core-muscle-injury",
       "source_name": "Pro Football Talk",
       "headline": "Eagles RB Tank Bigsby to have surgery on a core muscle injury",
@@ -41901,6 +41880,23 @@
       "headline": "NFL kickers are 167-for-170 from inside 37 yards. Trey Smack had 2 of the 3 misses Sunday.",
       "published_at": "2026-10-26T13:37:28.000Z",
       "observed_at": "2026-10-26T13:50:23.883Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/monday-morning-nfl-top-10-rankings-new-no-1-after-two-undefeated-teams-lose",
+      "source_name": "FOX Sports",
+      "headline": "Monday Morning NFL Top 10 Rankings: A New No. 1 After Two Undefeated Teams Lose",
+      "published_at": "2026-10-26T13:46:23.000Z",
+      "observed_at": "2026-10-26T14:00:29.394Z",
       "decision": "keep",
       "classification": "ambiguous",
       "confidence": "low",
