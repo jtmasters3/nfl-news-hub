@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/washington-commanders-jaylin-lane-injury-jayden-daniels",
-      "source_name": "FOX Sports",
-      "headline": "Commanders WR Jaylin Lane Suffers Fractured, Dislocated Ankle",
-      "published_at": "2026-10-05T17:26:17.000Z",
-      "observed_at": "2026-10-05T18:30:26.743Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/donovan-jackson-out-with-torn-meniscus-christian-darrisaw-in-concussion-protocol",
       "source_name": "Pro Football Talk",
       "headline": "Donovan Jackson out with torn meniscus, Christian Darrisaw in concussion protocol",
@@ -41899,6 +41877,29 @@
         "SEA"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-fallout-week-7-lions-announce-themselves-super-bowl-contenders",
+      "source_name": "FOX Sports",
+      "headline": "NFL Fallout Week 7: Lions Announce Themselves As Super Bowl Contenders",
+      "published_at": "2026-10-26T05:08:22.000Z",
+      "observed_at": "2026-10-26T05:30:22.816Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN",
+        "DET",
+        "PIT"
+      ],
+      "detected_category": "coaching",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
