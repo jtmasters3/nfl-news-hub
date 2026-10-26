@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-network-lamar-jackson-dealing-with-ankle-sprain-outside-chance-to-play-in-week-5",
-      "source_name": "NFL.com",
-      "headline": "NFL Network: Lamar Jackson dealing with ankle sprain, outside chance to play in Week 5",
-      "published_at": "2026-10-06T01:30:00.000Z",
-      "observed_at": "2026-10-06T13:40:24.565Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ben-johnson-we-think-kyle-monangai-is-going-to-be-ok",
       "source_name": "Pro Football Talk",
       "headline": "Ben Johnson: We think Kyle Monangai is going to be OK",
@@ -41869,6 +41848,27 @@
         "nfl_team_detected",
         "phrase_nfl_draft",
         "nfl_preserving_category:draft"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-estimate-four-starters-out-of-practice-including-olb-jaelan-phillips",
+      "source_name": "Pro Football Talk",
+      "headline": "Panthers estimate four starters out of practice, including OLB Jaelan Phillips",
+      "published_at": "2026-10-26T21:44:16.000Z",
+      "observed_at": "2026-10-26T21:50:19.056Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
