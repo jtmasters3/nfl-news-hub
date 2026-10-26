@@ -2,71 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-glenn-jets-history-will-get-brought-up-we-cant-think-about-it-in-locker-room",
-      "source_name": "Pro Football Talk",
-      "headline": "Aaron Glenn: Jets history will get brought up, we can't think about it in locker room",
-      "published_at": "2026-10-05T15:09:51.000Z",
-      "observed_at": "2026-10-05T15:20:23.056Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYJ",
-        "TEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kenneth-walker-becomes-third-player-ever-to-rush-for-at-least-170-twice-in-first-four-games",
-      "source_name": "Pro Football Talk",
-      "headline": "Kenneth Walker becomes third player ever to rush for at least 170 twice in first four games",
-      "published_at": "2026-10-05T15:09:51.000Z",
-      "observed_at": "2026-10-05T15:20:23.056Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC"
-      ],
-      "detected_category": "free_agency",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:free_agency"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brock-purdy-has-thrown-113-passes-and-still-hasnt-been-sacked",
-      "source_name": "Pro Football Talk",
-      "headline": "Brock Purdy has thrown 113 passes, and still hasn't been sacked",
-      "published_at": "2026-10-05T15:09:21.000Z",
-      "observed_at": "2026-10-05T15:20:23.056Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-oct-5",
       "source_name": "NFL.com",
       "headline": "NFL news roundup: Latest league updates from Monday, Oct. 5",
@@ -41895,6 +41830,66 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/how-joe-burrow-and-the-bengals-finally-unlocked-the-offense-that-was-promised",
+      "source_name": "NFL.com",
+      "headline": "How Joe Burrow and the Bengals finally unlocked the offense that was promised",
+      "published_at": "2026-10-25T11:46:07.000Z",
+      "observed_at": "2026-10-26T00:10:23.651Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/geno-smith-garrett-wilson-downplay-heated-sideline-exchange-after-dolphins-loss",
+      "source_name": "FOX Sports",
+      "headline": "Jets' Geno Smith, Garrett Wilson Downplay Heated Exchange In Loss To Dolphins",
+      "published_at": "2026-10-26T00:01:11.000Z",
+      "observed_at": "2026-10-26T00:10:23.651Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIA",
+        "NYJ"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/for-first-time-in-nfl-history-all-teams-in-two-divisions-are-above-500-through-week-7",
+      "source_name": "Pro Football Talk",
+      "headline": "For first time in NFL history, all teams in two divisions are above .500 through Week 7",
+      "published_at": "2026-10-26T00:03:36.000Z",
+      "observed_at": "2026-10-26T00:10:23.651Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
