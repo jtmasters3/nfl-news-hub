@@ -2,46 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-week-4-sunday-aftermath-bears-defense-continues-to-shine-jaguars-are-for-real",
-      "source_name": "NFL.com",
-      "headline": "NFL Week 4 Sunday aftermath: Bears' defense continues to shine, Jaguars are for real",
-      "published_at": "2026-10-05T04:17:49.000Z",
-      "observed_at": "2026-10-05T16:20:21.528Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "JAX",
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/2026-nfl-fantasy-football-waiver-wire-week-5-rb-zach-charbonnet-wr-keon-coleman-among-targets",
-      "source_name": "NFL.com",
-      "headline": "2026 NFL fantasy football waiver wire, Week 5: RB Zach Charbonnet, WR Keon Coleman among targets",
-      "published_at": "2026-10-05T04:07:49.000Z",
-      "observed_at": "2026-10-05T16:20:21.528Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "fantasy",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-sign-cb-sean-murphy-bunting-off-bucs-practice-squad",
       "source_name": "Pro Football Talk",
       "headline": "Steelers sign CB Sean Murphy-Bunting off Bucs practice squad",
@@ -41890,6 +41850,49 @@
       "confidence": "high",
       "detected_teams": [
         "GB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/jared-goff-leads-lions-past-packers-earning-tom-bradys-lfg-player-game",
+      "source_name": "FOX Sports",
+      "headline": "Jared Goff Leads Lions Past Packers, Earning Tom Brady’s LFG Player Of The Game",
+      "published_at": "2026-10-26T01:13:42.000Z",
+      "observed_at": "2026-10-26T01:20:21.134Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "GB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-rodgers-claims-2020-cba-talks-included-possibility-of-a-full-week-of-international-games",
+      "source_name": "Pro Football Talk",
+      "headline": "Aaron Rodgers claims 2020 CBA talks included possibility of a full week of international games",
+      "published_at": "2026-10-26T01:12:25.000Z",
+      "observed_at": "2026-10-26T01:20:21.134Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
