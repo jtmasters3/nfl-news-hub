@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/texans-opening-practice-window-for-tank-dell",
-      "source_name": "Pro Football Talk",
-      "headline": "Texans opening practice window for Tank Dell",
-      "published_at": "2026-10-05T18:32:48.000Z",
-      "observed_at": "2026-10-05T18:40:28.060Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "HOU"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/cj-gardner-johnson-buffalo-bills-loss-new-england-patriots",
       "source_name": "FOX Sports",
       "headline": "Bills' Gardner-Johnson Downplays Efton Chism III’s TD: 'A Practice Squad Player'",
@@ -41907,6 +41886,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/neil-reynolds-week-7-wrap-up-2026",
+      "source_name": "NFL.com",
+      "headline": "Neil Reynolds' Week 7 Wrap Up",
+      "published_at": "2026-10-26T08:57:25.000Z",
+      "observed_at": "2026-10-26T09:00:27.923Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
