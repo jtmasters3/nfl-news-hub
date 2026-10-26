@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/uk-and-ireland-week-5-broadcast-games",
-      "source_name": "NFL.com",
-      "headline": "UK and Ireland Week 5 Broadcast Games",
-      "published_at": "2026-10-06T12:38:14.000Z",
-      "observed_at": "2026-10-06T12:50:27.642Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-outside-chance-lamar-jackson-plays-in-week-5",
       "source_name": "Pro Football Talk",
       "headline": "Report: \"Outside chance\" Lamar Jackson plays in Week 5",
@@ -41861,6 +41844,27 @@
         "CAR"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/andrew-berry-were-excited-to-keep-maliek-collins-in-cleveland",
+      "source_name": "Pro Football Talk",
+      "headline": "Andrew Berry: We're excited to keep Maliek Collins in Cleveland",
+      "published_at": "2026-10-26T21:06:01.000Z",
+      "observed_at": "2026-10-26T21:10:19.756Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
