@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tyreek-hill-still-has-an-active-personal-conduct-policy-investigation",
-      "source_name": "Pro Football Talk",
-      "headline": "Tyreek Hill still has an active Personal Conduct Policy investigation",
-      "published_at": "2026-10-05T15:45:51.000Z",
-      "observed_at": "2026-10-05T15:50:25.991Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/josh-allen-laments-not-throwing-ball-away-after-interception-seals-bills-loss-to-new-england",
-      "source_name": "FOX Sports",
-      "headline": "Costly Turnovers Doom Bills As Josh Allen Admits Mistake Against Patriots",
-      "published_at": "2026-10-05T15:44:31.000Z",
-      "observed_at": "2026-10-05T16:00:32.677Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "NE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/klint-kubiak-on-taking-made-fg-off-the-board-i-dont-regret-it-i-regret-not-getting-a-first-down",
       "source_name": "Pro Football Talk",
       "headline": "Klint Kubiak on taking made FG off the board: I don't regret it, I regret not getting a first down",
@@ -41886,6 +41847,50 @@
       "detected_teams": [
         "ARI",
         "DEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/49ers-brock-purdy-never-saw-loss-to-falcons-coming-despite-all-the-available-excuses",
+      "source_name": "NFL.com",
+      "headline": "49ers, Brock Purdy never saw loss to Falcons coming, despite all the available excuses",
+      "published_at": "2026-10-26T12:31:07.000Z",
+      "observed_at": "2026-10-26T00:50:19.906Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jamarr-chases-screaming-at-halftime-helped-spark-bengals-turnaround",
+      "source_name": "Pro Football Talk",
+      "headline": "Ja'Marr Chase's \"screaming\" at halftime helped spark Bengals turnaround",
+      "published_at": "2026-10-26T00:44:55.000Z",
+      "observed_at": "2026-10-26T00:50:19.906Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "CIN"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
