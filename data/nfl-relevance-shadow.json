@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cardinals-left-tackle-paris-johnson-out-for-season-with-torn-biceps",
-      "source_name": "Pro Football Talk",
-      "headline": "Cardinals left tackle Paris Johnson out for season with torn biceps",
-      "published_at": "2026-10-05T21:57:24.000Z",
-      "observed_at": "2026-10-05T22:10:22.369Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI",
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/wr-ceedee-lamb-thigh-cb-joey-porter-jr-ankle-estimated-as-full-participants",
       "source_name": "Pro Football Talk",
       "headline": "WR CeeDee Lamb (thigh), CB Joey Porter Jr. (ankle) estimated as full participants",
@@ -41911,6 +41889,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/trey-mcbride-davis-allen-los-angeles-rams-arizona-cardinals-green-bay-packers",
+      "source_name": "FOX Sports",
+      "headline": "Happy National Tight Ends Day! The Top 5 Plays From TEs In Week 7",
+      "published_at": "2026-10-26T14:24:54.000Z",
+      "observed_at": "2026-10-26T14:30:26.443Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
