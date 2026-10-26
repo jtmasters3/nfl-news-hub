@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/eagles-rb-saquon-barkley-hamstring-considered-week-to-week-avoids-long-term-injury",
-      "source_name": "NFL.com",
-      "headline": "Eagles RB Saquon Barkley (hamstring) considered week to week, avoids long-term injury",
-      "published_at": "2026-10-06T12:55:05.000Z",
-      "observed_at": "2026-10-06T01:00:31.773Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR",
-        "PHI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-de-zadarius-smith-questionable-to-return-after-being-kneed-in-the-head",
-      "source_name": "Pro Football Talk",
-      "headline": "Falcons DE Za'Darius Smith questionable to return after being kneed in the head",
-      "published_at": "2026-10-06T00:52:14.000Z",
-      "observed_at": "2026-10-06T01:00:31.773Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/matt-lafleur-explains-his-reason-for-not-taking-the-bait-from-ben-johnson",
       "source_name": "Pro Football Talk",
       "headline": "Matt LaFleur explains his reason for not taking the bait from Ben Johnson",
@@ -41868,6 +41825,40 @@
       "confidence": "low",
       "detected_teams": [],
       "detected_category": "retirement",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/mark-butterworth",
+      "source_name": "NFL.com",
+      "headline": "Mark Butterworth",
+      "published_at": "2026-10-26T05:05:34.000Z",
+      "observed_at": "2026-10-26T17:10:20.274Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/programa-previo-al-nfl-madrid-game",
+      "source_name": "NFL.com",
+      "headline": "Programa previo al NFL Madrid Game",
+      "published_at": "2026-10-24T04:24:00.000Z",
+      "observed_at": "2026-10-26T17:10:20.274Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
       "nfl_evidence": [],
       "non_nfl_evidence": [],
       "reason_codes": [
