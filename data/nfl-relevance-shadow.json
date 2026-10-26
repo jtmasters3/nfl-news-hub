@@ -2,65 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cbs-reporter-aditi-kinkhabwala-heard-no-profanity-from-trey-mcbride",
-      "source_name": "Pro Football Talk",
-      "headline": "CBS reporter Aditi Kinkhabwala heard no profanity from Trey McBride",
-      "published_at": "2026-10-05T17:23:56.000Z",
-      "observed_at": "2026-10-05T17:30:29.555Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-braxton-berrios-will-be-placed-on-ir-with-foot-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Braxton Berrios will be placed on IR with foot injury",
-      "published_at": "2026-10-05T17:44:48.000Z",
-      "observed_at": "2026-10-05T17:50:26.512Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/another-defendant-in-terrion-arnold-case-pleads-guilty-agrees-to-testify",
-      "source_name": "Pro Football Talk",
-      "headline": "Another defendant in Terrion Arnold case pleads guilty, agrees to testify",
-      "published_at": "2026-10-05T17:57:41.000Z",
-      "observed_at": "2026-10-05T18:00:33.339Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/washington-commanders-jaylin-lane-injury-jayden-daniels",
       "source_name": "FOX Sports",
       "headline": "Commanders WR Jaylin Lane Suffers Fractured, Dislocated Ankle",
@@ -41889,6 +41830,67 @@
       "headline": "Sunday Night Football: Jaxon Smith-Njigba, Seahawks defense dominate Chiefs, win 20-3",
       "published_at": "2026-10-26T03:21:44.000Z",
       "observed_at": "2026-10-26T03:30:26.101Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC",
+        "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-odds-week-8-lines-spreads-results-all-14-games",
+      "source_name": "FOX Sports",
+      "headline": "2026 NFL Odds Week 8: Lines, Spreads, Results For All 14 Games",
+      "published_at": "2026-10-26T04:17:48.000Z",
+      "observed_at": "2026-10-26T04:20:21.929Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/49ers-falcons-loss-injuries-health-christian-mccaffrey-brock-purdy",
+      "source_name": "FOX Sports",
+      "headline": "49ers' First Loss Makes It Clear: Their Toughest Opponent Is Their Health",
+      "published_at": "2026-10-26T03:38:11.000Z",
+      "observed_at": "2026-10-26T04:20:21.929Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/seattle-suffocates-patrick-mahomes-4-takeaways-from-seahawks-win-over-chiefs",
+      "source_name": "FOX Sports",
+      "headline": "Seattle Suffocates Patrick Mahomes: 4 Takeaways From The Seahawks' Win Over The Chiefs",
+      "published_at": "2026-10-26T03:33:29.000Z",
+      "observed_at": "2026-10-26T04:20:21.929Z",
       "decision": "keep",
       "classification": "nfl",
       "confidence": "high",
