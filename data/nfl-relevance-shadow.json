@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-suspends-referee-adrian-hill-line-judge-jeff-seeman-for-unprofessional-conduct-toward-players",
-      "source_name": "Pro Football Talk",
-      "headline": "NFL suspends referee Adrian Hill, line judge Jeff Seeman for unprofessional conduct toward players",
-      "published_at": "2026-10-05T19:58:52.000Z",
-      "observed_at": "2026-10-05T20:06:39.123Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "suspension",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-hopeful-jaelan-phillips-monroe-freeling-can-return-after-week-5-bye",
-      "source_name": "Pro Football Talk",
-      "headline": "Panthers \"hopeful\" Jaelan Phillips, Monroe Freeling can return after Week 5 bye",
-      "published_at": "2026-10-05T19:42:38.000Z",
-      "observed_at": "2026-10-05T20:06:39.123Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-suspends-two-officials-unprofessional-conduct-with-players-week-4",
       "source_name": "NFL.com",
       "headline": "NFL suspends two officials for 'unprofessional conduct' toward players during Sunday's games",
@@ -41895,6 +41857,49 @@
       "confidence": "high",
       "detected_teams": [
         "LV"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/klint-kubiak-on-qb-change-were-thinking-about-everything-to-fix-our-problems",
+      "source_name": "Pro Football Talk",
+      "headline": "Klint Kubiak on QB change: We're thinking about everything to fix our problems",
+      "published_at": "2026-10-26T12:06:49.000Z",
+      "observed_at": "2026-10-26T12:10:19.791Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cam-skattebo-on-penalty-for-lowering-his-helmet-im-going-to-keep-doing-it",
+      "source_name": "Pro Football Talk",
+      "headline": "Cam Skattebo on penalty for lowering his helmet: I'm going to keep doing it",
+      "published_at": "2026-10-26T12:05:49.000Z",
+      "observed_at": "2026-10-26T12:10:19.791Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "HOU",
+        "NYG"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
