@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/robert-saleh-cam-ward-is-going-to-be-a-damn-good-quarterback",
-      "source_name": "Pro Football Talk",
-      "headline": "Robert Saleh: Cam Ward is going to be a damn good quarterback",
-      "published_at": "2026-10-05T19:12:39.000Z",
-      "observed_at": "2026-10-05T19:20:44.875Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-jonathan-greenard-considered-day-to-day-with-ankle-injury",
       "source_name": "Pro Football Talk",
       "headline": "Report: Jonathan Greenard considered day-to-day with ankle injury",
@@ -41905,6 +41884,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-tomlin-supports-dan-campbells-late-fourth-down-decision",
+      "source_name": "Pro Football Talk",
+      "headline": "Mike Tomlin supports Dan Campbell's late fourth-down decision",
+      "published_at": "2026-10-26T10:32:10.000Z",
+      "observed_at": "2026-10-26T10:40:19.039Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
