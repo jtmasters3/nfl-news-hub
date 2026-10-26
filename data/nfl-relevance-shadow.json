@@ -2,48 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-mccarthy-aaron-rodgers-talked-numerous-times-after-thursday-nights-heated-exchange",
-      "source_name": "Pro Football Talk",
-      "headline": "Mike McCarthy, Aaron Rodgers talked \"numerous times\" after Thursday night's heated exchange",
-      "published_at": "2026-10-05T22:11:09.000Z",
-      "observed_at": "2026-10-05T22:20:22.429Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PIT"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bills-cb-maxwell-hairston-says-hes-got-to-be-better-in-every-way",
-      "source_name": "Pro Football Talk",
-      "headline": "Bills CB Maxwell Hairston says he's got to be better in every way",
-      "published_at": "2026-10-05T22:06:34.000Z",
-      "observed_at": "2026-10-05T22:20:22.429Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/week-4-monday-night-inactives-atlanta-falcons-at-new-orleans-saints",
       "source_name": "NFL.com",
       "headline": "Week 4 Monday night inactives: Atlanta Falcons at New Orleans Saints",
@@ -41899,6 +41857,44 @@
         "PHI"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-oct-26",
+      "source_name": "NFL.com",
+      "headline": "NFL news roundup: Latest league updates from Monday, Oct. 26",
+      "published_at": "2026-10-26T03:02:24.000Z",
+      "observed_at": "2026-10-26T15:10:20.219Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/zaire-franklin-dealing-with-hairline-fracture-sean-rhyan-believed-to-have-high-ankle-sprain",
+      "source_name": "Pro Football Talk",
+      "headline": "Zaire Franklin dealing with hairline fracture, Sean Rhyan believed to have high-ankle sprain",
+      "published_at": "2026-10-26T14:59:46.000Z",
+      "observed_at": "2026-10-26T15:10:20.219Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
