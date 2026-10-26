@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/marcus-mariota-suffered-mcl-sprain-on-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "Marcus Mariota suffered MCL sprain on Sunday",
-      "published_at": "2026-10-05T17:17:45.000Z",
-      "observed_at": "2026-10-05T17:20:24.605Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tests-confirm-packers-lb-edgerrin-cooper-tore-his-achilles",
       "source_name": "Pro Football Talk",
       "headline": "Tests confirm Packers LB Edgerrin Cooper tore his Achilles",
@@ -41889,6 +41872,28 @@
       "detected_teams": [
         "IND",
         "MIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/travis-kelce-moves-to-no-5-all-time-in-receptions-passes-marvin-harrison-cris-carter",
+      "source_name": "Pro Football Talk",
+      "headline": "Travis Kelce moves to No. 5 all-time in receptions, passes Marvin Harrison, Cris Carter",
+      "published_at": "2026-10-26T02:50:44.000Z",
+      "observed_at": "2026-10-26T03:00:26.743Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC",
+        "SEA"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
