@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-power-rankings-week-5",
-      "source_name": "FOX Sports",
-      "headline": "2026 NFL Power Rankings Week 5: Do 49ers Or Chiefs Hold Claim As NFL's Best Team?",
-      "published_at": "2026-10-06T04:19:38.000Z",
-      "observed_at": "2026-10-06T04:30:30.055Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC",
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-week-4-all-stars-drake-maye-kenneth-walker-ceedee-lamb-tetairoa-mcmillan-patriots-chiefs-cowboys",
-      "source_name": "FOX Sports",
-      "headline": "NFL Week 4 All-Stars: Drake Maye Is Back; Kenneth Walker Might Be A Mainstay",
-      "published_at": "2026-10-06T04:28:03.000Z",
-      "observed_at": "2026-10-06T04:40:19.903Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kellen-moore-really-disappointing-how-saints-played-on-an-incredible-night-in-new-orleans",
       "source_name": "Pro Football Talk",
       "headline": "Kellen Moore: Really disappointing how Saints played on an incredible night in New Orleans",
@@ -41860,6 +41821,50 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-activate-landon-dickerson-grant-calcaterra-eli-stowers",
+      "source_name": "Pro Football Talk",
+      "headline": "Eagles activate Landon Dickerson, Grant Calcaterra, Eli Stowers",
+      "published_at": "2026-10-26T20:09:43.000Z",
+      "observed_at": "2026-10-26T20:20:27.766Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "PHI"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cardinals-wr-jalen-brooks-will-undergo-season-ending-wrist-surgery",
+      "source_name": "Pro Football Talk",
+      "headline": "Cardinals WR Jalen Brooks will undergo season-ending wrist surgery",
+      "published_at": "2026-10-26T20:09:23.000Z",
+      "observed_at": "2026-10-26T20:20:27.766Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
