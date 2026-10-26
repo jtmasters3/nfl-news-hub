@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/three-reasons-ashton-jeanty-and-the-raiders-run-game-are-stalling-again",
-      "source_name": "NFL.com",
-      "headline": "Three reasons Ashton Jeanty and the Raiders' run game are stalling again",
-      "published_at": "2026-10-06T12:16:05.000Z",
-      "observed_at": "2026-10-06T14:40:24.296Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/has-the-cowboys-defense-made-progress-some-but-there-s-still-a-long-way-to-go",
       "source_name": "NFL.com",
       "headline": "Has the Cowboys' defense made progress? Some -- but there's still a long way to go",
@@ -41865,6 +41844,28 @@
         "ARI"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/christian-mccaffrey-has-mild-hamstring-strain-49ers-optimistic-hell-play-after-bye",
+      "source_name": "Pro Football Talk",
+      "headline": "Christian McCaffrey has mild hamstring strain, 49ers optimistic he'll play after bye",
+      "published_at": "2026-10-26T22:42:44.000Z",
+      "observed_at": "2026-10-26T22:50:18.753Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "SF"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
