@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/saints-remember-katrina-a-punt-block-and-rebirth-as-they-host-falcons-on-monday",
-      "source_name": "NFL.com",
-      "headline": "Saints remember Katrina, a punt block and 'rebirth' as they host Falcons on Monday",
-      "published_at": "2026-10-05T04:58:07.000Z",
-      "observed_at": "2026-10-05T17:00:31.303Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "NO"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-rashawn-slater-believed-to-have-a-high-ankle-sprain",
       "source_name": "Pro Football Talk",
       "headline": "Report: Rashawn Slater believed to have a high-ankle sprain",
@@ -41891,6 +41869,28 @@
         "ATL"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sunday-night-football-jaxon-smith-njigba-has-129-yards-seattle-leads-10-0",
+      "source_name": "Pro Football Talk",
+      "headline": "Sunday Night Football: Jaxon Smith-Njigba has 129 yards, Seattle leads 10-0 at halftime",
+      "published_at": "2026-10-26T01:50:32.000Z",
+      "observed_at": "2026-10-26T02:00:26.616Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC",
+        "SEA"
+      ],
+      "detected_category": "live_game_state",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
