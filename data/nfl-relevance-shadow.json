@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-oct-5",
-      "source_name": "NFL.com",
-      "headline": "NFL news roundup: Latest league updates from Monday, Oct. 5",
-      "published_at": "2026-10-05T03:30:01.000Z",
-      "observed_at": "2026-10-05T15:40:23.936Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-commanders-wr-jaylin-lane-fractured-dislocated-ankle-on-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Commanders WR Jaylin Lane fractured, dislocated ankle on Sunday",
-      "published_at": "2026-10-05T15:31:19.000Z",
-      "observed_at": "2026-10-05T15:40:23.936Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "WAS"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/buccaneers-coach-todd-bowles-could-be-running-out-of-time-to-turn-things-around",
       "source_name": "Pro Football Talk",
       "headline": "Buccaneers coach Todd Bowles could be running out of time to turn things around",
@@ -41890,6 +41851,48 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/despite-49ers-hot-start-changes-loom-at-kicker-cb-wr-and-perhaps-d-line",
+      "source_name": "NFL.com",
+      "headline": "Despite 49ers' hot start, changes loom at kicker, CB, WR and perhaps D-line",
+      "published_at": "2026-10-26T12:01:06.000Z",
+      "observed_at": "2026-10-26T00:20:18.226Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/how-boos-replaced-mvp-chants-on-a-very-bad-day-for-the-panthers",
+      "source_name": "NFL.com",
+      "headline": "How boos replaced MVP chants on a very bad day for the Panthers",
+      "published_at": "2026-10-26T12:01:06.000Z",
+      "observed_at": "2026-10-26T00:20:18.226Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
