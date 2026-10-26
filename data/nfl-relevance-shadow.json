@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/week-4-monday-night-inactives-atlanta-falcons-at-new-orleans-saints",
-      "source_name": "NFL.com",
-      "headline": "Week 4 Monday night inactives: Atlanta Falcons at New Orleans Saints",
-      "published_at": "2026-10-05T10:49:01.000Z",
-      "observed_at": "2026-10-05T22:50:24.106Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "NO"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-mcvay-rams-coaches-will-learn-from-incident-with-eagles-fans",
       "source_name": "Pro Football Talk",
       "headline": "Sean McVay: Rams coaches will learn from incident with Eagles fans",
@@ -41893,6 +41871,27 @@
       "confidence": "high",
       "detected_teams": [
         "GB"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patriots-releasing-p-bryce-baringer-off-injured-reserve",
+      "source_name": "Pro Football Talk",
+      "headline": "Patriots releasing P Bryce Baringer off injured reserve",
+      "published_at": "2026-10-26T15:08:07.000Z",
+      "observed_at": "2026-10-26T15:20:21.870Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE"
       ],
       "detected_category": "injury",
       "nfl_evidence": [
