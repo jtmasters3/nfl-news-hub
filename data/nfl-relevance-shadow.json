@@ -2,106 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-suspends-two-officials-unprofessional-conduct-with-players-week-4",
-      "source_name": "NFL.com",
-      "headline": "NFL suspends two officials for 'unprofessional conduct' toward players during Sunday's games",
-      "published_at": "2026-10-05T08:07:05.000Z",
-      "observed_at": "2026-10-05T20:50:38.602Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "suspension",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-suspends-jeff-seeman-adrian-hill",
-      "source_name": "FOX Sports",
-      "headline": "NFL Suspends Official, Referee For Unprofessional Conduct",
-      "published_at": "2026-10-05T20:44:33.000Z",
-      "observed_at": "2026-10-05T20:50:38.602Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI",
-        "NYG",
-        "NYJ"
-      ],
-      "detected_category": "suspension",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/micah-parsons-will-not-practice-this-week",
-      "source_name": "Pro Football Talk",
-      "headline": "Micah Parsons will not practice this week",
-      "published_at": "2026-10-05T20:45:35.000Z",
-      "observed_at": "2026-10-05T20:50:38.602Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-mcvay-aaron-donald-trending-toward-week-5-return",
-      "source_name": "Pro Football Talk",
-      "headline": "Sean McVay: Aaron Donald trending toward Week 5 return",
-      "published_at": "2026-10-05T20:41:31.000Z",
-      "observed_at": "2026-10-05T20:50:38.602Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/caleb-williams-still-week-to-week-but-wont-practice-this-week",
-      "source_name": "Pro Football Talk",
-      "headline": "Caleb Williams still week to week but won't practice this week",
-      "published_at": "2026-10-05T20:35:55.000Z",
-      "observed_at": "2026-10-05T20:50:38.602Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "GB"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/saints-elevate-lbs-fadil-diggs-jackson-sirmon-for-monday-night",
       "source_name": "Pro Football Talk",
       "headline": "Saints elevate LBs Fadil Diggs, Jackson Sirmon for Monday night",
@@ -41900,6 +41800,113 @@
       "detected_teams": [
         "HOU",
         "NYG"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/kick-ass-and-take-games-how-cam-skattebo-giants-rbs-dominated-texans-and-earned-redemption",
+      "source_name": "NFL.com",
+      "headline": "'Kick ass' and take games: How Cam Skattebo, Giants RBs dominated Texans and earned redemption",
+      "published_at": "2026-10-26T10:16:06.000Z",
+      "observed_at": "2026-10-26T12:40:19.948Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "HOU",
+        "NYG"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/cowboys-at-eagles-5-questions-dallas-needs-to-answer-monday-night",
+      "source_name": "NFL.com",
+      "headline": "Cowboys at Eagles: 5 questions Dallas needs to answer Monday night",
+      "published_at": "2026-10-26T10:01:04.000Z",
+      "observed_at": "2026-10-26T12:40:19.948Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "PHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/jonathan-taylor-ok-with-wife-discussing-trade-rumors-are-we-gonna-stay-on-the-colts",
+      "source_name": "NFL.com",
+      "headline": "Jonathan Taylor OK with wife discussing trade rumors: 'Are we gonna stay on the Colts?'",
+      "published_at": "2026-10-26T04:31:05.000Z",
+      "observed_at": "2026-10-26T12:40:19.948Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/it-was-like-quicksand-ravens-second-half-collapse-exposes-a-team-in-trouble",
+      "source_name": "NFL.com",
+      "headline": "'It was like quicksand': Ravens' second-half collapse exposes a team in trouble",
+      "published_at": "2026-10-26T01:01:06.000Z",
+      "observed_at": "2026-10-26T12:40:19.948Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-vrabel-no-concern-about-a-j-brown-just-have-to-get-into-rhythm",
+      "source_name": "Pro Football Talk",
+      "headline": "Mike Vrabel: No concern about A.J. Brown, just have to get into rhythm",
+      "published_at": "2026-10-26T12:31:26.000Z",
+      "observed_at": "2026-10-26T12:40:19.948Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
