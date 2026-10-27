@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bijan-robinson-kenneth-walker-iii-should-be-serious-mvp-candidates",
-      "source_name": "Pro Football Talk",
-      "headline": "Bijan Robinson, Kenneth Walker III should be serious MVP candidates",
-      "published_at": "2026-10-06T14:48:30.000Z",
-      "observed_at": "2026-10-06T15:00:30.127Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/lamar-jackson-injury-update-ravens-schedule-tyler-huntley",
-      "source_name": "FOX Sports",
-      "headline": "Lamar Jackson Reportedly Has Ankle Sprain; What It Could Mean For Ravens Star",
-      "published_at": "2026-10-06T15:01:29.000Z",
-      "observed_at": "2026-10-06T15:10:23.306Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-power-rankings-week-5-2026-nfl-season",
       "source_name": "NFL.com",
       "headline": "NFL Power Rankings, Week 5: Cowboys, Pats rising at quarter mark; unbeaten Vikings fall out of top 10",
@@ -41858,6 +41820,50 @@
       "headline": "Saquon Barkley scores on second carry for 7-3 Eagles lead",
       "published_at": "2026-10-27T00:37:14.000Z",
       "observed_at": "2026-10-27T00:40:27.625Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "PHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/week-7-plays-stood-out-49ers-woes-giants-run-game",
+      "source_name": "FOX Sports",
+      "headline": "The Week 7 Plays That Stood Out: The 49ers' Woes To The Seahawks' Dominant Defense",
+      "published_at": "2026-10-27T00:42:25.000Z",
+      "observed_at": "2026-10-27T00:50:22.450Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF",
+        "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-lead-eagles-10-7",
+      "source_name": "Pro Football Talk",
+      "headline": "Cowboys lead Eagles 10-7",
+      "published_at": "2026-10-27T00:46:49.000Z",
+      "observed_at": "2026-10-27T00:50:22.450Z",
       "decision": "keep",
       "classification": "nfl",
       "confidence": "high",
