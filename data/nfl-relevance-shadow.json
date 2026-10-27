@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-are-first-nfl-team-to-play-four-of-their-first-five-games-in-prime-time",
-      "source_name": "Pro Football Talk",
-      "headline": "Rams are first NFL team to play four of their first five games in prime time",
-      "published_at": "2026-10-07T08:45:46.000Z",
-      "observed_at": "2026-10-07T09:00:32.432Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/comment-vous-rendre-au-nfl-paris-game",
-      "source_name": "NFL.com",
-      "headline": "Comment vous rendre au NFL Paris Game",
-      "published_at": "2026-10-07T09:31:46.000Z",
-      "observed_at": "2026-10-07T09:40:22.612Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kyren-williams-kenneth-walker-first-players-since-2016-with-2-td-runs-in-last-4-minutes",
       "source_name": "Pro Football Talk",
       "headline": "Kyren Williams, Kenneth Walker: First players since 2016 with 2 TD runs in last 4 minutes",
@@ -41859,6 +41821,50 @@
       "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/quenton-nelson-trade-details-seahawks-colts-nfl-trade-deadline",
+      "source_name": "FOX Sports",
+      "headline": "Trade! Colts Reportedly Send All-Pro Guard Quenton Nelson To Seahawks",
+      "published_at": "2026-10-27T17:38:11.000Z",
+      "observed_at": "2026-10-27T17:50:26.213Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "SEA"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-sign-rb-zavier-scott-to-active-roster-release-db-nick-mccloud",
+      "source_name": "Pro Football Talk",
+      "headline": "Bears sign RB Zavier Scott to active roster, release DB Nick McCloud",
+      "published_at": "2026-10-27T17:44:48.000Z",
+      "observed_at": "2026-10-27T17:50:26.213Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:roster_move"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
