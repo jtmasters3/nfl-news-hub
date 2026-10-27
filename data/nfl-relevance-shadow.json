@@ -2,65 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-wednesday-oct-7",
-      "source_name": "NFL.com",
-      "headline": "NFL news roundup: Latest league updates from Wednesday, Oct. 7",
-      "published_at": "2026-10-07T01:32:35.000Z",
-      "observed_at": "2026-10-07T13:40:22.231Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/commanders-worked-out-qb-jack-plummer",
-      "source_name": "Pro Football Talk",
-      "headline": "Commanders worked out QB Jack Plummer",
-      "published_at": "2026-10-07T13:46:05.000Z",
-      "observed_at": "2026-10-07T13:50:22.472Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/north-carolina-hires-search-firm-to-help-find-new-g-m-to-work-with-bill-belichick",
-      "source_name": "Pro Football Talk",
-      "headline": "North Carolina hires search firm to help find new G.M. to work with Bill Belichick",
-      "published_at": "2026-10-07T13:41:33.000Z",
-      "observed_at": "2026-10-07T13:50:22.472Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/after-lane-johnson-s-retirement-can-eagles-battered-offensive-line-hold-up",
       "source_name": "NFL.com",
       "headline": "After Lane Johnson's retirement, can Eagles' battered offensive line hold up?",
@@ -41863,6 +41804,70 @@
       "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/packers-list-matthew-golden-as-out-of-practice-tuesday",
+      "source_name": "Pro Football Talk",
+      "headline": "Packers list Matthew Golden as out of practice Tuesday",
+      "published_at": "2026-10-27T20:24:46.000Z",
+      "observed_at": "2026-10-27T20:30:23.990Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/raiders-activate-wr-donte-thornton-off-of-ir",
+      "source_name": "Pro Football Talk",
+      "headline": "Raiders activate WR Dont'e Thornton off of IR",
+      "published_at": "2026-10-27T20:23:42.000Z",
+      "observed_at": "2026-10-27T20:30:23.990Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-place-cb-cam-taylor-britt-on-ir-sign-cb-kenneth-harris-from-practice-squad",
+      "source_name": "Pro Football Talk",
+      "headline": "Colts place CB Cam Taylor-Britt on IR, sign CB Kenneth Harris from practice squad",
+      "published_at": "2026-10-27T20:18:59.000Z",
+      "observed_at": "2026-10-27T20:30:23.990Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
