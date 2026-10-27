@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-fantasy-2026-start-em-sit-em-quarterbacks-for-week-5",
-      "source_name": "NFL.com",
-      "headline": "NFL Fantasy 2026 Start 'Em, Sit 'Em: Quarterbacks for Week 5",
-      "published_at": "2026-10-07T03:11:32.000Z",
-      "observed_at": "2026-10-07T15:20:24.908Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "fantasy",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-odds-to-miss-playoffs",
       "source_name": "FOX Sports",
       "headline": "2026 NFL Playoff Odds: Texans, Chargers, Packers Favored To Miss Postseason",
@@ -41881,6 +41864,28 @@
       "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-waive-rb-emari-demercado",
+      "source_name": "Pro Football Talk",
+      "headline": "Cowboys waive RB Emari Demercado",
+      "published_at": "2026-10-27T22:05:49.000Z",
+      "observed_at": "2026-10-27T22:10:20.360Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:free_agency"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
