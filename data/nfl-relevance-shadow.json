@@ -2,73 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-bring-kj-henry-back-to-their-practice-squad",
-      "source_name": "Pro Football Talk",
-      "headline": "Steelers bring KJ Henry back to their practice squad",
-      "published_at": "2026-10-06T15:14:09.000Z",
-      "observed_at": "2026-10-06T15:30:28.122Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PIT"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-campbell-we-wont-accept-mediocrity-on-either-side-of-the-ball",
-      "source_name": "Pro Football Talk",
-      "headline": "Dan Campbell: We won't accept mediocrity on either side of the ball",
-      "published_at": "2026-10-06T15:41:31.000Z",
-      "observed_at": "2026-10-06T15:50:29.295Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET",
-        "NO"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tyler-smith-thinks-its-possible-he-returns-against-buccaneers",
-      "source_name": "Pro Football Talk",
-      "headline": "Tyler Smith thinks \"it's possible\" he returns against Buccaneers",
-      "published_at": "2026-10-06T16:10:31.000Z",
-      "observed_at": "2026-10-06T16:20:23.597Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "TB"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/early-nfl-all-rookie-team-which-2026-draft-picks-have-excelled-so-far",
       "source_name": "NFL.com",
       "headline": "Early NFL All-Rookie Team: Which 2026 draft picks have excelled so far?",
@@ -41873,6 +41806,67 @@
       "confidence": "high",
       "detected_teams": [
         "DAL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/jay-z-to-headline-super-bowl-lxi-at-sofi-stadium-in-inglewood",
+      "source_name": "NFL.com",
+      "headline": "Jay-Z to headline Super Bowl LXI Halftime Show at SoFi Stadium in Inglewood",
+      "published_at": "2026-10-27T01:52:48.000Z",
+      "observed_at": "2026-10-27T02:00:29.747Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/who-is-super-bowl-lxi-haltime-show-performer-jay-z",
+      "source_name": "FOX Sports",
+      "headline": "Jay-Z To Headline Super Bowl LXI Halftime Show in Los Angeles",
+      "published_at": "2026-10-27T01:54:19.000Z",
+      "observed_at": "2026-10-27T02:00:29.747Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC",
+        "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/monday-night-football-cowboys-lead-eagles-20-14-at-halftime",
+      "source_name": "Pro Football Talk",
+      "headline": "Monday Night Football: Cowboys lead Eagles 20-14 at halftime",
+      "published_at": "2026-10-27T01:55:30.000Z",
+      "observed_at": "2026-10-27T02:00:29.747Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "PHI"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
