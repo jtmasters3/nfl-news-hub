@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-mvp-tracker-49ers-qb-brock-purdy-leads-rankings-through-first-four-weeks",
-      "source_name": "NFL.com",
-      "headline": "NFL MVP tracker: 49ers QB Brock Purdy leads rankings through first four weeks",
-      "published_at": "2026-10-06T08:04:38.000Z",
-      "observed_at": "2026-10-06T20:10:21.935Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/seahawks-sign-rb-robert-henry-off-commanders-practice-squad",
       "source_name": "Pro Football Talk",
       "headline": "Seahawks sign RB Robert Henry off Commanders practice squad",
@@ -41874,6 +41853,28 @@
         "PHI"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-ravens-g-vega-ioane-has-an-mcl-sprain",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Ravens G Vega Ioane has an MCL sprain",
+      "published_at": "2026-10-27T12:26:25.000Z",
+      "observed_at": "2026-10-27T12:30:24.076Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "CIN"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
