@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/jim-leonhard-bills-defense-complain-home-noise-expletive",
-      "source_name": "NFL.com",
-      "headline": "Jim Leonhard on Bills defense: If we complain about home noise, 'we are (expletive)'",
-      "published_at": "2026-10-07T12:10:12.000Z",
-      "observed_at": "2026-10-07T12:20:24.829Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/julian-edelman-efton-chism-catch-start-career",
       "source_name": "NFL.com",
       "headline": "Julian Edelman: Catch like Efton Chism's game-winning grab can 'start someone's career'",
@@ -41863,6 +41842,27 @@
         "LAR"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tyrone-tracy-headed-to-ir-with-hamstring-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Tyrone Tracy headed to IR with hamstring injury",
+      "published_at": "2026-10-27T18:20:21.000Z",
+      "observed_at": "2026-10-27T18:30:25.515Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
