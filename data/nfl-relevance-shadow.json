@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bills-dc-jim-leonhard-we-have-to-make-home-crowd-an-advantage-for-us",
-      "source_name": "Pro Football Talk",
-      "headline": "Bills DC Jim Leonhard: We have to make home crowd an advantage for us",
-      "published_at": "2026-10-07T12:51:37.000Z",
-      "observed_at": "2026-10-07T13:00:33.047Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "NE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/matt-lafleur-doesn-t-need-to-trash-talk-he-just-needs-to-beat-the-bears",
       "source_name": "NFL.com",
       "headline": "Matt LaFleur doesn't need to trash talk. He just needs to beat the Bears",
@@ -41868,6 +41846,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brian-schottheimer-short-and-not-so-sweet-in-his-postgame-media-availability",
+      "source_name": "Pro Football Talk",
+      "headline": "Brian Schottenheimer short and not so sweet in his postgame media availability",
+      "published_at": "2026-10-27T19:11:11.000Z",
+      "observed_at": "2026-10-27T19:20:21.350Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
