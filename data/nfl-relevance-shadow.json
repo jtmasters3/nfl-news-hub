@@ -2,46 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-has-most-accepted-penalties-through-four-weeks-since-1978",
-      "source_name": "Pro Football Talk",
-      "headline": "NFL has most accepted penalties through four weeks since 1978",
-      "published_at": "2026-10-06T16:35:31.000Z",
-      "observed_at": "2026-10-06T16:40:24.074Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-add-lb-eric-kendricks-to-practice-squad",
-      "source_name": "Pro Football Talk",
-      "headline": "Rams add LB Eric Kendricks to practice squad",
-      "published_at": "2026-10-06T16:39:30.000Z",
-      "observed_at": "2026-10-06T16:50:23.290Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-referees-association-objects-to-severity-of-suspensions-of-adrian-hill-jeff-seeman",
       "source_name": "Pro Football Talk",
       "headline": "NFL Referees Association objects to \"severity\" of suspensions of Adrian Hill, Jeff Seeman",
@@ -41878,6 +41838,45 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-fines-caleb-williams-11-941-for-displaying-unauthorized-logo-on-his-shoes-in-week-6",
+      "source_name": "Pro Football Talk",
+      "headline": "NFL fines Caleb Williams $11,941 for displaying \"unauthorized logo\" on his shoes in Week 6",
+      "published_at": "2026-10-27T02:28:04.000Z",
+      "observed_at": "2026-10-27T02:30:29.715Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-take-21-20-lead-on-cowboys-to-open-second-half",
+      "source_name": "Pro Football Talk",
+      "headline": "Eagles take 21-20 lead on Cowboys to open second half",
+      "published_at": "2026-10-27T02:20:37.000Z",
+      "observed_at": "2026-10-27T02:30:29.715Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "PHI"
+      ],
+      "detected_category": "live_game_state",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
