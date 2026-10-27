@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/questions-arise-regarding-the-effectiveness-of-the-guardian-cap",
-      "source_name": "Pro Football Talk",
-      "headline": "Questions arise regarding the effectiveness of the Guardian Cap",
-      "published_at": "2026-10-07T04:58:42.000Z",
-      "observed_at": "2026-10-07T05:10:23.120Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-are-first-nfl-team-to-play-four-of-their-first-five-games-in-prime-time",
       "source_name": "Pro Football Talk",
       "headline": "Rams are first NFL team to play four of their first five games in prime time",
@@ -41858,6 +41841,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bengals-put-te-erick-all-on-ir-sign-te-cam-grandy",
+      "source_name": "Pro Football Talk",
+      "headline": "Bengals put TE Erick All on IR, sign TE Cam Grandy",
+      "published_at": "2026-10-27T17:32:36.000Z",
+      "observed_at": "2026-10-27T17:40:20.496Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "CIN"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
