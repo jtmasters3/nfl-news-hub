@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/case-keenum-officially-listed-as-starting-qb-vs-jets-despite-playing-one-snap",
-      "source_name": "Pro Football Talk",
-      "headline": "Case Keenum officially listed as starting QB vs. Jets despite playing one snap",
-      "published_at": "2026-10-07T03:12:23.000Z",
-      "observed_at": "2026-10-07T03:20:21.972Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "NYJ"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/questions-arise-regarding-the-effectiveness-of-the-guardian-cap",
       "source_name": "Pro Football Talk",
       "headline": "Questions arise regarding the effectiveness of the Guardian Cap",
@@ -41863,6 +41841,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-sponsors-will-now-infiltrate-madden",
+      "source_name": "Pro Football Talk",
+      "headline": "NFL sponsors will now infiltrate Madden",
+      "published_at": "2026-10-27T16:58:42.000Z",
+      "observed_at": "2026-10-27T17:10:22.820Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
