@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/1989-book-claimed-that-no-fewer-than-70-nfl-games-had-been-fixed",
-      "source_name": "Pro Football Talk",
-      "headline": "1989 book claimed that \"no fewer than 70\" NFL games had been fixed",
-      "published_at": "2026-10-07T15:19:58.000Z",
-      "observed_at": "2026-10-07T15:30:26.645Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/giants-signing-qb-jake-haener-to-53-man-roster",
       "source_name": "Pro Football Talk",
       "headline": "Giants signing QB Jake Haener to 53-man roster",
@@ -41881,6 +41864,27 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/micah-parsons-moves-closer-to-a-return",
+      "source_name": "Pro Football Talk",
+      "headline": "Micah Parsons moves closer to a return",
+      "published_at": "2026-10-27T23:28:44.000Z",
+      "observed_at": "2026-10-27T23:40:19.087Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
