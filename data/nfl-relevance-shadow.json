@@ -2,67 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tyreek-hills-ex-wife-testifies-about-alleged-abuse-during-divorce-trial",
-      "source_name": "Pro Football Talk",
-      "headline": "Tyreek Hill's ex-wife testifies about alleged abuse during divorce trial",
-      "published_at": "2026-10-06T21:14:18.000Z",
-      "observed_at": "2026-10-06T21:30:24.932Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/falcons-relished-chance-silence-saints-show-world-how-good-can",
-      "source_name": "FOX Sports",
-      "headline": "Falcons Relished Chance To Silence Saints, 'Show The World' How Good They Can Be",
-      "published_at": "2026-10-06T21:34:25.000Z",
-      "observed_at": "2026-10-06T21:40:20.398Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "NO"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-dc-vic-fangio-number-of-snaps-impacted-defense-against-rams-but-have-to-finish",
-      "source_name": "Pro Football Talk",
-      "headline": "Eagles DC Vic Fangio: Number of snaps impacted defense against Rams, but have to finish",
-      "published_at": "2026-10-06T21:40:37.000Z",
-      "observed_at": "2026-10-06T21:50:23.161Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-place-g-donovan-jackson-on-injured-reserve",
       "source_name": "Pro Football Talk",
       "headline": "Vikings place G Donovan Jackson on injured reserve",
@@ -41855,6 +41794,65 @@
         "PHI"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/byron-murphy-is-blossoming-in-the-middle-of-the-seahawks-defense-and-at-just-the-right-time",
+      "source_name": "NFL.com",
+      "headline": "Byron Murphy is blossoming in the middle of the Seahawks' defense (and at just the right time)",
+      "published_at": "2026-10-27T12:16:05.000Z",
+      "observed_at": "2026-10-27T15:10:20.590Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/qb-stock-market-week-8-next-step-hardest-drake-maye-caleb-williams",
+      "source_name": "FOX Sports",
+      "headline": "QB Stock Market Week 8: The Next Step Is The Hardest For Drake Maye, Caleb Williams",
+      "published_at": "2026-10-27T15:04:49.000Z",
+      "observed_at": "2026-10-27T15:10:20.590Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/brian-branch-makes-lions-super-bowl-contender",
+      "source_name": "FOX Sports",
+      "headline": "Return Of The 'X-Factor': Brian Branch Makes Lions A Legit Super Bowl Contender",
+      "published_at": "2026-10-27T14:56:30.000Z",
+      "observed_at": "2026-10-27T15:10:20.590Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
