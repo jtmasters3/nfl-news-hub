@@ -2,26 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/espns-matt-miller-pleads-not-guilty-to-misdemeanor-charge-from-june-car-crash",
-      "source_name": "Pro Football Talk",
-      "headline": "ESPN's Matt Miller pleads not guilty to misdemeanor charge from June car crash",
-      "published_at": "2026-10-06T19:14:29.000Z",
-      "observed_at": "2026-10-06T19:20:29.353Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [],
-      "detected_category": "draft",
-      "nfl_evidence": [
-        "phrase_nfl_draft",
-        "nfl_preserving_category:draft"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaguars-sign-cb-alijah-huzzie-off-texans-practice-squad",
       "source_name": "Pro Football Talk",
       "headline": "Jaguars sign CB Alijah Huzzie off Texans practice squad",
@@ -41870,6 +41850,28 @@
       "classification": "nfl",
       "confidence": "high",
       "detected_teams": [
+        "PHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-are-the-betting-favorites-to-win-the-nfc-east-after-win-in-philadelphia",
+      "source_name": "Pro Football Talk",
+      "headline": "Cowboys are the betting favorites to win the NFC East after win in Philadelphia",
+      "published_at": "2026-10-27T09:25:17.000Z",
+      "observed_at": "2026-10-27T09:30:21.371Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
         "PHI"
       ],
       "detected_category": "league_news",
