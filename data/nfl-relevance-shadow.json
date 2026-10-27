@@ -2,91 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/ravens-margin-for-error-is-shrinking-can-they-find-answers-to-their-penalty-problem",
-      "source_name": "NFL.com",
-      "headline": "Ravens' margin for error is shrinking. Can they find answers to their penalty problem?",
-      "published_at": "2026-10-07T10:46:05.000Z",
-      "observed_at": "2026-10-07T14:20:38.847Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/buccaneers-vs-cowboys-three-must-know-storylines-for-thursday-s-week-5-prime-time-game",
-      "source_name": "NFL.com",
-      "headline": "Buccaneers vs. Cowboys: Three must-know storylines for Thursday's Week 5 prime-time game",
-      "published_at": "2026-10-07T02:16:30.000Z",
-      "observed_at": "2026-10-07T14:20:38.847Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-rescinds-kyle-juszczyks-beer-chugging-celebration-fine",
-      "source_name": "Pro Football Talk",
-      "headline": "NFL rescinds Kyle Juszczyk's beer chugging celebration fine",
-      "published_at": "2026-10-07T14:29:31.000Z",
-      "observed_at": "2026-10-07T14:40:25.416Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/odell-beckham-jr-vikings-sign-practice-squad",
-      "source_name": "NFL.com",
-      "headline": "Vikings sign Odell Beckham Jr. to practice squad after WR's Giants release",
-      "published_at": "2026-10-07T03:19:18.000Z",
-      "observed_at": "2026-10-07T15:20:24.908Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN",
-        "NYG"
-      ],
-      "detected_category": "free_agency",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad",
-        "phrase_released_by",
-        "nfl_preserving_category:free_agency"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-fantasy-2026-start-em-sit-em-kickers-in-week-5",
       "source_name": "NFL.com",
       "headline": "NFL Fantasy 2026 Start 'Em, Sit 'Em: Kickers in Week 5",
@@ -41869,6 +41784,92 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/colts-to-trade-deforest-buckner-to-49ers-for-fourth-round-pick",
+      "source_name": "NFL.com",
+      "headline": "NFL Network: Colts to trade DeForest Buckner to 49ers for fourth-round pick",
+      "published_at": "2026-10-27T08:55:23.000Z",
+      "observed_at": "2026-10-27T21:00:27.590Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "SF"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-lamar-jackson-is-expected-to-return-sunday",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Lamar Jackson is expected to return Sunday",
+      "published_at": "2026-10-27T20:52:53.000Z",
+      "observed_at": "2026-10-27T21:00:27.590Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-agree-to-acquire-deforest-buckner-from-colts",
+      "source_name": "Pro Football Talk",
+      "headline": "49ers agree to acquire DeForest Buckner from Colts",
+      "published_at": "2026-10-27T20:52:51.000Z",
+      "observed_at": "2026-10-27T21:00:27.590Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "SF"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dave-canales-knows-opposing-offenses-are-excited-to-game-plan-vs-panthers-run-defense",
+      "source_name": "Pro Football Talk",
+      "headline": "Dave Canales knows opposing offenses are excited to game plan vs. Panthers' run defense",
+      "published_at": "2026-10-27T20:45:55.000Z",
+      "observed_at": "2026-10-27T21:00:27.590Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
