@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-payton-i-dont-think-patrick-surtain-ii-pat-bryant-will-land-on-ir",
-      "source_name": "Pro Football Talk",
-      "headline": "Sean Payton: I \"don't think\" Patrick Surtain II, Pat Bryant will land on IR",
-      "published_at": "2026-10-07T23:49:25.000Z",
-      "observed_at": "2026-10-08T00:00:36.178Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN",
-        "SF"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/drake-maye-is-skeptical-of-the-moon-landing",
       "source_name": "Pro Football Talk",
       "headline": "Drake Maye is skeptical of the moon landing",
@@ -41858,6 +41836,29 @@
       "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-bring-back-k-joshua-karty-ls-jake-mcquaide-on-practice-squad",
+      "source_name": "Pro Football Talk",
+      "headline": "Rams bring back K Joshua Karty, LS Jake McQuaide on practice squad",
+      "published_at": "2026-10-28T18:55:44.000Z",
+      "observed_at": "2026-10-28T19:00:29.148Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
