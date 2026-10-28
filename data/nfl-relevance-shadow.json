@@ -2,64 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-de-mykel-williams-losing-my-mind-with-excitement-for-return-to-lineup",
-      "source_name": "Pro Football Talk",
-      "headline": "49ers DE Mykel Williams: \"Losing my mind\" with excitement for return to lineup",
-      "published_at": "2026-10-08T10:57:41.000Z",
-      "observed_at": "2026-10-08T11:10:17.853Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/through-four-weeks-of-the-season-zero-kickoff-return-touchdowns",
-      "source_name": "Pro Football Talk",
-      "headline": "Through four weeks of the season, zero kickoff return touchdowns",
-      "published_at": "2026-10-08T11:17:36.000Z",
-      "observed_at": "2026-10-08T11:30:22.326Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/2027-nfl-mock-draft-arch-manning-first-qb-selected-jeremiah-smith-no-1-overall",
-      "source_name": "FOX Sports",
-      "headline": "2027 NFL Mock Draft: Arch Manning First QB Selected, Jeremiah Smith No. 1 Overall",
-      "published_at": "2026-10-08T12:00:25.000Z",
-      "observed_at": "2026-10-08T12:20:21.847Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [],
-      "detected_category": "draft",
-      "nfl_evidence": [
-        "phrase_nfl_draft",
-        "nfl_preserving_category:draft"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-buccaneers-vs-cowboys-tv-channel-live-stream-time-2026-week-5",
       "source_name": "FOX Sports",
       "headline": "How to Watch Buccaneers vs. Cowboys: TV Channel, Live Stream, Time",
@@ -41869,6 +41811,65 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/titans-wr-carnell-tate-dl-john-franklin-myers-as-non-participants",
+      "source_name": "Pro Football Talk",
+      "headline": "Titans WR Carnell Tate, DL John Franklin-Myers non-participants at Wednesday's practice",
+      "published_at": "2026-10-28T20:31:58.000Z",
+      "observed_at": "2026-10-28T20:40:33.514Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "TEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/malik-willis-on-celebrating-dolphins-win-were-1-5-its-not-like-we-won-the-super-bowl",
+      "source_name": "Pro Football Talk",
+      "headline": "Malik Willis on celebrating Dolphins' win: We're 1-5, it's not like we won the Super Bowl",
+      "published_at": "2026-10-28T20:32:03.000Z",
+      "observed_at": "2026-10-28T20:40:33.514Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/the-non-political-kirk-herbstreit-recently-spoke-at-a-political-action-committee-event",
+      "source_name": "Pro Football Talk",
+      "headline": "The non-political Kirk Herbstreit recently spoke at a political action committee event",
+      "published_at": "2026-10-28T20:28:41.000Z",
+      "observed_at": "2026-10-28T20:40:33.514Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
