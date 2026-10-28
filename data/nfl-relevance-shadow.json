@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-buccaneers-vs-cowboys-tv-channel-live-stream-time-2026-week-5",
-      "source_name": "FOX Sports",
-      "headline": "How to Watch Buccaneers vs. Cowboys: TV Channel, Live Stream, Time",
-      "published_at": "2026-10-08T12:25:37.000Z",
-      "observed_at": "2026-10-08T12:40:20.655Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/titans-fire-three-executives-including-the-v-p-who-oversaw-the-uniform-change",
       "source_name": "Pro Football Talk",
       "headline": "Titans fire three executives, including the V.P. who oversaw the uniform change",
@@ -41870,6 +41848,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/a-j-brown-ben-brown-limited-in-patriots-practice",
+      "source_name": "Pro Football Talk",
+      "headline": "A.J. Brown, Ben Brown limited in Patriots practice",
+      "published_at": "2026-10-28T20:39:35.000Z",
+      "observed_at": "2026-10-28T20:50:20.809Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
