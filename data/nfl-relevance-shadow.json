@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/players-of-the-week-2026-week-4-drake-maye-tetaroia-mcmillan",
-      "source_name": "NFL.com",
-      "headline": "Patriots QB Drake Maye, Panthers WR Tetairoa McMillan highlight Players of the Week",
-      "published_at": "2026-10-07T04:00:25.000Z",
-      "observed_at": "2026-10-07T16:10:21.512Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR",
-        "NE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tetairoa-mcmillan-wins-first-nfc-offensive-player-of-the-week-award",
       "source_name": "Pro Football Talk",
       "headline": "Tetairoa McMillan wins first NFC offensive player of the week award",
@@ -41884,6 +41862,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jared-goff-backs-dan-campbells-decision-to-go-for-it-deep-in-lions-own-end",
+      "source_name": "Pro Football Talk",
+      "headline": "Jared Goff backs Dan Campbell's decision to go for it deep in Lions' own end",
+      "published_at": "2026-10-28T00:11:57.000Z",
+      "observed_at": "2026-10-28T00:20:24.580Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
