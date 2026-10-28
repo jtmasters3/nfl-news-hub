@@ -2,48 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patriots-wr-mack-hollins-hopes-to-practice-later-this-week",
-      "source_name": "Pro Football Talk",
-      "headline": "Patriots WR Mack Hollins hopes to practice later this week",
-      "published_at": "2026-10-07T20:17:54.000Z",
-      "observed_at": "2026-10-07T20:30:25.412Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dandre-swift-kyle-monangai-caleb-williams-did-not-practice-wednesday",
-      "source_name": "Pro Football Talk",
-      "headline": "D'Andre Swift, Kyle Monangai, Caleb Williams did not practice Wednesday",
-      "published_at": "2026-10-07T20:17:43.000Z",
-      "observed_at": "2026-10-07T20:30:25.412Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/breece-hall-remains-out-of-practice-for-the-jets",
       "source_name": "Pro Football Talk",
       "headline": "Breece Hall remains out of practice for the Jets",
@@ -41870,6 +41828,47 @@
       "detected_teams": [
         "BAL",
         "CIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-wednesday-oct-28",
+      "source_name": "NFL.com",
+      "headline": "NFL news roundup: Latest league updates from Wednesday, Oct. 28",
+      "published_at": "2026-10-28T04:29:05.000Z",
+      "observed_at": "2026-10-28T16:40:21.163Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/one-year-after-the-chargers-shredded-the-vikings-on-a-thursday-night-the-teams-are-in-very-different-spots",
+      "source_name": "Pro Football Talk",
+      "headline": "One year after the Chargers shredded the Vikings on a Thursday night, the teams are in very different spots",
+      "published_at": "2026-10-28T16:29:31.000Z",
+      "observed_at": "2026-10-28T16:40:21.163Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR",
+        "GB",
+        "LAC",
+        "MIN"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
