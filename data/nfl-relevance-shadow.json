@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-qb-rankings-week-5-2026-nfl-season",
-      "source_name": "NFL.com",
-      "headline": "NFL QB rankings, Week 5: C.J. Stroud, Bryce Young vault into top 10",
-      "published_at": "2026-10-07T05:59:00.000Z",
-      "observed_at": "2026-10-07T18:10:20.455Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brian-branch-cade-mays-return-to-practice-for-lions",
-      "source_name": "Pro Football Talk",
-      "headline": "Brian Branch, Cade Mays return to practice for Lions",
-      "published_at": "2026-10-07T18:05:17.000Z",
-      "observed_at": "2026-10-07T18:10:20.455Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/texans-sign-qb-mark-gronowski-to-active-roster",
       "source_name": "Pro Football Talk",
       "headline": "Texans sign QB Mark Gronowski to active roster",
@@ -41873,6 +41835,46 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/justin-tucker-chiefs-signing-kicker-practice-squad",
+      "source_name": "NFL.com",
+      "headline": "NFL Network: Chiefs signing five-time All-Pro kicker Justin Tucker to practice squad",
+      "published_at": "2026-10-28T01:30:22.000Z",
+      "observed_at": "2026-10-28T13:40:25.160Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/broadcast-home-for-monday-night-wild-card-game-still-isnt-known",
+      "source_name": "Pro Football Talk",
+      "headline": "Broadcast home for Monday night wild-card game still isn't known",
+      "published_at": "2026-10-28T13:32:50.000Z",
+      "observed_at": "2026-10-28T13:40:25.160Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
