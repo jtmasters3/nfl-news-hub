@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/raiders-open-practice-window-for-wr-donte-thornton",
-      "source_name": "Pro Football Talk",
-      "headline": "Raiders open practice window for WR Dont’e Thornton",
-      "published_at": "2026-10-07T18:29:53.000Z",
-      "observed_at": "2026-10-07T18:40:23.648Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/howie-roseman-cam-jurgens-trade-can-help-us-compete-for-a-long-period-of-time",
       "source_name": "Pro Football Talk",
       "headline": "Howie Roseman: Cam Jurgens trade can help us compete for a long period of time",
@@ -41858,6 +41837,29 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/chiefs-sign-justin-tucker-allegations-harrison-butker-stats-ravens",
+      "source_name": "FOX Sports",
+      "headline": "Chiefs Reportedly Add Former Ravens Controversial Star Justin Tucker",
+      "published_at": "2026-10-28T15:29:12.000Z",
+      "observed_at": "2026-10-28T15:30:27.077Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "KC"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
