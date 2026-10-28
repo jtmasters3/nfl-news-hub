@@ -2,42 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jerry-jones-on-tony-romo-hes-just-getting-started",
-      "source_name": "Pro Football Talk",
-      "headline": "Jerry Jones on Tony Romo: \"He's just getting started\"",
-      "published_at": "2026-10-07T17:39:38.000Z",
-      "observed_at": "2026-10-07T17:50:21.995Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "contract",
-      "nfl_evidence": [
-        "nfl_preserving_category:contract"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-qb-notebook-week-4-joe-burrow-jalen-hurts-dak-prescott-bo-nix-justin-herbert",
-      "source_name": "FOX Sports",
-      "headline": "NFL QB Notebook Week 4: Let Joe Burrow Cook; Diagnosing Jalen Hurts' Struggles",
-      "published_at": "2026-10-07T17:54:37.000Z",
-      "observed_at": "2026-10-07T18:00:30.208Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-qb-rankings-week-5-2026-nfl-season",
       "source_name": "NFL.com",
       "headline": "NFL QB rankings, Week 5: C.J. Stroud, Bryce Young vault into top 10",
@@ -41862,6 +41826,49 @@
         "phrase_practice_squad",
         "phrase_released_by",
         "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/with-deforest-buckner-trade-49ers-double-down-on-2026-are-more-deals-coming",
+      "source_name": "NFL.com",
+      "headline": "With DeForest Buckner trade, 49ers double down on 2026. Are more deals coming?",
+      "published_at": "2026-10-28T12:31:10.000Z",
+      "observed_at": "2026-10-28T13:20:21.807Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/panthers-vs-packers-three-must-know-storylines-for-thursday-s-week-8-prime-time-game",
+      "source_name": "NFL.com",
+      "headline": "Panthers vs. Packers: Three must-know storylines for Thursday's Week 8 prime-time game",
+      "published_at": "2026-10-28T01:13:11.000Z",
+      "observed_at": "2026-10-28T13:20:21.807Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR",
+        "GB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
