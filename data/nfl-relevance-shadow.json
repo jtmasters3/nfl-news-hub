@@ -2,52 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-week-5-betting-report-the-falcons-catching-bettors-attention",
-      "source_name": "FOX Sports",
-      "headline": "NFL Week 5 Betting Report: 'The Falcons Are Catching Bettors’ Attention'",
-      "published_at": "2026-10-07T23:50:38.000Z",
-      "observed_at": "2026-10-08T00:00:36.178Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "BUF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/will-hills-parlay-week-back-seahawks-steelers-win-week-5",
-      "source_name": "FOX Sports",
-      "headline": "Will Hill's Parlay Of The Week: Back Seahawks, Steelers To Win In Week 5",
-      "published_at": "2026-10-07T23:45:39.000Z",
-      "observed_at": "2026-10-08T00:00:36.178Z",
-      "decision": "keep",
-      "classification": "nfl_with_college_context",
-      "confidence": "high",
-      "detected_teams": [
-        "PIT",
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [
-        "college_football_phrase"
-      ],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-payton-i-dont-think-patrick-surtain-ii-pat-bryant-will-land-on-ir",
       "source_name": "Pro Football Talk",
       "headline": "Sean Payton: I \"don't think\" Patrick Surtain II, Pat Bryant will land on IR",
@@ -41866,6 +41820,44 @@
         "nfl_team_detected",
         "phrase_practice_squad",
         "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/2026-27-nfl-mvp-odds",
+      "source_name": "FOX Sports",
+      "headline": "2026 NFL MVP Odds: Allen Leads As Purdy, Burrow Gain Ground",
+      "published_at": "2026-10-28T18:21:13.000Z",
+      "observed_at": "2026-10-28T18:30:27.331Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/shane-steichen-jonathan-taylors-on-our-football-team-hasnt-asked-for-a-trade",
+      "source_name": "Pro Football Talk",
+      "headline": "Shane Steichen: Jonathan Taylor's on our football team, hasn't asked for a trade",
+      "published_at": "2026-10-28T18:14:55.000Z",
+      "observed_at": "2026-10-28T18:30:27.331Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
