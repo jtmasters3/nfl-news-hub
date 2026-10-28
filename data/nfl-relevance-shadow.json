@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-campbell-downplays-concerns-about-sam-laporta-breaking-off-contract-talks-with-lions",
-      "source_name": "Pro Football Talk",
-      "headline": "Dan Campbell downplays concerns about Sam LaPorta breaking off contract talks with Lions",
-      "published_at": "2026-10-07T18:34:53.000Z",
-      "observed_at": "2026-10-07T18:40:23.648Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET"
-      ],
-      "detected_category": "contract",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:contract"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/raiders-open-practice-window-for-wr-donte-thornton",
       "source_name": "Pro Football Talk",
       "headline": "Raiders open practice window for WR Dont’e Thornton",
@@ -41863,6 +41841,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-how-to-watch-week-8-nfl-games-schedule-key-matchups-and-more",
+      "source_name": "NFL.com",
+      "headline": "NFL+: How to watch Week 8 NFL games, schedule, key matchups, and more",
+      "published_at": "2026-10-28T02:45:46.000Z",
+      "observed_at": "2026-10-28T14:50:22.611Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
