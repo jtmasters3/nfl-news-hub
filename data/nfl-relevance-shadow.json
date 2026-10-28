@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/giants-list-malik-nabers-as-out-of-practice",
-      "source_name": "Pro Football Talk",
-      "headline": "Giants list Malik Nabers as out of practice",
-      "published_at": "2026-10-07T20:28:17.000Z",
-      "observed_at": "2026-10-07T20:40:25.733Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-rodgers-wont-comment-on-whether-play-calls-are-coming-in-fast-enough",
       "source_name": "Pro Football Talk",
       "headline": "Aaron Rodgers won't comment on whether play calls are coming in fast enough",
@@ -41872,6 +41851,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-downs-on-trade-request-im-open-to-whatever",
+      "source_name": "Pro Football Talk",
+      "headline": "Josh Downs on trade request: \"I'm open to whatever\"",
+      "published_at": "2026-10-28T17:04:57.000Z",
+      "observed_at": "2026-10-28T17:10:24.450Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "trade",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
