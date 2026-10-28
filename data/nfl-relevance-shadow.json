@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-rodgers-wont-comment-on-whether-play-calls-are-coming-in-fast-enough",
-      "source_name": "Pro Football Talk",
-      "headline": "Aaron Rodgers won't comment on whether play calls are coming in fast enough",
-      "published_at": "2026-10-07T20:40:26.000Z",
-      "observed_at": "2026-10-07T20:50:20.704Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE",
-        "PIT"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/jamaal-williams-new-england-patriots-tryout-free-agency",
-      "source_name": "FOX Sports",
-      "headline": "From Rushing Leader To Free Agency: Jamaal Williams Works Out For Patriots",
-      "published_at": "2026-10-07T20:44:07.000Z",
-      "observed_at": "2026-10-07T21:00:28.754Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE"
-      ],
-      "detected_category": "free_agency",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:free_agency"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/seahawks-dt-jarran-reed-players-hit-penalty-issues-head-on-in-meeting-this-week",
       "source_name": "Pro Football Talk",
       "headline": "Seahawks DT Jarran Reed: Players hit penalty issues \"head on\" in meeting this week",
@@ -41868,6 +41824,52 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/matt-lafleur-understands-the-challenges-of-officiating-nfl-games",
+      "source_name": "Pro Football Talk",
+      "headline": "Matt LaFleur understands the challenges of officiating NFL games",
+      "published_at": "2026-10-28T17:09:15.000Z",
+      "observed_at": "2026-10-28T17:20:24.669Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "GB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/harrison-butker-will-probably-kick-for-the-chiefs-this-week",
+      "source_name": "Pro Football Talk",
+      "headline": "Harrison Butker will \"probably\" kick for the Chiefs this week",
+      "published_at": "2026-10-28T17:08:50.000Z",
+      "observed_at": "2026-10-28T17:20:24.669Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "KC"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
