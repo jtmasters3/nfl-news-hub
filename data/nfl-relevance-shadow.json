@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tetairoa-mcmillan-wins-first-nfc-offensive-player-of-the-week-award",
-      "source_name": "Pro Football Talk",
-      "headline": "Tetairoa McMillan wins first NFC offensive player of the week award",
-      "published_at": "2026-10-07T16:06:33.000Z",
-      "observed_at": "2026-10-07T16:10:21.512Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR",
-        "DET"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/drake-maye-named-the-afc-offensive-player-of-the-week",
       "source_name": "Pro Football Talk",
       "headline": "Drake Maye named the AFC offensive player of the week",
@@ -41883,6 +41861,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/alabama-dismisses-cb-dre-kirkpatrick-jr-after-arrest-for-doxxing-harassing-police-officer",
+      "source_name": "Pro Football Talk",
+      "headline": "Alabama dismisses CB Dre Kirkpatrick Jr. after arrest for doxxing, harassing police officer",
+      "published_at": "2026-10-28T00:20:26.000Z",
+      "observed_at": "2026-10-28T00:30:23.208Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
