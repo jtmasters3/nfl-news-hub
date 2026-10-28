@@ -2,71 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-odds-no-1-seed-chiefs-49ers",
-      "source_name": "FOX Sports",
-      "headline": "2026 NFL Odds: Chiefs, 49ers Favored To Be No. 1 Seeds",
-      "published_at": "2026-10-07T18:05:42.000Z",
-      "observed_at": "2026-10-07T18:20:23.209Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC",
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ben-johnson-kyle-monangai-had-30-carries-and-he-feels-it",
-      "source_name": "Pro Football Talk",
-      "headline": "Ben Johnson: Kyle Monangai had 30 carries and he feels it",
-      "published_at": "2026-10-07T18:07:28.000Z",
-      "observed_at": "2026-10-07T18:20:23.209Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/texans-open-practice-windows-for-tank-dell-kayden-mcdonald-braden-smith",
-      "source_name": "Pro Football Talk",
-      "headline": "Texans open practice windows for Tank Dell, Kayden McDonald, Braden Smith",
-      "published_at": "2026-10-07T18:18:46.000Z",
-      "observed_at": "2026-10-07T18:30:28.098Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "HOU"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-campbell-downplays-concerns-about-sam-laporta-breaking-off-contract-talks-with-lions",
       "source_name": "Pro Football Talk",
       "headline": "Dan Campbell downplays concerns about Sam LaPorta breaking off contract talks with Lions",
@@ -41869,6 +41804,65 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/some-owners-are-spending-big-on-the-midterm-elections",
+      "source_name": "Pro Football Talk",
+      "headline": "Some owners are spending big on the midterm elections",
+      "published_at": "2026-10-28T14:12:20.000Z",
+      "observed_at": "2026-10-28T14:20:23.901Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-jaylen-waddle-aggravated-previous-chest-injury-week-8-status-tbd",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Jaylen Waddle aggravated previous chest injury, Week 8 status TBD",
+      "published_at": "2026-10-28T14:11:03.000Z",
+      "observed_at": "2026-10-28T14:20:23.901Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/giants-gm-joe-schoen-on-trades-were-looking-but-has-to-make-sense-now-and-in-future",
+      "source_name": "Pro Football Talk",
+      "headline": "Giants GM Joe Schoen on trades: We're looking, but has to make sense now and in future",
+      "published_at": "2026-10-28T14:09:30.000Z",
+      "observed_at": "2026-10-28T14:20:23.901Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
