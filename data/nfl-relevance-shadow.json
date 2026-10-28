@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/long-road-back-nfl-ties-league-history-5-winless-teams-through-week-4",
-      "source_name": "FOX Sports",
-      "headline": "The Long Road Back: NFL Ties League History With 5 Winless Teams Through Week 4",
-      "published_at": "2026-10-07T19:04:55.000Z",
-      "observed_at": "2026-10-07T19:20:23.815Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jesse-minter-on-lamar-jackson-a-lot-of-time-between-now-and-sunday",
       "source_name": "Pro Football Talk",
       "headline": "Jesse Minter on Lamar Jackson: A lot of time between now and Sunday",
@@ -41858,6 +41841,28 @@
         "ATL"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/liam-coen-colts-traded-away-two-good-players-right-before-we-play-them-cant-deny-that",
+      "source_name": "Pro Football Talk",
+      "headline": "Liam Coen: Colts traded away two good players right before we play them, can't deny that",
+      "published_at": "2026-10-28T15:52:01.000Z",
+      "observed_at": "2026-10-28T16:00:29.666Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "JAX"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
