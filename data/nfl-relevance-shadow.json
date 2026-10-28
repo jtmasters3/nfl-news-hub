@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jalen-ramsey-jamel-dean-did-not-practice-on-wednesday",
-      "source_name": "Pro Football Talk",
-      "headline": "Jalen Ramsey, Jamel Dean did not practice on Wednesday",
-      "published_at": "2026-10-07T20:35:45.000Z",
-      "observed_at": "2026-10-07T20:40:25.733Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jamarr-chase-tee-higgins-among-six-bengals-out-of-practice",
-      "source_name": "Pro Football Talk",
-      "headline": "Ja'Marr Chase, Tee Higgins among six Bengals out of practice",
-      "published_at": "2026-10-07T20:30:54.000Z",
-      "observed_at": "2026-10-07T20:40:25.733Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/giants-list-malik-nabers-as-out-of-practice",
       "source_name": "Pro Football Talk",
       "headline": "Giants list Malik Nabers as out of practice",
@@ -41871,6 +41828,44 @@
         "WAS"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-qb-rankings-index-week-8-2026-nfl-season",
+      "source_name": "NFL.com",
+      "headline": "NFL QB rankings, Week 8: Joe Burrow, Caleb Williams hit season high; Patrick Mahomes slides",
+      "published_at": "2026-10-28T04:48:00.000Z",
+      "observed_at": "2026-10-28T17:00:26.913Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chiefs-expect-rashee-rice-jaylon-moore-to-practice-wednesday",
+      "source_name": "Pro Football Talk",
+      "headline": "Chiefs expect Rashee Rice, Jaylon Moore to practice Wednesday",
+      "published_at": "2026-10-28T16:57:06.000Z",
+      "observed_at": "2026-10-28T17:00:26.913Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
