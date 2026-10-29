@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-defensive-rookie-rankings-at-quarter-mark-of-2026-season-sonny-styles-or-arvell-reese-at-no-1",
-      "source_name": "NFL.com",
-      "headline": "NFL defensive rookie rankings at quarter mark of 2026 season: Sonny Styles or Arvell Reese at No. 1?",
-      "published_at": "2026-10-08T05:08:00.000Z",
-      "observed_at": "2026-10-08T17:20:23.404Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/texans-sign-wr-bryce-oliver-to-their-active-roster",
       "source_name": "Pro Football Talk",
       "headline": "Texans sign WR Bryce Oliver to their active roster",
@@ -41850,6 +41833,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-mcvay-davante-adams-closer-to-the-shorter-term-of-the-6-10-week-timeline",
+      "source_name": "Pro Football Talk",
+      "headline": "Sean McVay: Davante Adams \"closer to the shorter term\" of the 6-10 week timeline",
+      "published_at": "2026-10-29T01:45:39.000Z",
+      "observed_at": "2026-10-29T01:50:19.479Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI",
+        "LAR"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
