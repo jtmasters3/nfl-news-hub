@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/thursday-night-football-bucs-upset-cowboys-24-16",
-      "source_name": "Pro Football Talk",
-      "headline": "Thursday Night Football: Bucs upset Cowboys 24-16",
-      "published_at": "2026-10-09T03:26:10.000Z",
-      "observed_at": "2026-10-09T03:30:24.069Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tony-romo-was-disqualified-from-a-golf-tournament-on-the-same-day-cbs-announced-his-exit",
-      "source_name": "Pro Football Talk",
-      "headline": "Tony Romo was disqualified from a golf tournament, on the same day CBS announced his exit",
-      "published_at": "2026-10-09T03:31:56.000Z",
-      "observed_at": "2026-10-09T03:40:18.827Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/big-upset-big-d-3-takeaways-from-cowboys-stunning-loss-buccaneers",
       "source_name": "FOX Sports",
       "headline": "A Big Upset In The Big D: 3 Takeaways From Cowboys' Stunning Loss To Buccaneers",
@@ -41861,6 +41822,45 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jets-dc-brian-duker-on-ashton-jeantys-comments-plenty-of-confidence-in-our-guys",
+      "source_name": "Pro Football Talk",
+      "headline": "Jets DC Brian Duker on Ashton Jeanty's comments: Plenty of confidence in our guys",
+      "published_at": "2026-10-29T19:42:22.000Z",
+      "observed_at": "2026-10-29T19:50:22.186Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV",
+        "NYJ"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/june-jones-innovator-of-the-run-and-shoot-offense-dies-at-73",
+      "source_name": "Pro Football Talk",
+      "headline": "June Jones, innovator of the run and shoot offense, dies at 73",
+      "published_at": "2026-10-29T19:38:21.000Z",
+      "observed_at": "2026-10-29T19:50:22.186Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "coaching",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
