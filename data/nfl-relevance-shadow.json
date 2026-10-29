@@ -2,108 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/cousins-and-kubiak-s-home-improvement-moments-the-maxx-crosby-effect-raiders-notes",
-      "source_name": "NFL.com",
-      "headline": "Cousins and Kubiak's 'Home Improvement' moments, the Maxx Crosby effect: Raiders notes",
-      "published_at": "2026-10-09T12:16:06.000Z",
-      "observed_at": "2026-10-09T13:00:26.961Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/eagles-in-london-inside-their-travel-plans-and-jemal-singleton-s-homecoming",
-      "source_name": "NFL.com",
-      "headline": "Eagles in London: Inside their travel plans and Jemal Singleton's homecoming",
-      "published_at": "2026-10-09T10:16:06.000Z",
-      "observed_at": "2026-10-09T13:00:26.961Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/the-cowboys-defense-is-making-no-progress-it-might-be-worse-than-last-year",
-      "source_name": "NFL.com",
-      "headline": "The Cowboys' defense is making no progress. It might be worse than last year",
-      "published_at": "2026-10-09T09:46:06.000Z",
-      "observed_at": "2026-10-09T13:00:26.961Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/liam-coen-sunday-about-us-not-whos-missing-for-eagles",
-      "source_name": "Pro Football Talk",
-      "headline": "Liam Coen: Sunday about us, not who's missing for Eagles",
-      "published_at": "2026-10-09T12:48:57.000Z",
-      "observed_at": "2026-10-09T13:00:26.961Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "JAX",
-        "PHI"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/justin-herbert-has-endured-more-hits-than-any-other-qb-since-2020-when-will-it-end",
-      "source_name": "NFL.com",
-      "headline": "Justin Herbert has endured more hits than any other QB since 2020. When will it end?",
-      "published_at": "2026-10-09T12:16:06.000Z",
-      "observed_at": "2026-10-09T13:20:21.727Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/can-the-falcons-top-ranked-run-defense-handle-derrick-henry-and-the-ravens-on-snf",
       "source_name": "NFL.com",
       "headline": "Can the Falcons' top-ranked run defense handle Derrick Henry and the Ravens on SNF?",
@@ -41848,6 +41746,112 @@
       "confidence": "high",
       "detected_teams": [
         "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/2027-nfl-draft-odds-no-1-pick",
+      "source_name": "FOX Sports",
+      "headline": "2027 NFL Draft No. 1 Pick Odds: Jeremiah Smith Favored, Drew Mestemaker Surging",
+      "published_at": "2026-10-29T21:06:04.000Z",
+      "observed_at": "2026-10-29T21:20:21.112Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [],
+      "detected_category": "draft",
+      "nfl_evidence": [
+        "phrase_nfl_draft",
+        "nfl_preserving_category:draft"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-week-8-picks-best-bets-every-game-wills-wagers",
+      "source_name": "FOX Sports",
+      "headline": "2026 NFL Week 8 Picks: Best Bets For Every Game — Will's Wagers",
+      "published_at": "2026-10-29T21:05:51.000Z",
+      "observed_at": "2026-10-29T21:20:21.112Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR",
+        "GB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-trade-deadline-rumors-saquon-barkley-eagles-chargers-giants-rams-colts",
+      "source_name": "FOX Sports",
+      "headline": "NFL Trade Deadline: Is Saquon Barkley Next Star To Move? Who Execs Expect To Buy & Sell",
+      "published_at": "2026-10-29T21:00:20.000Z",
+      "observed_at": "2026-10-29T21:20:21.112Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG",
+        "PHI"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-add-og-tyler-smith-te-luke-schoonmaker-to-their-injury-report",
+      "source_name": "Pro Football Talk",
+      "headline": "Cowboys add OG Tyler Smith, TE Luke Schoonmaker to their injury report",
+      "published_at": "2026-10-29T21:13:15.000Z",
+      "observed_at": "2026-10-29T21:20:21.112Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jamarr-chase-returns-to-practice-as-a-full-participant",
+      "source_name": "Pro Football Talk",
+      "headline": "Ja'Marr Chase returns to practice as a full participant",
+      "published_at": "2026-10-29T21:12:42.000Z",
+      "observed_at": "2026-10-29T21:20:21.112Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
