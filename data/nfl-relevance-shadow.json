@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/todd-bowles-flirted-with-disaster-by-passing-on-fourth-quarter-field-goal",
-      "source_name": "Pro Football Talk",
-      "headline": "Todd Bowles flirted with disaster by passing on fourth-quarter field goal",
-      "published_at": "2026-10-09T13:54:30.000Z",
-      "observed_at": "2026-10-09T14:00:27.514Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tyreek-hills-current-civil-trial-complicates-his-effort-to-return-to-nfl",
-      "source_name": "Pro Football Talk",
-      "headline": "Tyreek Hill's current civil trial complicates his effort to return to NFL",
-      "published_at": "2026-10-09T14:22:34.000Z",
-      "observed_at": "2026-10-09T14:30:32.674Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-oct-9",
       "source_name": "NFL.com",
       "headline": "NFL news roundup: Latest league updates from Friday, Oct. 9",
@@ -41849,6 +41810,48 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chiefs-add-rookie-cb-mansoor-delane-to-the-injury-report",
+      "source_name": "Pro Football Talk",
+      "headline": "Chiefs add rookie CB Mansoor Delane to the injury report",
+      "published_at": "2026-10-29T22:08:11.000Z",
+      "observed_at": "2026-10-29T22:10:21.736Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/saquon-barkley-devonta-smith-out-of-practice-again-thursday",
+      "source_name": "Pro Football Talk",
+      "headline": "Saquon Barkley, DeVonta Smith out of practice again Thursday",
+      "published_at": "2026-10-29T22:03:31.000Z",
+      "observed_at": "2026-10-29T22:10:21.736Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
