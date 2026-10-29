@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/can-the-falcons-top-ranked-run-defense-handle-derrick-henry-and-the-ravens-on-snf",
-      "source_name": "NFL.com",
-      "headline": "Can the Falcons' top-ranked run defense handle Derrick Henry and the Ravens on SNF?",
-      "published_at": "2026-10-09T10:16:06.000Z",
-      "observed_at": "2026-10-09T13:20:21.727Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "BAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/lions-dc-kelvin-sheppard-something-has-to-change",
       "source_name": "NFL.com",
       "headline": "Kelvin Sheppard on Lions' NFL-worst defense: 'Something has to change'",
@@ -41860,6 +41838,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-fines-caleb-williams-23-882-for-unauthorized-logo-on-shoes-in-week-7",
+      "source_name": "Pro Football Talk",
+      "headline": "NFL fines Caleb Williams $23,882 for \"unauthorized logo\" on shoes in Week 7",
+      "published_at": "2026-10-29T21:20:54.000Z",
+      "observed_at": "2026-10-29T21:30:25.558Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
