@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-close-to-within-24-16-on-george-pickens-td-as-ceedee-lamb-is-questionable-to-return",
-      "source_name": "Pro Football Talk",
-      "headline": "Cowboys close to within 24-16 on George Pickens' TD as CeeDee Lamb is questionable to return",
-      "published_at": "2026-10-09T03:04:55.000Z",
-      "observed_at": "2026-10-09T03:10:18.409Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-commanders-on-sunday-morning-had-less-than-five-million-viewers",
-      "source_name": "Pro Football Talk",
-      "headline": "Colts-Commanders on Sunday morning had less than five million viewers",
-      "published_at": "2026-10-09T02:59:39.000Z",
-      "observed_at": "2026-10-09T03:10:18.409Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/as-trade-rumors-intensify-marvin-harrison-jr-hires-agents",
       "source_name": "Pro Football Talk",
       "headline": "As trade rumors intensify, Marvin Harrison Jr. hires agents",
@@ -41865,6 +41822,45 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jared-verse-adds-to-the-chatter-between-browns-and-steelers",
+      "source_name": "Pro Football Talk",
+      "headline": "Jared Verse adds to the chatter between Browns and Steelers",
+      "published_at": "2026-10-29T19:15:49.000Z",
+      "observed_at": "2026-10-29T19:20:21.105Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE",
+        "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-a-j-browns-week-8-availability-up-in-the-air-due-to-knee-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: A.J. Brown's Week 8 availability up in the air due to knee injury",
+      "published_at": "2026-10-29T19:12:38.000Z",
+      "observed_at": "2026-10-29T19:20:21.105Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
