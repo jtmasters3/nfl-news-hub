@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/bears-coach-ben-johnson-can-be-an-unapologetic-agitator-just-ask-the-packers",
-      "source_name": "NFL.com",
-      "headline": "Bears coach Ben Johnson can be an unapologetic agitator. Just ask the Packers",
-      "published_at": "2026-10-08T10:46:05.000Z",
-      "observed_at": "2026-10-08T18:00:28.558Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "GB"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jamarr-chase-returns-to-practice-for-bengals",
       "source_name": "Pro Football Talk",
       "headline": "Ja'Marr Chase returns to practice for Bengals",
@@ -41854,6 +41832,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/justin-jefferson-you-want-high-production-but-what-were-doing-is-working",
+      "source_name": "Pro Football Talk",
+      "headline": "Justin Jefferson: You want high production, but what we're doing is working",
+      "published_at": "2026-10-29T10:58:08.000Z",
+      "observed_at": "2026-10-29T11:00:29.610Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
