@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brandon-staley-pushes-back-against-troy-aikmans-criticism-its-not-true",
-      "source_name": "Pro Football Talk",
-      "headline": "Brandon Staley pushes back against Troy Aikman's criticism: It's not true",
-      "published_at": "2026-10-09T01:10:24.000Z",
-      "observed_at": "2026-10-09T01:20:23.380Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/thursday-night-football-cowboys-lead-bucs-10-7-at-halftime",
       "source_name": "Pro Football Talk",
       "headline": "Thursday Night Football: Cowboys lead Bucs 10-7 at halftime",
@@ -41833,6 +41816,36 @@
       "confidence": "high",
       "detected_teams": [
         "CHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-week-8-picks-upset-and-score-predictions-matchup-breakdowns-for-every-game",
+      "source_name": "NFL.com",
+      "headline": "NFL Week 8 picks: Upset and score predictions, matchup breakdowns for every game",
+      "published_at": "2026-10-29T05:34:45.000Z",
+      "observed_at": "2026-10-29T17:40:19.703Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "BUF",
+        "CAR",
+        "CLE",
+        "DEN",
+        "DET",
+        "GB",
+        "KC",
+        "MIN",
+        "PIT"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
