@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/taking-l-what-weve-been-most-wrong-about-through-1st-quarter-nfl-season",
-      "source_name": "FOX Sports",
-      "headline": "Taking The L: What We've Been The Most Wrong About Through 1st Quarter Of NFL Season",
-      "published_at": "2026-10-08T23:56:49.000Z",
-      "observed_at": "2026-10-09T00:10:18.385Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-take-7-0-lead-on-opening-drive",
       "source_name": "Pro Football Talk",
       "headline": "Cowboys take 7-0 lead on opening drive",
@@ -41829,6 +41812,27 @@
       "detected_teams": [
         "CHI",
         "TEN"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/seahawks-trade-deadline-targets-could-john-schneider-have-more-up-his-sleeve",
+      "source_name": "NFL.com",
+      "headline": "Seahawks trade deadline targets: Could John Schneider have more up his sleeve?",
+      "published_at": "2026-10-29T12:16:07.000Z",
+      "observed_at": "2026-10-29T17:20:21.380Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SEA"
       ],
       "detected_category": "trade",
       "nfl_evidence": [
