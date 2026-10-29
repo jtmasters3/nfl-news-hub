@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/jerry-jones-extraordinarily-disappointed-after-cowboys-loss-to-buccaneers",
-      "source_name": "NFL.com",
-      "headline": "Jerry Jones 'extraordinarily disappointed' after Cowboys loss to Buccaneers",
-      "published_at": "2026-10-09T11:42:14.000Z",
-      "observed_at": "2026-10-09T11:50:21.237Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/ravens-two-game-plans-lamar-jackson-tyler-huntley-falcons",
-      "source_name": "NFL.com",
-      "headline": "Ravens preparing two game plans with Lamar Jackson’s status vs. Falcons up in the air",
-      "published_at": "2026-10-09T12:33:19.000Z",
-      "observed_at": "2026-10-09T12:40:20.802Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "BAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-mcvay-i-thought-id-have-an-update-on-myles-garrett-on-thursday-but-i-dont",
       "source_name": "Pro Football Talk",
       "headline": "Sean McVay: I thought I'd have an update on Myles Garrett on Thursday, but I don't",
@@ -41857,6 +41813,46 @@
       "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/treveyon-henderson-did-not-practice-thursday-due-to-an-illness",
+      "source_name": "Pro Football Talk",
+      "headline": "TreVeyon Henderson did not practice Thursday due to an illness",
+      "published_at": "2026-10-29T20:53:49.000Z",
+      "observed_at": "2026-10-29T21:00:26.391Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/packers-elevate-arron-mosby-from-the-practice-squad",
+      "source_name": "Pro Football Talk",
+      "headline": "Packers elevate Arron Mosby from the practice squad",
+      "published_at": "2026-10-29T20:50:46.000Z",
+      "observed_at": "2026-10-29T21:00:26.391Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
