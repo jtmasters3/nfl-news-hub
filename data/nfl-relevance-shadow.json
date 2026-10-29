@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dianna-russini-hires-crisis-publicist-as-comeback-looms",
-      "source_name": "Pro Football Talk",
-      "headline": "Dianna Russini hires \"crisis publicist\" as comeback looms",
-      "published_at": "2026-10-09T15:12:41.000Z",
-      "observed_at": "2026-10-09T15:20:20.355Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/mike-ditka-dies-at-age-86-chicago-bears-icon-shaped-nfl-as-hall-of-fame-player-larger-than-life-coach",
       "source_name": "NFL.com",
       "headline": "Mike Ditka dies at age 86: Chicago Bears icon shaped NFL as Hall of Fame player, larger-than-life coach",
@@ -41848,6 +41831,27 @@
       "confidence": "high",
       "detected_teams": [
         "MIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/broncos-list-jaylen-waddle-zach-allen-as-limited-at-thursdays-practice",
+      "source_name": "Pro Football Talk",
+      "headline": "Broncos list Jaylen Waddle, Zach Allen as limited at Thursday's practice",
+      "published_at": "2026-10-29T22:32:35.000Z",
+      "observed_at": "2026-10-29T22:40:20.405Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
