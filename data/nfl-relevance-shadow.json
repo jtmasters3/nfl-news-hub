@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-oct-9",
-      "source_name": "NFL.com",
-      "headline": "NFL news roundup: Latest league updates from Friday, Oct. 9",
-      "published_at": "2026-10-09T02:56:50.000Z",
-      "observed_at": "2026-10-09T15:10:20.755Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jahmyr-gibbs-next-touchdown-ties-barry-sanders-record-for-most-before-age-25",
-      "source_name": "Pro Football Talk",
-      "headline": "Jahmyr Gibbs’ next touchdown ties Barry Sanders’ record for most before age 25",
-      "published_at": "2026-10-09T15:04:42.000Z",
-      "observed_at": "2026-10-09T15:10:20.755Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dianna-russini-hires-crisis-publicist-as-comeback-looms",
       "source_name": "Pro Football Talk",
       "headline": "Dianna Russini hires \"crisis publicist\" as comeback looms",
@@ -41844,6 +41806,48 @@
       "confidence": "high",
       "detected_teams": [
         "PHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steve-wilkss-role-with-commanders-will-now-include-game-days",
+      "source_name": "Pro Football Talk",
+      "headline": "Steve Wilks's role with Commanders will now include game days",
+      "published_at": "2026-10-29T22:12:33.000Z",
+      "observed_at": "2026-10-29T22:20:25.816Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "WAS"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-jones-returns-to-vikings-practice-on-thursday",
+      "source_name": "Pro Football Talk",
+      "headline": "Aaron Jones returns to Vikings practice on Thursday",
+      "published_at": "2026-10-29T22:11:46.000Z",
+      "observed_at": "2026-10-29T22:20:25.816Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
