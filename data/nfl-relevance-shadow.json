@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/matt-burke-on-losing-play-calling-sometimes-you-have-to-try-to-spark-a-change",
-      "source_name": "Pro Football Talk",
-      "headline": "Matt Burke on losing play-calling: Sometimes you have to try to spark a change",
-      "published_at": "2026-10-09T15:53:54.000Z",
-      "observed_at": "2026-10-09T16:00:28.070Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "HOU"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/eagles-vs-jaguars-preview-week-5-london-game",
       "source_name": "NFL.com",
       "headline": "Eagles vs. Jaguars: Three must-know storylines for NFL Week 5 London game",
@@ -41860,6 +41839,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-trade-deadline-deals-i-want-to-see-jonathan-taylor-xavier-worthy-cowboys",
+      "source_name": "FOX Sports",
+      "headline": "The 5 Trades I Want To See Before The NFL Trade Deadline",
+      "published_at": "2026-10-29T23:37:11.000Z",
+      "observed_at": "2026-10-29T23:40:19.879Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "trade",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
