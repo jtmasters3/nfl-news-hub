@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-wr-mike-evans-did-not-practice-thursday",
-      "source_name": "Pro Football Talk",
-      "headline": "49ers WR Mike Evans did not practice Thursday",
-      "published_at": "2026-10-08T23:13:59.000Z",
-      "observed_at": "2026-10-08T23:20:18.304Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/taking-l-what-weve-been-most-wrong-about-through-1st-quarter-nfl-season",
       "source_name": "FOX Sports",
       "headline": "Taking The L: What We've Been The Most Wrong About Through 1st Quarter Of NFL Season",
@@ -41836,6 +41815,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/titans-gm-mike-borgonzi-never-planned-to-trade-jeffery-simmons-bears-called-us-last-night",
+      "source_name": "Pro Football Talk",
+      "headline": "Titans GM Mike Borgonzi: Never planned to trade Jeffery Simmons, Bears called us last night",
+      "published_at": "2026-10-29T16:59:38.000Z",
+      "observed_at": "2026-10-29T17:10:20.408Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "TEN"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
