@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-open-s-deshon-elliotts-practice-window",
-      "source_name": "Pro Football Talk",
-      "headline": "Steelers open S DeShon Elliott's practice window",
-      "published_at": "2026-10-08T17:30:18.000Z",
-      "observed_at": "2026-10-08T17:40:21.454Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-picks-week-5-2026-nfl-season",
       "source_name": "NFL.com",
       "headline": "NFL Week 5 picks: Upset and score predictions, matchup breakdowns for every game",
@@ -41848,6 +41827,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/expect-plenty-of-flags-to-fly-on-thursday-night-between-panthers-and-packers",
+      "source_name": "Pro Football Talk",
+      "headline": "Expect plenty of flags to fly on Thursday night between Panthers and Packers",
+      "published_at": "2026-10-29T03:52:39.000Z",
+      "observed_at": "2026-10-29T04:00:25.516Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR",
+        "GB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
