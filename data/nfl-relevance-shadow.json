@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/tom-brady-remembers-saddest-moment-career-worst-thing-i-couldve-ever-imagined",
-      "source_name": "FOX Sports",
-      "headline": "Tom Brady Remembers The Saddest Moment Of Career: 'Worst Thing I Could've Ever Imagined'",
-      "published_at": "2026-10-09T02:37:58.000Z",
-      "observed_at": "2026-10-09T02:50:17.052Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lions-panthers-slips-under-20-million-viewers-on-sunday-night",
-      "source_name": "Pro Football Talk",
-      "headline": "Lions-Panthers slips under 20 million viewers on Sunday night",
-      "published_at": "2026-10-09T02:46:29.000Z",
-      "observed_at": "2026-10-09T03:00:25.695Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR",
-        "DET"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-close-to-within-24-16-on-george-pickens-td-as-ceedee-lamb-is-questionable-to-return",
       "source_name": "Pro Football Talk",
       "headline": "Cowboys close to within 24-16 on George Pickens' TD as CeeDee Lamb is questionable to return",
@@ -41858,6 +41819,44 @@
         "BUF",
         "DEN",
         "KC"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-thursday-oct-29",
+      "source_name": "NFL.com",
+      "headline": "NFL news roundup: Latest league updates from Thursday, Oct. 29",
+      "published_at": "2026-10-29T06:57:30.000Z",
+      "observed_at": "2026-10-29T19:00:33.466Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-open-jonathan-bullards-21-day-practice-window",
+      "source_name": "Pro Football Talk",
+      "headline": "Cowboys open Jonathan Bullard's 21-day practice window",
+      "published_at": "2026-10-29T18:53:57.000Z",
+      "observed_at": "2026-10-29T19:00:33.466Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
