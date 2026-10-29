@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/as-skydance-keeps-growing-the-cbs-nfl-deal-still-hasnt-been-renegotiated",
-      "source_name": "Pro Football Talk",
-      "headline": "As Skydance keeps growing, the CBS-NFL deal still hasn't been renegotiated",
-      "published_at": "2026-10-08T22:02:17.000Z",
-      "observed_at": "2026-10-08T22:10:19.644Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/saquon-barkley-drew-kendall-devonta-smith-remain-out-of-eagles-practice",
       "source_name": "Pro Football Talk",
       "headline": "Saquon Barkley, Drew Kendall, DeVonta Smith remain out of Eagles practice",
@@ -41848,6 +41831,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/garrett-wilson-trade-rumors-jets-stats",
+      "source_name": "FOX Sports",
+      "headline": "Jets Star Garrett Wilson Explains Why He Won't Request Trade",
+      "published_at": "2026-10-29T15:33:51.000Z",
+      "observed_at": "2026-10-29T15:50:20.812Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG",
+        "NYJ"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
