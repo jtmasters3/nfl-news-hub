@@ -2,46 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/texans-sign-wr-bryce-oliver-to-their-active-roster",
-      "source_name": "Pro Football Talk",
-      "headline": "Texans sign WR Bryce Oliver to their active roster",
-      "published_at": "2026-10-08T17:10:07.000Z",
-      "observed_at": "2026-10-08T17:20:23.404Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "HOU"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-argues-to-supreme-court-that-prediction-markets-are-gambling",
-      "source_name": "Pro Football Talk",
-      "headline": "NFL argues to Supreme Court that prediction markets are gambling",
-      "published_at": "2026-10-08T17:22:22.000Z",
-      "observed_at": "2026-10-08T17:30:24.800Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lamar-jackson-remains-out-of-ravens-practice-thursday",
       "source_name": "Pro Football Talk",
       "headline": "Lamar Jackson remains out of Ravens practice Thursday",
@@ -41855,6 +41815,44 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cardinals-rb-jeremiyah-love-limited-in-his-return-to-practice",
+      "source_name": "Pro Football Talk",
+      "headline": "Cardinals RB Jeremiyah Love limited in his return to practice",
+      "published_at": "2026-10-29T02:25:35.000Z",
+      "observed_at": "2026-10-29T02:30:25.490Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/new-study-estimates-75-percent-of-former-nfl-players-who-died-from-2008-to-2023-had-cte",
+      "source_name": "Pro Football Talk",
+      "headline": "New study estimates 75 percent of former NFL players who died from 2008 to 2023 had CTE",
+      "published_at": "2026-10-29T02:22:00.000Z",
+      "observed_at": "2026-10-29T02:30:25.490Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
