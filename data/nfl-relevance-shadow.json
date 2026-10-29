@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/saquon-barkley-drew-kendall-devonta-smith-remain-out-of-eagles-practice",
-      "source_name": "Pro Football Talk",
-      "headline": "Saquon Barkley, Drew Kendall, DeVonta Smith remain out of Eagles practice",
-      "published_at": "2026-10-08T22:05:39.000Z",
-      "observed_at": "2026-10-08T22:20:18.333Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "JAX",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ashton-jeanty-downgraded-to-limited-practice-on-thursday",
-      "source_name": "Pro Football Talk",
-      "headline": "Ashton Jeanty downgraded to limited practice on Thursday",
-      "published_at": "2026-10-08T22:44:40.000Z",
-      "observed_at": "2026-10-08T22:50:19.266Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/thursday-night-football-cowboys-cb-joey-porter-jr-rule-out-with-an-illness",
       "source_name": "Pro Football Talk",
       "headline": "Thursday Night Football: Cowboys CB Joey Porter Jr. ruled out with an illness",
@@ -41845,6 +41802,44 @@
       "detected_teams": [
         "NYG",
         "NYJ"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-trade-deadline-track-every-move-since-start-of-2026-regular-season",
+      "source_name": "NFL.com",
+      "headline": "NFL trade deadline: Track every move since start of 2026 regular season",
+      "published_at": "2026-10-29T04:14:31.000Z",
+      "observed_at": "2026-10-29T16:20:21.222Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "trade",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jonathan-taylor-says-he-hasnt-requested-a-trade-im-always-proud-to-wear-the-horseshoe",
+      "source_name": "Pro Football Talk",
+      "headline": "Jonathan Taylor says he hasn't requested a trade: \"I'm always proud to wear the horseshoe\"",
+      "published_at": "2026-10-29T16:17:09.000Z",
+      "observed_at": "2026-10-29T16:20:21.222Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND"
       ],
       "detected_category": "trade",
       "nfl_evidence": [
