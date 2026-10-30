@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/manuel-turizo-halftime-show-2026-nfl-madrid-game",
-      "source_name": "NFL.com",
-      "headline": "Manuel Turizo to headline halftime show at 2026 NFL Madrid Game",
-      "published_at": "2026-10-09T05:52:05.000Z",
-      "observed_at": "2026-10-09T18:00:25.662Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "CIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mason-graham-mike-hall-will-not-play-for-browns-on-sunday",
       "source_name": "Pro Football Talk",
       "headline": "Mason Graham, Mike Hall will not play for Browns on Sunday",
@@ -41838,6 +41816,28 @@
         "GB"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/eagles-nfl-trade-deadline-rumors-saquon-barkley-jalen-hurts-nick-sirianni",
+      "source_name": "FOX Sports",
+      "headline": "After Dreadful Cowboys Loss, Where Do Eagles Go From Here? Answering Philly's Biggest Qs",
+      "published_at": "2026-10-30T04:07:36.000Z",
+      "observed_at": "2026-10-30T04:20:19.450Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "PHI"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
