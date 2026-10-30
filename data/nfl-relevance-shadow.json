@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/todd-bowles-hot-seat-buccaneers-beat-cowboys-week-5",
-      "source_name": "FOX Sports",
-      "headline": "Todd Bowles Shows Why He Deserves Chance To Resurrect The Buccaneers’ Season",
-      "published_at": "2026-10-09T19:19:01.000Z",
-      "observed_at": "2026-10-09T19:30:22.283Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/j-k-dobbins-is-in-a-dark-spot-after-rough-start-to-2026",
       "source_name": "Pro Football Talk",
       "headline": "J.K. Dobbins is in a \"dark spot\" after rough start to 2026",
@@ -41835,6 +41814,23 @@
       ],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/actividades-de-los-clubes",
+      "source_name": "NFL.com",
+      "headline": "Actividades de los clubes",
+      "published_at": "2026-10-28T10:06:00.000Z",
+      "observed_at": "2026-10-30T12:40:21.112Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
