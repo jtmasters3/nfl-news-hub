@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/week-5-fantasy-sleepers-giants-qb-jameis-winston-steelers-wr-roman-wilson-offer-upside",
-      "source_name": "NFL.com",
-      "headline": "Week 5 fantasy sleepers: Giants QB Jameis Winston, Steelers WR Roman Wilson offer upside",
-      "published_at": "2026-10-09T05:58:14.000Z",
-      "observed_at": "2026-10-09T18:10:20.799Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG",
-        "PIT"
-      ],
-      "detected_category": "fantasy",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chris-olave-set-to-play-alvin-kamara-questionable-for-saints",
       "source_name": "Pro Football Talk",
       "headline": "Chris Olave set to play, Alvin Kamara questionable for Saints",
@@ -41839,6 +41817,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-jacobs-denies-he-was-mimicking-himself-in-handcuffs-in-touchdown-celebration",
+      "source_name": "Pro Football Talk",
+      "headline": "Josh Jacobs denies he was mimicking himself in handcuffs in touchdown celebration",
+      "published_at": "2026-10-30T09:09:56.000Z",
+      "observed_at": "2026-10-30T09:20:23.786Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
