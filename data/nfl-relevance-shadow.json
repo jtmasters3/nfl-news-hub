@@ -2,52 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-saints-on-monday-night-draws-11-9-million-viewers",
-      "source_name": "Pro Football Talk",
-      "headline": "Falcons-Saints on Monday night draws 11.9 million viewers",
-      "published_at": "2026-10-09T16:33:01.000Z",
-      "observed_at": "2026-10-09T16:40:21.023Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "CHI",
-        "NO",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lamar-jackson-is-not-practicing-on-friday-with-ankle-sprain",
-      "source_name": "Pro Football Talk",
-      "headline": "Lamar Jackson is not practicing on Friday with ankle sprain",
-      "published_at": "2026-10-09T16:31:32.000Z",
-      "observed_at": "2026-10-09T16:40:21.023Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "BAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/commanders-jayden-daniels-elbow-start-giants-week-5",
       "source_name": "NFL.com",
       "headline": "Commanders' Jayden Daniels (elbow) to start Sunday vs. Giants after missing two games",
@@ -41853,6 +41807,44 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/tom-brady-isnt-sure-defenders-being-treated-fair-roughing-passer-calls",
+      "source_name": "FOX Sports",
+      "headline": "Tom Brady Isn't Sure If Defenders Are Being Treated Fair On Roughing The Passer Calls",
+      "published_at": "2026-10-30T01:07:06.000Z",
+      "observed_at": "2026-10-30T01:10:21.322Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chuba-hubbard-gives-panthers-10-6-lead",
+      "source_name": "Pro Football Talk",
+      "headline": "Chuba Hubbard gives Panthers 10-6 lead",
+      "published_at": "2026-10-30T00:58:23.000Z",
+      "observed_at": "2026-10-30T01:10:21.322Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
