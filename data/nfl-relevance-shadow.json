@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/commanders-jayden-daniels-elbow-start-giants-week-5",
-      "source_name": "NFL.com",
-      "headline": "Commanders' Jayden Daniels (elbow) to start Sunday vs. Giants after missing two games",
-      "published_at": "2026-10-09T04:40:38.000Z",
-      "observed_at": "2026-10-09T16:50:20.484Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG",
-        "NYJ",
-        "WAS"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/kelvin-sheppard-message-lions-defense-stats",
       "source_name": "FOX Sports",
       "headline": "Lions DC Kelvin Sheppard Gives Passionate Message To Struggling Defense",
@@ -41839,6 +41816,27 @@
         "CAR"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-announce-trade-for-dt-jeffery-simmons",
+      "source_name": "Pro Football Talk",
+      "headline": "Bears announce trade for DT Jeffery Simmons",
+      "published_at": "2026-10-30T01:18:26.000Z",
+      "observed_at": "2026-10-30T01:30:23.337Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
