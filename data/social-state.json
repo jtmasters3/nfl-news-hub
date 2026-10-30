@@ -641722,24 +641722,29 @@
     },
     "f505de88-5b87-460e-bd5c-a0927bc889ba": {
       "story_id": "f505de88-5b87-460e-bd5c-a0927bc889ba",
-      "status": "new",
+      "status": "queued",
       "merged_into": null,
       "created_at": "2026-10-30T15:00:40.126Z",
-      "updated_at": "2026-10-30T15:00:40.126Z",
+      "updated_at": "2026-10-30T18:00:27.705Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
         "instagram_story": true
       },
       "source_story": {
-        "post_headline": null,
-        "base_image_url": null,
-        "source_name": null,
-        "source_url": null,
-        "category": null,
-        "teams": [],
-        "players": [],
-        "description": null,
+        "post_headline": "JETS SACKS LEADER DAVID BAILEY DOUBTFUL AGAINST RAIDERS",
+        "base_image_url": "https://a57.foxsports.com/statics.foxsports.com/www.foxsports.com/content/uploads/2026/10/1294/728/baileyh1.jpg?ve=1&tl=1",
+        "source_name": "FOX Sports",
+        "source_url": "https://www.foxsports.com/stories/nfl/new-york-jets-rookie-david-bailey-injury-las-vegas-raiders",
+        "category": "league_news",
+        "teams": [
+          "Las Vegas Raiders",
+          "New York Jets"
+        ],
+        "players": [
+          "David Bailey"
+        ],
+        "description": "The Jets are unlikely to have one of their top young defensive players when they host the Raiders on Sunday.",
         "is_rumor": false
       },
       "artwork": {
@@ -641869,6 +641874,15 @@
         "message": null,
         "at": null,
         "retry_count": 0
+      },
+      "selection": {
+        "destination": "story",
+        "slot_id": "story:2026-10-30T14:00:00-04:00",
+        "selected_at": "2026-10-30T18:00:27.705Z",
+        "window_start": "2026-10-30T17:00:00.000Z",
+        "window_end": "2026-10-30T18:00:00.000Z",
+        "score": 6,
+        "reason": "fallback_recent_pool_importance_score_rank"
       }
     },
     "84010ff5-0850-43b9-8e24-3e3830c0e486": {
@@ -641876,7 +641890,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-10-30T15:20:29.811Z",
-      "updated_at": "2026-10-30T17:00:27.288Z",
+      "updated_at": "2026-10-30T18:00:27.705Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -642028,11 +642042,11 @@
         "retry_count": 0
       },
       "selection": {
-        "destination": "story",
-        "slot_id": "story:2026-10-30T13:00:00-04:00",
-        "selected_at": "2026-10-30T17:00:27.288Z",
+        "destination": "feed",
+        "slot_id": "feed:2026-10-30T14:00:00-04:00",
+        "selected_at": "2026-10-30T18:00:27.705Z",
         "window_start": "2026-10-30T16:00:00.000Z",
-        "window_end": "2026-10-30T17:00:00.000Z",
+        "window_end": "2026-10-30T18:00:00.000Z",
         "score": 10,
         "reason": "fallback_recent_pool_importance_score_rank"
       }
@@ -652339,6 +652353,24 @@
       "status": "selected",
       "story_id": "84010ff5-0850-43b9-8e24-3e3830c0e486",
       "processed_at": "2026-10-30T17:00:27.288Z"
+    },
+    "feed:2026-10-30T14:00:00-04:00": {
+      "destination": "feed",
+      "slot_time": "2026-10-30T18:00:00.000Z",
+      "window_start": "2026-10-30T16:00:00.000Z",
+      "window_end": "2026-10-30T18:00:00.000Z",
+      "status": "selected",
+      "story_id": "84010ff5-0850-43b9-8e24-3e3830c0e486",
+      "processed_at": "2026-10-30T18:00:27.705Z"
+    },
+    "story:2026-10-30T14:00:00-04:00": {
+      "destination": "story",
+      "slot_time": "2026-10-30T18:00:00.000Z",
+      "window_start": "2026-10-30T17:00:00.000Z",
+      "window_end": "2026-10-30T18:00:00.000Z",
+      "status": "selected",
+      "story_id": "f505de88-5b87-460e-bd5c-a0927bc889ba",
+      "processed_at": "2026-10-30T18:00:27.705Z"
     }
   }
 }
