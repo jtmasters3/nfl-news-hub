@@ -2,69 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/eagles-jeffrey-lurie-announces-670-000-in-funding-for-london-based-autism-research",
-      "source_name": "NFL.com",
-      "headline": "Eagles' Jeffrey Lurie announces $670,000 in funding for London-based Autism research",
-      "published_at": "2026-10-09T09:46:19.000Z",
-      "observed_at": "2026-10-09T21:50:18.972Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/seahawks-dt-leonard-williams-has-no-injury-designation",
-      "source_name": "Pro Football Talk",
-      "headline": "Seahawks DT Leonard Williams has no injury designation",
-      "published_at": "2026-10-09T21:47:06.000Z",
-      "observed_at": "2026-10-09T22:00:30.105Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/broncos-oc-davis-webb-disappointed-by-sean-payton-s-play-caller-change-but-that-s-the-nfl",
-      "source_name": "NFL.com",
-      "headline": "Broncos OC Davis Webb disappointed by Sean Payton's play caller change, but 'that's the NFL'",
-      "published_at": "2026-10-09T09:31:05.000Z",
-      "observed_at": "2026-10-09T22:10:17.408Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/broncos-oc-davis-webb-not-ideal-to-lose-playcalling-role-excited-to-see-how-we-respond",
       "source_name": "Pro Football Talk",
       "headline": "Broncos OC Davis Webb: \"Not ideal\" to lose playcalling role, excited to see how we respond",
@@ -41803,6 +41740,71 @@
         "LAR"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nflpa-names-eagles-s-michael-carter-their-community-mvp-for-week-8",
+      "source_name": "Pro Football Talk",
+      "headline": "NFLPA names Eagles S Michael Carter their Community MVP for Week 8",
+      "published_at": "2026-10-30T16:25:17.000Z",
+      "observed_at": "2026-10-30T16:30:23.725Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_nflpa"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ryan-poles-f-them-picks-is-really-not-what-were-about",
+      "source_name": "Pro Football Talk",
+      "headline": "Ryan Poles: \"F them picks\" is really not what we're about",
+      "published_at": "2026-10-30T16:19:46.000Z",
+      "observed_at": "2026-10-30T16:30:23.725Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/titans-sign-dt-timmy-horne-to-53-man-roster",
+      "source_name": "Pro Football Talk",
+      "headline": "Titans sign DT Timmy Horne to 53-man roster",
+      "published_at": "2026-10-30T16:18:50.000Z",
+      "observed_at": "2026-10-30T16:30:23.725Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "TEN"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
