@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mason-graham-mike-hall-will-not-play-for-browns-on-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "Mason Graham, Mike Hall will not play for Browns on Sunday",
-      "published_at": "2026-10-09T17:51:06.000Z",
-      "observed_at": "2026-10-09T18:00:25.662Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE",
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/week-5-fantasy-sleepers-giants-qb-jameis-winston-steelers-wr-roman-wilson-offer-upside",
       "source_name": "NFL.com",
       "headline": "Week 5 fantasy sleepers: Giants QB Jameis Winston, Steelers WR Roman Wilson offer upside",
@@ -41844,6 +41822,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/christian-watson-spat-up-blood-broke-a-rib-went-to-the-hospital-and-returned-to-the-game",
+      "source_name": "Pro Football Talk",
+      "headline": "Christian Watson spat up blood, broke a rib, went to the hospital and returned to the game",
+      "published_at": "2026-10-30T07:58:39.000Z",
+      "observed_at": "2026-10-30T08:10:21.719Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
