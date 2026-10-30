@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/eagles-vs-jaguars-preview-week-5-london-game",
-      "source_name": "NFL.com",
-      "headline": "Eagles vs. Jaguars: Three must-know storylines for NFL Week 5 London game",
-      "published_at": "2026-10-09T04:13:00.000Z",
-      "observed_at": "2026-10-09T16:20:21.388Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "JAX",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/legendary-chicago-bears-coach-hall-famer-mike-ditka-dies-86",
       "source_name": "FOX Sports",
       "headline": "Legendary Chicago Bears Coach, Hall Of Famer Mike Ditka Dies At 86",
@@ -41856,6 +41834,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-eagles-audience-blows-out-world-series-game-3",
+      "source_name": "Pro Football Talk",
+      "headline": "Cowboys-Eagles' audience blows out World Series Game 3",
+      "published_at": "2026-10-30T00:08:46.000Z",
+      "observed_at": "2026-10-30T00:20:19.146Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "PHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
