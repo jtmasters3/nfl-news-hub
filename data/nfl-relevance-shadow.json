@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/ravens-qb-lamar-jackson-ankle-out-falcons-tyler-huntley-start",
-      "source_name": "NFL.com",
-      "headline": "Ravens QB Lamar Jackson (ankle) out vs. Falcons; Tyler Huntley to start",
-      "published_at": "2026-10-09T05:31:28.000Z",
-      "observed_at": "2026-10-09T17:40:18.507Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "BAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-list-jake-matthews-as-questionable-for-sunday-night",
-      "source_name": "Pro Football Talk",
-      "headline": "Falcons list Jake Matthews as questionable for Sunday night",
-      "published_at": "2026-10-09T17:33:43.000Z",
-      "observed_at": "2026-10-09T17:40:18.507Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/jayden-daniels-injury-update-commanders-quarterbacks-week-5-giants",
       "source_name": "FOX Sports",
       "headline": "Commanders Coach Dan Quinn Reveals Week 5 Game Status For QB Jayden Daniels",
@@ -41843,6 +41800,49 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-donald-isnt-bothered-by-not-having-a-sack-since-he-returned-to-the-rams",
+      "source_name": "Pro Football Talk",
+      "headline": "Aaron Donald isn't bothered by not having a sack since he returned to the Rams",
+      "published_at": "2026-10-30T03:08:55.000Z",
+      "observed_at": "2026-10-30T03:20:21.214Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR"
+      ],
+      "detected_category": "retirement",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-close-to-within-27-19",
+      "source_name": "Pro Football Talk",
+      "headline": "Panthers close to within 27-19 of Packers",
+      "published_at": "2026-10-30T03:06:32.000Z",
+      "observed_at": "2026-10-30T03:20:21.214Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR",
+        "GB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
