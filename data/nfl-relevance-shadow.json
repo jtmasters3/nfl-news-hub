@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/matt-lafleur-takes-12-3-record-vs-bears-into-sundays-showdown",
-      "source_name": "Pro Football Talk",
-      "headline": "Matt LaFleur takes 12-3 record vs. Bears into Sunday's showdown",
-      "published_at": "2026-10-11T04:47:25.000Z",
-      "observed_at": "2026-10-11T05:00:23.859Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "GB"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kirk-cousins-is-having-a-rare-debut-run-with-the-raiders",
       "source_name": "Pro Football Talk",
       "headline": "Kirk Cousins is having a rare debut run with the Raiders",
@@ -41830,6 +41808,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/2026-nfl-trade-deadline-potential-landing-spots-for-rb-jonathan-taylor-s-budda-baker-and-more",
+      "source_name": "NFL.com",
+      "headline": "2026 NFL trade deadline: Potential landing spots for RB Jonathan Taylor, S Budda Baker and more",
+      "published_at": "2026-10-30T10:53:55.000Z",
+      "observed_at": "2026-10-30T23:00:36.314Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "trade",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
