@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-place-lb-yasir-abdullah-on-ir",
-      "source_name": "Pro Football Talk",
-      "headline": "Falcons place LB Yasir Abdullah on IR",
-      "published_at": "2026-10-10T20:14:01.000Z",
-      "observed_at": "2026-10-10T20:20:16.973Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chargers-put-trey-lance-on-injured-reserve-make-several-other-roster-moves",
       "source_name": "Pro Football Talk",
       "headline": "Chargers put Trey Lance on injured reserve, make several other roster moves",
@@ -41821,6 +41800,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/new-appeals-court-ruling-could-end-sunday-ticket",
+      "source_name": "Pro Football Talk",
+      "headline": "New appeals court ruling could end Sunday Ticket",
+      "published_at": "2026-10-30T19:31:08.000Z",
+      "observed_at": "2026-10-30T19:40:21.396Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
