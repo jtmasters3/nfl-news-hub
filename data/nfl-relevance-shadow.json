@@ -2,105 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-fines-three-browns-players-including-deshaun-watson-for-smoking-celebration",
-      "source_name": "Pro Football Talk",
-      "headline": "NFL fines three Browns players, including Deshaun Watson, for smoking celebration",
-      "published_at": "2026-10-10T21:16:59.000Z",
-      "observed_at": "2026-10-10T21:20:17.911Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-cut-matthew-judon-from-practice-squad",
-      "source_name": "Pro Football Talk",
-      "headline": "49ers cut Matthew Judon from practice squad",
-      "published_at": "2026-10-10T21:39:50.000Z",
-      "observed_at": "2026-10-10T21:50:23.071Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "free_agency",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad",
-        "nfl_preserving_category:free_agency"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-issues-season-high-10-fines-for-player-safety-fouls-in-week-4",
-      "source_name": "Pro Football Talk",
-      "headline": "NFL issues season-high 10 fines for player safety fouls in Week 4",
-      "published_at": "2026-10-10T21:57:13.000Z",
-      "observed_at": "2026-10-10T22:00:26.089Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/arch-mannings-two-fourth-quarter-interceptions-doom-texas-in-loss-to-oklahoma",
-      "source_name": "Pro Football Talk",
-      "headline": "Arch Manning's two fourth-quarter interceptions doom Texas in loss to Oklahoma",
-      "published_at": "2026-10-10T23:38:09.000Z",
-      "observed_at": "2026-10-10T23:40:20.263Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/john-franklin-myers-was-fined-only-12-537-for-kneeing-derrick-henry-in-the-stomach",
-      "source_name": "Pro Football Talk",
-      "headline": "John Franklin-Myers was fined only $12,537 for kneeing Derrick Henry in the stomach",
-      "published_at": "2026-10-11T00:46:37.000Z",
-      "observed_at": "2026-10-11T00:50:18.951Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "TEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sundays-games-could-become-a-significant-factor-in-the-marvin-harrison-jr-trade",
       "source_name": "Pro Football Talk",
       "headline": "Sunday's games could become a significant factor in the Marvin Harrison Jr. trade",
@@ -41807,6 +41708,115 @@
       "detected_teams": [
         "LV",
         "NYJ"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/new-bears-dt-jeffery-simmons-understands-super-bowl-goal-in-chicago-they-want-it-right-now",
+      "source_name": "NFL.com",
+      "headline": "New Bears DT Jeffery Simmons understands Super Bowl goal in Chicago: 'They want it right now'",
+      "published_at": "2026-10-30T08:28:02.000Z",
+      "observed_at": "2026-10-30T20:40:21.357Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "TEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-list-trent-mcduffie-coleman-shelton-as-questionable",
+      "source_name": "Pro Football Talk",
+      "headline": "Rams list Trent McDuffie, Coleman Shelton as questionable",
+      "published_at": "2026-10-30T20:36:39.000Z",
+      "observed_at": "2026-10-30T20:40:21.357Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC",
+        "LAR"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ladd-mcconkey-set-to-play-derwin-james-out-vs-rams",
+      "source_name": "Pro Football Talk",
+      "headline": "Ladd McConkey set to play, Derwin James out vs. Rams",
+      "published_at": "2026-10-30T20:35:56.000Z",
+      "observed_at": "2026-10-30T20:40:21.357Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC",
+        "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jeffery-simmons-says-calling-caleb-williams-painted-nails-was-just-smack-talk",
+      "source_name": "Pro Football Talk",
+      "headline": "Jeffery Simmons says calling Caleb Williams \"Painted Nails\" was \"just smack talk\"",
+      "published_at": "2026-10-30T20:34:01.000Z",
+      "observed_at": "2026-10-30T20:40:21.357Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dolphins-claim-de-jamree-kromah-off-waivers",
+      "source_name": "Pro Football Talk",
+      "headline": "Dolphins claim DE Jamree Kromah off waivers",
+      "published_at": "2026-10-30T20:29:09.000Z",
+      "observed_at": "2026-10-30T20:40:21.357Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIA",
+        "NE"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
