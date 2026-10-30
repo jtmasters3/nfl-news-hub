@@ -2,48 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-broncos-to-put-pat-bryant-on-injured-reserve",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Broncos to put Pat Bryant on injured reserve",
-      "published_at": "2026-10-09T19:48:47.000Z",
-      "observed_at": "2026-10-09T20:00:24.962Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/zay-flowers-marlon-humphrey-questionable-for-ravens-this-weekend",
-      "source_name": "Pro Football Talk",
-      "headline": "Zay Flowers, Marlon Humphrey questionable for Ravens this weekend",
-      "published_at": "2026-10-09T20:09:26.000Z",
-      "observed_at": "2026-10-09T20:20:17.113Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/malik-nabers-has-no-injury-designation-for-sunday",
       "source_name": "Pro Football Talk",
       "headline": "Malik Nabers has no injury designation for Sunday",
@@ -41824,6 +41782,44 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/joey-porter-jr-has-lived-up-to-cowboys-expectations-so-is-he-in-their-long-term-plans",
+      "source_name": "NFL.com",
+      "headline": "Joey Porter Jr. has lived up to Cowboys' expectations, so is he in their long-term plans?",
+      "published_at": "2026-10-30T11:01:06.000Z",
+      "observed_at": "2026-10-30T13:20:26.489Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/why-doesn-t-rookie-cyrus-allen-play-more-he-has-an-offense-to-learn-inside-and-out",
+      "source_name": "NFL.com",
+      "headline": "Why doesn't rookie Cyrus Allen play more? He has an offense to learn inside and out",
+      "published_at": "2026-10-30T10:46:08.000Z",
+      "observed_at": "2026-10-30T13:20:26.489Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
