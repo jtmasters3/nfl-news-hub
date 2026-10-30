@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sundays-games-could-become-a-significant-factor-in-the-marvin-harrison-jr-trade",
-      "source_name": "Pro Football Talk",
-      "headline": "Sunday's games could become a significant factor in the Marvin Harrison Jr. trade",
-      "published_at": "2026-10-11T00:58:23.000Z",
-      "observed_at": "2026-10-11T01:00:27.358Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "trade",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-fines-quinn-meinerz-for-posting-notice-of-drug-test-after-flattening-aaron-donald",
-      "source_name": "Pro Football Talk",
-      "headline": "NFL fines Quinn Meinerz for posting notice of drug test after flattening Aaron Donald",
-      "published_at": "2026-10-11T01:23:09.000Z",
-      "observed_at": "2026-10-11T01:30:20.461Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN",
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/packers-will-honor-mike-ditka-with-a-moment-of-silence-before-sundays-game-vs-bears",
       "source_name": "Pro Football Talk",
       "headline": "Packers will honor Mike Ditka with a moment of silence before Sunday's game vs. Bears",
@@ -41817,6 +41778,49 @@
       "detected_teams": [
         "MIA",
         "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/colts-wide-receiver-josh-downs-will-play-vs-jaguars-despite-trade-request",
+      "source_name": "NFL.com",
+      "headline": "Colts wide receiver Josh Downs will play vs. Jaguars despite trade request",
+      "published_at": "2026-10-30T08:01:06.000Z",
+      "observed_at": "2026-10-30T20:50:19.469Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "JAX"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/jonathan-gannon-has-packers-pass-rush-buzzing-soon-enough-he-ll-get-to-deploy-micah-parsons",
+      "source_name": "NFL.com",
+      "headline": "Jonathan Gannon has Packers pass rush buzzing. Soon enough, he'll get to deploy Micah Parsons",
+      "published_at": "2026-10-30T07:31:07.000Z",
+      "observed_at": "2026-10-30T20:50:19.469Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
