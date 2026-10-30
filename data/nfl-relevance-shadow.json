@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-rodgers-set-to-move-ahead-of-peyton-manning-on-the-all-time-touchdown-pass-list",
-      "source_name": "Pro Football Talk",
-      "headline": "Aaron Rodgers set to move ahead of Peyton Manning on the all-time touchdown pass list",
-      "published_at": "2026-10-10T08:38:21.000Z",
-      "observed_at": "2026-10-10T08:40:18.775Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/alvin-kamara-will-soon-become-the-sixth-nfl-player-with-5-000-yards-rushing-and-receiving",
       "source_name": "Pro Football Talk",
       "headline": "Alvin Kamara will soon become the sixth NFL player with 5,000 yards rushing and receiving",
@@ -41806,6 +41789,27 @@
         "GB"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/shane-steichen-confirms-josh-downs-requested-a-trade-and-will-play-sunday",
+      "source_name": "Pro Football Talk",
+      "headline": "Shane Steichen confirms Josh Downs requested a trade and will play Sunday",
+      "published_at": "2026-10-30T17:08:31.000Z",
+      "observed_at": "2026-10-30T17:10:19.914Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
