@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/baltimore-ravens-lamar-jackson-qb-ankle-injury",
-      "source_name": "FOX Sports",
-      "headline": "Ravens' Lamar Jackson Ruled Out For Week 5, Tyler Huntley Set To Start",
-      "published_at": "2026-10-09T19:05:35.000Z",
-      "observed_at": "2026-10-09T19:10:17.612Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "BAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/todd-bowles-hot-seat-buccaneers-beat-cowboys-week-5",
       "source_name": "FOX Sports",
       "headline": "Todd Bowles Shows Why He Deserves Chance To Resurrect The Buccaneers’ Season",
@@ -41833,6 +41811,28 @@
         "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/2027-nfl-draft-big-board-6-qbs-rank-among-top-50-overall-prospects",
+      "source_name": "FOX Sports",
+      "headline": "2027 NFL Draft Big Board: 6 QBs Rank Among Top 50 Overall Prospects",
+      "published_at": "2026-10-30T12:00:08.000Z",
+      "observed_at": "2026-10-30T12:20:25.070Z",
+      "decision": "keep",
+      "classification": "nfl_with_college_context",
+      "confidence": "high",
+      "detected_teams": [],
+      "detected_category": "draft",
+      "nfl_evidence": [
+        "phrase_nfl_draft",
+        "nfl_preserving_category:draft"
+      ],
+      "non_nfl_evidence": [
+        "college_football_phrase"
+      ],
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
