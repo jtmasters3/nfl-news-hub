@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/justin-jefferson-jordan-addison-questionable-for-sunday-vs-saints",
-      "source_name": "Pro Football Talk",
-      "headline": "Justin Jefferson, Jordan Addison questionable for Sunday vs. Saints",
-      "published_at": "2026-10-09T18:20:37.000Z",
-      "observed_at": "2026-10-09T18:30:23.330Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN",
-        "NO"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-eagles-to-release-andy-dalton",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Eagles to release Andy Dalton",
-      "published_at": "2026-10-09T18:36:24.000Z",
-      "observed_at": "2026-10-09T18:40:19.050Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jerry-jones-extraordinarily-extraordinarily-disappointed-by-cowboys-loss-to-buccaneers",
       "source_name": "Pro Football Talk",
       "headline": "Jerry Jones \"Extraordinarily, extraordinarily disappointed\" by Cowboys' loss to Buccaneers",
@@ -41833,6 +41790,44 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/eventos-de-fans-en-madrid",
+      "source_name": "NFL.com",
+      "headline": "Eventos de fans en Madrid",
+      "published_at": "2026-10-28T10:06:00.000Z",
+      "observed_at": "2026-10-30T10:30:22.084Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/robert-saleh-titans-arent-shopping-anyone-but-when-youre-1-6-teams-call-you",
+      "source_name": "Pro Football Talk",
+      "headline": "Robert Saleh: Titans aren't shopping anyone, but when you're 1-6 teams call you",
+      "published_at": "2026-10-30T10:27:40.000Z",
+      "observed_at": "2026-10-30T10:30:22.084Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "TEN"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
