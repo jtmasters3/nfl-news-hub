@@ -637583,24 +637583,29 @@
     },
     "6be6448d-fb36-47fe-a2e6-c0a49b8eb9fa": {
       "story_id": "6be6448d-fb36-47fe-a2e6-c0a49b8eb9fa",
-      "status": "new",
+      "status": "queued",
       "merged_into": null,
       "created_at": "2026-10-30T01:40:29.134Z",
-      "updated_at": "2026-10-30T01:40:29.134Z",
+      "updated_at": "2026-10-30T17:00:34.651Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
         "instagram_story": true
       },
       "source_story": {
-        "post_headline": null,
-        "base_image_url": null,
-        "source_name": null,
-        "source_url": null,
-        "category": null,
-        "teams": [],
-        "players": [],
-        "description": null,
+        "post_headline": "PACKERS RECEIVER CHRISTIAN WATSON TALKS EPIC 'WWE' RETURN AGAINST PANTHERS",
+        "base_image_url": "https://a57.foxsports.com/statics.foxsports.com/www.foxsports.com/content/uploads/2026/10/1294/728/watson1.jpg?ve=1&tl=1",
+        "source_name": "FOX Sports",
+        "source_url": "https://www.foxsports.com/stories/nfl/christian-watson-return-packers-wide-receivers-injuries",
+        "category": "injury",
+        "teams": [
+          "Green Bay Packers",
+          "Carolina Panthers"
+        ],
+        "players": [
+          "Christian Watson"
+        ],
+        "description": "The Packers receiver injured his chest on a 53-yard reception.",
         "is_rumor": false
       },
       "artwork": {
@@ -641871,7 +641876,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-10-30T15:20:29.811Z",
-      "updated_at": "2026-10-30T16:00:29.963Z",
+      "updated_at": "2026-10-30T17:00:27.288Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -642023,13 +642028,13 @@
         "retry_count": 0
       },
       "selection": {
-        "destination": "feed",
-        "slot_id": "feed:2026-10-30T12:00:00-04:00",
-        "selected_at": "2026-10-30T16:00:29.963Z",
-        "window_start": "2026-10-30T14:00:00.000Z",
-        "window_end": "2026-10-30T16:00:00.000Z",
+        "destination": "story",
+        "slot_id": "story:2026-10-30T13:00:00-04:00",
+        "selected_at": "2026-10-30T17:00:27.288Z",
+        "window_start": "2026-10-30T16:00:00.000Z",
+        "window_end": "2026-10-30T17:00:00.000Z",
         "score": 10,
-        "reason": "importance_score_rank"
+        "reason": "fallback_recent_pool_importance_score_rank"
       }
     },
     "897d51f2-7023-4757-9fe1-bd9aa45054eb": {
@@ -652174,6 +652179,15 @@
       "status": "selected",
       "story_id": "897d51f2-7023-4757-9fe1-bd9aa45054eb",
       "processed_at": "2026-10-30T16:00:29.963Z"
+    },
+    "story:2026-10-30T13:00:00-04:00": {
+      "destination": "story",
+      "slot_time": "2026-10-30T17:00:00.000Z",
+      "window_start": "2026-10-30T16:00:00.000Z",
+      "window_end": "2026-10-30T17:00:00.000Z",
+      "status": "selected",
+      "story_id": "84010ff5-0850-43b9-8e24-3e3830c0e486",
+      "processed_at": "2026-10-30T17:00:27.288Z"
     }
   }
 }
