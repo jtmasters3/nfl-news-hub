@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/eagles-stars-saquon-barkley-and-devonta-smith-ruled-out-of-london-game-against-jaguars",
-      "source_name": "FOX Sports",
-      "headline": "Eagles Head To London Without Saquon Barkley, DeVonta Smith vs. Jaguars",
-      "published_at": "2026-10-09T21:17:46.000Z",
-      "observed_at": "2026-10-09T21:30:22.848Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "JAX",
-        "PHI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/los-angeles-chargers-lose-rashawn-slater-to-injured-reserve-after-right-ankle-surgery",
-      "source_name": "FOX Sports",
-      "headline": "Chargers Lose Rashawn Slater To IR After Right Ankle Surgery",
-      "published_at": "2026-10-09T21:31:30.000Z",
-      "observed_at": "2026-10-09T21:40:17.826Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAC",
-        "LAR"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/broncos-rule-out-pat-surtain-ii-riley-moss",
       "source_name": "Pro Football Talk",
       "headline": "Broncos rule out Pat Surtain II, Riley Moss",
@@ -41818,6 +41774,45 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/ashton-jeanty-jets-raiders-rb-new-york-defenders-war-of-words-week-8",
+      "source_name": "NFL.com",
+      "headline": "Ashton Jeanty vs. Jets: Raiders RB, Gang Green defenders in war of words ahead of Week 8 game",
+      "published_at": "2026-10-30T03:30:51.000Z",
+      "observed_at": "2026-10-30T15:40:20.024Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV",
+        "NYJ"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/news/osi-umenyiora-on-the-journey-that-led-to-nfl-africa",
+      "source_name": "Pro Football Talk",
+      "headline": "Osi Umenyiora on the journey that led to NFL Africa",
+      "published_at": "2026-10-30T15:35:41.000Z",
+      "observed_at": "2026-10-30T15:40:20.024Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
