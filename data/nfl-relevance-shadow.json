@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/j-k-dobbins-is-in-a-dark-spot-after-rough-start-to-2026",
-      "source_name": "Pro Football Talk",
-      "headline": "J.K. Dobbins is in a \"dark spot\" after rough start to 2026",
-      "published_at": "2026-10-09T19:14:40.000Z",
-      "observed_at": "2026-10-09T19:30:22.283Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ashton-jeanty-questionable-for-sunday-vs-patriots",
       "source_name": "Pro Football Talk",
       "headline": "Ashton Jeanty questionable for Sunday vs. Patriots",
@@ -41831,6 +41810,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/quenton-nelson-bittersweet-trade-colts-next-chapter-seahawks",
+      "source_name": "NFL.com",
+      "headline": "Quenton Nelson opens up on 'bittersweet' trade from Colts, 'next chapter' with Seahawks",
+      "published_at": "2026-10-30T12:41:43.000Z",
+      "observed_at": "2026-10-30T12:50:24.805Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "SEA"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
