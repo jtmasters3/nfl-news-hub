@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-saturday-oct-10",
-      "source_name": "NFL.com",
-      "headline": "NFL news roundup: Latest league updates from Saturday, Oct. 10",
-      "published_at": "2026-10-10T06:15:01.000Z",
-      "observed_at": "2026-10-10T18:20:19.415Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/darron-lees-trial-is-set-for-september-20-2027",
-      "source_name": "Pro Football Talk",
-      "headline": "Darron Lee's murder trial is set for September 20, 2027",
-      "published_at": "2026-10-10T18:38:57.000Z",
-      "observed_at": "2026-10-10T18:50:18.138Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYJ",
-        "TEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-will-elevate-odell-beckham-jr-from-practice-squad",
       "source_name": "Pro Football Talk",
       "headline": "Vikings will elevate Odell Beckham Jr. from practice squad",
@@ -41816,6 +41777,45 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "phrase_practice_squad"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/appeals-court-reinstates-4-7-billion-verdict-against-nfl-in-sunday-ticket-class-action",
+      "source_name": "Pro Football Talk",
+      "headline": "Appeals court reinstates $4.7 billion verdict against NFL in Sunday Ticket class action",
+      "published_at": "2026-10-30T19:01:16.000Z",
+      "observed_at": "2026-10-30T19:10:21.027Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/joe-brady-we-know-were-going-to-get-the-best-version-of-lamar-jackson",
+      "source_name": "Pro Football Talk",
+      "headline": "Joe Brady: We know we’re going to get the best version of Lamar Jackson",
+      "published_at": "2026-10-30T18:58:20.000Z",
+      "observed_at": "2026-10-30T19:10:21.027Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "BUF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
