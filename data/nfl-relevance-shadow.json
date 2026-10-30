@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/mike-ditka-dies-at-86-nfl-community-mourns-iconic-hall-of-famer-and-bears-legend",
-      "source_name": "NFL.com",
-      "headline": "Mike Ditka dies at 86: NFL community mourns iconic Hall of Famer and Bears legend",
-      "published_at": "2026-10-09T05:15:28.000Z",
-      "observed_at": "2026-10-09T17:30:24.074Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patriots-rule-out-christian-gonzalez-mack-hollins-carlton-davis",
       "source_name": "Pro Football Talk",
       "headline": "Patriots rule out Christian Gonzalez, Mack Hollins, Carlton Davis",
@@ -41842,6 +41821,27 @@
         "GB"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/christian-watson-cleared-on-his-way-back-to-lambeau-from-hospital",
+      "source_name": "Pro Football Talk",
+      "headline": "Christian Watson cleared, on his way back to Lambeau from hospital",
+      "published_at": "2026-10-30T02:15:16.000Z",
+      "observed_at": "2026-10-30T02:20:24.141Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
