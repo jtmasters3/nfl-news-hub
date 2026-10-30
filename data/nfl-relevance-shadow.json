@@ -2,72 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-list-keenan-allen-darius-slayton-as-questionable",
-      "source_name": "Pro Football Talk",
-      "headline": "Colts list Keenan Allen, Darius Slayton as questionable",
-      "published_at": "2026-10-09T19:41:39.000Z",
-      "observed_at": "2026-10-09T19:50:21.175Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/caleb-williams-questionable-after-a-limited-practice",
-      "source_name": "Pro Football Talk",
-      "headline": "Caleb Williams questionable after a limited practice",
-      "published_at": "2026-10-09T19:37:48.000Z",
-      "observed_at": "2026-10-09T19:50:21.175Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-release-dl-ogbo-okoronkwo",
-      "source_name": "Pro Football Talk",
-      "headline": "49ers release DL Ogbo Okoronkwo",
-      "published_at": "2026-10-09T19:51:41.000Z",
-      "observed_at": "2026-10-09T20:00:24.962Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "free_agency",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:free_agency"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-broncos-to-put-pat-bryant-on-injured-reserve",
       "source_name": "Pro Football Talk",
       "headline": "Report: Broncos to put Pat Bryant on injured reserve",
@@ -41825,6 +41759,65 @@
         "SEA"
       ],
       "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/how-nfl-rbs-are-trying-to-protect-against-peanut-punch-amid-a-fumbling-frenzy",
+      "source_name": "NFL.com",
+      "headline": "How NFL RBs are trying to protect against 'Peanut Punch' amid a fumbling frenzy",
+      "published_at": "2026-10-30T10:01:07.000Z",
+      "observed_at": "2026-10-30T13:10:20.659Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/saquon-barkley-on-the-trade-block-what-an-eagles-sell-off-could-look-like",
+      "source_name": "NFL.com",
+      "headline": "Saquon Barkley on the trade block? What an Eagles sell-off could look like",
+      "published_at": "2026-10-30T10:01:07.000Z",
+      "observed_at": "2026-10-30T13:10:20.659Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/aaron-glenn-is-unlikely-to-be-fired-in-season-here-s-his-path-to-remaining-jets-coach-in-2027",
+      "source_name": "NFL.com",
+      "headline": "Aaron Glenn is unlikely to be fired in-season; here's his path to remaining Jets coach in 2027",
+      "published_at": "2026-10-30T09:31:07.000Z",
+      "observed_at": "2026-10-30T13:10:20.659Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYJ"
+      ],
+      "detected_category": "coaching",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
