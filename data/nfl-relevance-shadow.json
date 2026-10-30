@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/broncos-rule-out-pat-surtain-ii-riley-moss",
-      "source_name": "Pro Football Talk",
-      "headline": "Broncos rule out Pat Surtain II, Riley Moss",
-      "published_at": "2026-10-09T21:30:59.000Z",
-      "observed_at": "2026-10-09T21:40:17.826Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN",
-        "LAC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-wide-receiver-mike-evans-has-no-injury-designation",
-      "source_name": "Pro Football Talk",
-      "headline": "49ers wide receiver Mike Evans has no injury designation",
-      "published_at": "2026-10-09T21:29:58.000Z",
-      "observed_at": "2026-10-09T21:40:17.826Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF",
-        "SEA"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/eagles-jeffrey-lurie-announces-670-000-in-funding-for-london-based-autism-research",
       "source_name": "NFL.com",
       "headline": "Eagles' Jeffrey Lurie announces $670,000 in funding for London-based Autism research",
@@ -41813,6 +41769,46 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-oct-30",
+      "source_name": "NFL.com",
+      "headline": "NFL news roundup: Latest league updates from Friday, Oct. 30",
+      "published_at": "2026-10-30T03:57:19.000Z",
+      "observed_at": "2026-10-30T16:00:29.963Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bills-spencer-brown-took-enough-drugs-to-sedate-a-small-elephant-to-play-with-back-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Bills' Spencer Brown \"took enough drugs to sedate a small elephant\" to play with back injury",
+      "published_at": "2026-10-30T15:54:46.000Z",
+      "observed_at": "2026-10-30T16:00:29.963Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "LV",
+        "LAR"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
