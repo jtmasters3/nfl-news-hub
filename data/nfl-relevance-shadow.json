@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jordan-love-hits-christian-watson-for-42-yard-td-packers-lead-7-0",
-      "source_name": "Pro Football Talk",
-      "headline": "Jordan Love hits Christian Watson for 42-yard TD, Packers lead 7-0",
-      "published_at": "2026-10-11T17:19:06.000Z",
-      "observed_at": "2026-10-11T17:30:20.648Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kc-concepcion-ruled-out-with-head-injury-browns-cut-jets-lead-to-7-3",
-      "source_name": "Pro Football Talk",
-      "headline": "KC Concepcion ruled out with head injury, Browns cut Jets lead to 7-3",
-      "published_at": "2026-10-11T17:32:31.000Z",
-      "observed_at": "2026-10-11T17:40:19.193Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE",
-        "NYJ"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-rodgers-throws-580th-td-pass-counting-playoffs-for-third-all-time",
       "source_name": "Pro Football Talk",
       "headline": "Aaron Rodgers throws 580th TD pass, counting playoffs, for third all-time",
@@ -41780,6 +41736,47 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-elevate-de-carl-lawson-cb-johnathan-edwards",
+      "source_name": "Pro Football Talk",
+      "headline": "Colts elevate DE Carl Lawson, CB Johnathan Edwards",
+      "published_at": "2026-10-31T16:47:37.000Z",
+      "observed_at": "2026-10-31T16:50:22.930Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "JAX"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-will-review-the-new-allegations-against-josh-jacobs",
+      "source_name": "Pro Football Talk",
+      "headline": "NFL \"will review\" the new allegations against Josh Jacobs",
+      "published_at": "2026-10-31T16:44:47.000Z",
+      "observed_at": "2026-10-31T16:50:22.930Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
