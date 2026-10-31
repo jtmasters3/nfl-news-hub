@@ -2,66 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tyson-bagent-interception-leads-to-marshawn-lloyd-td-packers-up-14-0",
-      "source_name": "Pro Football Talk",
-      "headline": "Tyson Bagent interception leads to Marshawn Lloyd TD, Packers up 14-0",
-      "published_at": "2026-10-11T17:40:13.000Z",
-      "observed_at": "2026-10-11T17:50:20.626Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/marvin-harrison-jr-trade-is-past-the-point-of-no-return",
-      "source_name": "Pro Football Talk",
-      "headline": "Marvin Harrison Jr. trade is past the point of no return",
-      "published_at": "2026-10-11T17:48:24.000Z",
-      "observed_at": "2026-10-11T18:00:25.692Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "trade",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-take-14-6-lead-on-colts-on-aaron-rodgers-second-td-throw",
-      "source_name": "Pro Football Talk",
-      "headline": "Steelers take 14-6 lead on Colts on Aaron Rodgers' second TD throw",
-      "published_at": "2026-10-11T17:49:43.000Z",
-      "observed_at": "2026-10-11T18:00:25.692Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "PIT"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/2026-nfl-season-week-5-what-we-learned-from-sunday-s-games",
       "source_name": "NFL.com",
       "headline": "2026 NFL season, Week 5: What We Learned from Sunday's games",
@@ -41777,6 +41717,69 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/broncos-alex-singleton-a-year-after-cancer-diagnosis-tackling-something-bigger-than-football",
+      "source_name": "NFL.com",
+      "headline": "Broncos' Alex Singleton, a year after cancer diagnosis, tackling something bigger than football",
+      "published_at": "2026-10-31T10:16:05.000Z",
+      "observed_at": "2026-10-31T17:30:23.240Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/lions-safety-kerby-joseph-s-return-to-practice-is-good-news-for-him-and-the-team",
+      "source_name": "NFL.com",
+      "headline": "Lions safety Kerby Joseph's return to practice is good news for him and the team",
+      "published_at": "2026-10-30T09:01:07.000Z",
+      "observed_at": "2026-10-31T17:30:23.240Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patriots-rule-out-a-j-brown-treveyon-henderson",
+      "source_name": "Pro Football Talk",
+      "headline": "Patriots rule out A.J. Brown, TreVeyon Henderson",
+      "published_at": "2026-10-31T17:21:56.000Z",
+      "observed_at": "2026-10-31T17:30:23.240Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
