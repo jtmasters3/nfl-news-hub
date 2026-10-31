@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/will-shipley-touchdown-run-ties-eagles-and-jaguars-7-7-in-london",
-      "source_name": "Pro Football Talk",
-      "headline": "Will Shipley touchdown run ties Eagles and Jaguars 7-7 in London",
-      "published_at": "2026-10-11T14:34:26.000Z",
-      "observed_at": "2026-10-11T14:40:18.316Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "JAX",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/darius-cooper-62-yard-touchdown-gives-eagles-lead-over-jaguars-in-london",
       "source_name": "Pro Football Talk",
       "headline": "Darius Cooper 62-yard touchdown gives Eagles lead over Jaguars in London",
@@ -41789,6 +41767,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50333636/records-show-3-other-women-accused-packers-josh-jacobs-abuse",
+      "source_name": "ESPN",
+      "headline": "Records reveal 3 other women accused Packers' Jacobs of abuse after arrest",
+      "published_at": "2026-10-31T07:21:34.000Z",
+      "observed_at": "2026-10-31T07:30:29.234Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
