@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/giants-put-j-j-mccarthy-in-for-one-play",
-      "source_name": "Pro Football Talk",
-      "headline": "Giants put J.J. McCarthy in for one play",
-      "published_at": "2026-10-11T17:21:58.000Z",
-      "observed_at": "2026-10-11T17:30:20.648Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaguars-win-wild-one-in-london-19-17-on-cam-little-field-goal-as-time-expires",
       "source_name": "Pro Football Talk",
       "headline": "Jaguars win wild one in London, 19-17 on Cam Little field goal as time expires",
@@ -41779,6 +41758,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/packers-micah-parsons-knee-targeting-thanksgiving-eve-return",
+      "source_name": "NFL.com",
+      "headline": "NFL Network: Packers, Micah Parsons (knee) targeting Thanksgiving Eve return vs. Rams",
+      "published_at": "2026-10-31T03:55:46.000Z",
+      "observed_at": "2026-10-31T16:10:18.083Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
+        "LAR"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
