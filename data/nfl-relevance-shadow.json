@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaguars-take-7-0-lead-on-51-yard-touchdown-catch-and-run-by-parker-washington",
-      "source_name": "Pro Football Talk",
-      "headline": "Jaguars take 7-0 lead on 51-yard touchdown catch-and-run by Parker Washington",
-      "published_at": "2026-10-11T14:04:36.000Z",
-      "observed_at": "2026-10-11T14:10:22.721Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "JAX",
-        "WAS"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-touchdown-drought-isnt-keeping-them-from-winning",
       "source_name": "Pro Football Talk",
       "headline": "Vikings' touchdown drought isn't keeping them from winning",
@@ -41788,6 +41766,27 @@
         "GB"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-daron-payne-has-a-significant-foot-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Daron Payne has a significant foot injury",
+      "published_at": "2026-10-31T02:39:58.000Z",
+      "observed_at": "2026-10-31T02:50:19.311Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "WAS"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
