@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/justin-jefferson-will-play-for-vikings-jordan-addison-and-odell-beckham-jr-will-not",
-      "source_name": "Pro Football Talk",
-      "headline": "Justin Jefferson will play for Vikings, Jordan Addison and Odell Beckham Jr. will not",
-      "published_at": "2026-10-11T15:36:23.000Z",
-      "observed_at": "2026-10-11T15:50:20.083Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/caleb-williams-officially-inactive-for-bears-tyson-bagent-set-to-start-against-packers",
       "source_name": "Pro Football Talk",
       "headline": "Caleb Williams officially inactive for Bears, Tyson Bagent set to start against Packers",
@@ -41781,6 +41760,31 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jonathan-taylor-trade-talks-are-active-and-ongoing",
+      "source_name": "Pro Football Talk",
+      "headline": "Jonathan Taylor trade talks are \"active and ongoing\"",
+      "published_at": "2026-10-31T12:08:08.000Z",
+      "observed_at": "2026-10-31T12:20:18.667Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "GB",
+        "MIN",
+        "NYG",
+        "SEA"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
