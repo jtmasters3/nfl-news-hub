@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-lead-colts-17-13-at-halftime",
-      "source_name": "Pro Football Talk",
-      "headline": "Steelers lead Colts 17-13 at halftime",
-      "published_at": "2026-10-11T18:33:58.000Z",
-      "observed_at": "2026-10-11T18:40:19.461Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "PIT"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jets-hold-7-6-lead-over-browns-at-halftime",
       "source_name": "Pro Football Talk",
       "headline": "Jets hold 7-6 lead over Browns at halftime",
@@ -41779,6 +41757,27 @@
         "KC"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-ruled-out-four-players-elevate-two",
+      "source_name": "Pro Football Talk",
+      "headline": "Falcons rule out four players, elevate two",
+      "published_at": "2026-10-31T20:13:51.000Z",
+      "observed_at": "2026-10-31T20:20:20.300Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
