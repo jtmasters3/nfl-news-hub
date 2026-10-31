@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kirk-cousins-is-having-a-rare-debut-run-with-the-raiders",
-      "source_name": "Pro Football Talk",
-      "headline": "Kirk Cousins is having a rare debut run with the Raiders",
-      "published_at": "2026-10-11T05:02:51.000Z",
-      "observed_at": "2026-10-11T05:10:16.079Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/dolphins-vs-bengals-prediction-odds-pick-nfl-week-5",
       "source_name": "FOX Sports",
       "headline": "Dolphins vs. Bengals Prediction, Odds, Pick For NFL Week 5",
@@ -41825,6 +41804,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-sixth-round-rookie-anterio-thompson-says-he-was-told-hell-never-play-again",
+      "source_name": "Pro Football Talk",
+      "headline": "Falcons sixth-round rookie Anterio Thompson says he was told he'll never play again",
+      "published_at": "2026-10-31T01:26:48.000Z",
+      "observed_at": "2026-10-31T01:30:23.993Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
