@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-rodgers-throws-580th-td-pass-counting-playoffs-for-third-all-time",
-      "source_name": "Pro Football Talk",
-      "headline": "Aaron Rodgers throws 580th TD pass, counting playoffs, for third all-time",
-      "published_at": "2026-10-11T17:31:36.000Z",
-      "observed_at": "2026-10-11T17:40:19.193Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-jones-questionable-to-return-with-knee-injury-t-j-hockenson-ruled-out",
-      "source_name": "Pro Football Talk",
-      "headline": "Aaron Jones questionable to return with knee injury, T.J. Hockenson ruled out",
-      "published_at": "2026-10-11T17:44:30.000Z",
-      "observed_at": "2026-10-11T17:50:20.626Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tyson-bagent-interception-leads-to-marshawn-lloyd-td-packers-up-14-0",
       "source_name": "Pro Football Talk",
       "headline": "Tyson Bagent interception leads to Marshawn Lloyd TD, Packers up 14-0",
@@ -41768,6 +41730,44 @@
       "headline": "NFL \"will review\" the new allegations against Josh Jacobs",
       "published_at": "2026-10-31T16:44:47.000Z",
       "observed_at": "2026-10-31T16:50:22.930Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/adding-jeffery-simmons-shows-gm-ryan-poles-bears-have-realistic-super-bowl-hopes",
+      "source_name": "NFL.com",
+      "headline": "Adding Jeffery Simmons shows GM Ryan Poles, Bears have realistic Super Bowl hopes",
+      "published_at": "2026-10-31T10:46:04.000Z",
+      "observed_at": "2026-10-31T17:20:23.726Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/the-nfl-isn-t-built-for-aging-players-these-veterans-found-a-way-to-survive",
+      "source_name": "NFL.com",
+      "headline": "The NFL isn't built for aging players. These veterans found a way to survive",
+      "published_at": "2026-10-31T08:01:05.000Z",
+      "observed_at": "2026-10-31T17:20:23.726Z",
       "decision": "keep",
       "classification": "ambiguous",
       "confidence": "low",
