@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/2026-nfl-season-week-5-what-we-learned-from-sunday-s-games",
-      "source_name": "NFL.com",
-      "headline": "2026 NFL season, Week 5: What We Learned from Sunday's games",
-      "published_at": "2026-10-11T06:03:00.000Z",
-      "observed_at": "2026-10-11T18:10:21.498Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/steelers-aaron-rodgers-breaks-tie-peyton-manning-third-all-time-career-td-passes",
       "source_name": "NFL.com",
       "headline": "Steelers' Aaron Rodgers breaks tie with Peyton Manning for third all time in career TD passes",
@@ -41774,6 +41757,28 @@
         "NE"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/patriots-rule-out-wr-a-j-brown-ankle-knee-rb-treveyon-henderson-illness-for-sunday-vs-dolphins",
+      "source_name": "NFL.com",
+      "headline": "Patriots rule out A.J. Brown (ankle/knee), TreVeyon Henderson (illness) for Sunday vs. Dolphins",
+      "published_at": "2026-10-31T05:45:45.000Z",
+      "observed_at": "2026-10-31T18:00:26.760Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIA",
+        "NE"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
