@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/notable-injuries-news-sunday-week-5-games-2026",
-      "source_name": "NFL.com",
-      "headline": "Notable injuries, news from Sunday's Week 5 games: Eagles LB, Jaguars DE ejected on opening kickoff",
-      "published_at": "2026-10-11T01:50:32.000Z",
-      "observed_at": "2026-10-11T14:00:24.293Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "JAX",
-        "PHI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaguars-take-7-0-lead-on-51-yard-touchdown-catch-and-run-by-parker-washington",
       "source_name": "Pro Football Talk",
       "headline": "Jaguars take 7-0 lead on 51-yard touchdown catch-and-run by Parker Washington",
@@ -41789,6 +41767,27 @@
         "DEN"
       ],
       "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jordan-love-passes-brett-favre-for-multi-touchdown-games-to-start-season",
+      "source_name": "Pro Football Talk",
+      "headline": "Jordan Love passes Brett Favre for multi-touchdown games to start season",
+      "published_at": "2026-10-31T02:12:51.000Z",
+      "observed_at": "2026-10-31T02:20:22.065Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
