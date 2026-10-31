@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/darius-cooper-62-yard-touchdown-gives-eagles-lead-over-jaguars-in-london",
-      "source_name": "Pro Football Talk",
-      "headline": "Darius Cooper 62-yard touchdown gives Eagles lead over Jaguars in London",
-      "published_at": "2026-10-11T14:47:29.000Z",
-      "observed_at": "2026-10-11T15:00:28.457Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "JAX",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-omitted-lane-johnson-from-public-list-of-inactive-players-for-sunday",
       "source_name": "Pro Football Talk",
       "headline": "Eagles omitted Lane Johnson from public list of inactive players for Sunday",
@@ -41788,6 +41766,25 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/after-josh-jacobs-was-arrested-three-other-women-told-police-he-had-abused-them-too",
+      "source_name": "Pro Football Talk",
+      "headline": "After Josh Jacobs was arrested, three other women told police he had abused them, too",
+      "published_at": "2026-10-31T08:14:54.000Z",
+      "observed_at": "2026-10-31T08:20:21.609Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
