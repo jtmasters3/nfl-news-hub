@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rashid-shaheeds-past-as-a-running-back-is-coming-in-handy-now",
-      "source_name": "Pro Football Talk",
-      "headline": "Rashid Shaheed's past as a running back is coming in handy now",
-      "published_at": "2026-10-11T18:02:59.000Z",
-      "observed_at": "2026-10-11T18:10:21.498Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tyler-warrens-td-run-draws-colts-to-within-14-13-of-steelers",
-      "source_name": "Pro Football Talk",
-      "headline": "Tyler Warren's TD run draws Colts to within 14-13 of Steelers",
-      "published_at": "2026-10-11T18:02:17.000Z",
-      "observed_at": "2026-10-11T18:10:21.498Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/fox-nfl-sunday-crew-remembers-mike-ditka",
       "source_name": "FOX Sports",
       "headline": "'FOX NFL Sunday' Crew Remembers NFL Legend Mike Ditka As 'One Of One'",
@@ -41785,6 +41742,45 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/broncos-rb-jonah-coleman-ready-for-any-opportunity-vs-chiefs-with-rj-harvey-ruled-out",
+      "source_name": "NFL.com",
+      "headline": "Broncos RB Jonah Coleman 'ready for any opportunity' vs. Chiefs with RJ Harvey ruled out",
+      "published_at": "2026-10-31T06:41:08.000Z",
+      "observed_at": "2026-10-31T18:50:18.232Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "KC"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/college-football/philip-rivers-consideration-north-carolina-state-head-coaching-job",
+      "source_name": "FOX Sports",
+      "headline": "Philip Rivers Reportedly Emerges As Focus Of NC State's Coaching Search",
+      "published_at": "2026-10-31T18:45:52.000Z",
+      "observed_at": "2026-10-31T18:50:18.232Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "coaching",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
