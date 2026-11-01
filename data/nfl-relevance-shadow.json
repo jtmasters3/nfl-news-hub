@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/joe-brady-buffalo-bills-head-coach",
-      "source_name": "FOX Sports",
-      "headline": "Joe Brady's Ready To Lead Bills To Super Bowl, Even If He's Not Thinking About It",
-      "published_at": "2026-10-12T05:25:37.000Z",
-      "observed_at": "2026-10-12T05:30:22.042Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/in-5-overtime-games-3-teams-have-chosen-to-kick-2-have-chosen-to-receive",
       "source_name": "Pro Football Talk",
       "headline": "In 5 overtime games, 3 teams have chosen to kick, 2 have chosen to receive",
@@ -41760,6 +41739,29 @@
       "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bills-lead-ravens-16-7-at-halftime",
+      "source_name": "Pro Football Talk",
+      "headline": "Bills lead Ravens 16-7 at halftime",
+      "published_at": "2026-11-01T19:49:55.000Z",
+      "observed_at": "2026-11-01T20:00:25.576Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "BUF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_udfa"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
