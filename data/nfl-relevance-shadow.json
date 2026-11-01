@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jets-snap-losing-streak-with-17-12-win-over-browns",
-      "source_name": "Pro Football Talk",
-      "headline": "Jets snap losing streak with 17-12 win over Browns",
-      "published_at": "2026-10-11T20:27:30.000Z",
-      "observed_at": "2026-10-11T20:30:26.359Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE",
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jordan-love-throws-for-367-yards-two-tds-in-31-7-victory-over-bears",
       "source_name": "Pro Football Talk",
       "headline": "Jordan Love throws for 367 yards, two TDs in 31-7 victory over Bears",
@@ -41772,6 +41750,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ben-johnson-jeffery-simmons-will-play-a-lot-maybe-not-a-full-workload-monday-night",
+      "source_name": "Pro Football Talk",
+      "headline": "Ben Johnson: Jeffery Simmons will play a lot, maybe not a full workload Monday night",
+      "published_at": "2026-11-01T12:28:08.000Z",
+      "observed_at": "2026-11-01T12:40:25.243Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "TEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
