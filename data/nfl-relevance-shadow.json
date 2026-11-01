@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/chicago-bears-qbs-flop-in-lopsided-loss-to-rival-packers-now-what",
-      "source_name": "NFL.com",
-      "headline": "Chicago Bears QBs flop in lopsided loss to rival Packers. Now what?",
-      "published_at": "2026-10-11T11:31:08.000Z",
-      "observed_at": "2026-10-11T23:50:19.726Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jeremiah-trotter-jr-bryan-thomas-jr-were-ejected-for-continuous-non-football-actions",
       "source_name": "Pro Football Talk",
       "headline": "Jeremiah Trotter Jr., Bryan Thomas Jr. were ejected for \"continuous, non-football actions\"",
@@ -41751,6 +41729,28 @@
         "PHI"
       ],
       "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-macdonald-hasnt-committed-to-jadarian-price-playing-on-monday",
+      "source_name": "Pro Football Talk",
+      "headline": "Mike Macdonald hasn't committed to Jadarian Price playing on Monday",
+      "published_at": "2026-11-01T16:09:40.000Z",
+      "observed_at": "2026-11-01T16:20:19.202Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "SEA"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
