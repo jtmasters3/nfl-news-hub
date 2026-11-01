@@ -2,42 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sunday-ticket-glitch-keeps-customers-from-watching-all-of-certain-late-afternoon-games",
-      "source_name": "Pro Football Talk",
-      "headline": "Sunday Ticket glitch keeps customers from watching all of certain late-afternoon games",
-      "published_at": "2026-10-12T10:24:25.000Z",
-      "observed_at": "2026-10-12T10:30:23.158Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/fernando-mendoza-good-to-gain-some-regular-season-experience",
-      "source_name": "Pro Football Talk",
-      "headline": "Fernando Mendoza: Good to gain some regular season experience",
-      "published_at": "2026-10-12T10:30:50.000Z",
-      "observed_at": "2026-10-12T10:40:18.411Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "draft",
-      "nfl_evidence": [
-        "nfl_preserving_category:draft"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/big-ten-admits-ref-blew-call-on-oregons-failed-two-point-conversion-in-17-15-loss-to-ucla",
       "source_name": "Pro Football Talk",
       "headline": "Big Ten admits ref blew call on Oregon's failed two-point conversion in 17-15 loss to UCLA",
@@ -41764,6 +41728,50 @@
       "detected_teams": [
         "DET",
         "MIN"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lions-take-12-7-lead-with-jahmyr-gibbs-30-yard-touchdown-run",
+      "source_name": "Pro Football Talk",
+      "headline": "Lions take 12-7 lead with Jahmyr Gibbs 30-yard touchdown run",
+      "published_at": "2026-11-01T20:16:22.000Z",
+      "observed_at": "2026-11-01T20:20:20.040Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "MIN"
+      ],
+      "detected_category": "live_game_state",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cardinals-rule-out-jeremiyah-love-bam-knight-kendrick-bourne",
+      "source_name": "Pro Football Talk",
+      "headline": "Cardinals rule out Jeremiyah Love, Bam Knight, Kendrick Bourne",
+      "published_at": "2026-11-01T20:09:16.000Z",
+      "observed_at": "2026-11-01T20:20:20.040Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI",
+        "DAL"
       ],
       "detected_category": "injury",
       "nfl_evidence": [
