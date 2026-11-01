@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-fallout-week-5-eagles-arent-contenders-should-start-rebuilding",
-      "source_name": "FOX Sports",
-      "headline": "NFL Fallout Week 5: The Eagles Aren't Contenders — And They Should Start Rebuilding",
-      "published_at": "2026-10-12T02:38:09.000Z",
-      "observed_at": "2026-10-12T02:50:16.342Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN",
-        "PHI",
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-odds-week-6-lines-spreads-results-all-14-games",
       "source_name": "FOX Sports",
       "headline": "2026 NFL Odds Week 6: Lines, Spreads, Results For All 14 Games",
@@ -41744,6 +41721,28 @@
         "ARI"
       ],
       "detected_category": "live_game_state",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/justin-herbert-has-gone-eight-straight-starts-without-multiple-tds",
+      "source_name": "Pro Football Talk",
+      "headline": "Justin Herbert has gone eight straight starts without multiple TDs",
+      "published_at": "2026-11-01T19:15:50.000Z",
+      "observed_at": "2026-11-01T19:20:19.475Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC",
+        "LAR"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
