@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/nick-sirianni-owns-costly-late-game-blunder-eagles-loss-i-lost-us-game",
-      "source_name": "FOX Sports",
-      "headline": "Nick Sirianni Takes Blame For Eagles Loss After Late-Game Blunder vs. Jaguars",
-      "published_at": "2026-10-11T20:12:06.000Z",
-      "observed_at": "2026-10-11T20:30:26.359Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "JAX",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jets-snap-losing-streak-with-17-12-win-over-browns",
       "source_name": "Pro Football Talk",
       "headline": "Jets snap losing streak with 17-12 win over Browns",
@@ -41777,6 +41755,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-dfs-week-8-best-picks-lineup-advice-value-plays",
+      "source_name": "FOX Sports",
+      "headline": "NFL DFS Week 8: Best Picks, Lineup Advice and Value Plays",
+      "published_at": "2026-11-01T11:00:50.000Z",
+      "observed_at": "2026-11-01T11:20:22.386Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "fantasy",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
