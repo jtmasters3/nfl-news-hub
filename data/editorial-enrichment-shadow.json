@@ -2,10 +2,207 @@
   "schema_version": 1,
   "observations": [
     {
+      "story_id": "c37890e4-4fd9-4eeb-971a-fac76b8ebaec",
+      "headline": "Chiefs lead Broncos 17-13 at halftime",
+      "first_published_at": "2026-11-01T23:07:55.000Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
+      "production_importance_score": 4,
+      "enrichment_status": "neutral",
+      "subject": {
+        "visual_subject": null,
+        "visual_subject_type": null,
+        "subject_match_count": 0,
+        "candidate_count": 1,
+        "player_list_support": null,
+        "player_subject_established": false
+      },
+      "identity": {
+        "player_id": "00-0041013",
+        "display_name": "Emmett Johnson",
+        "confidence": "medium",
+        "matched_by": [
+          "players"
+        ]
+      },
+      "position": null,
+      "baseline_role": null,
+      "fresh_role": null,
+      "effective_role": null,
+      "qb_importance": null,
+      "star": null,
+      "player_context": {
+        "has_player_subject": false,
+        "normalized_position": null,
+        "effective_role": null,
+        "qb_importance": null,
+        "player_id": null,
+        "identity_confidence": null,
+        "star_level": null,
+        "star_matched": false
+      },
+      "editorial_score_preview": {
+        "total_score": 12,
+        "destination": {
+          "feed_fit": "insufficient_magnitude",
+          "story_fit": "insufficient_magnitude",
+          "feed_block_reasons": [
+            "insufficient_magnitude"
+          ],
+          "story_block_reasons": [
+            "insufficient_magnitude"
+          ],
+          "structurally_story_natured": false
+        },
+        "enriched_total": 12,
+        "score_delta": 0,
+        "score_delta_percent": 0,
+        "enriched_destination_preview": {
+          "feed_fit": "insufficient_magnitude",
+          "story_fit": "insufficient_magnitude",
+          "feed_block_reasons": [
+            "insufficient_magnitude"
+          ],
+          "story_block_reasons": [
+            "insufficient_magnitude"
+          ],
+          "structurally_story_natured": false
+        }
+      },
+      "diagnostics": {
+        "subject_match_count": null,
+        "candidate_count": null
+      },
+      "reason_codes": [
+        "player_subject_not_established",
+        "unique_name_team_unknown"
+      ],
+      "error_message": null
+    },
+    {
+      "story_id": "a7252311-7610-4dd5-8d3a-af966120d84d",
+      "headline": "Josh Jacobs could be on thin ice in Green Bay",
+      "first_published_at": "2026-10-31T14:41:45.000Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
+      "production_importance_score": 8,
+      "enrichment_status": "partial",
+      "subject": {
+        "visual_subject": "Josh Jacobs",
+        "visual_subject_type": "player",
+        "subject_match_count": 1,
+        "candidate_count": 1,
+        "player_list_support": true,
+        "player_subject_established": true
+      },
+      "identity": {
+        "player_id": "00-0035700",
+        "display_name": "Josh Jacobs",
+        "confidence": "medium",
+        "matched_by": [
+          "visual_subject",
+          "players"
+        ]
+      },
+      "position": {
+        "normalized_position": "unknown",
+        "confidence": "low"
+      },
+      "baseline_role": {
+        "role": "unknown",
+        "confidence": "low"
+      },
+      "fresh_role": {
+        "fresh_role": "unknown",
+        "confidence": "low",
+        "override_applies": false
+      },
+      "effective_role": "unknown",
+      "qb_importance": {
+        "is_qb": false,
+        "qb_importance": "none",
+        "reason_codes": [
+          "not_qb"
+        ]
+      },
+      "star": {
+        "gsis_id": "00-0035700",
+        "as_of": "2026-10-31T14:41:45.000Z",
+        "effective_from": null,
+        "effective_to": null,
+        "star_level": "none",
+        "matched": false,
+        "reason_codes": [
+          "star_record_not_found"
+        ]
+      },
+      "player_context": {
+        "has_player_subject": true,
+        "normalized_position": "unknown",
+        "effective_role": "unknown",
+        "qb_importance": "none",
+        "player_id": "00-0035700",
+        "identity_confidence": "medium",
+        "star_level": "none",
+        "star_matched": false
+      },
+      "editorial_score_preview": {
+        "total_score": 22.3,
+        "destination": {
+          "feed_fit": "insufficient_magnitude",
+          "story_fit": "insufficient_magnitude",
+          "feed_block_reasons": [
+            "insufficient_magnitude"
+          ],
+          "story_block_reasons": [
+            "insufficient_magnitude"
+          ],
+          "structurally_story_natured": false
+        },
+        "enriched_total": 20,
+        "score_delta": -2.3,
+        "score_delta_percent": -10.4,
+        "enriched_destination_preview": {
+          "feed_fit": "insufficient_magnitude",
+          "story_fit": "insufficient_magnitude",
+          "feed_block_reasons": [
+            "insufficient_magnitude"
+          ],
+          "story_block_reasons": [
+            "insufficient_magnitude"
+          ],
+          "structurally_story_natured": false
+        }
+      },
+      "diagnostics": {
+        "subject_match_count": 1,
+        "candidate_count": 1,
+        "historical_player_row_found": false,
+        "temporal_roster_found": true,
+        "temporal_depth_chart_found": false,
+        "temporal_schedule_found": true
+      },
+      "reason_codes": [
+        "player_subject_confirmed",
+        "players_cross_validated",
+        "unique_name_team_unknown",
+        "schedule_week_selected",
+        "schedule_final_kickoff_anchor",
+        "future_schedule_week_rejected",
+        "roster_selected_exact",
+        "future_depth_chart_rejected",
+        "future_roster_rejected",
+        "roster_schedule_anchored",
+        "player_not_in_temporal_roster",
+        "identity_unresolved",
+        "no_role_statement_found",
+        "star_record_not_found"
+      ],
+      "error_message": null
+    },
+    {
       "story_id": "502da105-6991-455f-8ea1-9f13a647d5b3",
       "headline": "Blake Corum 23-yard touchdown gives Rams 17-9 lead",
       "first_published_at": "2026-11-01T22:51:43.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -84,7 +281,7 @@
       "story_id": "0f4301f3-270a-40af-b4e6-5a6332f3217a",
       "headline": "Malik Willis TD pass puts Dolphins up 13-3 at halftime",
       "first_published_at": "2026-11-01T22:50:04.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -163,7 +360,7 @@
       "story_id": "ecdd372f-6943-4359-bb76-d377d4cb71a7",
       "headline": "LFGibbs? Jahmyr Gibbs Powers His Way To LFG Player Of The Game In Lions' Win vs. Vikings",
       "first_published_at": "2026-11-01T22:42:02.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -283,7 +480,7 @@
       "story_id": "2c9a3e2a-2a4e-4e6a-9c32-0687174dcff7",
       "headline": "Mike LaFleur hasn't decided on a starting QB for next week",
       "first_published_at": "2026-11-01T22:40:35.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -402,7 +599,7 @@
       "story_id": "79ae7ed1-998d-438e-bdcd-c306018557c5",
       "headline": "Lions LB Jack Campbell carted off on a backboard early in fourth quarter",
       "first_published_at": "2026-11-01T10:18:09.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "partial",
       "subject": {
@@ -519,7 +716,7 @@
       "story_id": "9ac6114a-5dd9-4e3e-a5b2-5a2866401553",
       "headline": "Rams take 10-9 halftime lead with Kyren Williams 1-yard TD",
       "first_published_at": "2026-11-01T22:31:28.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -597,7 +794,7 @@
       "story_id": "c55050b6-9948-4459-87e9-d558420c7b52",
       "headline": "NFL \"will review\" the new allegations against Josh Jacobs",
       "first_published_at": "2026-10-31T16:44:47.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -717,7 +914,7 @@
       "story_id": "6548bb8e-a5ff-4cfa-adc8-6bd97e24aeac",
       "headline": "Jerry Jones: I don't see making an in-season coaching change",
       "first_published_at": "2026-11-01T22:18:59.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -795,7 +992,7 @@
       "story_id": "2e8d8788-3f78-4021-9b35-579f04e3a133",
       "headline": "Minnesota Suffers First Defeat: 3 Takeaways From The Lions' Win Over The Vikings",
       "first_published_at": "2026-11-01T22:13:25.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -870,7 +1067,7 @@
       "story_id": "8d68ce5e-e4f1-405e-b8e3-3b1eabe2ac29",
       "headline": "Shane Steichen on Daniel Jones: We'll evaluate everything",
       "first_published_at": "2026-11-01T22:01:50.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -950,7 +1147,7 @@
       "story_id": "b5414eb1-6f9e-4366-ae3a-c398d1c513bc",
       "headline": "Buccaneers don't complete a pass, beat Falcons 16-0 anyway",
       "first_published_at": "2026-11-01T20:51:01.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -1025,7 +1222,7 @@
       "story_id": "4ce55549-45de-438f-8db2-b215b9d3e082",
       "headline": "Cardinals replace Jacoby Brissett with Gardner Minshew",
       "first_published_at": "2026-11-01T20:20:44.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -1105,7 +1302,7 @@
       "story_id": "950f30b6-367d-41cb-a7d1-510c815a2cfd",
       "headline": "Joe Burrow totals 472 yards and six touchdowns as Bengals beat Titans in overtime",
       "first_published_at": "2026-11-01T21:47:41.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -1182,7 +1379,7 @@
       "story_id": "984c9c0f-0c8f-420d-83a0-6429b13b8010",
       "headline": "Dan Campbell had \"no new information\" on Jack Campbell after Sunday's win",
       "first_published_at": "2026-11-01T21:47:11.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -1302,7 +1499,7 @@
       "story_id": "58c148d5-1487-49e2-9866-e1ee2e0a12d6",
       "headline": "Lamar Jackson to have thumb surgery, could be out for season",
       "first_published_at": "2026-11-01T21:39:26.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 8,
       "enrichment_status": "neutral",
       "subject": {
@@ -1376,7 +1573,7 @@
       "story_id": "d412540a-8947-4971-b6f1-079114dce71c",
       "headline": "Ravens' Lamar Jackson (ankle) questionable to make return Sunday vs. Bengals",
       "first_published_at": "2026-10-23T07:38:42.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "partial",
       "subject": {
@@ -1494,7 +1691,7 @@
       "story_id": "c2d5fae0-4bdb-44d1-ad20-c5a48b15fc04",
       "headline": "Lions hand Vikings first loss of the season, Detroit wins 19-15",
       "first_published_at": "2026-11-01T21:24:52.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -1571,7 +1768,7 @@
       "story_id": "ac5ce6bc-1aec-46df-bfa9-0bf5e40b26d8",
       "headline": "Jaguars humiliate Colts in a 42-7 home win",
       "first_published_at": "2026-11-01T21:23:12.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -1646,7 +1843,7 @@
       "story_id": "1b30f4c2-74f0-4d83-9276-d27bdb83b352",
       "headline": "Jaylen Warren rushes for 143 on his birthday, Steelers beat Browns 27-6",
       "first_published_at": "2026-11-01T21:10:59.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -1724,7 +1921,7 @@
       "story_id": "5bcf3c19-7c79-4a39-90bc-e2ceece58626",
       "headline": "Raiders end losing streak with 38-33 win over Jets",
       "first_published_at": "2026-11-01T21:04:58.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -1801,7 +1998,7 @@
       "story_id": "065ba4e1-ac2a-407e-baa8-b2c4d8b2ca2e",
       "headline": "Cowboys DB Caleb Downs, Cardinals LT Jayden Williams ruled out",
       "first_published_at": "2026-11-01T20:51:25.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -1876,7 +2073,7 @@
       "story_id": "945a3db2-5b46-4a47-ad77-a5a50210af98",
       "headline": "Kyler Murray puts Vikings up 15-12 over Lions in fourth quarter",
       "first_published_at": "2026-11-01T20:50:00.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -1996,7 +2193,7 @@
       "story_id": "e737de48-a144-41f9-a563-bf3a4ae49649",
       "headline": "Colts turn to Anthony Richardson with Jags up 42-7 in fourth quarter",
       "first_published_at": "2026-11-01T20:43:32.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -2074,7 +2271,7 @@
       "story_id": "6f515e0c-f524-4cdc-bdf3-d8285e6f65a5",
       "headline": "Broncos list Jaylen Waddle, Zach Allen as limited at Thursday's practice",
       "first_published_at": "2026-10-29T22:32:35.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "partial",
       "subject": {
@@ -2195,7 +2392,7 @@
       "story_id": "1594418f-1af0-4af6-9a83-e64fbf8f96c3",
       "headline": "Raiders take 35-30 lead early in fourth quarter",
       "first_published_at": "2026-11-01T20:25:30.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -2270,7 +2467,7 @@
       "story_id": "94439586-0aeb-4cfe-944f-76a453042f2c",
       "headline": "Lions take 12-7 lead with Jahmyr Gibbs 30-yard touchdown run",
       "first_published_at": "2026-11-01T20:16:22.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -2348,7 +2545,7 @@
       "story_id": "52b4565c-8da6-45f8-893f-f2e096a19ab5",
       "headline": "Cardinals expect Jeremiyah Love to play against Cowboys",
       "first_published_at": "2026-10-30T18:14:32.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "partial",
       "subject": {
@@ -2466,7 +2663,7 @@
       "story_id": "4e7573f2-4859-457d-ae16-82da39feeee5",
       "headline": "Carlton Davis is active for the Patriots in Miami",
       "first_published_at": "2026-11-01T20:07:17.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -2586,7 +2783,7 @@
       "story_id": "c605bfd5-9326-4f86-8069-a0664d418d25",
       "headline": "A.J. Brown's knee issue highlights Rams' decision to not pursue him",
       "first_published_at": "2026-11-01T20:06:11.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 10,
       "enrichment_status": "neutral",
       "subject": {
@@ -2664,7 +2861,7 @@
       "story_id": "2f9cc09f-60d5-45f3-bafe-cf8de5b04b3e",
       "headline": "DJ Wonnum, Brian Branch both ruled out with a concussion",
       "first_published_at": "2026-11-01T19:54:51.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -2738,7 +2935,7 @@
       "story_id": "4e28043a-d9cd-4ee2-88f1-08ec70361349",
       "headline": "Bills lead Ravens 16-7 at halftime",
       "first_published_at": "2026-11-01T19:49:55.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -2815,7 +3012,7 @@
       "story_id": "b583b778-dddf-4c6f-a935-e0dd38166c7a",
       "headline": "Justin Jefferson 1-yard TD gives Vikings 7-3 lead over Lions",
       "first_published_at": "2026-11-01T18:53:39.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -2934,7 +3131,7 @@
       "story_id": "68febfd9-af60-41b5-8615-d02077a94342",
       "headline": "Titans take surprising 10-0 lead in Cincinnati",
       "first_published_at": "2026-11-01T18:29:12.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -3009,7 +3206,7 @@
       "story_id": "2ce97fd0-9ae2-4d7c-8e35-43b518f12684",
       "headline": "Jaguars stretch halftime lead to 28-0 on Daniel Jones pick-six",
       "first_published_at": "2026-11-01T19:38:15.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -3087,7 +3284,7 @@
       "story_id": "7f0376e1-bad7-4dfd-80b1-6326f45986cc",
       "headline": "Ravens have become the ultimate good half/bad half team",
       "first_published_at": "2026-10-31T18:57:00.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -3162,7 +3359,7 @@
       "story_id": "e6426742-f9a6-4b78-aa2f-963aad50c365",
       "headline": "Eagles Reportedly Get Auspicious Saquon Barkley Injury Update",
       "first_published_at": "2026-10-22T15:31:08.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "partial",
       "subject": {
@@ -3280,7 +3477,7 @@
       "story_id": "dd2789ba-6669-4a85-b57b-bae6ef7bb3fc",
       "headline": "Tom Brady drops another \"s\" bomb live on Fox",
       "first_published_at": "2026-11-01T19:33:10.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -3399,7 +3596,7 @@
       "story_id": "44f2d6c7-5cef-437b-aa11-603116b875b4",
       "headline": "Geno Smith throws two touchdowns, Jets lead Raiders 23-14 at halftime",
       "first_published_at": "2026-11-01T19:26:57.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -3477,7 +3674,7 @@
       "story_id": "e0cf8006-e020-449e-a7f0-23fb01121a4e",
       "headline": "DJ Wonnum carted off after friendly fire collision with Brian Branch",
       "first_published_at": "2026-11-01T19:23:30.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -3548,7 +3745,7 @@
       "story_id": "5e3e7df1-dfdb-494d-aa43-bdce404a86c1",
       "headline": "Tyler Huntley questionable to return with toe injury",
       "first_published_at": "2026-11-01T19:19:48.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 8,
       "enrichment_status": "neutral",
       "subject": {
@@ -3625,7 +3822,7 @@
       "story_id": "4fc785ad-1aa5-48bb-a1c7-de428d2cd5b3",
       "headline": "Justin Herbert has gone eight straight starts without multiple TDs",
       "first_published_at": "2026-11-01T19:15:50.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -3745,7 +3942,7 @@
       "story_id": "8015109f-ab2e-4a00-9af1-24042729ed47",
       "headline": "Buccaneers lead 9-0 as Baker Mayfield has 0 completions, Michael Penix has 3 interceptions",
       "first_published_at": "2026-11-01T19:07:34.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -3825,7 +4022,7 @@
       "story_id": "1cc1d47b-2645-468c-8669-cb1e193052c7",
       "headline": "Jeremiyah Love questionable to return with ankle injury as Cardinals trail 14-0",
       "first_published_at": "2026-11-01T19:05:28.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "neutral",
       "subject": {
@@ -3902,7 +4099,7 @@
       "story_id": "bf8390da-bf53-4992-84ea-77967e78c3f8",
       "headline": "DT DaVon Hamilton carted off, Jags lead 14-0",
       "first_published_at": "2026-11-01T19:02:14.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -3980,7 +4177,7 @@
       "story_id": "7a00b37a-ec00-4a67-9f14-d9dd19260975",
       "headline": "Raiders score NFL's first kickoff return touchdown of 2026",
       "first_published_at": "2026-11-01T18:54:40.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -4055,7 +4252,7 @@
       "story_id": "c686d2a5-f73d-4288-9a70-3b95301e632a",
       "headline": "Jared Verse gets dumped by Mason McCormick on extra-point try",
       "first_published_at": "2026-11-01T18:46:19.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -4175,7 +4372,7 @@
       "story_id": "edd7cc53-0d65-4a40-a996-e3af756a8140",
       "headline": "After Deshaun Watson fumble, Rico Dowdle TD gives Steelers 7-0 lead",
       "first_published_at": "2026-11-01T18:28:31.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -4254,7 +4451,7 @@
       "story_id": "ac03d7b2-01cd-40c8-afee-373dc54d2c8a",
       "headline": "Raiders up 7-3 after Brock Bowers TD",
       "first_published_at": "2026-11-01T18:27:47.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -4332,7 +4529,7 @@
       "story_id": "e2680752-e815-43f7-b634-9fdc6ab628ad",
       "headline": "Lamar Jackson hurt his right thumb on the first play",
       "first_published_at": "2026-11-01T18:27:34.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "neutral",
       "subject": {
@@ -4410,7 +4607,7 @@
       "story_id": "5e764450-768c-4bcf-b41b-d4d0dcbeb866",
       "headline": "Brian Thomas puts Jaguars up 7-0 over Colts",
       "first_published_at": "2026-11-01T18:22:02.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -4530,7 +4727,7 @@
       "story_id": "23004edd-7e30-400c-b473-a76253d17601",
       "headline": "Jauan Jennings Rejects 49ers Reunion, Turning Down Trade To Stay With Vikings",
       "first_published_at": "2026-11-01T18:10:08.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "partial",
       "subject": {
@@ -4651,7 +4848,7 @@
       "story_id": "2f6ee964-a87e-4dc8-8a08-ad501221fbe6",
       "headline": "NFL Trade Deadline: Is Maxx Crosby On The Move? Latest On Raiders' Star Edge Rusher",
       "first_published_at": "2026-11-01T18:14:54.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -4772,7 +4969,7 @@
       "story_id": "dfd4254c-37f2-4c21-870a-d195f7a6773b",
       "headline": "Browns go for first sweep of Steelers since 1988",
       "first_published_at": "2026-11-01T17:48:48.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -4847,7 +5044,7 @@
       "story_id": "0da0e2b9-943f-4772-8926-599b00306d87",
       "headline": "Jets WR Omar Cooper Jr. has two straight games with 100-plus yards and a touchdown",
       "first_published_at": "2026-11-01T17:35:16.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -4968,7 +5165,7 @@
       "story_id": "f58dc1da-2944-492c-a9e3-d4da2210e1d9",
       "headline": "Vikings will attempt to tie franchise-record winning streak on Sunday",
       "first_published_at": "2026-11-01T17:11:10.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -5043,7 +5240,7 @@
       "story_id": "41b892a2-345b-4e1e-9d1c-92b892e6f276",
       "headline": "Jonathan Taylor trade talks are \"active and ongoing\"",
       "first_published_at": "2026-10-31T04:33:07.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -5161,7 +5358,7 @@
       "story_id": "e0d032c4-c397-442d-89b1-2fc9903db834",
       "headline": "Cowboys list Kenny Clark, George Pickens as questionable",
       "first_published_at": "2026-10-30T21:09:27.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "partial",
       "subject": {
@@ -5281,7 +5478,7 @@
       "story_id": "1cd0ce94-4f2b-4d2e-85b7-c9f316faf2a9",
       "headline": "Mike Macdonald hasn't committed to Jadarian Price playing on Monday",
       "first_published_at": "2026-11-01T16:09:40.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "partial",
       "subject": {
@@ -5401,7 +5598,7 @@
       "story_id": "b1e8610f-16c6-4a3e-852e-154e923449b6",
       "headline": "Sources: Saquon won't be traded before deadline despite Eagles' struggles",
       "first_published_at": "2026-11-01T03:25:48.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 10,
       "enrichment_status": "neutral",
       "subject": {
@@ -5476,7 +5673,7 @@
       "story_id": "ef31e218-8b81-4081-bca0-f232e99f5507",
       "headline": "Ray Lewis delivered intense Friday speech to struggling Ravens, sources say",
       "first_published_at": "2026-11-01T15:07:55.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -5595,7 +5792,7 @@
       "story_id": "a55736ec-45ac-440e-9172-d47a9346dd70",
       "headline": "Colts will take calculated risk, if Jonathan Taylor plays today",
       "first_published_at": "2026-11-01T14:49:12.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "neutral",
       "subject": {
@@ -5674,7 +5871,7 @@
       "story_id": "75881a07-ba7d-4ec2-b555-9c71a568d74a",
       "headline": "Report: Raiders have \"no plans\" to trade Maxx Crosby (again)",
       "first_published_at": "2026-11-01T12:50:12.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 10,
       "enrichment_status": "partial",
       "subject": {
@@ -5795,7 +5992,7 @@
       "story_id": "f5aec2e2-eaca-44f8-9c39-716616ee9183",
       "headline": "Breece Hall is not expected to play against Raiders",
       "first_published_at": "2026-11-01T14:21:04.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -5917,7 +6114,7 @@
       "story_id": "5f739171-ce95-4b4c-b30c-b670971629b5",
       "headline": "Thank you for 25 years (get ready for 25 more)",
       "first_published_at": "2026-11-01T14:06:07.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -5992,7 +6189,7 @@
       "story_id": "2e3d7753-6b5b-41b7-aad6-47663c4d8c36",
       "headline": "Seahawks rookie RB Jadarian Price returns to practice",
       "first_published_at": "2026-10-29T21:01:33.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -6112,7 +6309,7 @@
       "story_id": "1ea55a58-4bae-4d23-891f-a4cf35fcc754",
       "headline": "NFL Network: Bears acquiring DT Jeffery Simmons from Titans in blockbuster trade",
       "first_published_at": "2026-10-29T02:32:50.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 10,
       "enrichment_status": "partial",
       "subject": {
@@ -6225,7 +6422,7 @@
       "story_id": "4df33e1e-1f00-43fb-840c-5f23c1b4b129",
       "headline": "Bears QB Williams won't 'spat' custom cleats out of principle, source says",
       "first_published_at": "2026-11-01T12:50:12.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -6302,7 +6499,7 @@
       "story_id": "e293e0c3-9cc8-4767-be5e-84293703a032",
       "headline": "Chargers safety James (hamstring) placed on injured reserve",
       "first_published_at": "2026-11-01T12:50:12.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "neutral",
       "subject": {
@@ -6371,7 +6568,7 @@
       "story_id": "c96c0850-e229-4b01-8418-c86a9a8f2f11",
       "headline": "How to bet Eagles-Commanders on 'Sunday Night Football'",
       "first_published_at": "2026-11-01T12:42:12.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -6448,7 +6645,7 @@
       "story_id": "1a5e61a4-0bc5-4ec9-b2d3-dba4b1f8a403",
       "headline": "Ranking the top 10 trick plays in Super Bowl history: From 'Philly Special' to 'Ambush'",
       "first_published_at": "2026-11-01T12:39:23.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 10,
       "enrichment_status": "neutral",
       "subject": {
@@ -6523,7 +6720,7 @@
       "story_id": "fe50f464-e403-44c2-a6de-66ef5f775e1e",
       "headline": "Eight realistic names that the Jets could dangle at the NFL trade deadline",
       "first_published_at": "2026-11-01T12:37:31.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -6598,7 +6795,7 @@
       "story_id": "2a545cd2-cec9-4945-b4a5-8976b14a9e5b",
       "headline": "How to Watch Panthers vs. Packers: TV Channel, Live Stream, Time",
       "first_published_at": "2026-10-29T14:14:56.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -6673,7 +6870,7 @@
       "story_id": "596abc11-c619-4b23-a8cc-26de240807f3",
       "headline": "Ben Johnson: Jeffery Simmons will play a lot, maybe not a full workload Monday night",
       "first_published_at": "2026-11-01T12:28:08.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -6793,7 +6990,7 @@
       "story_id": "7c1251ae-e2ce-49a9-bde4-839cb3813c66",
       "headline": "NFL DFS Week 8: Best Picks, Lineup Advice and Value Plays",
       "first_published_at": "2026-11-01T11:00:50.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -6869,10 +7066,85 @@
       "error_message": null
     },
     {
+      "story_id": "29b640b9-a48d-4369-8f0d-ec664dcff2f4",
+      "headline": "NFL experts' Week 8 takeaways: Do Ravens need drastic QB measures? Plus, Cowboys collapse",
+      "first_published_at": "2026-11-01T10:46:13.000Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
+      "production_importance_score": 4,
+      "enrichment_status": "neutral",
+      "subject": {
+        "visual_subject": null,
+        "visual_subject_type": null,
+        "subject_match_count": 0,
+        "candidate_count": 0,
+        "player_list_support": null,
+        "player_subject_established": false
+      },
+      "identity": {
+        "player_id": null,
+        "display_name": null,
+        "confidence": "low",
+        "matched_by": []
+      },
+      "position": null,
+      "baseline_role": null,
+      "fresh_role": null,
+      "effective_role": null,
+      "qb_importance": null,
+      "star": null,
+      "player_context": {
+        "has_player_subject": false,
+        "normalized_position": null,
+        "effective_role": null,
+        "qb_importance": null,
+        "player_id": null,
+        "identity_confidence": null,
+        "star_level": null,
+        "star_matched": false
+      },
+      "editorial_score_preview": {
+        "total_score": 12,
+        "destination": {
+          "feed_fit": "insufficient_magnitude",
+          "story_fit": "insufficient_magnitude",
+          "feed_block_reasons": [
+            "insufficient_magnitude"
+          ],
+          "story_block_reasons": [
+            "insufficient_magnitude"
+          ],
+          "structurally_story_natured": false
+        },
+        "enriched_total": 12,
+        "score_delta": 0,
+        "score_delta_percent": 0,
+        "enriched_destination_preview": {
+          "feed_fit": "insufficient_magnitude",
+          "story_fit": "insufficient_magnitude",
+          "feed_block_reasons": [
+            "insufficient_magnitude"
+          ],
+          "story_block_reasons": [
+            "insufficient_magnitude"
+          ],
+          "structurally_story_natured": false
+        }
+      },
+      "diagnostics": {
+        "subject_match_count": null,
+        "candidate_count": null
+      },
+      "reason_codes": [
+        "player_subject_not_established",
+        "visual_subject_missing"
+      ],
+      "error_message": null
+    },
+    {
       "story_id": "be47be9c-41cb-426b-a68f-b57ee4e2bc98",
       "headline": "NFL Week 8 what to watch: Generational rivals, powerhouse clashes and season-defining stakes",
       "first_published_at": "2026-11-01T10:46:07.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -6947,7 +7219,7 @@
       "story_id": "acb48046-2034-42ff-ba04-07101cdf97e3",
       "headline": "2026 NFL season, Week 8: What We Learned from Sunday's games",
       "first_published_at": "2026-11-01T09:52:57.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -7022,7 +7294,7 @@
       "story_id": "eadaefb1-5154-4c1e-9122-f19854eb74ff",
       "headline": "Vikings loss means 1972 Dolphins can celebrate as NFL's final unbeaten team goes down",
       "first_published_at": "2026-11-01T09:31:13.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -7097,7 +7369,7 @@
       "story_id": "8e5206b3-612d-4d9f-b9a9-3d5a188ca1a1",
       "headline": "Josh Allen going for his 102nd win counting playoffs, more than Tom Brady's first 9 seasons",
       "first_published_at": "2026-11-01T09:14:58.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -7177,7 +7449,7 @@
       "story_id": "6d3e5c23-e04d-4258-ae5c-d5cd4a17a1ee",
       "headline": "Buccaneers vs. Falcons Prediction, Odds, Pick For NFL Week 8",
       "first_published_at": "2026-11-01T05:00:03.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -7252,7 +7524,7 @@
       "story_id": "b6fb31ea-02f5-480a-a2f2-873da602fb81",
       "headline": "Notable injuries, news from Sunday's Week 8 games: Bills WR Josh Palmer injures hamstring",
       "first_published_at": "2026-11-01T06:51:16.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -7331,7 +7603,7 @@
       "story_id": "06377b5d-946a-4764-a0c1-060d2f7c7adb",
       "headline": "Wu-Tang Clan to headline Thanksgiving halftime show for Bears-Lions game at Ford Field",
       "first_published_at": "2026-11-01T05:10:05.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -7450,7 +7722,7 @@
       "story_id": "ec72a991-1041-4734-9164-e36906f5e461",
       "headline": "NFL Week 8 inactives: Players ruled out for Sunday's 12 games",
       "first_published_at": "2026-11-01T04:38:18.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -7521,7 +7793,7 @@
       "story_id": "f77c20dc-7964-4bc4-9bf4-d2ba59e40f9f",
       "headline": "Bill Belichick and UNC nearly upset No. 1 Miami",
       "first_published_at": "2026-11-01T03:19:19.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -7640,7 +7912,7 @@
       "story_id": "73ed1fc8-b36a-47c4-a030-0ab0efaaa21f",
       "headline": "Joe Burrow is one four-TD, no-INT game away from elite club",
       "first_published_at": "2026-11-01T03:03:13.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -7719,7 +7991,7 @@
       "story_id": "3401e48c-1137-4a69-aa48-5194d5a5911e",
       "headline": "Cowboys have a franchise-record 14 straight games with 20 or more points allowed",
       "first_published_at": "2026-11-01T02:43:51.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -7794,7 +8066,7 @@
       "story_id": "8f943239-0464-4081-80e6-285ddf603329",
       "headline": "NFL Week 8 injuries to monitor for Sunday's games",
       "first_published_at": "2026-11-01T02:13:31.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "neutral",
       "subject": {
@@ -7869,7 +8141,7 @@
       "story_id": "91ad044d-1efe-419a-8a34-11c3de23feaa",
       "headline": "With 88 yards on Sunday, Derrick Henry will jump to No. 7 all-time in rushing yards",
       "first_published_at": "2026-11-01T00:32:12.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -7990,7 +8262,7 @@
       "story_id": "149d6eb5-387a-4189-aafa-220407580af5",
       "headline": "As Eagles prepare for Sunday night, questions of effort from Monday night linger",
       "first_published_at": "2026-11-01T00:19:00.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -8065,7 +8337,7 @@
       "story_id": "ba912e70-1af8-4178-9b6c-bfb5f0099b0e",
       "headline": "Last-minute predictions for NFL Week 8: Expectations for Derrick Henry, Jared Goff, more",
       "first_published_at": "2026-11-01T00:03:37.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -8185,7 +8457,7 @@
       "story_id": "314ec3ff-12eb-4b8d-a4a1-c15c6315af61",
       "headline": "Jets put DT T'Vondre Sweat on IR",
       "first_published_at": "2026-10-31T22:05:39.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -8306,7 +8578,7 @@
       "story_id": "514057d0-d5b4-4a79-a39d-99467245683e",
       "headline": "Deion Sanders and Colorado survive in overtime for first Big 12 win of the season",
       "first_published_at": "2026-10-31T21:42:00.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -8425,7 +8697,7 @@
       "story_id": "68ff52cd-45db-4a74-9dd7-100f603aece6",
       "headline": "Bears rule out RB Kyle Monangai",
       "first_published_at": "2026-10-31T21:26:50.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -8546,7 +8818,7 @@
       "story_id": "6d950d88-17bb-4653-8ed8-3de40fc33365",
       "headline": "Of eight use of helmet infractions in Week 7, only Cam Skattebo was flagged",
       "first_published_at": "2026-10-31T21:09:01.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -8667,7 +8939,7 @@
       "story_id": "3588c510-3e41-4655-8679-226c318c8405",
       "headline": "Chargers place DB Derwin James on IR",
       "first_published_at": "2026-10-31T20:33:43.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -8788,7 +9060,7 @@
       "story_id": "2e90b2ce-f0a2-4562-8554-96cdeeac9134",
       "headline": "Dolphins elevate Zane Gonzalez, Max Llewellyn",
       "first_published_at": "2026-10-31T20:23:17.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -8869,7 +9141,7 @@
       "story_id": "16b6dc58-cdc9-4c70-a7f0-b56296e36fe7",
       "headline": "Broncos will put running back R.J. Harvey on injured reserve after injury in practice",
       "first_published_at": "2026-10-31T20:21:38.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "neutral",
       "subject": {
@@ -8948,7 +9220,7 @@
       "story_id": "9aa8368b-516b-4c1f-9c95-c21c705e545b",
       "headline": "Falcons rule out four players, elevate two",
       "first_published_at": "2026-10-31T20:13:51.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -9021,7 +9293,7 @@
       "story_id": "4585c73b-60b8-43b7-9c55-34869363facc",
       "headline": "Chiefs rule out CB Mansoor Delane, place CB L'Jarius Sneed on IR",
       "first_published_at": "2026-10-31T20:03:44.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -9096,7 +9368,7 @@
       "story_id": "a42fb702-b98c-4cc0-869f-835a634ce52f",
       "headline": "Cowboys activate S P.J. Locke back to active roster from IR",
       "first_published_at": "2026-10-31T19:46:28.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -9175,7 +9447,7 @@
       "story_id": "5a41af8b-2e84-42f3-969d-445753d19c82",
       "headline": "Are the Vikings the worst 6-0 team of all time? Where Minnesota stacks up in history",
       "first_published_at": "2026-10-31T19:21:33.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -9252,7 +9524,7 @@
       "story_id": "0702f340-10db-429a-afaf-4177c49c5f65",
       "headline": "NFL news roundup: Commanders DT Daron Payne suffered season-ending Jones fracture",
       "first_published_at": "2026-10-31T03:07:21.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 8,
       "enrichment_status": "neutral",
       "subject": {
@@ -9323,7 +9595,7 @@
       "story_id": "851b23af-1655-448a-a0eb-67c67b1bd23d",
       "headline": "Report: Philip Rivers has \"emerged as the focus\" of NC State coaching search",
       "first_published_at": "2026-10-31T03:03:20.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -9444,7 +9716,7 @@
       "story_id": "0c59d768-dd45-4026-b7a2-b530c9966f66",
       "headline": "A.J. Brown, TreVeyon Henderson questionable for Sunday vs. Dolphins",
       "first_published_at": "2026-10-30T17:58:11.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "partial",
       "subject": {
@@ -9565,7 +9837,7 @@
       "story_id": "ddb5b7a5-7e02-43fe-a508-7f2d61b348da",
       "headline": "Colts elevate DE Carl Lawson, CB Johnathan Edwards",
       "first_published_at": "2026-10-31T16:47:37.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "neutral",
       "subject": {
@@ -9644,7 +9916,7 @@
       "story_id": "6d37f18f-b594-4bbd-acb7-223522afe7e6",
       "headline": "Report: Daron Payne out for season with Jones fracture",
       "first_published_at": "2026-10-31T15:30:14.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "partial",
       "subject": {
@@ -9753,133 +10025,10 @@
       "error_message": null
     },
     {
-      "story_id": "a7252311-7610-4dd5-8d3a-af966120d84d",
-      "headline": "Josh Jacobs could be on thin ice in Green Bay",
-      "first_published_at": "2026-10-31T14:41:45.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
-      "production_importance_score": 4,
-      "enrichment_status": "partial",
-      "subject": {
-        "visual_subject": "Josh Jacobs",
-        "visual_subject_type": "player",
-        "subject_match_count": 1,
-        "candidate_count": 1,
-        "player_list_support": true,
-        "player_subject_established": true
-      },
-      "identity": {
-        "player_id": "00-0035700",
-        "display_name": "Josh Jacobs",
-        "confidence": "high",
-        "matched_by": [
-          "visual_subject",
-          "players",
-          "team"
-        ]
-      },
-      "position": {
-        "normalized_position": "unknown",
-        "confidence": "low"
-      },
-      "baseline_role": {
-        "role": "unknown",
-        "confidence": "low"
-      },
-      "fresh_role": {
-        "fresh_role": "unknown",
-        "confidence": "low",
-        "override_applies": false
-      },
-      "effective_role": "unknown",
-      "qb_importance": {
-        "is_qb": false,
-        "qb_importance": "none",
-        "reason_codes": [
-          "not_qb"
-        ]
-      },
-      "star": {
-        "gsis_id": "00-0035700",
-        "as_of": "2026-10-31T14:41:45.000Z",
-        "effective_from": null,
-        "effective_to": null,
-        "star_level": "none",
-        "matched": false,
-        "reason_codes": [
-          "star_record_not_found"
-        ]
-      },
-      "player_context": {
-        "has_player_subject": true,
-        "normalized_position": "unknown",
-        "effective_role": "unknown",
-        "qb_importance": "none",
-        "player_id": "00-0035700",
-        "identity_confidence": "high",
-        "star_level": "none",
-        "star_matched": false
-      },
-      "editorial_score_preview": {
-        "total_score": 0,
-        "destination": {
-          "feed_fit": "insufficient_magnitude",
-          "story_fit": "insufficient_magnitude",
-          "feed_block_reasons": [
-            "insufficient_magnitude",
-            "unconfirmed_rumor"
-          ],
-          "story_block_reasons": [
-            "insufficient_magnitude"
-          ],
-          "structurally_story_natured": false
-        },
-        "enriched_total": -1.2,
-        "score_delta": -1.2,
-        "score_delta_percent": null,
-        "enriched_destination_preview": {
-          "feed_fit": "insufficient_magnitude",
-          "story_fit": "insufficient_magnitude",
-          "feed_block_reasons": [
-            "insufficient_magnitude",
-            "unconfirmed_rumor"
-          ],
-          "story_block_reasons": [
-            "insufficient_magnitude"
-          ],
-          "structurally_story_natured": false
-        }
-      },
-      "diagnostics": {
-        "subject_match_count": 1,
-        "candidate_count": 1,
-        "historical_player_row_found": false,
-        "temporal_roster_found": true,
-        "temporal_depth_chart_found": false,
-        "temporal_schedule_found": true
-      },
-      "reason_codes": [
-        "player_subject_confirmed",
-        "players_cross_validated",
-        "unique_name_team_match",
-        "schedule_week_selected",
-        "schedule_final_kickoff_anchor",
-        "future_schedule_week_rejected",
-        "roster_selected_exact",
-        "future_depth_chart_rejected",
-        "future_roster_rejected",
-        "roster_schedule_anchored",
-        "player_not_in_temporal_roster",
-        "identity_unresolved",
-        "no_role_statement_found",
-        "star_record_not_found"
-      ],
-      "error_message": null
-    },
-    {
       "story_id": "71c9081c-136c-4cfa-97fa-5ca0cd2852ea",
       "headline": "Reports: Packers targeting Week 12 for Micah Parsons return",
       "first_published_at": "2026-10-31T14:14:42.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -10002,7 +10151,7 @@
       "story_id": "b545423a-c451-4692-b806-75fd54c7f754",
       "headline": "Report: John Harbaugh called Amy Adams Strunk directly in an effort to land Jeffery Simmons",
       "first_published_at": "2026-10-31T13:34:38.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -10081,7 +10230,7 @@
       "story_id": "0d5503bb-aa76-49b7-8665-e99ec25c8943",
       "headline": "Garrett Wilson: I want to win, hopeful I can do it with Jets",
       "first_published_at": "2026-10-28T19:48:16.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -10202,7 +10351,7 @@
       "story_id": "3e564e77-8008-4b83-8e51-3eb24dbf5259",
       "headline": "Philip Rivers on NC State job: \"Nothing's imminent\"",
       "first_published_at": "2026-10-31T11:46:19.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -10323,7 +10472,7 @@
       "story_id": "c8e0899f-b88a-4759-8120-cd876fff1a0d",
       "headline": "Adding Jeffery Simmons shows GM Ryan Poles, Bears have realistic Super Bowl hopes",
       "first_published_at": "2026-10-31T10:46:04.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 10,
       "enrichment_status": "neutral",
       "subject": {
@@ -10402,7 +10551,7 @@
       "story_id": "9764d934-a6f9-4e05-831a-43392fb173ae",
       "headline": "Broncos' Alex Singleton, a year after cancer diagnosis, tackling something bigger than football",
       "first_published_at": "2026-10-31T10:16:05.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -10481,7 +10630,7 @@
       "story_id": "1f7e5f93-720b-4299-b07b-c2da22d993bc",
       "headline": "Panthers' Dave Canales made the call on Ejiro Evero. Now the target is on him",
       "first_published_at": "2026-10-31T10:16:05.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -10560,7 +10709,7 @@
       "story_id": "09532f31-1549-4572-a29f-2818f7f4b668",
       "headline": "Seahawks RB Zach Charbonnet (knee) off injury report, set for season debut vs. Bears",
       "first_published_at": "2026-10-31T09:16:42.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "partial",
       "subject": {
@@ -10680,7 +10829,7 @@
       "story_id": "ea7792d9-c855-4e53-a2f3-fb16637e75ec",
       "headline": "Jeffery Simmons excited to play in prime time for Bears, something Titans rarely do",
       "first_published_at": "2026-10-31T08:57:12.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -10800,7 +10949,7 @@
       "story_id": "bc2a6179-6f31-45ba-8d48-02431b129269",
       "headline": "After Josh Jacobs was arrested, three other women told police he had abused them, too",
       "first_published_at": "2026-10-31T08:14:54.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 8,
       "enrichment_status": "neutral",
       "subject": {
@@ -10878,7 +11027,7 @@
       "story_id": "785cfe51-7c20-478c-87a6-2eb8a8af82f8",
       "headline": "The NFL isn't built for aging players. These veterans found a way to survive",
       "first_published_at": "2026-10-31T08:01:05.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -10953,7 +11102,7 @@
       "story_id": "7bae35dd-237f-44e8-aa72-ea1977cbee24",
       "headline": "Records reveal 3 other women accused Packers' Jacobs of abuse after arrest",
       "first_published_at": "2026-10-31T03:26:51.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -11030,7 +11179,7 @@
       "story_id": "c584e6b9-d0c0-411c-af10-a53c16d0fe3a",
       "headline": "Jaylen Waddle questionable, RJ Harvey ruled out for Broncos-Chiefs",
       "first_published_at": "2026-10-30T21:05:40.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "partial",
       "subject": {
@@ -11146,7 +11295,7 @@
       "story_id": "c11eaf87-73c0-4e73-8429-ca8e977ec973",
       "headline": "Cardinals RB Jeremiyah Love 'back to myself' after two-game absence, eager to set tone vs. Cowboys",
       "first_published_at": "2026-10-31T06:26:16.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "partial",
       "subject": {
@@ -11266,7 +11415,7 @@
       "story_id": "4e18cac0-147a-44cc-a287-58f6123ebd02",
       "headline": "NFL Network: Packers, Micah Parsons (knee) targeting Thanksgiving Eve return vs. Rams",
       "first_published_at": "2026-10-31T03:55:46.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -11378,7 +11527,7 @@
       "story_id": "ca49d6de-a442-47a4-ab76-bd44008e0968",
       "headline": "Report: Daron Payne has a significant foot injury",
       "first_published_at": "2026-10-31T02:39:58.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "partial",
       "subject": {
@@ -11501,7 +11650,7 @@
       "story_id": "dc3c74ed-97bf-4333-ae90-0900422239cd",
       "headline": "Jordan Love passes Brett Favre for multi-touchdown games to start season",
       "first_published_at": "2026-10-31T02:12:51.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 8,
       "enrichment_status": "partial",
       "subject": {
@@ -11620,7 +11769,7 @@
       "story_id": "34c773c1-b808-4a7a-8db1-b4651a8df60f",
       "headline": "Sean Payton goes for his 200th career win on Sunday",
       "first_published_at": "2026-10-31T01:47:52.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -11739,7 +11888,7 @@
       "story_id": "8fe98c2c-a39e-4154-9173-8c2fd85c6ac6",
       "headline": "Falcons sixth-round rookie Anterio Thompson says he was told he'll never play again",
       "first_published_at": "2026-10-31T01:26:48.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "partial",
       "subject": {
@@ -11858,7 +12007,7 @@
       "story_id": "ee453725-f694-4e59-bb6d-aa335432d374",
       "headline": "Chiefs expect Rashee Rice, Jaylon Moore to practice Wednesday",
       "first_published_at": "2026-10-28T16:57:06.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "partial",
       "subject": {
@@ -11978,7 +12127,7 @@
       "story_id": "c65f44a8-9d2d-40f9-8071-e40da01a8838",
       "headline": "Panthers fire defensive coordinator Ejiro Evero after 3-4 start to season",
       "first_published_at": "2026-10-30T02:28:16.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 10,
       "enrichment_status": "partial",
       "subject": {
@@ -12089,7 +12238,7 @@
       "story_id": "036c85fc-faeb-4531-afba-f3d4ad82ec95",
       "headline": "Report: Colts WR Josh Downs requests a trade",
       "first_published_at": "2026-10-28T05:37:02.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -12208,7 +12357,7 @@
       "story_id": "1e91a642-7312-4e6b-b285-a14935be0b68",
       "headline": "Sources: Commanders' Payne likely IR-bound after practice injury",
       "first_published_at": "2026-10-31T01:33:00.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "neutral",
       "subject": {
@@ -12285,7 +12434,7 @@
       "story_id": "5ab1b6aa-f349-4733-b876-8095bf56c49c",
       "headline": "🎵 From 'no' to halftime show: Clues to Jay-Z's Super Bowl nod",
       "first_published_at": "2026-10-31T01:33:00.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 10,
       "enrichment_status": "neutral",
       "subject": {
@@ -12360,7 +12509,7 @@
       "story_id": "e3ecb124-79e8-4f97-a970-b15494950179",
       "headline": "As the deadline looms, which NFL trades could have the biggest fantasy impacts?",
       "first_published_at": "2026-10-31T01:15:16.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -12435,7 +12584,7 @@
       "story_id": "7abca791-cd3c-4c08-b6e6-812de4c4af41",
       "headline": "Inactives watch: Ja'Marr Chase to play; Breece Hall questionable; Emeka Egbuka out",
       "first_published_at": "2026-10-31T01:15:15.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "neutral",
       "subject": {
@@ -12514,7 +12663,7 @@
       "story_id": "2efff834-a6f8-48d7-93bb-2e038fc9ad4e",
       "headline": "Ryan Poles: \"F them picks\" is really not what we're about",
       "first_published_at": "2026-10-30T16:19:46.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 10,
       "enrichment_status": "neutral",
       "subject": {
@@ -12583,7 +12732,7 @@
       "story_id": "54bae1f5-18a1-4261-95b4-daaadcad4651",
       "headline": "New Bears DT Jeffery Simmons understands Super Bowl goal in Chicago: 'They want it right now'",
       "first_published_at": "2026-10-30T08:28:02.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 10,
       "enrichment_status": "partial",
       "subject": {
@@ -12703,7 +12852,7 @@
       "story_id": "62226062-851b-485e-8d0b-4c31e0909e7e",
       "headline": "Week 8 is here! We're previewing the 13 remaining games with predictions, and all the latest buzz",
       "first_published_at": "2026-10-31T01:11:51.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -12780,7 +12929,7 @@
       "story_id": "b8de3bc5-f276-4747-aee5-93f279efb322",
       "headline": "Betting preview: Our picks on lines, props and anytime touchdowns",
       "first_published_at": "2026-10-31T01:11:51.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -12855,7 +13004,7 @@
       "story_id": "286e9706-7237-441f-92b0-ee9940d9b9b5",
       "headline": "Josh Jacobs denies he was mimicking himself in handcuffs in touchdown celebration",
       "first_published_at": "2026-10-30T09:09:56.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -12975,7 +13124,7 @@
       "story_id": "5a4189e9-02ef-4083-851a-744c463af5d4",
       "headline": "Budda Baker hasn't asked to be traded, and hasn't asked not to be traded",
       "first_published_at": "2026-10-29T11:12:12.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 10,
       "enrichment_status": "partial",
       "subject": {
@@ -13095,7 +13244,7 @@
       "story_id": "0978da30-dc17-4451-b008-2037e86a1c52",
       "headline": "Commanders add DT Daron Payne to injury report as questionable",
       "first_published_at": "2026-10-30T20:52:27.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "neutral",
       "subject": {
@@ -13168,7 +13317,7 @@
       "story_id": "0214c29e-22cc-44c5-9798-528aa5e2ffa6",
       "headline": "Rams list Trent McDuffie, Coleman Shelton as questionable",
       "first_published_at": "2026-10-30T20:36:39.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "partial",
       "subject": {
@@ -13288,7 +13437,7 @@
       "story_id": "b5edf52b-ee27-4427-8a75-4eb7f2a3e751",
       "headline": "Ladd McConkey set to play, Derwin James out vs. Rams",
       "first_published_at": "2026-10-30T20:35:56.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -13367,7 +13516,7 @@
       "story_id": "7f2149bc-8aa4-47e5-88bc-b214fa8099af",
       "headline": "Jeffery Simmons says calling Caleb Williams \"Painted Nails\" was \"just smack talk\"",
       "first_published_at": "2026-10-30T20:34:01.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -13448,7 +13597,7 @@
       "story_id": "aa9859a8-0f72-4a95-8a77-f14cb211527d",
       "headline": "Ravens claim G Christian Haynes off waivers",
       "first_published_at": "2026-10-28T20:51:07.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -13569,7 +13718,7 @@
       "story_id": "7d3bdbc1-6568-4ae7-8abf-206dc0a33579",
       "headline": "Raiders G Jackson Powers-Johnson is questionable for Sunday",
       "first_published_at": "2026-10-30T20:20:40.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "neutral",
       "subject": {
@@ -13647,7 +13796,7 @@
       "story_id": "2f971816-193d-4337-a5f1-d84abc76fe7e",
       "headline": "Titans rule out WR Carnell Tate, RB Tyjae Spears, P Tommy Townsend",
       "first_published_at": "2026-10-30T20:13:15.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -13765,7 +13914,7 @@
       "story_id": "5feb5ade-9ab0-4faf-8329-ecb79a9b36af",
       "headline": "Saquon Barkley set to play, DeVonta Smith ruled out",
       "first_published_at": "2026-10-30T20:07:58.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -13840,7 +13989,7 @@
       "story_id": "4e624e19-0d56-441d-8800-8f3525524ea6",
       "headline": "Sauce Gardner, Tyler Warren listed as limited on Wednesday's injury report",
       "first_published_at": "2026-10-28T20:11:12.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "neutral",
       "subject": {
@@ -13916,7 +14065,7 @@
       "story_id": "4d8e2a47-b88a-423e-9531-bf280be32224",
       "headline": "Kerby Joseph after return to practice: I'm still him; I hope you all ain't forgot",
       "first_published_at": "2026-10-30T19:45:13.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "neutral",
       "subject": {
@@ -13993,7 +14142,7 @@
       "story_id": "995c2b87-93b3-41fe-86e4-abaedf9ee5d4",
       "headline": "Colston Loveland limited at Bears practice with a neck injury",
       "first_published_at": "2026-10-30T19:41:02.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "neutral",
       "subject": {
@@ -14072,7 +14221,7 @@
       "story_id": "45fe8f99-a1ec-4f18-a2ad-a284bd3a34a2",
       "headline": "New appeals court ruling could end Sunday Ticket",
       "first_published_at": "2026-10-30T19:31:08.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -14147,7 +14296,7 @@
       "story_id": "7bbf0c42-8393-4506-b72f-e217fb80cc69",
       "headline": "Ravens G Vega Ioane ruled out for Week 8",
       "first_published_at": "2026-10-30T19:26:02.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -14220,7 +14369,7 @@
       "story_id": "e6963f18-8ae0-4283-b603-fa5058f6dda5",
       "headline": "Browns list three players as questionable, including OT Tytus Howard",
       "first_published_at": "2026-10-30T19:14:30.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "neutral",
       "subject": {
@@ -14298,7 +14447,7 @@
       "story_id": "84010ff5-0850-43b9-8e24-3e3830c0e486",
       "headline": "Panthers Make Multiple Major Coaching Changes After Loss To Packers",
       "first_published_at": "2026-10-30T15:12:19.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 10,
       "enrichment_status": "neutral",
       "subject": {
@@ -14365,7 +14514,7 @@
       "story_id": "fd422766-b1cc-49be-9ecd-dd91a16696c0",
       "headline": "Falcons rule out Brian Robinson, list eight as questionable",
       "first_published_at": "2026-10-30T19:11:04.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "partial",
       "subject": {
@@ -14485,7 +14634,7 @@
       "story_id": "33bfab70-7743-416f-add3-9f5869fb422d",
       "headline": "Appeals court reinstates $4.7 billion verdict against NFL in Sunday Ticket class action",
       "first_published_at": "2026-10-30T19:01:16.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -14560,7 +14709,7 @@
       "story_id": "1e1f7f36-e3ce-4132-959c-39522d06bd63",
       "headline": "Colts sign DT Kevin Givens off of 49ers practice squad",
       "first_published_at": "2026-10-30T18:50:53.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 10,
       "enrichment_status": "neutral",
       "subject": {
@@ -14637,7 +14786,7 @@
       "story_id": "38cc9dfc-abf1-4db7-b5ec-ed130d5ce9e1",
       "headline": "Kenneth Gainwell, Luke Goedeke questionable for Bucs vs. Falcons",
       "first_published_at": "2026-10-30T18:36:34.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "partial",
       "subject": {
@@ -14756,7 +14905,7 @@
       "story_id": "cdc0602b-fdeb-46c0-a05a-8d1da4b58aeb",
       "headline": "Raiders OT DJ Glaze: Bills S Sam Franklin did spit at me, but it is what it is",
       "first_published_at": "2026-10-29T14:54:41.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "partial",
       "subject": {
@@ -14876,7 +15025,7 @@
       "story_id": "7969f988-3119-4983-b061-7d55d99562db",
       "headline": "Lamar Jackson plans to play on Sunday",
       "first_published_at": "2026-10-30T18:05:19.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "neutral",
       "subject": {
@@ -14954,7 +15103,7 @@
       "story_id": "f505de88-5b87-460e-bd5c-a0927bc889ba",
       "headline": "David Bailey doubtful, Breece Hall questionable for Sunday vs. Raiders",
       "first_published_at": "2026-10-30T14:55:34.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "partial",
       "subject": {
@@ -15074,7 +15223,7 @@
       "story_id": "f070f3f7-6d39-4e63-b715-b63685abfd27",
       "headline": "Shane Steichen confirms Josh Downs requested a trade and will play Sunday",
       "first_published_at": "2026-10-30T17:08:31.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -15195,7 +15344,7 @@
       "story_id": "a6dbc9fb-5903-48d9-b275-cc87a2604b60",
       "headline": "Jaguars, Lions debut Rivalries uniforms to lead NFL Week 8 threads",
       "first_published_at": "2026-10-30T17:02:39.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -15270,7 +15419,7 @@
       "story_id": "213194da-9ba7-4582-91b8-c22bed886286",
       "headline": "Bryce Young's simple fit ahead of TNF tops NFL Week 8's best arrivals",
       "first_published_at": "2026-10-30T17:02:39.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -15348,7 +15497,7 @@
       "story_id": "fff60b26-271e-43fa-85f5-9fa1d2cfa1f5",
       "headline": "Kiper updates his 2027 Big Board: Ranking the top 25 NFL draft prospects",
       "first_published_at": "2026-10-30T16:53:04.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -15427,7 +15576,7 @@
       "story_id": "a7156eae-7ee7-4da8-b542-b7a4bfb91c8c",
       "headline": "Could Jeremiah Smith be a generational NFL draft receiver prospect?",
       "first_published_at": "2026-10-30T16:53:04.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -15507,7 +15656,7 @@
       "story_id": "6be6448d-fb36-47fe-a2e6-c0a49b8eb9fa",
       "headline": "Christian Watson transported to hospital; Will Lee injures hamstring on same play",
       "first_published_at": "2026-10-30T01:28:48.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "partial",
       "subject": {
@@ -15623,7 +15772,7 @@
       "story_id": "e2bbcfd4-8596-4115-b03b-cfd33a5bf60f",
       "headline": "Emeka Egbuka has cleared concussion protocol, but will miss Sunday's game with a foot injury",
       "first_published_at": "2026-10-30T16:41:28.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "partial",
       "subject": {
@@ -15744,7 +15893,7 @@
       "story_id": "2a642eb9-d4b7-4178-b3cd-5c1eb73a1fc4",
       "headline": "Ja'Marr Chase's \"screaming\" at halftime helped spark Bengals turnaround",
       "first_published_at": "2026-10-26T00:44:55.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -15864,7 +16013,7 @@
       "story_id": "a2967aa1-edfc-484b-b467-f43b2812aad0",
       "headline": "Acrisure Stadium will have a quick turnaround this weekend",
       "first_published_at": "2026-10-30T16:31:50.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -15941,7 +16090,7 @@
       "story_id": "4f46dfce-3339-4757-9a34-9fe39155e02a",
       "headline": "NFL Week 8 picks: Upset and score predictions, matchup breakdowns for every game",
       "first_published_at": "2026-10-29T05:34:45.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -16016,7 +16165,7 @@
       "story_id": "6d01adb0-79a3-4094-85cd-833273e832a9",
       "headline": "NFLPA names Eagles S Michael Carter their Community MVP for Week 8",
       "first_published_at": "2026-10-30T16:25:17.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -16138,7 +16287,7 @@
       "story_id": "5d598e5a-fea2-47e7-8018-622eae154f18",
       "headline": "Titans sign DT Timmy Horne to 53-man roster",
       "first_published_at": "2026-10-30T16:18:50.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -16215,7 +16364,7 @@
       "story_id": "770e8ed4-14ea-4fb6-a7c1-150989720ca7",
       "headline": "Bills' Spencer Brown \"took enough drugs to sedate a small elephant\" to play with back injury",
       "first_published_at": "2026-10-30T15:54:46.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "partial",
       "subject": {
@@ -16335,7 +16484,7 @@
       "story_id": "897d51f2-7023-4757-9fe1-bd9aa45054eb",
       "headline": "Osi Umenyiora on the journey that led to NFL Africa",
       "first_published_at": "2026-10-30T15:35:41.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -16454,7 +16603,7 @@
       "story_id": "f7e5650d-40b6-4197-9a21-7c7a388ae633",
       "headline": "Packers S Xavier McKinney: I see what's going on with officiating and it's killing us",
       "first_published_at": "2026-10-26T11:05:25.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "partial",
       "subject": {
@@ -16574,7 +16723,7 @@
       "story_id": "c4682bdb-c8d2-46f3-9287-7faa38b0d3a4",
       "headline": "Dan Campbell: I thought we'd get fourth-and-1, if not I knew we'd get the ball back",
       "first_published_at": "2026-10-26T08:08:29.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -16693,7 +16842,7 @@
       "story_id": "36afe5a3-d8bb-425a-b584-0a24ec1d5eed",
       "headline": "New report paints fuller picture of the Troy Aikman, Joe Buck rift",
       "first_published_at": "2026-10-30T14:22:57.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -16772,7 +16921,7 @@
       "story_id": "535fa739-65d2-4125-8e57-6e78c7c11889",
       "headline": "Let's rank the best players who might switch teams before the NFL trade deadline",
       "first_published_at": "2026-10-30T14:07:03.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -16847,7 +16996,7 @@
       "story_id": "4246acba-9177-452e-92b5-048f4a1f8510",
       "headline": "After adding DeForest Buckner, will the 49ers continue to be aggressive at the deadline?",
       "first_published_at": "2026-10-30T14:07:02.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -16925,7 +17074,7 @@
       "story_id": "e2b09fd4-fbfd-4595-aaeb-3473bde9c904",
       "headline": "Broncos and Chiefs have ruled the AFC West for more than a decade: Keys to the rivalry's next chapter",
       "first_published_at": "2026-10-30T13:15:51.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -17000,7 +17149,7 @@
       "story_id": "30ce91a5-4ad6-424a-9c95-9e59be72883f",
       "headline": "49ers' Fred Warner needed help getting his mind right. The tackles soon followed",
       "first_published_at": "2026-10-30T12:46:06.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -17075,7 +17224,7 @@
       "story_id": "a2a1e4d0-0c79-4aba-984b-8f7e861c7d32",
       "headline": "Seahawks plan to start Quenton Nelson at left guard Monday night",
       "first_published_at": "2026-10-29T19:28:45.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 10,
       "enrichment_status": "partial",
       "subject": {
@@ -17194,7 +17343,7 @@
       "story_id": "84ebc351-5b2d-4d28-ba1d-c4b8d39c9db6",
       "headline": "Colts agree to trade Quenton Nelson to Seahawks",
       "first_published_at": "2026-10-27T04:53:57.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -17307,7 +17456,7 @@
       "story_id": "b5b12df4-b159-43a8-953c-4a5dbd027b5f",
       "headline": "How can the Raiders fix their run defense? Possible answers to a question they're sick of",
       "first_published_at": "2026-10-30T12:31:06.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -17382,7 +17531,7 @@
       "story_id": "686a1eba-d961-4105-be1f-a90d60f35492",
       "headline": "2027 NFL Draft Big Board: 6 QBs Rank Among Top 50 Overall Prospects",
       "first_published_at": "2026-10-30T12:00:08.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -17459,7 +17608,7 @@
       "story_id": "b0380f1e-faa7-482b-a5ce-2d7ddcf82c9b",
       "headline": "Joey Porter Jr. has lived up to Cowboys' expectations, so is he in their long-term plans?",
       "first_published_at": "2026-10-30T11:01:06.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -17538,7 +17687,7 @@
       "story_id": "74479dbc-7968-4e0e-a6f3-c8a9264ab83c",
       "headline": "Bryce Young says knee is \"fine\" after loss to Packers",
       "first_published_at": "2026-10-30T10:58:18.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "partial",
       "subject": {
@@ -17658,7 +17807,7 @@
       "story_id": "fcb26888-9eb4-49a1-b6b3-2116bc7875ad",
       "headline": "2026 NFL trade deadline: Potential landing spots for RB Jonathan Taylor, S Budda Baker and more",
       "first_published_at": "2026-10-30T10:53:55.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -17740,7 +17889,7 @@
       "story_id": "d7af24f7-e975-40ef-a053-8b5dc8138f71",
       "headline": "Why doesn't rookie Cyrus Allen play more? He has an offense to learn inside and out",
       "first_published_at": "2026-10-30T10:46:08.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -17818,7 +17967,7 @@
       "story_id": "d16130a3-6036-4ef7-8018-0bd961a47e54",
       "headline": "Robert Saleh: Titans aren't shopping anyone, but when you're 1-6 teams call you",
       "first_published_at": "2026-10-30T10:27:40.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -17937,7 +18086,7 @@
       "story_id": "0b21d56b-cea0-400c-9a07-b9c589de1af4",
       "headline": "How NFL RBs are trying to protect against 'Peanut Punch' amid a fumbling frenzy",
       "first_published_at": "2026-10-30T10:01:07.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -18015,7 +18164,7 @@
       "story_id": "32b030a9-5244-41c3-9965-e3e1696ebc44",
       "headline": "Saquon Barkley on the trade block? What an Eagles sell-off could look like",
       "first_published_at": "2026-10-30T10:01:07.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -18094,7 +18243,7 @@
       "story_id": "5e42df4f-022b-4a41-892a-2471d3c5ebf7",
       "headline": "Aaron Glenn is unlikely to be fired in-season; here's his path to remaining Jets coach in 2027",
       "first_published_at": "2026-10-30T09:31:07.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 10,
       "enrichment_status": "neutral",
       "subject": {
@@ -18164,7 +18313,7 @@
       "story_id": "4eb1e487-f681-40a6-a93f-6f15db4fdc35",
       "headline": "Lions safety Kerby Joseph's return to practice is good news for him and the team",
       "first_published_at": "2026-10-30T09:01:07.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -18243,7 +18392,7 @@
       "story_id": "ca15ebcf-a764-4c53-8f0a-c3f9ff20d5d7",
       "headline": "Christian Watson spat up blood, broke a rib, went to the hospital and returned to the game",
       "first_published_at": "2026-10-30T07:58:39.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -18321,7 +18470,7 @@
       "story_id": "68fc7ddc-c9b3-44b8-8f57-397aeba7f54d",
       "headline": "Jonathan Gannon has Packers pass rush buzzing. Soon enough, he'll get to deploy Micah Parsons",
       "first_published_at": "2026-10-30T07:31:07.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -18400,7 +18549,7 @@
       "story_id": "aa8b3d36-70d6-4b62-8437-246164e23c60",
       "headline": "NFL Week 8 fantasy sleepers: QB Sam Darnold, RB Rico Dowdle, WR Ja'Kobi Lane among upside plays",
       "first_published_at": "2026-10-30T06:30:57.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -18520,7 +18669,7 @@
       "story_id": "33a5ea62-5d5f-4813-a9eb-9f6dd0c7a9cc",
       "headline": "Goo Goo Dolls to headline Thanksgiving halftime show for Bills vs. Chiefs at Highmark Stadium",
       "first_published_at": "2026-10-30T06:04:12.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -18639,7 +18788,7 @@
       "story_id": "67930162-10af-4466-aaa5-0b34484e6652",
       "headline": "After Dreadful Cowboys Loss, Where Do Eagles Go From Here? Answering Philly's Biggest Qs",
       "first_published_at": "2026-10-30T04:07:36.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -18714,7 +18863,7 @@
       "story_id": "97c8745a-3c9c-4e27-ba2c-84f6278edb0e",
       "headline": "NFL news roundup: Latest league updates from Tuesday, Oct. 13",
       "first_published_at": "2026-10-13T04:17:25.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -18789,7 +18938,7 @@
       "story_id": "3eacb2a6-4c69-4342-83b7-b05c21f4f5d2",
       "headline": "Jordan Love For MVP? 3 Takeaways From Packers' Win Over Panthers",
       "first_published_at": "2026-10-30T03:42:36.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -18909,7 +19058,7 @@
       "story_id": "1e69f785-bfd9-4fca-b202-f6587f2bfc3f",
       "headline": "Panthers-Packers on 'Thursday Night Football': What We Learned from Green Bay's 27-19 win",
       "first_published_at": "2026-10-30T03:25:07.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -18984,7 +19133,7 @@
       "story_id": "15a48864-0650-40eb-be19-372c7fb240e6",
       "headline": "Jets DC Brian Duker on Ashton Jeanty's comments: Plenty of confidence in our guys",
       "first_published_at": "2026-10-29T19:42:22.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -19104,7 +19253,7 @@
       "story_id": "b114e743-bf76-4388-adcb-22c2dbdc94e3",
       "headline": "Aaron Donald isn't bothered by not having a sack since he returned to the Rams",
       "first_published_at": "2026-10-30T03:08:55.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 10,
       "enrichment_status": "partial",
       "subject": {
@@ -19221,7 +19370,7 @@
       "story_id": "b8c79c2a-2b41-40b4-9ce3-92a872c91ac6",
       "headline": "Panthers close to within 27-19 of Packers",
       "first_published_at": "2026-10-30T03:06:32.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -19296,7 +19445,7 @@
       "story_id": "1848f31d-e94d-447d-ba8d-16b2eb92776f",
       "headline": "Jaguars' Brian Thomas Jr. wants to 'show everybody what I can do' amid trade rumors",
       "first_published_at": "2026-10-30T02:36:56.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -19417,7 +19566,7 @@
       "story_id": "b7aeb1a8-a669-4b8c-add1-dd5a3156c5fd",
       "headline": "Troy Aikman says it was \"unfair\" for him to back Jerry Jones \"into a corner\"",
       "first_published_at": "2026-10-30T02:24:32.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -19496,7 +19645,7 @@
       "story_id": "25f78faa-5762-4f91-997c-f705090f9a57",
       "headline": "NFL Week 8 bold predictions: Joe Burrow throws 6 TD passes; Jahmyr Gibbs punishes Vikings' defense",
       "first_published_at": "2026-10-30T02:15:56.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -19576,7 +19725,7 @@
       "story_id": "d27ecb75-b27d-4fa2-b78a-2eee795e5844",
       "headline": "Christian Watson cleared, on his way back to Lambeau from hospital",
       "first_published_at": "2026-10-30T02:15:16.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -19655,7 +19804,7 @@
       "story_id": "b17b6097-4256-4c6f-9bfe-12de00e39464",
       "headline": "June Jones, former Atlanta Falcons head coach, dies at age 73",
       "first_published_at": "2026-10-30T01:52:58.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -19774,7 +19923,7 @@
       "story_id": "8b3cacd8-c5a5-4cee-8b8b-97a00cdc2fba",
       "headline": "Packers list Matthew Golden as out of practice Tuesday",
       "first_published_at": "2026-10-27T20:24:46.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "partial",
       "subject": {
@@ -19894,7 +20043,7 @@
       "story_id": "0bef5e01-9ac2-4424-89e7-3af42168093b",
       "headline": "Report: NFL flexes referee Alex Moore's crew out of prime time",
       "first_published_at": "2026-10-30T01:44:10.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -19972,7 +20121,7 @@
       "story_id": "fe9e29a4-0da3-4616-a7a7-fe7804a7f193",
       "headline": "Tom Brady Isn't Sure If Defenders Are Being Treated Fair On Roughing The Passer Calls",
       "first_published_at": "2026-10-30T01:07:06.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -20091,7 +20240,7 @@
       "story_id": "57869e26-22d3-4bea-9e95-e798217894c2",
       "headline": "The Rams are exploring a 2-kicker approach to cure special teams nightmares",
       "first_published_at": "2026-10-30T01:01:07.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -20166,7 +20315,7 @@
       "story_id": "a9c579cf-f66f-43f2-92ce-9766b45b974e",
       "headline": "Chuba Hubbard gives Panthers 10-6 lead",
       "first_published_at": "2026-10-30T00:58:23.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -20245,7 +20394,7 @@
       "story_id": "78745797-1ce4-463f-af7e-bb7eaca78c2a",
       "headline": "CeeDee Lamb: We feel we have best roster in NFC East, so why not us?",
       "first_published_at": "2026-10-24T03:28:26.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -20322,7 +20471,7 @@
       "story_id": "be50d907-e638-4b36-8a0e-3c7d19354d43",
       "headline": "Packers lead Panthers 6-3 after Trey Smack misses another PAT",
       "first_published_at": "2026-10-30T00:47:49.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -20442,7 +20591,7 @@
       "story_id": "2741236e-17e4-485a-a91c-2a79dc916e5f",
       "headline": "Mike Macdonald on Anthony Bradford losing starting job: \"It's not an easy situation\"",
       "first_published_at": "2026-10-30T00:47:07.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -20521,7 +20670,7 @@
       "story_id": "00265c45-2e10-4788-b664-7974875ef6ad",
       "headline": "Cowboys-Eagles' audience blows out World Series Game 3",
       "first_published_at": "2026-10-30T00:08:46.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -20596,7 +20745,7 @@
       "story_id": "d59a296b-7063-4b60-a653-252dd2d9a9b5",
       "headline": "The 5 Trades I Want To See Before The NFL Trade Deadline",
       "first_published_at": "2026-10-29T23:37:11.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -20671,7 +20820,7 @@
       "story_id": "35aa5e11-6614-464d-a686-362299715e15",
       "headline": "Cardinals RB Jeremiyah Love limited in his return to practice",
       "first_published_at": "2026-10-29T02:25:35.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -20792,7 +20941,7 @@
       "story_id": "9d9e3521-e23d-431a-8d0a-4e069f084e07",
       "headline": "Eric Bieniemy shares positive update about his wife, who was shot three months ago",
       "first_published_at": "2026-10-29T22:43:44.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -20911,7 +21060,7 @@
       "story_id": "c36dcfb1-26b0-4014-921a-e9dfef7d0bf5",
       "headline": "Steve Wilks's role with Commanders will now include game days",
       "first_published_at": "2026-10-29T22:12:33.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -21030,7 +21179,7 @@
       "story_id": "c91db2f2-63b1-4ad3-a0e6-8745ffaf9552",
       "headline": "Aaron Jones returns to Vikings practice on Thursday",
       "first_published_at": "2026-10-29T22:11:46.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -21151,7 +21300,7 @@
       "story_id": "6e7019c6-4236-4cfe-b8b7-c99df20c4ba2",
       "headline": "Chiefs add rookie CB Mansoor Delane to the injury report",
       "first_published_at": "2026-10-29T22:08:11.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "partial",
       "subject": {
@@ -21272,7 +21421,7 @@
       "story_id": "b31bf2a3-528c-4ad7-b8a5-29b8faa2feb0",
       "headline": "Saquon Barkley, DeVonta Smith out of practice again Thursday",
       "first_published_at": "2026-10-29T22:03:31.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -21352,7 +21501,7 @@
       "story_id": "47eaf66b-4608-4ac6-9070-1133a4d84b1a",
       "headline": "Dan Campbell: I don't do a big study on fourth downs, it's just what I believe in",
       "first_published_at": "2026-10-29T21:54:19.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -21430,7 +21579,7 @@
       "story_id": "fc8c0aae-a3ec-48ae-8e99-026d8cb842d4",
       "headline": "Mike McDaniel will remain the Chargers' offensive playcaller",
       "first_published_at": "2026-10-28T09:20:21.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -21549,7 +21698,7 @@
       "story_id": "8b28addf-27cc-48f5-9f6a-d2cfce25d41e",
       "headline": "NFL fines Caleb Williams $11,941 for displaying \"unauthorized logo\" on his shoes in Week 6",
       "first_published_at": "2026-10-27T02:28:04.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -21627,7 +21776,7 @@
       "story_id": "67d69863-e0cb-4e76-a6c1-ef714d4dcf83",
       "headline": "Cowboys add OG Tyler Smith, TE Luke Schoonmaker to their injury report",
       "first_published_at": "2026-10-29T21:13:15.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "neutral",
       "subject": {
@@ -21704,7 +21853,7 @@
       "story_id": "2d7be663-e374-4e0f-a145-d5d405edd71d",
       "headline": "Ja'Marr Chase returns to practice as a full participant",
       "first_published_at": "2026-10-29T21:12:42.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -21783,7 +21932,7 @@
       "story_id": "320297de-1b82-4a32-abe6-730f422c49fc",
       "headline": "2027 NFL Draft No. 1 Pick Odds: Jeremiah Smith Favored, Drew Mestemaker Surging",
       "first_published_at": "2026-10-29T21:06:04.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -21902,7 +22051,7 @@
       "story_id": "f9c3c1f4-6f6d-430c-a43a-fc2714625313",
       "headline": "NFL Trade Deadline: Is Saquon Barkley Next Star To Move? Who Execs Expect To Buy & Sell",
       "first_published_at": "2026-10-29T21:00:20.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -21977,7 +22126,7 @@
       "story_id": "2a154fe9-ebdd-4ca7-ba66-71bedc9cf36c",
       "headline": "TreVeyon Henderson did not practice Thursday due to an illness",
       "first_published_at": "2026-10-29T20:53:49.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -22052,7 +22201,7 @@
       "story_id": "bf785e01-f915-4472-a8d4-650022575e84",
       "headline": "Packers elevate Arron Mosby from the practice squad",
       "first_published_at": "2026-10-29T20:50:46.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "partial",
       "subject": {
@@ -22173,7 +22322,7 @@
       "story_id": "b8122063-bb56-42f9-8f4d-7c1143240d30",
       "headline": "Lamar Jackson a full participant in Wednesday's practice",
       "first_published_at": "2026-10-28T21:50:43.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "partial",
       "subject": {
@@ -22292,7 +22441,7 @@
       "story_id": "d35a5ed1-85c4-47f2-857f-c7baa52a50a1",
       "headline": "Panthers place CB Akayleb Evans on injured reserve",
       "first_published_at": "2026-10-29T20:38:53.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -22413,7 +22562,7 @@
       "story_id": "51d9673d-9e00-42f9-8dc4-b553dd861261",
       "headline": "Kyle Monangai again listed as non-participant on Thursday",
       "first_published_at": "2026-10-29T20:37:13.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -22533,7 +22682,7 @@
       "story_id": "32dc88c6-357b-43b5-bca2-7edaa471fad3",
       "headline": "David Bailey misses second straight practice, Braelon Allen up to full participation",
       "first_published_at": "2026-10-29T20:30:27.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -22654,7 +22803,7 @@
       "story_id": "16bb0cb5-8a0d-45c9-b900-62dc1dc097e9",
       "headline": "Lions don't expect Amon-Ra St. Brown, Ennis Rakestraw to practice Wednesday",
       "first_published_at": "2026-10-26T19:50:19.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -22769,7 +22918,7 @@
       "story_id": "e77954c9-61c3-4516-9da8-c385fb65b8ca",
       "headline": "Jared Verse returns to practice, Tytus Howard remains sidelined",
       "first_published_at": "2026-10-29T20:08:53.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -22889,7 +23038,7 @@
       "story_id": "d68f9fd7-0959-4b29-bdb9-c9f7dedbb4fd",
       "headline": "Mike Evans \"working tirelessly\" to calm down his Achilles tendinitis",
       "first_published_at": "2026-10-29T20:04:56.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -23001,7 +23150,7 @@
       "story_id": "d8794be7-9ef0-4246-95b3-a040f06e534f",
       "headline": "June Jones, innovator of the run and shoot offense, dies at 73",
       "first_published_at": "2026-10-29T19:38:21.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -23120,7 +23269,7 @@
       "story_id": "91f5f6ac-4634-4d36-9282-f91eb09f419f",
       "headline": "Colts sign OT Charlie Heck to 53-man roster",
       "first_published_at": "2026-10-29T19:20:47.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 10,
       "enrichment_status": "neutral",
       "subject": {
@@ -23197,7 +23346,7 @@
       "story_id": "47f0fa8b-0c85-4343-80f5-5faaf83a46b9",
       "headline": "Jared Verse adds to the chatter between Browns and Steelers",
       "first_published_at": "2026-10-29T19:15:49.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -23317,7 +23466,7 @@
       "story_id": "50ca0233-d250-4146-99af-6df7d8537356",
       "headline": "Report: A.J. Brown's Week 8 availability up in the air due to knee injury",
       "first_published_at": "2026-10-29T19:12:38.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "neutral",
       "subject": {
@@ -23395,7 +23544,7 @@
       "story_id": "375ba28f-bfd8-4fb6-a80f-a62214a9ac43",
       "headline": "Cowboys open Jonathan Bullard's 21-day practice window",
       "first_published_at": "2026-10-29T18:53:57.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -23474,7 +23623,7 @@
       "story_id": "6b8c70f6-7397-42ae-95de-800497f66753",
       "headline": "NFL Week 8 Betting Report: Is Lamar Back? Bettors Still Backing Bills, The Over",
       "first_published_at": "2026-10-29T18:15:32.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -23551,7 +23700,7 @@
       "story_id": "dabfb88d-23f7-4177-91ab-afab412fc294",
       "headline": "Packers call Keisean Nixon questionable for Thursday night with a shoulder injury",
       "first_published_at": "2026-10-29T18:00:20.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "neutral",
       "subject": {
@@ -23629,7 +23778,7 @@
       "story_id": "bad12554-5c9f-4eec-94aa-2ba7516813a7",
       "headline": "Chiefs STs coordinator Dave Toub: Harrison Butker is our kicker, we're trying to get him right",
       "first_published_at": "2026-10-29T17:44:37.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -23750,7 +23899,7 @@
       "story_id": "b8eb4389-2c6d-4ab1-b6f2-52a8319d0da4",
       "headline": "Report: Bears are close to a deal to stay in Illinois",
       "first_published_at": "2026-10-29T17:19:51.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -23825,7 +23974,7 @@
       "story_id": "dc806331-99ef-4d8b-bcc1-75ca3026c24e",
       "headline": "2026 NFL Trade Deadline live updates: Tracker, deals, news, rumors, analysis",
       "first_published_at": "2026-10-29T16:52:19.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -23900,7 +24049,7 @@
       "story_id": "ae0287bf-90aa-42b4-9cbf-8fbde35818ee",
       "headline": "PFT's Week 8 NFL 2026 power rankings",
       "first_published_at": "2026-10-27T13:29:42.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -23975,7 +24124,7 @@
       "story_id": "38154464-9233-42bf-b0e1-efa8c8239428",
       "headline": "Amy Adams Strunk: We are forever grateful for all Jeffery Simmons gave this team, this city",
       "first_published_at": "2026-10-29T16:34:06.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -24095,7 +24244,7 @@
       "story_id": "91ec9200-ef3f-40c7-93e9-4e1c6b41024e",
       "headline": "Jonathan Taylor says he hasn't requested a trade: \"I'm always proud to wear the horseshoe\"",
       "first_published_at": "2026-10-29T16:17:09.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 10,
       "enrichment_status": "neutral",
       "subject": {
@@ -24174,7 +24323,7 @@
       "story_id": "04e2f08e-2faa-46ee-bffc-816729c7ca16",
       "headline": "ManningCast slumps to 517,000 viewers, while the Next Gen Stats version surges",
       "first_published_at": "2026-10-29T15:16:25.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -24249,7 +24398,7 @@
       "story_id": "b8d312db-40a8-4418-8f4e-5a0c8a7c9a36",
       "headline": "NFL Fact Or Fiction: Vikings Destined For A Fall? Chiefs No Longer Elite? Giants Legit?",
       "first_published_at": "2026-10-29T15:06:01.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -24326,7 +24475,7 @@
       "story_id": "39accfdd-040b-44c4-b22f-b62f5b79b651",
       "headline": "Jon Gruden's case against the NFL isn't going well — and it's his own fault",
       "first_published_at": "2026-10-29T14:22:51.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -24404,7 +24553,7 @@
       "story_id": "47f4487e-b527-4616-94cc-58a59dfdb561",
       "headline": "Jeffery Simmons: As far as I know, I'll be here after trade deadline",
       "first_published_at": "2026-10-29T14:22:25.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 10,
       "enrichment_status": "partial",
       "subject": {
@@ -24525,7 +24674,7 @@
       "story_id": "a3ebbd85-4c1e-4d14-b929-be0e85ca3931",
       "headline": "A.J. Brown: Sometimes I'm pushing through ankle injury, but no excuses",
       "first_published_at": "2026-10-29T13:18:04.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "neutral",
       "subject": {
@@ -24604,7 +24753,7 @@
       "story_id": "48dee7f2-cea8-415a-96f9-5b28a79e2fe3",
       "headline": "The best NFL rookies after seven weeks: We ranked the top 10 and answered five big questions",
       "first_published_at": "2026-10-29T13:05:47.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -24679,7 +24828,7 @@
       "story_id": "4f3339b2-6be2-4a78-a5de-c50ca38de846",
       "headline": "What happened to the 2025 running back class? Barnwell sizes up Jeanty, Hampton, others in Year 2",
       "first_published_at": "2026-10-29T12:57:38.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -24754,7 +24903,7 @@
       "story_id": "7eda0a92-3ece-46dc-a9b2-384aede3173b",
       "headline": "Patriots WR A.J. Brown admits his ankle is not fully healthy after IR stint: 'I'm pushing through'",
       "first_published_at": "2026-10-29T12:47:56.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -24875,7 +25024,7 @@
       "story_id": "b67343f4-2bf2-4acd-9168-ec2786d7fdc1",
       "headline": "Liam Coen: Brian Thomas will be able to help us make plays this week",
       "first_published_at": "2026-10-26T16:08:55.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 10,
       "enrichment_status": "neutral",
       "subject": {
@@ -24955,7 +25104,7 @@
       "story_id": "04a1772d-af07-4d07-89b6-7b7c93842ba2",
       "headline": "Bengals' red-zone defense is saving them. Is that sustainable?",
       "first_published_at": "2026-10-29T12:16:07.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -25030,7 +25179,7 @@
       "story_id": "b17a4e8e-5d5c-47d2-bea6-04cd0da28bf6",
       "headline": "Can Broncos atone for brutal Week 1 loss vs. Chiefs? It starts with slowing Kenneth Walker III",
       "first_published_at": "2026-10-29T12:16:07.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -25108,7 +25257,7 @@
       "story_id": "9741018b-32dd-4ff6-a0e1-36db388fae99",
       "headline": "Seahawks trade deadline targets: Could John Schneider have more up his sleeve?",
       "first_published_at": "2026-10-29T12:16:07.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -25186,7 +25335,7 @@
       "story_id": "f7bf606c-65eb-47cc-a80d-78843a00ce1a",
       "headline": "NFL Trade Deadline: 1 Player Every Playoff Hopeful Should Target",
       "first_published_at": "2026-10-29T12:00:58.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 10,
       "enrichment_status": "neutral",
       "subject": {
@@ -25264,7 +25413,7 @@
       "story_id": "839326b6-8ff7-4440-804f-33d66cc08c4a",
       "headline": "Roll The Tape: Goff Is Built To Beat Minnesota; Why McCarthy Is Thriving In New York",
       "first_published_at": "2026-10-29T12:00:46.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -25339,7 +25488,7 @@
       "story_id": "eb9b2dc7-4de1-4850-9fea-50638435efc4",
       "headline": "Cam Heyward: Jared Verse calling Steelers \"dirty\" will be addressed Sunday",
       "first_published_at": "2026-10-29T11:07:55.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -25418,7 +25567,7 @@
       "story_id": "77b42b52-2ad5-4527-9f55-82f1a2fc95ac",
       "headline": "Week 8 Thursday night inactives: Carolina Panthers at Green Bay Packers",
       "first_published_at": "2026-10-29T10:59:55.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -25493,7 +25642,7 @@
       "story_id": "16c1d366-ef67-40e1-9b2a-a5a96212df13",
       "headline": "Justin Jefferson: You want high production, but what we're doing is working",
       "first_published_at": "2026-10-29T10:58:08.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -25612,7 +25761,7 @@
       "story_id": "21299f5f-7b7e-4bb2-ab43-71a01980c05b",
       "headline": "Ashton Jeanty: Jets' defense has a couple guys who don't want to tackle",
       "first_published_at": "2026-10-29T10:37:44.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -25732,7 +25881,7 @@
       "story_id": "56338c5c-8e24-404f-b799-52d53b13fca5",
       "headline": "Ten hypothetical NFL trade deadline deals that could swing the Super Bowl race",
       "first_published_at": "2026-10-29T10:16:10.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 10,
       "enrichment_status": "neutral",
       "subject": {
@@ -25807,7 +25956,7 @@
       "story_id": "05a6c7ce-a71b-4310-8b5e-b06585d81709",
       "headline": "Pulse of the Packers: Matthew Golden banged up, but Green Bay primed to bounce back",
       "first_published_at": "2026-10-29T10:16:10.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -25886,7 +26035,7 @@
       "story_id": "3a26bc03-5f4c-4a1a-bacd-a37bace34ec1",
       "headline": "LB Blake Cashman is having a stellar season. Why haven't the Vikings extended him?",
       "first_published_at": "2026-10-29T10:16:10.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -25965,7 +26114,7 @@
       "story_id": "29acea64-089f-4822-a0e6-f528d821ed60",
       "headline": "The NFL trade deadline keeps getting more active. What trends are fueling the chaos?",
       "first_published_at": "2026-10-29T09:46:12.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -26040,7 +26189,7 @@
       "story_id": "322b7699-2e3f-43bf-bfe0-4b6a10b45205",
       "headline": "Why the Browns rematch will show exactly how far the Steelers offense has come",
       "first_published_at": "2026-10-29T09:46:12.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -26115,7 +26264,7 @@
       "story_id": "450c34f3-a8d7-47d8-8866-87e982ab7ce9",
       "headline": "Panthers return to site of a defining 2025 win. Can they do it again in primetime?",
       "first_published_at": "2026-10-29T09:31:11.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -26190,7 +26339,7 @@
       "story_id": "dd9953e1-ad18-464d-b41a-cc1cc354507c",
       "headline": "Justin Herbert: Blame for Chargers' offense is on the players, not Mike McDaniel's fault",
       "first_published_at": "2026-10-29T08:59:41.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 8,
       "enrichment_status": "neutral",
       "subject": {
@@ -26270,7 +26419,7 @@
       "story_id": "8853a208-cd51-4878-90b5-548467d36213",
       "headline": "Jonathan Taylor 'proud to be' with Colts but acknowledges trade possibility",
       "first_published_at": "2026-10-29T07:46:06.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -26349,7 +26498,7 @@
       "story_id": "6a89565d-b4c8-4401-b85c-3eddfd83dd54",
       "headline": "NFL trade deadline: Track every move since start of 2026 regular season",
       "first_published_at": "2026-10-29T04:14:31.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -26424,7 +26573,7 @@
       "story_id": "58157f09-8170-42d5-ae29-4a011434f8b5",
       "headline": "Expect plenty of flags to fly on Thursday night between Panthers and Packers",
       "first_published_at": "2026-10-29T03:52:39.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -26499,7 +26648,7 @@
       "story_id": "142f34b7-a465-4285-8696-93359560537b",
       "headline": "Sean McVay doesn't rule out having two kickers on 48-man game-day roster",
       "first_published_at": "2026-10-29T02:47:02.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -26577,7 +26726,7 @@
       "story_id": "14d1d4d3-cc19-43b8-85fb-32e8b8787fe4",
       "headline": "New study estimates 75 percent of former NFL players who died from 2008 to 2023 had CTE",
       "first_published_at": "2026-10-29T02:22:00.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -26652,7 +26801,7 @@
       "story_id": "3372dd28-0583-469e-95d6-abefe9272c98",
       "headline": "Sean McVay: Davante Adams \"closer to the shorter term\" of the 6-10 week timeline",
       "first_published_at": "2026-10-29T01:45:39.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -26772,7 +26921,7 @@
       "story_id": "bfe1c8bb-742b-46e3-a213-5b9258cb4e71",
       "headline": "Justin Jefferson says fewer opportunities leaving him with 'in-between feeling' amid Vikings' 6-0 start",
       "first_published_at": "2026-10-29T01:27:05.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -26894,7 +27043,7 @@
       "story_id": "c7fd30da-68b1-4cb9-b2b9-66fc3dd44d71",
       "headline": "NFL Catchup: Josh Downs Requests Trade; Lamar Jackson Practices In Full",
       "first_published_at": "2026-10-29T01:18:27.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -26969,7 +27118,7 @@
       "story_id": "c25c4ebf-0dc4-41d2-bfc3-35045eb3f3a5",
       "headline": "Jared Verse misses practice, Browns expect him to play against Steelers",
       "first_published_at": "2026-10-28T22:40:22.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -27089,7 +27238,7 @@
       "story_id": "b1695d99-87e4-4327-819a-df4df0c9ec9d",
       "headline": "Tom Brady's NFL Power Rankings: The GOAT Is Taking A Mini Victory Lap With New No. 1",
       "first_published_at": "2026-10-29T00:59:05.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -27208,7 +27357,7 @@
       "story_id": "7cb56850-4680-4672-961d-a17ac013bc43",
       "headline": "Troy Aikman says there's a \"50-50 chance\" he won't be working in TV next year",
       "first_published_at": "2026-10-29T00:46:47.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -27327,7 +27476,7 @@
       "story_id": "cb0c4a11-9457-4b53-bb62-50b658119404",
       "headline": "For PFT's 25th anniversary, completely re-written Quarterback of the Future is coming",
       "first_published_at": "2026-10-29T00:14:08.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -27402,7 +27551,7 @@
       "story_id": "785cded6-6b1f-4998-b3e4-6acc51602120",
       "headline": "Caleb Williams hasn't been fined for Week 7, despite wearing unauthorized shoes",
       "first_published_at": "2026-10-28T23:40:30.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -27481,7 +27630,7 @@
       "story_id": "00d4a6e3-8fa6-4696-94cd-b18ec93fd2a2",
       "headline": "18.8 million watched Cowboys-Eagles on Monday night",
       "first_published_at": "2026-10-28T23:17:30.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -27556,7 +27705,7 @@
       "story_id": "bf9c70f8-2f73-42da-8260-cd7901943dfd",
       "headline": "DB Caleb Downs, WR George Pickens, DL Quinnen Williams limited Wednesday",
       "first_published_at": "2026-10-28T23:13:56.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "neutral",
       "subject": {
@@ -27637,7 +27786,7 @@
       "story_id": "8545d981-8fc5-4cae-8873-4ef2e68670c1",
       "headline": "Broncos CB Patrick Surtain II was a full participant Wednesday",
       "first_published_at": "2026-10-28T22:53:43.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "partial",
       "subject": {
@@ -27756,7 +27905,7 @@
       "story_id": "540c0c79-58b9-431a-b6ab-641d4dd93bb4",
       "headline": "A Sign of Hope: Lamar Jackson Returns To Practice As Ravens Prepare For Bills",
       "first_published_at": "2026-10-28T22:46:39.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 6,
       "enrichment_status": "partial",
       "subject": {
@@ -27878,7 +28027,7 @@
       "story_id": "716b9f52-87ca-44cc-84b4-0ab18841c577",
       "headline": "Ed Oliver returns to Bills practice",
       "first_published_at": "2026-10-28T22:28:45.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
+      "observed_at": "2026-11-01T23:10:19.641Z",
       "production_importance_score": 4,
       "enrichment_status": "partial",
       "subject": {
@@ -27964,248 +28113,6 @@
           "feed_block_reasons": [
             "insufficient_magnitude",
             "unconfirmed_rumor"
-          ],
-          "story_block_reasons": [
-            "insufficient_magnitude"
-          ],
-          "structurally_story_natured": false
-        }
-      },
-      "diagnostics": {
-        "subject_match_count": 1,
-        "candidate_count": 1,
-        "historical_player_row_found": false,
-        "temporal_roster_found": true,
-        "temporal_depth_chart_found": false,
-        "temporal_schedule_found": true
-      },
-      "reason_codes": [
-        "player_subject_confirmed",
-        "players_cross_validated",
-        "unique_name_team_match",
-        "schedule_week_selected",
-        "schedule_final_kickoff_anchor",
-        "future_schedule_week_rejected",
-        "roster_selected_exact",
-        "future_depth_chart_rejected",
-        "future_roster_rejected",
-        "roster_schedule_anchored",
-        "player_not_in_temporal_roster",
-        "identity_unresolved",
-        "no_role_statement_found",
-        "star_record_not_found"
-      ],
-      "error_message": null
-    },
-    {
-      "story_id": "167dd081-b05c-4745-9edd-55921ceac73b",
-      "headline": "Aaron Jones aggravated his knee injury in Sunday's win",
-      "first_published_at": "2026-10-25T21:34:52.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
-      "production_importance_score": 6,
-      "enrichment_status": "partial",
-      "subject": {
-        "visual_subject": "Aaron Jones",
-        "visual_subject_type": "player",
-        "subject_match_count": 1,
-        "candidate_count": 1,
-        "player_list_support": true,
-        "player_subject_established": true
-      },
-      "identity": {
-        "player_id": "00-0033293",
-        "display_name": "Aaron Jones",
-        "confidence": "high",
-        "matched_by": [
-          "visual_subject",
-          "players",
-          "team"
-        ]
-      },
-      "position": {
-        "normalized_position": "unknown",
-        "confidence": "low"
-      },
-      "baseline_role": {
-        "role": "unknown",
-        "confidence": "low"
-      },
-      "fresh_role": {
-        "fresh_role": "unknown",
-        "confidence": "low",
-        "override_applies": false
-      },
-      "effective_role": "unknown",
-      "qb_importance": {
-        "is_qb": false,
-        "qb_importance": "none",
-        "reason_codes": [
-          "not_qb"
-        ]
-      },
-      "star": {
-        "gsis_id": "00-0033293",
-        "as_of": "2026-10-25T21:34:52.000Z",
-        "effective_from": null,
-        "effective_to": null,
-        "star_level": "none",
-        "matched": false,
-        "reason_codes": [
-          "star_record_not_found"
-        ]
-      },
-      "player_context": {
-        "has_player_subject": true,
-        "normalized_position": "unknown",
-        "effective_role": "unknown",
-        "qb_importance": "none",
-        "player_id": "00-0033293",
-        "identity_confidence": "high",
-        "star_level": "none",
-        "star_matched": false
-      },
-      "editorial_score_preview": {
-        "total_score": 22,
-        "destination": {
-          "feed_fit": "insufficient_magnitude",
-          "story_fit": "insufficient_magnitude",
-          "feed_block_reasons": [
-            "insufficient_magnitude"
-          ],
-          "story_block_reasons": [
-            "insufficient_magnitude"
-          ],
-          "structurally_story_natured": false
-        },
-        "enriched_total": 20,
-        "score_delta": -2,
-        "score_delta_percent": -9.2,
-        "enriched_destination_preview": {
-          "feed_fit": "insufficient_magnitude",
-          "story_fit": "insufficient_magnitude",
-          "feed_block_reasons": [
-            "insufficient_magnitude"
-          ],
-          "story_block_reasons": [
-            "insufficient_magnitude"
-          ],
-          "structurally_story_natured": false
-        }
-      },
-      "diagnostics": {
-        "subject_match_count": 1,
-        "candidate_count": 1,
-        "historical_player_row_found": false,
-        "temporal_roster_found": true,
-        "temporal_depth_chart_found": false,
-        "temporal_schedule_found": true
-      },
-      "reason_codes": [
-        "player_subject_confirmed",
-        "players_cross_validated",
-        "unique_name_team_match",
-        "schedule_week_selected",
-        "schedule_final_kickoff_anchor",
-        "future_schedule_week_rejected",
-        "roster_selected_exact",
-        "future_depth_chart_rejected",
-        "future_roster_rejected",
-        "roster_schedule_anchored",
-        "player_not_in_temporal_roster",
-        "identity_unresolved",
-        "no_role_statement_found",
-        "star_record_not_found"
-      ],
-      "error_message": null
-    },
-    {
-      "story_id": "f36d765d-7dad-48f8-a595-02b95ab36442",
-      "headline": "Eagles place RB Dameon Pierce on IR, sign Jaydon Blue to active roster",
-      "first_published_at": "2026-10-28T22:04:57.000Z",
-      "observed_at": "2026-11-01T23:00:29.623Z",
-      "production_importance_score": 4,
-      "enrichment_status": "partial",
-      "subject": {
-        "visual_subject": "Dameon Pierce",
-        "visual_subject_type": "player",
-        "subject_match_count": 1,
-        "candidate_count": 1,
-        "player_list_support": true,
-        "player_subject_established": true
-      },
-      "identity": {
-        "player_id": "00-0037258",
-        "display_name": "Dameon Pierce",
-        "confidence": "high",
-        "matched_by": [
-          "visual_subject",
-          "players",
-          "team"
-        ]
-      },
-      "position": {
-        "normalized_position": "unknown",
-        "confidence": "low"
-      },
-      "baseline_role": {
-        "role": "unknown",
-        "confidence": "low"
-      },
-      "fresh_role": {
-        "fresh_role": "unknown",
-        "confidence": "low",
-        "override_applies": false
-      },
-      "effective_role": "unknown",
-      "qb_importance": {
-        "is_qb": false,
-        "qb_importance": "none",
-        "reason_codes": [
-          "not_qb"
-        ]
-      },
-      "star": {
-        "gsis_id": "00-0037258",
-        "as_of": "2026-10-28T22:04:57.000Z",
-        "effective_from": null,
-        "effective_to": null,
-        "star_level": "none",
-        "matched": false,
-        "reason_codes": [
-          "star_record_not_found"
-        ]
-      },
-      "player_context": {
-        "has_player_subject": true,
-        "normalized_position": "unknown",
-        "effective_role": "unknown",
-        "qb_importance": "none",
-        "player_id": "00-0037258",
-        "identity_confidence": "high",
-        "star_level": "none",
-        "star_matched": false
-      },
-      "editorial_score_preview": {
-        "total_score": 24,
-        "destination": {
-          "feed_fit": "insufficient_magnitude",
-          "story_fit": "insufficient_magnitude",
-          "feed_block_reasons": [
-            "insufficient_magnitude"
-          ],
-          "story_block_reasons": [
-            "insufficient_magnitude"
-          ],
-          "structurally_story_natured": false
-        },
-        "enriched_total": 21.1,
-        "score_delta": -2.9,
-        "score_delta_percent": -12.1,
-        "enriched_destination_preview": {
-          "feed_fit": "insufficient_magnitude",
-          "story_fit": "insufficient_magnitude",
-          "feed_block_reasons": [
-            "insufficient_magnitude"
           ],
           "story_block_reasons": [
             "insufficient_magnitude"
