@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/49ers-lb-dre-greenlaw-ejected-after-headbutting-seahawks-ernest-jones-iv",
-      "source_name": "FOX Sports",
-      "headline": "49ers' LB Dre Greenlaw Ejected After Headbutting Seahawks' Ernest Jones IV",
-      "published_at": "2026-10-11T21:55:37.000Z",
-      "observed_at": "2026-10-11T22:00:25.785Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF",
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/fernando-mendoza-makes-nfl-debut",
       "source_name": "FOX Sports",
       "headline": "No. 1 Overall Pick Fernando Mendoza Makes NFL Debut For Raiders In Loss To Patriots",
@@ -41768,6 +41746,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/panthers-dave-canales-made-the-call-on-ejiro-evero-now-the-target-is-on-him",
+      "source_name": "NFL.com",
+      "headline": "Panthers' Dave Canales made the call on Ejiro Evero. Now the target is on him",
+      "published_at": "2026-10-31T10:16:05.000Z",
+      "observed_at": "2026-11-01T14:50:20.051Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
