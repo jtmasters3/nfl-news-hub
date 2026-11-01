@@ -2,66 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/in-5-overtime-games-3-teams-have-chosen-to-kick-2-have-chosen-to-receive",
-      "source_name": "Pro Football Talk",
-      "headline": "In 5 overtime games, 3 teams have chosen to kick, 2 have chosen to receive",
-      "published_at": "2026-10-12T09:11:05.000Z",
-      "observed_at": "2026-10-12T09:20:25.563Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/marvin-harrison-deal-was-most-likely-done-before-sundays-games-started",
-      "source_name": "Pro Football Talk",
-      "headline": "Marvin Harrison deal was most likely done before Sunday's games started",
-      "published_at": "2026-10-12T09:44:06.000Z",
-      "observed_at": "2026-10-12T09:50:18.589Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/michael-penix-if-we-got-ball-first-in-ot-i-could-have-stayed-in",
-      "source_name": "Pro Football Talk",
-      "headline": "Michael Penix: If we got ball first in OT, I could have stayed in",
-      "published_at": "2026-10-12T10:12:54.000Z",
-      "observed_at": "2026-10-12T10:20:21.769Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "BAL"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sunday-ticket-glitch-keeps-customers-from-watching-all-of-certain-late-afternoon-games",
       "source_name": "Pro Football Talk",
       "headline": "Sunday Ticket glitch keeps customers from watching all of certain late-afternoon games",
@@ -41762,6 +41702,72 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "phrase_udfa"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/carlton-davis-is-active-for-the-patriots-in-miami",
+      "source_name": "Pro Football Talk",
+      "headline": "Carlton Davis is active for the Patriots in Miami",
+      "published_at": "2026-11-01T20:07:17.000Z",
+      "observed_at": "2026-11-01T20:10:20.592Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIA",
+        "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/a-j-browns-knee-issue-highlights-rams-decision-to-not-pursue-him",
+      "source_name": "Pro Football Talk",
+      "headline": "A.J. Brown's knee issue highlights Rams' decision to not pursue him",
+      "published_at": "2026-11-01T20:06:11.000Z",
+      "observed_at": "2026-11-01T20:10:20.592Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR",
+        "PHI"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dj-wonnum-brian-branch-both-ruled-out-with-a-concussion",
+      "source_name": "Pro Football Talk",
+      "headline": "DJ Wonnum, Brian Branch both ruled out with a concussion",
+      "published_at": "2026-11-01T19:54:51.000Z",
+      "observed_at": "2026-11-01T20:10:20.592Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "MIN"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
