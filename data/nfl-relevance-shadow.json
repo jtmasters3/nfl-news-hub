@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/kyler-murray-justin-jefferson-connection-fuels-unbeaten-vikings-to-win-over-saints",
-      "source_name": "NFL.com",
-      "headline": "Kyler Murray-Justin Jefferson connection fuels unbeaten Vikings to win over Saints",
-      "published_at": "2026-10-12T01:01:06.000Z",
-      "observed_at": "2026-10-12T01:20:18.866Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN",
-        "NO"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-will-campbell-believed-to-have-knee-sprain-is-expected-to-miss-time",
       "source_name": "Pro Football Talk",
       "headline": "Report: Will Campbell believed to have knee sprain, is expected to miss time",
@@ -41750,6 +41728,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/ravens-star-qb-lamar-jackson-departs-vs-bills-thumb-injury",
+      "source_name": "FOX Sports",
+      "headline": "Ravens Star QB Lamar Jackson Leaves Game vs. Bills With Thumb Injury",
+      "published_at": "2026-11-01T18:36:31.000Z",
+      "observed_at": "2026-11-01T18:50:19.755Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "BUF"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
