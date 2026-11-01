@@ -2,234 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-quinn-remains-employed-for-now-somehow",
-      "source_name": "Pro Football Talk",
-      "headline": "Dan Quinn remains employed for now, somehow",
-      "published_at": "2026-10-12T16:54:57.000Z",
-      "observed_at": "2026-10-12T17:00:26.835Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "coaching",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chiefs-bring-wr-justin-watson-back-to-their-practice-squad",
-      "source_name": "Pro Football Talk",
-      "headline": "Chiefs bring WR Justin Watson back to their practice squad",
-      "published_at": "2026-10-12T17:04:56.000Z",
-      "observed_at": "2026-10-12T17:10:23.366Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/david-montgomery-jalen-pitre-considered-week-to-week",
-      "source_name": "Pro Football Talk",
-      "headline": "David Montgomery, Jalen Pitre considered week-to-week",
-      "published_at": "2026-10-12T16:58:51.000Z",
-      "observed_at": "2026-10-12T17:10:23.366Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "HOU",
-        "TEN"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/sam-darnold-seahawks-49ers-super-bowl",
-      "source_name": "FOX Sports",
-      "headline": "Déjà Vu: Seahawks Won't Repeat Unless Sam Darnold Kicks Turnover Bug, Again",
-      "published_at": "2026-10-12T17:07:57.000Z",
-      "observed_at": "2026-10-12T17:30:22.918Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nick-siriannis-mistake-was-confirmed-by-his-kick-coverage-unit",
-      "source_name": "Pro Football Talk",
-      "headline": "Nick Sirianni's mistake was confirmed by his kick-coverage unit",
-      "published_at": "2026-10-12T17:22:57.000Z",
-      "observed_at": "2026-10-12T17:30:22.918Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "JAX",
-        "PHI"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-lions-wr-tom-kennedy-is-expected-to-have-season-ending-mcl-surgery",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Lions WR Tom Kennedy is expected to have season-ending MCL surgery",
-      "published_at": "2026-10-12T17:19:15.000Z",
-      "observed_at": "2026-10-12T17:30:22.918Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI",
-        "DET"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/fuming-seahawks-lament-gaffes-in-loss-to-49ers-revealing-shrinking-margin-for-error",
-      "source_name": "NFL.com",
-      "headline": "Fuming Seahawks lament gaffes in loss to 49ers, revealing shrinking margin for error",
-      "published_at": "2026-10-12T12:46:08.000Z",
-      "observed_at": "2026-10-12T17:50:21.841Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF",
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-opening-practice-windows-for-taylor-moton-turk-wharton",
-      "source_name": "Pro Football Talk",
-      "headline": "Panthers opening practice windows for Taylor Moton, Turk Wharton",
-      "published_at": "2026-10-12T17:38:37.000Z",
-      "observed_at": "2026-10-12T17:50:21.841Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dre-greenlaw-suspended-for-one-game",
-      "source_name": "Pro Football Talk",
-      "headline": "Dre Greenlaw suspended for one game",
-      "published_at": "2026-10-12T18:12:42.000Z",
-      "observed_at": "2026-10-12T18:20:19.617Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "suspension",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-micah-parsons-is-not-expected-to-practice-this-week",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Micah Parsons is not expected to practice this week",
-      "published_at": "2026-10-12T18:09:55.000Z",
-      "observed_at": "2026-10-12T18:20:19.617Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-suspends-49ers-lb-dre-greenlaw-one-game-unsportsmanlike-conduct",
-      "source_name": "NFL.com",
-      "headline": "NFL suspends 49ers LB Dre Greenlaw one game for head-butting Seahawks' Ernest Jones IV",
-      "published_at": "2026-10-12T06:20:51.000Z",
-      "observed_at": "2026-10-12T18:30:24.808Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF",
-        "SEA"
-      ],
-      "detected_category": "suspension",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-steelers-wr-roman-wilson-is-expected-to-miss-time-with-finger-injury",
       "source_name": "Pro Football Talk",
       "headline": "Report: Steelers WR Roman Wilson is expected to miss time with finger injury",
@@ -41782,6 +41554,234 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50347464/week-8-sunday-highlights-best-plays-touchdowns-2026",
+      "source_name": "ESPN",
+      "headline": "Follow live: Chiefs, Broncos battling in AFC West showdown",
+      "published_at": "2026-11-01T23:22:43.000Z",
+      "observed_at": "2026-11-01T23:40:24.346Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "KC"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50349558/ravens-lamar-jackson-rest-game-thumb-injury",
+      "source_name": "ESPN",
+      "headline": "Ravens QB Jackson needs thumb surgery, will be placed on IR",
+      "published_at": "2026-11-01T23:22:32.000Z",
+      "observed_at": "2026-11-01T23:40:24.346Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50351129/buccaneers-silence-falcons-pass-completion",
+      "source_name": "ESPN",
+      "headline": "Bucs first team without pass completion since '74, still beat Falcons",
+      "published_at": "2026-11-01T23:22:32.000Z",
+      "observed_at": "2026-11-01T23:40:24.346Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "TB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50352501/jacobs-attorneys-say-additional-allegations-unsupported",
+      "source_name": "ESPN",
+      "headline": "Jacobs' attorneys say additional allegations 'unsupported'",
+      "published_at": "2026-11-01T23:22:32.000Z",
+      "observed_at": "2026-11-01T23:40:24.346Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50350048/source-jennings-wanted-stay-vikings-amid-49ers-talks",
+      "source_name": "ESPN",
+      "headline": "Source: Jennings voiced desire to stay with Vikings amid 49ers trade talks",
+      "published_at": "2026-11-01T23:22:32.000Z",
+      "observed_at": "2026-11-01T23:40:24.346Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN",
+        "SF"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50350934/lions-linebacker-jack-campbell-placed-backboard-carted-off",
+      "source_name": "ESPN",
+      "headline": "Lions All-Pro Campbell carted off in scary scene, taken to hospital",
+      "published_at": "2026-11-01T23:22:32.000Z",
+      "observed_at": "2026-11-01T23:40:24.346Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "MIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50349340/week-8-sunday-games-takeaways-questions-2026",
+      "source_name": "ESPN",
+      "headline": "Answering NFL Week 8's biggest questions: Is Bhayshul Tuten ready to be a featured back?",
+      "published_at": "2026-11-01T21:38:45.000Z",
+      "observed_at": "2026-11-01T23:40:24.346Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50299565/inside-complicated-injury-history-ravens-lamar-jackson",
+      "source_name": "ESPN",
+      "headline": "Inside the complicated injury history of Ravens' Lamar Jackson",
+      "published_at": "2026-11-01T21:24:11.000Z",
+      "observed_at": "2026-11-01T23:40:24.346Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/draft2027/story/_/id/49881131/2027-nfl-draft-risers-questions-college-football-prospects",
+      "source_name": "ESPN",
+      "headline": "NFL draft risers, notes off Saturday's college games: Need a WR in Round 1? Watch Indiana",
+      "published_at": "2026-11-01T21:06:52.000Z",
+      "observed_at": "2026-11-01T23:40:24.346Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [],
+      "detected_category": "draft",
+      "nfl_evidence": [
+        "phrase_nfl_draft",
+        "nfl_preserving_category:draft"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/fantasy/football/story/_/id/40699880/fantasy-football-injuries-position-battles-nfl-news-analysis",
+      "source_name": "ESPN",
+      "headline": "Fantasy football buzz: Week 8's leading scorers through Sunday's early games",
+      "published_at": "2026-11-01T22:05:17.000Z",
+      "observed_at": "2026-11-01T23:40:24.346Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "fantasy",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-tyler-huntley-to-have-mri-on-injured-toe",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Tyler Huntley to have MRI on injured toe",
+      "published_at": "2026-11-01T23:32:38.000Z",
+      "observed_at": "2026-11-01T23:40:24.346Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "JAX"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
