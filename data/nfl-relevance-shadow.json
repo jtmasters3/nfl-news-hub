@@ -2,48 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/big-ten-admits-ref-blew-call-on-oregons-failed-two-point-conversion-in-17-15-loss-to-ucla",
-      "source_name": "Pro Football Talk",
-      "headline": "Big Ten admits ref blew call on Oregon's failed two-point conversion in 17-15 loss to UCLA",
-      "published_at": "2026-10-12T10:27:23.000Z",
-      "observed_at": "2026-10-12T10:40:18.411Z",
-      "decision": "reject",
-      "classification": "college_football",
-      "confidence": "medium",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [
-        "conference_big_ten"
-      ],
-      "reason_codes": [
-        "college_marker_no_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/giants-cam-skattebo-commanders-disaster-a-sigh-of-relief-after-fumble",
-      "source_name": "NFL.com",
-      "headline": "Giants' Cam Skattebo: Commanders' disaster 'a sigh of relief' after fumble",
-      "published_at": "2026-10-12T10:44:49.000Z",
-      "observed_at": "2026-10-12T10:50:25.207Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG",
-        "NYJ",
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cam-skattebo-i-try-to-fight-for-extra-yards-it-bit-me-on-sunday",
       "source_name": "Pro Football Talk",
       "headline": "Cam Skattebo: I try to fight for extra yards, it bit me on Sunday",
@@ -41774,6 +41732,49 @@
         "DAL"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/raiders-take-35-30-lead-early-in-fourth-quarter",
+      "source_name": "Pro Football Talk",
+      "headline": "Raiders take 35-30 lead early in fourth quarter",
+      "published_at": "2026-11-01T20:25:30.000Z",
+      "observed_at": "2026-11-01T20:30:22.971Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV",
+        "NYJ"
+      ],
+      "detected_category": "live_game_state",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cardinals-replace-jacoby-brissett-with-gardner-minshew",
+      "source_name": "Pro Football Talk",
+      "headline": "Cardinals replace Jacoby Brissett with Gardner Minshew",
+      "published_at": "2026-11-01T20:20:44.000Z",
+      "observed_at": "2026-11-01T20:30:22.971Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
