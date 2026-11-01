@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ben-johnson-caleb-williams-close-to-a-return",
-      "source_name": "Pro Football Talk",
-      "headline": "Ben Johnson: Caleb Williams \"close\" to a return",
-      "published_at": "2026-10-11T21:31:25.000Z",
-      "observed_at": "2026-10-11T21:40:19.544Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jayden-daniels-on-end-of-sundays-game-ultimately-its-on-me-to-be-better",
       "source_name": "Pro Football Talk",
       "headline": "Jayden Daniels on end of Sunday's game: Ultimately it's on me to be better",
@@ -41782,6 +41761,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/thank-you-for-25-years-get-ready-for-25-more",
+      "source_name": "Pro Football Talk",
+      "headline": "Thank you for 25 years (get ready for 25 more)",
+      "published_at": "2026-11-01T14:06:07.000Z",
+      "observed_at": "2026-11-01T14:10:20.447Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
