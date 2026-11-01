@@ -2,65 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-odds-week-6-lines-spreads-results-all-14-games",
-      "source_name": "FOX Sports",
-      "headline": "2026 NFL Odds Week 6: Lines, Spreads, Results For All 14 Games",
-      "published_at": "2026-10-12T02:27:44.000Z",
-      "observed_at": "2026-10-12T02:50:16.342Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/commanders-ot-meltdown-puts-plenty-of-players-in-an-awkward-spot",
-      "source_name": "Pro Football Talk",
-      "headline": "Commanders' OT meltdown puts plenty of players in an awkward spot",
-      "published_at": "2026-10-12T03:09:08.000Z",
-      "observed_at": "2026-10-12T03:20:20.920Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/two-former-cardinals-employees-sue-team-michael-bidwill-for-racial-discrimination",
-      "source_name": "Pro Football Talk",
-      "headline": "Two former Cardinals employees sue team, Michael Bidwill for racial discrimination",
-      "published_at": "2026-10-12T03:38:57.000Z",
-      "observed_at": "2026-10-12T03:50:20.804Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tua-tagovailoa-replaces-injured-michael-penix-for-overtime",
       "source_name": "Pro Football Talk",
       "headline": "Tua Tagovailoa replaces injured Michael Penix for overtime",
@@ -41743,6 +41684,70 @@
         "LAR"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/geno-smith-throws-two-touchdowns-jets-lead-raiders-23-14-at-halftime",
+      "source_name": "Pro Football Talk",
+      "headline": "Geno Smith throws two touchdowns, Jets lead Raiders 23-14 at halftime",
+      "published_at": "2026-11-01T19:26:57.000Z",
+      "observed_at": "2026-11-01T19:30:24.182Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV",
+        "NYJ"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dj-wonnum-carted-off-after-friendly-fire-collision-with-brian-branch",
+      "source_name": "Pro Football Talk",
+      "headline": "DJ Wonnum carted off after friendly fire collision with Brian Branch",
+      "published_at": "2026-11-01T19:23:30.000Z",
+      "observed_at": "2026-11-01T19:30:24.182Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tyler-huntley-questionable-to-return-with-toe-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Tyler Huntley questionable to return with toe injury",
+      "published_at": "2026-11-01T19:19:48.000Z",
+      "observed_at": "2026-11-01T19:30:24.182Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL"
+      ],
+      "detected_category": "live_game_state",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
