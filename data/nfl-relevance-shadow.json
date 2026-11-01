@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-week-5-sunday-aftermath-commanders-melt-down-in-tie-eagles-rue-costly-last-second-gaffe",
-      "source_name": "NFL.com",
-      "headline": "NFL Week 5 Sunday aftermath: Commanders melt down in tie, Eagles rue costly last-second gaffe",
-      "published_at": "2026-10-12T04:54:51.000Z",
-      "observed_at": "2026-10-12T17:00:26.835Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI",
-        "SF",
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-quinn-remains-employed-for-now-somehow",
       "source_name": "Pro Football Talk",
       "headline": "Dan Quinn remains employed for now, somehow",
@@ -41782,6 +41759,29 @@
       "detected_category": "coaching",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patriots-cut-dolphins-lead-to-13-10-on-kyle-williams-touchdown",
+      "source_name": "Pro Football Talk",
+      "headline": "Patriots cut Dolphins lead to 13-10 on Kyle Williams touchdown",
+      "published_at": "2026-11-01T23:24:45.000Z",
+      "observed_at": "2026-11-01T23:30:23.187Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIA",
+        "NE"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:free_agency"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
