@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/the-browns-had-chances-but-their-late-game-luck-ultimately-ran-out-in-loss-to-jets",
-      "source_name": "NFL.com",
-      "headline": "The Browns had chances, but their late-game luck ultimately ran out in loss to Jets",
-      "published_at": "2026-10-12T12:16:06.000Z",
-      "observed_at": "2026-10-12T00:40:19.343Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE",
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/commanders-qb-jayden-daniels-says-team-s-botched-final-play-vs-giants-on-me",
-      "source_name": "NFL.com",
-      "headline": "Commanders QB Jayden Daniels says team's botched final play vs. Giants 'on me'",
-      "published_at": "2026-10-12T12:35:00.000Z",
-      "observed_at": "2026-10-12T00:50:19.561Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG",
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jessie-bates-scoop-and-score-gives-falcons-7-3-lead-over-ravens",
       "source_name": "Pro Football Talk",
       "headline": "Jessie Bates scoop-and-score gives Falcons 7-3 lead over Ravens",
@@ -41744,6 +41700,49 @@
         "PIT"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-trade-deadline-rumors-maxx-crosby-raiders",
+      "source_name": "FOX Sports",
+      "headline": "NFL Trade Deadline: Is Maxx Crosby On The Move? Latest On Raiders' Star Edge Rusher",
+      "published_at": "2026-11-01T18:14:54.000Z",
+      "observed_at": "2026-11-01T18:20:19.513Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/jauan-jennings-declines-49ers-trade-stay-vikings",
+      "source_name": "FOX Sports",
+      "headline": "Jauan Jennings Rejects 49ers Reunion, Turning Down Trade To Stay With Vikings",
+      "published_at": "2026-11-01T18:10:08.000Z",
+      "observed_at": "2026-11-01T18:20:19.513Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN",
+        "SF"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
