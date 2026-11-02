@@ -2,69 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/drew-rosenhaus-still-claims-a-tyreek-hill-deal-could-happen-at-any-time",
-      "source_name": "Pro Football Talk",
-      "headline": "Drew Rosenhaus still claims a Tyreek Hill deal \"could happen at any time\"",
-      "published_at": "2026-10-14T09:58:54.000Z",
-      "observed_at": "2026-10-14T10:00:33.349Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jets-worked-out-matthew-judon",
-      "source_name": "Pro Football Talk",
-      "headline": "Jets worked out Matthew Judon",
-      "published_at": "2026-10-14T10:13:11.000Z",
-      "observed_at": "2026-10-14T10:20:22.975Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYJ",
-        "SF"
-      ],
-      "detected_category": "free_agency",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad",
-        "nfl_preserving_category:free_agency"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/with-odell-beckham-jr-in-minnesota-jauan-jennings-could-be-traded",
-      "source_name": "Pro Football Talk",
-      "headline": "With Odell Beckham Jr. in Minnesota, Jauan Jennings could be traded",
-      "published_at": "2026-10-14T10:29:59.000Z",
-      "observed_at": "2026-10-14T10:40:21.640Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN",
-        "SF"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brock-purdy-will-soon-be-the-nfls-all-time-leader-in-career-passer-rating",
       "source_name": "Pro Football Talk",
       "headline": "Brock Purdy will soon be the NFL's all-time leader in career passer rating",
@@ -41806,6 +41743,69 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/matt-lafleur-says-packers-anticipate-keeping-rb-josh-jacobs-on-roster",
+      "source_name": "NFL.com",
+      "headline": "Matt LaFleur says Packers anticipate keeping RB Josh Jacobs on roster",
+      "published_at": "2026-11-02T09:47:22.000Z",
+      "observed_at": "2026-11-02T22:00:28.180Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cardinals-name-gardner-minshew-starting-quarterback-carson-beck-his-backup",
+      "source_name": "Pro Football Talk",
+      "headline": "Cardinals name Gardner Minshew starting quarterback, Carson Beck his backup",
+      "published_at": "2026-11-02T21:51:05.000Z",
+      "observed_at": "2026-11-02T22:00:28.180Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jeremiyah-love-suffered-new-ankle-injury-sunday-did-not-aggravate-previous-one",
+      "source_name": "Pro Football Talk",
+      "headline": "Jeremiyah Love suffered a new ankle injury on Sunday",
+      "published_at": "2026-11-02T21:50:23.000Z",
+      "observed_at": "2026-11-02T22:00:28.180Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
