@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-tuesday-oct-13",
-      "source_name": "NFL.com",
-      "headline": "NFL news roundup: Latest league updates from Tuesday, Oct. 13",
-      "published_at": "2026-10-13T04:17:25.000Z",
-      "observed_at": "2026-10-13T16:20:23.852Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-power-rankings-week-6-2026-nfl-season",
       "source_name": "NFL.com",
       "headline": "NFL Power Rankings, Week 6: Vikings, Patriots enter top 10; Eagles, Saints in free fall",
@@ -41812,6 +41795,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-tmrw-sports-unveil-premier-flag-new-professional-flag-football-league-launching-summer-2027",
+      "source_name": "NFL.com",
+      "headline": "NFL, TMRW Sports unveil Premier Flag, new professional flag football league launching summer 2027",
+      "published_at": "2026-11-02T05:00:22.000Z",
+      "observed_at": "2026-11-02T17:00:38.668Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
