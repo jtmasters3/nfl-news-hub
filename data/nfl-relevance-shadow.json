@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/bills-rams-on-monday-night-football-what-we-learned-from-buffalo-s-37-34-overtime-win",
-      "source_name": "NFL.com",
-      "headline": "Bills-Rams on 'Monday Night Football': What We Learned from Buffalo's 37-34 overtime win",
-      "published_at": "2026-10-13T03:49:40.000Z",
-      "observed_at": "2026-10-13T04:00:28.734Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/seahawks-49ers-thriller-giants-commanders-mess-packers-patriots",
       "source_name": "FOX Sports",
       "headline": "NFL Best And Worst: From 49ers-Seahawks Thriller To Giants-Commanders Blunder",
@@ -41805,6 +41783,28 @@
       "detected_teams": [
         "DAL",
         "TB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sunday-night-football-commanders-roll-to-27-10-victory-over-eagles",
+      "source_name": "Pro Football Talk",
+      "headline": "Sunday Night Football: Commanders roll to 27-10 victory over Eagles",
+      "published_at": "2026-11-02T04:30:07.000Z",
+      "observed_at": "2026-11-02T04:40:24.104Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI",
+        "WAS"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
