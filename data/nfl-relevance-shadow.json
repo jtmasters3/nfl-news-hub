@@ -2,66 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/qb-notebook-whats-going-on-with-sam-darnold-inside-justin-herberts-worst-season",
-      "source_name": "FOX Sports",
-      "headline": "QB Notebook: What's Going On With Sam Darnold; Inside Justin Herbert's Worst Season",
-      "published_at": "2026-10-14T14:16:49.000Z",
-      "observed_at": "2026-10-14T14:30:24.107Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/saints-owner-comments-gayle-benson-kellen-moore-new-orleans-schedule",
-      "source_name": "FOX Sports",
-      "headline": "Saints Owner Gayle Benson Explains Why She Will 'Not Accept' Team's Slow Start",
-      "published_at": "2026-10-14T14:16:18.000Z",
-      "observed_at": "2026-10-14T14:30:24.107Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NO"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-nfl-considers-flexing-eagles-commanders-out-of-prime-time",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: NFL considers flexing Eagles-Commanders out of prime time",
-      "published_at": "2026-10-14T14:16:31.000Z",
-      "observed_at": "2026-10-14T14:30:24.107Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI",
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-how-to-watch-week-6-nfl-games-schedule-london-game-details-and-more",
       "source_name": "NFL.com",
       "headline": "NFL+: How to watch Week 6 NFL games, schedule, London game details, and more",
@@ -41823,6 +41763,71 @@
       "confidence": "high",
       "detected_teams": [
         "PHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/packers-plan-for-micah-parsons-to-practice-this-week-for-first-time-since-acl-tear",
+      "source_name": "NFL.com",
+      "headline": "Packers plan for Micah Parsons to practice this week for first time since ACL tear",
+      "published_at": "2026-11-02T08:01:06.000Z",
+      "observed_at": "2026-11-02T23:50:20.581Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-dbs-caleb-downs-p-j-locke-in-concussion-protocol",
+      "source_name": "Pro Football Talk",
+      "headline": "Cowboys DBs Caleb Downs, P.J. Locke in concussion protocol",
+      "published_at": "2026-11-02T23:45:29.000Z",
+      "observed_at": "2026-11-02T23:50:20.581Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI",
+        "DAL"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ravens-qb-joe-fagnano-fighting-through-a-couple-things-has-a-chance-to-play-thursday",
+      "source_name": "Pro Football Talk",
+      "headline": "Ravens QB Joe Fagnano \"fighting through a couple things,\" has \"a chance\" to play Thursday",
+      "published_at": "2026-11-02T23:42:18.000Z",
+      "observed_at": "2026-11-02T23:50:20.581Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "JAX"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
