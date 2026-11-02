@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cardinals-will-discuss-making-carson-beck-active-on-game-day",
-      "source_name": "Pro Football Talk",
-      "headline": "Cardinals will discuss making Carson Beck active on game day",
-      "published_at": "2026-10-13T02:39:01.000Z",
-      "observed_at": "2026-10-13T02:50:19.537Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-allen-scores-eighth-rushing-td-of-the-season",
       "source_name": "Pro Football Talk",
       "headline": "Josh Allen scores eighth rushing TD of the season",
@@ -41808,6 +41787,29 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chiefs-steelers-commanders-have-interest-in-brian-thomas-jr",
+      "source_name": "Pro Football Talk",
+      "headline": "Chiefs, Steelers, Commanders have interest in Brian Thomas Jr.",
+      "published_at": "2026-11-02T04:02:35.000Z",
+      "observed_at": "2026-11-02T04:10:19.082Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC",
+        "PIT",
+        "WAS"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
