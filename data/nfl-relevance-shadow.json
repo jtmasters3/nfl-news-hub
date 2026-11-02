@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-designate-rb-trevor-etienne-for-return-put-dt-cam-jackson-on-ir",
-      "source_name": "Pro Football Talk",
-      "headline": "Panthers designate RB Trevor Etienne for return, put DT Cam Jackson on IR",
-      "published_at": "2026-10-13T15:39:45.000Z",
-      "observed_at": "2026-10-13T15:50:25.659Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/andy-reid-has-not-really-been-surprised-by-kenneth-walkers-performances",
       "source_name": "Pro Football Talk",
       "headline": "Andy Reid has \"not really\" been surprised by Kenneth Walker's performances",
@@ -41815,6 +41794,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/foo-fighters-and-mumford-sons-to-headline-on-location-s-super-bowl-lxi-studio-61-concert-series",
+      "source_name": "NFL.com",
+      "headline": "Foo Fighters and Mumford & Sons to headline On Location’s Super Bowl LXI Studio 61 concert series",
+      "published_at": "2026-11-02T04:24:20.000Z",
+      "observed_at": "2026-11-02T16:32:09.384Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
