@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-campbell-says-pass-protection-shows-why-jahmyr-gibbs-is-different-from-other-backs",
-      "source_name": "Pro Football Talk",
-      "headline": "Dan Campbell says pass protection shows why Jahmyr Gibbs is different from other backs",
-      "published_at": "2026-10-14T08:24:45.000Z",
-      "observed_at": "2026-10-14T08:30:24.849Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-mcvay-on-alaric-jackson-he-has-to-consistently-do-a-better-job",
-      "source_name": "Pro Football Talk",
-      "headline": "Sean McVay on Alaric Jackson: \"He has to consistently do a better job\"",
-      "published_at": "2026-10-14T09:33:52.000Z",
-      "observed_at": "2026-10-14T09:40:21.053Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/drew-rosenhaus-still-claims-a-tyreek-hill-deal-could-happen-at-any-time",
       "source_name": "Pro Football Talk",
       "headline": "Drew Rosenhaus still claims a Tyreek Hill deal \"could happen at any time\"",
@@ -41796,6 +41757,50 @@
       "confidence": "high",
       "detected_teams": [
         "ATL"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/cardinals-qb-gardner-minshew-starting-qb-carson-beck-backup",
+      "source_name": "NFL.com",
+      "headline": "Cardinals to start QB Gardner Minshew vs. Seahawks; rookie Carson Beck to be backup",
+      "published_at": "2026-11-02T09:39:18.000Z",
+      "observed_at": "2026-11-02T21:50:22.636Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI",
+        "SEA"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/browns-waive-rb-audric-estime",
+      "source_name": "Pro Football Talk",
+      "headline": "Browns waive RB Audric Estime",
+      "published_at": "2026-11-02T21:44:09.000Z",
+      "observed_at": "2026-11-02T21:50:22.636Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE"
       ],
       "detected_category": "free_agency",
       "nfl_evidence": [
