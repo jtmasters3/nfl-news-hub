@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nick-sirianni-s-decisions-draw-debate-but-the-eagles-offense-is-the-bigger-problem",
-      "source_name": "NFL.com",
-      "headline": "Nick Sirianni's decisions draw debate, but the Eagles' offense is the bigger problem",
-      "published_at": "2026-10-14T10:16:07.000Z",
-      "observed_at": "2026-10-14T14:20:19.148Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/with-treveyon-henderson-likely-to-miss-time-rhamondre-stevenson-continues-to-shine",
       "source_name": "NFL.com",
       "headline": "With TreVeyon Henderson likely to miss time, Rhamondre Stevenson continues to shine",
@@ -41819,6 +41798,28 @@
         "DAL"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/brady-returns-tom-brady-set-broadcast-first-game-gillette-stadium-packers-patriots",
+      "source_name": "FOX Sports",
+      "headline": "Brady Returns: Tom Brady Set To Broadcast First Game At Gillette Stadium",
+      "published_at": "2026-11-02T22:59:37.000Z",
+      "observed_at": "2026-11-02T23:20:21.045Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
+        "NE"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
