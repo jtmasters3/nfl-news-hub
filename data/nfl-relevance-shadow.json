@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-dc-christian-parker-will-coach-from-the-booth-rather-than-the-sideline",
-      "source_name": "Pro Football Talk",
-      "headline": "Cowboys DC Christian Parker will coach from the booth rather than the sideline",
-      "published_at": "2026-10-13T14:13:47.000Z",
-      "observed_at": "2026-10-13T14:20:20.065Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brian-branch-precedent-points-to-a-suspension-for-alaric-jackson",
       "source_name": "Pro Football Talk",
       "headline": "Brian Branch precedent points to a suspension for Alaric Jackson",
@@ -41815,6 +41794,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-nov-2",
+      "source_name": "NFL.com",
+      "headline": "NFL news roundup: Latest league updates from Monday, Nov. 2",
+      "published_at": "2026-11-02T02:18:56.000Z",
+      "observed_at": "2026-11-02T14:30:25.827Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
