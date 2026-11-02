@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/next-woman-up-kainani-stevens-team-reporter-producer-for-the-jacksonville-jaguars",
-      "source_name": "NFL.com",
-      "headline": "Next Woman Up: Kainani Stevens, Team Reporter/Producer for the Jacksonville Jaguars",
-      "published_at": "2026-10-13T06:44:38.000Z",
-      "observed_at": "2026-10-13T18:50:24.971Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "JAX"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/missed-fgs-obscure-real-issue-rams-super-team-not-super",
-      "source_name": "FOX Sports",
-      "headline": "Missed Field Goals Obscure Real Issue For Rams: This Super Team Is Not Super",
-      "published_at": "2026-10-13T19:35:27.000Z",
-      "observed_at": "2026-10-13T19:50:20.073Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAC",
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bengals-te-tanner-hudson-to-miss-rest-of-season-with-torn-pectoral",
       "source_name": "Pro Football Talk",
       "headline": "Bengals TE Tanner Hudson to miss rest of season with torn pectoral",
@@ -41793,6 +41750,49 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/as-giants-pursue-jonathan-taylor-could-they-pivot-to-derrick-henry",
+      "source_name": "Pro Football Talk",
+      "headline": "As Giants pursue Jonathan Taylor, could they pivot to Derrick Henry?",
+      "published_at": "2026-11-02T19:10:52.000Z",
+      "observed_at": "2026-11-02T19:20:19.760Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "NYG"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/andy-reid-mansoor-delane-day-to-day-with-shoulder-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Andy Reid: Mansoor Delane day-to-day with shoulder injury",
+      "published_at": "2026-11-02T19:07:03.000Z",
+      "observed_at": "2026-11-02T19:20:19.760Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
