@@ -2,66 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-paris-game-your-digital-ticket",
-      "source_name": "NFL.com",
-      "headline": "NFL Paris Game: Your Digital Ticket",
-      "published_at": "2026-10-13T01:32:45.000Z",
-      "observed_at": "2026-10-13T13:40:21.539Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/pfts-week-6-2026-nfl-power-rankings",
-      "source_name": "Pro Football Talk",
-      "headline": "PFT's Week 6 2026 NFL power rankings",
-      "published_at": "2026-10-13T13:26:46.000Z",
-      "observed_at": "2026-10-13T13:40:21.539Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/eagles-lt-jordan-mailata-laments-week-from-hell-after-team-s-loss-to-jaguars",
-      "source_name": "NFL.com",
-      "headline": "Eagles LT Jordan Mailata laments 'week from hell' after team's loss to Jaguars",
-      "published_at": "2026-10-13T01:42:00.000Z",
-      "observed_at": "2026-10-13T13:50:20.150Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "JAX",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ladd-mcconkey-was-active-for-emergency-situation-in-week-5-could-return-in-week-6",
       "source_name": "Pro Football Talk",
       "headline": "Ladd McConkey was active for \"emergency situation\" in Week 5, could return in Week 6",
@@ -41804,6 +41744,70 @@
       "detected_teams": [
         "LV",
         "NYJ"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/sean-payton-broncos-ride-home-crowd-to-comeback-win-over-chiefs-it-s-a-special-place",
+      "source_name": "NFL.com",
+      "headline": "Sean Payton, Broncos ride home crowd to comeback win over Chiefs: 'It's a special place'",
+      "published_at": "2026-11-02T12:46:07.000Z",
+      "observed_at": "2026-11-02T13:40:29.122Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "KC"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/how-a-defiant-challenge-flag-and-changed-call-saved-the-day-for-patriots",
+      "source_name": "NFL.com",
+      "headline": "How a defiant challenge flag and changed call saved the day for Patriots",
+      "published_at": "2026-11-02T11:16:08.000Z",
+      "observed_at": "2026-11-02T13:40:29.122Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/the-rams-are-a-talented-team-playing-with-fire-they-can-t-afford-another-slip",
+      "source_name": "NFL.com",
+      "headline": "The Rams are a talented team playing with fire. They can't afford another slip",
+      "published_at": "2026-11-02T01:16:07.000Z",
+      "observed_at": "2026-11-02T13:40:29.122Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
