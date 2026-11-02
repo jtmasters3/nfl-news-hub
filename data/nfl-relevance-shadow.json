@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-signing-te-pharaoh-brown-to-53-man-roster",
-      "source_name": "Pro Football Talk",
-      "headline": "Colts signing TE Pharaoh Brown to 53-man roster",
-      "published_at": "2026-10-13T18:17:38.000Z",
-      "observed_at": "2026-10-13T18:30:26.313Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/next-woman-up-kainani-stevens-team-reporter-producer-for-the-jacksonville-jaguars",
       "source_name": "NFL.com",
       "headline": "Next Woman Up: Kainani Stevens, Team Reporter/Producer for the Jacksonville Jaguars",
@@ -41798,6 +41776,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-and-tmrw-sports-unveil-pro-flag-football-league-launching-before-the-sport-makes-olympic-debut",
+      "source_name": "FOX Sports",
+      "headline": "NFL, TMRW Sports Launch Premier Flag Pro League Ahead Of Olympic Debut In 2028",
+      "published_at": "2026-11-02T18:47:54.000Z",
+      "observed_at": "2026-11-02T19:00:32.306Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
