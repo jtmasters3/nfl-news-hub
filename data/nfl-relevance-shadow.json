@@ -2,52 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-power-rankings-week-6-2026-nfl-season",
-      "source_name": "NFL.com",
-      "headline": "NFL Power Rankings, Week 6: Vikings, Patriots enter top 10; Eagles, Saints in free fall",
-      "published_at": "2026-10-13T04:16:19.000Z",
-      "observed_at": "2026-10-13T16:20:23.852Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN",
-        "NE",
-        "NO",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-campbell-lions-fans-took-over-the-stadium-in-arizona",
-      "source_name": "Pro Football Talk",
-      "headline": "Dan Campbell: Lions fans took over the stadium in Arizona",
-      "published_at": "2026-10-13T16:18:57.000Z",
-      "observed_at": "2026-10-13T16:20:23.852Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI",
-        "DET"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/key-korn-ferry-document-in-brian-flores-case-becomes-public",
       "source_name": "Pro Football Talk",
       "headline": "Key Korn Ferry document in Brian Flores case becomes public",
@@ -41812,6 +41766,49 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/2026-nfl-fantasy-football-waiver-wire-week-9-jonah-coleman-mike-washington-jr-top-targets",
+      "source_name": "NFL.com",
+      "headline": "2026 NFL fantasy football waiver wire, Week 9: Jonah Coleman, Mike Washington Jr. top targets",
+      "published_at": "2026-11-02T05:08:45.000Z",
+      "observed_at": "2026-11-02T17:20:22.163Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "WAS"
+      ],
+      "detected_category": "fantasy",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/texans-sign-dl-naquan-jones",
+      "source_name": "Pro Football Talk",
+      "headline": "Texans sign DL Naquan Jones",
+      "published_at": "2026-11-02T17:14:53.000Z",
+      "observed_at": "2026-11-02T17:20:22.163Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "HOU"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
