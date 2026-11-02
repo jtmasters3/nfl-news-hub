@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jerry-jones-on-dak-prescotts-postgame-interaction-with-driver-fans-can-express-themselves",
-      "source_name": "Pro Football Talk",
-      "headline": "Jerry Jones on Dak Prescott's postgame interaction with driver: Fans can express themselves",
-      "published_at": "2026-10-13T14:46:46.000Z",
-      "observed_at": "2026-10-13T14:50:21.342Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/sam-darnold-hasn-t-picked-up-where-he-left-off-how-concerning-is-his-sluggish-start",
-      "source_name": "NFL.com",
-      "headline": "Sam Darnold hasn't picked up where he left off. How concerning is his sluggish start?",
-      "published_at": "2026-10-13T12:16:04.000Z",
-      "observed_at": "2026-10-13T15:00:28.612Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/why-packers-christian-watson-and-matthew-golden-could-be-the-nfl-s-next-top-wr-duo",
       "source_name": "NFL.com",
       "headline": "Why Packers' Christian Watson and Matthew Golden could be the NFL's next top WR duo",
@@ -41802,6 +41763,48 @@
         "KC"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaguars-expect-davon-hamilton-to-miss-the-rest-of-the-season-with-torn-quad",
+      "source_name": "Pro Football Talk",
+      "headline": "Jaguars expect DaVon Hamilton to miss the rest of the season with torn quad",
+      "published_at": "2026-11-02T14:54:11.000Z",
+      "observed_at": "2026-11-02T15:00:34.900Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-glenn-says-jets-arent-trading-breece-hall",
+      "source_name": "Pro Football Talk",
+      "headline": "Aaron Glenn says Jets aren't trading Breece Hall",
+      "published_at": "2026-11-02T14:48:02.000Z",
+      "observed_at": "2026-11-02T15:00:34.900Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYJ"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
