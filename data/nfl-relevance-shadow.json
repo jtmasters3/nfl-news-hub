@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jameson-williams-wins-appeal-of-smoking-celebration-fines",
-      "source_name": "Pro Football Talk",
-      "headline": "Jameson Williams wins appeal of smoking celebration fines",
-      "published_at": "2026-10-13T17:42:07.000Z",
-      "observed_at": "2026-10-13T17:50:19.263Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CIN",
-        "DET"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/rams-releasing-kicker-harrison-mevis-signing-k-blake-grupe-off-jets-practice-squad",
       "source_name": "NFL.com",
       "headline": "NFL Network: Rams releasing kicker Harrison Mevis, signing K Blake Grupe off Jets' practice squad",
@@ -41805,6 +41783,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/donde-ver-el-2026-nfl-madrid-game-en-espana",
+      "source_name": "NFL.com",
+      "headline": "Dónde ver el 2026 NFL Madrid Game en España",
+      "published_at": "2026-11-01T05:35:00.000Z",
+      "observed_at": "2026-11-02T17:50:21.857Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
