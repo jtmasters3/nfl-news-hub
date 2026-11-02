@@ -678579,7 +678579,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-11-02T16:00:39.735Z",
-      "updated_at": "2026-11-02T17:00:38.668Z",
+      "updated_at": "2026-11-02T21:00:26.475Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -678729,13 +678729,13 @@
         "retry_count": 0
       },
       "selection": {
-        "destination": "feed",
-        "slot_id": "feed:2026-11-02T12:00:00-05:00",
-        "selected_at": "2026-11-02T17:00:38.668Z",
-        "window_start": "2026-11-02T15:00:00.000Z",
-        "window_end": "2026-11-02T17:00:00.000Z",
+        "destination": "story",
+        "slot_id": "story:2026-11-02T16:00:00-05:00",
+        "selected_at": "2026-11-02T21:00:26.475Z",
+        "window_start": "2026-11-02T20:00:00.000Z",
+        "window_end": "2026-11-02T21:00:00.000Z",
         "score": 4,
-        "reason": "importance_score_rank"
+        "reason": "fallback_recent_pool_importance_score_rank"
       }
     },
     "9a368bb1-7420-429e-9cff-47bb9e9e07a2": {
@@ -679800,7 +679800,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-11-02T17:30:34.619Z",
-      "updated_at": "2026-11-02T20:00:26.701Z",
+      "updated_at": "2026-11-02T21:00:26.475Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -679951,11 +679951,11 @@
         "retry_count": 0
       },
       "selection": {
-        "destination": "story",
-        "slot_id": "story:2026-11-02T15:00:00-05:00",
-        "selected_at": "2026-11-02T20:00:26.701Z",
+        "destination": "feed",
+        "slot_id": "feed:2026-11-02T16:00:00-05:00",
+        "selected_at": "2026-11-02T21:00:26.475Z",
         "window_start": "2026-11-02T19:00:00.000Z",
-        "window_end": "2026-11-02T20:00:00.000Z",
+        "window_end": "2026-11-02T21:00:00.000Z",
         "score": 10,
         "reason": "fallback_recent_pool_importance_score_rank"
       }
@@ -692037,6 +692037,24 @@
       "status": "selected",
       "story_id": "df235868-803d-4630-af23-0257d5ae1bc7",
       "processed_at": "2026-11-02T20:00:26.701Z"
+    },
+    "feed:2026-11-02T16:00:00-05:00": {
+      "destination": "feed",
+      "slot_time": "2026-11-02T21:00:00.000Z",
+      "window_start": "2026-11-02T19:00:00.000Z",
+      "window_end": "2026-11-02T21:00:00.000Z",
+      "status": "selected",
+      "story_id": "df235868-803d-4630-af23-0257d5ae1bc7",
+      "processed_at": "2026-11-02T21:00:26.475Z"
+    },
+    "story:2026-11-02T16:00:00-05:00": {
+      "destination": "story",
+      "slot_time": "2026-11-02T21:00:00.000Z",
+      "window_start": "2026-11-02T20:00:00.000Z",
+      "window_end": "2026-11-02T21:00:00.000Z",
+      "status": "selected",
+      "story_id": "52a3608e-900f-4fb5-b463-cadafef2dfd5",
+      "processed_at": "2026-11-02T21:00:26.475Z"
     }
   }
 }
