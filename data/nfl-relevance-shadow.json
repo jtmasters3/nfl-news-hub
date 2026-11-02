@@ -2,48 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/broncos-qb-bo-nix-narrative-poor-play-something-we-make-up",
-      "source_name": "NFL.com",
-      "headline": "Broncos QB Bo Nix dismisses 'narrative' about poor play through five weeks: 'Something we make up'",
-      "published_at": "2026-10-14T12:30:32.000Z",
-      "observed_at": "2026-10-14T12:40:22.138Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/first-place-giants-are-a-distant-third-in-betting-odds-to-win-the-nfc-east",
-      "source_name": "Pro Football Talk",
-      "headline": "First-place Giants are a distant third in betting odds to win the NFC East",
-      "published_at": "2026-10-14T12:45:12.000Z",
-      "observed_at": "2026-10-14T12:50:19.114Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/seahawks-vs-broncos-three-must-know-storylines-for-thursday-s-week-6-prime-time-game",
       "source_name": "NFL.com",
       "headline": "Seahawks vs. Broncos: Three must-know storylines for Thursday's Week 6 prime-time game",
@@ -41807,6 +41765,49 @@
       "detected_teams": [
         "CHI",
         "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patriots-waive-s-elliott-davison",
+      "source_name": "Pro Football Talk",
+      "headline": "Patriots waive S Elliott Davison",
+      "published_at": "2026-11-02T22:28:26.000Z",
+      "observed_at": "2026-11-02T22:40:20.938Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/myles-garrett-will-practice-this-week",
+      "source_name": "Pro Football Talk",
+      "headline": "Myles Garrett will practice this week",
+      "published_at": "2026-11-02T22:27:05.000Z",
+      "observed_at": "2026-11-02T22:40:20.938Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
