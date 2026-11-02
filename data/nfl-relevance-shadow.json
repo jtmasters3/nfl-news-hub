@@ -2,48 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/what-klint-kubiak-and-raiders-thought-of-fernando-mendoza-s-regular-season-debut",
-      "source_name": "NFL.com",
-      "headline": "What Klint Kubiak and Raiders thought of Fernando Mendoza's regular-season debut",
-      "published_at": "2026-10-13T12:16:04.000Z",
-      "observed_at": "2026-10-13T14:40:20.240Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-treveyon-henderson-has-a-high-ankle-sprain",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: TreVeyon Henderson has a high-ankle sprain",
-      "published_at": "2026-10-13T14:30:14.000Z",
-      "observed_at": "2026-10-13T14:40:20.240Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jerry-jones-on-dak-prescotts-postgame-interaction-with-driver-fans-can-express-themselves",
       "source_name": "Pro Football Talk",
       "headline": "Jerry Jones on Dak Prescott's postgame interaction with driver: Fans can express themselves",
@@ -41805,6 +41763,45 @@
         "NO"
       ],
       "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-odds-week-9-lines-spreads-results-all-15-games",
+      "source_name": "FOX Sports",
+      "headline": "2026 NFL Odds Week 9: Lines, Spreads, Results For All 15 Games",
+      "published_at": "2026-11-02T14:45:18.000Z",
+      "observed_at": "2026-11-02T14:50:20.376Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-cfb-weekend-recap-broncos-win-over-chiefs-helps-limit-books-damage",
+      "source_name": "FOX Sports",
+      "headline": "NFL, CFB Weekend Recap: Broncos' Win Over Chiefs Helps Limit Books' Damage",
+      "published_at": "2026-11-02T14:39:09.000Z",
+      "observed_at": "2026-11-02T14:50:20.376Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "KC"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
