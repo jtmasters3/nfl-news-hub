@@ -2,48 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/key-korn-ferry-document-in-brian-flores-case-becomes-public",
-      "source_name": "Pro Football Talk",
-      "headline": "Key Korn Ferry document in Brian Flores case becomes public",
-      "published_at": "2026-10-13T16:13:24.000Z",
-      "observed_at": "2026-10-13T16:20:23.852Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/will-campbell-is-week-to-week-after-tests-show-he-avoided-a-major-knee-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "Will Campbell is week-to-week after tests show he avoided a major knee injury",
-      "published_at": "2026-10-13T16:46:34.000Z",
-      "observed_at": "2026-10-13T17:00:26.207Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/treveyon-henderson-injury-patriots-running-backs",
       "source_name": "FOX Sports",
       "headline": "What We Know About Patriots RB TreVeyon Henderson's Ankle Injury",
@@ -41805,6 +41763,45 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/traded-stars-quenton-nelson-jeffery-simmons-will-battle-again-on-monday-night",
+      "source_name": "NFL.com",
+      "headline": "Traded stars Quenton Nelson, Jeffery Simmons will battle again on Monday night",
+      "published_at": "2026-11-02T01:46:05.000Z",
+      "observed_at": "2026-11-02T17:30:25.015Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "trade",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/jacksonville-jaguars-davon-hamilton-quad-injury",
+      "source_name": "FOX Sports",
+      "headline": "Jaguars DT DaVon Hamilton Suffers Torn Quad, Reportedly Out For Season",
+      "published_at": "2026-11-02T17:01:32.000Z",
+      "observed_at": "2026-11-02T17:30:25.015Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "JAX"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
