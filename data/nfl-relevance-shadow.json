@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/uk-and-ireland-week-6-broadcast-games",
-      "source_name": "NFL.com",
-      "headline": "UK and Ireland Week 6 Broadcast Games",
-      "published_at": "2026-10-13T08:59:14.000Z",
-      "observed_at": "2026-10-13T09:00:26.902Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-alaric-jackson-punched-bills-bradley-chubb-after-game",
-      "source_name": "Pro Football Talk",
-      "headline": "Rams' Alaric Jackson punched Bills' Bradley Chubb after game",
-      "published_at": "2026-10-13T08:56:41.000Z",
-      "observed_at": "2026-10-13T09:10:19.923Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/with-210-yards-passing-and-121-rushing-josh-allen-had-his-fourth-career-double-triple",
       "source_name": "Pro Football Talk",
       "headline": "With 210 yards passing and 121 rushing, Josh Allen had his fourth career double-triple",
@@ -41806,6 +41767,48 @@
         "MIN"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/eagles-rb-saquon-barkley-assured-he-won-t-be-traded-i-want-to-be-one-of-the-reasons-why-we-fix-it",
+      "source_name": "NFL.com",
+      "headline": "Eagles RB Saquon Barkley assured he won't be traded: 'I want to be one of the reasons why we fix it'",
+      "published_at": "2026-11-02T11:39:22.000Z",
+      "observed_at": "2026-11-02T11:50:18.749Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/khalil-mack-trying-to-be-where-his-feet-are-at-amid-trade-rumors",
+      "source_name": "Pro Football Talk",
+      "headline": "Khalil Mack trying to be where his \"feet are at\" amid trade rumors",
+      "published_at": "2026-11-02T11:40:36.000Z",
+      "observed_at": "2026-11-02T11:50:18.749Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
