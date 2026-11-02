@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/neil-reynolds-week-5-wrap-up-2026",
-      "source_name": "NFL.com",
-      "headline": "Neil Reynolds' Week 5 Wrap Up",
-      "published_at": "2026-10-11T12:28:00.000Z",
-      "observed_at": "2026-10-12T20:00:29.584Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bucs-open-wr-david-sills-21-day-return-to-practice-window",
-      "source_name": "Pro Football Talk",
-      "headline": "Bucs open WR David Sills 21-day return-to-practice window",
-      "published_at": "2026-10-12T20:05:05.000Z",
-      "observed_at": "2026-10-12T20:10:20.604Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/san-francisco-49ers-deebo-samuel-seahawks-hamstring-injury",
       "source_name": "FOX Sports",
       "headline": "49ers WR Deebo Samuel Expected To Miss Multiple Weeks With Hamstring Injury",
@@ -41782,6 +41744,49 @@
         "WAS"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/buccaneers-todd-bowles-on-zero-completion-win-over-falcons-there-s-a-first-time-for-everything",
+      "source_name": "NFL.com",
+      "headline": "Buccaneers' Todd Bowles on zero-completion win over Falcons: There's a 'first time for everything'",
+      "published_at": "2026-11-02T12:28:39.000Z",
+      "observed_at": "2026-11-02T00:30:24.060Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "TB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/broncos-make-it-a-game-now-trail-24-21",
+      "source_name": "Pro Football Talk",
+      "headline": "Broncos make it a game, now trail 24-21",
+      "published_at": "2026-11-02T00:16:50.000Z",
+      "observed_at": "2026-11-02T00:30:24.060Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN"
+      ],
+      "detected_category": "live_game_state",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
