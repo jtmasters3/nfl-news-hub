@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cb-joey-porter-jr-limited-wednesday-wr-ceedee-lamb-lt-tyler-guyton-full-participants",
-      "source_name": "Pro Football Talk",
-      "headline": "CB Joey Porter Jr. limited Wednesday; WR CeeDee Lamb, LT Tyler Guyton full participants",
-      "published_at": "2026-10-14T21:21:27.000Z",
-      "observed_at": "2026-10-14T21:30:27.496Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/marvin-harrison-jr-excited-cj-stroud-texans-debut-cardinals-trade",
       "source_name": "NFL.com",
       "headline": "Marvin Harrison Jr. 'excited' to reunite with C.J. Stroud, talks trade ahead of Texans debut",
@@ -41879,6 +41857,23 @@
       "headline": "NFL news roundup: Latest league updates from Tuesday, Nov. 3",
       "published_at": "2026-11-03T05:01:45.000Z",
       "observed_at": "2026-11-03T17:10:25.759Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/qb-stock-market-week-9-whos-been-best-starter-first-half-2026",
+      "source_name": "FOX Sports",
+      "headline": "QB Stock Market Week 9: Who's Been The Best Starter In The First Half Of 2026?",
+      "published_at": "2026-11-03T17:24:42.000Z",
+      "observed_at": "2026-11-03T17:40:27.625Z",
       "decision": "keep",
       "classification": "ambiguous",
       "confidence": "low",
