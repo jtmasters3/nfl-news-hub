@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/giants-dc-dennard-wilson-we-love-being-home-underdogs",
-      "source_name": "Pro Football Talk",
-      "headline": "Giants DC Dennard Wilson: We love being home underdogs",
-      "published_at": "2026-10-15T16:25:18.000Z",
-      "observed_at": "2026-10-15T16:30:29.544Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NO",
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/commanders-designate-lb-jordan-magee-for-return",
-      "source_name": "Pro Football Talk",
-      "headline": "Commanders designate LB Jordan Magee for return",
-      "published_at": "2026-10-15T16:34:50.000Z",
-      "observed_at": "2026-10-15T16:40:23.962Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-quinn-on-jayden-daniels-even-through-tough-weeks-he-is-really-resilient",
       "source_name": "Pro Football Talk",
       "headline": "Dan Quinn on Jayden Daniels: Even through tough weeks, he is really resilient",
@@ -41872,6 +41829,45 @@
         "BAL"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/jeffery-simmons-debut-shows-why-now-is-the-time-for-nfl-contenders-to-deal",
+      "source_name": "NFL.com",
+      "headline": "Jeffery Simmons' debut shows why now is the time for NFL contenders to deal",
+      "published_at": "2026-11-03T12:16:07.000Z",
+      "observed_at": "2026-11-03T22:50:19.714Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bo-nix-has-15-game-winning-drives-most-ever-for-a-qb-in-his-first-three-seasons",
+      "source_name": "Pro Football Talk",
+      "headline": "Bo Nix has 15 game-winning drives, most ever for a QB in his first three seasons",
+      "published_at": "2026-11-03T22:46:35.000Z",
+      "observed_at": "2026-11-03T22:50:19.714Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "KC"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
