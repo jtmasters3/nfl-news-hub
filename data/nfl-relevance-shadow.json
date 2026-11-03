@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-simmons-officially-limited-in-return-to-practice",
-      "source_name": "Pro Football Talk",
-      "headline": "Josh Simmons officially limited in return to practice",
-      "published_at": "2026-10-14T21:17:49.000Z",
-      "observed_at": "2026-10-14T21:20:21.337Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cb-joey-porter-jr-limited-wednesday-wr-ceedee-lamb-lt-tyler-guyton-full-participants",
       "source_name": "Pro Football Talk",
       "headline": "CB Joey Porter Jr. limited Wednesday; WR CeeDee Lamb, LT Tyler Guyton full participants",
@@ -41892,6 +41871,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-tuesday-nov-3",
+      "source_name": "NFL.com",
+      "headline": "NFL news roundup: Latest league updates from Tuesday, Nov. 3",
+      "published_at": "2026-11-03T05:01:45.000Z",
+      "observed_at": "2026-11-03T17:10:25.759Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
