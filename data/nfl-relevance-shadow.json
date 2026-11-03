@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/hearing-officer-derrick-brooks-reduces-alaric-jacksons-suspension-to-one-game",
-      "source_name": "Pro Football Talk",
-      "headline": "Hearing officer Derrick Brooks reduces Alaric Jackson's suspension to one game",
-      "published_at": "2026-10-14T23:37:38.000Z",
-      "observed_at": "2026-10-14T23:50:19.003Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nick-caserio-marvin-harrison-jr-trade-was-finalized-on-friday",
-      "source_name": "Pro Football Talk",
-      "headline": "Nick Caserio: Marvin Harrison Jr. trade was finalized on Friday",
-      "published_at": "2026-10-14T23:53:57.000Z",
-      "observed_at": "2026-10-15T00:00:29.443Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "trade",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-lb-nate-landman-was-limited-in-wednesdays-practice",
       "source_name": "Pro Football Talk",
       "headline": "Rams LB Nate Landman was limited in Wednesday's practice",
@@ -41877,6 +41839,45 @@
         "NE"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/college-all-star-games",
+      "source_name": "NFL.com",
+      "headline": "College All-Star Games",
+      "published_at": "2026-11-03T08:19:41.000Z",
+      "observed_at": "2026-11-03T20:30:25.803Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sione-vaki-emerges-as-lions-change-of-pace-back-to-jahmyr-gibbs",
+      "source_name": "Pro Football Talk",
+      "headline": "Sione Vaki emerges as Lions' change-of-pace back to pair with Jahmyr Gibbs",
+      "published_at": "2026-11-03T20:24:07.000Z",
+      "observed_at": "2026-11-03T20:30:25.803Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "HOU"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
