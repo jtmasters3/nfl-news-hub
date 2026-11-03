@@ -2,48 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/eagles-qb-jalen-hurts-out-sunday-panthers-superficial-blood-clot",
-      "source_name": "NFL.com",
-      "headline": "Eagles QB Jalen Hurts out Sunday vs. Panthers due to superficial blood clot",
-      "published_at": "2026-10-15T05:11:07.000Z",
-      "observed_at": "2026-10-15T17:20:23.511Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR",
-        "PHI"
-      ],
-      "detected_category": "free_agency",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:free_agency"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-fox-has-had-no-negotiations-with-greg-olsen-on-a-contract-extension",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Fox has had no negotiations with Greg Olsen on a contract extension",
-      "published_at": "2026-10-15T17:15:58.000Z",
-      "observed_at": "2026-10-15T17:20:23.511Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "contract",
-      "nfl_evidence": [
-        "nfl_preserving_category:contract"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-dc-christian-parker-most-likely-coaching-from-the-sideline-this-week",
       "source_name": "Pro Football Talk",
       "headline": "Cowboys DC Christian Parker \"most likely\" coaching from the sideline this week",
@@ -41868,6 +41826,52 @@
       "confidence": "high",
       "detected_teams": [
         "PHI"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jets-sign-ol-blake-freeland-off-bengals-practice-squad",
+      "source_name": "Pro Football Talk",
+      "headline": "Jets sign OL Blake Freeland off Bengals' practice squad",
+      "published_at": "2026-11-03T23:11:41.000Z",
+      "observed_at": "2026-11-03T23:20:19.894Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN",
+        "NYJ"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lions-put-lb-jimmy-rolder-on-ir-waive-db-bishop-fitzgerald",
+      "source_name": "Pro Football Talk",
+      "headline": "Lions put LB Jimmy Rolder on IR, waive DB Bishop Fitzgerald",
+      "published_at": "2026-11-03T23:04:32.000Z",
+      "observed_at": "2026-11-03T23:20:19.894Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "MIN"
       ],
       "detected_category": "injury",
       "nfl_evidence": [
