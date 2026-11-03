@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/bills-defensive-coordinator-demands-improvements-saying-unit-cant-keep-getting-bailed-out-by-allen",
-      "source_name": "FOX Sports",
-      "headline": "No Excuses: Jim Leonhard Tells Bills Defense 'It's Time To Be Good At Something'",
-      "published_at": "2026-10-14T19:23:26.000Z",
-      "observed_at": "2026-10-14T19:30:25.501Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lamar-jackson-remains-out-of-practice-wednesday",
       "source_name": "Pro Football Talk",
       "headline": "Lamar Jackson remains out of practice Wednesday",
@@ -41876,6 +41855,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/caleb-williams-calms-things-down-in-shoe-dispute-with-nfl",
+      "source_name": "Pro Football Talk",
+      "headline": "Caleb Williams chooses to \"calm things down\" in shoe dispute with NFL",
+      "published_at": "2026-11-03T14:46:15.000Z",
+      "observed_at": "2026-11-03T14:50:25.697Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
