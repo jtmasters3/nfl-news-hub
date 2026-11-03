@@ -2,47 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/mlb/will-hills-parlay-week-back-desperate-dodgers-win-game-3",
-      "source_name": "FOX Sports",
-      "headline": "Will Hill's Parlay Of The Week: Back Dodgers In Game 3; Jags Over Texans",
-      "published_at": "2026-10-14T20:37:40.000Z",
-      "observed_at": "2026-10-14T20:50:26.156Z",
-      "decision": "keep",
-      "classification": "nfl_with_college_context",
-      "confidence": "high",
-      "detected_teams": [
-        "HOU",
-        "JAX"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [
-        "conference_big_ten"
-      ],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/joe-buck-troy-aikman-reportedly-have-tension-in-what-could-be-last-year-of-their-partnership",
-      "source_name": "Pro Football Talk",
-      "headline": "Joe Buck, Troy Aikman reportedly have \"tension\" in what could be last year of their partnership",
-      "published_at": "2026-10-14T20:46:51.000Z",
-      "observed_at": "2026-10-14T20:50:26.156Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-list-daniel-jones-as-full-practice-participant-with-ankle-injury",
       "source_name": "Pro Football Talk",
       "headline": "Colts list Daniel Jones as full practice participant with ankle injury",
@@ -41880,6 +41839,48 @@
         "MIN"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/caleb-williams-has-arrived-as-a-top-tier-quarterback",
+      "source_name": "Pro Football Talk",
+      "headline": "Caleb Williams has arrived as a top-tier quarterback",
+      "published_at": "2026-11-03T16:04:34.000Z",
+      "observed_at": "2026-11-03T16:10:33.857Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bengals-place-de-cashius-howell-on-injured-reserve",
+      "source_name": "Pro Football Talk",
+      "headline": "Bengals place DE Cashius Howell on injured reserve",
+      "published_at": "2026-11-03T16:00:20.000Z",
+      "observed_at": "2026-11-03T16:10:33.857Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
