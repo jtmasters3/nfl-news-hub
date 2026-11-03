@@ -2,359 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/with-steelers-wr-corps-struck-by-injuries-how-many-questions-can-germie-bernard-answer",
-      "source_name": "NFL.com",
-      "headline": "With Steelers WR corps struck by injuries, how many questions can Germie Bernard answer?",
-      "published_at": "2026-10-15T10:46:06.000Z",
-      "observed_at": "2026-10-15T12:40:23.518Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PIT"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/2027-nfl-draft-top-10-senior-bowl-prospects-at-midway-point-of-college-football-season",
-      "source_name": "NFL.com",
-      "headline": "2027 NFL Draft: Top 10 Senior Bowl prospects at midway point of college football season",
-      "published_at": "2026-10-15T01:23:00.000Z",
-      "observed_at": "2026-10-15T13:30:25.932Z",
-      "decision": "keep",
-      "classification": "nfl_with_college_context",
-      "confidence": "high",
-      "detected_teams": [],
-      "detected_category": "draft",
-      "nfl_evidence": [
-        "phrase_nfl_draft",
-        "nfl_preserving_category:draft"
-      ],
-      "non_nfl_evidence": [
-        "college_football_phrase"
-      ],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/kellen-moore-responds-criticism-saints-owner",
-      "source_name": "NFL.com",
-      "headline": "Kellen Moore responds to criticism from Saints owner: 'We all want better results'",
-      "published_at": "2026-10-15T01:32:37.000Z",
-      "observed_at": "2026-10-15T13:40:24.596Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NO"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/c-j-stroud-on-marvin-harrison-jr-i-dont-agree-with-some-things-that-are-being-said-about-him",
-      "source_name": "Pro Football Talk",
-      "headline": "C.J. Stroud on Marvin Harrison Jr.: I don't agree with some things that are being said about him",
-      "published_at": "2026-10-15T13:32:36.000Z",
-      "observed_at": "2026-10-15T13:40:24.596Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI",
-        "HOU"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/marlon-humphrey-kyle-hamilton-got-excited-when-tua-tagovailoa-entered-the-game",
-      "source_name": "Pro Football Talk",
-      "headline": "Marlon Humphrey: Kyle Hamilton got excited when Tua Tagovailoa entered the game",
-      "published_at": "2026-10-15T13:29:01.000Z",
-      "observed_at": "2026-10-15T13:40:24.596Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "BAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/troy-aikman-seems-to-confirm-hell-be-leaving-espn",
-      "source_name": "Pro Football Talk",
-      "headline": "Troy Aikman seems to confirm he'll be leaving ESPN",
-      "published_at": "2026-10-15T13:55:51.000Z",
-      "observed_at": "2026-10-15T14:00:25.450Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/john-harbaugh-wed-be-negligent-if-we-didnt-see-if-j-j-mccarthy-can-help-us",
-      "source_name": "Pro Football Talk",
-      "headline": "John Harbaugh: We'd be negligent if we didn't see if J.J. McCarthy can help us",
-      "published_at": "2026-10-15T13:50:12.000Z",
-      "observed_at": "2026-10-15T14:00:25.450Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/packers-cowboys-week-6-motivated-high-powered-offense",
-      "source_name": "NFL.com",
-      "headline": "'Motivated' after rivalry win, Packers know great test awaits them in Dallas' 'high-powered' offense",
-      "published_at": "2026-10-15T01:57:37.000Z",
-      "observed_at": "2026-10-15T14:10:23.722Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/jalen-hurts-problem-eagles-jaguars-packers-title-contenders",
-      "source_name": "FOX Sports",
-      "headline": "NFL Fact Or Fiction: Jalen Hurts The Problem In Philly? Jaguars Are Title Contenders?",
-      "published_at": "2026-10-15T14:35:30.000Z",
-      "observed_at": "2026-10-15T14:40:20.643Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN",
-        "GB",
-        "JAX",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/todd-monken-s-ravens-reunion-takes-a-backseat-to-browns-latest-test",
-      "source_name": "NFL.com",
-      "headline": "Todd Monken's Ravens reunion takes a backseat to Browns' latest test",
-      "published_at": "2026-10-15T10:16:06.000Z",
-      "observed_at": "2026-10-15T14:50:22.943Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "CLE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/police-continue-to-withhold-the-josh-jacobs-video",
-      "source_name": "Pro Football Talk",
-      "headline": "Police continue to withhold the Josh Jacobs video",
-      "published_at": "2026-10-15T14:40:53.000Z",
-      "observed_at": "2026-10-15T14:50:22.943Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/what-bengals-stat-patterns-tell-about-joe-burrow-ja-marr-chase-tee-higgins-pass-rush",
-      "source_name": "NFL.com",
-      "headline": "What Bengals' stat patterns tell about Joe Burrow, Ja'Marr Chase, Tee Higgins, pass rush",
-      "published_at": "2026-10-15T10:46:06.000Z",
-      "observed_at": "2026-10-15T15:00:30.583Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/patriots-get-good-news-on-injuries-will-a-j-brown-christian-gonzalez-be-ready-to-go",
-      "source_name": "NFL.com",
-      "headline": "Patriots get good news on injuries: Will A.J. Brown, Christian Gonzalez be ready to go?",
-      "published_at": "2026-10-15T10:16:06.000Z",
-      "observed_at": "2026-10-15T15:20:35.596Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/pfts-week-6-2026-nfl-picks",
-      "source_name": "Pro Football Talk",
-      "headline": "PFT's Week 6 2026 NFL picks",
-      "published_at": "2026-10-15T15:17:17.000Z",
-      "observed_at": "2026-10-15T15:20:35.596Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/game-changer-mike-evans-proving-worth-for-49ers-through-first-five-games-of-season",
-      "source_name": "NFL.com",
-      "headline": "'Game-changer' Mike Evans proving worth for 49ers through first five games of season",
-      "published_at": "2026-10-15T03:28:35.000Z",
-      "observed_at": "2026-10-15T15:40:26.885Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/broncos-quinn-meinerz-overcame-a-frightening-heart-scare-to-rediscover-his-joy-in-football",
-      "source_name": "NFL.com",
-      "headline": "Broncos' Quinn Meinerz overcame a frightening heart scare to rediscover his joy in football",
-      "published_at": "2026-10-15T12:16:05.000Z",
-      "observed_at": "2026-10-15T15:50:19.756Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/the-packers-guard-play-saved-the-offense-will-they-stick-with-what-s-working",
-      "source_name": "NFL.com",
-      "headline": "The Packers' guard play saved the offense. Will they stick with what's working?",
-      "published_at": "2026-10-15T10:46:06.000Z",
-      "observed_at": "2026-10-15T15:50:19.756Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-seahawks-vs-broncos-tv-channel-live-stream-time-oct-15-2026",
       "source_name": "FOX Sports",
       "headline": "How to Watch Seahawks vs. Broncos: TV Channel, Live Stream, Time",
@@ -41881,6 +41528,357 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50360444/cj-stroud-texans-contract",
+      "source_name": "ESPN",
+      "headline": "Inside C.J. Stroud's high-stakes decision not to sign a contract extension -- and what's next",
+      "published_at": "2026-11-03T18:36:56.000Z",
+      "observed_at": "2026-11-03T22:20:33.094Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "contract",
+      "nfl_evidence": [
+        "nfl_preserving_category:contract"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50372292/bills-release-safety-cj-gardner-johnson",
+      "source_name": "ESPN",
+      "headline": "Bills release Gardner-Johnson after he served one-game spitting suspension",
+      "published_at": "2026-11-03T21:49:14.000Z",
+      "observed_at": "2026-11-03T22:20:33.094Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50372281/giants-cb-greg-newsome-ii-agree-3-year-46m-extension",
+      "source_name": "ESPN",
+      "headline": "Giants, CB Newsome agree to 3-year, $46M extension",
+      "published_at": "2026-11-03T21:49:14.000Z",
+      "observed_at": "2026-11-03T22:20:33.094Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG"
+      ],
+      "detected_category": "contract",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:contract"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50371976/source-colts-adetomiwa-adebawore-reach-2-year-35m-deal",
+      "source_name": "ESPN",
+      "headline": "Source: Colts rebuff trade interest in Adebawore, instead extend DT on $35M deal",
+      "published_at": "2026-11-03T21:49:14.000Z",
+      "observed_at": "2026-11-03T22:20:33.094Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50370763/sources-cards-jeremiyah-love-headed-ir-4-5-weeks",
+      "source_name": "ESPN",
+      "headline": "Cardinals rookie RB Love placed on IR, out 4-5 weeks with high ankle sprain",
+      "published_at": "2026-11-03T21:49:14.000Z",
+      "observed_at": "2026-11-03T22:20:33.094Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50371730/rookie-joe-fagnano-start-thursday-night-vs-jaguars",
+      "source_name": "ESPN",
+      "headline": "Minter makes it official, says rookie QB Fagnano will start for Ravens vs. Jags",
+      "published_at": "2026-11-03T21:49:14.000Z",
+      "observed_at": "2026-11-03T22:20:33.094Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "JAX"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50372284/saints-release-veteran-kicker-daniel-carlson-7-games",
+      "source_name": "ESPN",
+      "headline": "Veteran kicker Carlson cut by Saints after posting 2nd-worst FG% in NFL",
+      "published_at": "2026-11-03T21:49:14.000Z",
+      "observed_at": "2026-11-03T22:20:33.094Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NO"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_released_by",
+        "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50367539/dt-jeffery-simons-immediate-boon-chicago-bears-defense-win-seattle-seahawks",
+      "source_name": "ESPN",
+      "headline": "Sweet Home Chicago: Simmons stymies Darnold, Seahawks in Bears debut",
+      "published_at": "2026-11-03T21:49:14.000Z",
+      "observed_at": "2026-11-03T22:20:33.094Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50349677/trade-deadline-rise-quiet-chaotic-more-deals-2026",
+      "source_name": "ESPN",
+      "headline": "The rise of the trade deadline: How it went from annual snoozer to annual chaos",
+      "published_at": "2026-11-03T19:11:19.000Z",
+      "observed_at": "2026-11-03T22:20:33.094Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "trade",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50366346/jaguars-wr-brian-thomas-jr-trade-deadline-rumors",
+      "source_name": "ESPN",
+      "headline": "Why trade deadline rumors are swirling around Brian Thomas Jr. in Jacksonville",
+      "published_at": "2026-11-03T19:11:19.000Z",
+      "observed_at": "2026-11-03T22:20:33.094Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50360528/colts-jonathan-taylor-trade-deadline",
+      "source_name": "ESPN",
+      "headline": "Colts are right to consider trading Taylor, and what they might get in return",
+      "published_at": "2026-11-03T14:51:12.000Z",
+      "observed_at": "2026-11-03T22:20:33.094Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50320658/caddix-shoes-bears-caleb-williams-fines",
+      "source_name": "ESPN",
+      "headline": "Cleats, controversy and the choice of Bears QB Caleb Williams",
+      "published_at": "2026-11-03T19:14:49.000Z",
+      "observed_at": "2026-11-03T22:20:33.094Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50358866/patriots-drake-maye-deep-passes-20-plus-yards-turnaround",
+      "source_name": "ESPN",
+      "headline": "Drake digs the long ball: How Maye's deep passes are fueling the Patriots' recent surge",
+      "published_at": "2026-11-03T13:38:24.000Z",
+      "observed_at": "2026-11-03T22:20:33.094Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50361464/cincinnati-bengals-hendrickson",
+      "source_name": "ESPN",
+      "headline": "How Cincinnati's decision on Trey Hendrickson has altered the AFC North landscape",
+      "published_at": "2026-11-03T13:38:23.000Z",
+      "observed_at": "2026-11-03T22:20:33.094Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "CIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/fantasy/football/story/_/page/FFWeeklyPlayerRank26main-49797082/fantasy-football-rankings-2026-qb-rb-wr-te-dst",
+      "source_name": "ESPN",
+      "headline": "Rankings for Week 9",
+      "published_at": "2026-11-03T19:46:45.000Z",
+      "observed_at": "2026-11-03T22:20:33.094Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/espn/betting/story/_/id/47809892/2026-super-bowl-lxi-odds-nfl-sports-betting-season-win-totals-playoffs",
+      "source_name": "ESPN",
+      "headline": "Bears tied for third-best Super Bowl odds after statement win",
+      "published_at": "2026-11-03T18:16:30.000Z",
+      "observed_at": "2026-11-03T22:20:33.094Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/espn/betting/story/_/id/48476156/2026-nfl-awards-betting-odds-mvp-rookie-year-offensive-defensive-player-coach",
+      "source_name": "ESPN",
+      "headline": "NFL awards: Caleb Williams reenters MVP conversation",
+      "published_at": "2026-11-03T18:16:30.000Z",
+      "observed_at": "2026-11-03T22:20:33.094Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
