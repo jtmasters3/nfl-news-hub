@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rosenhaus-nothing-is-imminent-on-tyreek-hill",
-      "source_name": "Pro Football Talk",
-      "headline": "Rosenhaus: \"Nothing is imminent\" on Tyreek Hill",
-      "published_at": "2026-10-14T17:54:51.000Z",
-      "observed_at": "2026-10-14T18:00:32.161Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/baker-mayfield-getting-better-will-test-thumb-with-wednesday-throwing-session",
       "source_name": "Pro Football Talk",
       "headline": "Baker Mayfield \"getting better,\" will test thumb with Wednesday throwing session",
@@ -41854,6 +41837,27 @@
         "CHI"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jim-harbaugh-i-want-khalil-mack-to-be-here-and-khalil-mack-wants-to-be-here",
+      "source_name": "Pro Football Talk",
+      "headline": "Jim Harbaugh: I want Khalil Mack to be here and Khalil Mack wants to be here",
+      "published_at": "2026-11-03T09:38:04.000Z",
+      "observed_at": "2026-11-03T09:50:26.627Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
