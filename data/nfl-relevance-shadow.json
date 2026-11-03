@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-fantasy-2026-start-em-sit-em-wide-receivers-for-week-6",
-      "source_name": "NFL.com",
-      "headline": "NFL Fantasy 2026 Start 'Em, Sit 'Em: Wide receivers for Week 6",
-      "published_at": "2026-10-14T06:31:50.000Z",
-      "observed_at": "2026-10-14T18:40:20.258Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "fantasy",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-fantasy-2026-start-em-sit-em-running-backs-for-week-6",
       "source_name": "NFL.com",
       "headline": "NFL Fantasy 2026 Start 'Em, Sit 'Em: Running backs for Week 6",
@@ -41867,6 +41850,28 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "phrase_practice_squad"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/raiders-klint-kubiak-says-workload-between-rbs-ashton-jeanty-mike-washington-jr-moving-target",
+      "source_name": "NFL.com",
+      "headline": "Raiders' Klint Kubiak says workload between RBs Ashton Jeanty, Mike Washington Jr. 'moving target'",
+      "published_at": "2026-11-03T01:48:00.000Z",
+      "observed_at": "2026-11-03T14:00:28.450Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV",
+        "WAS"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
