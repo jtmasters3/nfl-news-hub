@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-seahawks-vs-broncos-tv-channel-live-stream-time-oct-15-2026",
-      "source_name": "FOX Sports",
-      "headline": "How to Watch Seahawks vs. Broncos: TV Channel, Live Stream, Time",
-      "published_at": "2026-10-15T15:43:52.000Z",
-      "observed_at": "2026-10-15T16:00:27.092Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN",
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/baker-mayfield-out-of-thursday-practice-jalon-daniels-again-in-line-to-start",
-      "source_name": "Pro Football Talk",
-      "headline": "Baker Mayfield out of Thursday practice, Jalon Daniels again in line to start",
-      "published_at": "2026-10-15T15:55:47.000Z",
-      "observed_at": "2026-10-15T16:00:27.092Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/giants-dc-dennard-wilson-we-love-being-home-underdogs",
       "source_name": "Pro Football Talk",
       "headline": "Giants DC Dennard Wilson: We love being home underdogs",
@@ -41879,6 +41840,44 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/tom-brady-says-caleb-williams-perfect-quarterback-ben-johnsons-offense",
+      "source_name": "FOX Sports",
+      "headline": "Tom Brady Says Caleb Williams Is ‘Perfect’ Quarterback For Ben Johnson’s Offense",
+      "published_at": "2026-11-03T22:17:02.000Z",
+      "observed_at": "2026-11-03T22:30:34.092Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ravens-qb-joe-fagnano-has-full-participation-in-tuesdays-practice",
+      "source_name": "Pro Football Talk",
+      "headline": "Ravens QB Joe Fagnano has full participation in Tuesday's practice",
+      "published_at": "2026-11-03T22:24:10.000Z",
+      "observed_at": "2026-11-03T22:30:34.092Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
