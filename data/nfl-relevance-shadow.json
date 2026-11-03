@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-qb-rankings-week-6-2026-nfl-season",
-      "source_name": "NFL.com",
-      "headline": "NFL QB rankings, Week 6: Josh Allen reclaims No. 1 spot; Jordan Love makes biggest jump",
-      "published_at": "2026-10-14T08:19:15.000Z",
-      "observed_at": "2026-10-14T20:30:24.062Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/abdul-carter-out-of-practice-for-giants-wednesday",
-      "source_name": "Pro Football Talk",
-      "headline": "Abdul Carter out of practice for Giants Wednesday",
-      "published_at": "2026-10-14T20:23:15.000Z",
-      "observed_at": "2026-10-14T20:30:24.062Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/demeco-ryans-marvin-harrison-jr-fit-in-seamlessly-will-play-on-sunday",
       "source_name": "Pro Football Talk",
       "headline": "DeMeco Ryans: Marvin Harrison Jr. fit in \"seamlessly,\" will play on Sunday",
@@ -41868,6 +41830,50 @@
         "DAL"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/why-the-vikings-trade-deadline-pursuit-coincides-with-key-decisions-looming-for-2027",
+      "source_name": "NFL.com",
+      "headline": "Why the Vikings' trade deadline pursuit coincides with key decisions looming for 2027",
+      "published_at": "2026-11-03T11:16:07.000Z",
+      "observed_at": "2026-11-03T15:50:26.527Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ben-johnson-jeffery-simmons-has-fit-right-in-he-got-a-game-ball",
+      "source_name": "Pro Football Talk",
+      "headline": "Ben Johnson: Jeffery Simmons has fit right in, he got a game ball",
+      "published_at": "2026-11-03T15:39:09.000Z",
+      "observed_at": "2026-11-03T15:50:26.527Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "SEA",
+        "TEN"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
