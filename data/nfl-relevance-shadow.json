@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/falcons-qb-michael-penix-jr-ribs-expected-to-start-week-6-vs-bears",
-      "source_name": "NFL.com",
-      "headline": "Falcons QB Michael Penix Jr. (ribs) expected to start Week 6 vs. Bears",
-      "published_at": "2026-10-14T04:37:18.000Z",
-      "observed_at": "2026-10-14T16:40:21.662Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "CHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jets-rookie-wr-omar-cooper-returns-to-practice-breece-hall-adonai-mitchell-still-week-to-week",
       "source_name": "Pro Football Talk",
       "headline": "Jets rookie WR Omar Cooper returns to practice; Breece Hall, Adonai Mitchell still week-to-week",
@@ -41854,6 +41832,28 @@
         "ARI"
       ],
       "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-answer-seahawks-up-lead-to-27-17",
+      "source_name": "Pro Football Talk",
+      "headline": "Bears answer Seahawks, up lead to 27-17",
+      "published_at": "2026-11-03T04:01:30.000Z",
+      "observed_at": "2026-11-03T04:10:23.187Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "SEA"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
