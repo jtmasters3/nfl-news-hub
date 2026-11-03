@@ -2,103 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/why-did-the-marvin-harrison-jr-trade-take-so-long-to-finalize-texans-gm-explains",
-      "source_name": "NFL.com",
-      "headline": "Why did the Marvin Harrison Jr. trade take so long to finalize? Texans GM explains",
-      "published_at": "2026-10-14T03:01:05.000Z",
-      "observed_at": "2026-10-14T15:40:21.596Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "HOU"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/andy-reid-can-join-george-halas-and-paul-brown-as-the-only-coaches-with-six-5-0-starts",
-      "source_name": "Pro Football Talk",
-      "headline": "Andy Reid can join George Halas and Paul Brown as the only coaches with six 5-0 starts",
-      "published_at": "2026-10-14T15:33:27.000Z",
-      "observed_at": "2026-10-14T15:40:21.596Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/34-years-ago-today-my-time-as-a-baseball-fan-ended",
-      "source_name": "Pro Football Talk",
-      "headline": "34 years ago today, my time as a baseball fan ended",
-      "published_at": "2026-10-14T15:32:27.000Z",
-      "observed_at": "2026-10-14T15:40:21.596Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/texans-activate-ot-braden-smith-from-ir",
-      "source_name": "Pro Football Talk",
-      "headline": "Texans activate OT Braden Smith from IR",
-      "published_at": "2026-10-14T15:31:20.000Z",
-      "observed_at": "2026-10-14T15:40:21.596Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "HOU"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/micah-parsons-i-want-to-make-sure-all-the-small-things-are-fixed-before-returning",
-      "source_name": "Pro Football Talk",
-      "headline": "Micah Parsons: I want to make sure all the small things are fixed before returning",
-      "published_at": "2026-10-14T15:55:47.000Z",
-      "observed_at": "2026-10-14T16:00:25.645Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/players-of-the-week-2026-week-5-jahmyr-gibbs-jaylen-warren",
       "source_name": "NFL.com",
       "headline": "Lions RB Jahmyr Gibbs, Steelers RB Jaylen Warren highlight Players of the Week",
@@ -41842,6 +41745,115 @@
       "confidence": "high",
       "detected_teams": [
         "JAX"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50361646/garrett-return-practice-week-rams-mcvay-says",
+      "source_name": "ESPN",
+      "headline": "Rams to welcome Garrett back to practice this week, McVay says",
+      "published_at": "2026-11-03T00:58:31.000Z",
+      "observed_at": "2026-11-03T01:40:27.541Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC",
+        "LAR"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50362530/ravens-qb-joe-fagnano-ankle-chance-play-thursday",
+      "source_name": "ESPN",
+      "headline": "Ravens QB Fagnano (ankle) also hurting but has 'chance' to play vs. Jaguars",
+      "published_at": "2026-11-03T00:58:31.000Z",
+      "observed_at": "2026-11-03T01:40:27.541Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "JAX"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50361915/harbaugh-reached-simmons-giants-open-call",
+      "source_name": "ESPN",
+      "headline": "Harbaugh reached out on Simmons trade, says Giants 'open for any call'",
+      "published_at": "2026-11-03T00:58:31.000Z",
+      "observed_at": "2026-11-03T01:40:27.541Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG",
+        "NYJ",
+        "TEN"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50362043/falcons-james-pearce-back-suspension-expected-play",
+      "source_name": "ESPN",
+      "headline": "Falcons' James Pearce back from suspension, expected to play",
+      "published_at": "2026-11-03T00:27:30.000Z",
+      "observed_at": "2026-11-03T01:40:27.541Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/qb-joe-fagnano-estimated-as-limited-in-ravens-practice-with-ankle-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "QB Joe Fagnano estimated as limited in Ravens' practice with ankle injury",
+      "published_at": "2026-11-03T01:33:19.000Z",
+      "observed_at": "2026-11-03T01:40:27.541Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL"
       ],
       "detected_category": "injury",
       "nfl_evidence": [
