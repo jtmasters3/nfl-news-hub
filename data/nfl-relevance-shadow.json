@@ -2,30 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-week-6-betting-report-bettors-backing-over-caleb-williams-return",
-      "source_name": "FOX Sports",
-      "headline": "NFL Week 6 Betting Report: Bettors Backing The Over In Caleb Williams' Return",
-      "published_at": "2026-10-15T00:50:38.000Z",
-      "observed_at": "2026-10-15T01:10:18.384Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "BUF",
-        "CHI",
-        "LV"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/2026-super-bowl-odds",
       "source_name": "FOX Sports",
       "headline": "2026 Super Bowl Odds: Rams Have Company At Top After Loss To Bills",
@@ -41879,6 +41855,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dt-adetomiwa-adebawore-agrees-to-two-year-extension-with-colts",
+      "source_name": "Pro Football Talk",
+      "headline": "DT Adetomiwa Adebawore agrees to two-year extension with Colts",
+      "published_at": "2026-11-03T21:17:50.000Z",
+      "observed_at": "2026-11-03T21:20:30.911Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
