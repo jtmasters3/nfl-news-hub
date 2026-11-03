@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/marvin-harrison-jr-excited-cj-stroud-texans-debut-cardinals-trade",
-      "source_name": "NFL.com",
-      "headline": "Marvin Harrison Jr. 'excited' to reunite with C.J. Stroud, talks trade ahead of Texans debut",
-      "published_at": "2026-10-14T09:34:02.000Z",
-      "observed_at": "2026-10-14T21:40:21.989Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI",
-        "HOU"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/michael-penix-fully-participated-in-wednesdays-practice",
       "source_name": "Pro Football Talk",
       "headline": "Michael Penix fully participated in Wednesday's practice",
@@ -41883,6 +41861,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/blockbuster-incoming-all-signs-point-to-giants-making-splash-ahead-of-nfl-trade-deadline",
+      "source_name": "NFL.com",
+      "headline": "Blockbuster incoming? All signs point to Giants making splash ahead of NFL trade deadline",
+      "published_at": "2026-11-03T12:46:06.000Z",
+      "observed_at": "2026-11-03T17:50:21.559Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
