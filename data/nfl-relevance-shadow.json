@@ -2,71 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-broncos-s-talanoa-hufanga-to-miss-multiple-weeks-with-ankle-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Broncos S Talanoa Hufanga to miss multiple weeks with ankle injury",
-      "published_at": "2026-10-14T16:45:28.000Z",
-      "observed_at": "2026-10-14T16:50:30.700Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN",
-        "LAC"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-simmons-will-practice-on-wednesday-rashee-rice-will-not",
-      "source_name": "Pro Football Talk",
-      "headline": "Josh Simmons will practice on Wednesday, Rashee Rice will not",
-      "published_at": "2026-10-14T16:55:51.000Z",
-      "observed_at": "2026-10-14T17:00:27.492Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/micah-parsons-cowboys-packers-trade-stats",
-      "source_name": "FOX Sports",
-      "headline": "Packers Star Micah Parsons Explains Why He Doesn't 'Need Revenge' Vs. Cowboys",
-      "published_at": "2026-10-14T16:59:30.000Z",
-      "observed_at": "2026-10-14T17:10:21.429Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-rising-nil-costs-could-kill-ea-sports-college-football",
       "source_name": "Pro Football Talk",
       "headline": "Report: Rising NIL costs could kill EA Sports College Football",
@@ -41856,6 +41791,66 @@
         "SEA"
       ],
       "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-week-8-all-stars-trevor-lawrence-bucky-irving-tee-higgins-jaguars-bengals",
+      "source_name": "FOX Sports",
+      "headline": "NFL Week 8 All-Stars: Who Had A Better Sunday, Joe Burrow Or Trevor Lawrence?",
+      "published_at": "2026-11-03T04:37:11.000Z",
+      "observed_at": "2026-11-03T04:40:20.814Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-power-rankings-week-9",
+      "source_name": "FOX Sports",
+      "headline": "2026 NFL Power Rankings Week 9: Are The Bears Now The Team To Beat In The NFC?",
+      "published_at": "2026-11-03T04:36:19.000Z",
+      "observed_at": "2026-11-03T04:40:20.814Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/christian-watson-heroics-colts-collapse-lamar-jackson-dilemma",
+      "source_name": "FOX Sports",
+      "headline": "NFL Best And Worst: From Christian Watson’s Heroics To The Colts’ Continued Collapse",
+      "published_at": "2026-11-03T04:35:39.000Z",
+      "observed_at": "2026-11-03T04:40:20.814Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "IND"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
