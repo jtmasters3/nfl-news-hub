@@ -2,48 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/michael-penix-fully-participated-in-wednesdays-practice",
-      "source_name": "Pro Football Talk",
-      "headline": "Michael Penix fully participated in Wednesday's practice",
-      "published_at": "2026-10-14T21:45:26.000Z",
-      "observed_at": "2026-10-14T21:50:22.275Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lamar-jackson-officially-dnp-s-kyle-hamilton-fully-participated-wednesday",
-      "source_name": "Pro Football Talk",
-      "headline": "Lamar Jackson officially DNP; S Kyle Hamilton fully participated Wednesday",
-      "published_at": "2026-10-14T21:35:54.000Z",
-      "observed_at": "2026-10-14T21:50:22.275Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/texans-wr-tank-dell-a-full-practice-participant-for-first-time-since-2024-season",
       "source_name": "Pro Football Talk",
       "headline": "Texans WR Tank Dell a full practice participant for first time since 2024 season",
@@ -41876,6 +41834,46 @@
         "NYG"
       ],
       "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/the-christmas-day-schedule-is-shaping-up-to-be-massive",
+      "source_name": "Pro Football Talk",
+      "headline": "The Christmas Day schedule is shaping up to be massive",
+      "published_at": "2026-11-03T17:52:10.000Z",
+      "observed_at": "2026-11-03T18:00:42.581Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/andy-reid-chris-jones-is-giving-his-all-doing-everything-he-can-do",
+      "source_name": "Pro Football Talk",
+      "headline": "Andy Reid: Chris Jones is giving his all, doing everything he can do",
+      "published_at": "2026-11-03T17:51:17.000Z",
+      "observed_at": "2026-11-03T18:00:42.581Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
