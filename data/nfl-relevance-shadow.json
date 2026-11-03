@@ -2,61 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/roll-tape-why-eagles-new-offense-bad-fit-qb-jalen-hurts",
-      "source_name": "FOX Sports",
-      "headline": "Roll The Tape: Why The Eagles' New Offense Is A Bad Fit For QB Jalen Hurts",
-      "published_at": "2026-10-14T18:22:45.000Z",
-      "observed_at": "2026-10-14T18:30:26.248Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-fantasy-2026-start-em-sit-em-kickers-in-week-6",
-      "source_name": "NFL.com",
-      "headline": "NFL Fantasy 2026 Start 'Em, Sit 'Em: Kickers in Week 6",
-      "published_at": "2026-10-14T06:31:57.000Z",
-      "observed_at": "2026-10-14T18:40:20.258Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "fantasy",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-fantasy-2026-start-em-sit-em-defenses-for-week-6",
-      "source_name": "NFL.com",
-      "headline": "NFL Fantasy 2026 Start 'Em, Sit 'Em: Defenses for Week 6",
-      "published_at": "2026-10-14T06:31:55.000Z",
-      "observed_at": "2026-10-14T18:40:20.258Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "fantasy",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-fantasy-2026-start-em-sit-em-tight-ends-for-week-6",
       "source_name": "NFL.com",
       "headline": "NFL Fantasy 2026 Start 'Em, Sit 'Em: Tight ends for Week 6",
@@ -41857,6 +41802,65 @@
       "detected_teams": [
         "CHI",
         "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50359434/nfl-power-rankings-week-9-teams-best-season-trades-deadline",
+      "source_name": "ESPN",
+      "headline": "NFL Week 9 Power Rankings: Updated 1-32 poll, plus the best in-season trade acquisitions ever",
+      "published_at": "2026-11-03T12:49:24.000Z",
+      "observed_at": "2026-11-03T13:10:34.497Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "trade",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50355612/week-9-seven-things-solak-thinks-trades-standings",
+      "source_name": "ESPN",
+      "headline": "What Solak thinks about two division races, one coach candidate, potential RB trades",
+      "published_at": "2026-11-03T12:49:23.000Z",
+      "observed_at": "2026-11-03T13:10:34.497Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "TB"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-felt-profound-impact-from-jeffery-simmons-in-his-debut",
+      "source_name": "Pro Football Talk",
+      "headline": "Bears felt \"profound\" impact from Jeffery Simmons in his debut",
+      "published_at": "2026-11-03T13:06:00.000Z",
+      "observed_at": "2026-11-03T13:10:34.497Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
