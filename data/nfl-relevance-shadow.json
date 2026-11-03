@@ -2,40 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/25-most-important-seconds-football-what-qbs-coaches-say-over-headset",
-      "source_name": "FOX Sports",
-      "headline": "The Most Important 25 Seconds In Football: Inside Coach-To-QB Communication",
-      "published_at": "2026-10-14T14:37:32.000Z",
-      "observed_at": "2026-10-14T14:50:21.483Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "coaching",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-wednesday-oct-14",
-      "source_name": "NFL.com",
-      "headline": "NFL news roundup: Latest league updates from Wednesday, Oct. 14",
-      "published_at": "2026-10-14T02:54:15.000Z",
-      "observed_at": "2026-10-14T15:00:32.377Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/bo-nix-stats-denver-broncos-schedule",
       "source_name": "FOX Sports",
       "headline": "Broncos QB Bo Nix Explains Why Playing 'Good' Or 'Bad' Is A 'Made-Up Narrative'",
@@ -41827,6 +41793,49 @@
       "headline": "Week 8 Monday night inactives: Chicago Bears at Seattle Seahawks",
       "published_at": "2026-11-02T11:49:52.000Z",
       "observed_at": "2026-11-03T00:00:26.825Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/packers-plan-keep-josh-jacobs-roster-nfl-conducts-investigation",
+      "source_name": "FOX Sports",
+      "headline": "Packers Plan To Keep Josh Jacobs On Roster As NFL Conducts Investigation",
+      "published_at": "2026-11-03T00:05:43.000Z",
+      "observed_at": "2026-11-03T00:10:19.021Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/monday-night-football-zach-charbonnet-jadarian-price-are-active-for-seahawks-vs-bears",
+      "source_name": "Pro Football Talk",
+      "headline": "Monday Night Football: Zach Charbonnet, Jadarian Price are active for Seahawks vs. Bears",
+      "published_at": "2026-11-03T00:05:22.000Z",
+      "observed_at": "2026-11-03T00:10:19.021Z",
       "decision": "keep",
       "classification": "nfl",
       "confidence": "high",
