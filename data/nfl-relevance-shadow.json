@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/a-j-brown-treveyon-henderson-will-campbell-all-limited-in-wednesdays-practice",
-      "source_name": "Pro Football Talk",
-      "headline": "A.J. Brown, TreVeyon Henderson, Will Campbell all limited in Wednesday's practice",
-      "published_at": "2026-10-14T20:55:10.000Z",
-      "observed_at": "2026-10-14T21:00:28.361Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/raiders-open-te-carter-runyons-21-day-practice-window",
-      "source_name": "Pro Football Talk",
-      "headline": "Raiders open TE Carter Runyon's 21-day practice window",
-      "published_at": "2026-10-14T20:50:16.000Z",
-      "observed_at": "2026-10-14T21:00:28.361Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kellen-moore-on-gayle-bensons-comments-we-all-want-the-same-thing",
       "source_name": "Pro Football Talk",
       "headline": "Kellen Moore on Gayle Benson's comments: We all want the same thing",
@@ -41882,6 +41844,48 @@
         "DET"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/cowboys-keep-losing-games-they-shouldn-t-time-is-running-out-to-stack-wins",
+      "source_name": "NFL.com",
+      "headline": "Cowboys keep losing games they shouldn't -- time is running out to stack wins",
+      "published_at": "2026-11-03T12:46:06.000Z",
+      "observed_at": "2026-11-03T16:50:21.558Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-campbell-credits-mike-kafka-for-big-play-to-amon-ra-st-brown",
+      "source_name": "Pro Football Talk",
+      "headline": "Dan Campbell credits Mike Kafka for big play to Amon-Ra St. Brown",
+      "published_at": "2026-11-03T16:47:00.000Z",
+      "observed_at": "2026-11-03T16:50:21.558Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
