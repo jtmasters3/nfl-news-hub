@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-fantasy-2026-start-em-sit-em-quarterbacks-for-week-6",
-      "source_name": "NFL.com",
-      "headline": "NFL Fantasy 2026 Start 'Em, Sit 'Em: Quarterbacks for Week 6",
-      "published_at": "2026-10-14T06:31:43.000Z",
-      "observed_at": "2026-10-14T18:40:20.258Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "fantasy",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jets-not-happy-that-jared-verse-wasnt-flagged-for-hit-on-geno-smith",
-      "source_name": "Pro Football Talk",
-      "headline": "Jets not happy that Jared Verse wasn't flagged for hit on Geno Smith",
-      "published_at": "2026-10-14T18:34:25.000Z",
-      "observed_at": "2026-10-14T18:40:20.258Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE",
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-open-21-day-practice-windows-for-landon-dickerson-three-others",
       "source_name": "Pro Football Talk",
       "headline": "Eagles open 21-day practice windows for Landon Dickerson, three others",
@@ -41872,6 +41833,48 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/raiders-to-determine-rb-work-by-whos-playing-the-best-ball-at-the-time",
+      "source_name": "Pro Football Talk",
+      "headline": "Raiders to determine RB work by \"who’s playing the best ball at the time\"",
+      "published_at": "2026-11-03T14:14:22.000Z",
+      "observed_at": "2026-11-03T14:20:22.970Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/pfts-week-9-2026-nfl-power-rankings",
+      "source_name": "Pro Football Talk",
+      "headline": "PFT's Week 9 2026 NFL power rankings",
+      "published_at": "2026-11-03T14:07:35.000Z",
+      "observed_at": "2026-11-03T14:20:22.970Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
