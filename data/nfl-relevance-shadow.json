@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/david-blough-takes-responsibility-for-clock-debacle",
-      "source_name": "Pro Football Talk",
-      "headline": "David Blough takes responsibility for clock debacle",
-      "published_at": "2026-10-16T19:36:50.000Z",
-      "observed_at": "2026-10-16T19:40:21.869Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dk-metcalf-is-questionable-for-sunday-after-missing-practice-with-an-illness",
-      "source_name": "Pro Football Talk",
-      "headline": "DK Metcalf is questionable for Sunday after missing practice with an illness",
-      "published_at": "2026-10-16T19:33:37.000Z",
-      "observed_at": "2026-10-16T19:40:21.869Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PIT",
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ladd-mcconkey-quentin-johnston-off-injury-report-set-to-play-vs-chiefs",
       "source_name": "Pro Football Talk",
       "headline": "Ladd McConkey, Quentin Johnston off injury report, set to play vs. Chiefs",
@@ -41876,6 +41837,49 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-put-dl-kentavius-street-on-injured-reserve",
+      "source_name": "Pro Football Talk",
+      "headline": "Bears put DL Kentavius Street on injured reserve",
+      "published_at": "2026-11-04T21:37:35.000Z",
+      "observed_at": "2026-11-04T21:40:17.464Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "SEA"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kyle-shanahan-nothings-changed-for-me-with-brandon-aiyuk-ive-moved-on-mentally",
+      "source_name": "Pro Football Talk",
+      "headline": "Kyle Shanahan: Nothing's changed for me with Brandon Aiyuk, I've moved on mentally",
+      "published_at": "2026-11-04T21:31:24.000Z",
+      "observed_at": "2026-11-04T21:40:17.464Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
