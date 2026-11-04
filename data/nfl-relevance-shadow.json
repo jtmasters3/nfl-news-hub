@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lamar-jackson-out-of-fridays-practice-tyler-huntley-in-line-to-start",
-      "source_name": "Pro Football Talk",
-      "headline": "Lamar Jackson out of Friday's practice, Tyler Huntley in line to start",
-      "published_at": "2026-10-16T16:30:14.000Z",
-      "observed_at": "2026-10-16T16:40:21.300Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/stephen-ross-sells-sliver-of-dolphins-at-record-price",
       "source_name": "Pro Football Talk",
       "headline": "Stephen Ross sells sliver of Dolphins at record valuation",
@@ -41869,6 +41852,27 @@
         "PHI"
       ],
       "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/commanders-sign-dt-ricky-barber-to-their-active-roster",
+      "source_name": "Pro Football Talk",
+      "headline": "Commanders sign DT Ricky Barber to their active roster",
+      "published_at": "2026-11-04T19:25:10.000Z",
+      "observed_at": "2026-11-04T19:30:22.212Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "WAS"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
