@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/dc-christian-parker-likely-staying-on-sideline-says-cowboys-issues-very-fixable",
-      "source_name": "NFL.com",
-      "headline": "DC Christian Parker likely staying on sideline, says Cowboys' issues 'very fixable'",
-      "published_at": "2026-10-15T06:16:06.000Z",
-      "observed_at": "2026-10-15T20:20:20.582Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/top-10-nfl-coordinators-ready-become-head-coaches",
       "source_name": "FOX Sports",
       "headline": "Top 10 NFL Coordinators Ready To Become Head Coaches",
@@ -41872,6 +41851,27 @@
         "BAL"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patriots-wr-mack-hollins-is-expected-to-practice-on-wednesday",
+      "source_name": "Pro Football Talk",
+      "headline": "Patriots WR Mack Hollins is expected to practice on Wednesday",
+      "published_at": "2026-11-04T13:15:09.000Z",
+      "observed_at": "2026-11-04T13:30:23.578Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
