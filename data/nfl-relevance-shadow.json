@@ -2,67 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-list-taylor-moton-as-questionable-monroe-freeling-as-doubtful",
-      "source_name": "Pro Football Talk",
-      "headline": "Panthers list Taylor Moton as questionable, Monroe Freeling as doubtful",
-      "published_at": "2026-10-16T19:53:08.000Z",
-      "observed_at": "2026-10-16T20:00:29.944Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/a-j-brown-treveyon-henderson-will-campbell-all-questionable-for-sunday-vs-jets",
-      "source_name": "Pro Football Talk",
-      "headline": "A.J. Brown, TreVeyon Henderson, Will Campbell all questionable for Sunday vs. Jets",
-      "published_at": "2026-10-16T20:00:59.000Z",
-      "observed_at": "2026-10-16T20:10:19.196Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE",
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-jacobs-will-be-removed-from-paid-leave-on-monday",
-      "source_name": "Pro Football Talk",
-      "headline": "Josh Jacobs will be removed from paid leave on Monday",
-      "published_at": "2026-10-16T20:00:17.000Z",
-      "observed_at": "2026-10-16T20:10:19.196Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/packers-rb-josh-jacobs-removed-from-commissioner-exempt-list-eligible-week-7",
       "source_name": "FOX Sports",
       "headline": "Packers RB Josh Jacobs To Be Removed From Commissioner Exempt List, Eligible for Week 7",
@@ -41875,6 +41814,71 @@
       "confidence": "high",
       "detected_teams": [
         "ARI"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/chargers-justin-herbert-jim-harbaugh-seahawks-sam-darnold",
+      "source_name": "FOX Sports",
+      "headline": "West Coast Read: Jim Harbaugh Must Protect Justin Herbert — By Benching Him",
+      "published_at": "2026-11-04T21:59:10.000Z",
+      "observed_at": "2026-11-04T22:00:25.491Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC",
+        "SEA"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/david-bailey-breece-hall-listed-as-limited-in-jets-practice",
+      "source_name": "Pro Football Talk",
+      "headline": "David Bailey, Breece Hall listed as limited in Jets practice",
+      "published_at": "2026-11-04T21:55:23.000Z",
+      "observed_at": "2026-11-04T22:00:25.491Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYJ"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cam-skattebo-misses-practice-due-to-a-hamstring-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Cam Skattebo misses practice due to a hamstring injury",
+      "published_at": "2026-11-04T21:46:05.000Z",
+      "observed_at": "2026-11-04T22:00:25.491Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "HOU",
+        "NYG"
       ],
       "detected_category": "injury",
       "nfl_evidence": [
