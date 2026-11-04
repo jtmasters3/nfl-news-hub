@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-removing-josh-jacobs-jonathon-cooper-commissioner-exempt-list",
-      "source_name": "NFL.com",
-      "headline": "NFL removing Packers RB Josh Jacobs, Broncos LB Jonathon Cooper from Commissioner Exempt List",
-      "published_at": "2026-10-16T08:16:57.000Z",
-      "observed_at": "2026-10-16T20:30:22.320Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN",
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-removes-broncos-olb-jonathon-cooper-from-commissioners-exempt-list",
-      "source_name": "Pro Football Talk",
-      "headline": "NFL removes Broncos OLB Jonathon Cooper from Commissioner's Exempt List",
-      "published_at": "2026-10-16T20:22:45.000Z",
-      "observed_at": "2026-10-16T20:30:22.320Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lions-put-ol-ben-bartch-wr-tom-kennedy-lb-devin-white-on-injured-reserve",
       "source_name": "Pro Football Talk",
       "headline": "Lions put OL Ben Bartch, WR Tom Kennedy, LB Devin White on injured reserve",
@@ -41883,6 +41840,50 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mansoor-delane-travis-kelce-limited-at-chiefs-practice",
+      "source_name": "Pro Football Talk",
+      "headline": "Mansoor Delane, Travis Kelce limited at Chiefs practice",
+      "published_at": "2026-11-04T22:58:27.000Z",
+      "observed_at": "2026-11-04T23:00:26.658Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "KC",
+        "NYJ"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/wr-george-pickens-og-tyler-smith-were-limited-in-wednesdays-practice",
+      "source_name": "Pro Football Talk",
+      "headline": "WR George Pickens, OG Tyler Smith were limited in Wednesday's practice",
+      "published_at": "2026-11-04T22:52:39.000Z",
+      "observed_at": "2026-11-04T23:00:26.658Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
