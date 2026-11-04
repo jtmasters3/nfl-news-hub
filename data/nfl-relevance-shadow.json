@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-thursday-oct-15",
-      "source_name": "NFL.com",
-      "headline": "NFL news roundup: Latest league updates from Thursday, Oct. 15",
-      "published_at": "2026-10-15T07:26:14.000Z",
-      "observed_at": "2026-10-15T19:30:29.033Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/commanders-overtime-tie-giants-jayden-daniels-dan-quinn",
       "source_name": "FOX Sports",
       "headline": "Who Should Be Blamed For Commanders' OT Blunder? NFL Scouts, Execs Differ",
@@ -41873,6 +41856,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/qb-notebook-caleb-williams-has-erased-all-doubts-qb-teams-should-trade",
+      "source_name": "FOX Sports",
+      "headline": "QB Notebook: Caleb Williams Has Erased All Doubts; The QB Teams Should Trade For",
+      "published_at": "2026-11-04T04:48:20.000Z",
+      "observed_at": "2026-11-04T05:00:28.144Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "MIN"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
