@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ravens-officially-rule-out-qb-lamar-jackson",
-      "source_name": "Pro Football Talk",
-      "headline": "Ravens officially rule out QB Lamar Jackson",
-      "published_at": "2026-10-16T20:08:04.000Z",
-      "observed_at": "2026-10-16T20:20:18.943Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/demarvion-overshown-joey-porter-jr-are-questionable-for-the-cowboys",
-      "source_name": "Pro Football Talk",
-      "headline": "DeMarvion Overshown, Joey Porter Jr. are questionable for the Cowboys",
-      "published_at": "2026-10-16T20:07:47.000Z",
-      "observed_at": "2026-10-16T20:20:18.943Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "GB"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-removing-josh-jacobs-jonathon-cooper-commissioner-exempt-list",
       "source_name": "NFL.com",
       "headline": "NFL removing Packers RB Josh Jacobs, Broncos LB Jonathon Cooper from Commissioner Exempt List",
@@ -41888,6 +41845,44 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/49ers-nick-bosa-eyes-return-christian-mccaffrey-could-play-despite-hamstring-injury",
+      "source_name": "NFL.com",
+      "headline": "49ers' Nick Bosa eyes return; Christian McCaffrey could play despite hamstring injury",
+      "published_at": "2026-11-04T09:46:07.000Z",
+      "observed_at": "2026-11-04T22:50:24.386Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/micah-parsons-wont-pinpoint-a-day-ill-be-back-in-the-lineup",
+      "source_name": "Pro Football Talk",
+      "headline": "Micah Parsons won't \"pinpoint a day\" I'll be back in the lineup",
+      "published_at": "2026-11-04T22:38:16.000Z",
+      "observed_at": "2026-11-04T22:50:24.386Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
