@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/bears-qb-caleb-williams-hamstring-questionable-to-play-falcons",
-      "source_name": "NFL.com",
-      "headline": "Bears QB Caleb Williams (hamstring) questionable to play vs. Falcons despite full week of practice",
-      "published_at": "2026-10-16T07:03:33.000Z",
-      "observed_at": "2026-10-16T19:10:19.393Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "CHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/after-gayle-benson-attends-saints-practice-kellen-moore-says-theyre-all-good",
       "source_name": "Pro Football Talk",
       "headline": "After Gayle Benson attends Saints practice, Kellen Moore says they're \"all good\"",
@@ -41878,6 +41856,28 @@
         "JAX"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/jacoby-brissett-named-baltimore-ravens-starter-trade",
+      "source_name": "FOX Sports",
+      "headline": "Ravens Finalizing Trade For Jacoby Brissett With Lamar Jackson, Tyler Huntley Out",
+      "published_at": "2026-11-04T20:23:45.000Z",
+      "observed_at": "2026-11-04T20:40:18.677Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI",
+        "BAL"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
