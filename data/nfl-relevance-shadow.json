@@ -2,87 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-wr-mike-evans-misses-practice-with-achilles-soreness",
-      "source_name": "Pro Football Talk",
-      "headline": "49ers WR Mike Evans misses practice with Achilles soreness",
-      "published_at": "2026-10-16T00:51:10.000Z",
-      "observed_at": "2026-10-16T01:00:25.888Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/broncos-take-7-3-lead-over-seahawks-in-second-quarter",
-      "source_name": "Pro Football Talk",
-      "headline": "Broncos take 7-3 lead over Seahawks in second quarter",
-      "published_at": "2026-10-16T01:02:30.000Z",
-      "observed_at": "2026-10-16T01:10:23.575Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN",
-        "SEA"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfc-east-predictions-eagles-giants-cowboys-commanders",
-      "source_name": "FOX Sports",
-      "headline": "Does Anyone Actually Want To Win NFC (L)East? Predicting NFL's New Worst Division",
-      "published_at": "2026-10-16T01:09:15.000Z",
-      "observed_at": "2026-10-16T01:20:20.244Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/super-team-rams-need-more-from-matthew-stafford",
-      "source_name": "FOX Sports",
-      "headline": "The Rams Need More From Matthew Stafford To Live Up To ‘Super Team’ Hype",
-      "published_at": "2026-10-16T01:20:38.000Z",
-      "observed_at": "2026-10-16T01:30:24.481Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/broncos-run-for-a-second-td-14-3-lead",
       "source_name": "Pro Football Talk",
       "headline": "Broncos run for a second TD, 14-3 lead",
@@ -41873,6 +41792,93 @@
         "CIN"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/49ers-wr-brandon-aiyuk-formally-submits-reinstatement-paperwork-agent-says",
+      "source_name": "FOX Sports",
+      "headline": "Brandon Aiyuk Files For NFL Reinstatement, Plans To Report To 49ers Facility Friday",
+      "published_at": "2026-11-04T17:05:45.000Z",
+      "observed_at": "2026-11-04T17:20:20.341Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/raiders-rb-dylan-laube-named-the-afc-special-teams-player-of-the-week",
+      "source_name": "Pro Football Talk",
+      "headline": "Raiders RB Dylan Laube named the AFC special teams player of the week",
+      "published_at": "2026-11-04T17:16:23.000Z",
+      "observed_at": "2026-11-04T17:20:20.341Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV",
+        "NYJ"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/alex-anzalone-earns-first-nfc-defensive-player-of-the-week-award",
+      "source_name": "Pro Football Talk",
+      "headline": "Alex Anzalone earns first NFC defensive player of the week award",
+      "published_at": "2026-11-04T17:11:08.000Z",
+      "observed_at": "2026-11-04T17:20:20.341Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "TB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaguars-s-rayuan-lane-is-the-afc-defensive-player-of-the-week",
+      "source_name": "Pro Football Talk",
+      "headline": "Jaguars S Rayuan Lane is the AFC defensive player of the week",
+      "published_at": "2026-11-04T17:10:02.000Z",
+      "observed_at": "2026-11-04T17:20:20.341Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "JAX"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
