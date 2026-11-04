@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/a-j-brown-status-still-up-in-the-air-for-week-6",
-      "source_name": "Pro Football Talk",
-      "headline": "A.J. Brown status \"still up in the air\" for Week 6",
-      "published_at": "2026-10-15T19:23:59.000Z",
-      "observed_at": "2026-10-15T19:30:29.033Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ravens-oc-declan-doyle-we-trust-mark-andrews",
       "source_name": "Pro Football Talk",
       "headline": "Ravens OC Declan Doyle: We trust Mark Andrews",
@@ -41879,6 +41858,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bryce-young-c-j-stroud-continue-fourth-seasons-without-new-contracts",
+      "source_name": "Pro Football Talk",
+      "headline": "Bryce Young, C.J. Stroud continue fourth seasons without new contracts",
+      "published_at": "2026-11-04T11:17:51.000Z",
+      "observed_at": "2026-11-04T11:20:21.360Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
