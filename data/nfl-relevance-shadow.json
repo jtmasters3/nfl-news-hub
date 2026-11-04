@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/como-llegar-a-nfl-hasta-la-muerte",
-      "source_name": "NFL.com",
-      "headline": "Cómo llegar a NFL Hasta la Muerte",
-      "published_at": "2026-10-15T06:45:21.000Z",
-      "observed_at": "2026-10-15T19:00:28.200Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-allen-will-soon-become-the-fifth-qb-in-nfl-history-with-5-000-rushing-yards",
       "source_name": "Pro Football Talk",
       "headline": "Josh Allen will soon become the fifth QB in NFL history with 5,000 rushing yards",
@@ -41871,6 +41854,28 @@
       "confidence": "high",
       "detected_teams": [
         "GB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vic-fangio-j-j-mccarthy-was-a-steal-for-the-giants",
+      "source_name": "Pro Football Talk",
+      "headline": "Vic Fangio: J.J. McCarthy was a \"steal\" for the Giants",
+      "published_at": "2026-11-04T02:52:46.000Z",
+      "observed_at": "2026-11-04T03:00:28.582Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN",
+        "NYG"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
