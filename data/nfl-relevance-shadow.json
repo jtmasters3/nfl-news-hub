@@ -2,25 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/troy-aikman-it-seems-like-espn-is-going-to-go-in-a-different-direction",
-      "source_name": "Pro Football Talk",
-      "headline": "Troy Aikman: It seems like ESPN is going to go in a different direction",
-      "published_at": "2026-10-16T02:06:54.000Z",
-      "observed_at": "2026-10-16T02:10:20.441Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "contract",
-      "nfl_evidence": [
-        "nfl_preserving_category:contract"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jets-s-minkah-fitzpatrick-will-appeal-fine-for-hit-on-kc-concepcion",
       "source_name": "Pro Football Talk",
       "headline": "Jets S Minkah Fitzpatrick will appeal fine for hit on Browns WR KC Concepcion",
@@ -41878,6 +41859,27 @@
         "MIN"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jack-campbell-i-have-full-movement-in-my-lower-body-and-am-making-progress-with-movement-in-my-upper-body",
+      "source_name": "Pro Football Talk",
+      "headline": "Jack Campbell: I have full movement in my lower body, and am making progress with movement in my upper body",
+      "published_at": "2026-11-04T17:42:07.000Z",
+      "observed_at": "2026-11-04T17:50:18.439Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
