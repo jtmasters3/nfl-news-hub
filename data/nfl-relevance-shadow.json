@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/caleb-williams-confirms-he-tore-his-hamstring-doesnt-know-his-status-for-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "Caleb Williams confirms he tore his hamstring, doesn't know his status for Sunday",
-      "published_at": "2026-10-15T23:31:16.000Z",
-      "observed_at": "2026-10-15T23:40:20.363Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/asktom-which-team-would-tom-brady-most-want-play-for-can-brock-purdy-win-super-bowl",
       "source_name": "FOX Sports",
       "headline": "#AskTom: Which Team Would Tom Brady Most Want To Play For? Can Brock Purdy Win Super Bowl?",
@@ -41864,6 +41847,27 @@
         "NO"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/the-packers-keep-winning-without-a-run-game-but-jordan-love-knows-it-can-t-last",
+      "source_name": "NFL.com",
+      "headline": "The Packers keep winning without a run game, but Jordan Love knows it can't last",
+      "published_at": "2026-11-04T11:46:05.000Z",
+      "observed_at": "2026-11-04T16:50:19.212Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
