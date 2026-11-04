@@ -2,73 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-sign-qb-joe-milton-off-cowboys-practice-squad",
-      "source_name": "Pro Football Talk",
-      "headline": "Eagles sign QB Joe Milton off Cowboys practice squad",
-      "published_at": "2026-10-16T15:10:49.000Z",
-      "observed_at": "2026-10-16T15:20:21.244Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "PHI"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nick-sirianni-jalen-hurts-health-is-our-concern-not-going-to-get-into-details",
-      "source_name": "Pro Football Talk",
-      "headline": "Nick Sirianni: Jalen Hurts' health is our concern, not going to get into details",
-      "published_at": "2026-10-16T15:45:39.000Z",
-      "observed_at": "2026-10-16T15:50:22.272Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-confirms-it-had-pregame-communications-with-eagles-regarding-jalen-hurtss-blood-clot",
-      "source_name": "Pro Football Talk",
-      "headline": "NFL confirms it had pregame communications with Eagles regarding Jalen Hurts's blood clot",
-      "published_at": "2026-10-16T15:44:55.000Z",
-      "observed_at": "2026-10-16T15:50:22.272Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "JAX",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nflpa-names-hunter-henry-their-community-mvp-for-week-6",
       "source_name": "Pro Football Talk",
       "headline": "NFLPA names Hunter Henry their Community MVP for Week 6",
@@ -41878,6 +41811,71 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/seahawks-qb-sam-darnold-out-week-9-cardinals-quad-injury",
+      "source_name": "NFL.com",
+      "headline": "Seahawks QB Sam Darnold to miss Week 9 game vs. Cardinals due to quad injury",
+      "published_at": "2026-11-04T07:03:41.000Z",
+      "observed_at": "2026-11-04T19:10:19.358Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI",
+        "SEA"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sam-darnold-out-week-9-with-quad-injury-drew-lock-in-line-to-start",
+      "source_name": "Pro Football Talk",
+      "headline": "Sam Darnold out Week 9 with quad injury, Drew Lock in line to start",
+      "published_at": "2026-11-04T19:05:28.000Z",
+      "observed_at": "2026-11-04T19:10:19.358Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-s-quentin-lake-justin-herbert-was-throwing-deli-meat-out-there-last-sunday",
+      "source_name": "Pro Football Talk",
+      "headline": "Rams S Quentin Lake: Justin Herbert was \"throwing deli meat out there\" last Sunday",
+      "published_at": "2026-11-04T18:59:27.000Z",
+      "observed_at": "2026-11-04T19:10:19.358Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC",
+        "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
