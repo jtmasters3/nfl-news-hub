@@ -2,87 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/sam-darnold-is-fed-up-with-his-turnovers-too-will-his-own-message-get-through",
-      "source_name": "NFL.com",
-      "headline": "Sam Darnold is fed up with his turnovers, too. Will his own message get through?",
-      "published_at": "2026-10-16T11:16:06.000Z",
-      "observed_at": "2026-10-16T12:40:21.001Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/the-atlanta-falcons-run-this-play-more-than-anyone-in-the-nfl-bijan-robinson-is-the-reason",
-      "source_name": "NFL.com",
-      "headline": "The Atlanta Falcons run this play more than anyone in the NFL. Bijan Robinson is the reason",
-      "published_at": "2026-10-16T10:16:06.000Z",
-      "observed_at": "2026-10-16T12:50:19.730Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/the-colts-have-a-jonathan-taylor-problem-can-they-solve-it-against-the-titans",
-      "source_name": "NFL.com",
-      "headline": "The Colts have a Jonathan Taylor problem. Can they solve it against the Titans?",
-      "published_at": "2026-10-16T10:01:05.000Z",
-      "observed_at": "2026-10-16T13:10:22.815Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "TEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/eagles-tanner-mckee-ready-to-make-the-most-of-starting-chance-jalen-hurts-sidelined",
-      "source_name": "NFL.com",
-      "headline": "Eagles' Tanner McKee 'ready to make the most' of starting chance with Jalen Hurts sidelined",
-      "published_at": "2026-10-16T01:17:20.000Z",
-      "observed_at": "2026-10-16T13:20:22.327Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/mlb/brewers-history-world-series-winners-1982-sports-facts",
       "source_name": "FOX Sports",
       "headline": "What Was Going On In Sports, Pop Culture Last Time Brewers Reached World Series?",
@@ -41872,6 +41791,87 @@
       "confidence": "high",
       "detected_teams": [
         "CHI"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/green-bay-packers-micah-parsons-2026-season-debut-practice",
+      "source_name": "FOX Sports",
+      "headline": "‘A Long Time Coming’: Micah Parsons Returns to Packers Practice After ACL Tear",
+      "published_at": "2026-11-04T18:32:08.000Z",
+      "observed_at": "2026-11-04T18:50:18.797Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/andy-reid-harrison-butker-will-remain-the-chiefs-kicker",
+      "source_name": "Pro Football Talk",
+      "headline": "Andy Reid: Harrison Butker will remain the Chiefs' kicker",
+      "published_at": "2026-11-04T18:43:45.000Z",
+      "observed_at": "2026-11-04T18:50:18.797Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "KC"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/robert-kraft-doug-williams-among-five-contributor-nominees-advancing-in-hall-of-fame-process",
+      "source_name": "Pro Football Talk",
+      "headline": "Robert Kraft, Doug Williams among five Contributor nominees advancing in Hall of Fame selection process",
+      "published_at": "2026-11-04T18:41:30.000Z",
+      "observed_at": "2026-11-04T18:50:18.797Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-sign-cam-lampkin-to-53-man-roster-place-dean-connors-on-ir",
+      "source_name": "Pro Football Talk",
+      "headline": "Rams sign Cam Lampkin to 53-man roster, place Dean Connors on IR",
+      "published_at": "2026-11-04T18:41:03.000Z",
+      "observed_at": "2026-11-04T18:50:18.797Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR"
       ],
       "detected_category": "injury",
       "nfl_evidence": [
