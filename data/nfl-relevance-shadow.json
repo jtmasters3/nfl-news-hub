@@ -2,286 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/mlb/brewers-history-world-series-winners-1982-sports-facts",
-      "source_name": "FOX Sports",
-      "headline": "What Was Going On In Sports, Pop Culture Last Time Brewers Reached World Series?",
-      "published_at": "2026-10-16T13:10:26.000Z",
-      "observed_at": "2026-10-16T13:30:24.417Z",
-      "decision": "reject",
-      "classification": "other_sport",
-      "confidence": "high",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [
-        "league_mlb"
-      ],
-      "reason_codes": [
-        "other_sport_marker_no_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-oct-16",
-      "source_name": "NFL.com",
-      "headline": "NFL news roundup: Latest league updates from Friday, Oct. 16",
-      "published_at": "2026-10-16T01:42:13.000Z",
-      "observed_at": "2026-10-16T13:50:19.223Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-release-wr-darius-slayton",
-      "source_name": "Pro Football Talk",
-      "headline": "Colts release WR Darius Slayton",
-      "published_at": "2026-10-16T13:39:50.000Z",
-      "observed_at": "2026-10-16T13:50:19.223Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaxon-smith-njigba-on-pace-for-nfls-first-2-000-yard-receiving-season",
-      "source_name": "Pro Football Talk",
-      "headline": "Jaxon Smith-Njigba on pace for NFL's first 2,000-yard receiving season",
-      "published_at": "2026-10-16T14:00:39.000Z",
-      "observed_at": "2026-10-16T14:10:20.053Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/verdict-in-shilo-sanders-bankruptcy-trial-isnt-expected-until-january",
-      "source_name": "Pro Football Talk",
-      "headline": "Verdict in Shilo Sanders bankruptcy trial isn't expected until January",
-      "published_at": "2026-10-16T13:57:45.000Z",
-      "observed_at": "2026-10-16T14:10:20.053Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brian-schottenheimer-mike-pettine-will-report-to-me-work-from-booth-during-games",
-      "source_name": "Pro Football Talk",
-      "headline": "Brian Schottenheimer: Mike Pettine will report to me, work from booth during games",
-      "published_at": "2026-10-16T14:10:36.000Z",
-      "observed_at": "2026-10-16T14:20:19.596Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/examining-the-49ers-early-season-feat-generating-pressure-without-nick-bosa",
-      "source_name": "NFL.com",
-      "headline": "Examining the 49ers' early-season feat: Generating pressure without Nick Bosa",
-      "published_at": "2026-10-16T12:31:06.000Z",
-      "observed_at": "2026-10-16T14:30:26.528Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/cam-little-is-the-nfl-s-record-breaking-kicker-but-football-wasn-t-his-first-choice",
-      "source_name": "NFL.com",
-      "headline": "Cam Little is the NFL's record-breaking kicker, but football wasn't his first choice",
-      "published_at": "2026-10-16T01:46:06.000Z",
-      "observed_at": "2026-10-16T14:30:26.528Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/khalil-mack-keeps-faith-in-chargers-amid-trade-buzz-i-m-still-ring-chasing-here",
-      "source_name": "NFL.com",
-      "headline": "Khalil Mack keeps faith in Chargers amid trade buzz: 'I'm still ring chasing here'",
-      "published_at": "2026-10-15T11:31:05.000Z",
-      "observed_at": "2026-10-16T14:30:26.528Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAC"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-week-6-best-bets-expert-picks-back-cowboys-chiefs-teaser",
-      "source_name": "FOX Sports",
-      "headline": "2026 NFL Week 6 Best Bets, Expert Picks: Back Cowboys-Chiefs Teaser",
-      "published_at": "2026-10-16T14:26:37.000Z",
-      "observed_at": "2026-10-16T14:30:26.528Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "CHI",
-        "DAL",
-        "KC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/college-playoff-is-expected-to-expand-to-24-teams-in-2027",
-      "source_name": "Pro Football Talk",
-      "headline": "College playoff is expected to expand to 24 teams in 2027",
-      "published_at": "2026-10-16T14:41:41.000Z",
-      "observed_at": "2026-10-16T14:50:20.028Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-week-6-bold-predictions-david-bailey-doubles-down-giants-rb-cam-skattebo-enjoys-career-day",
-      "source_name": "NFL.com",
-      "headline": "NFL Week 6 bold predictions: David Bailey doubles down; Giants RB Cam Skattebo enjoys career day",
-      "published_at": "2026-10-16T02:54:44.000Z",
-      "observed_at": "2026-10-16T15:00:47.078Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE",
-        "NYG",
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/breece-hall-adonai-mitchell-among-those-ruled-out-for-jets",
-      "source_name": "Pro Football Talk",
-      "headline": "Breece Hall, Adonai Mitchell among those ruled out for Jets",
-      "published_at": "2026-10-16T14:50:25.000Z",
-      "observed_at": "2026-10-16T15:00:47.078Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE",
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ncaa-sues-ohio-over-executive-order-granting-fifth-year-to-class-of-2022",
-      "source_name": "Pro Football Talk",
-      "headline": "NCAA sues Ohio Governor Mike DeWine over executive order granting fifth year to class of 2022",
-      "published_at": "2026-10-16T15:05:34.000Z",
-      "observed_at": "2026-10-16T15:10:22.950Z",
-      "decision": "reject",
-      "classification": "college_football",
-      "confidence": "medium",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [
-        "college_ncaa"
-      ],
-      "reason_codes": [
-        "college_marker_no_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-sign-qb-joe-milton-off-cowboys-practice-squad",
       "source_name": "Pro Football Talk",
       "headline": "Eagles sign QB Joe Milton off Cowboys practice squad",
@@ -41880,6 +41600,284 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50370030/trade-deadline-team-preview-goals-buzz-players-deals-2026",
+      "source_name": "ESPN",
+      "headline": "Team-by-team trade deadline outlooks: What does each roster need? Which players could move?",
+      "published_at": "2026-11-04T16:28:06.000Z",
+      "observed_at": "2026-11-04T19:00:40.233Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "trade",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50369642/week-9-buzz-fantasy-predictions-graziano-fowler-2026-trades",
+      "source_name": "ESPN",
+      "headline": "Buzz for Week 9: What we're hearing on the Ravens and Chargers, plus trade deadline intel",
+      "published_at": "2026-11-04T16:28:06.000Z",
+      "observed_at": "2026-11-04T19:00:40.233Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "LAC"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50380067/lions-lb-campbell-full-movement-lower-body-neck-injury",
+      "source_name": "ESPN",
+      "headline": "Lions' Campbell has full movement in lower body after neck injury",
+      "published_at": "2026-11-04T18:07:13.000Z",
+      "observed_at": "2026-11-04T19:00:40.233Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50378691/brandon-aiyuk-applies-reinstated-plans-report-49ers",
+      "source_name": "ESPN",
+      "headline": "Agent: Aiyuk files to be reinstated, plans to report to 49ers on Friday",
+      "published_at": "2026-11-04T18:07:13.000Z",
+      "observed_at": "2026-11-04T19:00:40.233Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50380113/jets-wr-wilson-protocol-rb-hall-trending-return",
+      "source_name": "ESPN",
+      "headline": "Jets star WR Wilson in concussion protocol but RB Hall trending toward return",
+      "published_at": "2026-11-04T18:07:13.000Z",
+      "observed_at": "2026-11-04T19:00:40.233Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYJ"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50378819/browns-qb-watson-concussion-protocol-status-vs-saints-unclear",
+      "source_name": "ESPN",
+      "headline": "Browns QB Watson in concussion protocol; status vs. Saints unclear",
+      "published_at": "2026-11-04T18:07:13.000Z",
+      "observed_at": "2026-11-04T19:00:40.233Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE",
+        "NO"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50378134/sources-ravens-qb-tyler-snoop-huntley-season",
+      "source_name": "ESPN",
+      "headline": "With Lamar sidelined, Ravens QB Huntley also out for season, sources say",
+      "published_at": "2026-11-04T18:07:13.000Z",
+      "observed_at": "2026-11-04T19:00:40.233Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50379976/doug-williams-kraft-5-hof-contributor-candidates",
+      "source_name": "ESPN",
+      "headline": "Doug Williams, Robert Kraft among 5 Hall of Fame contributor candidates",
+      "published_at": "2026-11-04T18:07:13.000Z",
+      "observed_at": "2026-11-04T19:00:40.233Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50378427/source-commanders-javon-kinlaw-knee-surgery-season",
+      "source_name": "ESPN",
+      "headline": "Source: Commanders lose another DL with Kinlaw (knee) out for season",
+      "published_at": "2026-11-04T18:07:13.000Z",
+      "observed_at": "2026-11-04T19:00:40.233Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "WAS"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50373566/gary-klint-klay-klein-kubiak-family-legacy-raiders-49ers",
+      "source_name": "ESPN",
+      "headline": "'I think his kids take right after him': Gary Kubiak laid the foundation for his sons Klint, Klay and Klein",
+      "published_at": "2026-11-04T11:00:10.000Z",
+      "observed_at": "2026-11-04T19:00:40.233Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50309394/john-harbaugh-new-york-giants-pushing-right-buttons",
+      "source_name": "ESPN",
+      "headline": "Coach John Harbaugh is pushing all the right buttons for the Giants",
+      "published_at": "2026-11-04T15:44:42.000Z",
+      "observed_at": "2026-11-04T19:00:40.233Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG",
+        "NYJ"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50371759/nfl-seahawks-bears-sam-darnold-pressure",
+      "source_name": "ESPN",
+      "headline": "Sam Darnold struggling under pressure, but Seahawks preaching patience with O-line",
+      "published_at": "2026-11-04T15:44:42.000Z",
+      "observed_at": "2026-11-04T19:00:40.233Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "SEA"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/fantasy/football/story/_/id/50378429/facts-feelings-fantasy-advice-week-9",
+      "source_name": "ESPN",
+      "headline": "Facts vs. Feelings: Dissecting eight potential lineup conundrums for Week 9",
+      "published_at": "2026-11-04T16:05:02.000Z",
+      "observed_at": "2026-11-04T19:00:40.233Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/fantasy/football/story/_/id/50371800/fantasy-football-rankings-best-worst-matchup-qb-rb-wr-te",
+      "source_name": "ESPN",
+      "headline": "Matchup rankings for Week 9: Upgrade Chase Brown, be wary of Josh Jacobs, DJ Moore",
+      "published_at": "2026-11-04T16:05:02.000Z",
+      "observed_at": "2026-11-04T19:00:40.233Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "fantasy",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
