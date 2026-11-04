@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sam-darnold-unfair-to-our-team-that-i-keep-turning-the-ball-over-i-have-to-be-better",
-      "source_name": "Pro Football Talk",
-      "headline": "Sam Darnold: Unfair to our team that I keep turning the ball over, I have to be better",
-      "published_at": "2026-10-16T08:29:53.000Z",
-      "observed_at": "2026-10-16T08:40:20.856Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/broncos-won-despite-totaling-just-32-yards-on-their-last-10-possessions",
-      "source_name": "Pro Football Talk",
-      "headline": "Broncos won despite totaling just 32 yards on their last 10 possessions",
-      "published_at": "2026-10-16T09:10:31.000Z",
-      "observed_at": "2026-10-16T09:20:20.581Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bo-nix-i-dont-know-where-the-disconnect-is-offensively",
       "source_name": "Pro Football Talk",
       "headline": "Bo Nix: I don't know where the disconnect is offensively",
@@ -41876,6 +41838,48 @@
         "GB"
       ],
       "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-qb-rankings-index-week-9-2026-nfl-season",
+      "source_name": "NFL.com",
+      "headline": "NFL QB rankings, Week 9: Dak Prescott exits top 10; Cam Ward heating up",
+      "published_at": "2026-11-04T06:12:00.000Z",
+      "observed_at": "2026-11-04T18:20:21.065Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/lions-linebacker-jack-campbell-full-movement-lower-body-neck-injury",
+      "source_name": "NFL.com",
+      "headline": "Lions LB Jack Campbell says he has full movement in lower body after suffering neck injury",
+      "published_at": "2026-11-04T06:11:17.000Z",
+      "observed_at": "2026-11-04T18:20:21.065Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
