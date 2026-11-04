@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/jalen-hurts-health-is-of-utmost-importance-as-eagles-sign-ex-cowboys-qb-joe-milton",
-      "source_name": "NFL.com",
-      "headline": "Jalen Hurts' health is of 'utmost importance' as Eagles sign ex-Cowboys QB Joe Milton",
-      "published_at": "2026-10-16T05:46:05.000Z",
-      "observed_at": "2026-10-16T19:40:21.869Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "PHI"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/david-blough-takes-responsibility-for-clock-debacle",
       "source_name": "Pro Football Talk",
       "headline": "David Blough takes responsibility for clock debacle",
@@ -41882,6 +41859,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dianna-russini-gets-out-the-word-that-shes-coming-back-to-work-next-week",
+      "source_name": "Pro Football Talk",
+      "headline": "Dianna Russini gets out the word that she's coming back to work next week",
+      "published_at": "2026-11-04T21:21:42.000Z",
+      "observed_at": "2026-11-04T21:30:24.070Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
