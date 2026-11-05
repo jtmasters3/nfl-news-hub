@@ -2,30 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfc-north-rankings-how-do-bears-lions-packers-and-vikings-stack-up-in-highly-competitive-division",
-      "source_name": "NFL.com",
-      "headline": "NFC North rankings: How do Bears, Lions, Packers and Vikings stack up in highly competitive division?",
-      "published_at": "2026-10-16T10:40:17.000Z",
-      "observed_at": "2026-10-16T22:50:21.200Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "DET",
-        "GB",
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/terrion-arnold-remains-on-paid-leave",
       "source_name": "Pro Football Talk",
       "headline": "Terrion Arnold remains on paid leave",
@@ -41881,6 +41857,27 @@
         "CAR"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kyle-shanahan-confirms-jauan-jennings-decided-not-to-pursue-trade-back-to-49ers",
+      "source_name": "Pro Football Talk",
+      "headline": "Kyle Shanahan confirms Jauan Jennings decided not to pursue trade back to 49ers",
+      "published_at": "2026-11-05T03:52:26.000Z",
+      "observed_at": "2026-11-05T04:10:19.204Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
