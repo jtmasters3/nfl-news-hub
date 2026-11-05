@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/after-overcoming-severe-colitis-in-2024-auburns-alex-mcpherson-kicks-game-winner-vs-no-1-georgia",
-      "source_name": "Pro Football Talk",
-      "headline": "After overcoming severe colitis in 2024, Auburn's Alex McPherson kicks game-winner vs. No. 1 Georgia",
-      "published_at": "2026-10-18T00:26:27.000Z",
-      "observed_at": "2026-10-18T00:30:22.152Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aqib-talib-tees-off-on-ryan-fitzpatrick-for-his-comments-about-bo-nix",
-      "source_name": "Pro Football Talk",
-      "headline": "Aqib Talib tees off on Ryan Fitzpatrick for his comments about Bo Nix",
-      "published_at": "2026-10-18T01:04:58.000Z",
-      "observed_at": "2026-10-18T01:20:19.318Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/as-nfl-prepares-to-stage-steelers-saints-in-paris-local-unrest-intensifies",
       "source_name": "Pro Football Talk",
       "headline": "As NFL prepares to stage Steelers-Saints in Paris, local unrest intensifies",
@@ -41877,6 +41839,53 @@
       "detected_teams": [
         "BUF",
         "MIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/players-of-the-month-october-2026-drake-maye-malik-nabers",
+      "source_name": "NFL.com",
+      "headline": "Patriots QB Drake Maye, Giants WR Malik Nabers highlight October Players of the Month",
+      "published_at": "2026-11-05T05:00:17.000Z",
+      "observed_at": "2026-11-05T17:10:19.740Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
+        "NE",
+        "NYG"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/bears-super-bowl-seahawks-miss-playoffs-chargers-go-winless",
+      "source_name": "FOX Sports",
+      "headline": "NFL Fact or Fiction: Bears Going To The Super Bowl? Seahawks To Miss Playoffs?",
+      "published_at": "2026-11-05T16:58:17.000Z",
+      "observed_at": "2026-11-05T17:10:19.740Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "LAC",
+        "PIT",
+        "SEA"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
