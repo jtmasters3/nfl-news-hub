@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/garrett-wilson-thought-he-was-just-meeting-a-young-fan-he-ended-up-helping-her-find-her-way-back",
-      "source_name": "NFL.com",
-      "headline": "Garrett Wilson thought he was just meeting a young fan. He ended up helping her find her way back",
-      "published_at": "2026-10-17T07:46:04.000Z",
-      "observed_at": "2026-10-17T17:20:23.518Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/commanders-wont-have-jacory-croskey-merritt-monday-night",
-      "source_name": "Pro Football Talk",
-      "headline": "Commanders won't have Jacory Croskey-Merritt Monday night",
-      "published_at": "2026-10-17T17:31:18.000Z",
-      "observed_at": "2026-10-17T17:40:18.418Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF",
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-activate-kyler-gordon-sign-nick-mccloud-to-active-roster",
       "source_name": "Pro Football Talk",
       "headline": "Bears activate Kyler Gordon, sign Nick McCloud to active roster",
@@ -41889,6 +41850,51 @@
         "BAL"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/roll-tape-meet-bears-super-bowl-x-factor-nfls-most-underrated-wr",
+      "source_name": "FOX Sports",
+      "headline": "Roll The Tape: Meet The Bears' Super Bowl X Factor; The NFL's Most Underrated WR",
+      "published_at": "2026-11-05T13:00:48.000Z",
+      "observed_at": "2026-11-05T13:10:19.972Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-week-9-betting-report-books-hoping-low-scoring-marquee-matchups",
+      "source_name": "FOX Sports",
+      "headline": "NFL Week 9 Betting Report: Books Hoping For Low-Scoring Marquee Matchups",
+      "published_at": "2026-11-05T12:53:43.000Z",
+      "observed_at": "2026-11-05T13:10:19.972Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "GB",
+        "MIN",
+        "NE"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
