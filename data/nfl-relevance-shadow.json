@@ -2,62 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/caleb-williams-throws-touchdown-pass-on-first-possession-since-return-from-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "Caleb Williams throws touchdown pass on first possession since return from injury",
-      "published_at": "2026-10-18T17:16:13.000Z",
-      "observed_at": "2026-10-18T17:20:20.410Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-paris-game-activites-pour-les-fans",
-      "source_name": "NFL.com",
-      "headline": "NFL Paris Game – Activités pour les fans",
-      "published_at": "2026-10-15T12:30:00.000Z",
-      "observed_at": "2026-10-18T17:30:22.553Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/charles-woodson-julian-edelman-biggest-nfl-storylines-week-6",
-      "source_name": "FOX Sports",
-      "headline": "Charles Woodson And Julian Edelman Tackle The Biggest NFL Questions In Week 6",
-      "published_at": "2026-10-18T17:28:18.000Z",
-      "observed_at": "2026-10-18T17:30:22.553Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB",
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/giants-take-early-7-0-lead-over-saints",
       "source_name": "Pro Football Talk",
       "headline": "Giants take early 7-0 lead over Saints",
@@ -41867,6 +41811,67 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/raiders-re-sign-wr-cody-white-waive-te-carter-runyon",
+      "source_name": "Pro Football Talk",
+      "headline": "Raiders re-sign WR Cody White, waive TE Carter Runyon",
+      "published_at": "2026-11-05T22:57:06.000Z",
+      "observed_at": "2026-11-05T23:10:18.639Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/christian-mccaffrey-returned-to-practice-as-limited-participant",
+      "source_name": "Pro Football Talk",
+      "headline": "Christian McCaffrey returned to practice as limited participant",
+      "published_at": "2026-11-05T22:56:08.000Z",
+      "observed_at": "2026-11-05T23:10:18.639Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rashee-rice-files-for-bankruptcy-citing-more-than-3-45-million-in-debt",
+      "source_name": "Pro Football Talk",
+      "headline": "Rashee Rice files for bankruptcy, citing more than $3.45 million in debt",
+      "published_at": "2026-11-05T22:55:33.000Z",
+      "observed_at": "2026-11-05T23:10:18.639Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC"
+      ],
+      "detected_category": "contract",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:contract"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
