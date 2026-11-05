@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-cowboys-vs-packers-tv-channel-live-stream-time-oct-18-2026",
-      "source_name": "FOX Sports",
-      "headline": "How to Watch Cowboys vs. Packers: TV Channel, Live Stream, Time",
-      "published_at": "2026-10-18T12:37:59.000Z",
-      "observed_at": "2026-10-18T12:40:21.702Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-bills-vs-raiders-tv-channel-live-stream-time-oct-18-2026",
-      "source_name": "FOX Sports",
-      "headline": "How to Watch Bills vs. Raiders: TV Channel, Live Stream, Time",
-      "published_at": "2026-10-18T12:37:05.000Z",
-      "observed_at": "2026-10-18T12:40:21.702Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "LV"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-chargers-vs-chiefs-tv-channel-live-stream-time-oct-18-2026",
       "source_name": "FOX Sports",
       "headline": "How to Watch Chargers vs. Chiefs: TV Channel, Live Stream, Time",
@@ -41882,6 +41838,45 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-usaa-unveil-32-nominees-for-2026-salute-to-service-award",
+      "source_name": "NFL.com",
+      "headline": "NFL, USAA unveil 32 Nominees for 2026 Salute to Service Award",
+      "published_at": "2026-11-05T06:36:37.000Z",
+      "observed_at": "2026-11-05T18:40:22.986Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jared-verse-was-upset-that-browns-teammates-didnt-react-when-he-took-a-cheap-shot",
+      "source_name": "Pro Football Talk",
+      "headline": "Jared Verse was upset that Browns teammates didn't react when he took a cheap shot",
+      "published_at": "2026-11-05T18:29:52.000Z",
+      "observed_at": "2026-11-05T18:40:22.986Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE",
+        "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
