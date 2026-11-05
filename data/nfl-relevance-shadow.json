@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/from-hawaii-to-england-to-japan-nfl-fans-share-similar-experiences-just-at-different-times",
-      "source_name": "NFL.com",
-      "headline": "From Hawaii to England to Japan, NFL fans share similar experiences, just at different times",
-      "published_at": "2026-10-17T09:46:05.000Z",
-      "observed_at": "2026-10-18T13:30:21.820Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-najee-harris-is-expected-to-take-larger-role-in-giants-backfield",
       "source_name": "Pro Football Talk",
       "headline": "Report: Najee Harris is expected to take larger role in Giants backfield",
@@ -41863,6 +41846,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cb-dj-turner-upgraded-to-full-practice-for-bengals",
+      "source_name": "Pro Football Talk",
+      "headline": "CB DJ Turner upgraded to full practice for Bengals",
+      "published_at": "2026-11-05T19:51:19.000Z",
+      "observed_at": "2026-11-05T20:00:28.835Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
