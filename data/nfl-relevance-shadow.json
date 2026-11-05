@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steve-sarkisian-doesnt-rule-out-benching-arch-manning",
-      "source_name": "Pro Football Talk",
-      "headline": "Steve Sarkisian doesn't rule out benching Arch Manning",
-      "published_at": "2026-10-18T00:00:18.000Z",
-      "observed_at": "2026-10-18T00:10:21.568Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/after-overcoming-severe-colitis-in-2024-auburns-alex-mcpherson-kicks-game-winner-vs-no-1-georgia",
       "source_name": "Pro Football Talk",
       "headline": "After overcoming severe colitis in 2024, Auburn's Alex McPherson kicks game-winner vs. No. 1 Georgia",
@@ -41874,6 +41857,28 @@
         "SF"
       ],
       "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-vikings-are-trending-toward-starting-carson-wentz-on-monday-night",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Vikings are trending toward starting Carson Wentz on Monday night",
+      "published_at": "2026-11-05T16:49:39.000Z",
+      "observed_at": "2026-11-05T17:00:28.507Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "MIN"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
