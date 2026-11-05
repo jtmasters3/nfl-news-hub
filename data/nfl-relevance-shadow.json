@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jonathan-taylor-looks-to-continue-recent-dominance-vs-titans",
-      "source_name": "Pro Football Talk",
-      "headline": "Jonathan Taylor looks to continue recent dominance vs. Titans",
-      "published_at": "2026-10-18T16:05:06.000Z",
-      "observed_at": "2026-10-18T16:20:19.666Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "TEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/seattle-sticking-sam-darnold-starting-quarterback",
-      "source_name": "FOX Sports",
-      "headline": "Seahawks Won't Make A Quarterback Change, Sticking With Sam Darnold",
-      "published_at": "2026-10-18T16:10:31.000Z",
-      "observed_at": "2026-10-18T16:30:24.268Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN",
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/travis-hunter-is-having-his-best-offensive-game-and-worst-defensive-game-of-the-season",
       "source_name": "Pro Football Talk",
       "headline": "Travis Hunter is having his best offensive game, and worst defensive game, of the season",
@@ -41857,6 +41813,50 @@
         "NE"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/will-hills-parlay-week-back-bears-keep-winning-gophers-cover",
+      "source_name": "FOX Sports",
+      "headline": "Will Hill's Parlay Of The Week: Back Bears To Keep Winning; Gophers To Cover",
+      "published_at": "2026-11-05T21:57:10.000Z",
+      "observed_at": "2026-11-05T22:20:17.041Z",
+      "decision": "keep",
+      "classification": "nfl_with_college_context",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [
+        "conference_big_ten"
+      ],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/joey-porter-jr-downgraded-to-limited-thursday",
+      "source_name": "Pro Football Talk",
+      "headline": "Joey Porter Jr. downgraded to limited Thursday",
+      "published_at": "2026-11-05T22:13:32.000Z",
+      "observed_at": "2026-11-05T22:20:17.041Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
