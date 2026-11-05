@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-tyler-shough-has-two-broken-bones-in-his-left-hand",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Tyler Shough has two broken bones in his left hand",
-      "published_at": "2026-10-18T13:28:48.000Z",
-      "observed_at": "2026-10-18T13:40:18.860Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NO"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-falcons-features-nfls-top-two-rushing-attacks",
-      "source_name": "Pro Football Talk",
-      "headline": "Bears-Falcons features NFL's top two rushing attacks",
-      "published_at": "2026-10-18T13:40:35.000Z",
-      "observed_at": "2026-10-18T13:50:18.924Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "CHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-preparations-continue-for-steelers-saints-in-paris",
       "source_name": "Pro Football Talk",
       "headline": "NFL: Preparations continue for Steelers-Saints in Paris",
@@ -41862,6 +41819,44 @@
       "confidence": "high",
       "detected_teams": [
         "LV"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-week-9-picks-best-bets-every-game-wills-wagers",
+      "source_name": "FOX Sports",
+      "headline": "2026 NFL Week 9 Picks: Best Bets For Every Game — Will's Wagers",
+      "published_at": "2026-11-05T20:22:09.000Z",
+      "observed_at": "2026-11-05T20:30:22.300Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bijan-robinson-i-dont-feel-im-playing-like-one-of-the-best-backs-in-the-league",
+      "source_name": "Pro Football Talk",
+      "headline": "Bijan Robinson: I don't feel I'm playing like one of the best backs in the league",
+      "published_at": "2026-11-05T20:22:16.000Z",
+      "observed_at": "2026-11-05T20:30:22.300Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
