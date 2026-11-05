@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/week-6-injuries-sunday-pregame-2026-nfl-season",
-      "source_name": "NFL.com",
-      "headline": "NFL Week 6 injuries to monitor for Sunday's games",
-      "published_at": "2026-10-18T12:29:52.000Z",
-      "observed_at": "2026-10-18T12:40:21.702Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-cowboys-vs-packers-tv-channel-live-stream-time-oct-18-2026",
       "source_name": "FOX Sports",
       "headline": "How to Watch Cowboys vs. Packers: TV Channel, Live Stream, Time",
@@ -41877,6 +41860,28 @@
       "detected_category": "coaching",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-sign-k-joshua-karty-to-53-man-roster",
+      "source_name": "Pro Football Talk",
+      "headline": "Rams sign K Joshua Karty to 53-man roster",
+      "published_at": "2026-11-05T18:15:49.000Z",
+      "observed_at": "2026-11-05T18:20:19.152Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:roster_move"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
