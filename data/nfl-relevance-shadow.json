@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/grant-delpit-sums-up-difference-between-lamar-jackson-and-tyler-huntley-in-four-words",
-      "source_name": "Pro Football Talk",
-      "headline": "Grant Delpit sums up difference between Lamar Jackson and Tyler Huntley in four words",
-      "published_at": "2026-10-17T19:30:08.000Z",
-      "observed_at": "2026-10-17T19:40:23.273Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/patriots-activate-wr-aj-brown-ankle-injured-reserve-week-6",
-      "source_name": "NFL.com",
-      "headline": "Patriots activate WR A.J. Brown (ankle) from injured reserve ahead of Sunday's game vs. Jets",
-      "published_at": "2026-10-17T08:03:45.000Z",
-      "observed_at": "2026-10-17T20:10:16.683Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE",
-        "NYG",
-        "NYJ"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patriots-activate-a-j-brown",
       "source_name": "Pro Football Talk",
       "headline": "Patriots activate A.J. Brown",
@@ -41895,6 +41851,44 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/packers-josh-jacobs-isnt-worrying-additional-allegations-more-punishment",
+      "source_name": "NFL.com",
+      "headline": "Packers' Josh Jacobs isn't worrying over whether additional allegations will lead to more punishment",
+      "published_at": "2026-11-05T03:07:33.000Z",
+      "observed_at": "2026-11-05T15:10:18.481Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/voting-for-2026-nfl-channel-midseason-awards-opens-sunday-nov-8",
+      "source_name": "NFL.com",
+      "headline": "Voting for 2026 NFL Channel midseason awards opens Sunday, Nov. 8",
+      "published_at": "2026-11-05T03:00:17.000Z",
+      "observed_at": "2026-11-05T15:10:18.481Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
