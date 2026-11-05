@@ -2,94 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-activate-kyler-gordon-sign-nick-mccloud-to-active-roster",
-      "source_name": "Pro Football Talk",
-      "headline": "Bears activate Kyler Gordon, sign Nick McCloud to active roster",
-      "published_at": "2026-10-17T17:40:20.000Z",
-      "observed_at": "2026-10-17T17:50:17.657Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "CHI"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-activate-taylor-moton-turk-wharton-trevor-etienne",
-      "source_name": "Pro Football Talk",
-      "headline": "Panthers activate Taylor Moton, Turk Wharton, Trevor Etienne",
-      "published_at": "2026-10-17T17:55:30.000Z",
-      "observed_at": "2026-10-17T18:00:26.619Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaguars-look-to-match-best-six-game-start-in-team-history",
-      "source_name": "Pro Football Talk",
-      "headline": "Jaguars look to match best six-game start in team history",
-      "published_at": "2026-10-17T18:07:23.000Z",
-      "observed_at": "2026-10-17T18:20:17.903Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "JAX"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/the-black-box-idea-could-be-adopted-by-some-teams",
-      "source_name": "Pro Football Talk",
-      "headline": "The \"black box\" idea could be adopted by some teams",
-      "published_at": "2026-10-17T18:30:13.000Z",
-      "observed_at": "2026-10-17T18:40:18.865Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG",
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/titans-ceo-burke-nihill-believes-robert-saleh-mike-borgonzi-will-get-this-team-out-of-the-woods",
       "source_name": "NFL.com",
       "headline": "Titans CEO Burke Nihill believes Robert Saleh, Mike Borgonzi will 'get this team out of the woods'",
@@ -41895,6 +41807,87 @@
         "NE"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-teams-made-22-in-season-trades-in-2025-only-a-handful-truly-paid-off",
+      "source_name": "NFL.com",
+      "headline": "NFL teams made 22 in-season trades in 2025. Only a handful truly paid off",
+      "published_at": "2026-11-05T10:46:09.000Z",
+      "observed_at": "2026-11-05T14:10:22.614Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "trade",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/why-justin-jefferson-s-silence-is-deafening-when-it-comes-to-the-vikings-offense",
+      "source_name": "NFL.com",
+      "headline": "Why Justin Jefferson's silence is deafening when it comes to the Vikings' offense",
+      "published_at": "2026-11-05T10:31:10.000Z",
+      "observed_at": "2026-11-05T14:10:22.614Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/who-is-joe-fagnano-meet-the-ravens-cinderella-man-starting-thursday-vs-jaguars",
+      "source_name": "NFL.com",
+      "headline": "Who is Joe Fagnano? Meet the Ravens' 'Cinderella Man' starting Thursday vs. Jaguars",
+      "published_at": "2026-11-05T10:16:10.000Z",
+      "observed_at": "2026-11-05T14:10:22.614Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "JAX"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nick-sirianni-ive-always-felt-complete-support-from-jeffrey-lurie",
+      "source_name": "Pro Football Talk",
+      "headline": "Nick Sirianni: I've always felt complete support from Jeffrey Lurie",
+      "published_at": "2026-11-05T13:58:33.000Z",
+      "observed_at": "2026-11-05T14:10:22.614Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI"
+      ],
+      "detected_category": "coaching",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
