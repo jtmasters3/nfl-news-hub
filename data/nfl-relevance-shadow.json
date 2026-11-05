@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sunday-morning-games-could-kill-the-traditional-pregame-shows",
-      "source_name": "Pro Football Talk",
-      "headline": "Sunday morning games could kill the traditional pregame shows",
-      "published_at": "2026-10-18T17:21:29.000Z",
-      "observed_at": "2026-10-18T17:30:22.553Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tyler-huntley-2-yard-touchdown-pass-gives-ravens-early-7-0-lead",
-      "source_name": "Pro Football Talk",
-      "headline": "Tyler Huntley 2-yard touchdown pass gives Ravens early 7-0 lead",
-      "published_at": "2026-10-18T17:19:12.000Z",
-      "observed_at": "2026-10-18T17:30:22.553Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "CLE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/notable-injuries-news-sunday-week-6-games-2026",
       "source_name": "NFL.com",
       "headline": "Notable injuries, news from Sunday's Week 6 games",
@@ -41869,6 +41830,49 @@
         "NYJ"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/as-chargers-offense-struggles-mike-mcdaniel-will-move-from-the-sideline-to-the-booth",
+      "source_name": "Pro Football Talk",
+      "headline": "As Chargers' offense struggles, Mike McDaniel will move from the sideline to the booth",
+      "published_at": "2026-11-05T23:19:37.000Z",
+      "observed_at": "2026-11-05T23:30:19.454Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "HOU",
+        "LAC"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/back-surgery-will-keep-robert-kraft-from-rob-gronkowskis-patriots-hall-of-fame-induction",
+      "source_name": "Pro Football Talk",
+      "headline": "Back surgery will keep Robert Kraft from Rob Gronkowski's Patriots Hall of Fame induction",
+      "published_at": "2026-11-05T23:16:37.000Z",
+      "observed_at": "2026-11-05T23:30:19.454Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
