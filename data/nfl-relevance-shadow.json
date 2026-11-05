@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/deion-sanders-colorado-nearly-upset-no-11-utah",
-      "source_name": "Pro Football Talk",
-      "headline": "Deion Sanders, Colorado nearly upset No. 11 Utah",
-      "published_at": "2026-10-18T14:20:59.000Z",
-      "observed_at": "2026-10-18T14:30:27.345Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-s-malik-mustaphas-illegal-hit-if-flagged-would-have-extended-seattles-final-drive",
-      "source_name": "Pro Football Talk",
-      "headline": "49ers S Malik Mustapha's illegal hit, if flagged, would have extended Seattle's final drive",
-      "published_at": "2026-10-18T14:56:35.000Z",
-      "observed_at": "2026-10-18T15:00:26.486Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF",
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/foster-moreau-and-bhayshul-tuten-have-two-td-catches-each-as-texans-lead-jaguars",
       "source_name": "Pro Football Talk",
       "headline": "Foster Moreau and Bhayshul Tuten have two TD catches each as Texans lead Jaguars",
@@ -41858,6 +41819,48 @@
         "KC"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bucs-add-lt-tristan-wirfs-to-the-practice-report-with-a-toe-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Bucs add LT Tristan Wirfs to the practice report with a toe injury",
+      "published_at": "2026-11-05T21:14:39.000Z",
+      "observed_at": "2026-11-05T21:20:19.907Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "TB"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ravens-put-lamar-jackson-tyler-huntley-on-ir-sign-austin-reed-to-active-roster",
+      "source_name": "Pro Football Talk",
+      "headline": "Ravens put Lamar Jackson, Tyler Huntley on IR; sign Austin Reed to active roster",
+      "published_at": "2026-11-05T21:14:10.000Z",
+      "observed_at": "2026-11-05T21:20:19.907Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
