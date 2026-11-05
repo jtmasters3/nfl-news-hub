@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/jayden-daniels-has-to-bounce-back-from-a-blunder-donovan-mcnabb-knows-what-that-takes",
-      "source_name": "NFL.com",
-      "headline": "Jayden Daniels has to bounce back from a blunder. Donovan McNabb knows what that takes",
-      "published_at": "2026-10-17T10:16:05.000Z",
-      "observed_at": "2026-10-17T17:20:23.518Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/parker-washington-s-emergence-leaves-jaguars-with-a-welcome-dilemma",
-      "source_name": "NFL.com",
-      "headline": "Parker Washington's emergence leaves Jaguars with a welcome dilemma",
-      "published_at": "2026-10-17T10:16:05.000Z",
-      "observed_at": "2026-10-17T17:20:23.518Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "JAX",
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/garrett-wilson-thought-he-was-just-meeting-a-young-fan-he-ended-up-helping-her-find-her-way-back",
       "source_name": "NFL.com",
       "headline": "Garrett Wilson thought he was just meeting a young fan. He ended up helping her find her way back",
@@ -41886,6 +41847,48 @@
         "DEN"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/saints-wr-jordyn-tyson-feels-more-explosive-than-i-ever-have-in-return-from-hamstring-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Saints WR Jordyn Tyson feels \"more explosive than I ever have\" in return from hamstring injury",
+      "published_at": "2026-11-05T11:44:28.000Z",
+      "observed_at": "2026-11-05T11:50:17.439Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NO"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lamar-jacksons-latest-injury-raises-obvious-questions-about-his-future-in-baltimore",
+      "source_name": "Pro Football Talk",
+      "headline": "Lamar Jackson's latest injury raises obvious questions about his future in Baltimore",
+      "published_at": "2026-11-05T11:42:15.000Z",
+      "observed_at": "2026-11-05T11:50:17.439Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
