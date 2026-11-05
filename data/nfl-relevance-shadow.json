@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-sudden-about-face-on-ir-for-jalen-hurts-seems-odd-to-say-the-least",
-      "source_name": "Pro Football Talk",
-      "headline": "Eagles' sudden about-face on IR for Jalen Hurts seems odd, to say the least",
-      "published_at": "2026-10-18T13:14:06.000Z",
-      "observed_at": "2026-10-18T13:20:24.629Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/from-hawaii-to-england-to-japan-nfl-fans-share-similar-experiences-just-at-different-times",
       "source_name": "NFL.com",
       "headline": "From Hawaii to England to Japan, NFL fans share similar experiences, just at different times",
@@ -41867,6 +41846,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-thursday-nov-5",
+      "source_name": "NFL.com",
+      "headline": "NFL news roundup: Latest league updates from Thursday, Nov. 5",
+      "published_at": "2026-11-05T07:44:13.000Z",
+      "observed_at": "2026-11-05T19:50:19.222Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
