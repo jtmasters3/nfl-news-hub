@@ -2,72 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-saints-vs-giants-tv-channel-live-stream-time-oct-18-2026",
-      "source_name": "FOX Sports",
-      "headline": "How to Watch Saints vs. Giants: TV Channel, Live Stream, Time",
-      "published_at": "2026-10-18T12:30:04.000Z",
-      "observed_at": "2026-10-18T12:30:22.511Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NO",
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-ravens-vs-browns-tv-channel-live-stream-time-oct-18-2026",
-      "source_name": "FOX Sports",
-      "headline": "How to Watch Ravens vs. Browns: TV Channel, Live Stream, Time",
-      "published_at": "2026-10-18T12:28:53.000Z",
-      "observed_at": "2026-10-18T12:30:22.511Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "CLE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-titans-vs-colts-tv-channel-live-stream-time-oct-18-2026",
-      "source_name": "FOX Sports",
-      "headline": "How to Watch Titans vs. Colts: TV Channel, Live Stream, Time",
-      "published_at": "2026-10-18T12:25:38.000Z",
-      "observed_at": "2026-10-18T12:30:22.511Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "TEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/week-6-injuries-sunday-pregame-2026-nfl-season",
       "source_name": "NFL.com",
       "headline": "NFL Week 6 injuries to monitor for Sunday's games",
@@ -41884,6 +41818,69 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/the-chiefs-are-under-fire-for-refusing-to-qb-sneak-patrick-mahomes-says-he-s-willing",
+      "source_name": "NFL.com",
+      "headline": "The Chiefs are under fire for refusing to QB sneak. Patrick Mahomes says he's willing",
+      "published_at": "2026-11-05T01:01:08.000Z",
+      "observed_at": "2026-11-05T18:10:21.822Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/2027-nfl-mock-draft-drew-mestemaker-first-6-qbs-selected-first-round",
+      "source_name": "FOX Sports",
+      "headline": "2027 NFL Mock Draft: Drew Mestemaker First Of 6 QBs Selected In First Round",
+      "published_at": "2026-11-05T18:00:07.000Z",
+      "observed_at": "2026-11-05T18:10:21.822Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [],
+      "detected_category": "draft",
+      "nfl_evidence": [
+        "phrase_nfl_draft",
+        "nfl_preserving_category:draft"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ben-johnson-was-impressed-with-the-buccaneers-all-run-offense",
+      "source_name": "Pro Football Talk",
+      "headline": "Ben Johnson was impressed with the Buccaneers' all-run offense",
+      "published_at": "2026-11-05T18:05:07.000Z",
+      "observed_at": "2026-11-05T18:10:21.822Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "TB"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
