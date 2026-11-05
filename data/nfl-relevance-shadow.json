@@ -2,25 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/big-12-admits-clock-error-at-end-of-notre-dame-byu-game",
-      "source_name": "Pro Football Talk",
-      "headline": "Big 12 admits clock error at end of Notre Dame-BYU game",
-      "published_at": "2026-10-18T12:33:57.000Z",
-      "observed_at": "2026-10-18T12:40:21.702Z",
-      "decision": "reject",
-      "classification": "college_football",
-      "confidence": "medium",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [
-        "conference_big_12"
-      ],
-      "reason_codes": [
-        "college_marker_no_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/jaguars-eye-full-2028-home-slate-in-jacksonville-in-shift-that-could-end-wembley-run",
       "source_name": "NFL.com",
       "headline": "Jaguars eye full 2028 home slate in Jacksonville in shift that could end Wembley run",
@@ -41869,6 +41850,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-picks-week-9-2026-nfl-season",
+      "source_name": "NFL.com",
+      "headline": "NFL Week 9 picks: Upset and score predictions, matchup breakdowns for every game",
+      "published_at": "2026-11-05T07:08:32.000Z",
+      "observed_at": "2026-11-05T19:10:18.934Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
