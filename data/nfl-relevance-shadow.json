@@ -2,94 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-steelers-vs-buccaneers-tv-channel-live-stream-time-oct-18-2026",
-      "source_name": "FOX Sports",
-      "headline": "How to Watch Steelers vs. Buccaneers: TV Channel, Live Stream, Time",
-      "published_at": "2026-10-18T12:34:52.000Z",
-      "observed_at": "2026-10-18T12:40:21.702Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PIT",
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-panthers-vs-eagles-tv-channel-live-stream-time-oct-18-2026",
-      "source_name": "FOX Sports",
-      "headline": "How to Watch Panthers vs. Eagles: TV Channel, Live Stream, Time",
-      "published_at": "2026-10-18T12:34:17.000Z",
-      "observed_at": "2026-10-18T12:40:21.702Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-cardinals-vs-rams-tv-channel-live-stream-time-oct-18-2026",
-      "source_name": "FOX Sports",
-      "headline": "How to Watch Cardinals vs. Rams: TV Channel, Live Stream, Time",
-      "published_at": "2026-10-18T12:31:53.000Z",
-      "observed_at": "2026-10-18T12:40:21.702Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI",
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-bears-vs-falcons-tv-channel-live-stream-time-oct-18-2026",
-      "source_name": "FOX Sports",
-      "headline": "How to Watch Bears vs. Falcons: TV Channel, Live Stream, Time",
-      "published_at": "2026-10-18T12:31:28.000Z",
-      "observed_at": "2026-10-18T12:40:21.702Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "CHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/big-12-admits-clock-error-at-end-of-notre-dame-byu-game",
       "source_name": "Pro Football Talk",
       "headline": "Big 12 admits clock error at end of Notre Dame-BYU game",
@@ -41874,6 +41786,83 @@
         "BUF"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-celebrates-inaugural-american-football-week",
+      "source_name": "NFL.com",
+      "headline": "NFL celebrates inaugural American Football Week",
+      "published_at": "2026-11-05T06:57:30.000Z",
+      "observed_at": "2026-11-05T19:00:25.769Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/kyler-murray-hamstring-update-carson-wentz-stats-bills-vikings-injury-report",
+      "source_name": "FOX Sports",
+      "headline": "Vikings Starting Carson Wentz At QB vs. Bills Amid Kyler Murray Injury",
+      "published_at": "2026-11-05T18:52:19.000Z",
+      "observed_at": "2026-11-05T19:00:25.769Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "MIN"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-trade-deadline-rumors-predictions-jonathan-taylor-josh-downs-brian-thomas",
+      "source_name": "FOX Sports",
+      "headline": "NFL Trade Deadline: Where Will Top Targets Go? Execs Help Us Predict Landing Spots",
+      "published_at": "2026-11-05T18:42:00.000Z",
+      "observed_at": "2026-11-05T19:00:25.769Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "trade",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/an-investigation-regarding-the-jalen-hurts-situation-has-not-begun",
+      "source_name": "Pro Football Talk",
+      "headline": "An investigation regarding the Jalen Hurts situation has not begun",
+      "published_at": "2026-11-05T18:50:01.000Z",
+      "observed_at": "2026-11-05T19:00:25.769Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
