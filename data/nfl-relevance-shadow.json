@@ -2,86 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/will-troy-aikman-finish-the-season-with-monday-night-football",
-      "source_name": "Pro Football Talk",
-      "headline": "Will Troy Aikman finish the season with Monday Night Football?",
-      "published_at": "2026-10-17T22:55:34.000Z",
-      "observed_at": "2026-10-17T23:00:24.820Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bill-belichick-beats-duke-for-the-first-time-as-north-carolina-wins-in-durham",
-      "source_name": "Pro Football Talk",
-      "headline": "Bill Belichick beats Duke for the first time, as North Carolina wins in Durham",
-      "published_at": "2026-10-17T23:20:47.000Z",
-      "observed_at": "2026-10-17T23:30:21.771Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kyle-juszczyk-set-to-return-for-49ers-mike-evans-listed-as-questionable",
-      "source_name": "Pro Football Talk",
-      "headline": "Kyle Juszczyk set to return for 49ers, Mike Evans listed as questionable",
-      "published_at": "2026-10-17T23:37:12.000Z",
-      "observed_at": "2026-10-17T23:40:19.266Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/john-beake-general-manager-of-broncos-super-bowl-xxxii-xxxiii-winning-teams-dies-at-87",
-      "source_name": "NFL.com",
-      "headline": "John Beake, general manager of Broncos' Super Bowl XXXII, XXXIII-winning teams, dies at 87",
-      "published_at": "2026-10-17T11:36:44.000Z",
-      "observed_at": "2026-10-17T23:50:20.729Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steve-sarkisian-doesnt-rule-out-benching-arch-manning",
       "source_name": "Pro Football Talk",
       "headline": "Steve Sarkisian doesn't rule out benching Arch Manning",
@@ -41874,6 +41794,86 @@
         "TB"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-unites-to-honor-and-support-the-military-community-through-salute-to-service",
+      "source_name": "NFL.com",
+      "headline": "NFL unites to honor and support the military community through Salute to Service",
+      "published_at": "2026-11-05T04:33:19.000Z",
+      "observed_at": "2026-11-05T16:40:28.602Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brian-robinson-remains-limited-on-thursday-injury-report",
+      "source_name": "Pro Football Talk",
+      "headline": "Brian Robinson remains limited on Thursday injury report",
+      "published_at": "2026-11-05T16:35:40.000Z",
+      "observed_at": "2026-11-05T16:40:28.602Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-evans-is-unlikely-to-play-in-week-9",
+      "source_name": "Pro Football Talk",
+      "headline": "Mike Evans is unlikely to play in Week 9",
+      "published_at": "2026-11-05T16:30:53.000Z",
+      "observed_at": "2026-11-05T16:40:28.602Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/some-wonder-whether-the-49ers-are-in-play-for-jonathan-taylor",
+      "source_name": "Pro Football Talk",
+      "headline": "Some wonder whether the 49ers are in play for Jonathan Taylor",
+      "published_at": "2026-11-05T16:33:11.000Z",
+      "observed_at": "2026-11-05T16:40:28.602Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
