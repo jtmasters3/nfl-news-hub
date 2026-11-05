@@ -2,72 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-network-bears-qb-caleb-williams-hamstring-expected-to-start-sunday-vs-falcons",
-      "source_name": "NFL.com",
-      "headline": "NFL Network: Bears QB Caleb Williams (hamstring) expected to start Sunday vs. Falcons",
-      "published_at": "2026-10-17T08:43:42.000Z",
-      "observed_at": "2026-10-17T20:50:20.177Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "CHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/caleb-williams-injury-update-bears-quarterbacks-chicago-atlanta-falcons",
-      "source_name": "FOX Sports",
-      "headline": "Bears Reportedly Get Breakthrough Caleb Williams Week 6 Injury Update",
-      "published_at": "2026-10-17T20:55:16.000Z",
-      "observed_at": "2026-10-17T21:00:30.151Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "CHI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/reports-caleb-williams-to-start-for-bears-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "Reports: Caleb Williams to start for Bears Sunday",
-      "published_at": "2026-10-17T20:47:47.000Z",
-      "observed_at": "2026-10-17T21:00:30.151Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "CHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bradley-chubb-fined-for-taunting-alaric-jackson-before-jackson-punched-him",
       "source_name": "Pro Football Talk",
       "headline": "Bradley Chubb fined for taunting Alaric Jackson before Jackson punched him",
@@ -41887,6 +41821,61 @@
         "SF"
       ],
       "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/salute-to-service-nfl-unites-to-honor-the-military-community",
+      "source_name": "NFL.com",
+      "headline": "Salute to Service: NFL unites to honor the military community",
+      "published_at": "2026-11-05T03:55:45.000Z",
+      "observed_at": "2026-11-05T16:20:18.733Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/pfts-week-9-2026-nfl-picks",
+      "source_name": "Pro Football Talk",
+      "headline": "PFT's Week 9 2026 NFL picks",
+      "published_at": "2026-11-05T15:56:59.000Z",
+      "observed_at": "2026-11-05T16:20:18.733Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-mcvay-ive-coached-rams-for-10-years-this-is-the-worst-for-injuries-to-key-players",
+      "source_name": "Pro Football Talk",
+      "headline": "Sean McVay: I've coached Rams for 10 years, this is the worst for injuries to key players",
+      "published_at": "2026-11-05T15:49:03.000Z",
+      "observed_at": "2026-11-05T16:20:18.733Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
