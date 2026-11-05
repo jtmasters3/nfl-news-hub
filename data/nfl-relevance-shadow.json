@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/colts-vs-titans-prediction-odds-pick-nfl-week-6",
-      "source_name": "FOX Sports",
-      "headline": "Colts vs. Titans Prediction, Odds, Pick For NFL Week 6",
-      "published_at": "2026-10-18T05:00:08.000Z",
-      "observed_at": "2026-10-18T05:20:18.837Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "TEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/browns-vs-ravens-prediction-odds-pick-nfl-week-6",
-      "source_name": "FOX Sports",
-      "headline": "Browns vs. Ravens Prediction, Odds, Pick For NFL Week 6",
-      "published_at": "2026-10-18T05:00:07.000Z",
-      "observed_at": "2026-10-18T05:20:18.837Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "CLE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-texans-vs-jaguars-tv-channel-live-stream-time-oct-18-2026",
       "source_name": "FOX Sports",
       "headline": "How to Watch Texans vs. Jaguars: TV Channel, Live Stream, Time",
@@ -41884,6 +41840,44 @@
       "confidence": "high",
       "detected_teams": [
         "TB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/bill-belichick-again-is-among-five-coaching-candidates-for-pro-football-hall-of-fame",
+      "source_name": "NFL.com",
+      "headline": "Bill Belichick again is among five coaching candidates for Pro Football Hall of Fame",
+      "published_at": "2026-11-05T05:30:31.000Z",
+      "observed_at": "2026-11-05T17:40:19.800Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "coaching",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/alex-singleton-named-the-afc-defensive-player-of-the-month",
+      "source_name": "Pro Football Talk",
+      "headline": "Alex Singleton named the AFC defensive player of the month",
+      "published_at": "2026-11-05T17:32:34.000Z",
+      "observed_at": "2026-11-05T17:40:19.800Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
