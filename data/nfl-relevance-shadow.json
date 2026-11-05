@@ -2,89 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/as-nfl-prepares-to-stage-steelers-saints-in-paris-local-unrest-intensifies",
-      "source_name": "Pro Football Talk",
-      "headline": "As NFL prepares to stage Steelers-Saints in Paris, local unrest intensifies",
-      "published_at": "2026-10-18T01:42:47.000Z",
-      "observed_at": "2026-10-18T01:50:17.859Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NO",
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-downgrade-lb-demarvion-overshown-to-out-joey-porter-jr-makes-trip-to-green-bay",
-      "source_name": "Pro Football Talk",
-      "headline": "Cowboys downgrade LB Demarvion Overshown to out; Joey Porter Jr. makes trip to Green Bay",
-      "published_at": "2026-10-18T02:09:15.000Z",
-      "observed_at": "2026-10-18T02:20:19.969Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/notre-dame-gets-screwed-twice-on-final-play-at-byu",
-      "source_name": "Pro Football Talk",
-      "headline": "Notre Dame gets screwed, twice, on \"final\" play at BYU",
-      "published_at": "2026-10-18T03:43:59.000Z",
-      "observed_at": "2026-10-18T03:50:19.493Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/giants-vs-saints-prediction-odds-pick-nfl-week-6",
-      "source_name": "FOX Sports",
-      "headline": "Giants vs. Saints Prediction, Odds, Pick For NFL Week 6",
-      "published_at": "2026-10-18T05:00:34.000Z",
-      "observed_at": "2026-10-18T05:20:18.837Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NO",
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/falcons-vs-bears-prediction-odds-pick-nfl-week-6",
       "source_name": "FOX Sports",
       "headline": "Falcons vs. Bears Prediction, Odds, Pick For NFL Week 6",
@@ -41886,6 +41803,88 @@
         "LAC",
         "PIT",
         "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/fox-sports-nfl-college-football-coverage-live-west-point-annapolis-veterans-day",
+      "source_name": "NFL.com",
+      "headline": "Fox Sports to honor America's veterans with NFL, college football coverage live from West Point, Annapolis ahead of Veterans Day",
+      "published_at": "2026-11-05T05:11:44.000Z",
+      "observed_at": "2026-11-05T17:20:20.660Z",
+      "decision": "reject",
+      "classification": "college_football",
+      "confidence": "medium",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [
+        "college_football_phrase"
+      ],
+      "reason_codes": [
+        "college_marker_no_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/evan-williams-named-nfc-defensive-player-of-the-month",
+      "source_name": "Pro Football Talk",
+      "headline": "Evan Williams named NFC defensive player of the month",
+      "published_at": "2026-11-05T17:16:29.000Z",
+      "observed_at": "2026-11-05T17:20:20.660Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/malik-nabers-named-nfc-offensive-player-of-the-month",
+      "source_name": "Pro Football Talk",
+      "headline": "Malik Nabers named NFC offensive player of the month",
+      "published_at": "2026-11-05T17:12:09.000Z",
+      "observed_at": "2026-11-05T17:20:20.660Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/drake-maye-is-the-afc-offensive-player-of-the-month",
+      "source_name": "Pro Football Talk",
+      "headline": "Drake Maye is the AFC offensive player of the month",
+      "published_at": "2026-11-05T17:09:07.000Z",
+      "observed_at": "2026-11-05T17:20:20.660Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
