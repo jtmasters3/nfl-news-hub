@@ -2,47 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-mccarthy-i-got-stepped-on-before-halftime-team-adjusted-well-without-me",
-      "source_name": "Pro Football Talk",
-      "headline": "Mike McCarthy: I got stepped on before halftime, team adjusted well without me",
-      "published_at": "2026-10-18T22:26:43.000Z",
-      "observed_at": "2026-10-18T22:30:23.112Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/john-harbaugh-no-giants-qb-decision-yet-after-j-j-mccarthy-replaces-jameis-winston-vs-saints",
-      "source_name": "NFL.com",
-      "headline": "John Harbaugh: No Giants QB decision yet after J.J. McCarthy replaces Jameis Winston vs. Saints",
-      "published_at": "2026-10-18T10:35:31.000Z",
-      "observed_at": "2026-10-18T22:40:20.827Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "HOU",
-        "NO",
-        "NYG",
-        "NYJ"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-allens-magic-act-gives-bills-23-13-lead",
       "source_name": "Pro Football Talk",
       "headline": "Josh Allen's magic act gives Bills 23-13 lead",
@@ -41855,6 +41814,49 @@
       "confidence": "high",
       "detected_teams": [
         "CHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mansoor-delane-will-not-play-for-the-chiefs-on-sunday",
+      "source_name": "Pro Football Talk",
+      "headline": "Mansoor Delane will not play for the Chiefs on Sunday",
+      "published_at": "2026-11-06T19:15:07.000Z",
+      "observed_at": "2026-11-06T19:20:18.307Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC",
+        "NYJ"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/antonio-brown-pleads-guilty-to-aggravated-assault-with-a-firearm",
+      "source_name": "Pro Football Talk",
+      "headline": "Antonio Brown pleads guilty to aggravated assault with a firearm",
+      "published_at": "2026-11-06T19:10:32.000Z",
+      "observed_at": "2026-11-06T19:20:18.307Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIA"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
