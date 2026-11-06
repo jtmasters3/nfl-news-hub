@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-beat-up-eagles-25-14",
-      "source_name": "Pro Football Talk",
-      "headline": "Panthers beat up Eagles 25-14",
-      "published_at": "2026-10-18T20:35:57.000Z",
-      "observed_at": "2026-10-18T20:40:19.225Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-k-blake-grupe-doubtful-to-return-after-making-tackle-on-first-kickoff",
-      "source_name": "Pro Football Talk",
-      "headline": "Rams K Blake Grupe doubtful to return after making tackle on first kickoff",
-      "published_at": "2026-10-18T20:33:46.000Z",
-      "observed_at": "2026-10-18T20:40:19.225Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kenneth-walker-puts-chiefs-up-9-0-in-first-quarter",
       "source_name": "Pro Football Talk",
       "headline": "Kenneth Walker puts Chiefs up 9-0 in first quarter",
@@ -41874,6 +41831,50 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ravens-cardinals-announce-jacoby-brissett-trade",
+      "source_name": "Pro Football Talk",
+      "headline": "Ravens, Cardinals announce Jacoby Brissett trade",
+      "published_at": "2026-11-06T16:07:08.000Z",
+      "observed_at": "2026-11-06T16:10:16.817Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI",
+        "BAL"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/treveyon-henderson-was-hospitalized-after-unexpected-and-unusual-medical-emergency",
+      "source_name": "Pro Football Talk",
+      "headline": "Treveyon Henderson was hospitalized after \"unexpected and unusual medical emergency\"",
+      "published_at": "2026-11-06T15:57:12.000Z",
+      "observed_at": "2026-11-06T16:10:16.817Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIA",
+        "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
