@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/javonte-williams-scores-1-yard-td-packers-still-lead-cowboys-17-7",
-      "source_name": "Pro Football Talk",
-      "headline": "Javonte Williams scores 1-yard TD, Packers still lead Cowboys 17-7",
-      "published_at": "2026-10-19T02:19:15.000Z",
-      "observed_at": "2026-10-19T02:30:24.015Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "GB"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/todd-monken-wants-to-enjoy-the-win-over-the-ravens-while-he-can",
       "source_name": "Pro Football Talk",
       "headline": "Todd Monken wants to enjoy the win over the Ravens while he can",
@@ -41844,6 +41822,28 @@
       "confidence": "high",
       "detected_teams": [
         "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/s-talanoa-hufanga-questionable-for-sundays-game",
+      "source_name": "Pro Football Talk",
+      "headline": "S Talanoa Hufanga questionable for Sunday's game",
+      "published_at": "2026-11-06T22:57:01.000Z",
+      "observed_at": "2026-11-06T23:10:19.597Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR",
+        "DEN"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
