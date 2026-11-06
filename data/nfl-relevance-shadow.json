@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-having-no-trouble-with-titans-lead-13-0-at-halftime",
-      "source_name": "Pro Football Talk",
-      "headline": "Colts having no trouble with Titans, lead 13-0 at halftime",
-      "published_at": "2026-10-18T18:23:52.000Z",
-      "observed_at": "2026-10-18T18:30:24.291Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "TEN"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bryce-youngs-td-pass-gives-panthers-10-0-lead-over-eagles",
       "source_name": "Pro Football Talk",
       "headline": "Bryce Young's TD pass gives Panthers 10-0 lead over Eagles",
@@ -41874,6 +41852,27 @@
       "detected_teams": [
         "BAL",
         "JAX"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/derrick-henry-moves-to-seventh-on-the-nfls-all-time-rushing-list",
+      "source_name": "Pro Football Talk",
+      "headline": "Derrick Henry moves to seventh on the NFL's all-time rushing list",
+      "published_at": "2026-11-06T03:08:44.000Z",
+      "observed_at": "2026-11-06T03:20:20.109Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
