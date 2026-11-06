@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-take-9-6-lead-with-blake-corums-first-receiving-touchdown",
-      "source_name": "Pro Football Talk",
-      "headline": "Rams take 9-6 lead with Blake Corum's first receiving touchdown",
-      "published_at": "2026-10-18T20:59:56.000Z",
-      "observed_at": "2026-10-18T21:10:18.511Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/bears-back-3-takeaways-from-chicagos-blowout-win-over-falcons",
       "source_name": "FOX Sports",
       "headline": "Bears Hold Off Manic Falcons Comeback: 3 Takeaways From Chicago's Win",
@@ -41872,6 +41851,28 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "phrase_nflpa"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/minkah-fitzpatrick-no-controversy-with-my-quote-everyone-on-the-jets-knows-what-i-meant",
+      "source_name": "Pro Football Talk",
+      "headline": "Minkah Fitzpatrick: No controversy with my quote, everyone on the Jets knows what I meant",
+      "published_at": "2026-11-06T16:36:41.000Z",
+      "observed_at": "2026-11-06T16:40:19.231Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV",
+        "NYJ"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
