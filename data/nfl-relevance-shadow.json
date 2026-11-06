@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/andy-dalton-tells-eagles-no-thanks-will-sign-with-another-team-soon",
-      "source_name": "Pro Football Talk",
-      "headline": "Andy Dalton tells Eagles \"no thanks,\" will sign with another team soon",
-      "published_at": "2026-10-19T00:01:41.000Z",
-      "observed_at": "2026-10-19T00:10:19.481Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_signs_with",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chargers-have-a-decision-to-make-about-offensive-coordinator-mike-mcdaniel",
       "source_name": "Pro Football Talk",
       "headline": "Chargers have a decision to make about offensive coordinator Mike McDaniel",
@@ -41852,6 +41829,28 @@
         "CHI"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/caleb-downs-has-no-injury-designation-george-pickens-listed-as-questionable",
+      "source_name": "Pro Football Talk",
+      "headline": "Caleb Downs has no injury designation, George Pickens listed as questionable",
+      "published_at": "2026-11-06T20:42:51.000Z",
+      "observed_at": "2026-11-06T20:50:24.836Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "IND"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
