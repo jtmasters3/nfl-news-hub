@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/caleb-williams-returns-from-injury-earns-lfg-player-game-vs-falcons",
-      "source_name": "FOX Sports",
-      "headline": "Bears Star Caleb Williams Plays Stellar Football In Return, Earning LFG Player Of The Game",
-      "published_at": "2026-10-18T22:12:09.000Z",
-      "observed_at": "2026-10-18T22:20:19.621Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "CHI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-deforest-buckner-im-sick-and-tired-of-the-same-song-and-dance-every-year",
-      "source_name": "Pro Football Talk",
-      "headline": "Colts' DeForest Buckner: \"I'm sick and tired of the same song and dance every year\"",
-      "published_at": "2026-10-18T22:29:30.000Z",
-      "observed_at": "2026-10-18T22:30:23.112Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_nfl_draft"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-mccarthy-i-got-stepped-on-before-halftime-team-adjusted-well-without-me",
       "source_name": "Pro Football Talk",
       "headline": "Mike McCarthy: I got stepped on before halftime, team adjusted well without me",
@@ -41858,6 +41814,49 @@
         "CLE"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/bengals-vs-falcons-preview-week-9-madrid-game",
+      "source_name": "NFL.com",
+      "headline": "Bengals vs. Falcons: Three must-know storylines for NFL Week 9 Madrid game",
+      "published_at": "2026-11-06T06:35:19.000Z",
+      "observed_at": "2026-11-06T18:50:23.407Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "CIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-issue-new-statement-on-stadium-that-officially-puts-illinois-back-in-play",
+      "source_name": "Pro Football Talk",
+      "headline": "Bears issue new statement on stadium that officially puts Illinois back in play",
+      "published_at": "2026-11-06T18:39:58.000Z",
+      "observed_at": "2026-11-06T18:50:23.407Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
