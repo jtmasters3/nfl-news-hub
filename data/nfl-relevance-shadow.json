@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/patriots-ground-jets-despite-not-playing-their-best-why-that-s-a-good-sign-going-forward",
-      "source_name": "NFL.com",
-      "headline": "Patriots ground Jets despite not playing their best. Why that's a good sign going forward",
-      "published_at": "2026-10-18T11:31:06.000Z",
-      "observed_at": "2026-10-18T23:50:20.629Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE",
-        "NYJ"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/rams-cardinals-unnecessary-roughness-penalty-explanation",
       "source_name": "FOX Sports",
       "headline": "Why Officiating Expert Disagrees With Penalty That Set Cardinals Up For Game-Winner vs. Rams",
@@ -41855,6 +41832,27 @@
         "LAR"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ben-johnson-jeffery-simmons-has-had-a-dramatic-impact-on-the-bears",
+      "source_name": "Pro Football Talk",
+      "headline": "Ben Johnson: Jeffery Simmons has had a dramatic impact on the Bears",
+      "published_at": "2026-11-06T19:58:30.000Z",
+      "observed_at": "2026-11-06T20:10:19.323Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
