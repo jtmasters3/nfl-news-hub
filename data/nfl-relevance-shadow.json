@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-say-kendal-daniels-is-alert-and-has-movement-in-all-his-extremities",
-      "source_name": "Pro Football Talk",
-      "headline": "Falcons say Kendal Daniels is alert and has movement in all his extremities",
-      "published_at": "2026-10-18T21:13:42.000Z",
-      "observed_at": "2026-10-18T21:20:20.932Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "CHI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ladd-mcconkey-ruled-out-with-head-injury",
       "source_name": "Pro Football Talk",
       "headline": "Ladd McConkey ruled out with a concussion",
@@ -41877,6 +41855,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/boston-bartenders-reflect-tom-brady-impact-boston",
+      "source_name": "FOX Sports",
+      "headline": "Where Everybody Knows His Name: Boston Bartenders Reflect On Tom Brady's Impact",
+      "published_at": "2026-11-06T16:55:14.000Z",
+      "observed_at": "2026-11-06T17:00:26.700Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]

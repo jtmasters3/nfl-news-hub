@@ -731009,7 +731009,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-11-06T16:10:23.495Z",
-      "updated_at": "2026-11-06T16:30:28.839Z",
+      "updated_at": "2026-11-06T17:00:26.700Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -731158,6 +731158,15 @@
         "message": null,
         "at": null,
         "retry_count": 0
+      },
+      "selection": {
+        "destination": "story",
+        "slot_id": "story:2026-11-06T12:00:00-05:00",
+        "selected_at": "2026-11-06T17:00:26.700Z",
+        "window_start": "2026-11-06T16:00:00.000Z",
+        "window_end": "2026-11-06T17:00:00.000Z",
+        "score": 8,
+        "reason": "final_fallback_recent_pool_importance_score_rank"
       }
     },
     "8a2706a7-befc-49f4-9eaf-cff25fda7207": {
@@ -731611,6 +731620,168 @@
         "message": null,
         "at": null,
         "retry_count": 0
+      }
+    },
+    "02fe2cae-23c1-48d1-b796-5fdbdc407ffb": {
+      "story_id": "02fe2cae-23c1-48d1-b796-5fdbdc407ffb",
+      "status": "queued",
+      "merged_into": null,
+      "created_at": "2026-11-06T17:00:36.269Z",
+      "updated_at": "2026-11-06T17:00:26.700Z",
+      "content_package_version": 2,
+      "publishing_preferences": {
+        "instagram_feed": true,
+        "instagram_story": true
+      },
+      "source_story": {
+        "post_headline": "WHERE EVERYBODY KNOWS HIS NAME: BOSTON BARTENDERS REFLECT ON TOM BRADY'S IMPACT",
+        "base_image_url": "https://a57.foxsports.com/statics.foxsports.com/www.foxsports.com/content/uploads/2026/11/1294/728/tombrady-newengland-16x9-1.jpg?ve=1&tl=1",
+        "source_name": "FOX Sports",
+        "source_url": "https://www.foxsports.com/stories/nfl/boston-bartenders-reflect-tom-brady-impact-boston",
+        "category": "league_news",
+        "teams": [],
+        "players": [
+          "Tom Brady"
+        ],
+        "description": "As Tom Brady returns to Gillette Stadium as a broadcaster, we spoke with local bartenders about his lasting legacy on the Boston sports community.",
+        "is_rumor": false
+      },
+      "artwork": {
+        "status": "not_created",
+        "image_url": null,
+        "created_at": null,
+        "provider": null
+      },
+      "validation": {
+        "status": "not_run",
+        "passed": null,
+        "issues": []
+      },
+      "story_artwork": {
+        "status": "not_created",
+        "image_url": null,
+        "storage_key": null,
+        "width": null,
+        "height": null,
+        "mime_type": null,
+        "size_bytes": null,
+        "provider": null,
+        "created_at": null,
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null
+        },
+        "validation": {
+          "status": "not_run",
+          "passed": null,
+          "issues": []
+        }
+      },
+      "approval": {
+        "status": "pending",
+        "decided_at": null,
+        "approved_at": null,
+        "rejected_at": null,
+        "rejection_reason": null,
+        "actor": null,
+        "request_id": null,
+        "decision_source": null
+      },
+      "caption": {
+        "status": "not_created",
+        "text": null,
+        "last_candidate_text": null,
+        "hashtags": [],
+        "attribution_line": null,
+        "source_url": null,
+        "provider": null,
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null
+        },
+        "claim_attempt_count": 0,
+        "created_at": null
+      },
+      "publishing": {
+        "status": "not_posted",
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null,
+          "retry_count": 0
+        },
+        "instagram": {
+          "feed": {
+            "status": "not_posted",
+            "provider": null,
+            "storage_key": null,
+            "jpeg_url": null,
+            "caption_used": null,
+            "container_id": null,
+            "container_created_at": null,
+            "publish_attempted_at": null,
+            "media_id": null,
+            "permalink": null,
+            "published_at": null,
+            "last_http_outcome": null,
+            "last_reconciled_at": null,
+            "buffer": {
+              "post_id": null,
+              "channel_id": null,
+              "status": null,
+              "due_at": null,
+              "sent_at": null
+            }
+          },
+          "story": {
+            "status": "not_posted",
+            "provider": null,
+            "storage_key": null,
+            "jpeg_url": null,
+            "caption_used": null,
+            "container_id": null,
+            "container_created_at": null,
+            "publish_attempted_at": null,
+            "media_id": null,
+            "permalink": null,
+            "published_at": null,
+            "last_http_outcome": null,
+            "last_reconciled_at": null,
+            "buffer": {
+              "post_id": null,
+              "channel_id": null,
+              "status": null,
+              "due_at": null,
+              "sent_at": null
+            }
+          }
+        },
+        "facebook": {
+          "status": "not_posted",
+          "post_id": null,
+          "post_url": null
+        },
+        "posted_at": null
+      },
+      "last_error": {
+        "stage": null,
+        "message": null,
+        "at": null,
+        "retry_count": 0
+      },
+      "selection": {
+        "destination": "feed",
+        "slot_id": "feed:2026-11-06T12:00:00-05:00",
+        "selected_at": "2026-11-06T17:00:26.700Z",
+        "window_start": "2026-11-06T15:00:00.000Z",
+        "window_end": "2026-11-06T17:00:00.000Z",
+        "score": 4,
+        "reason": "importance_score_rank"
       }
     }
   },
@@ -741929,6 +742100,24 @@
       "status": "selected",
       "story_id": "0b65a064-4288-4433-8981-01cfb3054173",
       "processed_at": "2026-11-06T16:00:23.474Z"
+    },
+    "feed:2026-11-06T12:00:00-05:00": {
+      "destination": "feed",
+      "slot_time": "2026-11-06T17:00:00.000Z",
+      "window_start": "2026-11-06T15:00:00.000Z",
+      "window_end": "2026-11-06T17:00:00.000Z",
+      "status": "selected",
+      "story_id": "02fe2cae-23c1-48d1-b796-5fdbdc407ffb",
+      "processed_at": "2026-11-06T17:00:26.700Z"
+    },
+    "story:2026-11-06T12:00:00-05:00": {
+      "destination": "story",
+      "slot_time": "2026-11-06T17:00:00.000Z",
+      "window_start": "2026-11-06T16:00:00.000Z",
+      "window_end": "2026-11-06T17:00:00.000Z",
+      "status": "selected",
+      "story_id": "6df7afc7-ada9-4b96-a220-f23ae2ef090f",
+      "processed_at": "2026-11-06T17:00:26.700Z"
     }
   }
 }
