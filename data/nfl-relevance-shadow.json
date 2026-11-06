@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/saints-survive-j-j-mccarthy-giants-in-34-27-win",
-      "source_name": "Pro Football Talk",
-      "headline": "Saints survive J.J. McCarthy, Giants in 34-27 win",
-      "published_at": "2026-10-18T20:35:58.000Z",
-      "observed_at": "2026-10-18T20:40:19.225Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NO",
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-beat-up-eagles-25-14",
       "source_name": "Pro Football Talk",
       "headline": "Panthers beat up Eagles 25-14",
@@ -41879,6 +41857,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-has-not-yet-reinstated-brandon-aiyuk-from-reserve-left-squad",
+      "source_name": "Pro Football Talk",
+      "headline": "NFL has not yet reinstated Brandon Aiyuk from reserve/left squad list",
+      "published_at": "2026-11-06T15:38:03.000Z",
+      "observed_at": "2026-11-06T15:50:17.714Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
