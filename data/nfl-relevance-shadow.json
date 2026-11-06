@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ladd-mcconkey-ruled-out-with-head-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "Ladd McConkey ruled out with a concussion",
-      "published_at": "2026-10-18T21:19:52.000Z",
-      "observed_at": "2026-10-18T21:30:26.128Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC",
-        "LAC"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-allens-td-pass-gives-bills-13-7-lead",
       "source_name": "Pro Football Talk",
       "headline": "Josh Allen's TD pass gives Bills 13-7 lead",
@@ -41872,6 +41850,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/jonathan-taylor-landing-spots-ranking-top-7-trade-fits-colts-pro-bowl-running-back",
+      "source_name": "NFL.com",
+      "headline": "Jonathan Taylor landing spots: Ranking top 7 trade fits for Colts Pro Bowl running back",
+      "published_at": "2026-11-06T05:00:22.000Z",
+      "observed_at": "2026-11-06T17:10:25.287Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
