@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/c-j-gardner-johnson-ive-got-to-control-my-emotions",
-      "source_name": "Pro Football Talk",
-      "headline": "C.J. Gardner-Johnson: \"I've got to control my emotions\"",
-      "published_at": "2026-10-19T01:32:50.000Z",
-      "observed_at": "2026-10-19T01:40:20.514Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "LV"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/john-harbaugh-denies-benching-cam-skattebo-after-giants-loss-saints",
       "source_name": "FOX Sports",
       "headline": "John Harbaugh Denies Benching Cam Skattebo After Giants’ Loss To Saints",
@@ -41860,6 +41838,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/brady-returns-top-5-tom-brady-rob-gronkowski-plays-gillette-stadium",
+      "source_name": "FOX Sports",
+      "headline": "Brady Returns: The Top 5 Tom Brady-Rob Gronkowski Plays At Gillette Stadium",
+      "published_at": "2026-11-06T22:09:18.000Z",
+      "observed_at": "2026-11-06T22:20:17.004Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
