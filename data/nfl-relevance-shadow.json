@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/john-harbaugh-denies-benching-cam-skattebo-after-giants-loss-saints",
-      "source_name": "FOX Sports",
-      "headline": "John Harbaugh Denies Benching Cam Skattebo After Giants’ Loss To Saints",
-      "published_at": "2026-10-19T02:01:35.000Z",
-      "observed_at": "2026-10-19T02:10:21.997Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NO",
-        "NYG",
-        "NYJ"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-k-blake-grupe-left-sofi-stadium-with-crutches-and-a-brace-on-his-leg",
       "source_name": "Pro Football Talk",
       "headline": "Rams K Blake Grupe left SoFi Stadium with crutches and a brace on his leg",
@@ -41855,6 +41832,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kyle-shanahan-on-brandon-aiyuks-meeting-with-49ers-i-couldnt-care-less",
+      "source_name": "Pro Football Talk",
+      "headline": "Kyle Shanahan on Brandon Aiyuk's meeting with 49ers: I couldn't care less",
+      "published_at": "2026-11-06T22:16:54.000Z",
+      "observed_at": "2026-11-06T22:30:24.510Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
