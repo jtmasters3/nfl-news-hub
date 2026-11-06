@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-week-6-defining-stats-mahomes-matches-brady-travis-hunter-history",
-      "source_name": "FOX Sports",
-      "headline": "NFL Week 6 Defining Stats: Mahomes Matches Brady, Travis Hunter Makes History",
-      "published_at": "2026-10-19T03:56:43.000Z",
-      "observed_at": "2026-10-19T04:00:23.605Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/cowboys-packers-sunday-night-football-takeaways",
       "source_name": "FOX Sports",
       "headline": "Stay Hot, Wisconsin: 3 Takeaways As Packers Continue Win Streak In Victory vs. Cowboys",
@@ -41842,6 +41825,27 @@
         "SF"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-unexpectedly-rule-out-te-terrance-ferguson",
+      "source_name": "Pro Football Talk",
+      "headline": "Rams unexpectedly rule out TE Terrance Ferguson",
+      "published_at": "2026-11-06T23:42:44.000Z",
+      "observed_at": "2026-11-06T23:50:16.831Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR"
+      ],
+      "detected_category": "coaching",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
