@@ -2,70 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-experts-week-6-takeaways-j-j-mccarthy-or-jameis-winston-are-the-browns-good",
-      "source_name": "NFL.com",
-      "headline": "NFL experts' Week 6 takeaways: J.J. McCarthy or Jameis Winston? Are the Browns good?",
-      "published_at": "2026-10-18T09:46:07.000Z",
-      "observed_at": "2026-10-18T22:00:25.084Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kenneth-walker-scores-twice-chiefs-lead-19-3-at-halftime",
-      "source_name": "Pro Football Talk",
-      "headline": "Kenneth Walker scores twice, Chiefs lead 19-3 at halftime",
-      "published_at": "2026-10-18T21:51:21.000Z",
-      "observed_at": "2026-10-18T22:00:25.084Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bills-tied-with-raiders-13-13-at-halftime-after-c-j-gardner-johnsons-ejection",
-      "source_name": "Pro Football Talk",
-      "headline": "Bills tied with Raiders 13-13 at halftime after C.J. Gardner-Johnson's ejection",
-      "published_at": "2026-10-18T21:49:25.000Z",
-      "observed_at": "2026-10-18T22:00:25.084Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "LV"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cam-skattebo-i-got-punished-for-fumble-and-i-understand-why-giants-did-that",
       "source_name": "Pro Football Talk",
       "headline": "Cam Skattebo: I got punished for fumble and I understand why Giants did that",
@@ -41865,6 +41801,70 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/san-francisco-49ers-brandon-aiyuk-reinstatement-bonuses",
+      "source_name": "FOX Sports",
+      "headline": "NFL Reportedly Tells Brandon Aiyuk He Owes 49ers About $13 Million",
+      "published_at": "2026-11-06T18:09:37.000Z",
+      "observed_at": "2026-11-06T18:20:18.690Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/new-york-jets-kansas-city-chiefs-garrett-wilson-breece-hall-injury",
+      "source_name": "FOX Sports",
+      "headline": "Breece Hall Returns After 5-Game Absence, But Jets Rule Out Garrett Wilson",
+      "published_at": "2026-11-06T17:42:56.000Z",
+      "observed_at": "2026-11-06T18:20:18.690Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG",
+        "NYJ"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jerry-jones-scrambles-to-rectify-his-comments-about-coaching-pay",
+      "source_name": "Pro Football Talk",
+      "headline": "Jerry Jones scrambles to rectify his comments about coaching pay",
+      "published_at": "2026-11-06T18:17:24.000Z",
+      "observed_at": "2026-11-06T18:20:18.690Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
