@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/ladd-mcconkey-ruled-out-concussion-vs-chiefs",
-      "source_name": "FOX Sports",
-      "headline": "Chargers WR Ladd McConkey Ruled Out Departs Game vs. Chiefs Early Due To Concussion",
-      "published_at": "2026-10-18T21:41:40.000Z",
-      "observed_at": "2026-10-18T21:50:18.589Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC",
-        "LAC"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-experts-week-6-takeaways-j-j-mccarthy-or-jameis-winston-are-the-browns-good",
       "source_name": "NFL.com",
       "headline": "NFL experts' Week 6 takeaways: J.J. McCarthy or Jameis Winston? Are the Browns good?",
@@ -41870,6 +41848,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-myles-garrett-on-track-to-be-activated",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Myles Garrett on track to be activated",
+      "published_at": "2026-11-06T17:37:42.000Z",
+      "observed_at": "2026-11-06T17:50:19.586Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
