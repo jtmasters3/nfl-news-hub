@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jim-harbaugh-on-mike-mcdaniel-well-look-at-everything-offense-needs-to-be-addressed",
-      "source_name": "Pro Football Talk",
-      "headline": "Jim Harbaugh on Mike McDaniel: We'll look at everything, offense needs to be addressed",
-      "published_at": "2026-10-19T00:48:00.000Z",
-      "observed_at": "2026-10-19T00:50:18.514Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "coaching",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jordan-love-touchdown-pass-gives-packers-7-0-lead-over-cowboys",
       "source_name": "Pro Football Talk",
       "headline": "Jordan Love touchdown pass gives Packers 7-0 lead over Cowboys",
@@ -41850,6 +41833,27 @@
       "confidence": "high",
       "detected_teams": [
         "PHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patriots-list-eight-players-as-questionable-to-play-after-ruling-out-a-j-brown-treveyon-henderson",
+      "source_name": "Pro Football Talk",
+      "headline": "Patriots list eight players as questionable after ruling out A.J. Brown, TreVeyon Henderson",
+      "published_at": "2026-11-06T21:20:15.000Z",
+      "observed_at": "2026-11-06T21:30:21.787Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
