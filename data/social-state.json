@@ -738934,20 +738934,21 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-11-07T18:50:25.462Z",
-      "updated_at": "2026-11-07T20:00:24.197Z",
+      "updated_at": "2026-11-07T22:00:37.142Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
         "instagram_story": true
       },
       "source_story": {
-        "post_headline": "NFL TRADE DEADLINE RUMORS: COLTS BUSY? DERRICK HENRY STATUS? STAR TE MOVE?",
+        "post_headline": "TRADE TALK: LATEST ON COLTS QB DANIEL JONES",
         "base_image_url": "https://a57.foxsports.com/statics.foxsports.com/www.foxsports.com/content/uploads/2026/11/1294/728/a686e752-colts2.jpg?ve=1&tl=1",
         "source_name": "FOX Sports",
         "source_url": "https://www.foxsports.com/stories/nfl/nfl-trade-deadline-rumors-colts-jonathan-taylor-ravens-derrick-henry",
         "category": "trade",
         "teams": [
-          "Indianapolis Colts"
+          "Indianapolis Colts",
+          "Los Angeles Chargers"
         ],
         "players": [],
         "description": "Here's the latest buzz around the NFL regarding the 2026 NFL trade deadline.",
@@ -740606,7 +740607,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-11-07T20:50:31.061Z",
-      "updated_at": "2026-11-07T21:00:23.669Z",
+      "updated_at": "2026-11-07T22:00:24.793Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -740756,13 +740757,13 @@
         "retry_count": 0
       },
       "selection": {
-        "destination": "feed",
-        "slot_id": "feed:2026-11-07T16:00:00-05:00",
-        "selected_at": "2026-11-07T21:00:23.669Z",
-        "window_start": "2026-11-07T19:00:00.000Z",
-        "window_end": "2026-11-07T21:00:00.000Z",
+        "destination": "story",
+        "slot_id": "story:2026-11-07T17:00:00-05:00",
+        "selected_at": "2026-11-07T22:00:24.793Z",
+        "window_start": "2026-11-07T21:00:00.000Z",
+        "window_end": "2026-11-07T22:00:00.000Z",
         "score": 4,
-        "reason": "importance_score_rank"
+        "reason": "fallback_recent_pool_importance_score_rank"
       }
     },
     "28c10da3-ad2b-4eb5-87fe-ceec7499edb5": {
@@ -752390,6 +752391,15 @@
       "status": "no_candidate",
       "story_id": null,
       "processed_at": "2026-11-07T21:00:23.669Z"
+    },
+    "story:2026-11-07T17:00:00-05:00": {
+      "destination": "story",
+      "slot_time": "2026-11-07T22:00:00.000Z",
+      "window_start": "2026-11-07T21:00:00.000Z",
+      "window_end": "2026-11-07T22:00:00.000Z",
+      "status": "selected",
+      "story_id": "17629ad1-fc7f-42d5-a844-dba89936b62e",
+      "processed_at": "2026-11-07T22:00:24.793Z"
     }
   }
 }
