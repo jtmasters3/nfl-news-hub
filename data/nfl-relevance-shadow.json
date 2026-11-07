@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/josh-allen-tied-a-jim-kelly-record-with-a-throw-his-teammates-could-barely-believe",
-      "source_name": "NFL.com",
-      "headline": "Josh Allen tied a Jim Kelly record with a throw his teammates could barely believe",
-      "published_at": "2026-10-19T09:46:05.000Z",
-      "observed_at": "2026-10-19T12:50:19.574Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/mike-mcdaniel-s-chargers-tenure-tenuous-after-latest-offensive-disaster-vs-chiefs",
       "source_name": "NFL.com",
       "headline": "Mike McDaniel's Chargers tenure tenuous after latest offensive disaster vs. Chiefs",
@@ -41832,6 +41815,28 @@
         "NYG",
         "NYJ",
         "PHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/who-will-play-receiver-for-the-commanders-against-the-rams-great-question",
+      "source_name": "NFL.com",
+      "headline": "Who will play receiver for the Commanders against the Rams? Great question",
+      "published_at": "2026-11-06T09:16:05.000Z",
+      "observed_at": "2026-11-07T18:30:21.984Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR",
+        "WAS"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
