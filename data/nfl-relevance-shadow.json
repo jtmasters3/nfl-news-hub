@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/is-the-packers-defense-elite-even-without-micah-parsons-they-look-like-it",
-      "source_name": "NFL.com",
-      "headline": "Is the Packers' defense elite? Even without Micah Parsons, they look like it",
-      "published_at": "2026-10-19T10:16:06.000Z",
-      "observed_at": "2026-10-19T12:40:19.578Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/the-browns-keep-winning-ugly-and-they-usually-come-alive-in-the-fourth-quarter",
       "source_name": "NFL.com",
       "headline": "The Browns keep winning ugly, and they usually come alive in the fourth quarter",
@@ -41835,6 +41814,28 @@
         "BAL"
       ],
       "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/rams-myles-garrett-knee-activated-injured-reserve-commanders",
+      "source_name": "NFL.com",
+      "headline": "Rams activate Myles Garrett (knee) from injured reserve ahead of Sunday's game vs. Commanders",
+      "published_at": "2026-11-07T05:44:08.000Z",
+      "observed_at": "2026-11-07T18:00:25.620Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR",
+        "WAS"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
