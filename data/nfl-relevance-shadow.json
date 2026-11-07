@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/philadelphia-eagles-jalen-hurts-blood-clots-lungs",
-      "source_name": "FOX Sports",
-      "headline": "Eagles QB Jalen Hurts Ruled Out For The Season After More Blood Clots Discovered",
-      "published_at": "2026-10-19T14:38:32.000Z",
-      "observed_at": "2026-10-19T14:50:22.006Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bengals-put-tanner-hudson-on-ir",
       "source_name": "Pro Football Talk",
       "headline": "Bengals put Tanner Hudson on IR",
@@ -41833,6 +41812,28 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/rob-gronkowsi-patriots-hall-of-fame-speech-nfl-tight-end-stats",
+      "source_name": "FOX Sports",
+      "headline": "Hungover Draft Visit? Top Moments From Rob Gronkowski's Patriots HOF Speech",
+      "published_at": "2026-11-07T20:48:34.000Z",
+      "observed_at": "2026-11-07T20:50:18.936Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE"
+      ],
+      "detected_category": "draft",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:draft"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
