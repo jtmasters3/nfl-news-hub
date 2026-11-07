@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/liam-coen-on-brian-thomas-not-playing-in-second-half-guys-have-to-make-plays",
-      "source_name": "Pro Football Talk",
-      "headline": "Liam Coen on Brian Thomas not playing in second half: Guys have to make plays",
-      "published_at": "2026-10-19T12:18:31.000Z",
-      "observed_at": "2026-10-19T12:30:23.890Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/is-the-packers-defense-elite-even-without-micah-parsons-they-look-like-it",
       "source_name": "NFL.com",
       "headline": "Is the Packers' defense elite? Even without Micah Parsons, they look like it",
@@ -41831,6 +41814,27 @@
         "LAR"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/report-ravens-not-expected-to-trade-rb-derrick-henry-before-nov-10-deadline",
+      "source_name": "NFL.com",
+      "headline": "Report: Ravens not expected to trade RB Derrick Henry before Nov. 10 deadline",
+      "published_at": "2026-11-07T05:12:25.000Z",
+      "observed_at": "2026-11-07T17:20:20.484Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
