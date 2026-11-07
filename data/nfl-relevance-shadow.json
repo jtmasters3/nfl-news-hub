@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/colts-fire-gm-chris-ballard",
-      "source_name": "NFL.com",
-      "headline": "Colts fire GM Chris Ballard after 2-4 start to 2026 season",
-      "published_at": "2026-10-19T01:45:00.000Z",
-      "observed_at": "2026-10-19T14:00:26.935Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-signing-andy-dalton-cutting-cooper-rush",
-      "source_name": "Pro Football Talk",
-      "headline": "Falcons signing Andy Dalton, cutting Cooper Rush",
-      "published_at": "2026-10-19T13:53:45.000Z",
-      "observed_at": "2026-10-19T14:00:26.935Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-fire-gm-chris-ballard",
       "source_name": "Pro Football Talk",
       "headline": "Colts fire GM Chris Ballard",
@@ -41828,6 +41785,48 @@
       "confidence": "high",
       "detected_teams": [
         "NO"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/commanders-activate-dt-johnny-newton-from-injured-reserve",
+      "source_name": "Pro Football Talk",
+      "headline": "Commanders activate DT Johnny Newton from injured reserve",
+      "published_at": "2026-11-07T19:33:43.000Z",
+      "observed_at": "2026-11-07T19:40:17.121Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "WAS"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/joe-burrow-can-become-third-quarterback-with-four-or-more-td-passes-in-four-straight-games",
+      "source_name": "Pro Football Talk",
+      "headline": "Joe Burrow can become third quarterback with four or more TD passes in four straight games",
+      "published_at": "2026-11-07T19:32:26.000Z",
+      "observed_at": "2026-11-07T19:40:17.121Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
