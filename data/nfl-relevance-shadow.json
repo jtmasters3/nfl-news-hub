@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-te-tommy-tremble-i-taunted-cooper-dejean-because-of-his-egregious-hit-on-teammate",
-      "source_name": "Pro Football Talk",
-      "headline": "Panthers TE Tommy Tremble: I taunted Cooper DeJean because of his \"egregious\" hit on teammate",
-      "published_at": "2026-10-19T10:45:58.000Z",
-      "observed_at": "2026-10-19T10:50:20.932Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/dak-prescott-cowboys-offense-didn-t-hold-our-own-in-loss-to-packers",
       "source_name": "NFL.com",
       "headline": "Dak Prescott: Cowboys offense 'didn't hold our own' in loss to Packers",
@@ -41844,6 +41822,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patrick-mahomes-is-closing-in-on-the-record-for-most-td-passes-in-a-qbs-first-10-years",
+      "source_name": "Pro Football Talk",
+      "headline": "Patrick Mahomes is closing in on the record for most TD passes in a QB's first 10 years",
+      "published_at": "2026-11-07T09:14:34.000Z",
+      "observed_at": "2026-11-07T09:20:17.476Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
