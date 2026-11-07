@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/2026-nfl-fantasy-football-waiver-wire-week-7-rookie-wr-germie-bernard-headlines-top-15-targets",
-      "source_name": "NFL.com",
-      "headline": "2026 NFL fantasy football waiver wire, Week 7: Rookie WR Germie Bernard headlines top 15 targets",
-      "published_at": "2026-10-19T03:38:28.000Z",
-      "observed_at": "2026-10-19T15:50:20.260Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "fantasy",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/vikings-will-be-active-ahead-of-the-nfl-trade-deadline-what-moves-are-realistic",
-      "source_name": "NFL.com",
-      "headline": "Vikings will be active ahead of the NFL trade deadline. What moves are realistic?",
-      "published_at": "2026-10-19T11:01:05.000Z",
-      "observed_at": "2026-10-19T16:00:35.359Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/sam-darnold-is-getting-hit-too-much-the-seahawks-problems-go-beyond-who-s-blocking",
       "source_name": "NFL.com",
       "headline": "Sam Darnold is getting hit too much. The Seahawks' problems go beyond who's blocking",
@@ -41843,6 +41805,50 @@
       "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mason-mccormick-wasnt-fined-for-dumping-jared-verse-on-his-head",
+      "source_name": "Pro Football Talk",
+      "headline": "Mason McCormick wasn't fined for dumping Jared Verse on his head",
+      "published_at": "2026-11-07T21:45:57.000Z",
+      "observed_at": "2026-11-07T21:50:22.877Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-activate-demarcus-robinson-elevate-khadarel-hodge",
+      "source_name": "Pro Football Talk",
+      "headline": "49ers activate Demarcus Robinson, elevate KhaDarel Hodge",
+      "published_at": "2026-11-07T21:40:22.000Z",
+      "observed_at": "2026-11-07T21:50:22.877Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV",
+        "SF"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:roster_move"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
