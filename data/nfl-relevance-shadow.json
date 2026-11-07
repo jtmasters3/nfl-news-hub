@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-fire-gm-chris-ballard",
-      "source_name": "Pro Football Talk",
-      "headline": "Colts fire GM Chris Ballard",
-      "published_at": "2026-10-19T13:49:38.000Z",
-      "observed_at": "2026-10-19T14:00:26.935Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/los-angeles-chargers-jim-harbaugh-chiefs-loss",
-      "source_name": "FOX Sports",
-      "headline": "Chargers Will 'Evaluate Every Part Of What We're Doing' After 0-6 Start",
-      "published_at": "2026-10-19T14:01:54.000Z",
-      "observed_at": "2026-10-19T14:30:25.377Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC",
-        "LAC"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/c-j-gardner-johnson-faces-a-potential-suspension-for-spitting",
       "source_name": "Pro Football Talk",
       "headline": "C.J. Gardner-Johnson faces a potential suspension for spitting",
@@ -41829,6 +41786,46 @@
         "CIN"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/philip-rivers-completes-high-school-season-confirms-interview-with-nc-state",
+      "source_name": "Pro Football Talk",
+      "headline": "Philip Rivers completes high-school season, confirms interview with NC State",
+      "published_at": "2026-11-07T19:55:10.000Z",
+      "observed_at": "2026-11-07T20:00:24.197Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "coaching",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-rule-jauan-jennings-out-for-monday-night",
+      "source_name": "Pro Football Talk",
+      "headline": "Vikings rule Jauan Jennings out for Monday night",
+      "published_at": "2026-11-07T19:53:01.000Z",
+      "observed_at": "2026-11-07T20:00:24.197Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "MIN",
+        "SF"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
