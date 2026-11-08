@@ -2,48 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/zach-sieler-says-he-wants-to-stay-with-dolphins-as-trade-deadline-draws-near",
-      "source_name": "NFL.com",
-      "headline": "Zach Sieler says he wants to stay with Dolphins as trade deadline draws near",
-      "published_at": "2026-10-20T02:38:00.000Z",
-      "observed_at": "2026-10-20T14:50:20.581Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIA"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/chargers-considering-simplified-offense-playbook-players-can-understand",
-      "source_name": "NFL.com",
-      "headline": "Chargers considering simplified offense, playbook 'players can understand'",
-      "published_at": "2026-10-20T12:16:05.000Z",
-      "observed_at": "2026-10-20T15:10:23.132Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-plan-to-replace-k-blake-grupe-in-next-day-or-two",
       "source_name": "Pro Football Talk",
       "headline": "Rams plan to replace K Blake Grupe in next day or two",
@@ -41862,6 +41820,49 @@
       "detected_teams": [
         "KC",
         "NYJ"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-dominating-raiders-lead-21-10-at-halftime",
+      "source_name": "Pro Football Talk",
+      "headline": "49ers dominating Raiders, lead 21-10 at halftime",
+      "published_at": "2026-11-08T22:41:25.000Z",
+      "observed_at": "2026-11-08T22:50:18.561Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV",
+        "SF"
+      ],
+      "detected_category": "live_game_state",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/puka-nacua-suffered-knee-injury-on-final-offensive-play-of-game",
+      "source_name": "Pro Football Talk",
+      "headline": "Puka Nacua suffered knee injury on final offensive play of game",
+      "published_at": "2026-11-08T22:40:09.000Z",
+      "observed_at": "2026-11-08T22:50:18.561Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR"
       ],
       "detected_category": "injury",
       "nfl_evidence": [
