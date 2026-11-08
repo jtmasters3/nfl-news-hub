@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-macdonald-calls-zach-charbonnets-return-this-week-a-possibility",
-      "source_name": "Pro Football Talk",
-      "headline": "Mike Macdonald calls Zach Charbonnet's return this week \"a possibility\"",
-      "published_at": "2026-10-19T23:35:16.000Z",
-      "observed_at": "2026-10-19T23:40:17.655Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/big-bets-report-66-18-leg-parlay-cashes-more-than-203k",
       "source_name": "FOX Sports",
       "headline": "Big Bets Report: $66 On 18-leg Parlay Cashes For More Than $203k",
@@ -41836,6 +41815,23 @@
       "headline": "Philip Rivers, NC State are finalizing a deal to make him the next head coach",
       "published_at": "2026-11-08T17:37:17.000Z",
       "observed_at": "2026-11-08T17:50:19.201Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "coaching",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/college-football/philip-rivers-nc-state-head-coach-hire-details",
+      "source_name": "FOX Sports",
+      "headline": "A Homecoming At NC State: Philip Rivers Reportedly Agrees To Become Wolfpack's Head Coach",
+      "published_at": "2026-11-08T17:58:16.000Z",
+      "observed_at": "2026-11-08T18:10:20.207Z",
       "decision": "keep",
       "classification": "ambiguous",
       "confidence": "low",
