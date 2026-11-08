@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/for-andy-dalton-the-falcons-made-the-most-sense",
-      "source_name": "Pro Football Talk",
-      "headline": "For Andy Dalton, the Falcons made the most sense",
-      "published_at": "2026-10-19T17:10:03.000Z",
-      "observed_at": "2026-10-19T17:20:19.453Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-payton-says-he-hasnt-considered-benching-bo-nix",
       "source_name": "Pro Football Talk",
       "headline": "Sean Payton says he hasn't considered benching Bo Nix",
@@ -41863,6 +41841,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-dfs-week-9-best-picks-lineup-advice-value-plays",
+      "source_name": "FOX Sports",
+      "headline": "NFL DFS Week 9: Best Picks, Lineup Advice and Value Plays",
+      "published_at": "2026-11-08T06:33:57.000Z",
+      "observed_at": "2026-11-08T06:50:16.400Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "fantasy",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
