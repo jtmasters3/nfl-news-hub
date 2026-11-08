@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/the-goal-of-team-doctors-shouldnt-be-to-help-players-be-available",
-      "source_name": "Pro Football Talk",
-      "headline": "The goal of team doctors shouldn't be to help players \"be available\"",
-      "published_at": "2026-10-19T22:20:12.000Z",
-      "observed_at": "2026-10-19T22:30:22.659Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brandon-mcmanus-matt-prater-to-work-out-for-rams",
       "source_name": "Pro Football Talk",
       "headline": "Brandon McManus, Matt Prater to work out for Rams",
@@ -41839,6 +41822,28 @@
       "confidence": "high",
       "detected_teams": [
         "ATL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/george-pickens-joey-porter-jr-will-not-play-for-the-cowboys",
+      "source_name": "Pro Football Talk",
+      "headline": "George Pickens, Joey Porter Jr. will not play for the Cowboys",
+      "published_at": "2026-11-08T16:48:51.000Z",
+      "observed_at": "2026-11-08T17:00:25.378Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "IND"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
