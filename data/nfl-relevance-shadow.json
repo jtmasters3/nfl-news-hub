@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/texans-plan-for-tank-dell-to-play-in-week-7",
-      "source_name": "Pro Football Talk",
-      "headline": "Texans plan for Tank Dell to play in Week 7",
-      "published_at": "2026-10-19T20:20:09.000Z",
-      "observed_at": "2026-10-19T20:30:31.767Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "HOU",
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/giants-john-harbaugh-week-7-qb1-decision-between-jameis-winston-j-j-mccarthy",
       "source_name": "NFL.com",
       "headline": "Giants' John Harbaugh 'honing in on' QB1 decision between Jameis Winston, J.J. McCarthy",
@@ -41860,6 +41838,27 @@
       ],
       "reason_codes": [
         "college_marker_no_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/texans-are-resisting-trade-interest-in-players-like-jadeveon-clowney",
+      "source_name": "Pro Football Talk",
+      "headline": "Texans are resisting trade interest in players like Jadeveon Clowney",
+      "published_at": "2026-11-08T13:34:57.000Z",
+      "observed_at": "2026-11-08T13:40:18.890Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "HOU"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
