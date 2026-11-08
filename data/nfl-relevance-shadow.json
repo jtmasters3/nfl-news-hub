@@ -2,91 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/commanders-49ers-on-monday-night-football-what-we-learned-from-san-francisco-s-23-17-win",
-      "source_name": "NFL.com",
-      "headline": "Commanders-49ers on 'Monday Night Football': What We Learned from San Francisco's 23-17 win",
-      "published_at": "2026-10-20T03:22:07.000Z",
-      "observed_at": "2026-10-20T03:30:29.336Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF",
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/stephen-jones-brian-schottenheimer-absolutely-has-full-support-of-ownership",
-      "source_name": "Pro Football Talk",
-      "headline": "Stephen Jones: Brian Schottenheimer \"absolutely\" has full support of ownership",
-      "published_at": "2026-10-20T03:20:33.000Z",
-      "observed_at": "2026-10-20T03:30:29.336Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/josh-allen-brilliance-rams-problems-caleb-williams-jalen-hurts",
-      "source_name": "FOX Sports",
-      "headline": "NFL Best And Worst: Josh Allen Puts On A Show; The Rams Hit A New Low",
-      "published_at": "2026-10-20T03:31:11.000Z",
-      "observed_at": "2026-10-20T03:40:20.540Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/whats-next-for-dan-quinn",
-      "source_name": "Pro Football Talk",
-      "headline": "What's next for Dan Quinn?",
-      "published_at": "2026-10-20T03:34:01.000Z",
-      "observed_at": "2026-10-20T03:40:20.540Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "WAS"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/monday-night-football-49ers-hang-on-for-23-17-win-over-commanders",
       "source_name": "Pro Football Talk",
       "headline": "Monday Night Football: 49ers hang on for 23-17 win over Commanders",
@@ -41838,6 +41753,89 @@
         "NO"
       ],
       "detected_category": "live_game_state",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaxon-smith-njigba-can-do-something-no-one-has-done-since-1960",
+      "source_name": "Pro Football Talk",
+      "headline": "Jaxon Smith-Njigba can do something no one has done since 1960",
+      "published_at": "2026-11-08T19:35:40.000Z",
+      "observed_at": "2026-11-08T19:40:17.351Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/broncos-lead-panthers-13-7-at-the-half",
+      "source_name": "Pro Football Talk",
+      "headline": "Broncos lead Panthers 13-7 at the half",
+      "published_at": "2026-11-08T19:35:32.000Z",
+      "observed_at": "2026-11-08T19:40:17.351Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR",
+        "DEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patrick-mahomes-hurts-elbow-but-returns-before-halftime-chiefs-lead-14-12",
+      "source_name": "Pro Football Talk",
+      "headline": "Patrick Mahomes hurts elbow, but returns before halftime; Chiefs lead 14-12",
+      "published_at": "2026-11-08T19:34:54.000Z",
+      "observed_at": "2026-11-08T19:40:17.351Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC",
+        "NYJ"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/commanders-have-10-6-lead-over-rams-at-halftime",
+      "source_name": "Pro Football Talk",
+      "headline": "Commanders have 10-6 lead over Rams at halftime",
+      "published_at": "2026-11-08T19:32:13.000Z",
+      "observed_at": "2026-11-08T19:40:17.351Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR",
+        "WAS"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
