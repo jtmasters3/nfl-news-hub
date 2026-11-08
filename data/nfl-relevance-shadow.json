@@ -2,48 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nick-sirianni-sean-mannion-will-remain-the-play-caller",
-      "source_name": "Pro Football Talk",
-      "headline": "Nick Sirianni: Sean Mannion will remain the play caller",
-      "published_at": "2026-10-19T20:10:50.000Z",
-      "observed_at": "2026-10-19T20:20:19.408Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-place-k-blake-grupe-on-ir",
-      "source_name": "Pro Football Talk",
-      "headline": "Rams place K Blake Grupe on IR",
-      "published_at": "2026-10-19T20:06:04.000Z",
-      "observed_at": "2026-10-19T20:20:19.408Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/texans-plan-for-tank-dell-to-play-in-week-7",
       "source_name": "Pro Football Talk",
       "headline": "Texans plan for Tank Dell to play in Week 7",
@@ -41866,6 +41824,42 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/week-9-injuries-sunday-pregame-2026-nfl-season",
+      "source_name": "NFL.com",
+      "headline": "NFL Week 9 injuries to monitor for Sunday's games",
+      "published_at": "2026-11-08T01:22:49.000Z",
+      "observed_at": "2026-11-08T13:30:21.355Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-vick-norfolk-state-lose-after-his-order-was-ignored",
+      "source_name": "Pro Football Talk",
+      "headline": "Mike Vick, Norfolk State lose after his order was ignored",
+      "published_at": "2026-11-08T13:19:31.000Z",
+      "observed_at": "2026-11-08T13:30:21.355Z",
+      "decision": "reject",
+      "classification": "college_football",
+      "confidence": "medium",
+      "detected_teams": [],
+      "detected_category": "coaching",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [
+        "college_football_phrase"
+      ],
+      "reason_codes": [
+        "college_marker_no_nfl_evidence"
       ]
     }
   ]
