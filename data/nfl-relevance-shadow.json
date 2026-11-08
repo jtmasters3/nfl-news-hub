@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/giants-john-harbaugh-week-7-qb1-decision-between-jameis-winston-j-j-mccarthy",
-      "source_name": "NFL.com",
-      "headline": "Giants' John Harbaugh 'honing in on' QB1 decision between Jameis Winston, J.J. McCarthy",
-      "published_at": "2026-10-19T08:25:55.000Z",
-      "observed_at": "2026-10-19T20:40:21.552Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patriots-place-romeo-doubs-on-injured-reserve",
       "source_name": "Pro Football Talk",
       "headline": "Patriots place Romeo Doubs on injured reserve",
@@ -41859,6 +41838,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/in-a-dress-rehearsal-for-canton-rob-gronkowski-brings-hall-of-fame-cheer-to-gillette-stadium",
+      "source_name": "NFL.com",
+      "headline": "In a dress rehearsal for Canton, Rob Gronkowski brings Hall of Fame cheer to Gillette Stadium",
+      "published_at": "2026-11-08T01:16:09.000Z",
+      "observed_at": "2026-11-08T13:50:16.634Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
