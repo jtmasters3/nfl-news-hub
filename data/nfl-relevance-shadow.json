@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/the-playoffs-could-ve-broken-renardo-green-instead-the-49ers-cb-is-just-getting-stronger",
-      "source_name": "NFL.com",
-      "headline": "The playoffs could've broken Renardo Green. Instead, the 49ers CB is just getting stronger",
-      "published_at": "2026-10-19T10:16:06.000Z",
-      "observed_at": "2026-10-19T22:00:27.959Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/jameis-winston-surprises-survivors-super-gesture-during-breast-cancer-awareness-month",
       "source_name": "FOX Sports",
       "headline": "Jameis Winston's Super Surprise For Breast Cancer Survivors: 'Nothing Short Of Amazing'",
@@ -41843,6 +41822,28 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-vikings-to-sign-odell-beckham-jr-to-53-man-roster",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Vikings to sign Odell Beckham Jr. to 53-man roster",
+      "published_at": "2026-11-08T16:20:41.000Z",
+      "observed_at": "2026-11-08T16:30:20.422Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:roster_move"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
