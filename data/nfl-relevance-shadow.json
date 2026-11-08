@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-ravens-re-sign-k-jake-moody-to-practice-squad",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Ravens re-sign K Jake Moody to practice squad",
-      "published_at": "2026-10-19T23:19:51.000Z",
-      "observed_at": "2026-10-19T23:30:23.426Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-macdonald-calls-zach-charbonnets-return-this-week-a-possibility",
       "source_name": "Pro Football Talk",
       "headline": "Mike Macdonald calls Zach Charbonnet's return this week \"a possibility\"",
@@ -41851,6 +41828,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/philip-rivers-nc-state-are-finalizing-a-deal-to-make-him-the-next-head-coach",
+      "source_name": "Pro Football Talk",
+      "headline": "Philip Rivers, NC State are finalizing a deal to make him the next head coach",
+      "published_at": "2026-11-08T17:37:17.000Z",
+      "observed_at": "2026-11-08T17:50:19.201Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "coaching",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
