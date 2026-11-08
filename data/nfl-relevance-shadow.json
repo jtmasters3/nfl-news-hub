@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/colts-fire-gm-chris-ballard-after-10-seasons-following-loss-titans",
-      "source_name": "FOX Sports",
-      "headline": "Colts Fire GM Chris Ballard After 10 Seasons Following Loss To Titans",
-      "published_at": "2026-10-19T16:02:55.000Z",
-      "observed_at": "2026-10-19T16:20:21.174Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "TEN"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patrick-mahomes-ties-tom-brady-for-fewest-games-to-100-qb-wins",
       "source_name": "Pro Football Talk",
       "headline": "Patrick Mahomes ties Tom Brady for fewest games to 100 QB wins",
@@ -41856,6 +41834,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/player-personnel-handbook-implies-that-the-nfl-can-delay-or-deny-brandon-aiyuks-reinstatement",
+      "source_name": "Pro Football Talk",
+      "headline": "Player Personnel Handbook implies that the NFL can delay (or deny) Brandon Aiyuk's reinstatement",
+      "published_at": "2026-11-08T00:49:16.000Z",
+      "observed_at": "2026-11-08T01:00:25.935Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
