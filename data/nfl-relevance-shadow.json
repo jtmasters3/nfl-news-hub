@@ -2,82 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/stefon-diggs-its-still-wide-open-for-us",
-      "source_name": "Pro Football Talk",
-      "headline": "Stefon Diggs: It's still wide open for us",
-      "published_at": "2026-10-20T11:07:40.000Z",
-      "observed_at": "2026-10-20T11:20:17.763Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/tank-dell-s-return-for-first-game-since-2024-creates-suddenly-crowded-texans-wr-room",
-      "source_name": "NFL.com",
-      "headline": "Tank Dell's return for first game since 2024 creates suddenly crowded Texans WR room",
-      "published_at": "2026-10-20T11:39:41.000Z",
-      "observed_at": "2026-10-20T11:50:19.111Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "HOU"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/u2-to-headline-halftime-of-nfl-s-first-ever-thanksgiving-eve-gameday-live-on-netflix",
-      "source_name": "NFL.com",
-      "headline": "U2 to headline halftime of NFL's first-ever Thanksgiving Eve Gameday live on Netflix",
-      "published_at": "2026-10-20T11:47:28.000Z",
-      "observed_at": "2026-10-20T12:00:30.154Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brock-purdy-is-the-nfls-all-time-record-holder-for-highest-career-passer-rating",
-      "source_name": "Pro Football Talk",
-      "headline": "Brock Purdy is the NFL's all-time record holder for highest career passer rating",
-      "published_at": "2026-10-20T11:48:31.000Z",
-      "observed_at": "2026-10-20T12:00:30.154Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cardinals-two-wins-are-the-two-biggest-upsets-in-the-nfl-this-season",
       "source_name": "Pro Football Talk",
       "headline": "Cardinals' two wins are the two biggest upsets in the NFL this season",
@@ -41844,6 +41768,93 @@
         "NYG"
       ],
       "detected_category": "live_game_state",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/eagles-braden-mann-delivered-wild-86-yard-punt-vs-giants",
+      "source_name": "FOX Sports",
+      "headline": "Eagles' Braden Mann Boots Second-Longest Punt Of The Century vs. Giants",
+      "published_at": "2026-11-08T20:33:19.000Z",
+      "observed_at": "2026-11-08T20:50:17.165Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG",
+        "PHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kc-concepcion-scores-first-career-touchdown-browns-lead-13-9-in-fourth-quarter",
+      "source_name": "Pro Football Talk",
+      "headline": "KC Concepcion scores first career touchdown, Browns lead 13-9 in fourth quarter",
+      "published_at": "2026-11-08T20:43:48.000Z",
+      "observed_at": "2026-11-08T20:50:17.165Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE",
+        "NO"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-lead-colts-20-17-headed-to-third-quarter",
+      "source_name": "Pro Football Talk",
+      "headline": "Cowboys lead Colts 20-17 headed to fourth quarter",
+      "published_at": "2026-11-08T20:39:00.000Z",
+      "observed_at": "2026-11-08T20:50:17.165Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "IND"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/justin-herbert-hopes-to-reverse-struggles-against-demeco-ryans-defenses",
+      "source_name": "Pro Football Talk",
+      "headline": "Justin Herbert hopes to reverse struggles against DeMeco Ryans defenses",
+      "published_at": "2026-11-08T20:39:33.000Z",
+      "observed_at": "2026-11-08T20:50:17.165Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
