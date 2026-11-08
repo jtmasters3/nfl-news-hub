@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/monday-night-football-49ers-hang-on-for-23-17-win-over-commanders",
-      "source_name": "Pro Football Talk",
-      "headline": "Monday Night Football: 49ers hang on for 23-17 win over Commanders",
-      "published_at": "2026-10-20T03:30:52.000Z",
-      "observed_at": "2026-10-20T03:40:20.540Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF",
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-has-until-tuesday-to-decide-whether-to-flex-eagles-commanders-out-of-prime-time",
       "source_name": "Pro Football Talk",
       "headline": "NFL has until Tuesday to decide whether to flex Eagles-Commanders out of prime time",
@@ -41836,6 +41814,28 @@
         "WAS"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-take-8-6-lead-over-giants-into-halftime",
+      "source_name": "Pro Football Talk",
+      "headline": "Eagles take 8-6 lead over Giants into halftime",
+      "published_at": "2026-11-08T19:44:38.000Z",
+      "observed_at": "2026-11-08T19:50:19.481Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG",
+        "PHI"
+      ],
+      "detected_category": "live_game_state",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
