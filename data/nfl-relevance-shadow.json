@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/commanders-gm-adam-peters-praises-team-culture-leadership-a-week-after-giants-ot-gaffe",
-      "source_name": "NFL.com",
-      "headline": "Commanders GM Adam Peters praises team culture, leadership a week after Giants OT gaffe",
-      "published_at": "2026-10-19T05:16:04.000Z",
-      "observed_at": "2026-10-19T18:40:23.370Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG",
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/atlanta-falcons-qb-andy-dalton-cooper-rush",
       "source_name": "FOX Sports",
       "headline": "Falcons Sign Veteran QB Andy Dalton, Release Cooper Rush",
@@ -41863,6 +41841,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/deion-sanders-says-colorado-deserves-better-after-falling-to-3-6",
+      "source_name": "Pro Football Talk",
+      "headline": "Deion Sanders says Colorado deserves better after falling to 3-6",
+      "published_at": "2026-11-08T11:56:12.000Z",
+      "observed_at": "2026-11-08T12:10:16.861Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "coaching",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
