@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/week-6-monday-night-inactives-washington-commanders-at-san-francisco-49ers",
-      "source_name": "NFL.com",
-      "headline": "Week 6 Monday night inactives: Washington Commanders at San Francisco 49ers",
-      "published_at": "2026-10-19T10:48:25.000Z",
-      "observed_at": "2026-10-19T23:00:25.307Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NO",
-        "SF",
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/monday-night-football-49ers-wr-mike-evans-commanders-wr-stefon-diggs-are-active",
       "source_name": "Pro Football Talk",
       "headline": "Monday Night Football: 49ers WR Mike Evans, Commanders WR Stefon Diggs are active",
@@ -41847,6 +41824,27 @@
         "NYG"
       ],
       "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chiefs-and-patrick-mahomes-have-won-12-straight-against-teams-entering-with-losing-record",
+      "source_name": "Pro Football Talk",
+      "headline": "Chiefs and Patrick Mahomes have won 12 straight against teams entering with losing record",
+      "published_at": "2026-11-08T17:16:10.000Z",
+      "observed_at": "2026-11-08T17:20:19.933Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
