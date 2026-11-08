@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patrick-mahomes-ties-tom-brady-for-fewest-games-to-100-qb-wins",
-      "source_name": "Pro Football Talk",
-      "headline": "Patrick Mahomes ties Tom Brady for fewest games to 100 QB wins",
-      "published_at": "2026-10-19T16:20:12.000Z",
-      "observed_at": "2026-10-19T16:30:48.346Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lions-plan-to-have-brian-branch-cade-mays-in-lineup-this-week",
       "source_name": "Pro Football Talk",
       "headline": "Lions plan to have Brian Branch, Cade Mays in lineup this week",
@@ -41851,6 +41834,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/broncos-and-bo-nix-have-won-16-straight-one-score-games",
+      "source_name": "Pro Football Talk",
+      "headline": "Broncos and Bo Nix have won 16 straight one-score games",
+      "published_at": "2026-11-08T01:17:52.000Z",
+      "observed_at": "2026-11-08T01:30:25.350Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
