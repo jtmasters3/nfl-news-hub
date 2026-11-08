@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/raiders-cut-ol-evan-neal-from-the-practice-squad",
-      "source_name": "Pro Football Talk",
-      "headline": "Raiders cut OL Evan Neal from the practice squad",
-      "published_at": "2026-10-19T21:31:26.000Z",
-      "observed_at": "2026-10-19T21:40:18.859Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV"
-      ],
-      "detected_category": "free_agency",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad",
-        "nfl_preserving_category:free_agency"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/the-playoffs-could-ve-broken-renardo-green-instead-the-49ers-cb-is-just-getting-stronger",
       "source_name": "NFL.com",
       "headline": "The playoffs could've broken Renardo Green. Instead, the 49ers CB is just getting stronger",
@@ -41841,6 +41818,27 @@
       "confidence": "high",
       "detected_teams": [
         "CIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/raiders-return-to-bay-area-and-the-jail-at-levis-stadium-could-be-busy",
+      "source_name": "Pro Football Talk",
+      "headline": "Raiders return to Bay Area — and the jail at Levi's Stadium could be busy",
+      "published_at": "2026-11-08T16:04:08.000Z",
+      "observed_at": "2026-11-08T16:10:17.581Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
