@@ -2,46 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-release-s-rayshawn-jenkins",
-      "source_name": "Pro Football Talk",
-      "headline": "Steelers release S Rayshawn Jenkins",
-      "published_at": "2026-10-21T20:16:49.000Z",
-      "observed_at": "2026-10-21T20:30:24.043Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/college-football/sammys-sportsbook-whispers-ucla-bruins-best-betting-story-season",
-      "source_name": "FOX Sports",
-      "headline": "Sammy’s Sportsbook Whispers: Why UCLA Is The Best Betting Story Of The Season",
-      "published_at": "2026-10-21T20:39:13.000Z",
-      "observed_at": "2026-10-21T20:40:20.246Z",
-      "decision": "reject",
-      "classification": "college_football",
-      "confidence": "medium",
-      "detected_teams": [],
-      "detected_category": "coaching",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [
-        "college_football_phrase"
-      ],
-      "reason_codes": [
-        "college_marker_no_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-packers-generates-24-656-million-on-sunday-night",
       "source_name": "Pro Football Talk",
       "headline": "Cowboys-Packers generates 24.656 million on Sunday night",
@@ -41899,6 +41859,49 @@
         "PHI"
       ],
       "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/rams-wr-puka-nacua-likely-to-be-placed-on-injured-reserve-with-turf-toe-sprained-mcl-and-pcl",
+      "source_name": "NFL.com",
+      "headline": "Rams WR Puka Nacua likely to be placed on injured reserve with turf toe, sprained MCL and PCL",
+      "published_at": "2026-11-09T10:18:10.000Z",
+      "observed_at": "2026-11-09T22:20:23.025Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR",
+        "WAS"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-reinstates-receiver-brandon-aiyuk-to-49ers-after-he-left-team-last-year",
+      "source_name": "NFL.com",
+      "headline": "NFL reinstates receiver Brandon Aiyuk to 49ers after he left team last year",
+      "published_at": "2026-11-09T10:13:11.000Z",
+      "observed_at": "2026-11-09T22:20:23.025Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
