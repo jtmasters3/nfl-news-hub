@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/the-seahawks-let-ken-walker-walk-away-now-the-chiefs-star-might-be-the-nfl-s-best-player",
-      "source_name": "NFL.com",
-      "headline": "The Seahawks let Ken Walker walk away. Now, the Chiefs star might be the NFL's best player",
-      "published_at": "2026-10-21T09:16:05.000Z",
-      "observed_at": "2026-10-21T18:20:19.922Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC",
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-how-to-watch-week-7-nfl-games-schedule-paris-game-details-and-more",
-      "source_name": "NFL.com",
-      "headline": "NFL+: How to watch Week 7 NFL games, schedule, Paris game details, and more",
-      "published_at": "2026-10-21T06:30:35.000Z",
-      "observed_at": "2026-10-21T18:40:19.755Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-designate-a-j-terrell-for-return-from-injured-reserve",
       "source_name": "Pro Football Talk",
       "headline": "Falcons designate A.J. Terrell for return from injured reserve",
@@ -41889,6 +41850,50 @@
         "PHI"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/jaguars-trade-saints-dt-davon-godchaux",
+      "source_name": "FOX Sports",
+      "headline": "Jaguars Reportedly Trade For Saints DT Davon Godchaux",
+      "published_at": "2026-11-09T19:13:29.000Z",
+      "observed_at": "2026-11-09T19:40:19.512Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX",
+        "NO"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kevin-stefanski-on-jessie-bates-trade-falcons-arent-punting-on-the-season",
+      "source_name": "Pro Football Talk",
+      "headline": "Kevin Stefanski on Jessie Bates trade: Falcons aren't punting on the season",
+      "published_at": "2026-11-09T19:29:17.000Z",
+      "observed_at": "2026-11-09T19:40:19.512Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "JAX"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
