@@ -2,90 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/commissioner-roger-goodell-nfl-welcomes-review-eagles-jalen-hurts-blood-clots",
-      "source_name": "NFL.com",
-      "headline": "Commissioner Roger Goodell says NFL welcomes review of how Eagles handled Jalen Hurts' blood clots",
-      "published_at": "2026-10-21T05:08:42.000Z",
-      "observed_at": "2026-10-21T17:20:18.515Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_nfl_commissioner"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/roger-goodell-on-a-jalen-hurts-investigation-we-welcome-that",
-      "source_name": "Pro Football Talk",
-      "headline": "Roger Goodell on a Jalen Hurts investigation: \"We welcome that\"",
-      "published_at": "2026-10-21T17:09:10.000Z",
-      "observed_at": "2026-10-21T17:20:18.515Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "phrase_nflpa"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mason-graham-quinshon-judkins-appear-on-track-to-return-week-7",
-      "source_name": "Pro Football Talk",
-      "headline": "Mason Graham, Quinshon Judkins appear on track to return Week 7",
-      "published_at": "2026-10-21T17:08:49.000Z",
-      "observed_at": "2026-10-21T17:20:18.515Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE",
-        "TEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-qb-rankings-index-week-7-2026-nfl-season",
-      "source_name": "NFL.com",
-      "headline": "NFL QB rankings, Week 7: Dak Prescott hits season low; C.J. Stroud eclipses Patrick Mahomes",
-      "published_at": "2026-10-21T05:19:59.000Z",
-      "observed_at": "2026-10-21T17:30:24.762Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/nfl-roger-goodell-jalen-hurts-update-eagles-medical-staff",
       "source_name": "FOX Sports",
       "headline": "Roger Goodell Explains Why He's 'Comfortable' With Eagles' Handling Of Jalen Hurts",
@@ -41893,6 +41809,88 @@
         "SEA"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/jonathan-taylor-addresses-future-ahead-colts-trade-deadline-decision",
+      "source_name": "FOX Sports",
+      "headline": "Jonathan Taylor Addresses Future Ahead Of Colts’ Trade Deadline Decision",
+      "published_at": "2026-11-09T17:55:30.000Z",
+      "observed_at": "2026-11-09T18:20:18.137Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-moves-jaguars-giants-game-in-week-11-to-a-4-25-p-m-et-kickoff",
+      "source_name": "Pro Football Talk",
+      "headline": "NFL moves Jaguars-Giants game in Week 11 to a 4:25 p.m. ET kickoff",
+      "published_at": "2026-11-09T18:11:26.000Z",
+      "observed_at": "2026-11-09T18:20:18.137Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX",
+        "NYG"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tom-brady-there-was-some-deli-meat-given-out-by-drake-maye-today",
+      "source_name": "Pro Football Talk",
+      "headline": "Tom Brady: \"There was some deli meat given out by Drake Maye today\"",
+      "published_at": "2026-11-09T18:03:58.000Z",
+      "observed_at": "2026-11-09T18:20:18.137Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sam-darnold-ruled-out-for-week-10-drew-lock-in-line-to-start",
+      "source_name": "Pro Football Talk",
+      "headline": "Sam Darnold ruled out for Week 10, Drew Lock in line to start",
+      "published_at": "2026-11-09T17:58:37.000Z",
+      "observed_at": "2026-11-09T18:20:18.137Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV",
+        "SEA"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
