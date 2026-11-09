@@ -2,51 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-supports-eagles-treatment-of-qb-jalen-hurts-medical-situation",
-      "source_name": "NFL.com",
-      "headline": "NFL supports Eagles' treatment of QB Jalen Hurts' medical situation",
-      "published_at": "2026-10-20T11:17:50.000Z",
-      "observed_at": "2026-10-20T23:50:18.387Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-commanders-stays-in-prime-time-for-week-8",
-      "source_name": "Pro Football Talk",
-      "headline": "Eagles-Commanders stays in prime time for Week 8",
-      "published_at": "2026-10-20T23:36:36.000Z",
-      "observed_at": "2026-10-20T23:50:18.387Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE",
-        "PHI",
-        "PIT",
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/nfl-trade-deadline-best-available-players",
       "source_name": "FOX Sports",
       "headline": "NFL Trade Deadline: Who Are The 10 Best Players That Could Be Available?",
@@ -41866,6 +41821,49 @@
         "KC"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/in-broncos-panthers-replay-was-used-to-determine-whether-replay-should-be-used",
+      "source_name": "Pro Football Talk",
+      "headline": "In Broncos-Panthers, replay was used to determine whether replay should be used",
+      "published_at": "2026-11-09T02:53:58.000Z",
+      "observed_at": "2026-11-09T03:00:23.675Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR",
+        "DEN"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/daniel-jones-on-his-future-i-believe-in-what-were-doing-i-love-shane-steichen",
+      "source_name": "Pro Football Talk",
+      "headline": "Daniel Jones on his future: I believe in what we're doing; I love Shane Steichen",
+      "published_at": "2026-11-09T02:52:58.000Z",
+      "observed_at": "2026-11-09T03:00:23.675Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
