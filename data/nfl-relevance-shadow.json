@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/new-orleans-saints-mickey-loomis-gayle-benson",
-      "source_name": "FOX Sports",
-      "headline": "Saints GM Addresses Criticism From Team Owner: 'It’s Not Good Enough Yet'",
-      "published_at": "2026-10-21T15:48:34.000Z",
-      "observed_at": "2026-10-21T16:00:31.069Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NO"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/week-5-schedule-change",
       "source_name": "NFL.com",
       "headline": "Week 5 schedule change",
@@ -41922,6 +41901,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/tom-brady-revisits-2016-suspension-28-3-super-bowl-comeback-gronk-jules",
+      "source_name": "FOX Sports",
+      "headline": "Ten Seasons Later, Brady, Julian Edelman And Gronk Relive The 28-3 Comeback",
+      "published_at": "2026-11-09T16:06:00.000Z",
+      "observed_at": "2026-11-09T16:20:19.234Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
