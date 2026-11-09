@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/allen-bailey-former-chief-and-falcon-dies-at-37",
-      "source_name": "Pro Football Talk",
-      "headline": "Allen Bailey, former Chief and Falcon, dies at 37",
-      "published_at": "2026-10-21T15:30:49.000Z",
-      "observed_at": "2026-10-21T15:40:19.585Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/new-orleans-saints-mickey-loomis-gayle-benson",
       "source_name": "FOX Sports",
       "headline": "Saints GM Addresses Criticism From Team Owner: 'It’s Not Good Enough Yet'",
@@ -41912,6 +41895,27 @@
         "HOU"
       ],
       "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jordan-loves-mvp-case-surges",
+      "source_name": "Pro Football Talk",
+      "headline": "Jordan Love's MVP case surges",
+      "published_at": "2026-11-09T16:03:16.000Z",
+      "observed_at": "2026-11-09T16:10:19.697Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
