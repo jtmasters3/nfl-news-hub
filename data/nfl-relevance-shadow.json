@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-trade-deadline-best-available-players",
-      "source_name": "FOX Sports",
-      "headline": "NFL Trade Deadline: Who Are The 10 Best Players That Could Be Available?",
-      "published_at": "2026-10-20T23:54:25.000Z",
-      "observed_at": "2026-10-21T00:10:21.617Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "trade",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/upon-further-review-just-how-off-we-were-rams-chargers-ashton-jeanty-bust",
       "source_name": "FOX Sports",
       "headline": "Upon Further Review: Just How Off We Were On Rams, Chargers; Ashton Jeanty A Bust?",
@@ -41864,6 +41847,28 @@
         "IND"
       ],
       "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sunday-night-football-despite-three-caleb-williams-ints-bears-lead-17-6-at-halftime",
+      "source_name": "Pro Football Talk",
+      "headline": "Sunday Night Football: Despite three Caleb Williams INTs, Bears lead 17-6 at halftime",
+      "published_at": "2026-11-09T02:59:15.000Z",
+      "observed_at": "2026-11-09T03:10:19.412Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "TB"
+      ],
+      "detected_category": "live_game_state",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
