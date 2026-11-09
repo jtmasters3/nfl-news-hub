@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-week-7-injury-report-2026-season",
-      "source_name": "NFL.com",
-      "headline": "NFL Week 7 injury report: Player statuses for all 14 games",
-      "published_at": "2026-10-21T07:19:30.000Z",
-      "observed_at": "2026-10-21T19:30:23.516Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/dallas-cowboys-jerry-jones-coaching-hires-roster-changes",
       "source_name": "FOX Sports",
       "headline": "Jerry Jones Rules Out More Cowboys Coaching Changes, Open to Trades",
@@ -41891,6 +41874,28 @@
         "NYJ"
       ],
       "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/browns-todd-monken-fails-to-commit-to-a-starting-qb-ahead-of-game-vs-texans",
+      "source_name": "NFL.com",
+      "headline": "Browns' Todd Monken fails to commit to a starting QB ahead of game vs. Texans",
+      "published_at": "2026-11-09T08:16:06.000Z",
+      "observed_at": "2026-11-09T20:50:17.749Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE",
+        "HOU"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
