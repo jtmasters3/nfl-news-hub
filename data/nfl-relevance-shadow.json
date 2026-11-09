@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/john-harbaugh-starting-j-j-mccarthy-is-the-plan-going-forward",
-      "source_name": "Pro Football Talk",
-      "headline": "John Harbaugh: Starting J.J. McCarthy is the plan going forward",
-      "published_at": "2026-10-21T19:36:10.000Z",
-      "observed_at": "2026-10-21T19:50:19.317Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/tennessee-titans-jordan-elliot-firearm-released",
       "source_name": "FOX Sports",
       "headline": "Saleh Reveals Titans Released Jordan Elliott After He Pulled Gun In Parking Lot",
@@ -41896,6 +41879,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cardinals-wr-michael-wilson-out-for-season-with-a-neck-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Cardinals WR Michael Wilson out for season with a neck injury",
+      "published_at": "2026-11-09T21:51:23.000Z",
+      "observed_at": "2026-11-09T22:00:26.439Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
