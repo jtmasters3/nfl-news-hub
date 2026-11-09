@@ -2,30 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/drake-maye-caleb-williams-fun-to-watch-draftmate-tnf-patriots-bears",
-      "source_name": "NFL.com",
-      "headline": "Drake Maye vs. Caleb Williams: Pats QB talks up 'fun to watch' draftmate ahead of 'TNF' vs. Bears",
-      "published_at": "2026-10-21T12:21:16.000Z",
-      "observed_at": "2026-10-21T12:30:25.355Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "NE"
-      ],
-      "detected_category": "draft",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_nfl_draft",
-        "nfl_preserving_category:draft"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-campbell-packers-offense-will-make-plays-we-have-to-make-more",
       "source_name": "Pro Football Talk",
       "headline": "Dan Campbell: Packers offense will make plays, we have to make more",
@@ -41890,6 +41866,28 @@
         "NO"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-wr-luther-burden-suffered-a-concussion-on-sunday-night",
+      "source_name": "Pro Football Talk",
+      "headline": "Bears WR Luther Burden suffered a concussion on Sunday night",
+      "published_at": "2026-11-09T11:29:40.000Z",
+      "observed_at": "2026-11-09T11:40:17.637Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "TB"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
