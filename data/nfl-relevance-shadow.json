@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/seven-texans-sit-out-wednesdays-practice-with-injuries",
-      "source_name": "Pro Football Talk",
-      "headline": "Seven Texans sit out Wednesday's practice with injuries",
-      "published_at": "2026-10-21T21:51:06.000Z",
-      "observed_at": "2026-10-21T22:00:29.413Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "HOU",
-        "NYG"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/in-the-colts-locker-room-the-weight-of-chris-ballard-s-firing-hits-home",
       "source_name": "NFL.com",
       "headline": "In the Colts' locker room, the weight of Chris Ballard's firing hits home",
@@ -41900,6 +41878,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/college-football/michigan-tom-brady-jim-harbaugh-documentary",
+      "source_name": "FOX Sports",
+      "headline": "Tom Brady, Jim Harbaugh Take You Inside Michigan Football's National Title Runs",
+      "published_at": "2026-11-09T23:00:33.000Z",
+      "observed_at": "2026-11-09T23:20:18.383Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
