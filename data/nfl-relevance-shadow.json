@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/upon-further-review-just-how-off-we-were-rams-chargers-ashton-jeanty-bust",
-      "source_name": "FOX Sports",
-      "headline": "Upon Further Review: Just How Off We Were On Rams, Chargers; Ashton Jeanty A Bust?",
-      "published_at": "2026-10-20T23:53:46.000Z",
-      "observed_at": "2026-10-21T00:10:21.617Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAC",
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nflpa-calls-for-full-investigation-into-jalen-hurts-situation",
       "source_name": "Pro Football Talk",
       "headline": "NFLPA calls for \"full investigation\" into Jalen Hurts situation",
@@ -41869,6 +41847,28 @@
         "TB"
       ],
       "detected_category": "live_game_state",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bucs-score-to-start-third-quarter-trail-bears-17-13",
+      "source_name": "Pro Football Talk",
+      "headline": "Bucs score to start third quarter, trail Bears 17-13",
+      "published_at": "2026-11-09T03:21:15.000Z",
+      "observed_at": "2026-11-09T03:30:26.153Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "TB"
+      ],
+      "detected_category": "coaching",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
