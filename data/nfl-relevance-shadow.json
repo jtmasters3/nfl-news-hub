@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jerry-jones-we-could-do-something-at-trade-deadline-to-help-the-team-this-year",
-      "source_name": "Pro Football Talk",
-      "headline": "Jerry Jones: We could do something at trade deadline to help the team this year",
-      "published_at": "2026-10-21T16:37:51.000Z",
-      "observed_at": "2026-10-21T16:40:21.230Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/kenneth-walker-chiefs-seahawks",
       "source_name": "FOX Sports",
       "headline": "Can Seahawks Be Kenneth Walker's Kryptonite? Why Sunday Could Flip Narrative On Chiefs RB",
@@ -41901,6 +41880,25 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/college-football-playoff-doubles-up-expands-to-24-teams-beginning-next-season",
+      "source_name": "NFL.com",
+      "headline": "College Football Playoff doubles up, expands to 24 teams beginning next season",
+      "published_at": "2026-11-09T05:35:54.000Z",
+      "observed_at": "2026-11-09T17:50:20.747Z",
+      "decision": "reject",
+      "classification": "college_football",
+      "confidence": "medium",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [
+        "college_football_phrase"
+      ],
+      "reason_codes": [
+        "college_marker_no_nfl_evidence"
       ]
     }
   ]
