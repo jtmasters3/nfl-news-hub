@@ -2,92 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/sam-laporta-on-lack-of-contract-extension-with-lions-they-re-just-not-showing-the-love",
-      "source_name": "NFL.com",
-      "headline": "Sam LaPorta on lack of contract extension with Lions: 'They're just not showing the love'",
-      "published_at": "2026-10-21T07:31:05.000Z",
-      "observed_at": "2026-10-21T21:00:25.193Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET"
-      ],
-      "detected_category": "contract",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:contract"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/former-cowboys-db-broncos-scout-cornell-green-dies-at-86",
-      "source_name": "Pro Football Talk",
-      "headline": "Former Cowboys DB, Broncos scout Cornell Green dies at 86",
-      "published_at": "2026-10-21T21:08:52.000Z",
-      "observed_at": "2026-10-21T21:20:19.739Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "DEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/pat-surtain-ii-returns-to-broncos-practice",
-      "source_name": "Pro Football Talk",
-      "headline": "Pat Surtain II returns to Broncos practice",
-      "published_at": "2026-10-21T21:22:39.000Z",
-      "observed_at": "2026-10-21T21:30:25.050Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/malik-willis-listed-as-full-participant-with-right-thumb-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "Malik Willis listed as full participant with right thumb injury",
-      "published_at": "2026-10-21T21:28:00.000Z",
-      "observed_at": "2026-10-21T21:40:20.460Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIA"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cardinals-claim-ot-albert-reese-off-waivers-from-the-panthers",
       "source_name": "Pro Football Talk",
       "headline": "Cardinals claim OT Albert Reese off waivers from the Panthers",
@@ -41904,6 +41818,83 @@
         "SEA"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/big-bets-report-777k-bet-falls-short-second-straight-week",
+      "source_name": "FOX Sports",
+      "headline": "Big Bets Report: $777k Bet Falls Short For Second-Straight Week",
+      "published_at": "2026-11-09T22:56:57.000Z",
+      "observed_at": "2026-11-09T23:00:27.703Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-gardner-minshew-will-likely-need-season-ending-elbow-surgery",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Gardner Minshew will likely need season-ending elbow surgery",
+      "published_at": "2026-11-09T22:56:32.000Z",
+      "observed_at": "2026-11-09T23:00:27.703Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kyle-shanahan-brandon-aiyuks-reinstatement-means-absolutely-nothing-to-49ers",
+      "source_name": "Pro Football Talk",
+      "headline": "Kyle Shanahan: Brandon Aiyuk's reinstatement means \"absolutely nothing\" to 49ers",
+      "published_at": "2026-11-09T22:55:29.000Z",
+      "observed_at": "2026-11-09T23:00:27.703Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-say-jaguars-made-an-offer-they-couldnt-refuse-for-jordan-davis",
+      "source_name": "Pro Football Talk",
+      "headline": "Eagles say Jaguars made an offer they couldn't refuse for Jordan Davis",
+      "published_at": "2026-11-09T22:55:24.000Z",
+      "observed_at": "2026-11-09T23:00:27.703Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX",
+        "PHI"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
