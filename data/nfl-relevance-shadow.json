@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/giants-start-jj-mccarthy-quarterback-week-7-texans",
-      "source_name": "NFL.com",
-      "headline": "Report: Giants plan to start J.J. McCarthy at quarterback in Week 7 vs. Texans",
-      "published_at": "2026-10-21T04:11:06.000Z",
-      "observed_at": "2026-10-21T16:20:20.854Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "HOU",
-        "NYG",
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/giants-quarterbacks-john-harbaugh-jj-mccarthy-jameis-winston-stats",
       "source_name": "FOX Sports",
       "headline": "Giants Reportedly Make Week 7 QB Decision on J.J. McCarthy vs. Jameis Winston",
@@ -41913,6 +41890,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaguars-announce-jessie-bates-trade",
+      "source_name": "Pro Football Talk",
+      "headline": "Jaguars announce Jessie Bates trade",
+      "published_at": "2026-11-09T16:39:03.000Z",
+      "observed_at": "2026-11-09T16:50:20.451Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
