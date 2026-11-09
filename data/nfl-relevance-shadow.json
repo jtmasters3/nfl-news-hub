@@ -2,71 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/giants-quarterbacks-john-harbaugh-jj-mccarthy-jameis-winston-stats",
-      "source_name": "FOX Sports",
-      "headline": "Giants Reportedly Make Week 7 QB Decision on J.J. McCarthy vs. Jameis Winston",
-      "published_at": "2026-10-21T16:15:13.000Z",
-      "observed_at": "2026-10-21T16:20:20.854Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "HOU",
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/titans-rb-julius-chestnut-is-the-afc-special-teams-player-of-the-week",
-      "source_name": "Pro Football Talk",
-      "headline": "Titans RB Julius Chestnut is the AFC special teams player of the week",
-      "published_at": "2026-10-21T16:16:03.000Z",
-      "observed_at": "2026-10-21T16:20:20.854Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "TEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/martin-emerson-wins-first-career-nfc-defensive-player-of-the-week-award",
-      "source_name": "Pro Football Talk",
-      "headline": "Martin Emerson wins first career NFC defensive player of the week award",
-      "published_at": "2026-10-21T16:10:52.000Z",
-      "observed_at": "2026-10-21T16:20:20.854Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NO"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jalen-ramsey-named-the-afc-defensive-player-of-the-week",
       "source_name": "Pro Football Talk",
       "headline": "Jalen Ramsey named the AFC defensive player of the week",
@@ -41905,6 +41840,62 @@
         "JAX"
       ],
       "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-nov-9",
+      "source_name": "NFL.com",
+      "headline": "NFL news roundup: Latest league updates from Monday, Nov. 9",
+      "published_at": "2026-11-09T04:54:28.000Z",
+      "observed_at": "2026-11-09T17:00:25.952Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-cfb-weekend-recap-bettors-were-praying-day-like-this",
+      "source_name": "FOX Sports",
+      "headline": "NFL, CFB Weekend Recap: 'Bettors Were Praying For A Day Like This'",
+      "published_at": "2026-11-09T16:42:54.000Z",
+      "observed_at": "2026-11-09T17:00:25.952Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patriots-dont-expect-ben-brown-to-play-in-week-10-waiting-for-rhamondre-stevenson-mri-results",
+      "source_name": "Pro Football Talk",
+      "headline": "Patriots don't expect Ben Brown to play in Week 10, waiting for Rhamondre Stevenson MRI results",
+      "published_at": "2026-11-09T16:49:00.000Z",
+      "observed_at": "2026-11-09T17:00:25.952Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "NE"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
