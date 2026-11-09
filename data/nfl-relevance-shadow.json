@@ -2,90 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/why-these-bengals-defensive-weaknesses-play-to-the-ravens-strengths",
-      "source_name": "NFL.com",
-      "headline": "Why these Bengals defensive weaknesses play to the Ravens' strengths",
-      "published_at": "2026-10-20T10:31:05.000Z",
-      "observed_at": "2026-10-20T18:20:23.575Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "CIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-campbell-i-expect-kerby-joseph-to-play-this-year-but-no-timetable",
-      "source_name": "Pro Football Talk",
-      "headline": "Dan Campbell: I expect Kerby Joseph to play this year, but no timetable",
-      "published_at": "2026-10-20T18:15:07.000Z",
-      "observed_at": "2026-10-20T18:30:24.100Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET",
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patriots-dont-expect-ben-brown-alijah-vera-tucker-to-play-on-thursday",
-      "source_name": "Pro Football Talk",
-      "headline": "Patriots don't expect Ben Brown, Alijah Vera-Tucker to play on Thursday",
-      "published_at": "2026-10-20T18:26:19.000Z",
-      "observed_at": "2026-10-20T18:40:20.333Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "NE",
-        "NYJ"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/qb-stock-market-week-7-c-j-stroud-back-patrick-mahomes-evolving",
-      "source_name": "FOX Sports",
-      "headline": "QB Stock Market Week 7: Is C.J. Stroud Back? Is Patrick Mahomes Evolving?",
-      "published_at": "2026-10-20T18:36:52.000Z",
-      "observed_at": "2026-10-20T18:50:20.747Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/commanders-wr-terry-mclaurin-out-rest-of-season-torn-patellar-tendon",
       "source_name": "NFL.com",
       "headline": "Commanders WR Terry McLaurin out for rest of season with torn patellar tendon",
@@ -41865,6 +41781,93 @@
         "TB"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/justin-herbert-appears-to-injure-middle-finger-on-left-hand",
+      "source_name": "Pro Football Talk",
+      "headline": "Justin Herbert appears to injure middle finger on left hand",
+      "published_at": "2026-11-09T00:15:18.000Z",
+      "observed_at": "2026-11-09T00:20:17.297Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jonathan-taylor-if-this-was-my-last-game-as-a-colt-i-want-to-thank-indianapolis",
+      "source_name": "Pro Football Talk",
+      "headline": "Jonathan Taylor: If this was my last game as a Colt, I want to thank Indianapolis",
+      "published_at": "2026-11-09T00:10:54.000Z",
+      "observed_at": "2026-11-09T00:20:17.297Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "IND"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-dt-gracen-halton-carted-off-with-an-air-cast-in-fourth-quarter",
+      "source_name": "Pro Football Talk",
+      "headline": "49ers DT Gracen Halton carted off with an air cast in fourth quarter",
+      "published_at": "2026-11-09T00:09:30.000Z",
+      "observed_at": "2026-11-09T00:20:17.297Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/john-harbaugh-on-reportedly-pulling-jonathan-taylor-trade-offer-things-do-change",
+      "source_name": "Pro Football Talk",
+      "headline": "John Harbaugh on reportedly pulling Jonathan Taylor trade offer: Things do change",
+      "published_at": "2026-11-09T00:08:37.000Z",
+      "observed_at": "2026-11-09T00:20:17.297Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "NYG",
+        "PHI"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
