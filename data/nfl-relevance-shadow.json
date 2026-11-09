@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-put-davante-adams-poona-ford-on-ir",
-      "source_name": "Pro Football Talk",
-      "headline": "Rams put Davante Adams, Poona Ford on IR",
-      "published_at": "2026-10-20T22:29:12.000Z",
-      "observed_at": "2026-10-20T22:40:20.787Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI",
-        "LAR"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sundays-late-afternoon-window-on-cbs-averaged-26-368-million-viewers",
-      "source_name": "Pro Football Talk",
-      "headline": "Sunday's late-afternoon window on CBS averaged 26.368 million viewers",
-      "published_at": "2026-10-20T23:01:05.000Z",
-      "observed_at": "2026-10-20T23:10:18.300Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-supports-eagles-treatment-of-qb-jalen-hurts-medical-situation",
       "source_name": "NFL.com",
       "headline": "NFL supports Eagles' treatment of QB Jalen Hurts' medical situation",
@@ -41862,6 +41823,49 @@
         "MIN"
       ],
       "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/tom-brady-awards-packers-s-evan-williams-lfg-says-drake-maye-threw-deli-meat",
+      "source_name": "FOX Sports",
+      "headline": "Tom Brady Awards Packers S Evan Williams LFG, But Says Drake Maye Threw 'Deli Meat'",
+      "published_at": "2026-11-09T02:33:16.000Z",
+      "observed_at": "2026-11-09T02:40:16.758Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
+        "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-mri-shows-patrick-mahomes-avoided-serious-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: MRI shows Patrick Mahomes avoided serious injury",
+      "published_at": "2026-11-09T02:30:51.000Z",
+      "observed_at": "2026-11-09T02:40:16.758Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
