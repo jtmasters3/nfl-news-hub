@@ -2,72 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kyle-monangai-ruled-out-jonah-jackson-set-to-play-vs-patriots",
-      "source_name": "Pro Football Talk",
-      "headline": "Kyle Monangai ruled out, Jonah Jackson set to play vs. Patriots",
-      "published_at": "2026-10-21T19:22:01.000Z",
-      "observed_at": "2026-10-21T19:30:23.516Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "NE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/jordan-elliott-released-by-titans-after-pulling-out-gun-in-parking-lot-robert-saleh-says",
-      "source_name": "NFL.com",
-      "headline": "Jordan Elliott released by Titans after pulling out gun in parking lot, Robert Saleh says",
-      "published_at": "2026-10-21T07:33:52.000Z",
-      "observed_at": "2026-10-21T19:50:19.317Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "TEN"
-      ],
-      "detected_category": "free_agency",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_released_by",
-        "nfl_preserving_category:free_agency"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/a-j-brown-on-sundays-rough-outing-im-moving-forward",
-      "source_name": "Pro Football Talk",
-      "headline": "A.J. Brown on Sunday's rough outing: I'm moving forward",
-      "published_at": "2026-10-21T19:36:59.000Z",
-      "observed_at": "2026-10-21T19:50:19.317Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/john-harbaugh-starting-j-j-mccarthy-is-the-plan-going-forward",
       "source_name": "Pro Football Talk",
       "headline": "John Harbaugh: Starting J.J. McCarthy is the plan going forward",
@@ -41902,6 +41836,66 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/packers-rb-josh-jacobs-to-undergo-surgery-on-finger-this-week",
+      "source_name": "NFL.com",
+      "headline": "Packers RB Josh Jacobs to undergo surgery on finger this week; timeline to return TBD",
+      "published_at": "2026-11-09T09:24:48.000Z",
+      "observed_at": "2026-11-09T21:30:22.531Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-jacobs-to-have-surgery-on-fractured-finger-out-indefinitely",
+      "source_name": "Pro Football Talk",
+      "headline": "Josh Jacobs to have surgery on fractured finger, out indefinitely",
+      "published_at": "2026-11-09T21:24:32.000Z",
+      "observed_at": "2026-11-09T21:30:22.531Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
+        "NE"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/todd-monken-not-ready-to-name-starter-at-qb-for-week-10",
+      "source_name": "Pro Football Talk",
+      "headline": "Todd Monken not ready to name starter at QB for Week 10",
+      "published_at": "2026-11-09T21:21:15.000Z",
+      "observed_at": "2026-11-09T21:30:22.531Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
