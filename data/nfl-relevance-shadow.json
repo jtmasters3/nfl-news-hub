@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-fantasy-2026-start-em-sit-em-tight-ends-for-week-7",
-      "source_name": "NFL.com",
-      "headline": "NFL Fantasy 2026 Start 'Em, Sit 'Em: Tight ends for Week 7",
-      "published_at": "2026-10-21T03:30:00.000Z",
-      "observed_at": "2026-10-21T15:40:19.585Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE"
-      ],
-      "detected_category": "fantasy",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-has-no-concern-about-joe-buck-troy-aikman-booth-issues",
       "source_name": "Pro Football Talk",
       "headline": "NFL has \"no concern\" about Joe Buck/Troy Aikman booth issues",
@@ -41919,6 +41898,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/luke-goedeke-airs-grievances-about-jeffery-simmons",
+      "source_name": "Pro Football Talk",
+      "headline": "Luke Goedeke airs grievances about Jeffery Simmons",
+      "published_at": "2026-11-09T15:44:40.000Z",
+      "observed_at": "2026-11-09T15:50:22.042Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
