@@ -2,48 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-giants-to-start-j-j-mccarthy-this-week",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Giants to start J.J. McCarthy this week",
-      "published_at": "2026-10-21T16:25:01.000Z",
-      "observed_at": "2026-10-21T16:30:25.592Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chad-ryland-wins-nfc-special-teams-player-of-the-week",
-      "source_name": "Pro Football Talk",
-      "headline": "Chad Ryland wins NFC special teams player of the week",
-      "published_at": "2026-10-21T16:22:48.000Z",
-      "observed_at": "2026-10-21T16:30:25.592Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jerry-jones-we-could-do-something-at-trade-deadline-to-help-the-team-this-year",
       "source_name": "Pro Football Talk",
       "headline": "Jerry Jones: We could do something at trade deadline to help the team this year",
@@ -41896,6 +41854,45 @@
       "detected_teams": [
         "CLE",
         "HOU"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/john-harbaugh-says-it-looks-like-qb-j-j-mccarthy-hip-will-be-able-to-play-on-thursday",
+      "source_name": "Pro Football Talk",
+      "headline": "John Harbaugh says it \"looks like\" QB J.J. McCarthy (hip) will be able to play on Thursday",
+      "published_at": "2026-11-09T17:14:37.000Z",
+      "observed_at": "2026-11-09T17:20:19.570Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/giants-expect-cam-skattebo-to-play-on-thursday-night",
+      "source_name": "Pro Football Talk",
+      "headline": "Giants expect Cam Skattebo to play on Thursday night",
+      "published_at": "2026-11-09T17:08:12.000Z",
+      "observed_at": "2026-11-09T17:20:19.570Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG",
+        "PHI"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
