@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/league-reportedly-concludes-jalen-hurtss-blood-clot-was-handled-appropriately-before-week-5-game",
-      "source_name": "Pro Football Talk",
-      "headline": "League reportedly concludes Jalen Hurts's blood clot \"was handled appropriately\" before Week 5 game",
-      "published_at": "2026-10-20T20:56:20.000Z",
-      "observed_at": "2026-10-20T21:00:29.251Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/owners-approve-arctos-purchasing-a-limited-stake-in-the-falcons",
       "source_name": "Pro Football Talk",
       "headline": "Owners approve Arctos purchasing a limited stake in the Falcons",
@@ -41875,6 +41854,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/myles-garrett-on-three-sack-game-it-was-a-weight-off-my-shoulders-to-get-back-to-who-i-am",
+      "source_name": "Pro Football Talk",
+      "headline": "Myles Garrett on three-sack game: It was a weight off my shoulders to get back to who I am",
+      "published_at": "2026-11-09T01:41:52.000Z",
+      "observed_at": "2026-11-09T01:50:19.099Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
