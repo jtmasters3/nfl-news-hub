@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-wednesday-oct-21",
-      "source_name": "NFL.com",
-      "headline": "NFL news roundup: Latest league updates from Wednesday, Oct. 21",
-      "published_at": "2026-10-21T01:24:55.000Z",
-      "observed_at": "2026-10-21T13:30:23.193Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/saints-gm-mickey-loomis-i-understand-where-gayle-bensons-concerns-are-coming-from",
       "source_name": "Pro Football Talk",
       "headline": "Saints GM Mickey Loomis: I understand where Gayle Benson's concerns are coming from",
@@ -41890,6 +41873,29 @@
         "WAS"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nick-sirianni-not-ruling-out-staff-changes-during-eagles-bye-week-following-7th-consecutive-loss",
+      "source_name": "NFL.com",
+      "headline": "Nick Sirianni not ruling out staff changes during Eagles' bye week following 7th consecutive loss",
+      "published_at": "2026-11-09T12:27:08.000Z",
+      "observed_at": "2026-11-09T12:40:20.172Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG",
+        "NYJ",
+        "PHI"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
