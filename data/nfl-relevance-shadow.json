@@ -2,47 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nflpa-calls-for-full-investigation-into-jalen-hurts-situation",
-      "source_name": "Pro Football Talk",
-      "headline": "NFLPA calls for \"full investigation\" into Jalen Hurts situation",
-      "published_at": "2026-10-21T00:02:01.000Z",
-      "observed_at": "2026-10-21T00:10:21.617Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "phrase_nflpa"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-will-have-heightened-security-for-game-in-paris-after-recent-civil-unrest",
-      "source_name": "Pro Football Talk",
-      "headline": "NFL will have heightened security for game in Paris after recent civil unrest",
-      "published_at": "2026-10-21T00:15:52.000Z",
-      "observed_at": "2026-10-21T00:20:24.406Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NO",
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/allen-sills-dismisses-concern-about-team-physician-bias-as-nonsense-its-not",
       "source_name": "Pro Football Talk",
       "headline": "Allen Sills dismisses concern about team physician bias as \"nonsense\" (it's not)",
@@ -41869,6 +41828,50 @@
         "TB"
       ],
       "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-fallout-week-9-packers-prove-dangerous-chiefs-more-dangerous-than-ever",
+      "source_name": "FOX Sports",
+      "headline": "NFL Fallout Week 9: Packers Prove Dangerous; Chiefs More Dangerous Than Ever",
+      "published_at": "2026-11-09T03:25:13.000Z",
+      "observed_at": "2026-11-09T03:40:21.314Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
+        "KC"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/video-emerges-of-parking-lot-brawl-at-raiders-49ers-game",
+      "source_name": "Pro Football Talk",
+      "headline": "Video emerges of parking lot brawl at Raiders-49ers game",
+      "published_at": "2026-11-09T03:29:27.000Z",
+      "observed_at": "2026-11-09T03:40:21.314Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV",
+        "SF"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
