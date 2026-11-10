@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/no-elite-teams-nfl-year-49ers-chiefs-lead-weird-season",
-      "source_name": "FOX Sports",
-      "headline": "No Elite Teams In The NFL This Year? 49ers, Chiefs Lead Through Seven Weeks",
-      "published_at": "2026-10-22T01:03:35.000Z",
-      "observed_at": "2026-10-22T01:10:20.439Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC",
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/te-sam-laporta-prepared-get-paid-somewhere-else-lions-dont-get-deal-done",
       "source_name": "FOX Sports",
       "headline": "Lions' Sam LaPorta Is Open To 'Get Paid Somewhere Else’ If Contract Negotiations Loom",
@@ -41907,6 +41885,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jake-ferguson-tyler-goodson-will-miss-multiple-weeks-for-cowboys",
+      "source_name": "Pro Football Talk",
+      "headline": "Jake Ferguson, Tyler Goodson will miss multiple weeks for Cowboys",
+      "published_at": "2026-11-10T01:54:59.000Z",
+      "observed_at": "2026-11-10T02:00:25.155Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
