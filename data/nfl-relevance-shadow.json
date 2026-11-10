@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/packers-josh-jacobs-shows-contrition-prepares-to-play-again",
-      "source_name": "NFL.com",
-      "headline": "Packers' Josh Jacobs shows contrition as he prepares to play again amid NFL investigation",
-      "published_at": "2026-10-22T12:19:40.000Z",
-      "observed_at": "2026-10-22T12:30:25.540Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/kenneth-walker-chiefs-seahawks-seattle-return-patrick-mahomes",
       "source_name": "NFL.com",
       "headline": "Kenneth Walker back in Seattle: Chiefs eager to face champs with ex-Seahawks star on their side",
@@ -41912,6 +41891,27 @@
         "MIN"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kevin-oconnell-on-potential-quarterback-trade-ill-defer-to-nolan-teasley-on-that",
+      "source_name": "Pro Football Talk",
+      "headline": "Kevin O'Connell on potential quarterback trade: \"I'll defer to Nolan [Teasley] on that\"",
+      "published_at": "2026-11-10T05:27:29.000Z",
+      "observed_at": "2026-11-10T05:40:18.534Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
