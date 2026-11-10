@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/why-the-giants-felt-compelled-to-turn-to-j-j-mccarthy-now",
-      "source_name": "NFL.com",
-      "headline": "Why the Giants felt compelled to turn to J.J. McCarthy now",
-      "published_at": "2026-10-22T10:46:06.000Z",
-      "observed_at": "2026-10-22T13:00:27.943Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-trade-deadline-buyers-with-most-and-least-salary-cap-space-available",
       "source_name": "NFL.com",
       "headline": "NFL trade-deadline buyers with most and least salary cap space available",
@@ -41913,6 +41892,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/justin-jefferson-vikings-offense-didnt-get-it-done-weve-got-to-figure-it-out",
+      "source_name": "Pro Football Talk",
+      "headline": "Justin Jefferson: Vikings' offense didn't get it done, we've got to figure it out",
+      "published_at": "2026-11-10T09:29:54.000Z",
+      "observed_at": "2026-11-10T09:40:19.118Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "MIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
