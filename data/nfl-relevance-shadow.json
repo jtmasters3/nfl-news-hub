@@ -2,47 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-texas-qb-arch-manning-fell-from-projected-no-1-pick-potential-benching",
-      "source_name": "FOX Sports",
-      "headline": "How Texas QB Arch Manning Fell From Projected No. 1 Pick To Potential Benching",
-      "published_at": "2026-10-22T12:00:29.000Z",
-      "observed_at": "2026-10-22T12:20:19.993Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [],
-      "detected_category": "draft",
-      "nfl_evidence": [
-        "phrase_nfl_draft",
-        "nfl_preserving_category:draft"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sauce-gardner-says-current-calf-injury-isnt-as-bad-as-last-year",
-      "source_name": "Pro Football Talk",
-      "headline": "Sauce Gardner says current calf injury isn't as bad as last year",
-      "published_at": "2026-10-22T12:08:24.000Z",
-      "observed_at": "2026-10-22T12:20:19.993Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/packers-josh-jacobs-shows-contrition-prepares-to-play-again",
       "source_name": "NFL.com",
       "headline": "Packers' Josh Jacobs shows contrition as he prepares to play again amid NFL investigation",
@@ -41912,6 +41871,49 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/minnesotas-offense-comes-up-short-3-takeaways-from-bills-monday-night-win",
+      "source_name": "FOX Sports",
+      "headline": "Minnesota's Offense Comes Up Short: 3 Takeaways From The Bills' Monday Night Win",
+      "published_at": "2026-11-10T04:48:29.000Z",
+      "observed_at": "2026-11-10T05:10:21.277Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "MIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/receiver-needy-teams-should-call-about-justin-jefferson",
+      "source_name": "Pro Football Talk",
+      "headline": "Receiver-needy teams should call about Justin Jefferson",
+      "published_at": "2026-11-10T05:02:48.000Z",
+      "observed_at": "2026-11-10T05:10:21.277Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
