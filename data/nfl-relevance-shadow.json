@@ -2,66 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/rams-star-wr-puka-nacua-leaves-practice-early-calf-injury",
-      "source_name": "FOX Sports",
-      "headline": "More Bad News For Rams: Star WR Puka Nacua Leaves Practice Early With Calf Injury",
-      "published_at": "2026-10-22T23:32:51.000Z",
-      "observed_at": "2026-10-22T23:50:24.355Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAC",
-        "LAR"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-wr-justin-jefferson-a-full-participant-thursday",
-      "source_name": "Pro Football Talk",
-      "headline": "Vikings WR Justin Jefferson a full participant Thursday",
-      "published_at": "2026-10-22T23:44:40.000Z",
-      "observed_at": "2026-10-22T23:50:24.355Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/why-tom-brady-believes-pair-veteran-qbs-throw-prettiest-passes-nfl",
-      "source_name": "FOX Sports",
-      "headline": "Why Tom Brady Believes A Pair Of Veteran QBs Throw The Prettiest Passes In The NFL",
-      "published_at": "2026-10-23T00:09:01.000Z",
-      "observed_at": "2026-10-23T00:10:21.090Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-wr-mike-evans-remains-out-of-practice",
       "source_name": "Pro Football Talk",
       "headline": "49ers WR Mike Evans remains out of practice",
@@ -41925,6 +41865,71 @@
       "confidence": "high",
       "detected_teams": [
         "JAX"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/dolphins-place-qb-malik-willis-groin-on-injured-reserve-kyle-mccord-in-line-for-first-start",
+      "source_name": "NFL.com",
+      "headline": "Dolphins place QB Malik Willis (groin) on injured reserve; Kyle McCord in line for first start",
+      "published_at": "2026-11-10T09:26:20.000Z",
+      "observed_at": "2026-11-10T21:30:20.023Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "MIA"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ravens-trade-for-ol-ryan-neuzil-send-ol-andrew-vorhees-to-falcons",
+      "source_name": "Pro Football Talk",
+      "headline": "Ravens trade for OL Ryan Neuzil, send OL Andrew Vorhees to Falcons",
+      "published_at": "2026-11-10T21:26:34.000Z",
+      "observed_at": "2026-11-10T21:30:20.023Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "BAL"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/j-j-mccarthy-cam-skattebo-return-to-full-participation-tuesday",
+      "source_name": "Pro Football Talk",
+      "headline": "J.J. McCarthy, Cam Skattebo return to full participation Tuesday",
+      "published_at": "2026-11-10T21:22:17.000Z",
+      "observed_at": "2026-11-10T21:30:20.023Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
