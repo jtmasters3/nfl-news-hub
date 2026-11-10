@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-lead-patriots-10-0",
-      "source_name": "Pro Football Talk",
-      "headline": "Bears lead Patriots 10-0",
-      "published_at": "2026-10-23T00:57:25.000Z",
-      "observed_at": "2026-10-23T01:10:20.255Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "NE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/drake-mayes-touchdown-run-has-patriots-on-the-scoreboard",
       "source_name": "Pro Football Talk",
       "headline": "Drake Maye's touchdown run has Patriots on the scoreboard",
@@ -41946,6 +41924,29 @@
       "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-release-wr-odell-beckham-jr-but-will-re-sign-him-to-the-practice-squad",
+      "source_name": "Pro Football Talk",
+      "headline": "Vikings release WR Odell Beckham Jr., but will re-sign him to the practice squad",
+      "published_at": "2026-11-10T21:48:43.000Z",
+      "observed_at": "2026-11-10T22:00:28.594Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN"
+      ],
+      "detected_category": "contract",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:contract"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
