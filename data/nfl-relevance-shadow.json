@@ -2,67 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-catchup-giants-go-j-j-mccarthy-josh-jacobs-back-practice",
-      "source_name": "FOX Sports",
-      "headline": "NFL Catchup: Giants To Start J.J. McCarthy; Josh Jacobs Back At Packers Practice",
-      "published_at": "2026-10-22T01:31:18.000Z",
-      "observed_at": "2026-10-22T01:50:19.861Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB",
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/in-their-sofi-stadium-incident-troy-aikmans-position-to-joe-buck-was-you-f-ked-me-over",
-      "source_name": "Pro Football Talk",
-      "headline": "In their SoFi Stadium incident, Troy Aikman's position to Joe Buck was: \"You f—ked me over!\"",
-      "published_at": "2026-10-22T01:37:58.000Z",
-      "observed_at": "2026-10-22T01:50:19.861Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/after-two-years-rehabbing-tank-dell-overwhelmed-anxious-and-excited",
-      "source_name": "Pro Football Talk",
-      "headline": "After two years rehabbing, Tank Dell overwhelmed, anxious and excited to play again",
-      "published_at": "2026-10-22T01:36:27.000Z",
-      "observed_at": "2026-10-22T01:50:19.861Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "HOU",
-        "KC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ufl-has-a-stadium-issue-in-st-louis",
       "source_name": "Pro Football Talk",
       "headline": "UFL has a stadium issue in St. Louis for 2027",
@@ -41901,6 +41840,72 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/the-cardinals-listless-loss-in-seattle-cements-status-as-a-seller-at-nfls-trade-deadline",
+      "source_name": "FOX Sports",
+      "headline": "Cardinals Lose WR Michael Wilson For Season To Neck Fracture In Loss At Seattle",
+      "published_at": "2026-11-10T03:03:39.000Z",
+      "observed_at": "2026-11-10T03:10:17.554Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI",
+        "SEA"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sam-darnold-could-return-after-the-seahawks-bye-week",
+      "source_name": "Pro Football Talk",
+      "headline": "Sam Darnold could return after the Seahawks' bye week",
+      "published_at": "2026-11-10T03:06:24.000Z",
+      "observed_at": "2026-11-10T03:10:17.554Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV",
+        "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/monday-night-football-bills-lead-vikings-10-6-at-halftime",
+      "source_name": "Pro Football Talk",
+      "headline": "Monday Night Football: Bills lead Vikings 10-6 at halftime",
+      "published_at": "2026-11-10T02:59:20.000Z",
+      "observed_at": "2026-11-10T03:10:17.554Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "MIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
