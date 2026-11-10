@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/pfts-week-7-2026-nfl-picks",
-      "source_name": "Pro Football Talk",
-      "headline": "PFT's Week 7 2026 NFL picks",
-      "published_at": "2026-10-22T16:05:40.000Z",
-      "observed_at": "2026-10-22T16:10:23.195Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-put-sebastian-joseph-day-on-injured-reserve",
       "source_name": "Pro Football Talk",
       "headline": "Steelers put Sebastian Joseph-Day on injured reserve",
@@ -41918,6 +41901,27 @@
       "confidence": "high",
       "detected_teams": [
         "DAL"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaguars-trades-for-jessie-bates-jordan-davis-could-complicate-deadline-deals",
+      "source_name": "Pro Football Talk",
+      "headline": "Jaguars trades for Jessie Bates, Jordan Davis could complicate deadline deals",
+      "published_at": "2026-11-10T15:31:55.000Z",
+      "observed_at": "2026-11-10T15:40:23.348Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX"
       ],
       "detected_category": "trade",
       "nfl_evidence": [
