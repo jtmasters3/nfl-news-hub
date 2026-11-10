@@ -2,47 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-could-embrace-replay-review-transparency-by-the-end-of-the-current-season",
-      "source_name": "Pro Football Talk",
-      "headline": "NFL could embrace replay review transparency by the end of the current season",
-      "published_at": "2026-10-22T00:13:11.000Z",
-      "observed_at": "2026-10-22T00:20:25.760Z",
-      "decision": "reject",
-      "classification": "college_football",
-      "confidence": "medium",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [
-        "conference_big_ten",
-        "conference_acc"
-      ],
-      "reason_codes": [
-        "college_marker_no_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cardinals-rb-jeremiyah-love-remains-out-of-practice",
-      "source_name": "Pro Football Talk",
-      "headline": "Cardinals RB Jeremiyah Love remains out of practice",
-      "published_at": "2026-10-22T00:11:33.000Z",
-      "observed_at": "2026-10-22T00:20:25.760Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/nfl-trade-deadline-top-trade-candidate-all-32-teams",
       "source_name": "FOX Sports",
       "headline": "NFL Trade Deadline: The Top Trade Candidate On All 32 Teams",
@@ -41899,6 +41858,51 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/eagles-updated-draft-capital-following-jordan-davis-trade",
+      "source_name": "FOX Sports",
+      "headline": "Eagles Updated Draft Capital Following The Jordan Davis Trade",
+      "published_at": "2026-11-10T00:15:49.000Z",
+      "observed_at": "2026-11-10T00:30:23.395Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-cardinals-to-sign-josh-johnson-off-bengals-practice-squad",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Cardinals to sign Josh Johnson off Bengals practice squad",
+      "published_at": "2026-11-10T00:26:33.000Z",
+      "observed_at": "2026-11-10T00:30:23.395Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI",
+        "CIN"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
