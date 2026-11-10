@@ -2,62 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/roger-goodell-says-an-increase-in-penalties-is-not-a-reflection-on-the-nfls-officials",
-      "source_name": "Pro Football Talk",
-      "headline": "Roger Goodell says an increase in penalties is not a reflection on the NFL's officials",
-      "published_at": "2026-10-22T15:21:36.000Z",
-      "observed_at": "2026-10-22T15:30:33.365Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/how-zach-allen-grew-from-j-j-watt-s-promising-sidekick-into-one-of-nfl-s-top-d-linemen",
-      "source_name": "NFL.com",
-      "headline": "How Zach Allen grew from J.J. Watt's promising sidekick into one of NFL's top D-linemen",
-      "published_at": "2026-10-22T11:16:06.000Z",
-      "observed_at": "2026-10-22T15:40:22.293Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/saquon-barkley-news-eagles-running-backs-cowboys-matchup",
-      "source_name": "FOX Sports",
-      "headline": "Eagles Reportedly Get Auspicious Saquon Barkley Injury Update",
-      "published_at": "2026-10-22T15:31:08.000Z",
-      "observed_at": "2026-10-22T15:40:22.293Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "PHI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/injuries-threw-panthers-rookie-cb-will-lee-iii-into-deep-end-now-he-s-just-trying-to-eat",
       "source_name": "NFL.com",
       "headline": "Injuries threw Panthers rookie CB Will Lee III into deep end. Now, he's just 'trying to eat'",
@@ -41912,6 +41856,69 @@
         "NYG"
       ],
       "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/week-11-schedule-change",
+      "source_name": "NFL.com",
+      "headline": "Week 11 Schedule Change",
+      "published_at": "2026-11-10T02:53:06.000Z",
+      "observed_at": "2026-11-10T15:00:31.497Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX",
+        "NYG",
+        "PHI",
+        "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tom-brady-sells-stake-in-birmingham-city-football-club",
+      "source_name": "Pro Football Talk",
+      "headline": "Tom Brady sells stake in Birmingham City Football Club",
+      "published_at": "2026-11-10T14:53:58.000Z",
+      "observed_at": "2026-11-10T15:00:31.497Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-campbell-on-benching-christian-mahogany-thats-why-i-have-team-rules",
+      "source_name": "Pro Football Talk",
+      "headline": "Dan Campbell on benching Christian Mahogany: That's why I have team rules",
+      "published_at": "2026-11-10T14:45:00.000Z",
+      "observed_at": "2026-11-10T15:00:31.497Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "MIA"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
