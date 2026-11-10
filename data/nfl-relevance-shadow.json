@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ufl-has-a-stadium-issue-in-st-louis",
-      "source_name": "Pro Football Talk",
-      "headline": "UFL has a stadium issue in St. Louis for 2027",
-      "published_at": "2026-10-22T02:02:56.000Z",
-      "observed_at": "2026-10-22T02:10:23.753Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jc-latham-on-incident-with-jordan-elliott-it-was-just-an-unfortunate-situation",
       "source_name": "Pro Football Talk",
       "headline": "JC Latham on incident with Jordan Elliott: It was just an unfortunate situation",
@@ -41900,6 +41883,27 @@
         "MIN"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaguars-may-plan-for-jordan-davis-to-play-more-than-52-percent-of-the-time",
+      "source_name": "Pro Football Talk",
+      "headline": "Jaguars may plan for Jordan Davis to play more than 52 percent of the time",
+      "published_at": "2026-11-10T03:18:18.000Z",
+      "observed_at": "2026-11-10T03:20:18.826Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
