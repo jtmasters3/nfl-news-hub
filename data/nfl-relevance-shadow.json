@@ -2,42 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-thursday-oct-22",
-      "source_name": "NFL.com",
-      "headline": "NFL news roundup: Latest league updates from Thursday, Oct. 22",
-      "published_at": "2026-10-22T03:17:56.000Z",
-      "observed_at": "2026-10-22T15:30:33.365Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/jj-watt-signs-multi-year-deal-to-stay-as-cbs-lead-nfl-analyst",
-      "source_name": "NFL.com",
-      "headline": "JJ Watt signs multi-year deal to stay as CBS' lead NFL analyst",
-      "published_at": "2026-10-22T03:14:57.000Z",
-      "observed_at": "2026-10-22T15:30:33.365Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/quenton-nelson-no-questions-about-my-colts-future-im-focused-on-my-play",
       "source_name": "Pro Football Talk",
       "headline": "Quenton Nelson: No questions about my Colts future, I'm focused on my play",
@@ -41904,6 +41868,48 @@
       "confidence": "high",
       "detected_teams": [
         "MIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/liam-coen-definitely-a-curve-to-getting-jessie-bates-ready-this-week",
+      "source_name": "Pro Football Talk",
+      "headline": "Liam Coen: \"Definitely a curve\" to getting Jessie Bates ready this week",
+      "published_at": "2026-11-10T14:15:55.000Z",
+      "observed_at": "2026-11-10T14:20:19.479Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/pfts-week-10-2026-nfl-power-rankings",
+      "source_name": "Pro Football Talk",
+      "headline": "PFT's Week 10 2026 NFL power rankings",
+      "published_at": "2026-11-10T14:11:06.000Z",
+      "observed_at": "2026-11-10T14:20:19.479Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
