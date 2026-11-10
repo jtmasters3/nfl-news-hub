@@ -2,40 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-week-7-picks-best-bets-every-game-wills-wagers",
-      "source_name": "FOX Sports",
-      "headline": "2026 NFL Week 7 Picks: Best Bets For Every Game — Will's Wagers",
-      "published_at": "2026-10-22T18:44:29.000Z",
-      "observed_at": "2026-10-22T19:00:26.225Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/roger-goodell-nfl-views-the-australia-game-as-a-tremendous-success-on-every-level",
-      "source_name": "Pro Football Talk",
-      "headline": "Roger Goodell: NFL views the Australia game as a tremendous success on every level",
-      "published_at": "2026-10-22T19:07:16.000Z",
-      "observed_at": "2026-10-22T19:10:26.843Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/baker-mayfield-thumb-strong-enough-play-buccaneers-panthers",
       "source_name": "NFL.com",
       "headline": "Baker Mayfield says thumb at place 'strong enough to be able to play' for Buccaneers vs. Panthers",
@@ -41929,6 +41895,44 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/zach-sieler-injury-update-dolphins-nfl-trade-deadline",
+      "source_name": "FOX Sports",
+      "headline": "NFL Trade Candidate, Dolphins Defensive Leader Reportedly Out For Year",
+      "published_at": "2026-11-10T17:43:13.000Z",
+      "observed_at": "2026-11-10T17:50:19.195Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIA"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/not-many-players-are-truly-untradeable",
+      "source_name": "Pro Football Talk",
+      "headline": "Not many players are truly untradeable",
+      "published_at": "2026-11-10T17:39:33.000Z",
+      "observed_at": "2026-11-10T17:50:19.195Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "trade",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
