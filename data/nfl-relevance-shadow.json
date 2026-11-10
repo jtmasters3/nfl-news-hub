@@ -2,70 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/this-year-five-different-teams-have-three-straight-prime-time-games",
-      "source_name": "Pro Football Talk",
-      "headline": "This year, five different teams have three straight prime-time games",
-      "published_at": "2026-10-22T19:36:03.000Z",
-      "observed_at": "2026-10-22T19:40:19.183Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-week-7-betting-report-books-seeing-surprising-action-key-showdowns",
-      "source_name": "FOX Sports",
-      "headline": "NFL Week 7 Betting Report: Books Seeing Surprising Action On Key Showdowns",
-      "published_at": "2026-10-22T19:31:04.000Z",
-      "observed_at": "2026-10-22T19:50:24.088Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "DET",
-        "GB",
-        "KC",
-        "NE",
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/trey-hendrickson-on-facing-the-bengals-its-not-an-individual-sport",
-      "source_name": "Pro Football Talk",
-      "headline": "Trey Hendrickson on facing the Bengals: It's not an individual sport",
-      "published_at": "2026-10-22T20:01:09.000Z",
-      "observed_at": "2026-10-22T20:10:19.725Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-elevate-rb-zavier-scott-lb-buddy-johnson",
       "source_name": "Pro Football Talk",
       "headline": "Bears elevate RB Zavier Scott, LB Buddy Johnson",
@@ -41918,6 +41854,71 @@
       "headline": "Source: Vikings will trade for a quarterback today",
       "published_at": "2026-11-10T18:07:53.000Z",
       "observed_at": "2026-11-10T18:20:20.346Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-network-colts-to-trade-wr-keenan-allen-to-49ers",
+      "source_name": "NFL.com",
+      "headline": "NFL Network: Colts to trade WR Keenan Allen to 49ers",
+      "published_at": "2026-11-10T06:42:53.000Z",
+      "observed_at": "2026-11-10T18:50:19.164Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "SF"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/keenan-allen-trade-details-colts-49ers",
+      "source_name": "FOX Sports",
+      "headline": "49ers Reportedly Acquire 6-Time Pro Bowler From Colts",
+      "published_at": "2026-11-10T18:47:20.000Z",
+      "observed_at": "2026-11-10T18:50:19.164Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "SF"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-vikings-have-identified-kirk-cousins-as-prime-trade-candidate",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Vikings \"have identified\" Kirk Cousins as \"prime trade candidate\"",
+      "published_at": "2026-11-10T18:38:35.000Z",
+      "observed_at": "2026-11-10T18:50:19.164Z",
       "decision": "keep",
       "classification": "nfl",
       "confidence": "high",
