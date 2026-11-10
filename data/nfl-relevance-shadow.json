@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-awards-ballot-mvp-candidates-josh-allen-brock-purdy-patrick-mahomes-kenneth-walker",
-      "source_name": "FOX Sports",
-      "headline": "NFL Awards Ballot: Can Josh Allen Run His Way To MVP? Will Kenneth Walker Buck Trend?",
-      "published_at": "2026-10-22T05:14:48.000Z",
-      "observed_at": "2026-10-22T05:20:19.766Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/matthew-stafford-hopes-fans-see-injuries-for-more-than-just-the-impact-on-fantasy-teams",
       "source_name": "Pro Football Talk",
       "headline": "Matthew Stafford hopes fans see injuries for more than just the impact on fantasy teams",
@@ -41903,6 +41886,27 @@
         "MIN"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/the-vikings-need-to-trade-for-a-quarterback-tomorrow",
+      "source_name": "Pro Football Talk",
+      "headline": "The Vikings need to trade for a quarterback tomorrow",
+      "published_at": "2026-11-10T04:11:10.000Z",
+      "observed_at": "2026-11-10T04:20:20.551Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
