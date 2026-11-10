@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/cornell-green-super-bowl-winning-cb-with-cowboys-dies-at-86",
-      "source_name": "NFL.com",
-      "headline": "Cornell Green, Super Bowl-winning CB with Cowboys, dies at 86",
-      "published_at": "2026-10-22T12:59:47.000Z",
-      "observed_at": "2026-10-22T01:10:20.439Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/no-elite-teams-nfl-year-49ers-chiefs-lead-weird-season",
       "source_name": "FOX Sports",
       "headline": "No Elite Teams In The NFL This Year? 49ers, Chiefs Lead Through Seven Weeks",
@@ -41911,6 +41890,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/imaging-showed-no-fracture-in-justin-herberts-finger",
+      "source_name": "Pro Football Talk",
+      "headline": "Imaging showed no fracture in Justin Herbert's finger",
+      "published_at": "2026-11-10T01:31:55.000Z",
+      "observed_at": "2026-11-10T01:40:18.197Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
