@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/tampa-bay-buccaneers-baker-mayfield-qb-carolina-panthers-injury",
-      "source_name": "FOX Sports",
-      "headline": "Buccaneers QB Baker Mayfield Plans To Start Vs. Panthers On Sunday",
-      "published_at": "2026-10-22T20:41:51.000Z",
-      "observed_at": "2026-10-22T20:50:19.724Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR",
-        "TB"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/george-pickens-limited-in-thursdays-practice-with-shoulder-injury",
       "source_name": "Pro Football Talk",
       "headline": "George Pickens limited in Thursday's practice with shoulder injury",
@@ -41922,6 +41900,28 @@
         "TEN"
       ],
       "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-bring-kirk-cousins-back-to-minnesota",
+      "source_name": "Pro Football Talk",
+      "headline": "Vikings bring Kirk Cousins back to Minnesota",
+      "published_at": "2026-11-10T19:48:14.000Z",
+      "observed_at": "2026-11-10T20:00:25.180Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV",
+        "MIN"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
