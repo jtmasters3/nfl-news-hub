@@ -2,48 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/drake-mayes-touchdown-run-has-patriots-on-the-scoreboard",
-      "source_name": "Pro Football Talk",
-      "headline": "Drake Maye's touchdown run has Patriots on the scoreboard",
-      "published_at": "2026-10-23T01:09:49.000Z",
-      "observed_at": "2026-10-23T01:20:19.395Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-multiple-teams-have-trade-interest-in-jonathan-taylor",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Multiple teams have trade interest in Jonathan Taylor",
-      "published_at": "2026-10-23T01:28:41.000Z",
-      "observed_at": "2026-10-23T01:40:20.584Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/thursday-night-football-luther-burden-bears-lead-patriots-20-14-at-halftime",
       "source_name": "Pro Football Talk",
       "headline": "Thursday Night Football: Luther Burden, Bears lead Patriots 20-14 at halftime",
@@ -41947,6 +41905,45 @@
         "nfl_team_detected",
         "phrase_practice_squad",
         "nfl_preserving_category:contract"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/agent-brandon-aiyuk-plans-to-play-this-season-likely-with-somebody-that-knows-him",
+      "source_name": "NFL.com",
+      "headline": "Agent: Brandon Aiyuk plans to play this season, likely with 'somebody that knows him'",
+      "published_at": "2026-11-10T07:46:06.000Z",
+      "observed_at": "2026-11-10T22:20:24.575Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cam-skattebo-on-giants-not-adding-a-running-back-they-know-what-i-can-do",
+      "source_name": "Pro Football Talk",
+      "headline": "Cam Skattebo on Giants not adding a running back: They know what I can do",
+      "published_at": "2026-11-10T22:06:06.000Z",
+      "observed_at": "2026-11-10T22:20:24.575Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG",
+        "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
