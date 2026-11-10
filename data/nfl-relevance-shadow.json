@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/te-sam-laporta-prepared-get-paid-somewhere-else-lions-dont-get-deal-done",
-      "source_name": "FOX Sports",
-      "headline": "Lions' Sam LaPorta Is Open To 'Get Paid Somewhere Else’ If Contract Negotiations Loom",
-      "published_at": "2026-10-22T01:32:54.000Z",
-      "observed_at": "2026-10-22T01:50:19.861Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET"
-      ],
-      "detected_category": "contract",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:contract"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/nfl-catchup-giants-go-j-j-mccarthy-josh-jacobs-back-practice",
       "source_name": "FOX Sports",
       "headline": "NFL Catchup: Giants To Start J.J. McCarthy; Josh Jacobs Back At Packers Practice",
@@ -41906,6 +41884,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tony-romo-makes-appearance-on-the-pat-mcafee-alt-cast",
+      "source_name": "Pro Football Talk",
+      "headline": "Tony Romo makes appearance on the Pat McAfee alt cast",
+      "published_at": "2026-11-10T02:32:25.000Z",
+      "observed_at": "2026-11-10T02:40:17.705Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
