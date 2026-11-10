@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jordan-love-dealing-with-sore-back-but-expects-to-play-vs-lions",
-      "source_name": "Pro Football Talk",
-      "headline": "Jordan Love dealing with sore back, but expects to play vs. Lions",
-      "published_at": "2026-10-22T13:47:36.000Z",
-      "observed_at": "2026-10-22T14:00:28.152Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET",
-        "GB"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/the-mcafee-alt-cast-underperforms-in-its-debut",
       "source_name": "Pro Football Talk",
       "headline": "The McAfee alt cast underperforms in its debut",
@@ -41914,6 +41892,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/vikings-qb-carson-wentz-on-loss-to-bills-this-one-felt-pretty-terrible",
+      "source_name": "NFL.com",
+      "headline": "Vikings QB Carson Wentz on loss to Bills: 'This one felt pretty terrible'",
+      "published_at": "2026-11-10T12:21:55.000Z",
+      "observed_at": "2026-11-10T12:30:21.409Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "MIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
