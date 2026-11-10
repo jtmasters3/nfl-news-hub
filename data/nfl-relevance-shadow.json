@@ -2,86 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-jacobs-im-just-trying-to-play-ball-learn-from-this-mistake-and-move-forward",
-      "source_name": "Pro Football Talk",
-      "headline": "Josh Jacobs: I'm just trying to play ball, learn from this mistake and move forward",
-      "published_at": "2026-10-21T23:01:41.000Z",
-      "observed_at": "2026-10-21T23:10:20.444Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-fines-mike-vrabel-aaron-glenn-nick-sirianni-250-000-each-for-conduct-toward-officials",
-      "source_name": "Pro Football Talk",
-      "headline": "NFL fines Mike Vrabel, Aaron Glenn, Nick Sirianni $250,000 each for conduct toward officials",
-      "published_at": "2026-10-21T23:10:48.000Z",
-      "observed_at": "2026-10-21T23:20:23.309Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jonathon-cooper-nobodys-perfect-but-no-excuses-i-do-hold-myself-accountable",
-      "source_name": "Pro Football Talk",
-      "headline": "Jonathon Cooper: Nobody's perfect, but no excuses; I do hold myself accountable",
-      "published_at": "2026-10-21T23:23:59.000Z",
-      "observed_at": "2026-10-21T23:30:21.331Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/senator-lisa-blunt-rochester-seeks-answers-from-roger-goodell-regarding-the-jalen-hurts-situation",
-      "source_name": "Pro Football Talk",
-      "headline": "Senator Lisa Blunt Rochester seeks answers from Roger Goodell regarding the Jalen Hurts situation",
-      "published_at": "2026-10-21T23:38:18.000Z",
-      "observed_at": "2026-10-21T23:50:18.805Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-could-embrace-replay-review-transparency-by-the-end-of-the-current-season",
       "source_name": "Pro Football Talk",
       "headline": "NFL could embrace replay review transparency by the end of the current season",
@@ -41888,6 +41808,93 @@
       "confidence": "high",
       "detected_teams": [
         "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/after-lions-guard-christian-mahogany-benched-dan-campbell-says-ball-s-in-his-court",
+      "source_name": "NFL.com",
+      "headline": "After Lions guard Christian Mahogany benched, Dan Campbell says 'ball's in his court'",
+      "published_at": "2026-11-09T09:16:06.000Z",
+      "observed_at": "2026-11-10T00:20:37.479Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/packers-josh-jacobs-finger-injury-update",
+      "source_name": "FOX Sports",
+      "headline": "Packers RB Josh Jacobs Needs Surgery On Finger, Could Go On IR",
+      "published_at": "2026-11-10T00:08:36.000Z",
+      "observed_at": "2026-11-10T00:20:37.479Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
+        "NE"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-mcvay-on-puka-nacua-injury-id-be-lying-if-i-said-i-wasnt-questioning-that-play-call",
+      "source_name": "Pro Football Talk",
+      "headline": "Sean McVay on Puka Nacua injury: I'd be lying if I said I wasn't questioning that play call",
+      "published_at": "2026-11-10T00:14:56.000Z",
+      "observed_at": "2026-11-10T00:20:37.479Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR",
+        "WAS"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/monday-night-football-bills-lt-dion-dawkins-lg-alec-anderson-are-inactive-vs-vikings",
+      "source_name": "Pro Football Talk",
+      "headline": "Monday Night Football: Bills LT Dion Dawkins, LG Alec Anderson are inactive vs. Vikings",
+      "published_at": "2026-11-10T00:06:30.000Z",
+      "observed_at": "2026-11-10T00:20:37.479Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "MIN"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
