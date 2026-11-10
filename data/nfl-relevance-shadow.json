@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cbs-names-j-j-watt-its-no-1-analyst-beyond-2026",
-      "source_name": "Pro Football Talk",
-      "headline": "CBS names J.J. Watt its No. 1 analyst beyond 2026",
-      "published_at": "2026-10-22T13:26:01.000Z",
-      "observed_at": "2026-10-22T13:30:27.555Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/bills-overrated-rams-frauds-chiefs-49ers-super-bowl-bound",
       "source_name": "FOX Sports",
       "headline": "NFL Fact Or Fiction: Bills Overrated? Rams Are Frauds? A Chiefs-49ers Super Bowl?",
@@ -41911,6 +41894,28 @@
       "detected_category": "coaching",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patriots-cb-christian-gonzalez-had-a-game-so-bad-he-did-something-never-seen-before",
+      "source_name": "Pro Football Talk",
+      "headline": "Patriots CB Christian Gonzalez had a game so bad, he did something never seen before",
+      "published_at": "2026-11-10T10:56:38.000Z",
+      "observed_at": "2026-11-10T11:00:26.676Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE"
+      ],
+      "detected_category": "contract",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:contract"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
