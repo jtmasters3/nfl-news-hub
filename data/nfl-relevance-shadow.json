@@ -2,92 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-put-sebastian-joseph-day-on-injured-reserve",
-      "source_name": "Pro Football Talk",
-      "headline": "Steelers put Sebastian Joseph-Day on injured reserve",
-      "published_at": "2026-10-22T15:59:24.000Z",
-      "observed_at": "2026-10-22T16:10:23.195Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NO",
-        "PIT"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/garrett-wilson-doesn-t-just-want-to-win-he-wants-to-win-with-the-jets",
-      "source_name": "NFL.com",
-      "headline": "Garrett Wilson doesn't just want to win. He wants to win with the Jets",
-      "published_at": "2026-10-22T09:46:06.000Z",
-      "observed_at": "2026-10-22T16:30:24.809Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/saints-gm-mickey-loomis-asks-for-patience-with-team-i-like-the-direction-we-re-going",
-      "source_name": "NFL.com",
-      "headline": "Saints GM Mickey Loomis asks for patience with team: 'I like the direction we're going'",
-      "published_at": "2026-10-22T04:28:19.000Z",
-      "observed_at": "2026-10-22T16:40:20.724Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NO"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/deforest-buckner-on-trade-rumors-im-just-focused-on-the-vikings",
-      "source_name": "Pro Football Talk",
-      "headline": "DeForest Buckner on trade rumors: I'm just focused on the Vikings",
-      "published_at": "2026-10-22T16:57:11.000Z",
-      "observed_at": "2026-10-22T17:00:25.583Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "MIN"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mark-sanchezs-change-of-plea-hearing-is-canceled",
       "source_name": "Pro Football Talk",
       "headline": "Mark Sanchez's change-of-plea hearing is canceled",
@@ -41922,6 +41836,89 @@
       "confidence": "high",
       "detected_teams": [
         "JAX"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-power-rankings-week-10-2026-nfl-season",
+      "source_name": "NFL.com",
+      "headline": "NFL Power Rankings, Week 10: Jaguars reach season high; Vikings, Patriots slide after lopsided defeats",
+      "published_at": "2026-11-10T03:53:17.000Z",
+      "observed_at": "2026-11-10T16:00:33.111Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
+        "JAX",
+        "MIN",
+        "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-tuesday-nov-10",
+      "source_name": "NFL.com",
+      "headline": "NFL news roundup: Latest league updates from Tuesday, Nov. 10",
+      "published_at": "2026-11-10T03:51:31.000Z",
+      "observed_at": "2026-11-10T16:00:33.111Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-jaguars-plan-to-keep-brian-thomas-jr-at-trade-deadline",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Jaguars plan to keep Brian Thomas Jr. at trade deadline",
+      "published_at": "2026-11-10T15:54:12.000Z",
+      "observed_at": "2026-11-10T16:00:33.111Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jordan-davis-is-a-little-disappointed-to-be-traded-by-eagles",
+      "source_name": "Pro Football Talk",
+      "headline": "Jordan Davis is \"a little disappointed\" to be traded by Eagles",
+      "published_at": "2026-11-10T15:46:34.000Z",
+      "observed_at": "2026-11-10T16:00:33.111Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI"
       ],
       "detected_category": "trade",
       "nfl_evidence": [
