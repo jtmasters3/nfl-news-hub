@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/raiders-rb-ashton-jeanty-trending-like-trent-richardson",
-      "source_name": "FOX Sports",
-      "headline": "The Raiders Are Getting Better, So Why Is RB Ashton Jeanty Getting Worse?",
-      "published_at": "2026-10-22T18:15:54.000Z",
-      "observed_at": "2026-10-22T18:30:24.651Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/seahawks-activate-zach-charbonnet",
-      "source_name": "Pro Football Talk",
-      "headline": "Seahawks activate Zach Charbonnet",
-      "published_at": "2026-10-22T18:20:13.000Z",
-      "observed_at": "2026-10-22T18:30:24.651Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC",
-        "SEA"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/the-rams-backs-are-against-the-wall-at-2-4-but-this-is-not-the-team-to-bury",
       "source_name": "NFL.com",
       "headline": "The Rams' backs are against the wall at 2-4, but this is not the team to bury",
@@ -41936,6 +41892,42 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/qb-stock-market-week-10-jordan-love-ascending-caleb-williams-falling",
+      "source_name": "FOX Sports",
+      "headline": "QB Stock Market Week 10: Jordan Love Continues To Ascend; Caleb Williams Falls",
+      "published_at": "2026-11-10T16:47:39.000Z",
+      "observed_at": "2026-11-10T17:20:23.733Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brandon-aiyuk-likely-will-be-cut-by-4-00-p-m-et-today",
+      "source_name": "Pro Football Talk",
+      "headline": "Brandon Aiyuk likely will be cut by 4:00 p.m. ET today",
+      "published_at": "2026-11-10T17:05:51.000Z",
+      "observed_at": "2026-11-10T17:20:23.733Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
