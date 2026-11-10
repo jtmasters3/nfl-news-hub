@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/patriots-bears-on-thursday-night-football-what-we-learned-from-chicago-s-30-24",
-      "source_name": "NFL.com",
-      "headline": "Patriots-Bears on 'Thursday Night Football': What We Learned from Chicago's 30-24",
-      "published_at": "2026-10-23T03:23:31.000Z",
-      "observed_at": "2026-10-23T03:30:26.354Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "NE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/thursday-night-football-bears-fend-off-patriots-30-24",
       "source_name": "Pro Football Talk",
       "headline": "Thursday Night Football: Bears fend off Patriots 30-24",
@@ -41944,6 +41922,27 @@
         "LAR"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/49ers-add-keenan-allen-but-no-more-trades-on-defense-here-s-who-they-need-to-step-up",
+      "source_name": "NFL.com",
+      "headline": "49ers add Keenan Allen, but no more trades on defense. Here's who they need to step up",
+      "published_at": "2026-11-10T10:46:06.000Z",
+      "observed_at": "2026-11-10T23:20:20.993Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
