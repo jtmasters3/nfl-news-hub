@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/the-seahawks-desperately-miss-kenneth-walker-iii-now-they-must-stop-him-at-his-best",
-      "source_name": "NFL.com",
-      "headline": "The Seahawks desperately miss Kenneth Walker III. Now they must stop him at his best",
-      "published_at": "2026-10-22T09:46:06.000Z",
-      "observed_at": "2026-10-22T13:00:27.943Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cbs-names-j-j-watt-its-no-1-analyst-beyond-2026",
       "source_name": "Pro Football Talk",
       "headline": "CBS names J.J. Watt its No. 1 analyst beyond 2026",
@@ -41914,6 +41893,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/james-cooks-31-carries-vs-vikings-were-the-most-in-any-nfl-game-this-season",
+      "source_name": "Pro Football Talk",
+      "headline": "James Cook's 31 carries vs. Vikings were the most in any NFL game this season",
+      "published_at": "2026-11-10T10:06:10.000Z",
+      "observed_at": "2026-11-10T10:10:21.661Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "MIN"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
