@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-saquon-barkley-is-expected-to-practice-thursday",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Saquon Barkley is expected to practice Thursday",
-      "published_at": "2026-10-22T13:41:18.000Z",
-      "observed_at": "2026-10-22T13:50:20.042Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jordan-love-dealing-with-sore-back-but-expects-to-play-vs-lions",
       "source_name": "Pro Football Talk",
       "headline": "Jordan Love dealing with sore back, but expects to play vs. Lions",
@@ -41918,6 +41897,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/john-harbaugh-on-trade-deadline-approach-if-you-put-it-on-a-scale-now-outweighs-the-future",
+      "source_name": "Pro Football Talk",
+      "headline": "John Harbaugh on trade deadline approach: If you put it on a scale, now outweighs the future",
+      "published_at": "2026-11-10T12:12:53.000Z",
+      "observed_at": "2026-11-10T12:20:20.796Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "trade",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
