@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/kenneth-walker-chiefs-seahawks-seattle-return-patrick-mahomes",
-      "source_name": "NFL.com",
-      "headline": "Kenneth Walker back in Seattle: Chiefs eager to face champs with ex-Seahawks star on their side",
-      "published_at": "2026-10-22T12:37:06.000Z",
-      "observed_at": "2026-10-22T12:40:19.747Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC",
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/why-the-giants-felt-compelled-to-turn-to-j-j-mccarthy-now",
       "source_name": "NFL.com",
       "headline": "Why the Giants felt compelled to turn to J.J. McCarthy now",
@@ -41918,6 +41896,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-midseason-awards-mvp-joe-burrow-josh-allen-brock-purdy",
+      "source_name": "FOX Sports",
+      "headline": "NFL Midseason Awards: Joe Burrow Or Josh Allen For MVP? Kenneth Walker Or JSN For OPOY?",
+      "published_at": "2026-11-10T06:53:18.000Z",
+      "observed_at": "2026-11-10T07:00:27.200Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
