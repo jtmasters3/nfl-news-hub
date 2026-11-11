@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brian-schottenheimer-george-pickens-needs-to-understand-he-impacts-us-in-the-run-game",
-      "source_name": "Pro Football Talk",
-      "headline": "Brian Schottenheimer: George Pickens \"needs to understand he impacts us in the run game\"",
-      "published_at": "2026-10-23T04:04:55.000Z",
-      "observed_at": "2026-10-23T04:10:19.682Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL"
-      ],
-      "detected_category": "contract",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:contract"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ben-johnson-cole-kmets-knee-injury-doesnt-look-good",
       "source_name": "Pro Football Talk",
       "headline": "Ben Johnson: Cole Kmet's knee injury doesn't look good",
@@ -41947,6 +41925,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/malik-nabers-i-felt-like-it-was-a-lie-to-attack-my-character",
+      "source_name": "Pro Football Talk",
+      "headline": "Malik Nabers: I felt like it was a lie for Fox broadcast to attack my character",
+      "published_at": "2026-11-10T23:48:57.000Z",
+      "observed_at": "2026-11-11T00:00:33.331Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
