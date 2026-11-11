@@ -2,70 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cam-skattebo-is-expected-to-return-to-the-running-back-mix-on-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "Cam Skattebo is expected to return to the running back mix on Sunday",
-      "published_at": "2026-10-23T19:51:43.000Z",
-      "observed_at": "2026-10-23T20:00:26.280Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/browns-list-denzel-ward-as-questionable-with-a-hand-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "Browns list Denzel Ward as questionable with a hand injury",
-      "published_at": "2026-10-23T19:50:53.000Z",
-      "observed_at": "2026-10-23T20:00:26.280Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-list-a-j-and-avieon-terrell-as-questionable-for-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "Falcons list A.J. and Avieon Terrell as questionable for Sunday",
-      "published_at": "2026-10-23T20:03:02.000Z",
-      "observed_at": "2026-10-23T20:10:18.968Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lamar-jackson-officially-questionable-for-ravens-bengals",
       "source_name": "Pro Football Talk",
       "headline": "Lamar Jackson officially questionable for Ravens-Bengals",
@@ -41923,6 +41859,69 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/drew-brees-throws-his-hat-in-the-ring-for-monday-night-football-gig",
+      "source_name": "Pro Football Talk",
+      "headline": "Drew Brees throws his hat in the ring for Monday Night Football gig",
+      "published_at": "2026-11-11T18:46:39.000Z",
+      "observed_at": "2026-11-11T18:50:22.142Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/xavier-legette-mike-jackson-jonathon-brooks-return-to-panthers-practice",
+      "source_name": "Pro Football Talk",
+      "headline": "Xavier Legette, Mike Jackson, Jonathon Brooks return to Panthers practice",
+      "published_at": "2026-11-11T18:40:26.000Z",
+      "observed_at": "2026-11-11T18:50:22.142Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-harrison-mevis-riley-patterson-among-kickers-working-out-for-ravens",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Harrison Mevis, Riley Patterson among kickers working out for Ravens",
+      "published_at": "2026-11-11T18:36:38.000Z",
+      "observed_at": "2026-11-11T18:50:22.142Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "BAL"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_signs_with",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
