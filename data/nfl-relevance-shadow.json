@@ -2,67 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/matthew-stafford-sam-darnold-and-cam-ward-are-struggling-can-three-high-profile-qbs-get-right",
-      "source_name": "NFL.com",
-      "headline": "Matthew Stafford, Sam Darnold and Cam Ward are struggling: Can three high-profile QBs get right?",
-      "published_at": "2026-10-23T10:32:13.000Z",
-      "observed_at": "2026-10-23T22:40:21.090Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/seahawks-rb-zach-charbonnet-won-t-return-vs-chiefs-walker-nick-emmanwori-has-new-injury",
-      "source_name": "NFL.com",
-      "headline": "Seahawks RB Zach Charbonnet won't return vs. Chiefs, Walker; Nick Emmanwori has new injury",
-      "published_at": "2026-10-23T09:16:07.000Z",
-      "observed_at": "2026-10-23T23:10:19.154Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC",
-        "SEA"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/rams-wr-puka-nacua-misses-practice-questionable-vs-raiders-with-calf-injury",
-      "source_name": "NFL.com",
-      "headline": "Rams WR Puka Nacua misses practice, questionable vs. Raiders with calf injury",
-      "published_at": "2026-10-23T06:46:08.000Z",
-      "observed_at": "2026-10-23T23:10:19.154Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV",
-        "LAR"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/college-football/2026-nfl-college-football-odds-best-bets-indiana-michigan-colts-vikings",
       "source_name": "FOX Sports",
       "headline": "2026 NFL, College Football Odds: Best Bets For Indiana-Michigan, Colts-Vikings",
@@ -41905,6 +41844,69 @@
         "DAL"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/j-j-mccarthy-cam-skattebo-have-no-injury-designations-for-thursday-night",
+      "source_name": "Pro Football Talk",
+      "headline": "J.J. McCarthy, Cam Skattebo have no injury designations for Thursday night",
+      "published_at": "2026-11-11T21:29:40.000Z",
+      "observed_at": "2026-11-11T21:30:29.414Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/puka-nacua-wont-be-placed-on-ir-but-will-still-be-out-for-an-extended-period",
+      "source_name": "Pro Football Talk",
+      "headline": "Puka Nacua won't be placed on IR, but will still be out for an extended period",
+      "published_at": "2026-11-11T21:26:38.000Z",
+      "observed_at": "2026-11-11T21:30:29.414Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nolan-teasley-this-roster-has-earned-the-right-to-maximize-its-potential-with-kirk-cousins",
+      "source_name": "Pro Football Talk",
+      "headline": "Nolan Teasley: This roster has \"earned the right\" to maximize its potential with Kirk Cousins",
+      "published_at": "2026-11-11T21:26:25.000Z",
+      "observed_at": "2026-11-11T21:30:29.414Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
