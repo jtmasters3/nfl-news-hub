@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-oct-23",
-      "source_name": "NFL.com",
-      "headline": "NFL news roundup: Latest league updates from Friday, Oct. 23",
-      "published_at": "2026-10-23T01:03:12.000Z",
-      "observed_at": "2026-10-23T13:10:26.321Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-list-rico-dowdle-deshon-elliott-as-questionable",
       "source_name": "Pro Football Talk",
       "headline": "Steelers list Rico Dowdle, DeShon Elliott as questionable",
@@ -41936,6 +41919,28 @@
       "confidence": "high",
       "detected_teams": [
         "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jonah-jackson-on-luke-goedekes-grievances-this-is-football-man",
+      "source_name": "Pro Football Talk",
+      "headline": "Jonah Jackson on Luke Goedeke's grievances: \"This is football, man\"",
+      "published_at": "2026-11-11T11:03:17.000Z",
+      "observed_at": "2026-11-11T11:10:18.173Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "TB"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
