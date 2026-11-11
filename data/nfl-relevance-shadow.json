@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/bijan-robinson-hopes-to-model-his-career-after-christian-mccaffrey-but-not-completely",
-      "source_name": "NFL.com",
-      "headline": "Bijan Robinson hopes to model his career after Christian McCaffrey -- but not completely",
-      "published_at": "2026-10-23T10:16:07.000Z",
-      "observed_at": "2026-10-23T15:20:22.163Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nflpa-names-laquon-treadwell-their-community-mvp-for-week-7",
       "source_name": "Pro Football Talk",
       "headline": "NFLPA names Laquon Treadwell their Community MVP for Week 7",
@@ -41947,6 +41930,28 @@
       "confidence": "high",
       "detected_teams": [
         "LV"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-wednesday-nov-11",
+      "source_name": "NFL.com",
+      "headline": "NFL news roundup: Browns to start QB Deshaun Watson vs. Texans",
+      "published_at": "2026-11-11T03:23:23.000Z",
+      "observed_at": "2026-11-11T15:40:23.456Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE",
+        "HOU"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
