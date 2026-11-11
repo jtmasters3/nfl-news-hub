@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/favorite-dogs-back-ole-miss-over-texas-falcons-upset-49ers",
-      "source_name": "FOX Sports",
-      "headline": "Favorite 'Dogs: Back Ole Miss Over Texas; Falcons To Upset 49ers",
-      "published_at": "2026-10-23T20:11:54.000Z",
-      "observed_at": "2026-10-23T20:30:25.619Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/green-bay-packers-zaire-franklin-injury",
       "source_name": "FOX Sports",
       "headline": "Packers LB Zaire Franklin To Miss Sunday's Game Against Lions With Injury",
@@ -41919,6 +41897,28 @@
         "MIA"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/zac-taylor-duke-tobin-is-really-apologetic-after-backing-out-of-trade-with-eagles",
+      "source_name": "Pro Football Talk",
+      "headline": "Zac Taylor: Duke Tobin is \"really apologetic\" after backing out of trade with Eagles",
+      "published_at": "2026-11-11T19:55:07.000Z",
+      "observed_at": "2026-11-11T20:00:28.064Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN",
+        "PHI"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
