@@ -2,71 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/bills-safety-sam-franklin-jr-s-suspension-rescinded-reduced-to-fine-after-appeal",
-      "source_name": "NFL.com",
-      "headline": "Bills safety Sam Franklin Jr.'s suspension rescinded, reduced to fine after appeal",
-      "published_at": "2026-10-23T04:46:07.000Z",
-      "observed_at": "2026-10-23T18:20:20.013Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jeremiyah-love-ruled-out-for-week-7-vs-broncos",
-      "source_name": "Pro Football Talk",
-      "headline": "Jeremiyah Love ruled out for Week 7 vs. Broncos",
-      "published_at": "2026-10-23T18:16:33.000Z",
-      "observed_at": "2026-10-23T18:20:20.013Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI",
-        "DEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-week-7-fantasy-sleepers-broncos-qb-bo-nix-jets-te-kenyon-sadiq-sneaky-good-options",
-      "source_name": "NFL.com",
-      "headline": "NFL Week 7 fantasy sleepers: Broncos QB Bo Nix, Jets TE Kenyon Sadiq sneaky-good options",
-      "published_at": "2026-10-23T06:23:33.000Z",
-      "observed_at": "2026-10-23T18:30:26.058Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN",
-        "NYJ"
-      ],
-      "detected_category": "fantasy",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/puka-nacua-trent-mcduffie-questionable-nate-landman-ruled-out-for-week-7",
       "source_name": "Pro Football Talk",
       "headline": "Puka Nacua, Trent McDuffie questionable, Nate Landman ruled out for Week 7",
@@ -41948,6 +41883,62 @@
       "headline": "Rex Ryan is arrested after allegedly running over feet of pedestrians with his truck",
       "published_at": "2026-11-11T17:30:14.000Z",
       "observed_at": "2026-11-11T17:40:23.763Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/rex-ryan-turns-himself-alleged-nashville-hit-and-run",
+      "source_name": "NFL.com",
+      "headline": "Rex Ryan turns himself in after alleged Nashville hit-and-run injured 2 pedestrians, police say",
+      "published_at": "2026-11-11T05:41:16.000Z",
+      "observed_at": "2026-11-11T17:50:17.360Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/rams-reportedly-pursued-blockbuster-trade-chargers-wr-ladd-mcconkey",
+      "source_name": "FOX Sports",
+      "headline": "Rams Reportedly Pursued Blockbuster Trade For Chargers WR Ladd McConkey",
+      "published_at": "2026-11-11T17:45:40.000Z",
+      "observed_at": "2026-11-11T17:50:17.360Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC",
+        "LAR"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/todd-monken-i-intend-for-deshaun-watson-being-our-starting-qb",
+      "source_name": "Pro Football Talk",
+      "headline": "Todd Monken: I intend for Deshaun Watson being our starting QB",
+      "published_at": "2026-11-11T17:38:04.000Z",
+      "observed_at": "2026-11-11T17:50:17.360Z",
       "decision": "keep",
       "classification": "ambiguous",
       "confidence": "low",
