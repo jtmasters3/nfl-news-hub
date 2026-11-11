@@ -2,70 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/anthony-richardson-news-colts-quarterbacks",
-      "source_name": "FOX Sports",
-      "headline": "What We Know About Colts QB Anthony Richardson's Marijuana Possession Charge",
-      "published_at": "2026-10-23T17:35:30.000Z",
-      "observed_at": "2026-10-23T17:50:22.786Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sauce-gardner-tyler-warren-anthony-gould-ruled-out-for-colts-vikings",
-      "source_name": "Pro Football Talk",
-      "headline": "Sauce Gardner, Tyler Warren, Anthony Gould ruled out for Colts-Vikings",
-      "published_at": "2026-10-23T17:39:06.000Z",
-      "observed_at": "2026-10-23T17:50:22.786Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jesse-minter-still-working-through-whether-or-not-lamar-jackson-will-play-vs-bengals",
-      "source_name": "Pro Football Talk",
-      "headline": "Jesse Minter \"still working through\" whether or not Lamar Jackson will play vs. Bengals",
-      "published_at": "2026-10-23T17:50:10.000Z",
-      "observed_at": "2026-10-23T18:00:26.488Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/colts-qb-anthony-richardson-faces-marijuana-possession-charge-after-traffic-stop-in-indiana",
       "source_name": "NFL.com",
       "headline": "Colts QB Anthony Richardson faces marijuana possession charge after traffic stop in Indiana",
@@ -41969,6 +41905,62 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-how-to-watch-week-10-nfl-games-schedule-munich-game-details-and-more",
+      "source_name": "NFL.com",
+      "headline": "NFL+: How to watch Week 10 NFL games, schedule, Munich game details, and more",
+      "published_at": "2026-11-11T05:29:54.000Z",
+      "observed_at": "2026-11-11T17:30:30.001Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaguars-k-cam-little-is-the-afc-special-teams-player-of-the-week",
+      "source_name": "Pro Football Talk",
+      "headline": "Jaguars K Cam Little is the AFC special teams player of the week",
+      "published_at": "2026-11-11T17:21:29.000Z",
+      "observed_at": "2026-11-11T17:30:30.001Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "JAX"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jake-bates-wins-nfc-special-teams-player-of-the-week",
+      "source_name": "Pro Football Talk",
+      "headline": "Jake Bates wins NFC special teams player of the week",
+      "published_at": "2026-11-11T17:19:01.000Z",
+      "observed_at": "2026-11-11T17:30:30.001Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
