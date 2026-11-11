@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-rb-jordan-mason-questionable-for-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "Vikings RB Jordan Mason questionable for Sunday",
-      "published_at": "2026-10-23T18:53:15.000Z",
-      "observed_at": "2026-10-23T19:00:27.185Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rashee-rice-again-ruled-out-for-week-7",
       "source_name": "Pro Football Talk",
       "headline": "Rashee Rice again ruled out for Week 7",
@@ -41939,6 +41917,23 @@
       "confidence": "low",
       "detected_teams": [],
       "detected_category": "coaching",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-josh-jacobs-could-return-in-2-3-weeks-from-broken-finger",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Josh Jacobs could return in 2-3 weeks from broken finger",
+      "published_at": "2026-11-11T18:15:04.000Z",
+      "observed_at": "2026-11-11T18:20:18.540Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
       "nfl_evidence": [],
       "non_nfl_evidence": [],
       "reason_codes": [
