@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/caleb-williams-outduels-drake-maye-bears-beat-patriots",
-      "source_name": "NFL.com",
-      "headline": "Caleb Williams outduels Drake Maye as Bears win prime-time bout: 'These nights are awesome'",
-      "published_at": "2026-10-23T12:24:40.000Z",
-      "observed_at": "2026-10-23T12:30:24.197Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "NE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-jaguars-ot-anton-harrison-out-for-year-with-a-torn-acl",
       "source_name": "Pro Football Talk",
       "headline": "Report: Jaguars OT Anton Harrison out for year with a torn ACL",
@@ -41943,6 +41921,27 @@
         "PHI"
       ],
       "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cba-allows-49ers-to-not-pay-brandon-aiyuk-during-two-week-roster-exemption",
+      "source_name": "Pro Football Talk",
+      "headline": "CBA allows 49ers to not pay Brandon Aiyuk during two-week roster exemption",
+      "published_at": "2026-11-11T03:12:24.000Z",
+      "observed_at": "2026-11-11T03:20:19.029Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
