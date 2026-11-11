@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/the-patriots-have-so-little-room-for-error-they-made-too-many-in-chicago",
-      "source_name": "NFL.com",
-      "headline": "The Patriots have so little room for error. They made too many in Chicago",
-      "published_at": "2026-10-23T10:16:07.000Z",
-      "observed_at": "2026-10-23T15:10:20.622Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "NE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/if-shane-steichen-wants-to-save-his-job-beating-the-vikings-would-be-a-good-start",
-      "source_name": "NFL.com",
-      "headline": "If Shane Steichen wants to save his job, beating the Vikings would be a good start",
-      "published_at": "2026-10-23T10:16:07.000Z",
-      "observed_at": "2026-10-23T15:10:20.622Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/the-cowboys-have-played-poorly-vs-the-blitz-the-past-2-weeks-what-s-the-problem",
       "source_name": "NFL.com",
       "headline": "The Cowboys have played poorly vs. the blitz the past 2 weeks. What's the problem?",
@@ -41946,6 +41903,49 @@
         "HOU"
       ],
       "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/bengals-dormant-trade-deadline-might-not-matter-but-what-if-it-does",
+      "source_name": "NFL.com",
+      "headline": "Bengals' dormant trade deadline might not matter -- but what if it does?",
+      "published_at": "2026-11-11T01:31:06.000Z",
+      "observed_at": "2026-11-11T14:40:19.965Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-odds-which-teams-favored-vie-super-bowl-lxi",
+      "source_name": "FOX Sports",
+      "headline": "2026 NFL Odds: Which Teams Are Favored To Vie For Super Bowl LXI?",
+      "published_at": "2026-11-11T14:35:03.000Z",
+      "observed_at": "2026-11-11T14:40:19.965Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "SF"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
