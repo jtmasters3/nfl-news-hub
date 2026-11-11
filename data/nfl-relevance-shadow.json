@@ -2,89 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/anthony-richardson-charged-with-misdemeanor-marijuana-possession",
-      "source_name": "Pro Football Talk",
-      "headline": "Anthony Richardson charged with misdemeanor marijuana possession",
-      "published_at": "2026-10-23T14:25:51.000Z",
-      "observed_at": "2026-10-23T14:30:27.572Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-rodgers-isnt-a-fan-of-late-travel-for-games-in-other-countries",
-      "source_name": "Pro Football Talk",
-      "headline": "Aaron Rodgers isn't a fan of late travel for games in other countries",
-      "published_at": "2026-10-23T14:19:47.000Z",
-      "observed_at": "2026-10-23T14:30:27.572Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-week-7-bold-predictions-giants-j-j-mccarthy-shreds-texans-kenneth-walker-iii-revenge-game",
-      "source_name": "NFL.com",
-      "headline": "NFL Week 7 bold predictions: Giants' J.J. McCarthy shreds Texans; Kenneth Walker III revenge game?",
-      "published_at": "2026-10-23T02:34:33.000Z",
-      "observed_at": "2026-10-23T14:40:20.363Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "HOU",
-        "NYG",
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/hall-of-famer-marshall-faulk-diagnosed-parkinsons",
-      "source_name": "NFL.com",
-      "headline": "Marshall Faulk, Hall of Fame RB for Rams and Colts, says he's been diagnosed with Parkinson's",
-      "published_at": "2026-10-23T02:51:25.000Z",
-      "observed_at": "2026-10-23T15:00:37.975Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/the-patriots-have-so-little-room-for-error-they-made-too-many-in-chicago",
       "source_name": "NFL.com",
       "headline": "The Patriots have so little room for error. They made too many in Chicago",
@@ -41949,6 +41866,92 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/rams-made-their-biggest-gamble-yet-by-not-trading-for-a-wide-receiver",
+      "source_name": "NFL.com",
+      "headline": "Rams made their biggest gamble yet by not trading for a wide receiver",
+      "published_at": "2026-11-11T12:16:10.000Z",
+      "observed_at": "2026-11-11T14:30:26.619Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/why-the-patriots-travel-plans-for-lions-game-in-germany-are-different-than-usual",
+      "source_name": "NFL.com",
+      "headline": "Why the Patriots' travel plans for Lions game in Germany are different than usual",
+      "published_at": "2026-11-11T11:16:14.000Z",
+      "observed_at": "2026-11-11T14:30:26.619Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/how-fernando-mendoza-changes-the-raiders-offense-ahead-of-his-first-nfl-start",
+      "source_name": "NFL.com",
+      "headline": "How Fernando Mendoza changes the Raiders offense ahead of his first NFL start",
+      "published_at": "2026-11-11T01:46:09.000Z",
+      "observed_at": "2026-11-11T14:30:26.619Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/reports-browns-still-plan-on-starting-deshaun-watson-against-texans",
+      "source_name": "Pro Football Talk",
+      "headline": "Reports: Browns still plan on starting Deshaun Watson against Texans",
+      "published_at": "2026-11-11T14:20:12.000Z",
+      "observed_at": "2026-11-11T14:30:26.619Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE",
+        "HOU"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
