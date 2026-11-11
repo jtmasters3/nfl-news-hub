@@ -2,66 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/the-cowboys-have-played-poorly-vs-the-blitz-the-past-2-weeks-what-s-the-problem",
-      "source_name": "NFL.com",
-      "headline": "The Cowboys have played poorly vs. the blitz the past 2 weeks. What's the problem?",
-      "published_at": "2026-10-23T10:01:06.000Z",
-      "observed_at": "2026-10-23T15:10:20.622Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steve-spagnuolo-jaxon-smith-njigba-is-really-elite",
-      "source_name": "Pro Football Talk",
-      "headline": "Steve Spagnuolo: Jaxon Smith-Njigba is \"really elite\"",
-      "published_at": "2026-10-23T15:02:42.000Z",
-      "observed_at": "2026-10-23T15:10:20.622Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC",
-        "SEA"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sundays-match-between-psg-and-lyon-in-paris-is-postponed-at-request-of-police",
-      "source_name": "Pro Football Talk",
-      "headline": "Sunday's match between PSG and Lyon in Paris is postponed at request of police",
-      "published_at": "2026-10-23T15:02:15.000Z",
-      "observed_at": "2026-10-23T15:10:20.622Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jets-to-list-breece-hall-as-questionable-adonai-mitchell-set-to-play",
       "source_name": "Pro Football Talk",
       "headline": "Jets to list Breece Hall as questionable, Adonai Mitchell set to play",
@@ -41944,6 +41884,70 @@
       "detected_teams": [
         "BUF",
         "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/it-was-a-quiet-trade-deadline-for-the-steelers-will-they-regret-it",
+      "source_name": "NFL.com",
+      "headline": "It was a quiet trade deadline for the Steelers. Will they regret it?",
+      "published_at": "2026-11-11T12:46:06.000Z",
+      "observed_at": "2026-11-11T14:50:19.461Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-trade-deadline-winners-losers-vikings-find-qb-jags-go-all-in-jonathan-taylor-stranded",
+      "source_name": "NFL.com",
+      "headline": "NFL trade deadline winners, losers: Vikings find QB, Jags go all-in, Jonathan Taylor stranded",
+      "published_at": "2026-11-11T12:46:06.000Z",
+      "observed_at": "2026-11-11T14:50:19.461Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX",
+        "MIN"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kirk-cousins-isnt-officially-back-in-no-8-yet",
+      "source_name": "Pro Football Talk",
+      "headline": "Kirk Cousins isn't officially back in No. 8, yet",
+      "published_at": "2026-11-11T14:45:39.000Z",
+      "observed_at": "2026-11-11T14:50:19.461Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
