@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ben-johnson-cole-kmets-knee-injury-doesnt-look-good",
-      "source_name": "Pro Football Talk",
-      "headline": "Ben Johnson: Cole Kmet's knee injury doesn't look good",
-      "published_at": "2026-10-23T06:49:02.000Z",
-      "observed_at": "2026-10-23T07:00:26.696Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-vrabels-clock-management-included-an-intentional-offside-penalty",
       "source_name": "Pro Football Talk",
       "headline": "Mike Vrabel's clock management included an intentional offside penalty",
@@ -41942,6 +41925,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/commanders-upgrade-wr-treylon-burks-to-full-practice-participation",
+      "source_name": "Pro Football Talk",
+      "headline": "Commanders upgrade WR Treylon Burks to full practice participation",
+      "published_at": "2026-11-11T00:02:25.000Z",
+      "observed_at": "2026-11-11T00:10:19.574Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR",
+        "WAS"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
