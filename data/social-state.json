@@ -787729,24 +787729,30 @@
     },
     "ddf080c2-327a-46a7-9777-f40269f30654": {
       "story_id": "ddf080c2-327a-46a7-9777-f40269f30654",
-      "status": "new",
+      "status": "queued",
       "merged_into": null,
       "created_at": "2026-11-11T15:50:25.787Z",
-      "updated_at": "2026-11-11T15:50:25.787Z",
+      "updated_at": "2026-11-11T16:05:27.648Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
         "instagram_story": true
       },
       "source_story": {
-        "post_headline": null,
-        "base_image_url": null,
-        "source_name": null,
-        "source_url": null,
-        "category": null,
-        "teams": [],
-        "players": [],
-        "description": null,
+        "post_headline": "GIANTS CALLED FALCONS ABOUT A POTENTIAL BIJAN ROBINSON TRADE",
+        "base_image_url": "https://a57.foxsports.com/statics.foxsports.com/www.foxsports.com/content/uploads/2026/11/1294/728/bijan2.jpg?ve=1&tl=1",
+        "source_name": "FOX Sports",
+        "source_url": "https://www.foxsports.com/stories/nfl/giants-bijan-robinson-rumor-nfl-trade-deadline-falcons",
+        "category": "trade",
+        "teams": [
+          "Atlanta Falcons",
+          "New York Giants",
+          "New York Jets"
+        ],
+        "players": [
+          "Bijan Robinson"
+        ],
+        "description": "The Giants didn't make any big deals at the trade deadline, but they tried to make a very big one.",
         "is_rumor": false
       },
       "artwork": {
@@ -787876,6 +787882,15 @@
         "message": null,
         "at": null,
         "retry_count": 0
+      },
+      "selection": {
+        "destination": "story",
+        "slot_id": "story:2026-11-11T11:00:00-05:00",
+        "selected_at": "2026-11-11T16:05:27.648Z",
+        "window_start": "2026-11-11T15:00:00.000Z",
+        "window_end": "2026-11-11T16:00:00.000Z",
+        "score": 10,
+        "reason": "importance_score_rank"
       }
     }
   },
@@ -799085,6 +799100,15 @@
       "status": "selected",
       "story_id": "68a4f81a-19fb-4595-a252-0b6e1df93a78",
       "processed_at": "2026-11-11T15:00:27.263Z"
+    },
+    "story:2026-11-11T11:00:00-05:00": {
+      "destination": "story",
+      "slot_time": "2026-11-11T16:00:00.000Z",
+      "window_start": "2026-11-11T15:00:00.000Z",
+      "window_end": "2026-11-11T16:00:00.000Z",
+      "status": "selected",
+      "story_id": "ddf080c2-327a-46a7-9777-f40269f30654",
+      "processed_at": "2026-11-11T16:05:27.648Z"
     }
   }
 }
