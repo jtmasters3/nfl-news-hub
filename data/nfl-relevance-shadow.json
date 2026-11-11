@@ -2,52 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/college-football/2026-nfl-college-football-odds-best-bets-indiana-michigan-colts-vikings",
-      "source_name": "FOX Sports",
-      "headline": "2026 NFL, College Football Odds: Best Bets For Indiana-Michigan, Colts-Vikings",
-      "published_at": "2026-10-23T23:11:37.000Z",
-      "observed_at": "2026-10-23T23:20:19.468Z",
-      "decision": "keep",
-      "classification": "nfl_with_college_context",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [
-        "college_football_phrase"
-      ],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/lawrence-mccutcheon-five-time-pro-bowl-running-back-with-rams-dies-at-76",
-      "source_name": "NFL.com",
-      "headline": "Lawrence McCutcheon, five-time Pro Bowl running back with Rams, dies at 76",
-      "published_at": "2026-10-24T12:23:01.000Z",
-      "observed_at": "2026-10-24T00:30:23.683Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAC",
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/george-pickens-im-doing-what-they-tell-me-to-do",
       "source_name": "Pro Football Talk",
       "headline": "George Pickens: \"I'm doing what they tell me to do\"",
@@ -41905,6 +41859,49 @@
       "confidence": "high",
       "detected_teams": [
         "MIN"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/fernando-mendoza-raiders-rams-puka-nacua",
+      "source_name": "FOX Sports",
+      "headline": "The Raiders Have Given Meticulous Fernando Mendoza The Keys. What Should We Expect?",
+      "published_at": "2026-11-11T21:35:48.000Z",
+      "observed_at": "2026-11-11T21:50:48.537Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/new-york-jets-will-mcdonald-nfl-trade-deadline-demand",
+      "source_name": "FOX Sports",
+      "headline": "The Jets Didn't Honor Will McDonald IV's Trade Request, Now He Wants More Snaps",
+      "published_at": "2026-11-11T21:33:10.000Z",
+      "observed_at": "2026-11-11T21:50:48.537Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG",
+        "NYJ"
       ],
       "detected_category": "trade",
       "nfl_evidence": [
