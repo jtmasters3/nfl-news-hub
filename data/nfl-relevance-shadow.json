@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/buccaneers-baker-mayfield-thumb-will-start-sunday-vs-panthers-three-game-absence",
-      "source_name": "NFL.com",
-      "headline": "Buccaneers' Baker Mayfield (thumb) will start Sunday vs. Panthers after three-game absence",
-      "published_at": "2026-10-23T04:34:16.000Z",
-      "observed_at": "2026-10-23T16:40:22.031Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR",
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bills-s-sam-franklins-suspension-for-spitting-is-reduced-to-a-fine-after-appeal",
-      "source_name": "Pro Football Talk",
-      "headline": "Bills S Sam Franklin's suspension for spitting is reduced to a fine after appeal",
-      "published_at": "2026-10-23T16:28:37.000Z",
-      "observed_at": "2026-10-23T16:40:22.031Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "LV"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-jacobs-appears-on-track-to-play-vs-lions-on-sunday",
       "source_name": "Pro Football Talk",
       "headline": "Josh Jacobs appears on track to play vs. Lions on Sunday",
@@ -41960,6 +41916,52 @@
         "IND"
       ],
       "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/titans-sign-lb-mohamoud-diabate-off-panthers-practice-squad",
+      "source_name": "Pro Football Talk",
+      "headline": "Titans sign LB Mohamoud Diabate off Panthers practice squad",
+      "published_at": "2026-11-11T16:43:34.000Z",
+      "observed_at": "2026-11-11T16:51:17.628Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR",
+        "TEN"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/miami-of-ohio-penalized-for-patriots-style-video-board-trickery-on-field-goal-attempt",
+      "source_name": "Pro Football Talk",
+      "headline": "Miami of Ohio penalized for Patriots-style video board trickery on field goal attempt",
+      "published_at": "2026-11-11T16:36:22.000Z",
+      "observed_at": "2026-11-11T16:51:17.628Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIA",
+        "NE"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
