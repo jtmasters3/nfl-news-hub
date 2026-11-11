@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-vrabels-clock-management-included-an-intentional-offside-penalty",
-      "source_name": "Pro Football Talk",
-      "headline": "Mike Vrabel's clock management included an intentional offside penalty",
-      "published_at": "2026-10-23T08:50:35.000Z",
-      "observed_at": "2026-10-23T09:00:28.835Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-tells-teams-that-uncalled-hip-drop-tackle-on-aaron-rodgers-was-clear-example-of-penalty",
-      "source_name": "Pro Football Talk",
-      "headline": "NFL tells teams that uncalled hip-drop tackle on Aaron Rodgers was clear example of penalty",
-      "published_at": "2026-10-23T09:00:55.000Z",
-      "observed_at": "2026-10-23T09:10:18.461Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE",
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ben-johnson-originally-called-a-punt-but-cairo-santos-asked-to-try-a-58-yard-field-goal",
       "source_name": "Pro Football Talk",
       "headline": "Ben Johnson originally called a punt, but Cairo Santos asked to try a 58-yard field goal",
@@ -41943,6 +41904,46 @@
       "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/john-spytek-first-real-call-on-kirk-cousins-came-this-morning",
+      "source_name": "Pro Football Talk",
+      "headline": "John Spytek: First \"real\" call on Kirk Cousins came this morning",
+      "published_at": "2026-11-11T01:25:01.000Z",
+      "observed_at": "2026-11-11T01:40:19.120Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "trade",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/raiders-sign-dl-tim-keenan-to-the-active-roster-from-the-practice-squad",
+      "source_name": "Pro Football Talk",
+      "headline": "Raiders sign DL Tim Keenan to the active roster from the practice squad",
+      "published_at": "2026-11-11T00:52:56.000Z",
+      "observed_at": "2026-11-11T01:40:19.120Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV",
+        "MIN"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
