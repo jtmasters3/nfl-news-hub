@@ -2,91 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/lions-te-sam-laporta-walks-back-contract-comments-i-want-to-play-for-this-team",
-      "source_name": "NFL.com",
-      "headline": "Lions TE Sam LaPorta walks back contract comments: 'I want to play for this team'",
-      "published_at": "2026-10-23T09:37:36.000Z",
-      "observed_at": "2026-10-23T21:50:20.820Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET"
-      ],
-      "detected_category": "contract",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:contract"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/former-rams-rb-lawrence-mccutcheon-dies-at-76",
-      "source_name": "Pro Football Talk",
-      "headline": "Former Rams RB Lawrence McCutcheon dies at 76",
-      "published_at": "2026-10-23T21:48:36.000Z",
-      "observed_at": "2026-10-23T22:00:28.101Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/broncos-cb-patrick-surtain-ii-is-questionable",
-      "source_name": "Pro Football Talk",
-      "headline": "Broncos CB Patrick Surtain II is questionable",
-      "published_at": "2026-10-23T22:00:58.000Z",
-      "observed_at": "2026-10-23T22:10:21.873Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-rb-saquon-barkley-remained-limited-in-fridays-practice",
-      "source_name": "Pro Football Talk",
-      "headline": "Eagles RB Saquon Barkley remained limited in Friday's practice",
-      "published_at": "2026-10-23T22:22:55.000Z",
-      "observed_at": "2026-10-23T22:30:23.697Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/matthew-stafford-sam-darnold-and-cam-ward-are-struggling-can-three-high-profile-qbs-get-right",
       "source_name": "NFL.com",
       "headline": "Matthew Stafford, Sam Darnold and Cam Ward are struggling: Can three high-profile QBs get right?",
@@ -41912,6 +41827,82 @@
       "detected_teams": [
         "GB",
         "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-qb-rankings-index-week-10-2026-nfl-season",
+      "source_name": "NFL.com",
+      "headline": "NFL QB rankings, Week 10: Joe Burrow climbs to No. 1; Caleb Williams slides",
+      "published_at": "2026-11-11T09:19:00.000Z",
+      "observed_at": "2026-11-11T21:24:26.655Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-week-10-injury-report-2026-season",
+      "source_name": "NFL.com",
+      "headline": "NFL Week 10 injury report: Player statuses for all 14 games",
+      "published_at": "2026-11-11T09:04:02.000Z",
+      "observed_at": "2026-11-11T21:24:26.655Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jared-goff-listed-as-limited-at-lions-practice-due-to-chest-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Jared Goff listed as limited at Lions practice due to chest injury",
+      "published_at": "2026-11-11T21:17:16.000Z",
+      "observed_at": "2026-11-11T21:24:26.655Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/joey-porter-jr-did-not-practice-wednesday-but-george-pickens-was-limited",
+      "source_name": "Pro Football Talk",
+      "headline": "Joey Porter Jr. did not practice Wednesday, but George Pickens was limited",
+      "published_at": "2026-11-11T21:15:56.000Z",
+      "observed_at": "2026-11-11T21:24:26.655Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
