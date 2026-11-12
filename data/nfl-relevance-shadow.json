@@ -2,46 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bill-belichick-north-carolina-fall-to-syracuse-in-ot-31-30",
-      "source_name": "Pro Football Talk",
-      "headline": "Bill Belichick, North Carolina fall to Syracuse in OT, 31-30",
-      "published_at": "2026-10-25T03:27:43.000Z",
-      "observed_at": "2026-10-25T03:40:17.850Z",
-      "decision": "keep",
-      "classification": "nfl_with_college_context",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [
-        "conference_acc"
-      ],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-dfs-week-7-best-picks-lineup-advice-value-plays",
-      "source_name": "FOX Sports",
-      "headline": "NFL DFS Week 7: Best Picks, Lineup Advice and Value Plays",
-      "published_at": "2026-10-25T04:00:30.000Z",
-      "observed_at": "2026-10-25T04:20:21.012Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "fantasy",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/panthers-vs-buccaneers-prediction-odds-pick-nfl-week-7",
       "source_name": "FOX Sports",
       "headline": "Panthers vs. Buccaneers Prediction, Odds, Pick For NFL Week 7",
@@ -41899,6 +41859,50 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/colts-qb-daniel-jones-on-deadline-trades-you-re-not-happy-to-see-it",
+      "source_name": "NFL.com",
+      "headline": "Colts QB Daniel Jones on deadline trades: 'You're not happy to see it'",
+      "published_at": "2026-11-12T03:20:37.000Z",
+      "observed_at": "2026-11-12T15:30:26.233Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-ravens-to-sign-k-harrison-mevis-to-practice-squad",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Ravens to sign K Harrison Mevis to practice squad",
+      "published_at": "2026-11-12T15:18:48.000Z",
+      "observed_at": "2026-11-12T15:30:26.233Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
