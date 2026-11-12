@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/programa-previo-al-2026-nfl-madrid-game",
-      "source_name": "NFL.com",
-      "headline": "Programa previo al 2026 NFL Madrid Game",
-      "published_at": "2026-10-24T04:24:59.000Z",
-      "observed_at": "2026-10-24T16:30:26.044Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/without-tight-end-cole-kmet-bears-may-run-more-jumbo-six-lineman-formations",
-      "source_name": "Pro Football Talk",
-      "headline": "Without tight end Cole Kmet, Bears may run more jumbo six-lineman formations",
-      "published_at": "2026-10-24T16:30:15.000Z",
-      "observed_at": "2026-10-24T16:40:20.677Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/giants-rule-out-s-jevon-holland-te-theo-johnson",
       "source_name": "Pro Football Talk",
       "headline": "Giants rule out S Jevon Holland, TE Theo Johnson",
@@ -41915,6 +41877,49 @@
       "detected_teams": [
         "CHI",
         "TB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/cousins-rejoins-the-vikings-where-familiarity-and-comfort-will-help-him-prepare-to-play-the-packers",
+      "source_name": "FOX Sports",
+      "headline": "Kirk Cousins Relishes Kevin O'Connell's Familiarity Ahead Of Packers Matchup",
+      "published_at": "2026-11-12T00:09:58.000Z",
+      "observed_at": "2026-11-12T00:30:24.543Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
+        "MIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sam-darnold-did-not-practice-drew-lock-was-limited",
+      "source_name": "Pro Football Talk",
+      "headline": "Sam Darnold did not practice Wednesday; Drew Lock was limited",
+      "published_at": "2026-11-12T00:18:57.000Z",
+      "observed_at": "2026-11-12T00:30:24.543Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SEA"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
