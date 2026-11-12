@@ -2,59 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/travis-kelces-receiving-yardage-total-will-soon-break-tony-gonzalezs-tight-end-record",
-      "source_name": "Pro Football Talk",
-      "headline": "Travis Kelce's receiving yardage total will soon break Tony Gonzalez's tight end record",
-      "published_at": "2026-10-25T08:28:38.000Z",
-      "observed_at": "2026-10-25T08:40:18.844Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nflpa-has-yet-to-launch-full-investigation-of-jalen-hurts-situation",
-      "source_name": "Pro Football Talk",
-      "headline": "NFLPA has yet to launch \"full investigation\" of Jalen Hurts situation",
-      "published_at": "2026-10-25T11:33:49.000Z",
-      "observed_at": "2026-10-25T11:40:19.368Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "phrase_nflpa"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/deion-sanders-after-colorados-blowout-loss-to-oklahoma-state-i-really-dont-understand-it",
-      "source_name": "Pro Football Talk",
-      "headline": "Deion Sanders after Colorado's blowout loss to Oklahoma State: \"I really don't understand it\"",
-      "published_at": "2026-10-25T11:46:47.000Z",
-      "observed_at": "2026-10-25T11:50:23.166Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "coaching",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-andy-reid-and-patrick-mahomes-told-josh-simmons-to-leave-a-team-meeting",
       "source_name": "Pro Football Talk",
       "headline": "Report: Andy Reid and Patrick Mahomes told Josh Simmons to leave a team meeting",
@@ -41899,6 +41846,66 @@
       "confidence": "high",
       "detected_teams": [
         "BUF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/2026-nfl-playoff-predictions-picking-every-division-winner-and-wild-card-team-at-midseason",
+      "source_name": "NFL.com",
+      "headline": "2026 NFL playoff predictions: Picking every division winner and wild-card team at midseason",
+      "published_at": "2026-11-12T04:56:00.000Z",
+      "observed_at": "2026-11-12T17:10:20.563Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bengals-designate-andrei-iosivas-two-others-for-return-from-ir",
+      "source_name": "Pro Football Talk",
+      "headline": "Bengals designate Andrei Iosivas, two others for return from IR",
+      "published_at": "2026-11-12T16:59:01.000Z",
+      "observed_at": "2026-11-12T17:10:20.563Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lions-vs-patriots-matches-up-this-years-two-most-aggressive-head-coaches-on-fourth-downs",
+      "source_name": "Pro Football Talk",
+      "headline": "Lions vs. Patriots matches up this year's two most aggressive head coaches on fourth downs",
+      "published_at": "2026-11-12T16:58:28.000Z",
+      "observed_at": "2026-11-12T17:10:20.563Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "NE"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
