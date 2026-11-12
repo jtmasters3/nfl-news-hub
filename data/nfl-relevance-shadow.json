@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-bengals-vs-ravens-tv-channel-live-stream-time-october-25-2026",
-      "source_name": "FOX Sports",
-      "headline": "How to Watch Bengals vs. Ravens: TV Channel, Live Stream, Time - October 25, 2026",
-      "published_at": "2026-10-25T12:00:26.000Z",
-      "observed_at": "2026-10-25T12:20:21.361Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "CIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-broncos-vs-cardinals-tv-channel-live-stream-time-october-25-2026",
-      "source_name": "FOX Sports",
-      "headline": "How to Watch Broncos vs. Cardinals: TV Channel, Live Stream, Time - October 25, 2026",
-      "published_at": "2026-10-25T12:00:20.000Z",
-      "observed_at": "2026-10-25T12:20:21.361Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI",
-        "DEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-colts-vs-vikings-tv-channel-live-stream-time-october-25-2026",
       "source_name": "FOX Sports",
       "headline": "How to Watch Colts vs. Vikings: TV Channel, Live Stream, Time - October 25, 2026",
@@ -41914,6 +41870,51 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-picks-week-10-2026-nfl-season",
+      "source_name": "NFL.com",
+      "headline": "NFL Week 10 picks: Upset and score predictions, matchup breakdowns for every game",
+      "published_at": "2026-11-12T07:03:13.000Z",
+      "observed_at": "2026-11-12T19:10:17.967Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN",
+        "DET",
+        "GB",
+        "MIN",
+        "NE",
+        "NYG",
+        "PIT",
+        "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/failed-daiyan-henley-trade-exposes-a-flaw-in-the-nfls-trade-deadline",
+      "source_name": "Pro Football Talk",
+      "headline": "Failed Daiyan Henley trade exposes a flaw in the NFL's trade deadline",
+      "published_at": "2026-11-12T18:56:21.000Z",
+      "observed_at": "2026-11-12T19:10:17.967Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "trade",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
