@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-activate-s-deshon-elliott",
-      "source_name": "Pro Football Talk",
-      "headline": "Steelers activate S DeShon Elliott",
-      "published_at": "2026-10-24T19:05:39.000Z",
-      "observed_at": "2026-10-24T19:10:18.559Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PIT"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/questions-linger-regarding-whether-jed-york-received-preferential-treatment",
       "source_name": "Pro Football Talk",
       "headline": "Questions linger regarding whether Jed York received preferential treatment",
@@ -41924,6 +41902,29 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/tom-bradys-nfl-power-rankings-bears-bills-49ers-chiefs",
+      "source_name": "FOX Sports",
+      "headline": "Tom Brady's NFL Power Rankings: Was Bills' Win Convincing Enough To Move To No. 1?",
+      "published_at": "2026-11-12T01:32:52.000Z",
+      "observed_at": "2026-11-12T01:50:18.389Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "CHI",
+        "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
