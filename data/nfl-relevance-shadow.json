@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/ceedee-lamb-believes-2-4-cowboys-can-still-win-nfc-east-why-not-us",
-      "source_name": "NFL.com",
-      "headline": "CeeDee Lamb believes 2-4 Cowboys can still win NFC East: 'Why not us?'",
-      "published_at": "2026-10-24T03:28:26.000Z",
-      "observed_at": "2026-10-24T15:30:24.522Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/christian-mccaffrey-vs-bijan-robinson-part-2-rb-duel-could-steal-the-show-in-atlanta",
-      "source_name": "NFL.com",
-      "headline": "Christian McCaffrey vs. Bijan Robinson, Part 2: RB duel could steal the show in Atlanta",
-      "published_at": "2026-10-24T12:16:05.000Z",
-      "observed_at": "2026-10-24T16:20:24.003Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/will-kyler-murray-build-momentum-in-minnesota-s-offense-vikings-colts-predictions",
       "source_name": "NFL.com",
       "headline": "Will Kyler Murray build momentum in Minnesota's offense?: Vikings-Colts predictions",
@@ -41920,6 +41877,44 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/mike-tomlin-i-haven-t-given-one-iota-of-thought-about-return-to-coaching",
+      "source_name": "NFL.com",
+      "headline": "Mike Tomlin: 'I haven't given one iota of thought' about return to coaching",
+      "published_at": "2026-11-11T09:01:10.000Z",
+      "observed_at": "2026-11-12T00:00:26.789Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "coaching",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/deebo-samuel-limited-in-his-return-to-practice",
+      "source_name": "Pro Football Talk",
+      "headline": "Deebo Samuel limited in his return to practice",
+      "published_at": "2026-11-11T23:55:26.000Z",
+      "observed_at": "2026-11-12T00:00:26.789Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
