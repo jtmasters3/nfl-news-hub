@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/packers-activate-rb-josh-jacobs-from-exempt-list-ahead-of-sunday-s-game-vs-lions",
-      "source_name": "NFL.com",
-      "headline": "Packers activate RB Josh Jacobs from exempt list ahead of Sunday's game vs. Lions",
-      "published_at": "2026-10-24T08:18:39.000Z",
-      "observed_at": "2026-10-24T20:30:27.606Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET",
-        "GB"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/fred-warner-was-fined-for-hit-on-a-defenseless-player-malik-mustapha-was-not",
       "source_name": "Pro Football Talk",
       "headline": "Fred Warner was fined for hit on a defenseless player, Malik Mustapha was not",
@@ -41909,6 +41886,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/for-week-9-next-gen-stats-outpaced-the-mcafee-alt-cast-again",
+      "source_name": "Pro Football Talk",
+      "headline": "For Week 9, Next Gen Stats outpaced the McAfee alt cast again",
+      "published_at": "2026-11-12T11:21:30.000Z",
+      "observed_at": "2026-11-12T11:30:21.990Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
