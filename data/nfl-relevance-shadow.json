@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-chiefs-vs-seahawks-tv-channel-live-stream-time-october-25-2026",
-      "source_name": "FOX Sports",
-      "headline": "How to Watch Chiefs vs. Seahawks: TV Channel, Live Stream, Time - October 25, 2026",
-      "published_at": "2026-10-25T12:00:49.000Z",
-      "observed_at": "2026-10-25T12:20:21.361Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC",
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-giants-vs-texans-tv-channel-live-stream-time-october-25-2026",
       "source_name": "FOX Sports",
       "headline": "How to Watch Giants vs. Texans: TV Channel, Live Stream, Time - October 25, 2026",
@@ -41918,6 +41896,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-pivoted-to-keenan-allen-after-initially-focusing-on-josh-downs",
+      "source_name": "Pro Football Talk",
+      "headline": "49ers pivoted to Keenan Allen trade after initially focusing on Josh Downs",
+      "published_at": "2026-11-12T17:16:32.000Z",
+      "observed_at": "2026-11-12T17:30:22.879Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "SF"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
