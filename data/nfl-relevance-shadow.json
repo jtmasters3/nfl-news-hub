@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mark-sanchezs-change-of-plea-hearing-has-been-rescheduled-for-january-25",
-      "source_name": "Pro Football Talk",
-      "headline": "Mark Sanchez's change-of-plea hearing has been rescheduled for January 25",
-      "published_at": "2026-10-25T12:06:31.000Z",
-      "observed_at": "2026-10-25T12:20:21.361Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/week-7-injuries-sunday-pregame-2026-nfl-season",
       "source_name": "NFL.com",
       "headline": "NFL Week 7 injuries to monitor for Sunday's games",
@@ -41908,6 +41891,27 @@
         "NE"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/dick-hoak-who-spent-45-years-with-steelers-as-player-and-assistant-coach-dies-at-86",
+      "source_name": "NFL.com",
+      "headline": "Dick Hoak, who spent 45 years with Steelers as player and assistant coach, dies at 86",
+      "published_at": "2026-11-12T07:45:12.000Z",
+      "observed_at": "2026-11-12T19:50:19.692Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT"
+      ],
+      "detected_category": "coaching",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
