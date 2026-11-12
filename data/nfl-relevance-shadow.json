@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chiefs-put-rb-brashard-smith-on-ir-activate-lb-cooper-mcdonald",
-      "source_name": "Pro Football Talk",
-      "headline": "Chiefs put RB Brashard Smith on IR, activate LB Cooper McDonald",
-      "published_at": "2026-10-24T18:58:15.000Z",
-      "observed_at": "2026-10-24T19:00:27.078Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC",
-        "SEA"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-activate-s-deshon-elliott",
       "source_name": "Pro Football Talk",
       "headline": "Steelers activate S DeShon Elliott",
@@ -41929,6 +41907,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kamario-taylor-lands-7-5-million-deal-to-return-to-mississippi-state",
+      "source_name": "Pro Football Talk",
+      "headline": "Kamario Taylor lands $7.5 million deal to return to Mississippi State",
+      "published_at": "2026-11-12T01:21:40.000Z",
+      "observed_at": "2026-11-12T01:30:21.695Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
