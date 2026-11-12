@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-packers-vs-lions-tv-channel-live-stream-time-october-25-2026",
-      "source_name": "FOX Sports",
-      "headline": "How to Watch Packers vs. Lions: TV Channel, Live Stream, Time - October 25, 2026",
-      "published_at": "2026-10-25T12:00:38.000Z",
-      "observed_at": "2026-10-25T12:20:21.361Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET",
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-rams-vs-raiders-tv-channel-live-stream-time-october-25-2026",
-      "source_name": "FOX Sports",
-      "headline": "How to Watch Rams vs. Raiders: TV Channel, Live Stream, Time - October 25, 2026",
-      "published_at": "2026-10-25T12:00:31.000Z",
-      "observed_at": "2026-10-25T12:20:21.361Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV",
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-dolphins-vs-jets-tv-channel-live-stream-time-october-25-2026",
       "source_name": "FOX Sports",
       "headline": "How to Watch Dolphins vs. Jets: TV Channel, Live Stream, Time - October 25, 2026",
@@ -41910,6 +41866,50 @@
         "CLE"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/college-football/sammys-sportsbook-whispers-ucla-bruins-hit-lottery-favorable-schedule",
+      "source_name": "FOX Sports",
+      "headline": "Sammy’s Sportsbook Whispers: UCLA Is Enjoying 'The Big Ten Schedule Lottery'",
+      "published_at": "2026-11-12T18:26:35.000Z",
+      "observed_at": "2026-11-12T18:40:22.978Z",
+      "decision": "keep",
+      "classification": "nfl_with_college_context",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [
+        "conference_big_ten"
+      ],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/denzel-boston-remains-out-of-thursdays-practice-with-toe-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Denzel Boston remains out of Thursday's practice with toe injury",
+      "published_at": "2026-11-12T18:32:08.000Z",
+      "observed_at": "2026-11-12T18:40:22.978Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
