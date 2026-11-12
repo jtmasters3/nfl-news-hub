@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-colts-vs-vikings-tv-channel-live-stream-time-october-25-2026",
-      "source_name": "FOX Sports",
-      "headline": "How to Watch Colts vs. Vikings: TV Channel, Live Stream, Time - October 25, 2026",
-      "published_at": "2026-10-25T12:00:10.000Z",
-      "observed_at": "2026-10-25T12:20:21.361Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mark-sanchezs-change-of-plea-hearing-has-been-rescheduled-for-january-25",
       "source_name": "Pro Football Talk",
       "headline": "Mark Sanchez's change-of-plea hearing has been rescheduled for January 25",
@@ -41915,6 +41893,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/harry-kane-nfl-kicker-patriots-drake-maye-new-england-press-conference",
+      "source_name": "FOX Sports",
+      "headline": "Harry Kane An NFL Kicker? Patriots Star Drake Maye Supports It",
+      "published_at": "2026-11-12T19:05:41.000Z",
+      "observed_at": "2026-11-12T19:20:18.677Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
