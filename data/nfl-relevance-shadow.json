@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ravens-dominating-time-of-possession-lead-bengals-13-0-at-halftime",
-      "source_name": "Pro Football Talk",
-      "headline": "Ravens dominating time of possession, lead Bengals 13-0 at halftime",
-      "published_at": "2026-10-25T18:23:58.000Z",
-      "observed_at": "2026-10-25T18:30:23.469Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "CIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dolphins-lead-jets-21-7-at-halftime",
-      "source_name": "Pro Football Talk",
-      "headline": "Dolphins lead Jets 21-7 at halftime",
-      "published_at": "2026-10-25T18:21:27.000Z",
-      "observed_at": "2026-10-25T18:30:23.469Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIA",
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/49ers-christian-mccaffrey-thigh-injury-update-falcons",
       "source_name": "FOX Sports",
       "headline": "49ers RB Christian McCaffrey Departs Early vs. Falcons Due To Thigh Injury",
@@ -41909,6 +41865,45 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jim-harbaugh-broncos-took-advantage-of-a-loophole-the-nfl-should-not-allow",
+      "source_name": "Pro Football Talk",
+      "headline": "Jim Harbaugh: Broncos took advantage of a loophole the NFL should not allow",
+      "published_at": "2026-11-12T22:47:14.000Z",
+      "observed_at": "2026-11-12T22:50:21.093Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "LAC"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/joey-porter-jr-injuries-keeping-me-off-field-not-my-contract-situation",
+      "source_name": "Pro Football Talk",
+      "headline": "Joey Porter Jr.: Injuries keeping me off field, not my contract situation",
+      "published_at": "2026-11-12T22:45:28.000Z",
+      "observed_at": "2026-11-12T22:50:21.093Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
