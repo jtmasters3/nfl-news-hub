@@ -2,48 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/former-raiders-rb-pete-banaszak-dies-at-82",
-      "source_name": "Pro Football Talk",
-      "headline": "Former Raiders RB Pete Banaszak dies at 82",
-      "published_at": "2026-10-24T19:40:59.000Z",
-      "observed_at": "2026-10-24T19:50:19.348Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/the-dallas-cowboys-cheerleaders-have-unionized",
-      "source_name": "Pro Football Talk",
-      "headline": "The Dallas Cowboys cheerleaders have unionized",
-      "published_at": "2026-10-24T20:01:25.000Z",
-      "observed_at": "2026-10-24T20:10:20.449Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-list-saquon-barkley-as-questionable-devonta-smith-dontayvion-wicks-ruled-out",
       "source_name": "Pro Football Talk",
       "headline": "Eagles list Saquon Barkley as questionable; DeVonta Smith, Dontayvion Wicks ruled out",
@@ -41912,6 +41870,45 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/2026-nfl-munich-game-guide-fuer-den-spieltag",
+      "source_name": "NFL.com",
+      "headline": "2026 NFL Munich Game: Guide für den Spieltag",
+      "published_at": "2026-11-12T09:24:05.000Z",
+      "observed_at": "2026-11-12T09:30:24.607Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/broncos-chargers-announce-daiyan-henley-will-not-be-traded-after-all",
+      "source_name": "Pro Football Talk",
+      "headline": "Broncos, Chargers announce Daiyan Henley will not be traded after all",
+      "published_at": "2026-11-12T09:23:38.000Z",
+      "observed_at": "2026-11-12T09:30:24.607Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "LAC"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
