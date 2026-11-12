@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ravens-downgrade-qb-lamar-jackson-to-out-for-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "Ravens downgrade QB Lamar Jackson to out for Sunday",
-      "published_at": "2026-10-24T19:45:27.000Z",
-      "observed_at": "2026-10-24T19:50:19.348Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/former-raiders-rb-pete-banaszak-dies-at-82",
       "source_name": "Pro Football Talk",
       "headline": "Former Raiders RB Pete Banaszak dies at 82",
@@ -41907,6 +41886,23 @@
       "headline": "Dianna Russini's return includes no specifics about multiple controversies",
       "published_at": "2026-11-12T03:44:18.000Z",
       "observed_at": "2026-11-12T03:50:19.599Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/keenan-allen-says-his-beef-with-mike-evans-is-in-the-past",
+      "source_name": "Pro Football Talk",
+      "headline": "Keenan Allen says his beef with Mike Evans is in the past",
+      "published_at": "2026-11-12T04:04:53.000Z",
+      "observed_at": "2026-11-12T04:20:16.925Z",
       "decision": "keep",
       "classification": "ambiguous",
       "confidence": "low",
