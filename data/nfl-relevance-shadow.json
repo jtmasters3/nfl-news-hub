@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/texans-activate-wr-tank-dell-to-the-active-roster",
-      "source_name": "Pro Football Talk",
-      "headline": "Texans activate WR Tank Dell to the active roster",
-      "published_at": "2026-10-24T21:14:52.000Z",
-      "observed_at": "2026-10-24T21:30:24.940Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "HOU",
-        "NYG"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/former-raiders-rb-pete-banaszak-who-won-super-bowl-xi-with-oakland-dies-at-82",
       "source_name": "NFL.com",
       "headline": "Former Raiders RB Pete Banaszak, who won Super Bowl XI with Oakland, dies at 82",
@@ -41891,6 +41868,27 @@
       "detected_teams": [
         "NYG",
         "WAS"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/what-steelers-need-from-dk-metcalf-and-the-wrs-after-failing-to-trade-for-one-at-the-deadline",
+      "source_name": "NFL.com",
+      "headline": "What Steelers need from DK Metcalf and the WRs after failing to trade for one at the deadline",
+      "published_at": "2026-11-12T10:46:10.000Z",
+      "observed_at": "2026-11-12T14:30:22.443Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT"
       ],
       "detected_category": "trade",
       "nfl_evidence": [
