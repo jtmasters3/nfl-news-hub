@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/lamar-jackson-news-bengals-ravens-injury-report",
-      "source_name": "FOX Sports",
-      "headline": "Ravens Announce QB Lamar Jackson Week 7 Game Status vs. Bengals",
-      "published_at": "2026-10-24T20:29:43.000Z",
-      "observed_at": "2026-10-24T20:40:19.452Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "CIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lions-activate-brian-branch-cade-mays",
       "source_name": "Pro Football Talk",
       "headline": "Lions activate Brian Branch, Cade Mays",
@@ -41900,6 +41878,28 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "nfl_preserving_category:draft"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dolphins-qb-kyle-mccord-experience-in-big-games-something-i-can-draw-from",
+      "source_name": "Pro Football Talk",
+      "headline": "Dolphins QB Kyle McCord: Experience in big games something I can draw from",
+      "published_at": "2026-11-12T12:12:21.000Z",
+      "observed_at": "2026-11-12T12:20:20.366Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "MIA"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
