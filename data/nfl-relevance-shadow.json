@@ -2,93 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-lead-at-halftime-despite-offense-struggling-without-christian-mccaffrey",
-      "source_name": "Pro Football Talk",
-      "headline": "49ers lead at halftime despite offense struggling without Christian McCaffrey",
-      "published_at": "2026-10-25T18:30:09.000Z",
-      "observed_at": "2026-10-25T18:40:20.114Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-take-10-6-lead-just-before-halftime-in-minnesota",
-      "source_name": "Pro Football Talk",
-      "headline": "Colts stretch lead to 10-6 just before halftime in Minnesota",
-      "published_at": "2026-10-25T18:27:58.000Z",
-      "observed_at": "2026-10-25T18:40:20.114Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/buccaneers-blowing-out-panthers-with-33-6-lead-at-halftime",
-      "source_name": "Pro Football Talk",
-      "headline": "Buccaneers blowing out Panthers with 33-6 halftime lead",
-      "published_at": "2026-10-25T18:27:49.000Z",
-      "observed_at": "2026-10-25T18:40:20.114Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR",
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-take-lead-but-christian-mccaffrey-returns-for-49ers",
-      "source_name": "Pro Football Talk",
-      "headline": "Falcons take lead, but Christian McCaffrey returns for 49ers",
-      "published_at": "2026-10-25T18:46:00.000Z",
-      "observed_at": "2026-10-25T18:50:20.813Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "SF"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/broncos-will-be-without-pat-surtain-ii-for-third-straight-game",
       "source_name": "Pro Football Talk",
       "headline": "Broncos will be without Pat Surtain II for third straight game",
@@ -41896,6 +41809,86 @@
       "detected_teams": [
         "DET",
         "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-week-10-picks-best-bets-every-game-wills-wagers",
+      "source_name": "FOX Sports",
+      "headline": "2026 NFL Week 10 Picks: Best Bets For Every Game — Will's Wagers",
+      "published_at": "2026-11-12T23:06:34.000Z",
+      "observed_at": "2026-11-12T23:20:20.393Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/knoxville-chattanooga-fox-affiliates-pass-on-titans-game-for-now",
+      "source_name": "Pro Football Talk",
+      "headline": "Knoxville, Chattanooga Fox affiliates pass on Titans game, for now",
+      "published_at": "2026-11-12T23:15:18.000Z",
+      "observed_at": "2026-11-12T23:20:20.393Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "TEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaguars-get-jakobi-meyers-travon-walker-back-at-practice",
+      "source_name": "Pro Football Talk",
+      "headline": "Jaguars get Jakobi Meyers, Travon Walker back at practice",
+      "published_at": "2026-11-12T23:08:53.000Z",
+      "observed_at": "2026-11-12T23:20:20.393Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/george-pickens-limited-again-thursday",
+      "source_name": "Pro Football Talk",
+      "headline": "George Pickens limited again Thursday",
+      "published_at": "2026-11-12T23:08:06.000Z",
+      "observed_at": "2026-11-12T23:20:20.393Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
