@@ -2,506 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-players-union-working-together-review-handling-jalen-hurts-blood-clot-diagnosis",
-      "source_name": "NFL.com",
-      "headline": "NFL, players' union working together to review handling of Jalen Hurts' blood clot diagnosis",
-      "published_at": "2026-10-25T02:23:36.000Z",
-      "observed_at": "2026-10-25T14:30:22.443Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/saints-benefit-from-questionable-replay-review-on-t-j-watt-strip-sack-of-tyler-shough",
-      "source_name": "Pro Football Talk",
-      "headline": "Saints benefit from questionable replay review on T.J. Watt strip sack of Tyler Shough",
-      "published_at": "2026-10-25T14:32:34.000Z",
-      "observed_at": "2026-10-25T14:40:23.892Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NO"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-kick-last-second-field-goal-to-take-13-10-lead-over-saints-at-halftime-in-paris",
-      "source_name": "Pro Football Talk",
-      "headline": "Steelers kick last-second field goal to take 13-10 lead over Saints at halftime in Paris",
-      "published_at": "2026-10-25T15:06:21.000Z",
-      "observed_at": "2026-10-25T15:20:28.796Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NO",
-        "PIT"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jets-rb-breece-hall-is-inactive-for-the-third-straight-game",
-      "source_name": "Pro Football Talk",
-      "headline": "Jets RB Breece Hall is inactive for the third straight game",
-      "published_at": "2026-10-25T15:34:02.000Z",
-      "observed_at": "2026-10-25T15:40:21.907Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYJ"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/will-rams-able-turn-around-what-nfl-execs-scouts-make-l-a-s-2-4-start",
-      "source_name": "FOX Sports",
-      "headline": "Will The Rams Be Able To Turn It Around? What NFL Execs, Scouts Make Of L.A.'s 2-4 Start",
-      "published_at": "2026-10-25T15:41:13.000Z",
-      "observed_at": "2026-10-25T16:10:21.561Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/buccaneers-have-played-in-12-straight-one-score-games",
-      "source_name": "Pro Football Talk",
-      "headline": "Buccaneers have played in 12 straight one-score games",
-      "published_at": "2026-10-25T16:03:53.000Z",
-      "observed_at": "2026-10-25T16:10:21.561Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/myles-garrett-lamar-jackson-return-jay-glazer-update",
-      "source_name": "FOX Sports",
-      "headline": "When Will Lamar Jackson, Myles Garrett Return? Jay Glazer Provides Updates",
-      "published_at": "2026-10-25T16:16:20.000Z",
-      "observed_at": "2026-10-25T16:30:25.411Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "LAR"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/j-j-mccarthy-carries-four-game-winning-streak-into-first-start-for-giants",
-      "source_name": "Pro Football Talk",
-      "headline": "J.J. McCarthy carries four-game winning streak into first start for Giants",
-      "published_at": "2026-10-25T16:18:52.000Z",
-      "observed_at": "2026-10-25T16:30:25.411Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaylen-warren-and-the-steelers-run-over-the-saints-in-paris",
-      "source_name": "Pro Football Talk",
-      "headline": "Jaylen Warren and the Steelers run over the Saints in Paris",
-      "published_at": "2026-10-25T16:35:39.000Z",
-      "observed_at": "2026-10-25T16:40:17.588Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NO",
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/which-active-nfl-tight-ends-remind-rob-gronkowski-himself",
-      "source_name": "FOX Sports",
-      "headline": "Which Active TEs Remind Rob Gronkowski Of Himself? His Answer Will Surprise You",
-      "published_at": "2026-10-25T16:34:14.000Z",
-      "observed_at": "2026-10-25T16:50:18.973Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dolphins-jets-bring-plenty-of-futility-into-their-first-meeting-of-the-year",
-      "source_name": "Pro Football Talk",
-      "headline": "Dolphins, Jets bring plenty of futility into their first meeting of the year",
-      "published_at": "2026-10-25T16:36:50.000Z",
-      "observed_at": "2026-10-25T16:50:18.973Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIA",
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/jay-glazer-jalen-hurts-health-update-nfl-nflpa-joint-investigation",
-      "source_name": "FOX Sports",
-      "headline": "Jay Glazer Shares Jalen Hurts Health Update, NFL And NFLPA Joint Investigation",
-      "published_at": "2026-10-25T17:17:58.000Z",
-      "observed_at": "2026-10-25T17:20:23.444Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "phrase_nflpa"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jonathan-taylor-puts-colts-up-7-0-after-vikings-fail-on-fourth-down",
-      "source_name": "Pro Football Talk",
-      "headline": "Jonathan Taylor puts Colts up 7-0 after Vikings fail on fourth down",
-      "published_at": "2026-10-25T17:16:22.000Z",
-      "observed_at": "2026-10-25T17:20:23.444Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dolphins-have-their-first-lead-of-the-2026-season",
-      "source_name": "Pro Football Talk",
-      "headline": "Dolphins have their first lead of the 2026 season",
-      "published_at": "2026-10-25T17:12:20.000Z",
-      "observed_at": "2026-10-25T17:20:23.444Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/zay-flowers-48-yard-touchdown-gives-ravens-early-7-0-lead",
-      "source_name": "Pro Football Talk",
-      "headline": "Zay Flowers 48-yard touchdown gives Ravens early 7-0 lead",
-      "published_at": "2026-10-25T17:10:42.000Z",
-      "observed_at": "2026-10-25T17:20:23.444Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/2026-nfl-season-week-7-what-we-learned-from-sunday-s-games",
-      "source_name": "NFL.com",
-      "headline": "2026 NFL season, Week 7: What We Learned from Sunday's games",
-      "published_at": "2026-10-25T05:25:47.000Z",
-      "observed_at": "2026-10-25T17:30:24.179Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/after-deshaun-watson-pick-tony-pollards-second-td-gives-titans-14-0-lead",
-      "source_name": "Pro Football Talk",
-      "headline": "After Deshaun Watson pick, Tony Pollard's second TD gives Titans 14-0 lead",
-      "published_at": "2026-10-25T17:23:02.000Z",
-      "observed_at": "2026-10-25T17:30:24.179Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "TEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cardinals-hope-to-end-franchise-record-nine-game-home-losing-streak-today",
-      "source_name": "Pro Football Talk",
-      "headline": "Cardinals hope to end franchise-record nine-game home losing streak today",
-      "published_at": "2026-10-25T17:22:17.000Z",
-      "observed_at": "2026-10-25T17:30:24.179Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/baker-mayfields-first-drive-back-results-in-a-td-7-0-lead",
-      "source_name": "Pro Football Talk",
-      "headline": "Baker Mayfield's first drive back results in a TD, 7-0 lead",
-      "published_at": "2026-10-25T17:20:03.000Z",
-      "observed_at": "2026-10-25T17:30:24.179Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR",
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/christian-mccaffrey-leaps-into-the-end-zone-on-fourth-down-49ers-lead-falcons",
-      "source_name": "Pro Football Talk",
-      "headline": "Christian McCaffrey leaps into the end zone on fourth down, 49ers lead Falcons",
-      "published_at": "2026-10-25T17:16:56.000Z",
-      "observed_at": "2026-10-25T17:30:24.179Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "SF"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/j-j-mccarthy-giants-take-7-3-lead-on-texans",
-      "source_name": "Pro Football Talk",
-      "headline": "J.J. McCarthy, Giants take 7-3 lead on Texans",
-      "published_at": "2026-10-25T17:29:11.000Z",
-      "observed_at": "2026-10-25T17:40:19.374Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "HOU",
-        "NYG"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jared-goff-can-become-first-qb-with-15-or-more-td-passes-no-picks-through-six-games",
-      "source_name": "Pro Football Talk",
-      "headline": "Jared Goff can become first QB with 15 or more TD passes, no picks through six games",
-      "published_at": "2026-10-25T17:41:24.000Z",
-      "observed_at": "2026-10-25T17:50:21.672Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET",
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/notable-injuries-news-sunday-week-7-games-2026",
-      "source_name": "NFL.com",
-      "headline": "Notable injuries, news from Sunday's Week 7 games: 49ers' Christian McCaffrey suffers thigh injury",
-      "published_at": "2026-10-25T05:51:53.000Z",
-      "observed_at": "2026-10-25T18:00:26.688Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bucs-score-a-defensive-td-to-take-17-0-lead-on-panthers",
-      "source_name": "Pro Football Talk",
-      "headline": "Bucs score a defensive TD to take 17-0 lead on Panthers",
-      "published_at": "2026-10-25T17:53:04.000Z",
-      "observed_at": "2026-10-25T18:00:26.688Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR",
-        "TB"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/terry-bradshaw-calls-out-cowboys-focus-dak-prescott",
       "source_name": "FOX Sports",
       "headline": "Terry Bradshaw Calls Out Cowboys, Saying 'Focus Isn’t Where It Should Be’",
@@ -41910,6 +41410,499 @@
         "KC"
       ],
       "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50452792/2026-midseason-awards-ranking-mvp-rookies-coaches-barnwell",
+      "source_name": "ESPN",
+      "headline": "Eight awards, and the favorite for each: Barnwell's picks for the NFL's best so far",
+      "published_at": "2026-11-12T18:16:18.000Z",
+      "observed_at": "2026-11-12T22:10:38.013Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50448976/2026-nfl-midseason-report-questions-stats-fantasy",
+      "source_name": "ESPN",
+      "headline": "The NFL midseason report: Every team from every angle, plus keys to the second half",
+      "published_at": "2026-11-12T18:16:18.000Z",
+      "observed_at": "2026-11-12T22:10:38.013Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "fantasy",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50464601/chargers-jim-harbaugh-irked-broncos-nixed-trade",
+      "source_name": "ESPN",
+      "headline": "Harbaugh bemoans 'loophole' after nixed trade, urges NFL to look into it",
+      "published_at": "2026-11-12T21:46:48.000Z",
+      "observed_at": "2026-11-12T22:10:38.013Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "LAC"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50463010/browns-jared-verse-met-psychiatrist-end-sack-slump",
+      "source_name": "ESPN",
+      "headline": "Browns' Verse says he met with team psychiatrist to try to snap sack slump",
+      "published_at": "2026-11-12T21:46:48.000Z",
+      "observed_at": "2026-11-12T22:10:38.013Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50463938/still-colts-jonathan-taylor-focused-being-leader",
+      "source_name": "ESPN",
+      "headline": "Taylor focused on being leader for Colts with trade deadline drama in past",
+      "published_at": "2026-11-12T21:46:48.000Z",
+      "observed_at": "2026-11-12T22:10:38.013Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50459330/broncos-say-trade-chargers-lb-henley-not-finalized",
+      "source_name": "ESPN",
+      "headline": "Sources: Broncos-Chargers trade nixed due to concerns over LB Henley's knee",
+      "published_at": "2026-11-12T21:46:48.000Z",
+      "observed_at": "2026-11-12T22:10:38.013Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "LAC"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50461920/long-steelers-player-assistant-coach-dick-hoak-dies-86",
+      "source_name": "ESPN",
+      "headline": "Longtime Steelers running back, assistant coach Hoak dies at 86",
+      "published_at": "2026-11-12T21:46:48.000Z",
+      "observed_at": "2026-11-12T22:10:38.013Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50455771/kirk-cousins-reintroduced-vikings-starting-qb",
+      "source_name": "ESPN",
+      "headline": "Cousins: O'Connell convinced me to accept trade to Vikings, 'Kevin knows me'",
+      "published_at": "2026-11-12T21:46:48.000Z",
+      "observed_at": "2026-11-12T22:10:38.013Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50456405/fernando-mendoza-relishes-once-life-opportunity-raiders-starting-qb",
+      "source_name": "ESPN",
+      "headline": "Mendoza relishes 'once-in-a-lifetime' opportunity, had 'no inkling' of Cousins deal",
+      "published_at": "2026-11-12T21:46:48.000Z",
+      "observed_at": "2026-11-12T22:10:38.013Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50455318/mcvay-rams-optimistic-wr-adams-return-sooner-later",
+      "source_name": "ESPN",
+      "headline": "McVay: Rams didn't trade for WR as Adams might return 'sooner than later'",
+      "published_at": "2026-11-12T21:46:48.000Z",
+      "observed_at": "2026-11-12T22:10:38.013Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/draft2027/story/_/id/50068479/2027-nfl-draft-rankings-jordan-reid-top-prospects-players-positions",
+      "source_name": "ESPN",
+      "headline": "✨ Top 50 prospects in the 2027 NFL draft class",
+      "published_at": "2026-11-12T21:46:48.000Z",
+      "observed_at": "2026-11-12T22:10:38.013Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [],
+      "detected_category": "draft",
+      "nfl_evidence": [
+        "phrase_nfl_draft",
+        "nfl_preserving_category:draft"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50453988/kobe-lebron-steph-brady-tips-commanders-jayden-daniels",
+      "source_name": "ESPN",
+      "headline": "How Kobe, LeBron, Steph and Brady are helping Jayden Daniels chase greatness",
+      "published_at": "2026-11-12T19:19:27.000Z",
+      "observed_at": "2026-11-12T22:10:38.013Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50454087/inside-physical-mental-toll-malik-nabers-knee-injury",
+      "source_name": "ESPN",
+      "headline": "Inside the physical and mental toll of Malik Nabers' knee injury",
+      "published_at": "2026-11-12T19:19:27.000Z",
+      "observed_at": "2026-11-12T22:10:38.013Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50442897/2026-trade-deadline-barnwell-questions-cousins-downs",
+      "source_name": "ESPN",
+      "headline": "Does Cousins fix Vikings' offense? Should Rams have added? Barnwell on deadline",
+      "published_at": "2026-11-12T15:10:51.000Z",
+      "observed_at": "2026-11-12T22:10:38.013Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC",
+        "LAR",
+        "MIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50434129/week-10-seven-things-solak-thinks-trade-deadline-all-pro",
+      "source_name": "ESPN",
+      "headline": "Seven things Solak thinks: Jags to the Super Bowl? Plus, early All-Pro picks and more",
+      "published_at": "2026-11-12T13:05:50.000Z",
+      "observed_at": "2026-11-12T22:10:38.013Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50455566/packers-christian-watson-matthew-golden-3000-yards",
+      "source_name": "ESPN",
+      "headline": "Does Packers' Christian Watson + Matthew Golden = 3,000 yards?",
+      "published_at": "2026-11-12T13:12:56.000Z",
+      "observed_at": "2026-11-12T22:10:38.013Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50448015/nfl-week-10-uniforms",
+      "source_name": "ESPN",
+      "headline": "Titans' 'Rivalries' combination, Ravens' all-black threads top NFL Week 10 uniforms",
+      "published_at": "2026-11-12T16:08:40.000Z",
+      "observed_at": "2026-11-12T22:10:38.013Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "TEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50443388/2026-nfl-trade-deadline-winners-losers-best-worst-deals",
+      "source_name": "ESPN",
+      "headline": "Winners, losers of the NFL trade deadline: Chiefs get a WR, Vikings get a QB, Chargers stay quiet",
+      "published_at": "2026-11-12T14:29:06.000Z",
+      "observed_at": "2026-11-12T22:10:38.013Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC",
+        "LAC",
+        "MIN"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50444528/kirk-cousins-trade-minnesota-vikings-las-vegas-raiders",
+      "source_name": "ESPN",
+      "headline": "Cousins to Vikings and Mendoza as Raiders' QB1? Let's size up this big deadline trade",
+      "published_at": "2026-11-12T14:29:07.000Z",
+      "observed_at": "2026-11-12T22:10:38.013Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV",
+        "MIN"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/fantasy/football/story/_/id/50433086/fantasy-playbook-projections-lineup-locks-week-10-shadow",
+      "source_name": "ESPN",
+      "headline": "The Playbook: Shadow Reports, lineup locks and projected scores for Week 10",
+      "published_at": "2026-11-12T14:38:21.000Z",
+      "observed_at": "2026-11-12T22:10:38.013Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "fantasy",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/fantasy/football/story/_/id/50454993/fantasy-football-start-sit-running-backs-rest-season",
+      "source_name": "ESPN",
+      "headline": "Williams or Corum? Hall or Allen? Who to trust in these backfields-by-committee",
+      "published_at": "2026-11-12T14:38:22.000Z",
+      "observed_at": "2026-11-12T22:10:38.013Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50434740/nfl-trades-protected-draft-picks",
+      "source_name": "ESPN",
+      "headline": "Why NFL trades, unlike NBA ones, don't have protected picks",
+      "published_at": "2026-11-11T18:51:31.000Z",
+      "observed_at": "2026-11-12T22:10:38.013Z",
+      "decision": "reject",
+      "classification": "other_sport",
+      "confidence": "high",
+      "detected_teams": [],
+      "detected_category": "trade",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [
+        "league_nba"
+      ],
+      "reason_codes": [
+        "other_sport_marker_no_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/jonathan-taylor-back-to-regular-scheduled-programming-after-remaining-with-colts",
+      "source_name": "NFL.com",
+      "headline": "Jonathan Taylor back to 'regular scheduled programming' after remaining with Colts",
+      "published_at": "2026-11-12T09:46:05.000Z",
+      "observed_at": "2026-11-12T22:10:38.013Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rhamondre-stevenson-returns-to-practice-a-j-brown-remains-limited",
+      "source_name": "Pro Football Talk",
+      "headline": "Rhamondre Stevenson returns to practice, A.J. Brown remains limited",
+      "published_at": "2026-11-12T22:01:56.000Z",
+      "observed_at": "2026-11-12T22:10:38.013Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
