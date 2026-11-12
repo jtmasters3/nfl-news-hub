@@ -2,40 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-andy-reid-and-patrick-mahomes-told-josh-simmons-to-leave-a-team-meeting",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Andy Reid and Patrick Mahomes told Josh Simmons to leave a team meeting",
-      "published_at": "2026-10-25T11:40:07.000Z",
-      "observed_at": "2026-10-25T11:50:23.166Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-week-7-inactives-players-ruled-out-sunday-2026-season",
-      "source_name": "NFL.com",
-      "headline": "NFL Week 7 inactives: Players ruled out for Sunday's 12 games",
-      "published_at": "2026-10-25T12:11:44.000Z",
-      "observed_at": "2026-10-25T12:20:21.361Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-chiefs-vs-seahawks-tv-channel-live-stream-time-october-25-2026",
       "source_name": "FOX Sports",
       "headline": "How to Watch Chiefs vs. Seahawks: TV Channel, Live Stream, Time - October 25, 2026",
@@ -41914,6 +41880,44 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/in-the-ravens-blame-game-several-high-paid-veterans-are-front-and-center",
+      "source_name": "NFL.com",
+      "headline": "In the Ravens' blame game, several high-paid veterans are front and center",
+      "published_at": "2026-11-12T01:01:06.000Z",
+      "observed_at": "2026-11-12T17:20:18.721Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/top-50-nfl-players-first-half-2026-season-ranked",
+      "source_name": "FOX Sports",
+      "headline": "The Top-50 NFL Players In The First Half Of The 2026 Season, Ranked",
+      "published_at": "2026-11-12T17:11:40.000Z",
+      "observed_at": "2026-11-12T17:20:18.721Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
