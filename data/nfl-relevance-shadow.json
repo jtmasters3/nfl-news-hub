@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/after-another-day-of-paris-protests-nfl-is-on-track-to-stage-steelers-saints-at-stade-de-france",
-      "source_name": "Pro Football Talk",
-      "headline": "After another day of Paris protests, NFL is on track to stage Steelers-Saints at Stade de France",
-      "published_at": "2026-10-25T00:47:59.000Z",
-      "observed_at": "2026-10-25T01:00:27.868Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NO",
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chase-young-christen-miller-were-fined-for-violent-gestures-on-same-play",
-      "source_name": "Pro Football Talk",
-      "headline": "Chase Young, Christen Miller were fined for violent gestures on same play",
-      "published_at": "2026-10-25T01:20:30.000Z",
-      "observed_at": "2026-10-25T01:30:25.528Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/browns-extend-dt-maliek-collins-by-two-years",
       "source_name": "Pro Football Talk",
       "headline": "Browns extend DT Maliek Collins by two years",
@@ -41893,6 +41854,49 @@
         "LAC"
       ],
       "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-commanders-vs-giants-tv-channel-live-stream-time-nov-12-2026",
+      "source_name": "FOX Sports",
+      "headline": "How to Watch Commanders vs. Giants: TV Channel, Live Stream, Time",
+      "published_at": "2026-11-12T15:00:22.000Z",
+      "observed_at": "2026-11-12T15:10:21.823Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG",
+        "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/roll-tape-can-kirk-cousins-save-vikings-super-bowl-hopes",
+      "source_name": "FOX Sports",
+      "headline": "Roll The Tape: Can Kirk Cousins Save The Vikings' Super Bowl Hopes?",
+      "published_at": "2026-11-12T14:52:02.000Z",
+      "observed_at": "2026-11-12T15:10:21.823Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
