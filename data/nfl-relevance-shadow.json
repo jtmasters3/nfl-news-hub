@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/travis-kelce-moves-to-no-5-all-time-in-receptions-passes-marvin-harrison-cris-carter",
-      "source_name": "Pro Football Talk",
-      "headline": "Travis Kelce moves to No. 5 all-time in receptions, passes Marvin Harrison, Cris Carter",
-      "published_at": "2026-10-26T02:50:44.000Z",
-      "observed_at": "2026-10-26T03:00:26.743Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC",
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sunday-night-football-jaxon-smith-njigba-seahawks-defense-dominate-chiefs-win-20-3",
       "source_name": "Pro Football Talk",
       "headline": "Sunday Night Football: Jaxon Smith-Njigba, Seahawks defense dominate Chiefs, win 20-3",
@@ -41872,6 +41850,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/troy-aikman-engages-in-potential-pre-tampering-with-kyle-shanahan",
+      "source_name": "Pro Football Talk",
+      "headline": "Troy Aikman engages in potential pre-tampering with Kyle Shanahan",
+      "published_at": "2026-11-13T15:36:29.000Z",
+      "observed_at": "2026-11-13T15:50:25.031Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "coaching",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
