@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/steelers-are-far-from-perfect-but-after-beating-saints-they-re-exactly-where-they-need-to-be",
-      "source_name": "NFL.com",
-      "headline": "Steelers are far from perfect, but after beating Saints they're exactly where they need to be",
-      "published_at": "2026-10-25T10:16:08.000Z",
-      "observed_at": "2026-10-25T22:30:21.558Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NO",
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-glenn-i-should-have-used-timeouts-at-the-end-of-the-first-half",
       "source_name": "Pro Football Talk",
       "headline": "Aaron Glenn: I should have used timeouts at the end of the first half",
@@ -41887,6 +41865,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bruce-arians-says-he-wants-to-be-a-head-coach-in-the-nfl-next-season",
+      "source_name": "Pro Football Talk",
+      "headline": "Bruce Arians says he wants to be a head coach in the NFL next season",
+      "published_at": "2026-11-13T11:28:15.000Z",
+      "observed_at": "2026-11-13T11:30:20.853Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "retirement",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
