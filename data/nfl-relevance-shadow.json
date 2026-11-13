@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/for-cardinals-winless-at-home-in-407-days-and-counting-the-frustration-builds",
-      "source_name": "NFL.com",
-      "headline": "For Cardinals, winless at home in 407 days and counting, the frustration builds",
-      "published_at": "2026-10-26T12:01:06.000Z",
-      "observed_at": "2026-10-26T13:00:29.172Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/the-rams-have-found-their-x-factor-for-survival-his-name-is-blake-corum",
       "source_name": "NFL.com",
       "headline": "The Rams have found their X-factor for survival. His name is Blake Corum",
@@ -41869,6 +41848,29 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/amon-ra-st-brown-eyes-2028-olympics-flag-football-run-germany",
+      "source_name": "NFL.com",
+      "headline": "Amon-Ra St. Brown eyes 2028 Olympics flag football run for Germany, maybe with his brother",
+      "published_at": "2026-11-13T07:36:05.000Z",
+      "observed_at": "2026-11-13T19:40:19.658Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "LAC",
+        "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
