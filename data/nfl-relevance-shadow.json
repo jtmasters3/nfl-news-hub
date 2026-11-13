@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cam-skattebo-felt-something-in-his-hamstring-on-final-run-in-ot",
-      "source_name": "Pro Football Talk",
-      "headline": "Cam Skattebo felt something in his hamstring on final run in OT",
-      "published_at": "2026-10-25T21:15:56.000Z",
-      "observed_at": "2026-10-25T21:20:19.537Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/davis-allens-second-td-catch-gives-rams-14-3-lead-over-raiders",
       "source_name": "Pro Football Talk",
       "headline": "Davis Allen's second TD catch gives Rams 14-3 lead over Raiders",
@@ -41886,6 +41865,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/tom-brady-nfl-international-ac-milan",
+      "source_name": "FOX Sports",
+      "headline": "Tom Brady Shares Ideal International Soccer Stadium To Host An NFL Game",
+      "published_at": "2026-11-13T03:50:25.000Z",
+      "observed_at": "2026-11-13T04:00:22.669Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
