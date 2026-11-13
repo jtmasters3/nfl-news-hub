@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/the-rams-have-found-their-x-factor-for-survival-his-name-is-blake-corum",
-      "source_name": "NFL.com",
-      "headline": "The Rams have found their X-factor for survival. His name is Blake Corum",
-      "published_at": "2026-10-26T11:16:06.000Z",
-      "observed_at": "2026-10-26T13:00:29.172Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/lions-manage-to-do-just-enough-against-packers-in-a-game-they-had-to-have",
       "source_name": "NFL.com",
       "headline": "Lions manage to do just enough against Packers, in a game they had to have",
@@ -41865,6 +41844,27 @@
         "LAR"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kenneth-walker-did-not-practice-friday-with-groin-tightness",
+      "source_name": "Pro Football Talk",
+      "headline": "Kenneth Walker did not practice Friday with groin tightness",
+      "published_at": "2026-11-13T19:39:11.000Z",
+      "observed_at": "2026-11-13T19:50:20.482Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
