@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/how-boos-replaced-mvp-chants-on-a-very-bad-day-for-the-panthers",
-      "source_name": "NFL.com",
-      "headline": "How boos replaced MVP chants on a very bad day for the Panthers",
-      "published_at": "2026-10-26T12:01:06.000Z",
-      "observed_at": "2026-10-26T00:20:18.226Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-payton-reverse-that-led-to-jaylen-waddle-injury-was-an-awful-play-call",
       "source_name": "Pro Football Talk",
       "headline": "Sean Payton: Reverse that led to Jaylen Waddle injury was an \"awful\" play call",
@@ -41878,6 +41857,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-announce-two-year-contract-extension-with-c-j-henderson",
+      "source_name": "Pro Football Talk",
+      "headline": "Falcons announce two-year contract extension with C.J. Henderson",
+      "published_at": "2026-11-13T14:27:45.000Z",
+      "observed_at": "2026-11-13T14:40:18.694Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL"
+      ],
+      "detected_category": "contract",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:contract"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
