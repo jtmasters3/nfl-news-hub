@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/geno-smith-garrett-wilson-downplay-heated-sideline-exchange-after-dolphins-loss",
-      "source_name": "FOX Sports",
-      "headline": "Jets' Geno Smith, Garrett Wilson Downplay Heated Exchange In Loss To Dolphins",
-      "published_at": "2026-10-26T00:01:11.000Z",
-      "observed_at": "2026-10-26T00:10:23.651Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIA",
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/for-first-time-in-nfl-history-all-teams-in-two-divisions-are-above-500-through-week-7",
-      "source_name": "Pro Football Talk",
-      "headline": "For first time in NFL history, all teams in two divisions are above .500 through Week 7",
-      "published_at": "2026-10-26T00:03:36.000Z",
-      "observed_at": "2026-10-26T00:10:23.651Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/despite-49ers-hot-start-changes-loom-at-kicker-cb-wr-and-perhaps-d-line",
       "source_name": "NFL.com",
       "headline": "Despite 49ers' hot start, changes loom at kicker, CB, WR and perhaps D-line",
@@ -41878,6 +41839,45 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/super-bowl-lxi-predictions-midseason-update-7-teams-that-could-win-lombardi-trophy-in-february",
+      "source_name": "NFL.com",
+      "headline": "Super Bowl LXI predictions, midseason update: 7 teams that could win Lombardi Trophy in February",
+      "published_at": "2026-11-13T02:05:12.000Z",
+      "observed_at": "2026-11-13T14:20:20.449Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-extend-cameron-thomas-through-2029",
+      "source_name": "Pro Football Talk",
+      "headline": "Falcons extend Cameron Thomas through 2029",
+      "published_at": "2026-11-13T14:16:54.000Z",
+      "observed_at": "2026-11-13T14:20:20.449Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL"
+      ],
+      "detected_category": "contract",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:contract"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
