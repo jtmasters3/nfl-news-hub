@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/packers-rg-kevin-zeitler-inactive-with-aaron-banks-active",
-      "source_name": "Pro Football Talk",
-      "headline": "Packers RG Kevin Zeitler inactive, with Aaron Banks active",
-      "published_at": "2026-10-25T19:30:06.000Z",
-      "observed_at": "2026-10-25T19:40:20.337Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET",
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/christian-watson-matthew-golden-are-delivering-for-the-packers",
       "source_name": "Pro Football Talk",
       "headline": "Christian Watson, Matthew Golden are delivering for the Packers",
@@ -41891,6 +41869,29 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/justin-herbert-is-not-on-chargers-injury-report-as-they-begin-prep-for-ravens",
+      "source_name": "Pro Football Talk",
+      "headline": "Justin Herbert is not on Chargers' injury report as they begin prep for Ravens",
+      "published_at": "2026-11-13T00:23:06.000Z",
+      "observed_at": "2026-11-13T00:30:34.136Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "HOU",
+        "LAC"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
