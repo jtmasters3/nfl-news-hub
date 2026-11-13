@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/puka-nacua-active-trent-mcduffie-inactive-for-rams-raiders",
-      "source_name": "Pro Football Talk",
-      "headline": "Puka Nacua active, Trent McDuffie inactive for Rams-Raiders",
-      "published_at": "2026-10-25T19:09:07.000Z",
-      "observed_at": "2026-10-25T19:20:18.696Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV",
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/packers-rg-kevin-zeitler-inactive-with-aaron-banks-active",
       "source_name": "Pro Football Talk",
       "headline": "Packers RG Kevin Zeitler inactive, with Aaron Banks active",
@@ -41896,6 +41874,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/expectation-tiers-redefining-success-all-32-teams-seasons-halfway-point",
+      "source_name": "FOX Sports",
+      "headline": "Expectation Tiers: Redefining Success For All 32 Teams At Season's Halfway Point",
+      "published_at": "2026-11-12T23:55:31.000Z",
+      "observed_at": "2026-11-13T00:20:18.887Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
