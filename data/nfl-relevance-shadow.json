@@ -2,40 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/mark-butterworth",
-      "source_name": "NFL.com",
-      "headline": "Mark Butterworth",
-      "published_at": "2026-10-26T05:05:34.000Z",
-      "observed_at": "2026-10-26T17:10:20.274Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/programa-previo-al-nfl-madrid-game",
-      "source_name": "NFL.com",
-      "headline": "Programa previo al NFL Madrid Game",
-      "published_at": "2026-10-24T04:24:00.000Z",
-      "observed_at": "2026-10-26T17:10:20.274Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-week-7-sunday-aftermath-vikings-unbeaten-joe-burrow-heating-up",
       "source_name": "NFL.com",
       "headline": "NFL Week 7 Sunday aftermath: Vikings sit as NFL's lone unbeaten; Joe Burrow heating up for AFC push",
@@ -41894,6 +41860,49 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/deebo-samuel-has-no-injury-designation-but-four-cbs-are-questionable-for-49ers",
+      "source_name": "Pro Football Talk",
+      "headline": "Deebo Samuel has no injury designation, but four CBs are questionable for 49ers",
+      "published_at": "2026-11-13T22:16:26.000Z",
+      "observed_at": "2026-11-13T22:30:25.031Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/john-harbaugh-cam-skattebo-was-not-supposed-to-push-on-jameis-winston-sneak",
+      "source_name": "Pro Football Talk",
+      "headline": "John Harbaugh: Cam Skattebo was not supposed to push on Jameis Winston sneak",
+      "published_at": "2026-11-13T22:16:00.000Z",
+      "observed_at": "2026-11-13T22:30:25.031Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG",
+        "WAS"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
