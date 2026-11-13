@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-week-7-sunday-aftermath-vikings-unbeaten-joe-burrow-heating-up",
-      "source_name": "NFL.com",
-      "headline": "NFL Week 7 Sunday aftermath: Vikings sit as NFL's lone unbeaten; Joe Burrow heating up for AFC push",
-      "published_at": "2026-10-26T05:07:15.000Z",
-      "observed_at": "2026-10-26T17:20:22.188Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/texans-gm-nick-caserio-no-knee-jerk-reactions-significant-personnel-changes-right-now",
       "source_name": "Pro Football Talk",
       "headline": "Texans GM Nick Caserio: No knee-jerk reactions, significant personnel changes right now",
@@ -41897,6 +41876,27 @@
         "WAS"
       ],
       "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-cbs-joey-porter-jr-daron-bland-are-questionable",
+      "source_name": "Pro Football Talk",
+      "headline": "Cowboys CBs Joey Porter Jr., DaRon Bland are questionable",
+      "published_at": "2026-11-13T22:30:04.000Z",
+      "observed_at": "2026-11-13T22:40:17.806Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
