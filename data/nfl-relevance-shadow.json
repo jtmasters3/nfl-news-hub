@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-jones-will-have-an-mri-on-his-knee",
-      "source_name": "Pro Football Talk",
-      "headline": "Aaron Jones will have an MRI on his knee",
-      "published_at": "2026-10-25T23:14:07.000Z",
-      "observed_at": "2026-10-25T23:20:19.037Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/falcons-stun-nfl-but-not-themselves-knocking-off-previously-unbeaten-49ers",
-      "source_name": "NFL.com",
-      "headline": "Falcons stun NFL -- but not themselves -- knocking off previously unbeaten 49ers",
-      "published_at": "2026-10-25T11:16:06.000Z",
-      "observed_at": "2026-10-25T23:40:18.116Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/green-bay-packers-vs-detroit-lions-takeaways-week-7-october-25",
       "source_name": "FOX Sports",
       "headline": "Detroit Holds Onto Valuable Win: 3 Takeaways From The Lions' Win Over The Packers",
@@ -41885,6 +41842,47 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/2027-nfl-draft-qb-power-rankings-drew-mestemaker-arch-manning-tight-battle-no-1",
+      "source_name": "FOX Sports",
+      "headline": "2027 NFL Draft QB Power Rankings: Drew Mestemaker, Arch Manning In Tight Battle For No. 1",
+      "published_at": "2026-11-13T13:00:25.000Z",
+      "observed_at": "2026-11-13T13:30:24.393Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [],
+      "detected_category": "draft",
+      "nfl_evidence": [
+        "phrase_nfl_draft",
+        "nfl_preserving_category:draft"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/buccaneers-have-more-rushing-yards-than-passing-yards-a-rare-feat-in-todays-nfl",
+      "source_name": "Pro Football Talk",
+      "headline": "Buccaneers have more rushing yards than passing yards, a rare feat in today's NFL",
+      "published_at": "2026-11-13T13:25:25.000Z",
+      "observed_at": "2026-11-13T13:30:24.393Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "TB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
