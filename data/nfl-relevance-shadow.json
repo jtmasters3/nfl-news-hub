@@ -2,57 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/2026-nfl-fantasy-football-waiver-wire-week-8-rookie-wr-kc-concepcion-headlines-top-15-targets",
-      "source_name": "NFL.com",
-      "headline": "2026 NFL fantasy football waiver wire, Week 8: Rookie WR KC Concepcion headlines top 15 targets",
-      "published_at": "2026-10-26T03:51:57.000Z",
-      "observed_at": "2026-10-26T16:00:26.798Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "fantasy",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tom-bradys-criticism-of-officials-tests-limits-of-what-a-team-owner-can-say",
-      "source_name": "Pro Football Talk",
-      "headline": "Tom Brady's criticism of officials tests limits of what a team owner can say",
-      "published_at": "2026-10-26T15:46:13.000Z",
-      "observed_at": "2026-10-26T16:00:26.798Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/troy-vincent",
-      "source_name": "NFL.com",
-      "headline": "Troy Vincent",
-      "published_at": "2026-10-26T04:04:43.000Z",
-      "observed_at": "2026-10-26T16:20:22.382Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/liam-coen-brian-thomas-will-be-able-to-help-us-make-plays-this-week",
       "source_name": "Pro Football Talk",
       "headline": "Liam Coen: Brian Thomas will be able to help us make plays this week",
@@ -41878,6 +41827,72 @@
         "SEA"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/vikings-quarterbacks-kirk-cousins-kevin-oconnell-press-conference",
+      "source_name": "FOX Sports",
+      "headline": "That Was Fast! Vikings HC Kevin O'Connell Reveals Kirk Cousins Timeline",
+      "published_at": "2026-11-13T21:49:05.000Z",
+      "observed_at": "2026-11-13T21:50:21.533Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
+        "MIN"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kirk-cousins-will-start-for-vikings-on-sunday",
+      "source_name": "Pro Football Talk",
+      "headline": "Kirk Cousins will start for Vikings on Sunday",
+      "published_at": "2026-11-13T21:38:37.000Z",
+      "observed_at": "2026-11-13T21:50:21.533Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV",
+        "MIN"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/danielle-hunter-out-will-anderson-jr-questionable-for-texans-browns",
+      "source_name": "Pro Football Talk",
+      "headline": "Danielle Hunter out, Will Anderson Jr. questionable for Texans-Browns",
+      "published_at": "2026-11-13T21:39:56.000Z",
+      "observed_at": "2026-11-13T21:50:21.533Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE",
+        "HOU"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
