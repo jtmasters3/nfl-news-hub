@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/rams-wr-puka-nacua-calf-active-sunday-game-vs-raiders",
-      "source_name": "NFL.com",
-      "headline": "Rams WR Puka Nacua (calf) active for Sunday's game vs. Raiders",
-      "published_at": "2026-10-25T06:59:08.000Z",
-      "observed_at": "2026-10-25T19:00:28.333Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV",
-        "LAC",
-        "LAR"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bengals-score-two-tds-to-take-14-13-lead-over-ravens-in-third-quarter",
       "source_name": "Pro Football Talk",
       "headline": "Bengals score two TDs to take 14-13 lead over Ravens in third quarter",
@@ -41888,6 +41865,28 @@
       "confidence": "high",
       "detected_teams": [
         "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/thursday-night-football-giants-lb-malik-harrison-is-inactive",
+      "source_name": "Pro Football Talk",
+      "headline": "Thursday Night Football: Giants LB Malik Harrison is inactive",
+      "published_at": "2026-11-12T23:57:47.000Z",
+      "observed_at": "2026-11-13T00:00:26.145Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG",
+        "WAS"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
