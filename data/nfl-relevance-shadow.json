@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-glenn-i-should-have-used-timeouts-at-the-end-of-the-first-half",
-      "source_name": "Pro Football Talk",
-      "headline": "Aaron Glenn: I should have used timeouts at the end of the first half",
-      "published_at": "2026-10-25T22:27:30.000Z",
-      "observed_at": "2026-10-25T22:30:21.558Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jameson-williams-scores-second-td-lions-lead-17-14",
       "source_name": "Pro Football Talk",
       "headline": "Jameson Williams scores second TD, Lions lead 17-14",
@@ -41882,6 +41865,29 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/commanders-dan-quinn-on-win-over-giants-we-needed-that",
+      "source_name": "NFL.com",
+      "headline": "Commanders' Dan Quinn on win over Giants: 'We needed that'",
+      "published_at": "2026-11-13T12:40:43.000Z",
+      "observed_at": "2026-11-13T12:50:19.770Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG",
+        "NYJ",
+        "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
