@@ -2,71 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/klint-kubiak-on-qb-change-were-thinking-about-everything-to-fix-our-problems",
-      "source_name": "Pro Football Talk",
-      "headline": "Klint Kubiak on QB change: We're thinking about everything to fix our problems",
-      "published_at": "2026-10-26T12:06:49.000Z",
-      "observed_at": "2026-10-26T12:10:19.791Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cam-skattebo-on-penalty-for-lowering-his-helmet-im-going-to-keep-doing-it",
-      "source_name": "Pro Football Talk",
-      "headline": "Cam Skattebo on penalty for lowering his helmet: I'm going to keep doing it",
-      "published_at": "2026-10-26T12:05:49.000Z",
-      "observed_at": "2026-10-26T12:10:19.791Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "HOU",
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/kick-ass-and-take-games-how-cam-skattebo-giants-rbs-dominated-texans-and-earned-redemption",
-      "source_name": "NFL.com",
-      "headline": "'Kick ass' and take games: How Cam Skattebo, Giants RBs dominated Texans and earned redemption",
-      "published_at": "2026-10-26T10:16:06.000Z",
-      "observed_at": "2026-10-26T12:40:19.948Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "HOU",
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/cowboys-at-eagles-5-questions-dallas-needs-to-answer-monday-night",
       "source_name": "NFL.com",
       "headline": "Cowboys at Eagles: 5 questions Dallas needs to answer Monday night",
@@ -41867,6 +41802,65 @@
       "headline": "Philip Rivers hired as N.C. State head coach",
       "published_at": "2026-11-13T06:02:20.000Z",
       "observed_at": "2026-11-13T18:10:18.183Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "coaching",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/a-j-brown-may-be-back-for-the-patriots-as-pressure-ramps-up-in-season-s-second-half",
+      "source_name": "NFL.com",
+      "headline": "A.J. Brown may be back for the Patriots as pressure ramps up in season's second half",
+      "published_at": "2026-11-13T05:46:06.000Z",
+      "observed_at": "2026-11-13T18:20:20.779Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/baltimore-ravens-jesse-minter-lamar-jackson-injury",
+      "source_name": "FOX Sports",
+      "headline": "Ravens Reveal Lamar Jackson’s Broken And Dislocated Thumb, Recovery Timetable",
+      "published_at": "2026-11-13T18:03:36.000Z",
+      "observed_at": "2026-11-13T18:20:20.779Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/philip-rivers-named-nc-state-head-coach",
+      "source_name": "Pro Football Talk",
+      "headline": "Philip Rivers named NC State head coach",
+      "published_at": "2026-11-13T18:05:07.000Z",
+      "observed_at": "2026-11-13T18:20:20.779Z",
       "decision": "keep",
       "classification": "ambiguous",
       "confidence": "low",
