@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/matthew-stafford-touchdown-pass-gives-rams-7-0-lead-over-raiders",
-      "source_name": "Pro Football Talk",
-      "headline": "Matthew Stafford touchdown pass gives Rams 7-0 lead over Raiders",
-      "published_at": "2026-10-25T20:53:38.000Z",
-      "observed_at": "2026-10-25T21:00:25.944Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV",
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-glenn-disappointed-in-myself-but-totally-believe-were-on-the-right-track",
       "source_name": "Pro Football Talk",
       "headline": "Aaron Glenn: Disappointed in myself, but totally believe we're on the right track",
@@ -41887,6 +41865,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/commanders-back-in-front-of-giants-17-14",
+      "source_name": "Pro Football Talk",
+      "headline": "Commanders back in front of Giants, 17-14",
+      "published_at": "2026-11-13T03:14:26.000Z",
+      "observed_at": "2026-11-13T03:20:19.520Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG",
+        "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
