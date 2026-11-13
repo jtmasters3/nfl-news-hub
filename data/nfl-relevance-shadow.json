@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/despite-49ers-hot-start-changes-loom-at-kicker-cb-wr-and-perhaps-d-line",
-      "source_name": "NFL.com",
-      "headline": "Despite 49ers' hot start, changes loom at kicker, CB, WR and perhaps D-line",
-      "published_at": "2026-10-26T12:01:06.000Z",
-      "observed_at": "2026-10-26T00:20:18.226Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/how-boos-replaced-mvp-chants-on-a-very-bad-day-for-the-panthers",
       "source_name": "NFL.com",
       "headline": "How boos replaced MVP chants on a very bad day for the Panthers",
@@ -41882,6 +41861,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-nov-13",
+      "source_name": "NFL.com",
+      "headline": "NFL news roundup: Latest league updates from Friday, Nov. 13",
+      "published_at": "2026-11-13T02:21:01.000Z",
+      "observed_at": "2026-11-13T14:30:23.959Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
