@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/packers-s-xavier-mckinney-i-see-whats-going-on-with-officiating-and-its-killing-us",
-      "source_name": "Pro Football Talk",
-      "headline": "Packers S Xavier McKinney: I see what's going on with officiating and it's killing us",
-      "published_at": "2026-10-26T11:05:25.000Z",
-      "observed_at": "2026-10-26T11:10:23.832Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET",
-        "GB"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/raiders-klint-kubiak-on-fernando-mendoza-potentially-replacing-kirk-cousins-we-re-thinking-about-everything",
-      "source_name": "NFL.com",
-      "headline": "Raiders' Klint Kubiak on Fernando Mendoza potentially replacing Kirk Cousins: 'We're thinking about everything'",
-      "published_at": "2026-10-26T11:43:17.000Z",
-      "observed_at": "2026-10-26T11:50:22.423Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/klint-kubiak-on-qb-change-were-thinking-about-everything-to-fix-our-problems",
       "source_name": "Pro Football Talk",
       "headline": "Klint Kubiak on QB change: We're thinking about everything to fix our problems",
@@ -41880,6 +41837,45 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/patriots-vs-lions-preview-week-10-munich-game",
+      "source_name": "NFL.com",
+      "headline": "Patriots vs. Lions: Three must-know storylines for NFL Week 10 Munich game",
+      "published_at": "2026-11-13T06:03:28.000Z",
+      "observed_at": "2026-11-13T18:10:18.183Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/philip-rivers-hired-nc-state-head-coach",
+      "source_name": "NFL.com",
+      "headline": "Philip Rivers hired as N.C. State head coach",
+      "published_at": "2026-11-13T06:02:20.000Z",
+      "observed_at": "2026-11-13T18:10:18.183Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "coaching",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
