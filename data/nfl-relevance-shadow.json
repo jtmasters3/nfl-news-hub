@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-experts-week-7-takeaways-are-the-vikings-and-giants-serious-contenders",
-      "source_name": "NFL.com",
-      "headline": "NFL experts' Week 7 takeaways: Are the Vikings and Giants serious contenders?",
-      "published_at": "2026-10-25T09:46:07.000Z",
-      "observed_at": "2026-10-25T22:00:25.453Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN",
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/garrett-wilson-geno-smith-and-i-were-heated-but-not-at-each-other",
       "source_name": "Pro Football Talk",
       "headline": "Garrett Wilson: Geno Smith and I were heated, but not at each other",
@@ -41879,6 +41857,29 @@
         "NYG"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/broncos-backed-out-of-trade-for-chargers-henley-over-surprising-issue-in-physical",
+      "source_name": "NFL.com",
+      "headline": "Broncos backed out of trade for Chargers’ Henley over surprising issue in physical",
+      "published_at": "2026-11-13T06:06:06.000Z",
+      "observed_at": "2026-11-13T06:10:18.545Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "LAC",
+        "LAR"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
