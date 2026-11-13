@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/cowboys-at-eagles-5-questions-dallas-needs-to-answer-monday-night",
-      "source_name": "NFL.com",
-      "headline": "Cowboys at Eagles: 5 questions Dallas needs to answer Monday night",
-      "published_at": "2026-10-26T10:01:04.000Z",
-      "observed_at": "2026-10-26T12:40:19.948Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/jonathan-taylor-ok-with-wife-discussing-trade-rumors-are-we-gonna-stay-on-the-colts",
-      "source_name": "NFL.com",
-      "headline": "Jonathan Taylor OK with wife discussing trade rumors: 'Are we gonna stay on the Colts?'",
-      "published_at": "2026-10-26T04:31:05.000Z",
-      "observed_at": "2026-10-26T12:40:19.948Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/it-was-like-quicksand-ravens-second-half-collapse-exposes-a-team-in-trouble",
       "source_name": "NFL.com",
       "headline": "'It was like quicksand': Ravens' second-half collapse exposes a team in trouble",
@@ -41870,6 +41827,50 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/jacksonville-jaguars-trade-deadline-tennessee-titans",
+      "source_name": "FOX Sports",
+      "headline": "Jaguars Sitting New Additions Jordan Davis, Jessie Bates III Against Titans",
+      "published_at": "2026-11-13T18:15:40.000Z",
+      "observed_at": "2026-11-13T18:30:25.677Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX",
+        "TEN"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cardinals-te-elijah-higgins-agree-to-three-year-extension",
+      "source_name": "Pro Football Talk",
+      "headline": "Cardinals, TE Elijah Higgins agree to three-year extension",
+      "published_at": "2026-11-13T18:20:12.000Z",
+      "observed_at": "2026-11-13T18:30:25.677Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI"
+      ],
+      "detected_category": "contract",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:contract"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
