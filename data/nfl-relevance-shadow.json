@@ -2,94 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/lions-manage-to-do-just-enough-against-packers-in-a-game-they-had-to-have",
-      "source_name": "NFL.com",
-      "headline": "Lions manage to do just enough against Packers, in a game they had to have",
-      "published_at": "2026-10-26T10:46:05.000Z",
-      "observed_at": "2026-10-26T13:00:29.172Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET",
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/christian-mccaffrey-not-worried-about-thigh-injury-moving-forward",
-      "source_name": "Pro Football Talk",
-      "headline": "Christian McCaffrey not worried about thigh injury moving forward",
-      "published_at": "2026-10-26T13:02:25.000Z",
-      "observed_at": "2026-10-26T13:10:22.649Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "SF"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/solution-chiefs-offense-packers-beating-themselves-caleb-williams-jj-mccarthy",
-      "source_name": "FOX Sports",
-      "headline": "The Obvious Solution To Fix Chiefs’ Offense; Packers Can't Stop Beating Themselves",
-      "published_at": "2026-10-26T13:29:32.000Z",
-      "observed_at": "2026-10-26T13:40:20.766Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB",
-        "KC",
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jonathan-taylor-trade-rumors-are-out-there-my-wife-discussing-it-doesnt-change-anything",
-      "source_name": "Pro Football Talk",
-      "headline": "Jonathan Taylor: Trade rumors are out there, my wife discussing it doesn't change anything",
-      "published_at": "2026-10-26T13:42:33.000Z",
-      "observed_at": "2026-10-26T13:50:23.883Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/with-games-against-the-bills-and-jaguars-looming-the-ravens-need-lamar-jackson",
       "source_name": "Pro Football Talk",
       "headline": "With games against the Bills and Jaguars looming, the Ravens need Lamar Jackson",
@@ -41865,6 +41777,89 @@
         "KC"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/how-luke-mccaffrey-used-an-out-of-bounds-rule-to-help-the-commanders-win",
+      "source_name": "NFL.com",
+      "headline": "How Luke McCaffrey used an out-of-bounds rule to help the Commanders win",
+      "published_at": "2026-11-13T06:16:07.000Z",
+      "observed_at": "2026-11-13T20:00:36.706Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/second-half-breakout-candidates-25-players-who-could-emerge-seasons-homestretch",
+      "source_name": "FOX Sports",
+      "headline": "Second-Half Breakout Candidates: 25 Players Who Could Emerge In Season's Homestretch",
+      "published_at": "2026-11-13T19:33:43.000Z",
+      "observed_at": "2026-11-13T20:00:36.706Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/robert-saleh-says-he-and-liam-coen-are-good-after-misunderstanding-last-year",
+      "source_name": "Pro Football Talk",
+      "headline": "Robert Saleh says he and Liam Coen are good after \"misunderstanding\" last year",
+      "published_at": "2026-11-13T19:51:35.000Z",
+      "observed_at": "2026-11-13T20:00:36.706Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX",
+        "SF",
+        "TEN"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/john-harbaugh-knew-about-the-jameis-winston-who-let-the-dogs-out-cadence",
+      "source_name": "Pro Football Talk",
+      "headline": "John Harbaugh knew about the Jameis Winston \"who let the dogs out?\" cadence",
+      "published_at": "2026-11-13T19:48:35.000Z",
+      "observed_at": "2026-11-13T20:00:36.706Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG",
+        "WAS"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
