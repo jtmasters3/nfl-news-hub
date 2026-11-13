@@ -2,46 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/with-games-against-the-bills-and-jaguars-looming-the-ravens-need-lamar-jackson",
-      "source_name": "Pro Football Talk",
-      "headline": "With games against the Bills and Jaguars looming, the Ravens need Lamar Jackson",
-      "published_at": "2026-10-26T13:38:48.000Z",
-      "observed_at": "2026-10-26T13:50:23.883Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "BUF",
-        "JAX"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-kickers-are-167-for-170-from-inside-37-yards-trey-smack-had-2-of-the-3-misses-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "NFL kickers are 167-for-170 from inside 37 yards. Trey Smack had 2 of the 3 misses Sunday.",
-      "published_at": "2026-10-26T13:37:28.000Z",
-      "observed_at": "2026-10-26T13:50:23.883Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/monday-morning-nfl-top-10-rankings-new-no-1-after-two-undefeated-teams-lose",
       "source_name": "FOX Sports",
       "headline": "Monday Morning NFL Top 10 Rankings: A New No. 1 After Two Undefeated Teams Lose",
@@ -41858,6 +41818,49 @@
       "detected_teams": [
         "NYG",
         "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-week-10-fantasy-sleepers-ravens-qb-jacoby-brissett-49ers-wr-jordan-watkins-offer-upside",
+      "source_name": "NFL.com",
+      "headline": "NFL Week 10 fantasy sleepers: Ravens QB Jacoby Brissett, 49ers WR Jordan Watkins offer upside",
+      "published_at": "2026-11-13T08:12:49.000Z",
+      "observed_at": "2026-11-13T20:20:18.216Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "SF"
+      ],
+      "detected_category": "fantasy",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-will-release-wr-hollywood-brown-at-his-request",
+      "source_name": "Pro Football Talk",
+      "headline": "Eagles will release WR Hollywood Brown, at his request",
+      "published_at": "2026-11-13T20:09:47.000Z",
+      "observed_at": "2026-11-13T20:20:18.216Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
