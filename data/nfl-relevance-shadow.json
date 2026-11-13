@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/browns-move-to-5-2-with-another-game-winning-field-goal-defeat-titans-27-24",
-      "source_name": "Pro Football Talk",
-      "headline": "Browns move to 5-2 with another game-winning field goal, defeat Titans 27-24",
-      "published_at": "2026-10-25T20:31:32.000Z",
-      "observed_at": "2026-10-25T20:40:19.283Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE",
-        "TEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lions-lead-7-0-as-jameson-williams-scores-td-trey-smack-misses-26-yard-field-goal",
-      "source_name": "Pro Football Talk",
-      "headline": "Lions lead 7-0 as Jameson Williams scores TD, Trey Smack misses 26-yard field goal",
-      "published_at": "2026-10-25T20:42:45.000Z",
-      "observed_at": "2026-10-25T20:50:18.613Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET",
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/matthew-stafford-touchdown-pass-gives-rams-7-0-lead-over-raiders",
       "source_name": "Pro Football Talk",
       "headline": "Matthew Stafford touchdown pass gives Rams 7-0 lead over Raiders",
@@ -41893,6 +41849,44 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cam-skattebo-gives-giants-a-14-10-lead",
+      "source_name": "Pro Football Talk",
+      "headline": "Cam Skattebo gives Giants a 14-10 lead",
+      "published_at": "2026-11-13T03:06:50.000Z",
+      "observed_at": "2026-11-13T03:10:21.968Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-rex-ryan-incident-was-captured-on-camera",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Rex Ryan incident was captured on camera",
+      "published_at": "2026-11-13T03:02:24.000Z",
+      "observed_at": "2026-11-13T03:10:21.968Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
