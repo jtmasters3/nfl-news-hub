@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/liam-coen-brian-thomas-will-be-able-to-help-us-make-plays-this-week",
-      "source_name": "Pro Football Talk",
-      "headline": "Liam Coen: Brian Thomas will be able to help us make plays this week",
-      "published_at": "2026-10-26T16:08:55.000Z",
-      "observed_at": "2026-10-26T16:20:22.382Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "HOU",
-        "JAX"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-macdonald-itd-be-crazy-not-to-make-jaxon-smith-njigba-the-primary-target-as-much-as-you-can",
-      "source_name": "Pro Football Talk",
-      "headline": "Mike Macdonald: It'd be crazy not to make Jaxon Smith-Njigba the primary target as much as you can",
-      "published_at": "2026-10-26T16:05:51.000Z",
-      "observed_at": "2026-10-26T16:20:22.382Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/perry-fewell",
       "source_name": "NFL.com",
       "headline": "Perry Fewell",
@@ -41891,6 +41848,44 @@
       "detected_teams": [
         "CLE",
         "HOU"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nationwide-ground-stop-potentially-complicates-nfl-college-games",
+      "source_name": "Pro Football Talk",
+      "headline": "Nationwide ground stop potentially complicates NFL, college games",
+      "published_at": "2026-11-13T22:05:53.000Z",
+      "observed_at": "2026-11-13T22:10:19.478Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/c-hjalte-froholdt-will-miss-his-first-game-since-joining-the-cardinals",
+      "source_name": "Pro Football Talk",
+      "headline": "C Hjalte Froholdt will miss his first game since joining the Cardinals",
+      "published_at": "2026-11-13T21:57:10.000Z",
+      "observed_at": "2026-11-13T22:10:19.478Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
