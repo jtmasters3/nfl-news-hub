@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/monday-morning-nfl-top-10-rankings-new-no-1-after-two-undefeated-teams-lose",
-      "source_name": "FOX Sports",
-      "headline": "Monday Morning NFL Top 10 Rankings: A New No. 1 After Two Undefeated Teams Lose",
-      "published_at": "2026-10-26T13:46:23.000Z",
-      "observed_at": "2026-10-26T14:00:29.394Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/nfl-cfb-weekend-recap-chiefs-loss-best-result-book",
       "source_name": "FOX Sports",
       "headline": "NFL, CFB Weekend Recap: Chiefs' Loss Was 'Best Result For The Book'",
@@ -41856,6 +41839,27 @@
       "headline": "Eagles will release WR Hollywood Brown, at his request",
       "published_at": "2026-11-13T20:09:47.000Z",
       "observed_at": "2026-11-13T20:20:18.216Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-eagles-to-release-veteran-ol-fred-johnson",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Eagles to release veteran OL Fred Johnson",
+      "published_at": "2026-11-13T20:29:05.000Z",
+      "observed_at": "2026-11-13T20:40:20.513Z",
       "decision": "keep",
       "classification": "nfl",
       "confidence": "high",
