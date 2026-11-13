@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/john-harbaugh-sunday-was-a-pivotal-game-our-guys-took-the-bull-by-the-horns",
-      "source_name": "Pro Football Talk",
-      "headline": "John Harbaugh: Sunday was a pivotal game, our guys took the bull by the horns",
-      "published_at": "2026-10-26T10:52:09.000Z",
-      "observed_at": "2026-10-26T11:00:27.688Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "HOU",
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/packers-s-xavier-mckinney-i-see-whats-going-on-with-officiating-and-its-killing-us",
       "source_name": "Pro Football Talk",
       "headline": "Packers S Xavier McKinney: I see what's going on with officiating and it's killing us",
@@ -41873,6 +41851,29 @@
         "LAR"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/new-york-jets-garrett-wilson-concussion-protocol-buffalo-bills",
+      "source_name": "FOX Sports",
+      "headline": "‘I Am Confident’: Aaron Glenn Expects Garrett Wilson Back for Jets vs. Bills",
+      "published_at": "2026-11-13T17:37:19.000Z",
+      "observed_at": "2026-11-13T18:00:25.524Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "NYG",
+        "NYJ"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],

@@ -813880,7 +813880,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-11-13T16:50:30.424Z",
-      "updated_at": "2026-11-13T17:00:23.886Z",
+      "updated_at": "2026-11-13T18:00:25.524Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -813894,10 +813894,12 @@
         "category": "injury",
         "teams": [
           "Buffalo Bills",
-          "New York Jets"
+          "New York Jets",
+          "New York Giants"
         ],
         "players": [
-          "Garrett Wilson"
+          "Garrett Wilson",
+          "Aaron Glenn"
         ],
         "description": "It sounds like Jets receiver Garrett Wilson is on track to return to action on Sunday.",
         "is_rumor": false
@@ -814031,13 +814033,13 @@
         "retry_count": 0
       },
       "selection": {
-        "destination": "feed",
-        "slot_id": "feed:2026-11-13T12:00:00-05:00",
-        "selected_at": "2026-11-13T17:00:23.886Z",
-        "window_start": "2026-11-13T15:00:00.000Z",
-        "window_end": "2026-11-13T17:00:00.000Z",
+        "destination": "story",
+        "slot_id": "story:2026-11-13T13:00:00-05:00",
+        "selected_at": "2026-11-13T18:00:25.524Z",
+        "window_start": "2026-11-13T17:00:00.000Z",
+        "window_end": "2026-11-13T18:00:00.000Z",
         "score": 4,
-        "reason": "importance_score_rank"
+        "reason": "fallback_recent_pool_importance_score_rank"
       }
     },
     "e5ebd358-beb0-4991-a9de-482ad2e92213": {
@@ -826389,6 +826391,15 @@
       "status": "selected",
       "story_id": "53721736-8638-4180-bc9f-f272e3291091",
       "processed_at": "2026-11-13T17:00:23.886Z"
+    },
+    "story:2026-11-13T13:00:00-05:00": {
+      "destination": "story",
+      "slot_time": "2026-11-13T18:00:00.000Z",
+      "window_start": "2026-11-13T17:00:00.000Z",
+      "window_end": "2026-11-13T18:00:00.000Z",
+      "status": "selected",
+      "story_id": "dd839e62-cda1-40c2-bb21-73b47eb18bde",
+      "processed_at": "2026-11-13T18:00:25.524Z"
     }
   }
 }
