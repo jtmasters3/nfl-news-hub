@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/big-bets-report-5-8-leg-parlay-narrowly-misses-million-dollar-payday",
-      "source_name": "FOX Sports",
-      "headline": "Big Bets Report: $5, 8-leg Parlay Narrowly Misses Million-Dollar Payday",
-      "published_at": "2026-10-26T22:31:06.000Z",
-      "observed_at": "2026-10-26T23:00:29.045Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/monday-night-football-jonathan-greenard-saquon-barkley-are-active-for-eagles-vs-cowboys",
       "source_name": "Pro Football Talk",
       "headline": "Monday Night Football: Jonathan Greenard, Saquon Barkley are active for Eagles vs. Cowboys",
@@ -41847,6 +41830,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-saturday-nov-14",
+      "source_name": "NFL.com",
+      "headline": "NFL news roundup: Latest league updates from Saturday, Nov. 14",
+      "published_at": "2026-11-14T05:35:52.000Z",
+      "observed_at": "2026-11-14T17:40:28.680Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
