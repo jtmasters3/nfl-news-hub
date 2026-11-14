@@ -2,84 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/monday-night-football-cowboys-lead-eagles-20-14-at-halftime",
-      "source_name": "Pro Football Talk",
-      "headline": "Monday Night Football: Cowboys lead Eagles 20-14 at halftime",
-      "published_at": "2026-10-27T01:55:30.000Z",
-      "observed_at": "2026-10-27T02:00:29.747Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/jay-z-halftime-show-press-release",
-      "source_name": "NFL.com",
-      "headline": "Jay-Z to headline Apple Music Super Bowl LXI Halftime Show on Feb. 14",
-      "published_at": "2026-10-27T02:00:38.000Z",
-      "observed_at": "2026-10-27T02:10:19.913Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAC",
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-announces-jay-z-as-the-super-bowl-lxi-halftime-act",
-      "source_name": "Pro Football Talk",
-      "headline": "NFL announces Jay-Z as the Super Bowl LXI halftime act",
-      "published_at": "2026-10-27T02:06:49.000Z",
-      "observed_at": "2026-10-27T02:20:24.488Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-fines-caleb-williams-11-941-for-displaying-unauthorized-logo-on-his-shoes-in-week-6",
-      "source_name": "Pro Football Talk",
-      "headline": "NFL fines Caleb Williams $11,941 for displaying \"unauthorized logo\" on his shoes in Week 6",
-      "published_at": "2026-10-27T02:28:04.000Z",
-      "observed_at": "2026-10-27T02:30:29.715Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-take-21-20-lead-on-cowboys-to-open-second-half",
       "source_name": "Pro Football Talk",
       "headline": "Eagles take 21-20 lead on Cowboys to open second half",
@@ -41842,6 +41764,89 @@
         "HOU"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50481450/panthers-xavier-legette-week-2-activated-ir",
+      "source_name": "ESPN",
+      "headline": "WR Legette activated from IR to rejoin Panthers' passing attack",
+      "published_at": "2026-11-14T19:11:05.000Z",
+      "observed_at": "2026-11-14T19:20:28.914Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "CAR"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-announces-changes-to-officiating-assignments-impacted-air-travel",
+      "source_name": "NFL.com",
+      "headline": "NFL announces changes to officiating assignments following impacted air travel due to FAA ground stop",
+      "published_at": "2026-11-14T07:18:44.000Z",
+      "observed_at": "2026-11-14T19:20:28.914Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-activate-wr-xavier-legette-from-ir",
+      "source_name": "Pro Football Talk",
+      "headline": "Panthers activate WR Xavier Legette from IR",
+      "published_at": "2026-11-14T19:12:55.000Z",
+      "observed_at": "2026-11-14T19:20:28.914Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR",
+        "NO"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-activate-arden-key-place-mo-alie-cox-and-akeem-davis-gaither-on-ir",
+      "source_name": "Pro Football Talk",
+      "headline": "Colts activate Arden Key, place Mo Alie-Cox and Akeem Davis-Gaither on IR",
+      "published_at": "2026-11-14T19:04:42.000Z",
+      "observed_at": "2026-11-14T19:20:28.914Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "MIA"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
