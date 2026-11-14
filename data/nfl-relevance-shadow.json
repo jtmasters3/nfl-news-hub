@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-estimate-four-starters-out-of-practice-including-olb-jaelan-phillips",
-      "source_name": "Pro Football Talk",
-      "headline": "Panthers estimate four starters out of practice, including OLB Jaelan Phillips",
-      "published_at": "2026-10-26T21:44:16.000Z",
-      "observed_at": "2026-10-26T21:50:19.056Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/zac-taylor-on-shemar-stewart-being-inactive-hes-making-progress-but-we-have-a-deep-group",
       "source_name": "Pro Football Talk",
       "headline": "Zac Taylor on Shemar Stewart being inactive: He's making progress, but we have a deep group",
@@ -41837,6 +41816,23 @@
       "headline": "NFL reassigns backup referees to work games within driving distance",
       "published_at": "2026-11-14T15:19:36.000Z",
       "observed_at": "2026-11-14T15:30:32.612Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ground-stop-results-in-side-judge-don-willard-serving-as-referee-for-two-games-on-sunday",
+      "source_name": "Pro Football Talk",
+      "headline": "Ground stop results in side judge Don Willard serving as referee for two games on Sunday",
+      "published_at": "2026-11-14T15:34:42.000Z",
+      "observed_at": "2026-11-14T15:40:18.049Z",
       "decision": "keep",
       "classification": "ambiguous",
       "confidence": "low",
