@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-regain-lead-on-ceedee-lambs-second-td",
-      "source_name": "Pro Football Talk",
-      "headline": "Cowboys regain lead on CeeDee Lamb's second TD",
-      "published_at": "2026-10-27T02:32:30.000Z",
-      "observed_at": "2026-10-27T02:40:23.918Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/saquon-barkley-is-questionable-to-return-with-back-injury",
       "source_name": "Pro Football Talk",
       "headline": "Saquon Barkley is questionable to return with back injury",
@@ -41852,6 +41830,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-rodgers-reunites-with-jordan-rodgers",
+      "source_name": "Pro Football Talk",
+      "headline": "Aaron Rodgers reunites with Jordan Rodgers",
+      "published_at": "2026-11-14T19:55:20.000Z",
+      "observed_at": "2026-11-14T20:00:34.584Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
