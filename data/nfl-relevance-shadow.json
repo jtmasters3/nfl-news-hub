@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/klint-kubiak-las-vegas-raiders-kirk-cousins-fernando-mendoza-qb1",
-      "source_name": "FOX Sports",
-      "headline": "Kubiak Says ‘We’re Thinking About Everything’ As Raiders Consider QB Change",
-      "published_at": "2026-10-26T17:44:47.000Z",
-      "observed_at": "2026-10-26T17:50:22.800Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-could-be-looking-for-an-eddy-piniero-replacement",
       "source_name": "Pro Football Talk",
       "headline": "49ers could be looking for an Eddy Piñiero replacement",
@@ -41894,6 +41873,23 @@
       "confidence": "low",
       "detected_teams": [],
       "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/drew-lock-has-another-limited-practice-but-does-not-have-an-injury-designation",
+      "source_name": "Pro Football Talk",
+      "headline": "Drew Lock has another limited practice but does not have an injury designation",
+      "published_at": "2026-11-14T00:14:52.000Z",
+      "observed_at": "2026-11-14T00:20:18.721Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
       "nfl_evidence": [],
       "non_nfl_evidence": [],
       "reason_codes": [
