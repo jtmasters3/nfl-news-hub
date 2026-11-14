@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ravens-to-sign-db-rayshawn-jenkins-to-the-practice-squad",
-      "source_name": "Pro Football Talk",
-      "headline": "Ravens sign DB Rayshawn Jenkins to the practice squad",
-      "published_at": "2026-10-26T19:41:38.000Z",
-      "observed_at": "2026-10-26T19:50:24.990Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lions-dont-expect-amon-ra-st-brown-ennis-rakestraw-to-practice-wednesday",
       "source_name": "Pro Football Talk",
       "headline": "Lions don't expect Amon-Ra St. Brown, Ennis Rakestraw to practice Wednesday",
@@ -41863,6 +41841,23 @@
       "headline": "FAA lifts ground stop, clearing the way for NFL teams to travel on Saturday",
       "published_at": "2026-11-14T02:27:01.000Z",
       "observed_at": "2026-11-14T02:40:29.814Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/college-football/how-sudden-faa-air-travel-ground-stop-impact-college-football-nfl-weekend",
+      "source_name": "FOX Sports",
+      "headline": "How The FAA Ground Stop Is Affecting CFB, NFL This Weekend",
+      "published_at": "2026-11-14T02:39:57.000Z",
+      "observed_at": "2026-11-14T03:00:26.905Z",
       "decision": "keep",
       "classification": "ambiguous",
       "confidence": "low",
