@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/andrew-berry-were-excited-to-keep-maliek-collins-in-cleveland",
-      "source_name": "Pro Football Talk",
-      "headline": "Andrew Berry: We're excited to keep Maliek Collins in Cleveland",
-      "published_at": "2026-10-26T21:06:01.000Z",
-      "observed_at": "2026-10-26T21:10:19.756Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/a-16-game-international-week-was-never-a-possibility-during-2020-cba-talks",
       "source_name": "Pro Football Talk",
       "headline": "A 16-game international week was never a possibility during 2020 CBA talks",
@@ -41854,6 +41833,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jerry-jones-i-dont-think-were-far-away-from-18-regular-season-games",
+      "source_name": "Pro Football Talk",
+      "headline": "Jerry Jones: \"I don't think we're far away\" from 18 regular-season games",
+      "published_at": "2026-11-14T15:07:13.000Z",
+      "observed_at": "2026-11-14T15:10:19.438Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
