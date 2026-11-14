@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-activate-landon-dickerson-grant-calcaterra-eli-stowers",
-      "source_name": "Pro Football Talk",
-      "headline": "Eagles activate Landon Dickerson, Grant Calcaterra, Eli Stowers",
-      "published_at": "2026-10-26T20:09:43.000Z",
-      "observed_at": "2026-10-26T20:20:27.766Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "PHI"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cardinals-wr-jalen-brooks-will-undergo-season-ending-wrist-surgery",
       "source_name": "Pro Football Talk",
       "headline": "Cardinals WR Jalen Brooks will undergo season-ending wrist surgery",
@@ -41866,6 +41843,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/saints-sent-jordyn-tyson-to-renowned-hamstring-specialist-at-university-of-wisconsin",
+      "source_name": "Pro Football Talk",
+      "headline": "Saints sent Jordyn Tyson to renowned hamstring specialist at University of Wisconsin",
+      "published_at": "2026-11-14T11:19:20.000Z",
+      "observed_at": "2026-11-14T11:30:21.333Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NO"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
