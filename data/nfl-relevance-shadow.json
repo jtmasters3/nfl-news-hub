@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/eagles-rb-saquon-barkley-hamstring-active-for-monday-night-game-vs-cowboys",
-      "source_name": "NFL.com",
-      "headline": "Eagles RB Saquon Barkley (hamstring) active for Monday night game vs. Cowboys",
-      "published_at": "2026-10-26T10:45:54.000Z",
-      "observed_at": "2026-10-26T23:00:29.045Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "PHI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/big-bets-report-5-8-leg-parlay-narrowly-misses-million-dollar-payday",
       "source_name": "FOX Sports",
       "headline": "Big Bets Report: $5, 8-leg Parlay Narrowly Misses Million-Dollar Payday",
@@ -41841,6 +41819,28 @@
         "TEN"
       ],
       "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/chiefs-rb-kenneth-walker-groin-downgraded-to-out-for-sunday-s-game-vs-falcons",
+      "source_name": "NFL.com",
+      "headline": "Chiefs RB Kenneth Walker (groin) downgraded to out for Sunday's game vs. Falcons",
+      "published_at": "2026-11-14T05:16:42.000Z",
+      "observed_at": "2026-11-14T17:20:21.883Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "KC"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
