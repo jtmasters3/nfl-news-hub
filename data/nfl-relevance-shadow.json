@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/a-16-game-international-week-was-never-a-possibility-during-2020-cba-talks",
-      "source_name": "Pro Football Talk",
-      "headline": "A 16-game international week was never a possibility during 2020 CBA talks",
-      "published_at": "2026-10-26T21:17:36.000Z",
-      "observed_at": "2026-10-26T21:20:23.967Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ashton-jeanty-struggling-to-find-room-to-run-averaging-3-1-yards-per-carry",
-      "source_name": "Pro Football Talk",
-      "headline": "Ashton Jeanty struggling to find room to run, averaging 3.1 yards per carry",
-      "published_at": "2026-10-26T21:23:43.000Z",
-      "observed_at": "2026-10-26T21:30:23.870Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV"
-      ],
-      "detected_category": "draft",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_nfl_draft",
-        "nfl_preserving_category:draft"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-estimate-four-starters-out-of-practice-including-olb-jaelan-phillips",
       "source_name": "Pro Football Talk",
       "headline": "Panthers estimate four starters out of practice, including OLB Jaelan Phillips",
@@ -41841,6 +41797,46 @@
       "headline": "Jerry Jones: \"I don't think we're far away\" from 18 regular-season games",
       "published_at": "2026-11-14T15:07:13.000Z",
       "observed_at": "2026-11-14T15:10:19.438Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50479874/sources-vikings-first-called-kirk-cousins-mnf",
+      "source_name": "ESPN",
+      "headline": "Sources: Vikings made initial Cousins trade call before MNF meltdown",
+      "published_at": "2026-11-14T15:19:36.000Z",
+      "observed_at": "2026-11-14T15:30:32.612Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "LV",
+        "MIN"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50479995/nfl-reassigns-backup-refs-work-games-closer-home",
+      "source_name": "ESPN",
+      "headline": "NFL reassigns backup referees to work games within driving distance",
+      "published_at": "2026-11-14T15:19:36.000Z",
+      "observed_at": "2026-11-14T15:30:32.612Z",
       "decision": "keep",
       "classification": "ambiguous",
       "confidence": "low",
