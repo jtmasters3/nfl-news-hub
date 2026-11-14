@@ -2,88 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-lead-eagles-10-7",
-      "source_name": "Pro Football Talk",
-      "headline": "Cowboys lead Eagles 10-7",
-      "published_at": "2026-10-27T00:46:49.000Z",
-      "observed_at": "2026-10-27T00:50:22.450Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-take-advantage-of-cowboys-defensive-mistakes-for-14-10-lead",
-      "source_name": "Pro Football Talk",
-      "headline": "Eagles take advantage of Cowboys' defensive mistakes for 14-10 lead",
-      "published_at": "2026-10-27T01:05:38.000Z",
-      "observed_at": "2026-10-27T01:20:19.355Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/george-pickens-highlight-reel-td-catch-puts-cowboys-back-on-top",
-      "source_name": "Pro Football Talk",
-      "headline": "George Pickens' highlight-reel TD catch puts Cowboys back on top",
-      "published_at": "2026-10-27T01:19:00.000Z",
-      "observed_at": "2026-10-27T01:30:25.608Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/jay-z-to-headline-super-bowl-lxi-at-sofi-stadium-in-inglewood",
-      "source_name": "NFL.com",
-      "headline": "Jay-Z to headline Super Bowl LXI Halftime Show at SoFi Stadium in Inglewood",
-      "published_at": "2026-10-27T01:52:48.000Z",
-      "observed_at": "2026-10-27T02:00:29.747Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/who-is-super-bowl-lxi-haltime-show-performer-jay-z",
       "source_name": "FOX Sports",
       "headline": "Jay-Z To Headline Super Bowl LXI Halftime Show in Los Angeles",
@@ -41843,6 +41761,89 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/the-biggest-thing-jayden-daniels-is-doing-this-fall-has-nothing-to-do-with-results",
+      "source_name": "NFL.com",
+      "headline": "The biggest thing Jayden Daniels is doing this fall has nothing to do with results",
+      "published_at": "2026-11-14T11:16:04.000Z",
+      "observed_at": "2026-11-14T18:40:17.245Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/vikings-packers-predictions-can-kirk-cousins-revive-offense-at-lambeau-field",
+      "source_name": "NFL.com",
+      "headline": "Vikings-Packers predictions: Can Kirk Cousins revive offense at Lambeau Field?",
+      "published_at": "2026-11-14T11:16:04.000Z",
+      "observed_at": "2026-11-14T18:40:17.245Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
+        "MIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/daiyan-henley-s-wild-week-ended-with-an-unexpected-return-to-chargers-am-i-jobless",
+      "source_name": "NFL.com",
+      "headline": "Daiyan Henley's wild week ended with an unexpected return to Chargers: 'Am I jobless?'",
+      "published_at": "2026-11-14T02:16:06.000Z",
+      "observed_at": "2026-11-14T18:40:17.245Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dolphins-sign-k-zane-gonzalez-to-53-man-roster-elevate-qb-brady-cook-wr-jalen-reagor",
+      "source_name": "Pro Football Talk",
+      "headline": "Dolphins sign K Zane Gonzalez to 53-man roster; elevate QB Brady Cook, WR Jalen Reagor",
+      "published_at": "2026-11-14T18:33:02.000Z",
+      "observed_at": "2026-11-14T18:40:17.245Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "MIA"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:roster_move"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
