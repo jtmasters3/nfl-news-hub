@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-take-21-20-lead-on-cowboys-to-open-second-half",
-      "source_name": "Pro Football Talk",
-      "headline": "Eagles take 21-20 lead on Cowboys to open second half",
-      "published_at": "2026-10-27T02:20:37.000Z",
-      "observed_at": "2026-10-27T02:30:29.715Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "PHI"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-regain-lead-on-ceedee-lambs-second-td",
       "source_name": "Pro Football Talk",
       "headline": "Cowboys regain lead on CeeDee Lamb's second TD",
@@ -41847,6 +41825,27 @@
         "MIA"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-tells-senator-that-jalen-hurts-review-will-include-mutually-agreed-upon-independent-medical-experts",
+      "source_name": "Pro Football Talk",
+      "headline": "NFL tells Senator that Jalen Hurts review will include \"mutually agreed-upon independent medical experts\"",
+      "published_at": "2026-11-14T19:28:40.000Z",
+      "observed_at": "2026-11-14T19:40:17.732Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
