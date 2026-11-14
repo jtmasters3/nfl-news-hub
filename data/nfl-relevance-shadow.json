@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/shane-steichen-reiterates-daniel-jones-is-qb1-he-knows-hes-got-to-play-better",
-      "source_name": "Pro Football Talk",
-      "headline": "Shane Steichen reiterates Daniel Jones is QB1: \"He knows he's got to play better\"",
-      "published_at": "2026-10-26T18:38:43.000Z",
-      "observed_at": "2026-10-26T18:50:19.871Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jahmyr-gibbs-is-on-pace-for-470-touches-this-season",
-      "source_name": "Pro Football Talk",
-      "headline": "Jahmyr Gibbs is on pace for 470 touches this season",
-      "published_at": "2026-10-26T18:55:18.000Z",
-      "observed_at": "2026-10-26T19:00:32.046Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET",
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/seahawks-plan-to-have-jadarian-price-back-at-practice-this-week",
       "source_name": "Pro Football Talk",
       "headline": "Seahawks plan to have Jadarian Price back at practice this week",
@@ -41877,6 +41834,45 @@
       "headline": "2026 NFL midseason awards: Joe Burrow, Greg Rousseau and David Bailey among my selections",
       "published_at": "2026-11-14T12:21:34.000Z",
       "observed_at": "2026-11-14T00:30:30.703Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50475505/seahawks-raiders-week-10-darnold-lock-shaheed-returns",
+      "source_name": "ESPN",
+      "headline": "As QB Sam Darnold progresses toward a return, two other Seahawks are back vs. Raiders",
+      "published_at": "2026-11-14T00:49:57.000Z",
+      "observed_at": "2026-11-14T01:00:38.267Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV",
+        "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/espn/betting/story/_/id/50465559/2026-nfl-mvp-favorite-odds-betting-quarterbacks",
+      "source_name": "ESPN",
+      "headline": "Joe Burrow is the NFL MVP favorite, but is he the best bet?",
+      "published_at": "2026-11-14T00:28:36.000Z",
+      "observed_at": "2026-11-14T01:00:38.267Z",
       "decision": "keep",
       "classification": "ambiguous",
       "confidence": "low",
