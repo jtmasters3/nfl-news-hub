@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-raiders-game-in-week-9-moved-to-a-4-25-p-m-et-kickoff",
-      "source_name": "Pro Football Talk",
-      "headline": "49ers-Raiders game in Week 9 moved to a 4:25 p.m. ET kickoff",
-      "published_at": "2026-10-26T19:31:09.000Z",
-      "observed_at": "2026-10-26T19:40:19.757Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV",
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jesse-minter-lamar-jackson-is-working-his-butt-off-to-be-back",
-      "source_name": "Pro Football Talk",
-      "headline": "Jesse Minter: Lamar Jackson is \"working his butt off to be back\"",
-      "published_at": "2026-10-26T19:48:12.000Z",
-      "observed_at": "2026-10-26T19:50:24.990Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "BUF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ravens-to-sign-db-rayshawn-jenkins-to-the-practice-squad",
       "source_name": "Pro Football Talk",
       "headline": "Ravens sign DB Rayshawn Jenkins to the practice squad",
@@ -41874,6 +41830,44 @@
       "confidence": "low",
       "detected_teams": [],
       "detected_category": "coaching",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50472000/sam-hartman-bachelor-season-30",
+      "source_name": "ESPN",
+      "headline": "🌹 Commanders QB Sam Hartman to star as 'The Bachelor' in show's 30th season",
+      "published_at": "2026-11-14T02:27:55.000Z",
+      "observed_at": "2026-11-14T02:40:29.814Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/faa-lifts-ground-stop-clearing-the-way-for-nfl-teams-to-travel-on-saturday",
+      "source_name": "Pro Football Talk",
+      "headline": "FAA lifts ground stop, clearing the way for NFL teams to travel on Saturday",
+      "published_at": "2026-11-14T02:27:01.000Z",
+      "observed_at": "2026-11-14T02:40:29.814Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
       "nfl_evidence": [],
       "non_nfl_evidence": [],
       "reason_codes": [
