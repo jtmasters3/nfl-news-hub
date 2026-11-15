@@ -2,91 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bengals-p-ryan-rehkow-is-the-afc-special-teams-player-of-the-week",
-      "source_name": "Pro Football Talk",
-      "headline": "Bengals P Ryan Rehkow is the AFC special teams player of the week",
-      "published_at": "2026-10-28T16:18:37.000Z",
-      "observed_at": "2026-10-28T16:30:40.619Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "CIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-wednesday-oct-28",
-      "source_name": "NFL.com",
-      "headline": "NFL news roundup: Latest league updates from Wednesday, Oct. 28",
-      "published_at": "2026-10-28T04:29:05.000Z",
-      "observed_at": "2026-10-28T16:40:21.163Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/one-year-after-the-chargers-shredded-the-vikings-on-a-thursday-night-the-teams-are-in-very-different-spots",
-      "source_name": "Pro Football Talk",
-      "headline": "One year after the Chargers shredded the Vikings on a Thursday night, the teams are in very different spots",
-      "published_at": "2026-10-28T16:29:31.000Z",
-      "observed_at": "2026-10-28T16:40:21.163Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR",
-        "GB",
-        "LAC",
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/commanders-put-terry-mclaurin-on-ir-sign-van-jefferson-to-active-roster",
-      "source_name": "Pro Football Talk",
-      "headline": "Commanders put Terry McLaurin on IR, sign Van Jefferson to active roster",
-      "published_at": "2026-10-28T16:35:07.000Z",
-      "observed_at": "2026-10-28T16:50:22.105Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF",
-        "WAS"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-qb-rankings-index-week-8-2026-nfl-season",
       "source_name": "NFL.com",
       "headline": "NFL QB rankings, Week 8: Joe Burrow, Caleb Williams hit season high; Patrick Mahomes slides",
@@ -41894,6 +41809,90 @@
         "NO"
       ],
       "detected_category": "live_game_state",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50492174/never-forget-germany-trip",
+      "source_name": "ESPN",
+      "headline": "Amon-Ra St. Brown on celebrating Lions' win in Germany: 'Like a dream come true'",
+      "published_at": "2026-11-15T19:54:16.000Z",
+      "observed_at": "2026-11-15T20:20:30.544Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ceedee-lamb-is-96-yards-from-becoming-first-cowboys-player-with-six-straight-1-000-yard-seasons",
+      "source_name": "Pro Football Talk",
+      "headline": "CeeDee Lamb is 96 yards from becoming first Cowboys' player with six straight 1,000-yard seasons",
+      "published_at": "2026-11-15T20:13:52.000Z",
+      "observed_at": "2026-11-15T20:20:30.544Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cyrus-allens-first-touchdown-catch-gives-chiefs-21-3-lead",
+      "source_name": "Pro Football Talk",
+      "headline": "Cyrus Allen's first touchdown catch gives Chiefs 21-3 lead",
+      "published_at": "2026-11-15T20:11:52.000Z",
+      "observed_at": "2026-11-15T20:20:30.544Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/geno-smith-cleared-to-return-after-concussion-evaluation-bills-lead-17-9",
+      "source_name": "Pro Football Talk",
+      "headline": "Geno Smith cleared to return after concussion evaluation, Bills lead 17-9",
+      "published_at": "2026-11-15T20:09:40.000Z",
+      "observed_at": "2026-11-15T20:20:30.544Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
