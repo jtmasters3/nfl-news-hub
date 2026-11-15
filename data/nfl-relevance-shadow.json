@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-qb-rankings-index-week-8-2026-nfl-season",
-      "source_name": "NFL.com",
-      "headline": "NFL QB rankings, Week 8: Joe Burrow, Caleb Williams hit season high; Patrick Mahomes slides",
-      "published_at": "2026-10-28T04:48:00.000Z",
-      "observed_at": "2026-10-28T17:00:26.913Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chiefs-expect-rashee-rice-jaylon-moore-to-practice-wednesday",
       "source_name": "Pro Football Talk",
       "headline": "Chiefs expect Rashee Rice, Jaylon Moore to practice Wednesday",
@@ -41891,6 +41874,28 @@
       "confidence": "high",
       "detected_teams": [
         "BUF"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/woody-marks-ruled-out-of-texans-browns-with-a-concussion",
+      "source_name": "Pro Football Talk",
+      "headline": "Woody Marks ruled out of Texans-Browns with a concussion",
+      "published_at": "2026-11-15T20:23:31.000Z",
+      "observed_at": "2026-11-15T20:30:21.353Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE",
+        "HOU"
       ],
       "detected_category": "injury",
       "nfl_evidence": [
