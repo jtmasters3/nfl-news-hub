@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-ravens-g-vega-ioane-has-an-mcl-sprain",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Ravens G Vega Ioane has an MCL sprain",
-      "published_at": "2026-10-27T12:26:25.000Z",
-      "observed_at": "2026-10-27T12:30:24.076Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "CIN"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/pfts-week-8-nfl-2026-power-rankings",
       "source_name": "Pro Football Talk",
       "headline": "PFT's Week 8 NFL 2026 power rankings",
@@ -41850,6 +41828,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/for-week-9-jalen-pitre-was-fined-twice-for-illegal-use-of-helmet",
+      "source_name": "Pro Football Talk",
+      "headline": "For Week 9, Jalen Pitre was fined twice for illegal use of helmet",
+      "published_at": "2026-11-15T00:20:00.000Z",
+      "observed_at": "2026-11-15T00:30:32.010Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
