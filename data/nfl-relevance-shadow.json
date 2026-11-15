@@ -2,71 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/players-of-the-week-2026-week-7-joe-burrow-michael-penix",
-      "source_name": "NFL.com",
-      "headline": "Bengals QB Joe Burrow, Falcons QB Michael Penix highlight Players of the Week",
-      "published_at": "2026-10-28T04:00:38.000Z",
-      "observed_at": "2026-10-28T16:10:26.353Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "CIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/d-j-wonnum-named-nfc-special-teams-player-of-the-week",
-      "source_name": "Pro Football Talk",
-      "headline": "D.J. Wonnum named NFC special teams player of the week",
-      "published_at": "2026-10-28T16:14:46.000Z",
-      "observed_at": "2026-10-28T16:20:23.157Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET",
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/broncos-lb-alex-singleton-named-the-afc-defensive-player-of-the-week",
-      "source_name": "Pro Football Talk",
-      "headline": "Broncos LB Alex Singleton named the AFC defensive player of the week",
-      "published_at": "2026-10-28T16:12:41.000Z",
-      "observed_at": "2026-10-28T16:20:23.157Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/blake-cashman-named-nfc-defensive-player-of-the-week",
       "source_name": "Pro Football Talk",
       "headline": "Blake Cashman named NFC defensive player of the week",
@@ -41893,6 +41828,70 @@
         "HOU"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50492387/patriots-qb-drake-maye-testing-ankle-injury",
+      "source_name": "ESPN",
+      "headline": "Patriots QB Maye injures ankle on Hutchinson sack, to have further testing",
+      "published_at": "2026-11-15T19:45:27.000Z",
+      "observed_at": "2026-11-15T19:50:29.199Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "NE"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kirk-cousins-vikings-dominate-lead-17-0-at-halftime",
+      "source_name": "Pro Football Talk",
+      "headline": "Kirk Cousins, Vikings dominate, lead 17-0 at halftime",
+      "published_at": "2026-11-15T19:45:03.000Z",
+      "observed_at": "2026-11-15T19:50:29.199Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN"
+      ],
+      "detected_category": "live_game_state",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/thomas-booker-donte-thornton-are-inactive-for-the-raiders",
+      "source_name": "Pro Football Talk",
+      "headline": "Thomas Booker, Dont'e Thornton are inactive for the Raiders",
+      "published_at": "2026-11-15T19:43:38.000Z",
+      "observed_at": "2026-11-15T19:50:29.199Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
