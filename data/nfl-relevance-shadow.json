@@ -2,85 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/is-michael-penix-jr-doing-enough-to-secure-falcons-future-he-s-a-franchise-quarterback",
-      "source_name": "NFL.com",
-      "headline": "Is Michael Penix Jr. doing enough to secure Falcons future? 'He's a franchise quarterback'",
-      "published_at": "2026-10-27T10:31:04.000Z",
-      "observed_at": "2026-10-27T14:50:25.264Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-vrabel-proud-of-malik-willis-for-continuing-to-develop",
-      "source_name": "Pro Football Talk",
-      "headline": "Mike Vrabel: Proud of Malik Willis for continuing to develop",
-      "published_at": "2026-10-27T14:38:15.000Z",
-      "observed_at": "2026-10-27T14:50:25.264Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "coaching",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bill-belichick-wants-acc-to-add-more-goal-line-cameras-after-controversial-syracuse-finish",
-      "source_name": "Pro Football Talk",
-      "headline": "Bill Belichick wants ACC to add more goal line cameras after controversial Syracuse finish",
-      "published_at": "2026-10-27T14:58:12.000Z",
-      "observed_at": "2026-10-27T15:00:29.210Z",
-      "decision": "reject",
-      "classification": "college_football",
-      "confidence": "medium",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [
-        "conference_acc"
-      ],
-      "reason_codes": [
-        "college_marker_no_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jerry-jones-troy-aikman-working-for-cowboys-in-future-is-very-possible",
-      "source_name": "Pro Football Talk",
-      "headline": "Jerry Jones: Troy Aikman working for Cowboys in future is \"very possible\"",
-      "published_at": "2026-10-27T14:57:41.000Z",
-      "observed_at": "2026-10-27T15:00:29.210Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/byron-murphy-is-blossoming-in-the-middle-of-the-seahawks-defense-and-at-just-the-right-time",
       "source_name": "NFL.com",
       "headline": "Byron Murphy is blossoming in the middle of the Seahawks' defense (and at just the right time)",
@@ -41845,6 +41766,94 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/saints-vs-panthers-prediction-odds-pick-nfl-week-10",
+      "source_name": "FOX Sports",
+      "headline": "Saints vs. Panthers Prediction, Odds, Pick For NFL Week 10",
+      "published_at": "2026-11-15T06:00:51.000Z",
+      "observed_at": "2026-11-15T06:20:33.383Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR",
+        "NO"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/packers-vs-vikings-prediction-odds-pick-nfl-week-10",
+      "source_name": "FOX Sports",
+      "headline": "Packers vs. Vikings Prediction, Odds, Pick For NFL Week 10",
+      "published_at": "2026-11-15T06:00:49.000Z",
+      "observed_at": "2026-11-15T06:20:33.383Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
+        "MIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/browns-vs-texans-prediction-odds-pick-nfl-week-10",
+      "source_name": "FOX Sports",
+      "headline": "Browns vs. Texans Prediction, Odds, Pick For NFL Week 10",
+      "published_at": "2026-11-15T06:00:37.000Z",
+      "observed_at": "2026-11-15T06:20:33.383Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE",
+        "HOU"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/titans-vs-jaguars-prediction-odds-pick-nfl-week-10",
+      "source_name": "FOX Sports",
+      "headline": "Titans vs. Jaguars Prediction, Odds, Pick For NFL Week 10",
+      "published_at": "2026-11-15T06:00:22.000Z",
+      "observed_at": "2026-11-15T06:20:33.383Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX",
+        "TEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
