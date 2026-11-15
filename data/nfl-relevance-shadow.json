@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-power-rankings-week-8-2026-nfl-season",
-      "source_name": "NFL.com",
-      "headline": "NFL Power Rankings, Week 8: Vikings claim No. 1 spot; Browns, Falcons nearing top 10",
-      "published_at": "2026-10-27T03:19:12.000Z",
-      "observed_at": "2026-10-27T15:30:23.093Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "CLE",
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/eagles-worst-defensive-outing-of-vic-fangio-era-creates-unexpected-problems",
       "source_name": "NFL.com",
       "headline": "Eagles' worst defensive outing of Vic Fangio era creates unexpected problems",
@@ -41855,6 +41832,27 @@
         "SF"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/with-trade-offers-rejected-titans-plans-for-tony-pollard-come-into-question",
+      "source_name": "Pro Football Talk",
+      "headline": "With trade offers rejected, Titans' plans for Tony Pollard come into question",
+      "published_at": "2026-11-15T11:57:34.000Z",
+      "observed_at": "2026-11-15T12:00:36.355Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "TEN"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
