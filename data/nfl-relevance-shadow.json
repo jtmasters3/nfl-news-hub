@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-agree-to-acquire-deforest-buckner-from-colts",
-      "source_name": "Pro Football Talk",
-      "headline": "49ers agree to acquire DeForest Buckner from Colts",
-      "published_at": "2026-10-27T20:52:51.000Z",
-      "observed_at": "2026-10-27T21:00:27.590Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "SF"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dave-canales-knows-opposing-offenses-are-excited-to-game-plan-vs-panthers-run-defense",
-      "source_name": "Pro Football Talk",
-      "headline": "Dave Canales knows opposing offenses are excited to game plan vs. Panthers' run defense",
-      "published_at": "2026-10-27T20:45:55.000Z",
-      "observed_at": "2026-10-27T21:00:27.590Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/deforest-buckner-trade-49ers-colts-details",
       "source_name": "FOX Sports",
       "headline": "Reunion In The Bay: 49ers Reportedly Land DT DeForest Buckner From Colts In Trade",
@@ -41860,6 +41817,49 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/patriots-drake-maye-ankle-injury-lions",
+      "source_name": "NFL.com",
+      "headline": "Patriots QB Drake Maye (ankle) questionable to return vs. Lions",
+      "published_at": "2026-11-15T03:07:40.000Z",
+      "observed_at": "2026-11-15T15:10:18.317Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "NE"
+      ],
+      "detected_category": "live_game_state",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/drake-maye-limps-to-locker-room-tommy-devito-in-at-qb-for-patriots-in-germany",
+      "source_name": "Pro Football Talk",
+      "headline": "Drake Maye limps to locker room, Tommy DeVito in at QB for Patriots in Germany",
+      "published_at": "2026-11-15T15:00:28.000Z",
+      "observed_at": "2026-11-15T15:10:18.317Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
