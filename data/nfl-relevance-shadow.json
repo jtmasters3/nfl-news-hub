@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/panthers-vs-packers-three-must-know-storylines-for-thursday-s-week-8-prime-time-game",
-      "source_name": "NFL.com",
-      "headline": "Panthers vs. Packers: Three must-know storylines for Thursday's Week 8 prime-time game",
-      "published_at": "2026-10-28T01:13:11.000Z",
-      "observed_at": "2026-10-28T13:20:21.807Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR",
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/justin-tucker-chiefs-signing-kicker-practice-squad",
       "source_name": "NFL.com",
       "headline": "NFL Network: Chiefs signing five-time All-Pro kicker Justin Tucker to practice squad",
@@ -41874,6 +41852,28 @@
         "KC"
       ],
       "detected_category": "live_game_state",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kirk-cousins-td-pass-gives-vikings-10-0-lead-on-packers",
+      "source_name": "Pro Football Talk",
+      "headline": "Kirk Cousins' TD pass gives Vikings 10-0 lead on Packers",
+      "published_at": "2026-11-15T18:40:12.000Z",
+      "observed_at": "2026-11-15T18:50:18.481Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
+        "MIN"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
