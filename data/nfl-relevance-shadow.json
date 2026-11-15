@@ -2,73 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/the-nfc-west-arms-race-is-on-here-s-who-the-rams-can-target-before-trade-deadline",
-      "source_name": "NFL.com",
-      "headline": "The NFC West arms race is on. Here's who the Rams can target before trade deadline",
-      "published_at": "2026-10-28T11:16:06.000Z",
-      "observed_at": "2026-10-28T13:10:23.339Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chiefs-to-sign-justin-tucker-to-their-practice-squad",
-      "source_name": "Pro Football Talk",
-      "headline": "Chiefs to sign Justin Tucker to their practice squad",
-      "published_at": "2026-10-28T12:59:03.000Z",
-      "observed_at": "2026-10-28T13:10:23.339Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "KC"
-      ],
-      "detected_category": "free_agency",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad",
-        "phrase_released_by",
-        "nfl_preserving_category:free_agency"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/with-deforest-buckner-trade-49ers-double-down-on-2026-are-more-deals-coming",
-      "source_name": "NFL.com",
-      "headline": "With DeForest Buckner trade, 49ers double down on 2026. Are more deals coming?",
-      "published_at": "2026-10-28T12:31:10.000Z",
-      "observed_at": "2026-10-28T13:20:21.807Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/panthers-vs-packers-three-must-know-storylines-for-thursday-s-week-8-prime-time-game",
       "source_name": "NFL.com",
       "headline": "Panthers vs. Packers: Three must-know storylines for Thursday's Week 8 prime-time game",
@@ -41874,6 +41807,73 @@
         "WAS"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-allens-10th-rushing-td-of-season-puts-bills-up-7-0",
+      "source_name": "Pro Football Talk",
+      "headline": "Josh Allen's 10th rushing TD of season puts Bills up 7-0",
+      "published_at": "2026-11-15T18:34:40.000Z",
+      "observed_at": "2026-11-15T18:40:28.533Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/fernando-mendoza-hopes-to-improve-poor-debuts-by-qbs-taken-no-1-overall",
+      "source_name": "Pro Football Talk",
+      "headline": "Fernando Mendoza hopes to improve poor debuts by QBs taken No. 1 overall",
+      "published_at": "2026-11-15T18:32:50.000Z",
+      "observed_at": "2026-11-15T18:40:28.533Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV",
+        "MIN",
+        "SEA"
+      ],
+      "detected_category": "draft",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:draft"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/travis-kelce-questionable-to-return-with-ankle-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Travis Kelce questionable to return with ankle injury",
+      "published_at": "2026-11-15T18:27:02.000Z",
+      "observed_at": "2026-11-15T18:40:28.533Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "KC"
+      ],
+      "detected_category": "live_game_state",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
