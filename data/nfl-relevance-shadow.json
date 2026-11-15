@@ -2,149 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/panthers-have-a-lot-to-clean-up-pass-protection-run-d-and-little-time-to-do-it",
-      "source_name": "NFL.com",
-      "headline": "Panthers have a lot to clean up -- pass protection, run D -- and little time to do it",
-      "published_at": "2026-10-27T10:16:05.000Z",
-      "observed_at": "2026-10-27T16:40:19.998Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/uk-and-ireland-week-8-broadcast-games",
-      "source_name": "NFL.com",
-      "headline": "UK and Ireland Week 8 Broadcast Games",
-      "published_at": "2026-10-27T04:28:01.000Z",
-      "observed_at": "2026-10-27T16:40:19.998Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-agree-to-trade-quenton-nelson-to-seahawks",
-      "source_name": "Pro Football Talk",
-      "headline": "Colts agree to trade Quenton Nelson to Seahawks",
-      "published_at": "2026-10-27T16:44:16.000Z",
-      "observed_at": "2026-10-27T16:50:21.130Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "SEA"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-vrabel-declines-to-discuss-250-000-fine-for-interaction-with-officials",
-      "source_name": "Pro Football Talk",
-      "headline": "Mike Vrabel declines to discuss $250,000 fine for interaction with officials",
-      "published_at": "2026-10-27T16:41:55.000Z",
-      "observed_at": "2026-10-27T16:50:21.130Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE",
-        "NYJ",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-nfl-worst-rush-defense-knows-it-needs-to-stop-the-bleeding",
-      "source_name": "Pro Football Talk",
-      "headline": "Panthers' NFL-worst rush defense knows it needs to \"stop the bleeding\"",
-      "published_at": "2026-10-27T16:35:29.000Z",
-      "observed_at": "2026-10-27T16:50:21.130Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-network-colts-trading-eight-time-pro-bowl-guard-quenton-nelson-to-seahawks",
-      "source_name": "NFL.com",
-      "headline": "NFL Network: Colts trading eight-time Pro Bowl guard Quenton Nelson to Seahawks",
-      "published_at": "2026-10-27T04:53:57.000Z",
-      "observed_at": "2026-10-27T17:00:32.615Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "SEA"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-sponsors-will-now-infiltrate-madden",
-      "source_name": "Pro Football Talk",
-      "headline": "NFL sponsors will now infiltrate Madden",
-      "published_at": "2026-10-27T16:58:42.000Z",
-      "observed_at": "2026-10-27T17:10:22.820Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bengals-put-te-erick-all-on-ir-sign-te-cam-grandy",
       "source_name": "Pro Football Talk",
       "headline": "Bengals put TE Erick All on IR, sign TE Cam Grandy",
@@ -41852,6 +41709,155 @@
       "confidence": "high",
       "detected_teams": [
         "CAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-week-10-inactives-players-ruled-out-sunday-2026-season",
+      "source_name": "NFL.com",
+      "headline": "NFL Week 10 inactives: Players ruled out for Sunday's 12 games",
+      "published_at": "2026-11-15T01:06:06.000Z",
+      "observed_at": "2026-11-15T13:10:18.489Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-texans-vs-browns-tv-channel-live-stream-time-nov-15-2026",
+      "source_name": "FOX Sports",
+      "headline": "How to Watch Texans vs. Browns: TV Channel, Live Stream, Time",
+      "published_at": "2026-11-15T13:04:48.000Z",
+      "observed_at": "2026-11-15T13:10:18.489Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE",
+        "HOU"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-jaguars-vs-titans-tv-channel-live-stream-time-nov-15-2026",
+      "source_name": "FOX Sports",
+      "headline": "How to Watch Jaguars vs. Titans: TV Channel, Live Stream, Time",
+      "published_at": "2026-11-15T13:03:53.000Z",
+      "observed_at": "2026-11-15T13:10:18.489Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX",
+        "TEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-panthers-vs-saints-tv-channel-live-stream-time-nov-15-2026",
+      "source_name": "FOX Sports",
+      "headline": "How to Watch Panthers vs. Saints: TV Channel, Live Stream, Time",
+      "published_at": "2026-11-15T13:01:53.000Z",
+      "observed_at": "2026-11-15T13:10:18.489Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR",
+        "NO"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-dolphins-vs-colts-tv-channel-live-stream-time-nov-15-2026",
+      "source_name": "FOX Sports",
+      "headline": "How to Watch Dolphins vs. Colts: TV Channel, Live Stream, Time",
+      "published_at": "2026-11-15T13:01:00.000Z",
+      "observed_at": "2026-11-15T13:10:18.489Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "MIA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-bills-vs-jets-tv-channel-live-stream-time-nov-15-2026",
+      "source_name": "FOX Sports",
+      "headline": "How to Watch Bills vs. Jets: TV Channel, Live Stream, Time",
+      "published_at": "2026-11-15T13:00:11.000Z",
+      "observed_at": "2026-11-15T13:10:18.489Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "NYJ"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-chiefs-vs-falcons-tv-channel-live-stream-time-nov-15-2026",
+      "source_name": "FOX Sports",
+      "headline": "How to Watch Chiefs vs. Falcons: TV Channel, Live Stream, Time",
+      "published_at": "2026-11-15T12:58:40.000Z",
+      "observed_at": "2026-11-15T13:10:18.489Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "KC"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
