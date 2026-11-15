@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/matt-lafleur-understands-the-challenges-of-officiating-nfl-games",
-      "source_name": "Pro Football Talk",
-      "headline": "Matt LaFleur understands the challenges of officiating NFL games",
-      "published_at": "2026-10-28T17:09:15.000Z",
-      "observed_at": "2026-10-28T17:20:24.669Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET",
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/harrison-butker-will-probably-kick-for-the-chiefs-this-week",
       "source_name": "Pro Football Talk",
       "headline": "Harrison Butker will \"probably\" kick for the Chiefs this week",
@@ -41905,6 +41883,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/minnesota-vikings-vs-green-bay-packers-takeaways-november-15-2026",
+      "source_name": "FOX Sports",
+      "headline": "Vikings Get Back On Track: 3 Takeaways From Minnesota's Win Over The Packers",
+      "published_at": "2026-11-15T21:01:59.000Z",
+      "observed_at": "2026-11-15T21:10:19.994Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
+        "MIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
