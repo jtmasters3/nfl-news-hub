@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/texas-left-tackle-and-likely-first-round-pick-trevor-goosby-out-for-season",
-      "source_name": "Pro Football Talk",
-      "headline": "Texas left tackle and likely first-round pick Trevor Goosby out for season",
-      "published_at": "2026-10-28T10:04:23.000Z",
-      "observed_at": "2026-10-28T12:30:29.546Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/malik-beasley-agrees-to-plead-guilty-to-gambling-charges",
       "source_name": "Pro Football Talk",
       "headline": "Malik Beasley agrees to plead guilty to gambling charges",
@@ -41866,6 +41849,27 @@
         "NYJ"
       ],
       "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/bucs-qb-baker-mayfield-week-11-status-leg-injury",
+      "source_name": "FOX Sports",
+      "headline": "Bucs QB Baker Mayfield's Week 11 Status Reportedly In Doubt With Ankle Injury",
+      "published_at": "2026-11-15T17:41:41.000Z",
+      "observed_at": "2026-11-15T17:50:17.591Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "TB"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
