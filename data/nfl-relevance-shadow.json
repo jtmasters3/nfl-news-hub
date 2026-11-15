@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sauce-gardner-tyler-warren-listed-as-limited-on-wednesdays-injury-report",
-      "source_name": "Pro Football Talk",
-      "headline": "Sauce Gardner, Tyler Warren listed as limited on Wednesday's injury report",
-      "published_at": "2026-10-28T20:11:12.000Z",
-      "observed_at": "2026-10-28T20:20:21.335Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jamarr-chase-did-not-practice-on-wednesday",
       "source_name": "Pro Football Talk",
       "headline": "Ja'Marr Chase did not practice on Wednesday",
@@ -41913,6 +41892,28 @@
         "LAR"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-lead-cowboys-24-19-in-third-quarter",
+      "source_name": "Pro Football Talk",
+      "headline": "49ers lead Cowboys 24-19 in third quarter",
+      "published_at": "2026-11-15T23:25:14.000Z",
+      "observed_at": "2026-11-15T23:40:16.413Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "SF"
+      ],
+      "detected_category": "live_game_state",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
