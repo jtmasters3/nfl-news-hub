@@ -2,90 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/harrison-butker-will-probably-kick-for-the-chiefs-this-week",
-      "source_name": "Pro Football Talk",
-      "headline": "Harrison Butker will \"probably\" kick for the Chiefs this week",
-      "published_at": "2026-10-28T17:08:50.000Z",
-      "observed_at": "2026-10-28T17:20:24.669Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN",
-        "KC"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/favorite-dogs-college-football-week-9-nfl-week-8",
-      "source_name": "FOX Sports",
-      "headline": "Favorite 'Dogs: Back Northwestern Over Oregon; Ravens To Upset Bills",
-      "published_at": "2026-10-28T17:19:57.000Z",
-      "observed_at": "2026-10-28T17:30:25.514Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "BUF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/colts-wr-josh-downs-requests-trade",
-      "source_name": "NFL.com",
-      "headline": "Report: Colts WR Josh Downs requests trade ahead of NFL deadline for deals",
-      "published_at": "2026-10-28T05:37:02.000Z",
-      "observed_at": "2026-10-28T17:40:22.997Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-fantasy-2026-start-em-sit-em-kickers-in-week-8",
-      "source_name": "NFL.com",
-      "headline": "NFL Fantasy 2026 Start 'Em, Sit 'Em: Kickers in Week 8",
-      "published_at": "2026-10-28T05:38:55.000Z",
-      "observed_at": "2026-10-28T17:50:22.062Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "fantasy",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-fantasy-2026-start-em-sit-em-defenses-for-week-8",
       "source_name": "NFL.com",
       "headline": "NFL Fantasy 2026 Start 'Em, Sit 'Em: Defenses for Week 8",
@@ -41897,6 +41813,94 @@
       "detected_teams": [
         "GB",
         "MIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaguars-improve-to-7-2-with-40-23-win-over-titans",
+      "source_name": "Pro Football Talk",
+      "headline": "Jaguars improve to 7-2 with 40-23 win over Titans",
+      "published_at": "2026-11-15T21:12:59.000Z",
+      "observed_at": "2026-11-15T21:20:16.856Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX",
+        "TEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patrick-mahomes-throws-five-tds-chiefs-beat-falcons-35-13",
+      "source_name": "Pro Football Talk",
+      "headline": "Patrick Mahomes throws five TDs, Chiefs beat Falcons 35-13",
+      "published_at": "2026-11-15T21:12:52.000Z",
+      "observed_at": "2026-11-15T21:20:16.856Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "KC"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-pummel-packers-30-10-in-kirk-cousins-return",
+      "source_name": "Pro Football Talk",
+      "headline": "Vikings pummel Packers 30-10 in Kirk Cousins' return",
+      "published_at": "2026-11-15T21:07:57.000Z",
+      "observed_at": "2026-11-15T21:20:16.856Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
+        "MIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bills-rout-jets-31-12-improve-to-5-0-on-the-road-this-season",
+      "source_name": "Pro Football Talk",
+      "headline": "Bills rout Jets 31-12, improve to 5-0 on the road this season",
+      "published_at": "2026-11-15T21:07:28.000Z",
+      "observed_at": "2026-11-15T21:20:16.856Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "NYJ"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
