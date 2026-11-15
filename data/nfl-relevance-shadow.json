@@ -2,65 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/with-two-trades-in-one-day-colts-are-clearly-open-for-business",
-      "source_name": "Pro Football Talk",
-      "headline": "With two trades in one day, Colts are clearly open for business",
-      "published_at": "2026-10-27T21:06:11.000Z",
-      "observed_at": "2026-10-27T21:10:18.900Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cardinals-place-wr-jalen-brooks-on-season-ending-ir",
-      "source_name": "Pro Football Talk",
-      "headline": "Cardinals place WR Jalen Brooks on season-ending IR",
-      "published_at": "2026-10-27T21:03:23.000Z",
-      "observed_at": "2026-10-27T21:10:18.900Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/week-8-nfl-mvp-tracker-joe-burrow-jared-goff-caleb-williams",
-      "source_name": "NFL.com",
-      "headline": "Week 8 NFL MVP tracker: Joe Burrow, Jared Goff, Caleb Williams on verge of crashing race",
-      "published_at": "2026-10-27T09:07:56.000Z",
-      "observed_at": "2026-10-27T21:20:20.945Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jets-stand-to-benefit-from-colts-fire-sale",
       "source_name": "Pro Football Talk",
       "headline": "Jets stand to benefit from Colts' fire sale",
@@ -41853,6 +41794,70 @@
         "DET"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/notable-injuries-news-sunday-week-10-games-2026",
+      "source_name": "NFL.com",
+      "headline": "Notable injuries, news from Sunday's Week 10 games",
+      "published_at": "2026-11-15T03:19:40.000Z",
+      "observed_at": "2026-11-15T15:30:22.456Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/drake-maye-ankle-injury-update-patriots",
+      "source_name": "FOX Sports",
+      "headline": "Drake Maye Leaves Patriots' Game Against Lions With Ankle Injury",
+      "published_at": "2026-11-15T15:12:24.000Z",
+      "observed_at": "2026-11-15T15:30:22.456Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "NE"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/how-bet-todays-best-games-49ers-cowboys-steelers-bengals-more-nov-15",
+      "source_name": "FOX Sports",
+      "headline": "How To Bet Today's Best Games: 49ers-Cowboys, Steelers-Bengals, More — Nov. 15",
+      "published_at": "2026-11-15T15:11:28.000Z",
+      "observed_at": "2026-11-15T15:30:22.456Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR",
+        "CIN",
+        "DAL",
+        "PIT",
+        "SF"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
