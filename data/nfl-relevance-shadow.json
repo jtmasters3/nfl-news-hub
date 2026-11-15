@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/how-john-harbaugh-put-on-a-coaching-masterclass-in-lead-up-to-giants-week-7-win",
-      "source_name": "NFL.com",
-      "headline": "How John Harbaugh put on a coaching masterclass in lead-up to Giants' Week 7 win",
-      "published_at": "2026-10-27T11:46:05.000Z",
-      "observed_at": "2026-10-27T14:50:25.264Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/is-michael-penix-jr-doing-enough-to-secure-falcons-future-he-s-a-franchise-quarterback",
       "source_name": "NFL.com",
       "headline": "Is Michael Penix Jr. doing enough to secure Falcons future? 'He's a franchise quarterback'",
@@ -41840,6 +41819,23 @@
       "headline": "Game between Bill Belichick's UNC and Louisville ends in a brawl",
       "published_at": "2026-11-15T04:30:07.000Z",
       "observed_at": "2026-11-15T04:40:25.461Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/three-referees-will-be-working-in-other-roles-on-sunday-due-to-the-ground-stop",
+      "source_name": "Pro Football Talk",
+      "headline": "Three referees will be working in other roles on Sunday, due to the ground stop",
+      "published_at": "2026-11-15T04:50:40.000Z",
+      "observed_at": "2026-11-15T05:00:30.201Z",
       "decision": "keep",
       "classification": "ambiguous",
       "confidence": "low",
