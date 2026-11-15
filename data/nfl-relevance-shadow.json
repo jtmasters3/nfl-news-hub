@@ -2,65 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-trade-deadline-grades",
-      "source_name": "FOX Sports",
-      "headline": "NFL Trade Deadline Grades: Who Won The DeForest Buckner, Quenton Nelson Deals?",
-      "published_at": "2026-10-28T03:19:18.000Z",
-      "observed_at": "2026-10-28T12:30:29.546Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "trade",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/week-7-qb-notebook-jj-mccarthy-giants-daniel-jones-colts",
-      "source_name": "FOX Sports",
-      "headline": "QB Notebook: Settle Down With Your J.J. McCarthy Narratives; Time To Bench Daniel Jones?",
-      "published_at": "2026-10-28T00:58:09.000Z",
-      "observed_at": "2026-10-28T12:30:29.546Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jessie-bates-you-can-sleep-well-at-night-when-michael-penix-is-your-qb",
-      "source_name": "Pro Football Talk",
-      "headline": "Jessie Bates: You can sleep well at night when Michael Penix is your QB",
-      "published_at": "2026-10-28T12:25:04.000Z",
-      "observed_at": "2026-10-28T12:30:29.546Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jerry-jones-thinks-it-is-unlikely-cowboys-add-help-in-a-trade",
       "source_name": "Pro Football Talk",
       "headline": "Jerry Jones thinks it is \"unlikely\" Cowboys add help in a trade",
@@ -41860,6 +41801,66 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/aj-brown-hamstring-injuury-update-patriots",
+      "source_name": "FOX Sports",
+      "headline": "Patriots WR A.J. Brown Leaves Game vs. Lions With Hamstring Injury",
+      "published_at": "2026-11-15T17:18:18.000Z",
+      "observed_at": "2026-11-15T17:20:18.097Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "NE"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/a-j-brown-heads-to-locker-room-with-hamstring-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "A.J. Brown heads to locker room with hamstring injury",
+      "published_at": "2026-11-15T17:09:54.000Z",
+      "observed_at": "2026-11-15T17:20:18.097Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kirk-cousins-is-the-first-quarterback-with-20-td-passes-to-change-teams-midseason",
+      "source_name": "Pro Football Talk",
+      "headline": "Kirk Cousins is the first quarterback with 20 TD passes to change teams midseason",
+      "published_at": "2026-11-15T17:09:21.000Z",
+      "observed_at": "2026-11-15T17:20:18.097Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
