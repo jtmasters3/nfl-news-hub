@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/byron-murphy-is-blossoming-in-the-middle-of-the-seahawks-defense-and-at-just-the-right-time",
-      "source_name": "NFL.com",
-      "headline": "Byron Murphy is blossoming in the middle of the Seahawks' defense (and at just the right time)",
-      "published_at": "2026-10-27T12:16:05.000Z",
-      "observed_at": "2026-10-27T15:10:20.590Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/qb-stock-market-week-8-next-step-hardest-drake-maye-caleb-williams",
-      "source_name": "FOX Sports",
-      "headline": "QB Stock Market Week 8: The Next Step Is The Hardest For Drake Maye, Caleb Williams",
-      "published_at": "2026-10-27T15:04:49.000Z",
-      "observed_at": "2026-10-27T15:10:20.590Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/brian-branch-makes-lions-super-bowl-contender",
       "source_name": "FOX Sports",
       "headline": "Return Of The 'X-Factor': Brian Branch Makes Lions A Legit Super Bowl Contender",
@@ -41848,6 +41810,52 @@
         "TEN"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-patriots-vs-lions-tv-channel-live-stream-time-nov-15-2026",
+      "source_name": "FOX Sports",
+      "headline": "How to Watch Patriots vs. Lions: TV Channel, Live Stream, Time",
+      "published_at": "2026-11-15T08:31:52.000Z",
+      "observed_at": "2026-11-15T08:50:16.376Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lions-jets-renegotiated-andre-cisco-trade-after-concerns-arose-about-his-physical",
+      "source_name": "Pro Football Talk",
+      "headline": "Lions, Jets renegotiated Andre Cisco trade after concerns arose about his physical",
+      "published_at": "2026-11-15T08:40:30.000Z",
+      "observed_at": "2026-11-15T08:50:16.376Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "DET",
+        "LAC",
+        "NYJ"
+      ],
+      "detected_category": "trade",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
