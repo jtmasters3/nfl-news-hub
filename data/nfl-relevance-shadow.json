@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfc-south-projection-buccaneers-falcons-panthers-saints",
-      "source_name": "FOX Sports",
-      "headline": "Which Bad Team Emerges to Win NFC South? Outlining Which Team Might Have Inside Track",
-      "published_at": "2026-10-27T23:45:40.000Z",
-      "observed_at": "2026-10-28T00:10:18.377Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jared-goff-backs-dan-campbells-decision-to-go-for-it-deep-in-lions-own-end",
-      "source_name": "Pro Football Talk",
-      "headline": "Jared Goff backs Dan Campbell's decision to go for it deep in Lions' own end",
-      "published_at": "2026-10-28T00:11:57.000Z",
-      "observed_at": "2026-10-28T00:20:24.580Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/alabama-dismisses-cb-dre-kirkpatrick-jr-after-arrest-for-doxxing-harassing-police-officer",
       "source_name": "Pro Football Talk",
       "headline": "Alabama dismisses CB Dre Kirkpatrick Jr. after arrest for doxxing, harassing police officer",
@@ -41844,6 +41806,50 @@
       "confidence": "high",
       "detected_teams": [
         "CLE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/buccaneers-qb-baker-mayfield-injury-week-11",
+      "source_name": "NFL.com",
+      "headline": "NFL Network: Buccaneers QB Baker Mayfield dealing with lower leg injury ahead of Week 11",
+      "published_at": "2026-11-15T04:46:22.000Z",
+      "observed_at": "2026-11-15T17:00:26.271Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "TB"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jordan-addison-is-out-for-vikings-in-green-bay",
+      "source_name": "Pro Football Talk",
+      "headline": "Jordan Addison is out for Vikings in Green Bay",
+      "published_at": "2026-11-15T16:49:53.000Z",
+      "observed_at": "2026-11-15T17:00:26.271Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
+        "MIN"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
