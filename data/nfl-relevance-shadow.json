@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-rules-forced-saquon-barkley-to-sell-his-interest-in-polymarket",
-      "source_name": "Pro Football Talk",
-      "headline": "NFL rules forced Saquon Barkley to sell his interest in Polymarket",
-      "published_at": "2026-10-28T17:41:38.000Z",
-      "observed_at": "2026-10-28T17:50:22.062Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-rule-jaelan-phillips-out-for-thursday-night",
       "source_name": "Pro Football Talk",
       "headline": "Panthers rule Jaelan Phillips out for Thursday night",
@@ -41907,6 +41890,28 @@
         "NO"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/with-drake-maye-s-injury-loss-to-lions-is-patriots-season-spiraling-out-of-control",
+      "source_name": "NFL.com",
+      "headline": "With Drake Maye's injury, loss to Lions, is Patriots' season spiraling out of control?",
+      "published_at": "2026-11-15T09:31:09.000Z",
+      "observed_at": "2026-11-15T21:50:19.301Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "NE"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
