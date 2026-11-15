@@ -2,40 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/neil-reynolds-week-8-power-rankings-2026",
-      "source_name": "NFL.com",
-      "headline": "Neil Reynolds' Week 8 Power rankings",
-      "published_at": "2026-10-27T12:03:00.000Z",
-      "observed_at": "2026-10-28T14:10:19.654Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/some-owners-are-spending-big-on-the-midterm-elections",
-      "source_name": "Pro Football Talk",
-      "headline": "Some owners are spending big on the midterm elections",
-      "published_at": "2026-10-28T14:12:20.000Z",
-      "observed_at": "2026-10-28T14:20:23.901Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-jaylen-waddle-aggravated-previous-chest-injury-week-8-status-tbd",
       "source_name": "Pro Football Talk",
       "headline": "Report: Jaylen Waddle aggravated previous chest injury, Week 8 status TBD",
@@ -41877,6 +41843,45 @@
       "detected_teams": [
         "CAR",
         "NO"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aidan-hutchinson-reportedly-has-significant-knee-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Aidan Hutchinson reportedly has \"significant\" knee injury",
+      "published_at": "2026-11-15T19:14:57.000Z",
+      "observed_at": "2026-11-15T19:20:19.454Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-lead-packers-17-0-after-kirk-cousins-int-overturned-by-replay",
+      "source_name": "Pro Football Talk",
+      "headline": "Vikings lead Packers 17-0 after Kirk Cousins' INT overturned by replay",
+      "published_at": "2026-11-15T19:12:44.000Z",
+      "observed_at": "2026-11-15T19:20:19.454Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
+        "MIN"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
