@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-place-cb-cam-taylor-britt-on-ir-sign-cb-kenneth-harris-from-practice-squad",
-      "source_name": "Pro Football Talk",
-      "headline": "Colts place CB Cam Taylor-Britt on IR, sign CB Kenneth Harris from practice squad",
-      "published_at": "2026-10-27T20:18:59.000Z",
-      "observed_at": "2026-10-27T20:30:23.990Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/cowboys-eagles-nfc-east-dak-prescott-brian-schottenheimer",
       "source_name": "FOX Sports",
       "headline": "Cowboys Have An Opportunity They Can't Waste, And They Should Be 'Pissed-Off' If They Do",
@@ -41856,6 +41834,29 @@
       "detected_teams": [
         "DET",
         "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-sunday-playbook-cousins-back-with-vikings-steelers-bengals-stakes-mendoza-debuts",
+      "source_name": "NFL.com",
+      "headline": "NFL Sunday Playbook: Cousins back with Vikings, Steelers-Bengals stakes, Mendoza debuts",
+      "published_at": "2026-11-15T10:16:07.000Z",
+      "observed_at": "2026-11-15T14:20:17.109Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN",
+        "MIN",
+        "PIT"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
