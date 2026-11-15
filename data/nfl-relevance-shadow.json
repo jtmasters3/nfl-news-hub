@@ -2,25 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/malik-beasley-agrees-to-plead-guilty-to-gambling-charges",
-      "source_name": "Pro Football Talk",
-      "headline": "Malik Beasley agrees to plead guilty to gambling charges",
-      "published_at": "2026-10-28T09:45:10.000Z",
-      "observed_at": "2026-10-28T12:30:29.546Z",
-      "decision": "reject",
-      "classification": "other_sport",
-      "confidence": "high",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [
-        "league_nba"
-      ],
-      "reason_codes": [
-        "other_sport_marker_no_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jahmyr-gibbs-closing-in-on-6-000-scrimmage-yards-and-60-touchdowns-in-four-nfl-seasons",
       "source_name": "Pro Football Talk",
       "headline": "Jahmyr Gibbs closing in on 6,000 scrimmage yards and 60 touchdowns in four NFL seasons",
@@ -41870,6 +41851,28 @@
         "TB"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/new-england-patriots-vs-detroit-lions-takeaways-november-15-2026",
+      "source_name": "FOX Sports",
+      "headline": "Lions Send Message In Germany: 4 Takeaways From Detroit's Win Over The Patriots",
+      "published_at": "2026-11-15T17:38:54.000Z",
+      "observed_at": "2026-11-15T18:00:23.716Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "NE"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
