@@ -833848,7 +833848,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-11-15T19:40:35.040Z",
-      "updated_at": "2026-11-15T22:00:25.581Z",
+      "updated_at": "2026-11-15T23:00:30.025Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -834000,11 +834000,11 @@
         "retry_count": 0
       },
       "selection": {
-        "destination": "story",
-        "slot_id": "story:2026-11-15T17:00:00-05:00",
-        "selected_at": "2026-11-15T22:00:25.581Z",
+        "destination": "feed",
+        "slot_id": "feed:2026-11-15T18:00:00-05:00",
+        "selected_at": "2026-11-15T23:00:30.025Z",
         "window_start": "2026-11-15T21:00:00.000Z",
-        "window_end": "2026-11-15T22:00:00.000Z",
+        "window_end": "2026-11-15T23:00:00.000Z",
         "score": 6,
         "reason": "fallback_recent_pool_importance_score_rank"
       }
@@ -838088,10 +838088,317 @@
     },
     "bb89f5f0-1e0e-4783-97fa-28fab91d1be7": {
       "story_id": "bb89f5f0-1e0e-4783-97fa-28fab91d1be7",
-      "status": "new",
+      "status": "queued",
       "merged_into": null,
       "created_at": "2026-11-15T22:50:27.119Z",
-      "updated_at": "2026-11-15T22:50:27.119Z",
+      "updated_at": "2026-11-15T23:00:39.472Z",
+      "content_package_version": 2,
+      "publishing_preferences": {
+        "instagram_feed": true,
+        "instagram_story": true
+      },
+      "source_story": {
+        "post_headline": "RAIDERS RULE BROCK BOWERS OUT WITH AN ANKLE INJURY",
+        "base_image_url": "https://a57.foxsports.com/statics.foxsports.com/www.foxsports.com/content/uploads/2026/11/1294/728/brock.jpg?ve=1&tl=1",
+        "source_name": "FOX Sports",
+        "source_url": "https://www.foxsports.com/stories/nfl/brock-bowers-ankle-injury-update-raiders",
+        "category": "live_game_state",
+        "teams": [
+          "Las Vegas Raiders",
+          "Seattle Seahawks"
+        ],
+        "players": [
+          "Brock Bowers"
+        ],
+        "description": "Raiders tight end Brock Bowers dealt with an ankle injury throughout the first half of Sunday's game against the Seahawks and he will not return to the game in the second half.",
+        "is_rumor": false
+      },
+      "artwork": {
+        "status": "not_created",
+        "image_url": null,
+        "created_at": null,
+        "provider": null
+      },
+      "validation": {
+        "status": "not_run",
+        "passed": null,
+        "issues": []
+      },
+      "story_artwork": {
+        "status": "not_created",
+        "image_url": null,
+        "storage_key": null,
+        "width": null,
+        "height": null,
+        "mime_type": null,
+        "size_bytes": null,
+        "provider": null,
+        "created_at": null,
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null
+        },
+        "validation": {
+          "status": "not_run",
+          "passed": null,
+          "issues": []
+        }
+      },
+      "approval": {
+        "status": "pending",
+        "decided_at": null,
+        "approved_at": null,
+        "rejected_at": null,
+        "rejection_reason": null,
+        "actor": null,
+        "request_id": null,
+        "decision_source": null
+      },
+      "caption": {
+        "status": "not_created",
+        "text": null,
+        "last_candidate_text": null,
+        "hashtags": [],
+        "attribution_line": null,
+        "source_url": null,
+        "provider": null,
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null
+        },
+        "claim_attempt_count": 0,
+        "created_at": null
+      },
+      "publishing": {
+        "status": "not_posted",
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null,
+          "retry_count": 0
+        },
+        "instagram": {
+          "feed": {
+            "status": "not_posted",
+            "provider": null,
+            "storage_key": null,
+            "jpeg_url": null,
+            "caption_used": null,
+            "container_id": null,
+            "container_created_at": null,
+            "publish_attempted_at": null,
+            "media_id": null,
+            "permalink": null,
+            "published_at": null,
+            "last_http_outcome": null,
+            "last_reconciled_at": null,
+            "buffer": {
+              "post_id": null,
+              "channel_id": null,
+              "status": null,
+              "due_at": null,
+              "sent_at": null
+            }
+          },
+          "story": {
+            "status": "not_posted",
+            "provider": null,
+            "storage_key": null,
+            "jpeg_url": null,
+            "caption_used": null,
+            "container_id": null,
+            "container_created_at": null,
+            "publish_attempted_at": null,
+            "media_id": null,
+            "permalink": null,
+            "published_at": null,
+            "last_http_outcome": null,
+            "last_reconciled_at": null,
+            "buffer": {
+              "post_id": null,
+              "channel_id": null,
+              "status": null,
+              "due_at": null,
+              "sent_at": null
+            }
+          }
+        },
+        "facebook": {
+          "status": "not_posted",
+          "post_id": null,
+          "post_url": null
+        },
+        "posted_at": null
+      },
+      "last_error": {
+        "stage": null,
+        "message": null,
+        "at": null,
+        "retry_count": 0
+      }
+    },
+    "e3db4731-e906-4df3-bbd1-cb5f9bbad9dc": {
+      "story_id": "e3db4731-e906-4df3-bbd1-cb5f9bbad9dc",
+      "status": "new",
+      "merged_into": null,
+      "created_at": "2026-11-15T23:00:39.466Z",
+      "updated_at": "2026-11-15T23:00:39.466Z",
+      "content_package_version": 2,
+      "publishing_preferences": {
+        "instagram_feed": true,
+        "instagram_story": true
+      },
+      "source_story": {
+        "post_headline": null,
+        "base_image_url": null,
+        "source_name": null,
+        "source_url": null,
+        "category": null,
+        "teams": [],
+        "players": [],
+        "description": null,
+        "is_rumor": false
+      },
+      "artwork": {
+        "status": "not_created",
+        "image_url": null,
+        "created_at": null,
+        "provider": null
+      },
+      "validation": {
+        "status": "not_run",
+        "passed": null,
+        "issues": []
+      },
+      "story_artwork": {
+        "status": "not_created",
+        "image_url": null,
+        "storage_key": null,
+        "width": null,
+        "height": null,
+        "mime_type": null,
+        "size_bytes": null,
+        "provider": null,
+        "created_at": null,
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null
+        },
+        "validation": {
+          "status": "not_run",
+          "passed": null,
+          "issues": []
+        }
+      },
+      "approval": {
+        "status": "pending",
+        "decided_at": null,
+        "approved_at": null,
+        "rejected_at": null,
+        "rejection_reason": null,
+        "actor": null,
+        "request_id": null,
+        "decision_source": null
+      },
+      "caption": {
+        "status": "not_created",
+        "text": null,
+        "last_candidate_text": null,
+        "hashtags": [],
+        "attribution_line": null,
+        "source_url": null,
+        "provider": null,
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null
+        },
+        "claim_attempt_count": 0,
+        "created_at": null
+      },
+      "publishing": {
+        "status": "not_posted",
+        "claim": {
+          "claim_id": null,
+          "processor_id": null,
+          "claimed_at": null,
+          "claim_expires_at": null,
+          "retry_count": 0
+        },
+        "instagram": {
+          "feed": {
+            "status": "not_posted",
+            "provider": null,
+            "storage_key": null,
+            "jpeg_url": null,
+            "caption_used": null,
+            "container_id": null,
+            "container_created_at": null,
+            "publish_attempted_at": null,
+            "media_id": null,
+            "permalink": null,
+            "published_at": null,
+            "last_http_outcome": null,
+            "last_reconciled_at": null,
+            "buffer": {
+              "post_id": null,
+              "channel_id": null,
+              "status": null,
+              "due_at": null,
+              "sent_at": null
+            }
+          },
+          "story": {
+            "status": "not_posted",
+            "provider": null,
+            "storage_key": null,
+            "jpeg_url": null,
+            "caption_used": null,
+            "container_id": null,
+            "container_created_at": null,
+            "publish_attempted_at": null,
+            "media_id": null,
+            "permalink": null,
+            "published_at": null,
+            "last_http_outcome": null,
+            "last_reconciled_at": null,
+            "buffer": {
+              "post_id": null,
+              "channel_id": null,
+              "status": null,
+              "due_at": null,
+              "sent_at": null
+            }
+          }
+        },
+        "facebook": {
+          "status": "not_posted",
+          "post_id": null,
+          "post_url": null
+        },
+        "posted_at": null
+      },
+      "last_error": {
+        "stage": null,
+        "message": null,
+        "at": null,
+        "retry_count": 0
+      }
+    },
+    "5416eb16-e9ea-41af-8211-49256b62bd6f": {
+      "story_id": "5416eb16-e9ea-41af-8211-49256b62bd6f",
+      "status": "new",
+      "merged_into": null,
+      "created_at": "2026-11-15T23:00:39.468Z",
+      "updated_at": "2026-11-15T23:00:39.468Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -850254,6 +850561,24 @@
       "status": "selected",
       "story_id": "5855d823-d955-45ff-a946-8ab7228a58af",
       "processed_at": "2026-11-15T22:00:25.581Z"
+    },
+    "feed:2026-11-15T18:00:00-05:00": {
+      "destination": "feed",
+      "slot_time": "2026-11-15T23:00:00.000Z",
+      "window_start": "2026-11-15T21:00:00.000Z",
+      "window_end": "2026-11-15T23:00:00.000Z",
+      "status": "selected",
+      "story_id": "5855d823-d955-45ff-a946-8ab7228a58af",
+      "processed_at": "2026-11-15T23:00:30.025Z"
+    },
+    "story:2026-11-15T18:00:00-05:00": {
+      "destination": "story",
+      "slot_time": "2026-11-15T23:00:00.000Z",
+      "window_start": "2026-11-15T22:00:00.000Z",
+      "window_end": "2026-11-15T23:00:00.000Z",
+      "status": "no_candidate",
+      "story_id": null,
+      "processed_at": "2026-11-15T23:00:30.025Z"
     }
   }
 }
