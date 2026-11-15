@@ -2,67 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/2026-27-nfl-mvp-odds",
-      "source_name": "FOX Sports",
-      "headline": "2026 NFL MVP Odds: Allen Leads As Purdy, Burrow Gain Ground",
-      "published_at": "2026-10-28T18:21:13.000Z",
-      "observed_at": "2026-10-28T18:30:27.331Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/shane-steichen-jonathan-taylors-on-our-football-team-hasnt-asked-for-a-trade",
-      "source_name": "Pro Football Talk",
-      "headline": "Shane Steichen: Jonathan Taylor's on our football team, hasn't asked for a trade",
-      "published_at": "2026-10-28T18:14:55.000Z",
-      "observed_at": "2026-10-28T18:30:27.331Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-bring-back-k-joshua-karty-ls-jake-mcquaide-on-practice-squad",
-      "source_name": "Pro Football Talk",
-      "headline": "Rams bring back K Joshua Karty, LS Jake McQuaide on practice squad",
-      "published_at": "2026-10-28T18:55:44.000Z",
-      "observed_at": "2026-10-28T19:00:29.148Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-week-8-injury-report-2026-season",
       "source_name": "NFL.com",
       "headline": "NFL Week 8 injury report: Player statuses for all 14 games",
@@ -41906,6 +41845,66 @@
       "confidence": "high",
       "detected_teams": [
         "DAL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/deja-vu-vegas-fernando-mendoza-mirrors-indiana-title-run-raiders-debut",
+      "source_name": "FOX Sports",
+      "headline": "Déjà Vu in Vegas: Fernando Mendoza Mirrors Indiana Title Run TD In First NFL Start",
+      "published_at": "2026-11-15T22:27:06.000Z",
+      "observed_at": "2026-11-15T22:30:23.152Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/emotional-kirk-cousins-its-been-a-tough-three-years-theres-more-to-the-story-being-written",
+      "source_name": "Pro Football Talk",
+      "headline": "Emotional Kirk Cousins: \"It's been a tough three years. There's more to the story being written.\"",
+      "published_at": "2026-11-15T22:21:34.000Z",
+      "observed_at": "2026-11-15T22:30:23.152Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/raiders-lead-seahawks-10-7-at-halftime",
+      "source_name": "Pro Football Talk",
+      "headline": "Raiders lead Seahawks 10-7 at halftime",
+      "published_at": "2026-11-15T22:20:50.000Z",
+      "observed_at": "2026-11-15T22:30:23.152Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV",
+        "SEA"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
