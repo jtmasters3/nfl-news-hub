@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/broadcast-home-for-monday-night-wild-card-game-still-isnt-known",
-      "source_name": "Pro Football Talk",
-      "headline": "Broadcast home for Monday night wild-card game still isn't known",
-      "published_at": "2026-10-28T13:32:50.000Z",
-      "observed_at": "2026-10-28T13:40:25.160Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/montez-sweat-returns-to-bears-devastating-two-game-suspension",
-      "source_name": "NFL.com",
-      "headline": "Montez Sweat returns to Bears following 'devastating' two-game suspension",
-      "published_at": "2026-10-28T01:44:20.000Z",
-      "observed_at": "2026-10-28T13:50:20.110Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/neil-reynolds-week-8-power-rankings-2026",
       "source_name": "NFL.com",
       "headline": "Neil Reynolds' Week 8 Power rankings",
@@ -41871,6 +41833,50 @@
       "detected_teams": [
         "DET",
         "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/travis-kelce-ankle-injury-update-chiefs",
+      "source_name": "FOX Sports",
+      "headline": "Chiefs' Star TE Travis Kelce Leaves Early vs. Falcons Due To Ankle Injury",
+      "published_at": "2026-11-15T18:58:22.000Z",
+      "observed_at": "2026-11-15T19:10:18.872Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "KC"
+      ],
+      "detected_category": "live_game_state",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chuba-hubbard-comes-through-on-fourth-down-to-put-panthers-up-7-0",
+      "source_name": "Pro Football Talk",
+      "headline": "Chuba Hubbard comes through on fourth down to put Panthers up 7-0",
+      "published_at": "2026-11-15T19:04:12.000Z",
+      "observed_at": "2026-11-15T19:10:18.872Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR",
+        "NO"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
