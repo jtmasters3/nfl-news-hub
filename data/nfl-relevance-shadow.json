@@ -2,111 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/eventos-de-fans-en-madrid",
-      "source_name": "NFL.com",
-      "headline": "Eventos de fans en Madrid",
-      "published_at": "2026-10-28T10:06:00.000Z",
-      "observed_at": "2026-10-30T10:30:22.084Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/robert-saleh-titans-arent-shopping-anyone-but-when-youre-1-6-teams-call-you",
-      "source_name": "Pro Football Talk",
-      "headline": "Robert Saleh: Titans aren't shopping anyone, but when you're 1-6 teams call you",
-      "published_at": "2026-10-30T10:27:40.000Z",
-      "observed_at": "2026-10-30T10:30:22.084Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "TEN"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bryce-young-says-knee-is-fine-after-loss-to-packers",
-      "source_name": "Pro Football Talk",
-      "headline": "Bryce Young says knee is \"fine\" after loss to Packers",
-      "published_at": "2026-10-30T10:58:18.000Z",
-      "observed_at": "2026-10-30T11:10:19.044Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR",
-        "CLE",
-        "GB"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/christian-watson-s-dramatic-return-to-packers-win-over-panthers-felt-like-watching-wwe",
-      "source_name": "NFL.com",
-      "headline": "Christian Watson's dramatic return to Packers' win over Panthers felt like 'watching WWE'",
-      "published_at": "2026-10-30T11:38:38.000Z",
-      "observed_at": "2026-10-30T11:50:24.814Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR",
-        "GB"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jeffery-simmons-quenton-nelson-will-renew-their-rivalry-at-bears-seahawks-monday-night",
-      "source_name": "Pro Football Talk",
-      "headline": "Jeffery Simmons, Quenton Nelson will renew their rivalry at Bears-Seahawks Monday night",
-      "published_at": "2026-10-30T11:41:45.000Z",
-      "observed_at": "2026-10-30T11:50:24.814Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/2027-nfl-draft-big-board-6-qbs-rank-among-top-50-overall-prospects",
       "source_name": "FOX Sports",
       "headline": "2027 NFL Draft Big Board: 6 QBs Rank Among Top 50 Overall Prospects",
@@ -41953,6 +41848,108 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/fernando-mendoza-raiders-seahawks",
+      "source_name": "FOX Sports",
+      "headline": "Fernando Mendoza's First Start Brought Enough Promise For Raiders: 'He's The Real Deal'",
+      "published_at": "2026-11-16T21:18:46.000Z",
+      "observed_at": "2026-11-16T21:20:19.357Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/college-football/texas-qb-arch-manning-to-join-senior-day-celebration-but-noncommittal-about-playing-future",
+      "source_name": "FOX Sports",
+      "headline": "Will Arch Manning Return To Texas? QB Joins Senior Day, Keeps Future Undecided",
+      "published_at": "2026-11-16T21:14:16.000Z",
+      "observed_at": "2026-11-16T21:20:19.357Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-cfb-weekend-recap-publics-heavy-hitters-landed-nearly-every-punch",
+      "source_name": "FOX Sports",
+      "headline": "NFL, CFB Weekend Recap: 'Public’s Heavy Hitters Landed Nearly Every Punch'",
+      "published_at": "2026-11-16T21:07:08.000Z",
+      "observed_at": "2026-11-16T21:20:19.357Z",
+      "decision": "reject",
+      "classification": "college_football",
+      "confidence": "medium",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [
+        "college_football_phrase"
+      ],
+      "reason_codes": [
+        "college_marker_no_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-chargers-vs-ravens-tv-channel-live-stream-time-nov-16-2026",
+      "source_name": "FOX Sports",
+      "headline": "How to Watch Chargers vs. Ravens: TV Channel, Live Stream, Time",
+      "published_at": "2026-11-16T21:04:23.000Z",
+      "observed_at": "2026-11-16T21:20:19.357Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "LAC"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-sign-cb-johnathan-edwards-to-the-active-roster-from-the-practice-squad",
+      "source_name": "Pro Football Talk",
+      "headline": "Colts sign CB Johnathan Edwards to the active roster from the practice squad",
+      "published_at": "2026-11-16T21:15:12.000Z",
+      "observed_at": "2026-11-16T21:20:19.357Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
