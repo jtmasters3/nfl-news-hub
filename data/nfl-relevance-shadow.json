@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/new-report-paints-fuller-picture-of-the-troy-aikman-joe-buck-rift",
-      "source_name": "Pro Football Talk",
-      "headline": "New report paints fuller picture of the Troy Aikman, Joe Buck rift",
-      "published_at": "2026-10-30T14:22:57.000Z",
-      "observed_at": "2026-10-30T14:30:31.520Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/jaguars-brian-thomas-jr-trade-rumors-show-everybody-what-i-can-do",
-      "source_name": "NFL.com",
-      "headline": "Jaguars' Brian Thomas Jr. wants to 'show everybody what I can do' amid trade rumors",
-      "published_at": "2026-10-30T02:36:56.000Z",
-      "observed_at": "2026-10-30T14:40:20.243Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "JAX"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-fire-defensive-coordinator-ejiro-evero",
       "source_name": "Pro Football Talk",
       "headline": "Panthers fire defensive coordinator Ejiro Evero",
@@ -41965,6 +41927,49 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "phrase_practice_squad"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lions-claim-de-tyrus-wheat-off-of-waivers",
+      "source_name": "Pro Football Talk",
+      "headline": "Lions claim DE Tyrus Wheat off of waivers",
+      "published_at": "2026-11-16T22:32:09.000Z",
+      "observed_at": "2026-11-16T22:40:18.323Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/giants-sign-wr-xavier-gipson-db-tavierre-thomas-to-their-active-roster",
+      "source_name": "Pro Football Talk",
+      "headline": "Giants sign WR Xavier Gipson, DB Tavierre Thomas to their active roster",
+      "published_at": "2026-11-16T22:30:46.000Z",
+      "observed_at": "2026-11-16T22:40:18.323Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:roster_move"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
