@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/bears-jeffery-simmons-titans-nfl-trade-deadline-rumors",
-      "source_name": "FOX Sports",
-      "headline": "Bears Land Jeffery Simmons: Why Execs Love Deal For Chicago; Who Will Titans Trade Next?",
-      "published_at": "2026-10-29T20:48:42.000Z",
-      "observed_at": "2026-10-29T20:50:20.364Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "TEN"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lamar-jackson-has-another-full-practice-on-thursday",
-      "source_name": "Pro Football Talk",
-      "headline": "Lamar Jackson has another full practice on Thursday",
-      "published_at": "2026-10-29T20:48:37.000Z",
-      "observed_at": "2026-10-29T20:50:20.364Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-place-cb-akayleb-evans-on-injured-reserve",
       "source_name": "Pro Football Talk",
       "headline": "Panthers place CB Akayleb Evans on injured reserve",
@@ -41944,6 +41901,51 @@
         "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-on-pace-to-set-new-nfl-records-for-most-penalties-and-penalty-yards-this-season",
+      "source_name": "Pro Football Talk",
+      "headline": "Panthers on pace to set new NFL records for most penalties and penalty yards this season",
+      "published_at": "2026-11-16T16:12:49.000Z",
+      "observed_at": "2026-11-16T16:20:21.158Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR",
+        "NO"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/acc-announces-punishments-after-louisville-north-carolina-brawl",
+      "source_name": "Pro Football Talk",
+      "headline": "ACC announces punishments after Louisville-North Carolina brawl",
+      "published_at": "2026-11-16T16:11:34.000Z",
+      "observed_at": "2026-11-16T16:20:21.158Z",
+      "decision": "keep",
+      "classification": "nfl_with_college_context",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [
+        "conference_acc"
+      ],
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
