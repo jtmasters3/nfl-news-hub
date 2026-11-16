@@ -2,48 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/aaron-glenn-is-unlikely-to-be-fired-in-season-here-s-his-path-to-remaining-jets-coach-in-2027",
-      "source_name": "NFL.com",
-      "headline": "Aaron Glenn is unlikely to be fired in-season; here's his path to remaining Jets coach in 2027",
-      "published_at": "2026-10-30T09:31:07.000Z",
-      "observed_at": "2026-10-30T13:10:20.659Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYJ"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/joey-porter-jr-has-lived-up-to-cowboys-expectations-so-is-he-in-their-long-term-plans",
-      "source_name": "NFL.com",
-      "headline": "Joey Porter Jr. has lived up to Cowboys' expectations, so is he in their long-term plans?",
-      "published_at": "2026-10-30T11:01:06.000Z",
-      "observed_at": "2026-10-30T13:20:26.489Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/why-doesn-t-rookie-cyrus-allen-play-more-he-has-an-offense-to-learn-inside-and-out",
       "source_name": "NFL.com",
       "headline": "Why doesn't rookie Cyrus Allen play more? He has an offense to learn inside and out",
@@ -41962,6 +41920,51 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bucs-sign-qb-easton-stick-from-the-practice-squad-to-the-active-roster",
+      "source_name": "Pro Football Talk",
+      "headline": "Bucs sign QB Easton Stick from the practice squad to the active roster",
+      "published_at": "2026-11-16T21:54:29.000Z",
+      "observed_at": "2026-11-16T22:00:28.839Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "TB"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/robert-saleh-weve-put-more-on-cam-wards-plate-and-hes-proving-he-can-handle-it",
+      "source_name": "Pro Football Talk",
+      "headline": "Robert Saleh: We've put more on Cam Ward's plate and he's proving he can handle it",
+      "published_at": "2026-11-16T21:46:54.000Z",
+      "observed_at": "2026-11-16T22:00:28.839Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX",
+        "TEN"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
