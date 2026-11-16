@@ -2,88 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/week-8-thursday-night-inactives-carolina-panthers-at-green-bay-packers",
-      "source_name": "NFL.com",
-      "headline": "Week 8 Thursday night inactives: Carolina Panthers at Green Bay Packers",
-      "published_at": "2026-10-29T10:59:55.000Z",
-      "observed_at": "2026-10-29T23:10:20.095Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR",
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cardinals-rb-jeremiyah-love-wr-michael-wilson-remain-limited-thursday",
-      "source_name": "Pro Football Talk",
-      "headline": "Cardinals RB Jeremiyah Love, WR Michael Wilson remain limited Thursday",
-      "published_at": "2026-10-29T23:15:53.000Z",
-      "observed_at": "2026-10-29T23:30:26.605Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-trade-deadline-deals-i-want-to-see-jonathan-taylor-xavier-worthy-cowboys",
-      "source_name": "FOX Sports",
-      "headline": "The 5 Trades I Want To See Before The NFL Trade Deadline",
-      "published_at": "2026-10-29T23:37:11.000Z",
-      "observed_at": "2026-10-29T23:40:19.879Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "trade",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-eagles-audience-blows-out-world-series-game-3",
-      "source_name": "Pro Football Talk",
-      "headline": "Cowboys-Eagles' audience blows out World Series Game 3",
-      "published_at": "2026-10-30T00:08:46.000Z",
-      "observed_at": "2026-10-30T00:20:19.146Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ceedee-lamb-on-cardinals-dominance-over-cowboys-its-crazy",
       "source_name": "Pro Football Talk",
       "headline": "CeeDee Lamb on Cardinals' dominance over Cowboys: It's crazy",
@@ -41939,6 +41857,84 @@
       "confidence": "high",
       "detected_teams": [
         "PHI"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/espn/betting/story/_/id/50501527/nfl-week-11-betting-odds-props-early-picks-predictions",
+      "source_name": "ESPN",
+      "headline": "Early bets for Week 11: Two games we're jumping on right now",
+      "published_at": "2026-11-16T18:43:30.000Z",
+      "observed_at": "2026-11-16T18:50:35.786Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-week-10-sunday-aftermath-bengals-equal-afc-s-best-kirk-cousins-returns-mendoza-debuts",
+      "source_name": "NFL.com",
+      "headline": "NFL Week 10 Sunday aftermath: Bengals AFC's best? Kirk Cousins returns, Fernando Mendoza debuts",
+      "published_at": "2026-11-16T06:42:05.000Z",
+      "observed_at": "2026-11-16T18:50:35.786Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN",
+        "MIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-payton-theres-no-loophole-in-the-trade-process",
+      "source_name": "Pro Football Talk",
+      "headline": "Sean Payton: \"There's no loophole\" in the trade process",
+      "published_at": "2026-11-16T18:42:14.000Z",
+      "observed_at": "2026-11-16T18:50:35.786Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "trade",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jordan-addison-to-miss-multiple-weeks-after-thumb-surgery",
+      "source_name": "Pro Football Talk",
+      "headline": "Jordan Addison to miss multiple weeks after thumb surgery",
+      "published_at": "2026-11-16T18:38:59.000Z",
+      "observed_at": "2026-11-16T18:50:35.786Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
+        "MIN"
       ],
       "detected_category": "injury",
       "nfl_evidence": [
