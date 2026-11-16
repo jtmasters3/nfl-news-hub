@@ -2,126 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/2027-nfl-draft-big-board-6-qbs-rank-among-top-50-overall-prospects",
-      "source_name": "FOX Sports",
-      "headline": "2027 NFL Draft Big Board: 6 QBs Rank Among Top 50 Overall Prospects",
-      "published_at": "2026-10-30T12:00:08.000Z",
-      "observed_at": "2026-10-30T12:20:25.070Z",
-      "decision": "keep",
-      "classification": "nfl_with_college_context",
-      "confidence": "high",
-      "detected_teams": [],
-      "detected_category": "draft",
-      "nfl_evidence": [
-        "phrase_nfl_draft",
-        "nfl_preserving_category:draft"
-      ],
-      "non_nfl_evidence": [
-        "college_football_phrase"
-      ],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/actividades-de-los-clubes",
-      "source_name": "NFL.com",
-      "headline": "Actividades de los clubes",
-      "published_at": "2026-10-28T10:06:00.000Z",
-      "observed_at": "2026-10-30T12:40:21.112Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/quenton-nelson-bittersweet-trade-colts-next-chapter-seahawks",
-      "source_name": "NFL.com",
-      "headline": "Quenton Nelson opens up on 'bittersweet' trade from Colts, 'next chapter' with Seahawks",
-      "published_at": "2026-10-30T12:41:43.000Z",
-      "observed_at": "2026-10-30T12:50:24.805Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "SEA"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/grey-zabel-move-to-right-guard-will-be-such-a-growing-experience",
-      "source_name": "Pro Football Talk",
-      "headline": "Grey Zabel: Move to right guard will be \"such a growing experience\"",
-      "published_at": "2026-10-30T12:45:46.000Z",
-      "observed_at": "2026-10-30T13:00:30.653Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/how-nfl-rbs-are-trying-to-protect-against-peanut-punch-amid-a-fumbling-frenzy",
-      "source_name": "NFL.com",
-      "headline": "How NFL RBs are trying to protect against 'Peanut Punch' amid a fumbling frenzy",
-      "published_at": "2026-10-30T10:01:07.000Z",
-      "observed_at": "2026-10-30T13:10:20.659Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/saquon-barkley-on-the-trade-block-what-an-eagles-sell-off-could-look-like",
-      "source_name": "NFL.com",
-      "headline": "Saquon Barkley on the trade block? What an Eagles sell-off could look like",
-      "published_at": "2026-10-30T10:01:07.000Z",
-      "observed_at": "2026-10-30T13:10:20.659Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/aaron-glenn-is-unlikely-to-be-fired-in-season-here-s-his-path-to-remaining-jets-coach-in-2027",
       "source_name": "NFL.com",
       "headline": "Aaron Glenn is unlikely to be fired in-season; here's his path to remaining Jets coach in 2027",
@@ -41949,6 +41829,138 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50504531/seahawks-macdonald-optimisitic-qb-darnold-plays-bye-week",
+      "source_name": "ESPN",
+      "headline": "Seahawks' Macdonald 'optimistic' QB Darnold returns after bye week",
+      "published_at": "2026-11-16T21:17:08.000Z",
+      "observed_at": "2026-11-16T21:30:32.638Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SEA"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50504228/lafleur-plans-parsons-return-thanksgiving-eve",
+      "source_name": "ESPN",
+      "headline": "Parsons still has 'hurdles' to clear, but plan still is for return vs. Rams",
+      "published_at": "2026-11-16T21:17:08.000Z",
+      "observed_at": "2026-11-16T21:30:32.638Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
+        "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50503981/drake-maye-ankle-injury-patriots-tommy-devito-stats",
+      "source_name": "ESPN",
+      "headline": "Drake Maye injury: Is the Patriots' season over? Can Tommy DeVito carry the offense?",
+      "published_at": "2026-11-16T20:51:35.000Z",
+      "observed_at": "2026-11-16T21:30:32.638Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50498566/jaguars-outscoring-opponents-10-weeks",
+      "source_name": "ESPN",
+      "headline": "The Jaguars are outscoring opponents by 125 points through 10 weeks: Here's how",
+      "published_at": "2026-11-16T20:51:50.000Z",
+      "observed_at": "2026-11-16T21:30:32.638Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX",
+        "TEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ravens-elevate-wr-chris-moore-te-nick-vannett-sign-ot-chuma-edoga",
+      "source_name": "Pro Football Talk",
+      "headline": "Ravens elevate WR Chris Moore, TE Nick Vannett; sign OT Chuma Edoga",
+      "published_at": "2026-11-16T21:21:28.000Z",
+      "observed_at": "2026-11-16T21:30:32.638Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "LAC"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chargers-activate-te-david-njoku-lb-denzel-perryman-for-monday-night-vs-ravens",
+      "source_name": "Pro Football Talk",
+      "headline": "Chargers activate TE David Njoku, LB Denzel Perryman for Monday night vs. Ravens",
+      "published_at": "2026-11-16T21:17:58.000Z",
+      "observed_at": "2026-11-16T21:30:32.638Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "LAC"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
         "nfl_preserving_category:roster_move"
       ],
       "non_nfl_evidence": [],
