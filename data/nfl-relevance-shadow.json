@@ -2,109 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-place-cb-akayleb-evans-on-injured-reserve",
-      "source_name": "Pro Football Talk",
-      "headline": "Panthers place CB Akayleb Evans on injured reserve",
-      "published_at": "2026-10-29T20:38:53.000Z",
-      "observed_at": "2026-10-29T20:50:20.364Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/treveyon-henderson-did-not-practice-thursday-due-to-an-illness",
-      "source_name": "Pro Football Talk",
-      "headline": "TreVeyon Henderson did not practice Thursday due to an illness",
-      "published_at": "2026-10-29T20:53:49.000Z",
-      "observed_at": "2026-10-29T21:00:26.391Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/packers-elevate-arron-mosby-from-the-practice-squad",
-      "source_name": "Pro Football Talk",
-      "headline": "Packers elevate Arron Mosby from the practice squad",
-      "published_at": "2026-10-29T20:50:46.000Z",
-      "observed_at": "2026-10-29T21:00:26.391Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/jonathan-taylor-proud-to-be-with-colts-but-acknowledges-trade-possibility",
-      "source_name": "NFL.com",
-      "headline": "Jonathan Taylor 'proud to be' with Colts but acknowledges trade possibility",
-      "published_at": "2026-10-29T07:46:06.000Z",
-      "observed_at": "2026-10-29T21:10:19.765Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/seahawks-rookie-rb-jadarian-price-returns-to-practice",
-      "source_name": "Pro Football Talk",
-      "headline": "Seahawks rookie RB Jadarian Price returns to practice",
-      "published_at": "2026-10-29T21:01:33.000Z",
-      "observed_at": "2026-10-29T21:10:19.765Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/2027-nfl-draft-odds-no-1-pick",
       "source_name": "FOX Sports",
       "headline": "2027 NFL Draft No. 1 Pick Odds: Jeremiah Smith Favored, Drew Mestemaker Surging",
@@ -41946,6 +41843,100 @@
       "non_nfl_evidence": [
         "conference_acc"
       ],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50502082/geno-smith-remains-jets-qb1-injury-aaron-glenn-says",
+      "source_name": "ESPN",
+      "headline": "Smith undergoing tests on ankle, but Glenn stands by veteran as Jets' QB1",
+      "published_at": "2026-11-16T16:05:06.000Z",
+      "observed_at": "2026-11-16T16:40:31.382Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC",
+        "NYJ"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/fantasy/football/story/_/page/FFWaiverWirePickUp-50500480/fantasy-football-waivers-free-agent-pickups-nfl-week-11",
+      "source_name": "ESPN",
+      "headline": "Free agents: Replacing Drake Maye? Trust in Tyson?",
+      "published_at": "2026-11-16T16:28:41.000Z",
+      "observed_at": "2026-11-16T16:40:31.382Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/espn/betting/story/_/id/50501650/2026-nfl-week-11-schedule-odds-point-spreads-totals",
+      "source_name": "ESPN",
+      "headline": "Week 11 odds for every game: Five teams double-digit favorites",
+      "published_at": "2026-11-16T15:48:25.000Z",
+      "observed_at": "2026-11-16T16:40:31.382Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-nov-16",
+      "source_name": "NFL.com",
+      "headline": "NFL news roundup: Latest league updates from Monday, Nov. 16",
+      "published_at": "2026-11-16T04:32:57.000Z",
+      "observed_at": "2026-11-16T16:40:31.382Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dolphins-waive-zane-gonzalez-after-three-missed-kicks-on-sunday",
+      "source_name": "Pro Football Talk",
+      "headline": "Dolphins waive Zane Gonzalez after three missed kicks on Sunday",
+      "published_at": "2026-11-16T16:32:34.000Z",
+      "observed_at": "2026-11-16T16:40:31.382Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
