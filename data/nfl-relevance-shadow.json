@@ -2,70 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/2027-nfl-draft-odds-no-1-pick",
-      "source_name": "FOX Sports",
-      "headline": "2027 NFL Draft No. 1 Pick Odds: Jeremiah Smith Favored, Drew Mestemaker Surging",
-      "published_at": "2026-10-29T21:06:04.000Z",
-      "observed_at": "2026-10-29T21:20:21.112Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [],
-      "detected_category": "draft",
-      "nfl_evidence": [
-        "phrase_nfl_draft",
-        "nfl_preserving_category:draft"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-week-8-picks-best-bets-every-game-wills-wagers",
-      "source_name": "FOX Sports",
-      "headline": "2026 NFL Week 8 Picks: Best Bets For Every Game — Will's Wagers",
-      "published_at": "2026-10-29T21:05:51.000Z",
-      "observed_at": "2026-10-29T21:20:21.112Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR",
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-trade-deadline-rumors-saquon-barkley-eagles-chargers-giants-rams-colts",
-      "source_name": "FOX Sports",
-      "headline": "NFL Trade Deadline: Is Saquon Barkley Next Star To Move? Who Execs Expect To Buy & Sell",
-      "published_at": "2026-10-29T21:00:20.000Z",
-      "observed_at": "2026-10-29T21:20:21.112Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG",
-        "PHI"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-add-og-tyler-smith-te-luke-schoonmaker-to-their-injury-report",
       "source_name": "Pro Football Talk",
       "headline": "Cowboys add OG Tyler Smith, TE Luke Schoonmaker to their injury report",
@@ -41933,6 +41869,73 @@
         "MIA"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50502391/dolphins-cut-kicker-zane-gonzalez-day-costly-misses",
+      "source_name": "ESPN",
+      "headline": "Dolphins cut kicker Gonzalez a day after costly misses in loss to Colts",
+      "published_at": "2026-11-16T16:43:36.000Z",
+      "observed_at": "2026-11-16T16:50:27.073Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "MIA"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-glenn-had-dc-brian-duker-calling-jets-defensive-plays-on-sunday",
+      "source_name": "Pro Football Talk",
+      "headline": "Aaron Glenn had DC Brian Duker calling Jets defensive plays on Sunday",
+      "published_at": "2026-11-16T16:48:23.000Z",
+      "observed_at": "2026-11-16T16:50:27.073Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "NYJ"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patrick-mahomes-on-his-injured-elbow-obviously-it-felt-good-enough",
+      "source_name": "Pro Football Talk",
+      "headline": "Patrick Mahomes on his injured elbow: Obviously, it felt good enough",
+      "published_at": "2026-11-16T16:40:31.000Z",
+      "observed_at": "2026-11-16T16:50:27.073Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC",
+        "NYJ"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
