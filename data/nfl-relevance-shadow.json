@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-fire-defensive-coordinator-ejiro-evero",
-      "source_name": "Pro Football Talk",
-      "headline": "Panthers fire defensive coordinator Ejiro Evero",
-      "published_at": "2026-10-30T14:35:30.000Z",
-      "observed_at": "2026-10-30T14:40:20.243Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/david-bailey-doubtful-breece-hall-questionable-for-sunday-vs-raiders",
       "source_name": "Pro Football Talk",
       "headline": "David Bailey doubtful, Breece Hall questionable for Sunday vs. Raiders",
@@ -41974,6 +41953,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/the-nfls-week-12-flex-decision-is-looming",
+      "source_name": "Pro Football Talk",
+      "headline": "The NFL's Week 12 flex decision is looming",
+      "published_at": "2026-11-16T22:37:40.000Z",
+      "observed_at": "2026-11-16T22:50:18.105Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
