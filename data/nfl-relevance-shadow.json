@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cardinals-rb-jeremiyah-love-limited-in-his-return-to-practice",
-      "source_name": "Pro Football Talk",
-      "headline": "Cardinals RB Jeremiyah Love limited in his return to practice",
-      "published_at": "2026-10-29T02:25:35.000Z",
-      "observed_at": "2026-10-29T02:30:25.490Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/new-study-estimates-75-percent-of-former-nfl-players-who-died-from-2008-to-2023-had-cte",
-      "source_name": "Pro Football Talk",
-      "headline": "New study estimates 75 percent of former NFL players who died from 2008 to 2023 had CTE",
-      "published_at": "2026-10-29T02:22:00.000Z",
-      "observed_at": "2026-10-29T02:30:25.490Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-mcvay-doesnt-rule-out-having-two-kickers-on-48-man-game-day-roster",
       "source_name": "Pro Football Talk",
       "headline": "Sean McVay doesn't rule out having two kickers on 48-man game-day roster",
@@ -41931,6 +41893,50 @@
       "classification": "nfl",
       "confidence": "high",
       "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sunday-night-football-joe-burrow-torching-steelers-bengals-lead-24-3-at-halftime",
+      "source_name": "Pro Football Talk",
+      "headline": "Sunday Night Football: Joe Burrow torching Steelers, Bengals lead 24-3 at halftime",
+      "published_at": "2026-11-16T03:03:42.000Z",
+      "observed_at": "2026-11-16T03:20:21.020Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN",
+        "PIT"
+      ],
+      "detected_category": "live_game_state",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dak-prescott-49ers-fans-were-more-present-than-ours",
+      "source_name": "Pro Football Talk",
+      "headline": "Dak Prescott: 49ers fans \"were more present than ours\"",
+      "published_at": "2026-11-16T02:58:32.000Z",
+      "observed_at": "2026-11-16T03:20:21.020Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
         "SF"
       ],
       "detected_category": "league_news",
