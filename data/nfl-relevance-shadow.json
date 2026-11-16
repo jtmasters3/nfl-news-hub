@@ -2,67 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jared-verse-adds-to-the-chatter-between-browns-and-steelers",
-      "source_name": "Pro Football Talk",
-      "headline": "Jared Verse adds to the chatter between Browns and Steelers",
-      "published_at": "2026-10-29T19:15:49.000Z",
-      "observed_at": "2026-10-29T19:20:21.105Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE",
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-a-j-browns-week-8-availability-up-in-the-air-due-to-knee-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: A.J. Brown's Week 8 availability up in the air due to knee injury",
-      "published_at": "2026-10-29T19:12:38.000Z",
-      "observed_at": "2026-10-29T19:20:21.105Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-sign-ot-charlie-heck-to-53-man-roster",
-      "source_name": "Pro Football Talk",
-      "headline": "Colts sign OT Charlie Heck to 53-man roster",
-      "published_at": "2026-10-29T19:20:47.000Z",
-      "observed_at": "2026-10-29T19:30:23.517Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "SEA"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/seahawks-plan-to-start-quenton-nelson-at-left-guard-monday-night",
       "source_name": "Pro Football Talk",
       "headline": "Seahawks plan to start Quenton Nelson at left guard Monday night",
@@ -41927,6 +41866,74 @@
       "headline": "Drake Maye Could Miss Rest Of The Season With Ankle Injury, According To Report",
       "published_at": "2026-11-16T14:09:38.000Z",
       "observed_at": "2026-11-16T14:10:20.567Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/49ers-juggernaut-rams-hoped-be-drew-lock-seahawks-qb1",
+      "source_name": "FOX Sports",
+      "headline": "49ers Are Juggernaut Rams Hoped To Be; What About Drew Lock For Seahawks' QB1?",
+      "published_at": "2026-11-16T14:16:28.000Z",
+      "observed_at": "2026-11-16T14:20:18.684Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC",
+        "LAR",
+        "MIN",
+        "SF",
+        "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/how-bet-todays-best-games-chargers-ravens-rockets-heat-more-nov-16",
+      "source_name": "FOX Sports",
+      "headline": "How To Bet Today's Best Games: Chargers-Ravens, Rockets-Heat, More — Nov. 16",
+      "published_at": "2026-11-16T14:13:34.000Z",
+      "observed_at": "2026-11-16T14:20:18.684Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "LAC"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/new-england-patriots-drake-maye-ankle-injury-munich",
+      "source_name": "FOX Sports",
+      "headline": "Drake Maye Could Miss Rest Of The Season With Ankle Injury, According To Report",
+      "published_at": "2026-11-16T14:09:38.000Z",
+      "observed_at": "2026-11-16T14:20:18.684Z",
       "decision": "keep",
       "classification": "nfl",
       "confidence": "high",
