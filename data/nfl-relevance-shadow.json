@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/new-york-jets-rookie-david-bailey-injury-las-vegas-raiders",
-      "source_name": "FOX Sports",
-      "headline": "Jets Sacks Leader David Bailey Doubtful Against Raiders",
-      "published_at": "2026-10-30T17:16:33.000Z",
-      "observed_at": "2026-10-30T18:00:27.705Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV",
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/how-can-the-raiders-fix-their-run-defense-possible-answers-to-a-question-they-re-sick-of",
       "source_name": "NFL.com",
       "headline": "How can the Raiders fix their run defense? Possible answers to a question they're sick of",
@@ -41969,6 +41947,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-honors-moves-from-thursday-back-to-saturday",
+      "source_name": "Pro Football Talk",
+      "headline": "NFL Honors moves from Thursday back to Saturday",
+      "published_at": "2026-11-17T03:27:50.000Z",
+      "observed_at": "2026-11-17T03:40:29.719Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
