@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/titans-rule-out-wr-carnell-tate-rb-tyjae-spears-p-tommy-townsend",
-      "source_name": "Pro Football Talk",
-      "headline": "Titans rule out WR Carnell Tate, RB Tyjae Spears, P Tommy Townsend",
-      "published_at": "2026-10-30T20:13:15.000Z",
-      "observed_at": "2026-10-30T20:20:23.602Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CIN",
-        "TEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/saquon-barkley-set-to-play-devonta-smith-ruled-out",
-      "source_name": "Pro Football Talk",
-      "headline": "Saquon Barkley set to play, DeVonta Smith ruled out",
-      "published_at": "2026-10-30T20:07:58.000Z",
-      "observed_at": "2026-10-30T20:20:23.602Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI",
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/raiders-g-jackson-powers-johnson-is-questionable-for-sunday",
       "source_name": "Pro Football Talk",
       "headline": "Raiders G Jackson Powers-Johnson is questionable for Sunday",
@@ -41955,6 +41911,44 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jerry-jones-on-christian-parkers-status-were-talking-about-that",
+      "source_name": "Pro Football Talk",
+      "headline": "Jerry Jones on Christian Parker's status: We're talking about that",
+      "published_at": "2026-11-17T14:59:56.000Z",
+      "observed_at": "2026-11-17T15:00:26.196Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/through-10-weeks-the-afc-playoff-field-is-basically-set",
+      "source_name": "Pro Football Talk",
+      "headline": "Through 10 weeks, the AFC playoff field is basically set",
+      "published_at": "2026-11-17T14:55:00.000Z",
+      "observed_at": "2026-11-17T15:00:26.196Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
