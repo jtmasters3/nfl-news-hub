@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/goo-goo-dolls-to-headline-thanksgiving-halftime-show-for-bills-vs-chiefs-at-highmark-stadium",
-      "source_name": "NFL.com",
-      "headline": "Goo Goo Dolls to headline Thanksgiving halftime show for Bills vs. Chiefs at Highmark Stadium",
-      "published_at": "2026-10-30T06:04:12.000Z",
-      "observed_at": "2026-10-30T18:20:20.481Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "KC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cardinals-expect-jeremiyah-love-to-play-against-cowboys",
       "source_name": "Pro Football Talk",
       "headline": "Cardinals expect Jeremiyah Love to play against Cowboys",
@@ -41966,6 +41944,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-power-rankings-week-11",
+      "source_name": "FOX Sports",
+      "headline": "2026 NFL Power Rankings Week 11: We Know Which 10 (Or So) Teams Are Contenders",
+      "published_at": "2026-11-17T04:33:28.000Z",
+      "observed_at": "2026-11-17T04:50:15.784Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
