@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/christian-watson-return-packers-wide-receivers-injuries",
-      "source_name": "FOX Sports",
-      "headline": "Packers Receiver Christian Watson Talks Epic 'WWE' Return Against Panthers",
-      "published_at": "2026-10-30T16:51:09.000Z",
-      "observed_at": "2026-10-30T17:00:27.288Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR",
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/shane-steichen-confirms-josh-downs-requested-a-trade-and-will-play-sunday",
       "source_name": "Pro Football Talk",
       "headline": "Shane Steichen confirms Josh Downs requested a trade and will play Sunday",
@@ -41963,6 +41941,28 @@
         "LAC"
       ],
       "detected_category": "live_game_state",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50506869/rams-coleman-shelton-4-6-weeks-hamstring-injury",
+      "source_name": "ESPN",
+      "headline": "Rams lose center Shelton for 4-6 weeks in latest injury blow",
+      "published_at": "2026-11-17T02:17:10.000Z",
+      "observed_at": "2026-11-17T02:30:33.740Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI",
+        "LAR"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
