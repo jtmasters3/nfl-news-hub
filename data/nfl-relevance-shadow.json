@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/49ers-fred-warner-needed-help-getting-his-mind-right-the-tackles-soon-followed",
-      "source_name": "NFL.com",
-      "headline": "49ers' Fred Warner needed help getting his mind right. The tackles soon followed",
-      "published_at": "2026-10-30T12:46:06.000Z",
-      "observed_at": "2026-10-30T18:20:20.481Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/goo-goo-dolls-to-headline-thanksgiving-halftime-show-for-bills-vs-chiefs-at-highmark-stadium",
       "source_name": "NFL.com",
       "headline": "Goo Goo Dolls to headline Thanksgiving halftime show for Bills vs. Chiefs at Highmark Stadium",
@@ -41957,6 +41936,28 @@
         "BAL",
         "LAC",
         "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/monday-night-football-chargers-run-past-ravens-23-20-for-first-win-of-2026",
+      "source_name": "Pro Football Talk",
+      "headline": "Monday Night Football: Chargers run past Ravens 23-20 for first win of 2026",
+      "published_at": "2026-11-17T04:33:22.000Z",
+      "observed_at": "2026-11-17T04:40:19.763Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "LAC"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
