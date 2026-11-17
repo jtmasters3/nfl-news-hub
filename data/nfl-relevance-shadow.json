@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-will-review-the-new-allegations-against-josh-jacobs",
-      "source_name": "Pro Football Talk",
-      "headline": "NFL \"will review\" the new allegations against Josh Jacobs",
-      "published_at": "2026-10-31T16:44:47.000Z",
-      "observed_at": "2026-10-31T16:50:22.930Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/adding-jeffery-simmons-shows-gm-ryan-poles-bears-have-realistic-super-bowl-hopes",
       "source_name": "NFL.com",
       "headline": "Adding Jeffery Simmons shows GM Ryan Poles, Bears have realistic Super Bowl hopes",
@@ -41955,6 +41938,27 @@
         "HOU"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/the-commanders-defense-is-making-progress-but-here-comes-joe-burrow",
+      "source_name": "NFL.com",
+      "headline": "The Commanders' defense is making progress, but here comes Joe Burrow",
+      "published_at": "2026-11-17T12:46:05.000Z",
+      "observed_at": "2026-11-17T23:50:25.788Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "WAS"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
