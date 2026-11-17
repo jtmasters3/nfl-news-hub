@@ -2,71 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-list-kenny-clark-george-pickens-as-questionable",
-      "source_name": "Pro Football Talk",
-      "headline": "Cowboys list Kenny Clark, George Pickens as questionable",
-      "published_at": "2026-10-30T21:09:27.000Z",
-      "observed_at": "2026-10-30T21:20:20.537Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaylen-waddle-questionable-rj-harvey-ruled-out-for-broncos-chiefs",
-      "source_name": "Pro Football Talk",
-      "headline": "Jaylen Waddle questionable, RJ Harvey ruled out for Broncos-Chiefs",
-      "published_at": "2026-10-30T21:05:40.000Z",
-      "observed_at": "2026-10-30T21:20:20.537Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN",
-        "KC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/budda-baker-says-hes-focused-on-the-cowboys-not-trade-talk",
-      "source_name": "Pro Football Talk",
-      "headline": "Budda Baker says he's focused on the Cowboys, not trade talk",
-      "published_at": "2026-10-30T22:38:49.000Z",
-      "observed_at": "2026-10-30T22:50:21.649Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI",
-        "DAL"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/2026-nfl-trade-deadline-potential-landing-spots-for-rb-jonathan-taylor-s-budda-baker-and-more",
       "source_name": "NFL.com",
       "headline": "2026 NFL trade deadline: Potential landing spots for RB Jonathan Taylor, S Budda Baker and more",
@@ -41937,6 +41872,69 @@
         "TB"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-tuesday-nov-17",
+      "source_name": "NFL.com",
+      "headline": "NFL news roundup: Latest league updates from Tuesday, Nov. 17",
+      "published_at": "2026-11-17T04:11:33.000Z",
+      "observed_at": "2026-11-17T16:20:20.205Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-power-rankings-week-11-2026-nfl-season",
+      "source_name": "NFL.com",
+      "headline": "NFL Power Rankings, Week 11: Vikings vault into top five; Browns, Rams and Commanders on the rise",
+      "published_at": "2026-11-17T04:00:36.000Z",
+      "observed_at": "2026-11-17T16:20:20.205Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE",
+        "GB",
+        "LAR",
+        "MIN",
+        "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/the-prediction-markets-are-questioning-mike-vrabels-job-security-again",
+      "source_name": "Pro Football Talk",
+      "headline": "The prediction markets are questioning Mike Vrabel's job security, again",
+      "published_at": "2026-11-17T16:11:47.000Z",
+      "observed_at": "2026-11-17T16:20:20.205Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE"
+      ],
+      "detected_category": "coaching",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
