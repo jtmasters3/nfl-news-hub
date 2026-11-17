@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.espn.com/nfl/story/_/id/50329594/chiefs-get-rashee-rice-back-injury-broncos-game",
-      "source_name": "ESPN",
-      "headline": "Chiefs get Rice back from injury for Broncos game",
-      "published_at": "2026-10-31T01:33:00.000Z",
-      "observed_at": "2026-10-31T01:40:25.400Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN",
-        "KC"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.espn.com/nfl/story/_/id/50331045/colts-steichen-wr-downs-ready-go-trade-demand",
       "source_name": "ESPN",
       "headline": "Colts' Steichen: WR Downs 'ready to go' despite trade request",
@@ -41940,6 +41918,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-thanksgiving-week-halftime-shows-to-feature-u2-wu-tang-clan-miranda-lambert-and-goo-goo-dolls",
+      "source_name": "NFL.com",
+      "headline": "NFL Thanksgiving week halftime shows to feature U2, Wu-Tang Clan, Miranda Lambert and Goo Goo Dolls",
+      "published_at": "2026-11-17T05:08:44.000Z",
+      "observed_at": "2026-11-17T17:20:18.316Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
