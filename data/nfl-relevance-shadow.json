@@ -2,90 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.espn.com/nfl/story/_/id/50330421/eagles-saquon-barkley-carries-no-injury-designation-commanders-matchup",
-      "source_name": "ESPN",
-      "headline": "Eagles RB Barkley carries no injury designation",
-      "published_at": "2026-10-31T01:33:00.000Z",
-      "observed_at": "2026-10-31T01:40:25.400Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.espn.com/nfl/story/_/id/50331710/sources-commanders-daron-payne-injures-foot-practice",
-      "source_name": "ESPN",
-      "headline": "Sources: Commanders' Payne likely IR-bound after practice injury",
-      "published_at": "2026-10-31T01:33:00.000Z",
-      "observed_at": "2026-10-31T01:40:25.400Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "WAS"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.espn.com/nfl/story/_/id/50244728/jay-z-super-bowl-half-hints",
-      "source_name": "ESPN",
-      "headline": "🎵 From 'no' to halftime show: Clues to Jay-Z's Super Bowl nod",
-      "published_at": "2026-10-31T01:33:00.000Z",
-      "observed_at": "2026-10-31T01:40:25.400Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAC",
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.espn.com/nfl/draft2027/story/_/id/50182998/2027-nfl-draft-rankings-kiper-big-board-top-prospects",
-      "source_name": "ESPN",
-      "headline": "Kiper updates his 2027 Big Board: Ranking the top 25 NFL draft prospects",
-      "published_at": "2026-10-30T16:53:04.000Z",
-      "observed_at": "2026-10-31T01:40:25.400Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [],
-      "detected_category": "draft",
-      "nfl_evidence": [
-        "phrase_nfl_draft",
-        "nfl_preserving_category:draft"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.espn.com/nfl/draft2027/story/_/id/50288294/2027-nfl-draft-ohio-state-receiver-jeremiah-smith-generational",
       "source_name": "ESPN",
       "headline": "Could Jeremiah Smith be a generational NFL draft receiver prospect?",
@@ -41921,6 +41837,92 @@
       "confidence": "high",
       "detected_teams": [
         "DAL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50511280/cowboys-discussing-new-role-dc-parker-jones-says",
+      "source_name": "ESPN",
+      "headline": "Cowboys discussing new role for DC Parker after loss to 49ers, Jones says",
+      "published_at": "2026-11-17T16:52:36.000Z",
+      "observed_at": "2026-11-17T18:20:34.939Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "SF"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50511791/texans-place-lb-azeez-al-shaair-groin-ir",
+      "source_name": "ESPN",
+      "headline": "Texans place LB Al-Shaair, team's leading tackler, on IR",
+      "published_at": "2026-11-17T16:52:36.000Z",
+      "observed_at": "2026-11-17T18:20:34.939Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "HOU"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50511524/lions-plan-kerby-joseph-make-season-debut-sunday",
+      "source_name": "ESPN",
+      "headline": "Lions plan for Joseph to come off PUP, make season debut Sunday, per Campbell",
+      "published_at": "2026-11-17T16:52:36.000Z",
+      "observed_at": "2026-11-17T18:20:34.939Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "TB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cb-nazeeh-johnson-visited-steelers-tuesday",
+      "source_name": "Pro Football Talk",
+      "headline": "CB Nazeeh Johnson visited the Steelers Tuesday",
+      "published_at": "2026-11-17T18:11:04.000Z",
+      "observed_at": "2026-11-17T18:20:34.939Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
