@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/raiders-g-jackson-powers-johnson-is-questionable-for-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "Raiders G Jackson Powers-Johnson is questionable for Sunday",
-      "published_at": "2026-10-30T20:20:40.000Z",
-      "observed_at": "2026-10-30T20:30:24.355Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV",
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/new-bears-dt-jeffery-simmons-understands-super-bowl-goal-in-chicago-they-want-it-right-now",
       "source_name": "NFL.com",
       "headline": "New Bears DT Jeffery Simmons understands Super Bowl goal in Chicago: 'They want it right now'",
@@ -41949,6 +41927,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/andy-reid-on-emmett-johnson-my-hat-goes-off-to-him",
+      "source_name": "Pro Football Talk",
+      "headline": "Andy Reid on Emmett Johnson: My hat goes off to him",
+      "published_at": "2026-11-17T15:08:23.000Z",
+      "observed_at": "2026-11-17T15:10:24.198Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
