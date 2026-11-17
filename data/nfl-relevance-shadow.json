@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/how-can-the-raiders-fix-their-run-defense-possible-answers-to-a-question-they-re-sick-of",
-      "source_name": "NFL.com",
-      "headline": "How can the Raiders fix their run defense? Possible answers to a question they're sick of",
-      "published_at": "2026-10-30T12:31:06.000Z",
-      "observed_at": "2026-10-30T18:10:21.581Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/the-rams-are-exploring-a-2-kicker-approach-to-cure-special-teams-nightmares",
       "source_name": "NFL.com",
       "headline": "The Rams are exploring a 2-kicker approach to cure special teams nightmares",
@@ -41955,6 +41934,23 @@
       "headline": "NFL Honors moves from Thursday back to Saturday",
       "published_at": "2026-11-17T03:27:50.000Z",
       "observed_at": "2026-11-17T03:40:29.719Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/big-bets-report-fernando-mendozas-1st-nfl-td-helps-bettor-win-58k",
+      "source_name": "FOX Sports",
+      "headline": "Big Bets Report: Fernando Mendoza's 1st NFL TD Helps Bettor Win $58k",
+      "published_at": "2026-11-17T03:58:50.000Z",
+      "observed_at": "2026-11-17T04:00:22.997Z",
       "decision": "keep",
       "classification": "ambiguous",
       "confidence": "low",
