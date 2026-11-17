@@ -2,86 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jordan-love-passes-brett-favre-for-multi-touchdown-games-to-start-season",
-      "source_name": "Pro Football Talk",
-      "headline": "Jordan Love passes Brett Favre for multi-touchdown games to start season",
-      "published_at": "2026-10-31T02:12:51.000Z",
-      "observed_at": "2026-10-31T02:20:22.065Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-daron-payne-has-a-significant-foot-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Daron Payne has a significant foot injury",
-      "published_at": "2026-10-31T02:39:58.000Z",
-      "observed_at": "2026-10-31T02:50:19.311Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "WAS"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-philip-rivers-has-emerged-as-the-focus-of-nc-state-coaching-search",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Philip Rivers has \"emerged as the focus\" of NC State coaching search",
-      "published_at": "2026-10-31T03:03:20.000Z",
-      "observed_at": "2026-10-31T03:10:19.179Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "coaching",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.espn.com/nfl/story/_/id/50333636/records-show-3-other-women-accused-packers-josh-jacobs-abuse",
-      "source_name": "ESPN",
-      "headline": "Records reveal 3 other women accused Packers' Jacobs of abuse after arrest",
-      "published_at": "2026-10-31T07:21:34.000Z",
-      "observed_at": "2026-10-31T07:30:29.234Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/after-josh-jacobs-was-arrested-three-other-women-told-police-he-had-abused-them-too",
       "source_name": "Pro Football Talk",
       "headline": "After Josh Jacobs was arrested, three other women told police he had abused them, too",
@@ -41946,6 +41866,91 @@
       "confidence": "high",
       "detected_teams": [
         "BUF"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/week-11-nfl-mvp-tracker-joe-burrow-on-historic-hot-streak-jahmyr-gibbs-crashes-into-top-5",
+      "source_name": "NFL.com",
+      "headline": "Week 11 NFL MVP tracker: Joe Burrow on historic hot streak; Jahmyr Gibbs crashes into top 5",
+      "published_at": "2026-11-17T09:23:13.000Z",
+      "observed_at": "2026-11-17T21:30:22.224Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/browns-todd-monken-joe-burrow-bengals-mvp",
+      "source_name": "FOX Sports",
+      "headline": "It's Time To Respect The Resilient Cleveland Browns, Thanks To Todd Monken",
+      "published_at": "2026-11-17T21:29:55.000Z",
+      "observed_at": "2026-11-17T21:30:22.224Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/titans-put-wandale-robinson-on-injured-reserve",
+      "source_name": "Pro Football Talk",
+      "headline": "Titans put Wan'Dale Robinson on injured reserve",
+      "published_at": "2026-11-17T21:21:20.000Z",
+      "observed_at": "2026-11-17T21:30:22.224Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "TEN"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dolphins-dt-jordan-phillips-will-undergo-season-ending-biceps-surgery",
+      "source_name": "Pro Football Talk",
+      "headline": "Dolphins DT Jordan Phillips will undergo season-ending biceps surgery",
+      "published_at": "2026-11-17T21:14:17.000Z",
+      "observed_at": "2026-11-17T21:30:22.224Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND",
+        "MIA"
       ],
       "detected_category": "injury",
       "nfl_evidence": [
