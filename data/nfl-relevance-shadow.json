@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/shane-steichen-confirms-josh-downs-requested-a-trade-and-will-play-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "Shane Steichen confirms Josh Downs requested a trade and will play Sunday",
-      "published_at": "2026-10-30T17:08:31.000Z",
-      "observed_at": "2026-10-30T17:10:19.914Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/ravens-qb-lamar-jackson-ankle-play-bills-three-game-absence",
       "source_name": "NFL.com",
       "headline": "Ravens QB Lamar Jackson (ankle) will return Sunday vs. Bills after three-game absence",
@@ -41963,6 +41942,28 @@
         "LAR"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/monday-night-football-chargers-lead-ravens-17-10-at-halftime",
+      "source_name": "Pro Football Talk",
+      "headline": "Monday Night Football: Chargers lead Ravens 17-10 at halftime",
+      "published_at": "2026-11-17T02:49:44.000Z",
+      "observed_at": "2026-11-17T03:00:24.577Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "LAC"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
