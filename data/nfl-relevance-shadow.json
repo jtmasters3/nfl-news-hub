@@ -2,72 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/ravens-lamar-jackson-injury-update-jesse-minter-comments",
-      "source_name": "FOX Sports",
-      "headline": "Lamar Jackson, Jesse Minter Talk Ravens' Superstar's Potential Return",
-      "published_at": "2026-10-30T18:29:36.000Z",
-      "observed_at": "2026-10-30T18:40:20.139Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kenneth-gainwell-luke-goedeke-questionable-for-bucs-vs-falcons",
-      "source_name": "Pro Football Talk",
-      "headline": "Kenneth Gainwell, Luke Goedeke questionable for Bucs vs. Falcons",
-      "published_at": "2026-10-30T18:36:34.000Z",
-      "observed_at": "2026-10-30T18:50:19.694Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-sign-dt-kevin-givens-off-of-49ers-practice-squad",
-      "source_name": "Pro Football Talk",
-      "headline": "Colts sign DT Kevin Givens off of 49ers practice squad",
-      "published_at": "2026-10-30T18:50:53.000Z",
-      "observed_at": "2026-10-30T19:00:27.696Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "SF"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/appeals-court-reinstates-4-7-billion-verdict-against-nfl-in-sunday-ticket-class-action",
       "source_name": "Pro Football Talk",
       "headline": "Appeals court reinstates $4.7 billion verdict against NFL in Sunday Ticket class action",
@@ -41953,6 +41887,73 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50506286/ravens-chargers-mnf-herbert-first-win",
+      "source_name": "ESPN",
+      "headline": "Winless no more: Chargers hold off Ravens after forcing late fumble",
+      "published_at": "2026-11-17T04:53:46.000Z",
+      "observed_at": "2026-11-17T08:50:32.315Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "LAC",
+        "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50508438/chargers-relieved-beating-ravens-first-win-season",
+      "source_name": "ESPN",
+      "headline": "Chargers finally get their first win: 'Thrilled, let's do it every week'",
+      "published_at": "2026-11-17T07:35:11.000Z",
+      "observed_at": "2026-11-17T08:50:32.315Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "LAC"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50508744/kyle-hamilton-says-ravens-disgracing-standards-loss-previously-winless-chargers",
+      "source_name": "ESPN",
+      "headline": "Hamilton says Ravens 'disgracing' standards after embarrassing loss to Chargers",
+      "published_at": "2026-11-17T07:36:23.000Z",
+      "observed_at": "2026-11-17T08:50:32.315Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "LAC"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
