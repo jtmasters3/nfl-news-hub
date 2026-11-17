@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-week-8-fantasy-sleepers-qb-sam-darnold-rb-rico-dowdle-wr-ja-kobi-lane-among-upside-plays",
-      "source_name": "NFL.com",
-      "headline": "NFL Week 8 fantasy sleepers: QB Sam Darnold, RB Rico Dowdle, WR Ja'Kobi Lane among upside plays",
-      "published_at": "2026-10-30T06:30:57.000Z",
-      "observed_at": "2026-10-30T18:40:20.139Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI"
-      ],
-      "detected_category": "fantasy",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/ravens-lamar-jackson-injury-update-jesse-minter-comments",
       "source_name": "FOX Sports",
       "headline": "Lamar Jackson, Jesse Minter Talk Ravens' Superstar's Potential Return",
@@ -41948,6 +41927,23 @@
       "headline": "NFL Week 10 All-Stars: Patrick Mahomes & Joe Burrow Battle Again In Loaded Week",
       "published_at": "2026-11-17T04:55:24.000Z",
       "observed_at": "2026-11-17T05:00:24.899Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/arch-manning-will-participate-in-senior-day-but-wont-comment-on-his-future",
+      "source_name": "Pro Football Talk",
+      "headline": "Arch Manning will participate in Senior Day, but won't comment on his future",
+      "published_at": "2026-11-17T05:20:43.000Z",
+      "observed_at": "2026-11-17T05:30:20.408Z",
       "decision": "keep",
       "classification": "ambiguous",
       "confidence": "low",
