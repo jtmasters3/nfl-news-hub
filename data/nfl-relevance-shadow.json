@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cardinals-expect-jeremiyah-love-to-play-against-cowboys",
-      "source_name": "Pro Football Talk",
-      "headline": "Cardinals expect Jeremiyah Love to play against Cowboys",
-      "published_at": "2026-10-30T18:14:32.000Z",
-      "observed_at": "2026-10-30T18:20:20.481Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI",
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dj-moore-dalton-kincaid-spencer-brown-among-bills-questionable-for-week-8",
-      "source_name": "Pro Football Talk",
-      "headline": "DJ Moore, Dalton Kincaid, Spencer Brown among Bills questionable for Week 8",
-      "published_at": "2026-10-30T18:14:56.000Z",
-      "observed_at": "2026-10-30T18:30:24.685Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "BUF"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-week-8-fantasy-sleepers-qb-sam-darnold-rb-rico-dowdle-wr-ja-kobi-lane-among-upside-plays",
       "source_name": "NFL.com",
       "headline": "NFL Week 8 fantasy sleepers: QB Sam Darnold, RB Rico Dowdle, WR Ja'Kobi Lane among upside plays",
@@ -41952,6 +41908,46 @@
       "headline": "2026 NFL Power Rankings Week 11: We Know Which 10 (Or So) Teams Are Contenders",
       "published_at": "2026-11-17T04:33:28.000Z",
       "observed_at": "2026-11-17T04:50:15.784Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/vikings-offense-cowboys-terrible-defense-49ers-unstoppable",
+      "source_name": "FOX Sports",
+      "headline": "NFL Best & Worst: Kirk Cousins Shines In Vikings Return; Dallas D Crumbles",
+      "published_at": "2026-11-17T04:56:09.000Z",
+      "observed_at": "2026-11-17T05:00:24.899Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "MIN",
+        "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-week-10-all-stars-patrick-mahomes-joe-burrow-chiefs-bengals-cowboys-49ers",
+      "source_name": "FOX Sports",
+      "headline": "NFL Week 10 All-Stars: Patrick Mahomes & Joe Burrow Battle Again In Loaded Week",
+      "published_at": "2026-11-17T04:55:24.000Z",
+      "observed_at": "2026-11-17T05:00:24.899Z",
       "decision": "keep",
       "classification": "ambiguous",
       "confidence": "low",
