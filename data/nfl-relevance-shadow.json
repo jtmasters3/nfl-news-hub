@@ -2,43 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.espn.com/nfl/story/_/id/49745176/2026-nfl-playoff-predictions-afc-nfc-odds-super-bowl",
-      "source_name": "ESPN",
-      "headline": "NFL playoff picture: Updated projections, chances to make the postseason",
-      "published_at": "2026-10-27T16:15:53.000Z",
-      "observed_at": "2026-10-31T01:40:25.400Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.espn.com/nfl/draft2027/story/_/id/49794361/2027-nfl-draft-order-projections-first-round-picks",
-      "source_name": "ESPN",
-      "headline": "Projecting the 2027 NFL draft order: Which teams could have an early pick?",
-      "published_at": "2026-10-27T16:15:53.000Z",
-      "observed_at": "2026-10-31T01:40:25.400Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [],
-      "detected_category": "draft",
-      "nfl_evidence": [
-        "phrase_nfl_draft",
-        "nfl_preserving_category:draft"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-payton-goes-for-his-200th-career-win-on-sunday",
       "source_name": "Pro Football Talk",
       "headline": "Sean Payton goes for his 200th career win on Sunday",
@@ -41944,6 +41907,49 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "nfl_preserving_category:contract"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-sign-ol-nick-leverett-to-active-roster",
+      "source_name": "Pro Football Talk",
+      "headline": "Cowboys sign OL Nick Leverett to active roster",
+      "published_at": "2026-11-17T20:49:51.000Z",
+      "observed_at": "2026-11-17T21:00:24.193Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-wr-luther-burden-has-cleared-concussion-protocol",
+      "source_name": "Pro Football Talk",
+      "headline": "Bears WR Luther Burden has cleared concussion protocol",
+      "published_at": "2026-11-17T20:44:57.000Z",
+      "observed_at": "2026-11-17T21:00:24.193Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
