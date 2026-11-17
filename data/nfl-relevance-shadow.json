@@ -2,51 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-week-8-best-bets-expert-picks-back-under-broncos-chiefs",
-      "source_name": "FOX Sports",
-      "headline": "2026 NFL Week 8 Best Bets, Expert Picks: Back The Under In Broncos-Chiefs",
-      "published_at": "2026-10-30T16:31:00.000Z",
-      "observed_at": "2026-10-30T16:40:21.612Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "DEN",
-        "KC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/saquon-barkley-is-at-eagles-practice-friday",
-      "source_name": "Pro Football Talk",
-      "headline": "Saquon Barkley is at Eagles practice Friday",
-      "published_at": "2026-10-30T16:32:54.000Z",
-      "observed_at": "2026-10-30T16:40:21.612Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI",
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/acrisure-stadium-will-have-a-quick-turnaround-this-weekend",
       "source_name": "Pro Football Talk",
       "headline": "Acrisure Stadium will have a quick turnaround this weekend",
@@ -41966,6 +41921,45 @@
         "LAC"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-mexico-city-game-como-llegar",
+      "source_name": "NFL.com",
+      "headline": "NFL Mexico City Game - Cómo llegar",
+      "published_at": "2026-11-17T01:45:32.000Z",
+      "observed_at": "2026-11-17T01:50:26.161Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/texans-estimate-david-montgomery-as-a-full-participant-but-woody-marks-doesnt-practice",
+      "source_name": "Pro Football Talk",
+      "headline": "Texans estimate David Montgomery as a full participant, but Woody Marks doesn't practice",
+      "published_at": "2026-11-17T01:37:14.000Z",
+      "observed_at": "2026-11-17T01:50:26.161Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "HOU",
+        "IND"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
