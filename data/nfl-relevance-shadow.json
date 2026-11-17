@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/new-appeals-court-ruling-could-end-sunday-ticket",
-      "source_name": "Pro Football Talk",
-      "headline": "New appeals court ruling could end Sunday Ticket",
-      "published_at": "2026-10-30T19:31:08.000Z",
-      "observed_at": "2026-10-30T19:40:21.396Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kerby-joseph-after-return-to-practice-im-still-him-i-hope-yall-aint-forgot",
       "source_name": "Pro Football Talk",
       "headline": "Kerby Joseph after return to practice: I'm still him; I hope you all ain't forgot",
@@ -41943,6 +41926,28 @@
       "detected_teams": [
         "GB",
         "LAR"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-tests-showed-no-major-injury-for-geno-smith",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Tests showed no major injury for Geno Smith",
+      "published_at": "2026-11-17T12:08:14.000Z",
+      "observed_at": "2026-11-17T12:20:18.524Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC",
+        "NYJ"
       ],
       "detected_category": "injury",
       "nfl_evidence": [
