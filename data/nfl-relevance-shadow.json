@@ -2,43 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.espn.com/nfl/draft2027/story/_/id/50288294/2027-nfl-draft-ohio-state-receiver-jeremiah-smith-generational",
-      "source_name": "ESPN",
-      "headline": "Could Jeremiah Smith be a generational NFL draft receiver prospect?",
-      "published_at": "2026-10-30T16:53:04.000Z",
-      "observed_at": "2026-10-31T01:40:25.400Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [],
-      "detected_category": "draft",
-      "nfl_evidence": [
-        "phrase_nfl_draft",
-        "nfl_preserving_category:draft"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.espn.com/fantasy/football/story/_/page/FFSundayInactives-50289130/fantasy-football-injuries-nfl-week-8-inactive-active",
-      "source_name": "ESPN",
-      "headline": "Inactives watch: Ja'Marr Chase to play; Breece Hall questionable; Emeka Egbuka out",
-      "published_at": "2026-10-31T01:15:15.000Z",
-      "observed_at": "2026-10-31T01:40:25.400Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.espn.com/fantasy/football/story/_/id/50319084/nfl-trade-deadline-2026-fantasy-football-potential-impact",
       "source_name": "ESPN",
       "headline": "As the deadline looms, which NFL trades could have the biggest fantasy impacts?",
@@ -41923,6 +41886,49 @@
       "confidence": "high",
       "detected_teams": [
         "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/dallas-cowboys-christian-parker-defensive-coordinator-role-change",
+      "source_name": "FOX Sports",
+      "headline": "Jerry Jones Noncommital On Coordinator Christian Parker's Future With Cowboys",
+      "published_at": "2026-11-17T18:48:03.000Z",
+      "observed_at": "2026-11-17T19:00:25.753Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brian-flores-vikings-plan-to-rotate-players-in-order-to-deal-with-altitude-in-mexico-city",
+      "source_name": "Pro Football Talk",
+      "headline": "Brian Flores: Vikings plan to rotate players in order to deal with altitude in Mexico City",
+      "published_at": "2026-11-17T18:50:09.000Z",
+      "observed_at": "2026-11-17T19:00:25.753Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN",
+        "SF"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
