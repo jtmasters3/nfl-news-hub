@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-rush-for-160-yards-in-first-half-lead-browns-20-6",
-      "source_name": "Pro Football Talk",
-      "headline": "Steelers rush for 160 yards in first half, lead Browns 20-6",
-      "published_at": "2026-11-01T19:36:43.000Z",
-      "observed_at": "2026-11-01T19:40:18.262Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE",
-        "PIT"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-lead-cardinals-14-3-at-halftime",
-      "source_name": "Pro Football Talk",
-      "headline": "Cowboys lead Cardinals 14-3 at halftime",
-      "published_at": "2026-11-01T19:36:24.000Z",
-      "observed_at": "2026-11-01T19:40:18.262Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI",
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tom-brady-drops-another-s-bomb-live-on-fox",
       "source_name": "Pro Football Talk",
       "headline": "Tom Brady drops another \"s\" bomb live on Fox",
@@ -41888,6 +41844,50 @@
       "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/kansas-city-chiefs-kenneth-walker-injury-emmett-johnson",
+      "source_name": "FOX Sports",
+      "headline": "Kenneth Walker III Misses Chiefs Practice With Groin Injury, Sunday In Question",
+      "published_at": "2026-11-18T21:05:18.000Z",
+      "observed_at": "2026-11-18T21:10:19.704Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dolphins-sign-max-llewellyn-from-practice-squad-sign-jack-browning-to-practice-squad",
+      "source_name": "Pro Football Talk",
+      "headline": "Dolphins sign Max Llewellyn from practice squad, sign Jack Browning to practice squad",
+      "published_at": "2026-11-18T21:02:07.000Z",
+      "observed_at": "2026-11-18T21:10:19.704Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIA"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
