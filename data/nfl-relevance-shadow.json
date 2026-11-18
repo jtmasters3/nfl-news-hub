@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/justin-herbert-has-gone-eight-straight-starts-without-multiple-tds",
-      "source_name": "Pro Football Talk",
-      "headline": "Justin Herbert has gone eight straight starts without multiple TDs",
-      "published_at": "2026-11-01T19:15:50.000Z",
-      "observed_at": "2026-11-01T19:20:19.475Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAC",
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/geno-smith-throws-two-touchdowns-jets-lead-raiders-23-14-at-halftime",
-      "source_name": "Pro Football Talk",
-      "headline": "Geno Smith throws two touchdowns, Jets lead Raiders 23-14 at halftime",
-      "published_at": "2026-11-01T19:26:57.000Z",
-      "observed_at": "2026-11-01T19:30:24.182Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV",
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dj-wonnum-carted-off-after-friendly-fire-collision-with-brian-branch",
       "source_name": "Pro Football Talk",
       "headline": "DJ Wonnum carted off after friendly fire collision with Brian Branch",
@@ -41896,6 +41852,49 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50523527/ravens-flowers-super-frustrated-latest-late-game-fumble",
+      "source_name": "ESPN",
+      "headline": "Ravens WR Flowers 'super frustrated' by latest late-game fumble",
+      "published_at": "2026-11-18T20:23:18.000Z",
+      "observed_at": "2026-11-18T20:50:29.895Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "LAC"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-wont-put-jordan-addison-on-ir",
+      "source_name": "Pro Football Talk",
+      "headline": "Vikings won't put Jordan Addison on IR",
+      "published_at": "2026-11-18T20:42:55.000Z",
+      "observed_at": "2026-11-18T20:50:29.895Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
