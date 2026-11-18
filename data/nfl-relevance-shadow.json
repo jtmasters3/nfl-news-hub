@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jeremiyah-love-questionable-to-return-with-ankle-injury-as-cardinals-trail-14-0",
-      "source_name": "Pro Football Talk",
-      "headline": "Jeremiyah Love questionable to return with ankle injury as Cardinals trail 14-0",
-      "published_at": "2026-11-01T19:05:28.000Z",
-      "observed_at": "2026-11-01T19:10:23.802Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/justin-herbert-has-gone-eight-straight-starts-without-multiple-tds",
       "source_name": "Pro Football Talk",
       "headline": "Justin Herbert has gone eight straight starts without multiple TDs",
@@ -41900,6 +41879,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-how-to-watch-week-11-nfl-games-schedule-mexico-city-game-details-and-more",
+      "source_name": "NFL.com",
+      "headline": "NFL+: How to watch Week 11 NFL games, schedule, Mexico City game details, and more",
+      "published_at": "2026-11-18T08:37:06.000Z",
+      "observed_at": "2026-11-18T20:40:22.732Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
