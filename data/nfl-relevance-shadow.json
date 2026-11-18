@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/browns-go-for-first-sweep-of-steelers-since-1988",
-      "source_name": "Pro Football Talk",
-      "headline": "Browns go for first sweep of Steelers since 1988",
-      "published_at": "2026-11-01T17:48:48.000Z",
-      "observed_at": "2026-11-01T18:00:28.214Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE",
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-trade-deadline-rumors-maxx-crosby-raiders",
-      "source_name": "FOX Sports",
-      "headline": "NFL Trade Deadline: Is Maxx Crosby On The Move? Latest On Raiders' Star Edge Rusher",
-      "published_at": "2026-11-01T18:14:54.000Z",
-      "observed_at": "2026-11-01T18:20:19.513Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/jauan-jennings-declines-49ers-trade-stay-vikings",
       "source_name": "FOX Sports",
       "headline": "Jauan Jennings Rejects 49ers Reunion, Turning Down Trade To Stay With Vikings",
@@ -41917,6 +41874,44 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/steelers-g-mason-mccormick-avoids-fracture-could-return-playoffs",
+      "source_name": "FOX Sports",
+      "headline": "Steelers G Mason McCormick Avoids Fracture, Could Return For Playoff Run",
+      "published_at": "2026-11-18T18:00:15.000Z",
+      "observed_at": "2026-11-18T18:20:18.804Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/the-early-reviews-for-the-madden-movie-arent-good",
+      "source_name": "Pro Football Talk",
+      "headline": "The early reviews for the Madden movie aren't good",
+      "published_at": "2026-11-18T18:07:43.000Z",
+      "observed_at": "2026-11-18T18:20:18.804Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "coaching",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
