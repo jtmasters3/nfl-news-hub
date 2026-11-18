@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ravens-have-become-the-ultimate-good-half-bad-half-team",
-      "source_name": "Pro Football Talk",
-      "headline": "Ravens have become the ultimate good half/bad half team",
-      "published_at": "2026-10-31T18:57:00.000Z",
-      "observed_at": "2026-10-31T19:10:20.593Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "CIN",
-        "CLE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/before-daron-payne-suffered-a-season-ending-injury-the-commanders-were-in-trade-talks",
       "source_name": "Pro Football Talk",
       "headline": "Before Daron Payne suffered a season-ending injury, the Commanders were in trade talks",
@@ -41939,6 +41916,23 @@
       "headline": "NFL Mexico City Game - Barrio NFL",
       "published_at": "2026-11-18T01:01:58.000Z",
       "observed_at": "2026-11-18T01:10:17.641Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-mexico-city-game-getting-there",
+      "source_name": "NFL.com",
+      "headline": "NFL Mexico City Game - Getting there",
+      "published_at": "2026-11-18T01:19:12.000Z",
+      "observed_at": "2026-11-18T01:30:23.140Z",
       "decision": "keep",
       "classification": "ambiguous",
       "confidence": "low",
