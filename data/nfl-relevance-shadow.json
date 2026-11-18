@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/jauan-jennings-declines-49ers-trade-stay-vikings",
-      "source_name": "FOX Sports",
-      "headline": "Jauan Jennings Rejects 49ers Reunion, Turning Down Trade To Stay With Vikings",
-      "published_at": "2026-11-01T18:10:08.000Z",
-      "observed_at": "2026-11-01T18:20:19.513Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN",
-        "SF"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brian-thomas-puts-jaguars-up-7-0-over-colts",
       "source_name": "Pro Football Talk",
       "headline": "Brian Thomas puts Jaguars up 7-0 over Colts",
@@ -41912,6 +41890,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/geno-smith-injury-update-jets-quarterbacks-aaron-glenn-presser",
+      "source_name": "FOX Sports",
+      "headline": "Jets QB Geno Smith Limited With Ankle Injury; Will He Play vs. Chargers?",
+      "published_at": "2026-11-18T18:27:27.000Z",
+      "observed_at": "2026-11-18T18:40:18.471Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC",
+        "NYJ"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
