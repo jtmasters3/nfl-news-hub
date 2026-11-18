@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/before-daron-payne-suffered-a-season-ending-injury-the-commanders-were-in-trade-talks",
-      "source_name": "Pro Football Talk",
-      "headline": "Before Daron Payne suffered a season-ending injury, the Commanders were in trade talks",
-      "published_at": "2026-10-31T19:06:48.000Z",
-      "observed_at": "2026-10-31T19:20:20.737Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "WAS"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-activate-s-p-j-locke-back-to-active-roster-from-ir",
       "source_name": "Pro Football Talk",
       "headline": "Cowboys activate S P.J. Locke back to active roster from IR",
@@ -41942,6 +41921,25 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/qb-notebook-week-10-joe-burrow-josh-allen-mvp",
+      "source_name": "FOX Sports",
+      "headline": "Joe Burrow Plays Like The NBA's Frontrunner For MVP, But Another QB Is NFL's MVP",
+      "published_at": "2026-11-18T01:35:49.000Z",
+      "observed_at": "2026-11-18T01:40:18.617Z",
+      "decision": "reject",
+      "classification": "other_sport",
+      "confidence": "high",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [
+        "league_nba"
+      ],
+      "reason_codes": [
+        "other_sport_marker_no_nfl_evidence"
       ]
     }
   ]
