@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-ruled-out-four-players-elevate-two",
-      "source_name": "Pro Football Talk",
-      "headline": "Falcons rule out four players, elevate two",
-      "published_at": "2026-10-31T20:13:51.000Z",
-      "observed_at": "2026-10-31T20:20:20.300Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dolphins-elevate-zane-gonzalez-max-llewellyn",
       "source_name": "Pro Football Talk",
       "headline": "Dolphins elevate Zane Gonzalez, Max Llewellyn",
@@ -41922,6 +41901,23 @@
       "headline": "At NC State, Philip Rivers will be one of the lowest-paid Power 4 coaches",
       "published_at": "2026-11-18T02:02:16.000Z",
       "observed_at": "2026-11-18T02:10:19.305Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/officials-who-were-bumped-by-reconfigured-week-10-schedule-wont-lose-pay",
+      "source_name": "Pro Football Talk",
+      "headline": "Officials who were bumped by reconfigured Week 10 schedule won't lose pay",
+      "published_at": "2026-11-18T02:31:58.000Z",
+      "observed_at": "2026-11-18T02:40:21.663Z",
       "decision": "keep",
       "classification": "ambiguous",
       "confidence": "low",
