@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lamar-jackson-hurt-his-right-thumb-on-the-first-play",
-      "source_name": "Pro Football Talk",
-      "headline": "Lamar Jackson hurt his right thumb on the first play",
-      "published_at": "2026-11-01T18:27:34.000Z",
-      "observed_at": "2026-11-01T18:40:18.597Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/ravens-star-qb-lamar-jackson-departs-vs-bills-thumb-injury",
-      "source_name": "FOX Sports",
-      "headline": "Ravens Star QB Lamar Jackson Leaves Game vs. Bills With Thumb Injury",
-      "published_at": "2026-11-01T18:36:31.000Z",
-      "observed_at": "2026-11-01T18:50:19.755Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "BUF"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/notable-injuries-news-sunday-week-8-games-2026",
       "source_name": "NFL.com",
       "headline": "Notable injuries, news from Sunday's Week 8 games: Bills WR Josh Palmer injures hamstring",
@@ -41897,6 +41858,49 @@
         "IND"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50523261/titans-wr-wandale-robinson-season-ankle-injury",
+      "source_name": "ESPN",
+      "headline": "Titans WR Robinson out for season with ankle injury",
+      "published_at": "2026-11-18T19:35:24.000Z",
+      "observed_at": "2026-11-18T19:40:24.944Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "TEN"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/todd-bowles-baker-mayfields-made-progress-decision-on-playing-to-come-on-friday",
+      "source_name": "Pro Football Talk",
+      "headline": "Todd Bowles: Baker Mayfield's made progress, decision on playing to come on Friday",
+      "published_at": "2026-11-18T19:30:42.000Z",
+      "observed_at": "2026-11-18T19:40:24.944Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "TB"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
