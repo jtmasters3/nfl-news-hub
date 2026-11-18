@@ -2,73 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-vikings-49ers-had-trade-in-place-for-wr-jauan-jennings-but-jennings-wanted-to-stay",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Vikings, 49ers had trade in place for WR Jauan Jennings, but Jennings wanted to stay",
-      "published_at": "2026-11-01T18:21:07.000Z",
-      "observed_at": "2026-11-01T18:30:23.967Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN",
-        "SF"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/ravens-qb-lamar-jackson-suffers-right-thumb-injury-bills",
-      "source_name": "NFL.com",
-      "headline": "Ravens QB Lamar Jackson suffers right thumb injury on first play vs. Bills",
-      "published_at": "2026-11-01T06:26:27.000Z",
-      "observed_at": "2026-11-01T18:40:18.597Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "BUF"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/titans-take-surprising-10-0-lead-in-cincinnati",
-      "source_name": "Pro Football Talk",
-      "headline": "Titans take surprising 10-0 lead in Cincinnati",
-      "published_at": "2026-11-01T18:29:12.000Z",
-      "observed_at": "2026-11-01T18:40:18.597Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CIN",
-        "TEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/after-deshaun-watson-fumble-rico-dowdle-td-gives-steelers-7-0-lead",
       "source_name": "Pro Football Talk",
       "headline": "After Deshaun Watson fumble, Rico Dowdle TD gives Steelers 7-0 lead",
@@ -41907,6 +41840,70 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50522814/sources-brandon-aiyuk-mended-friendship-jayden-daniels",
+      "source_name": "ESPN",
+      "headline": "Sources: Aiyuk contacted Daniels to mend friendship with Commanders star QB",
+      "published_at": "2026-11-18T19:16:25.000Z",
+      "observed_at": "2026-11-18T19:20:27.301Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50522640/eagles-stick-milton-qb1-mannion-offensive-playcaller",
+      "source_name": "ESPN",
+      "headline": "Eagles' Sirianni sticking with Milton as QB1, Mannion as offensive playcaller",
+      "published_at": "2026-11-18T19:16:25.000Z",
+      "observed_at": "2026-11-18T19:20:27.301Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI",
+        "PIT"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50521008/nfl-current-worst-team-lamar-jackson-ravens-making-case-week-11",
+      "source_name": "ESPN",
+      "headline": "The NFL's current worst team? Lamar-less Ravens making that case",
+      "published_at": "2026-11-18T17:43:50.000Z",
+      "observed_at": "2026-11-18T19:20:27.301Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
