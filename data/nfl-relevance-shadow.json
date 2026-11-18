@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/adding-jeffery-simmons-shows-gm-ryan-poles-bears-have-realistic-super-bowl-hopes",
-      "source_name": "NFL.com",
-      "headline": "Adding Jeffery Simmons shows GM Ryan Poles, Bears have realistic Super Bowl hopes",
-      "published_at": "2026-10-31T10:46:04.000Z",
-      "observed_at": "2026-10-31T17:20:23.726Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/the-nfl-isn-t-built-for-aging-players-these-veterans-found-a-way-to-survive",
-      "source_name": "NFL.com",
-      "headline": "The NFL isn't built for aging players. These veterans found a way to survive",
-      "published_at": "2026-10-31T08:01:05.000Z",
-      "observed_at": "2026-10-31T17:20:23.726Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/broncos-alex-singleton-a-year-after-cancer-diagnosis-tackling-something-bigger-than-football",
       "source_name": "NFL.com",
       "headline": "Broncos' Alex Singleton, a year after cancer diagnosis, tackling something bigger than football",
@@ -41957,6 +41919,45 @@
       "confidence": "high",
       "detected_teams": [
         "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-mexico-city-game-club-activations",
+      "source_name": "NFL.com",
+      "headline": "NFL Mexico City Game - Club Activations",
+      "published_at": "2026-11-17T11:49:05.000Z",
+      "observed_at": "2026-11-18T00:00:23.709Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nick-wright-says-chargers-should-hard-reset-whole-thing-after-first-win",
+      "source_name": "FOX Sports",
+      "headline": "Nick Wright Says Chargers Should ‘Hard Reset The Whole Thing’ After First Win",
+      "published_at": "2026-11-17T23:43:52.000Z",
+      "observed_at": "2026-11-18T00:00:23.709Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC",
+        "LAR"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
