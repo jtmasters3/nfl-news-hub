@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/broncos-alex-singleton-a-year-after-cancer-diagnosis-tackling-something-bigger-than-football",
-      "source_name": "NFL.com",
-      "headline": "Broncos' Alex Singleton, a year after cancer diagnosis, tackling something bigger than football",
-      "published_at": "2026-10-31T10:16:05.000Z",
-      "observed_at": "2026-10-31T17:30:23.240Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/lions-safety-kerby-joseph-s-return-to-practice-is-good-news-for-him-and-the-team",
       "source_name": "NFL.com",
       "headline": "Lions safety Kerby Joseph's return to practice is good news for him and the team",
@@ -41962,6 +41941,28 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chiefs-worked-out-k-matt-prater-on-tuesday",
+      "source_name": "Pro Football Talk",
+      "headline": "Chiefs worked out K Matt Prater on Tuesday",
+      "published_at": "2026-11-18T00:10:37.000Z",
+      "observed_at": "2026-11-18T00:20:26.677Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:free_agency"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
