@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tom-brady-drops-another-s-bomb-live-on-fox",
-      "source_name": "Pro Football Talk",
-      "headline": "Tom Brady drops another \"s\" bomb live on Fox",
-      "published_at": "2026-11-01T19:33:10.000Z",
-      "observed_at": "2026-11-01T19:40:18.262Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET",
-        "GB",
-        "LV"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-lead-lions-7-6-at-halftime",
       "source_name": "Pro Football Talk",
       "headline": "Vikings lead Lions 7-6 at halftime",
@@ -41888,6 +41865,27 @@
         "nfl_team_detected",
         "phrase_practice_squad",
         "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/d-j-reed-returns-to-lions-practice",
+      "source_name": "Pro Football Talk",
+      "headline": "D.J. Reed returns to Lions practice",
+      "published_at": "2026-11-18T21:15:38.000Z",
+      "observed_at": "2026-11-18T21:20:19.874Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
