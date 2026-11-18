@@ -2,70 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/lions-safety-kerby-joseph-s-return-to-practice-is-good-news-for-him-and-the-team",
-      "source_name": "NFL.com",
-      "headline": "Lions safety Kerby Joseph's return to practice is good news for him and the team",
-      "published_at": "2026-10-30T09:01:07.000Z",
-      "observed_at": "2026-10-31T17:30:23.240Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patriots-rule-out-a-j-brown-treveyon-henderson",
-      "source_name": "Pro Football Talk",
-      "headline": "Patriots rule out A.J. Brown, TreVeyon Henderson",
-      "published_at": "2026-10-31T17:21:56.000Z",
-      "observed_at": "2026-10-31T17:30:23.240Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/patriots-rule-out-wr-a-j-brown-ankle-knee-rb-treveyon-henderson-illness-for-sunday-vs-dolphins",
-      "source_name": "NFL.com",
-      "headline": "Patriots rule out A.J. Brown (ankle/knee), TreVeyon Henderson (illness) for Sunday vs. Dolphins",
-      "published_at": "2026-10-31T05:45:45.000Z",
-      "observed_at": "2026-10-31T18:00:26.760Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIA",
-        "NE"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/cardinals-rb-jeremiyah-love-back-to-myself-after-two-game-absence-eager-to-set-tone-vs-cowboys",
       "source_name": "NFL.com",
       "headline": "Cardinals RB Jeremiyah Love 'back to myself' after two-game absence, eager to set tone vs. Cowboys",
@@ -41967,6 +41903,57 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/copy-of-nfl-mexico-city-game-tienda-nfl",
+      "source_name": "NFL.com",
+      "headline": "NFL Mexico City Game - Tienda NFL",
+      "published_at": "2026-11-18T12:36:24.000Z",
+      "observed_at": "2026-11-18T00:40:21.263Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-mexico-city-game-nfl-shop",
+      "source_name": "NFL.com",
+      "headline": "NFL Mexico City Game - NFL Shop",
+      "published_at": "2026-11-18T12:35:22.000Z",
+      "observed_at": "2026-11-18T00:40:21.263Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-mexico-city-game-activaciones-de-clubes",
+      "source_name": "NFL.com",
+      "headline": "NFL Mexico City Game - Activaciones de clubes",
+      "published_at": "2026-11-18T12:25:58.000Z",
+      "observed_at": "2026-11-18T00:40:21.263Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
