@@ -2,48 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.espn.com/nfl/story/_/id/50335308/raiders-not-planning-trading-maxx-crosby-sources-say",
-      "source_name": "ESPN",
-      "headline": "Sources: Raiders not planning Crosby trade as star DE wants to stay with Vegas",
-      "published_at": "2026-11-01T12:50:12.000Z",
-      "observed_at": "2026-11-01T15:10:25.915Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.espn.com/nfl/story/_/id/50338005/nfl-review-additional-allegations-packers-jacobs",
-      "source_name": "ESPN",
-      "headline": "NFL to review additional allegations against Packers RB Jacobs",
-      "published_at": "2026-11-01T12:50:12.000Z",
-      "observed_at": "2026-11-01T15:10:25.915Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.espn.com/nfl/story/_/id/50323095/sources-colts-willing-trade-star-rb-jonathan-taylor",
       "source_name": "ESPN",
       "headline": "Sources: Colts willing to trade Taylor, active in talks with multiple teams",
@@ -41907,6 +41865,49 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/cowboys-defense-stats-dc-christian-parker-mike-pettine-history",
+      "source_name": "FOX Sports",
+      "headline": "Cowboys Reportedly Demote DC Christian Parker In Damning Manner",
+      "published_at": "2026-11-18T15:49:58.000Z",
+      "observed_at": "2026-11-18T15:50:20.689Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-jaguars-c-robert-hainsey-week-to-week-with-knee-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Jaguars C Robert Hainsey week-to-week with knee injury",
+      "published_at": "2026-11-18T15:40:27.000Z",
+      "observed_at": "2026-11-18T15:50:20.689Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX",
+        "TEN"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
