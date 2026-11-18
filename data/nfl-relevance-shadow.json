@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/raiders-take-35-30-lead-early-in-fourth-quarter",
-      "source_name": "Pro Football Talk",
-      "headline": "Raiders take 35-30 lead early in fourth quarter",
-      "published_at": "2026-11-01T20:25:30.000Z",
-      "observed_at": "2026-11-01T20:30:22.971Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV",
-        "NYJ"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cardinals-replace-jacoby-brissett-with-gardner-minshew",
       "source_name": "Pro Football Talk",
       "headline": "Cardinals replace Jacoby Brissett with Gardner Minshew",
@@ -41876,6 +41854,27 @@
         "NYG"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dalton-kincaid-christian-benford-listed-as-out-of-bills-practice",
+      "source_name": "Pro Football Talk",
+      "headline": "Dalton Kincaid, Christian Benford listed as out of Bills practice",
+      "published_at": "2026-11-18T22:02:43.000Z",
+      "observed_at": "2026-11-18T22:10:19.868Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
