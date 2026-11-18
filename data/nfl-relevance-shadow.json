@@ -2,70 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-will-take-calculated-risk-if-jonathan-taylor-plays-today",
-      "source_name": "Pro Football Talk",
-      "headline": "Colts will take calculated risk, if Jonathan Taylor plays today",
-      "published_at": "2026-11-01T14:49:12.000Z",
-      "observed_at": "2026-11-01T15:00:25.900Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.espn.com/nfl/story/_/id/50319868/week-8-predictions-upsets-fantasy-sleepers-stats-2026",
-      "source_name": "ESPN",
-      "headline": "Last-minute predictions for NFL Week 8: Expectations for Derrick Henry, Jared Goff, more",
-      "published_at": "2026-11-01T00:03:37.000Z",
-      "observed_at": "2026-11-01T15:10:25.915Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE",
-        "PIT"
-      ],
-      "detected_category": "fantasy",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.espn.com/nfl/story/_/id/50336880/sources-eagles-trade-star-rb-saquon-barkley",
-      "source_name": "ESPN",
-      "headline": "Sources: Saquon won't be traded before deadline despite Eagles' struggles",
-      "published_at": "2026-11-01T12:50:12.000Z",
-      "observed_at": "2026-11-01T15:10:25.915Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.espn.com/nfl/story/_/id/50335308/raiders-not-planning-trading-maxx-crosby-sources-say",
       "source_name": "ESPN",
       "headline": "Sources: Raiders not planning Crosby trade as star DE wants to stay with Vegas",
@@ -41916,6 +41852,61 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50520940/sources-pettine-take-defensive-playcalling-cowboys",
+      "source_name": "ESPN",
+      "headline": "Sources: Pettine to take over defensive playcalling from Parker for Cowboys",
+      "published_at": "2026-11-18T15:02:42.000Z",
+      "observed_at": "2026-11-18T15:30:29.465Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/fantasy/football/story/_/id/50514411/facts-feelings-fantasy-advice-week-11",
+      "source_name": "ESPN",
+      "headline": "Facts vs. Feelings: Bye-mageddon means getting comfortable with the uncomfortable",
+      "published_at": "2026-11-18T15:13:23.000Z",
+      "observed_at": "2026-11-18T15:30:29.465Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/fantasy/football/story/_/id/50513739/fantasy-football-rankings-best-worst-matchup-qb-rb-wr-te",
+      "source_name": "ESPN",
+      "headline": "Matchup rankings for Week 11: Why you should start one 49er, but sit another",
+      "published_at": "2026-11-18T15:13:23.000Z",
+      "observed_at": "2026-11-18T15:30:29.465Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "fantasy",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
