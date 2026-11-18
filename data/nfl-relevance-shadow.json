@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/wu-tang-clan-thanksgiving-halftime-show-bears-lions-ford-field",
-      "source_name": "NFL.com",
-      "headline": "Wu-Tang Clan to headline Thanksgiving halftime show for Bears-Lions game at Ford Field",
-      "published_at": "2026-11-01T05:10:05.000Z",
-      "observed_at": "2026-11-01T17:20:19.005Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "DET"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-will-attempt-to-tie-franchise-record-winning-streak-on-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "Vikings will attempt to tie franchise-record winning streak on Sunday",
-      "published_at": "2026-11-01T17:11:10.000Z",
-      "observed_at": "2026-11-01T17:20:19.005Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN",
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jets-wr-omar-cooper-jr-has-two-straight-games-with-100-plus-yards-and-a-touchdown",
       "source_name": "Pro Football Talk",
       "headline": "Jets WR Omar Cooper Jr. has two straight games with 100-plus yards and a touchdown",
@@ -41914,6 +41870,45 @@
       "detected_teams": [
         "DET",
         "TB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-qb-rankings-index-week-11-2026-nfl-season",
+      "source_name": "NFL.com",
+      "headline": "NFL QB rankings, Week 11: Kirk Cousins climbs; Josh Allen slips from top three",
+      "published_at": "2026-11-18T05:53:00.000Z",
+      "observed_at": "2026-11-18T18:00:27.888Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/todd-monken-getting-flexed-into-sunday-night-is-really-cool-for-our-players",
+      "source_name": "Pro Football Talk",
+      "headline": "Todd Monken: Getting flexed into Sunday night is really cool for our players",
+      "published_at": "2026-11-18T17:52:28.000Z",
+      "observed_at": "2026-11-18T18:00:27.888Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE",
+        "LV"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
