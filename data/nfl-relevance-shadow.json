@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/broncos-rb-jonah-coleman-ready-for-any-opportunity-vs-chiefs-with-rj-harvey-ruled-out",
-      "source_name": "NFL.com",
-      "headline": "Broncos RB Jonah Coleman 'ready for any opportunity' vs. Chiefs with RJ Harvey ruled out",
-      "published_at": "2026-10-31T06:41:08.000Z",
-      "observed_at": "2026-10-31T18:50:18.232Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN",
-        "KC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/college-football/philip-rivers-consideration-north-carolina-state-head-coaching-job",
-      "source_name": "FOX Sports",
-      "headline": "Philip Rivers Reportedly Emerges As Focus Of NC State's Coaching Search",
-      "published_at": "2026-10-31T18:45:52.000Z",
-      "observed_at": "2026-10-31T18:50:18.232Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "coaching",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ravens-have-become-the-ultimate-good-half-bad-half-team",
       "source_name": "Pro Football Talk",
       "headline": "Ravens have become the ultimate good half/bad half team",
@@ -41953,6 +41914,40 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-mexico-city-game-barrio-nfl",
+      "source_name": "NFL.com",
+      "headline": "NFL Mexico City Game - Barrio NFL",
+      "published_at": "2026-11-18T12:57:25.000Z",
+      "observed_at": "2026-11-18T01:10:17.641Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-mexico-city-game-barrio-nfl-x8518",
+      "source_name": "NFL.com",
+      "headline": "NFL Mexico City Game - Barrio NFL",
+      "published_at": "2026-11-18T01:01:58.000Z",
+      "observed_at": "2026-11-18T01:10:17.641Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
