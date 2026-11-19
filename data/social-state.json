@@ -879668,24 +879668,29 @@
     },
     "c5a25370-1179-4b15-9e99-77b89978a4b3": {
       "story_id": "c5a25370-1179-4b15-9e99-77b89978a4b3",
-      "status": "new",
+      "status": "queued",
       "merged_into": null,
       "created_at": "2026-11-19T03:30:32.825Z",
-      "updated_at": "2026-11-19T03:30:32.825Z",
+      "updated_at": "2026-11-19T16:00:34.925Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
         "instagram_story": true
       },
       "source_story": {
-        "post_headline": null,
-        "base_image_url": null,
-        "source_name": null,
-        "source_url": null,
-        "category": null,
-        "teams": [],
-        "players": [],
-        "description": null,
+        "post_headline": "NICK BOSA: I DON'T THINK I'VE PLAYED MY BEST FOOTBALL",
+        "base_image_url": "https://static.www.nfl.com/image/upload/t_editorial_landscape_12_desktop/league/oniz75pswh8r8m0xhsqd",
+        "source_name": "NFL.com",
+        "source_url": "https://www.nfl.com/news/niners-nick-bosa-struggles-injury-not-my-best-football",
+        "category": "injury",
+        "teams": [
+          "Dallas Cowboys",
+          "San Francisco 49ers"
+        ],
+        "players": [
+          "Nick Bosa"
+        ],
+        "description": "49ers defensive end Nick Bosa's only stats in Sunday's 46-40 win over the Cowboys were one quarterback hit, four pressures and three penalties in 34 snaps.",
         "is_rumor": false
       },
       "artwork": {
@@ -882238,7 +882243,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-11-19T15:10:25.139Z",
-      "updated_at": "2026-11-19T15:10:25.150Z",
+      "updated_at": "2026-11-19T16:00:27.924Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -882386,6 +882391,15 @@
         "message": null,
         "at": null,
         "retry_count": 0
+      },
+      "selection": {
+        "destination": "story",
+        "slot_id": "story:2026-11-19T11:00:00-05:00",
+        "selected_at": "2026-11-19T16:00:27.924Z",
+        "window_start": "2026-11-19T15:00:00.000Z",
+        "window_end": "2026-11-19T16:00:00.000Z",
+        "score": 4,
+        "reason": "importance_score_rank"
       }
     },
     "3c0f793b-7d81-4011-ba88-a4b14686930c": {
@@ -895639,6 +895653,15 @@
       "status": "selected",
       "story_id": "c076d7f5-4973-4d4c-828e-fbfd75bd38e5",
       "processed_at": "2026-11-19T15:00:25.613Z"
+    },
+    "story:2026-11-19T11:00:00-05:00": {
+      "destination": "story",
+      "slot_time": "2026-11-19T16:00:00.000Z",
+      "window_start": "2026-11-19T15:00:00.000Z",
+      "window_end": "2026-11-19T16:00:00.000Z",
+      "status": "selected",
+      "story_id": "9aa7ab00-b4a1-4319-9352-bff8d63064ad",
+      "processed_at": "2026-11-19T16:00:27.924Z"
     }
   }
 }
