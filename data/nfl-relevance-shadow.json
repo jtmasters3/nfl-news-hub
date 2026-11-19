@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-mcvay-saw-some-good-some-bad-from-having-two-kickers-active-vs-chargers",
-      "source_name": "Pro Football Talk",
-      "headline": "Sean McVay saw some good, some bad from having two kickers active vs. Chargers",
-      "published_at": "2026-11-02T01:25:08.000Z",
-      "observed_at": "2026-11-02T01:40:18.161Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAC",
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/how-joe-burrow-and-the-bengals-won-a-game-they-almost-always-lose",
       "source_name": "NFL.com",
       "headline": "How Joe Burrow and the Bengals won a game they almost always lose",
@@ -41803,6 +41781,23 @@
       "headline": "Troy Aikman adds a little more to the lingering Joe Buck feud",
       "published_at": "2026-11-19T18:16:23.000Z",
       "observed_at": "2026-11-19T18:20:18.935Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-picks-week-11-2026-nfl-season",
+      "source_name": "NFL.com",
+      "headline": "NFL Week 11 picks: Upset and score predictions, matchup breakdowns for every game",
+      "published_at": "2026-11-19T06:34:41.000Z",
+      "observed_at": "2026-11-19T18:40:19.081Z",
       "decision": "keep",
       "classification": "ambiguous",
       "confidence": "low",
