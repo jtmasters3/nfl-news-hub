@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/buccaneers-beat-falcons-without-completing-pass",
-      "source_name": "FOX Sports",
-      "headline": "Buccaneers Become First NFL Team In 52 Years To Win Without Completing A Pass",
-      "published_at": "2026-11-01T21:59:58.000Z",
-      "observed_at": "2026-11-01T22:00:27.991Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/gardner-minshew-rallies-cardinals-to-33-30-ot-win-over-cowboys",
       "source_name": "Pro Football Talk",
       "headline": "Gardner Minshew rallies Cardinals to 33-30 OT win over Cowboys",
@@ -41874,6 +41852,28 @@
         "LV"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nick-bosa-i-dont-think-ive-played-my-best-football",
+      "source_name": "Pro Football Talk",
+      "headline": "Nick Bosa: I don't think I've played my best football",
+      "published_at": "2026-11-19T03:25:46.000Z",
+      "observed_at": "2026-11-19T03:30:23.895Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "SF"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
