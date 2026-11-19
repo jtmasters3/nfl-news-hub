@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/neil-reynolds-week-8-wrap-up-2026",
-      "source_name": "NFL.com",
-      "headline": "Neil Reynolds' Week 8 Wrap Up",
-      "published_at": "2026-11-02T12:56:23.000Z",
-      "observed_at": "2026-11-02T13:00:29.563Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dak-prescott-cowardice-to-put-the-blame-on-brian-schottenheimer",
-      "source_name": "Pro Football Talk",
-      "headline": "Dak Prescott: Cowardice to put the blame on Brian Schottenheimer",
-      "published_at": "2026-11-02T13:08:48.000Z",
-      "observed_at": "2026-11-02T13:20:19.986Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/the-commanders-after-an-awful-start-do-enough-to-buy-themselves-another-week",
       "source_name": "NFL.com",
       "headline": "The Commanders, after an awful start, do enough to buy themselves another week",
@@ -41777,6 +41739,49 @@
         "JAX"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50532934/commanders-defense-bengals-offense-joe-burrow",
+      "source_name": "ESPN",
+      "headline": "Bengals offense will be biggest test yet for Commanders' improving defense",
+      "published_at": "2026-11-19T21:33:54.000Z",
+      "observed_at": "2026-11-19T21:40:26.685Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN",
+        "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nnamdi-madubuike-misses-second-straight-practice",
+      "source_name": "Pro Football Talk",
+      "headline": "Nnamdi Madubuike misses second straight practice",
+      "published_at": "2026-11-19T21:31:22.000Z",
+      "observed_at": "2026-11-19T21:40:26.685Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
