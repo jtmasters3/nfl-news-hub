@@ -2,93 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lions-say-jack-campbell-will-remain-hospitalized-overnight",
-      "source_name": "Pro Football Talk",
-      "headline": "Lions say Jack Campbell will remain hospitalized overnight",
-      "published_at": "2026-11-02T00:25:35.000Z",
-      "observed_at": "2026-11-02T00:40:28.166Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET",
-        "MIN"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/jonathan-taylor-best-fits-nfl-trade-deadline-rumors",
-      "source_name": "FOX Sports",
-      "headline": "Best Fits For Jonathan Taylor: Which 6 Teams Make The Most Sense For Colts RB?",
-      "published_at": "2026-11-02T00:49:08.000Z",
-      "observed_at": "2026-11-02T00:50:20.094Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/broncos-goal-line-stand-holds-off-chiefs-28-24-for-division-lead",
-      "source_name": "Pro Football Talk",
-      "headline": "Broncos' goal-line stand holds off Chiefs 28-24 for division lead",
-      "published_at": "2026-11-02T00:53:36.000Z",
-      "observed_at": "2026-11-02T01:00:29.650Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN",
-        "KC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/denver-takes-control-afc-west-3-takeaways-from-broncos-win-over-chiefs",
-      "source_name": "FOX Sports",
-      "headline": "Denver Takes Control Of AFC West: 3 Takeaways From The Broncos' Win Over The Chiefs",
-      "published_at": "2026-11-02T00:53:42.000Z",
-      "observed_at": "2026-11-02T01:10:19.646Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN",
-        "KC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/browns-could-ve-made-a-statement-they-instead-got-a-reality-check-in-pittsburgh",
       "source_name": "NFL.com",
       "headline": "Browns could've made a statement. They instead got a reality check in Pittsburgh",
@@ -41819,6 +41732,87 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "nfl_preserving_category:contract"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/next-woman-up-kristin-wojcik-senior-manager-of-football-communications-for-the-san-francisco-49ers",
+      "source_name": "NFL.com",
+      "headline": "Next Woman Up: Kristin Wojcik, Senior Manager of Football Communications for the San Francisco 49ers",
+      "published_at": "2026-11-19T05:48:00.000Z",
+      "observed_at": "2026-11-19T18:00:27.299Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-week-11-picks-best-bets-every-game-wills-wagers",
+      "source_name": "FOX Sports",
+      "headline": "2026 NFL Week 11 Picks: Best Bets For Every Game — Will's Wagers",
+      "published_at": "2026-11-19T17:54:27.000Z",
+      "observed_at": "2026-11-19T18:00:27.299Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/marlon-humphrey-comment-ravens-statement-roster",
+      "source_name": "FOX Sports",
+      "headline": "Ravens Make Roster Move On Marlon Humphrey After Baltimore 'Criminals' Remark",
+      "published_at": "2026-11-19T17:52:54.000Z",
+      "observed_at": "2026-11-19T18:00:27.299Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/frank-reich-im-the-jets-offensive-coordinator-our-inability-to-score-starts-with-me",
+      "source_name": "Pro Football Talk",
+      "headline": "Frank Reich: I'm the Jets' offensive coordinator, our inability to score starts with me",
+      "published_at": "2026-11-19T17:48:19.000Z",
+      "observed_at": "2026-11-19T18:00:27.299Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV",
+        "NYJ"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
