@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/3-takeaways-from-lions-win-over-vikings",
-      "source_name": "FOX Sports",
-      "headline": "Minnesota Suffers First Defeat: 3 Takeaways From The Lions' Win Over The Vikings",
-      "published_at": "2026-11-01T22:13:25.000Z",
-      "observed_at": "2026-11-01T22:20:20.929Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET",
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/lions-lb-jack-campbell-carted-off-field-evaluated-for-neck-injury-at-hospital",
       "source_name": "NFL.com",
       "headline": "Lions LB Jack Campbell carted off field, evaluated for neck injury at hospital",
@@ -41873,6 +41851,27 @@
         "SF"
       ],
       "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-payton-wont-use-aidan-hutchinson-injury-as-a-teaching-moment",
+      "source_name": "Pro Football Talk",
+      "headline": "Sean Payton won't use Aidan Hutchinson injury as a teaching moment",
+      "published_at": "2026-11-19T05:05:09.000Z",
+      "observed_at": "2026-11-19T05:10:17.069Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
