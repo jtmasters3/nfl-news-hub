@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.espn.com/nfl/story/_/id/50347464/week-8-sunday-highlights-best-plays-touchdowns-2026",
-      "source_name": "ESPN",
-      "headline": "Follow live: Chiefs, Broncos battling in AFC West showdown",
-      "published_at": "2026-11-01T23:22:43.000Z",
-      "observed_at": "2026-11-01T23:40:24.346Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN",
-        "KC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.espn.com/nfl/story/_/id/50349558/ravens-lamar-jackson-rest-game-thumb-injury",
       "source_name": "ESPN",
       "headline": "Ravens QB Jackson needs thumb surgery, will be placed on IR",
@@ -41846,6 +41824,28 @@
       "detected_category": "coaching",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/browns-qb-deshaun-watson-open-to-possibility-of-extension-in-cleveland",
+      "source_name": "NFL.com",
+      "headline": "Browns QB Deshaun Watson open to possibility of extension in Cleveland",
+      "published_at": "2026-11-19T02:04:10.000Z",
+      "observed_at": "2026-11-19T14:10:21.716Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE"
+      ],
+      "detected_category": "contract",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:contract"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
