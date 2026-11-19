@@ -2,51 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chiefs-lead-broncos-17-13-at-halftime",
-      "source_name": "Pro Football Talk",
-      "headline": "Chiefs lead Broncos 17-13 at halftime",
-      "published_at": "2026-11-01T23:07:55.000Z",
-      "observed_at": "2026-11-01T23:10:19.641Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN",
-        "KC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-packers-decline-comment-on-latest-statement-from-josh-jacobs",
-      "source_name": "Pro Football Talk",
-      "headline": "NFL, Packers decline comment on latest statement from Josh Jacobs",
-      "published_at": "2026-11-01T23:00:43.000Z",
-      "observed_at": "2026-11-01T23:10:19.641Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB"
-      ],
-      "detected_category": "free_agency",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_released_by",
-        "nfl_preserving_category:free_agency"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-turn-justin-herberts-second-interception-into-td-lead-24-9",
       "source_name": "Pro Football Talk",
       "headline": "Rams turn Justin Herbert's second interception into TD, lead 24-9",
@@ -41845,6 +41800,50 @@
       "detected_teams": [
         "BAL",
         "CAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/from-geno-smith-to-jason-sanders-the-good-bad-and-ugly-of-the-jets-offseason-moves",
+      "source_name": "NFL.com",
+      "headline": "From Geno Smith to Jason Sanders, the good, bad and ugly of the Jets' offseason moves",
+      "published_at": "2026-11-19T10:46:06.000Z",
+      "observed_at": "2026-11-19T13:30:21.449Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYJ"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/who-are-the-nfl-s-contenders-and-pretenders-sorting-out-giants-steelers-rams-and-more",
+      "source_name": "NFL.com",
+      "headline": "Who are the NFL's contenders and pretenders? Sorting out Giants, Steelers, Rams and more",
+      "published_at": "2026-11-19T10:16:07.000Z",
+      "observed_at": "2026-11-19T13:30:21.449Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR",
+        "NYG",
+        "PIT"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
