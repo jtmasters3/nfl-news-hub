@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patrick-mahomes-third-td-gives-chiefs-a-24-13-lead",
-      "source_name": "Pro Football Talk",
-      "headline": "Patrick Mahomes' third TD gives Chiefs a 24-13 lead",
-      "published_at": "2026-11-01T23:53:41.000Z",
-      "observed_at": "2026-11-02T00:00:26.316Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN",
-        "KC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/lawyers-say-packers-josh-jacobs-has-tangible-evidence-disputing-allegations-from-other-women",
-      "source_name": "NFL.com",
-      "headline": "Lawyers say Packers' Josh Jacobs has 'tangible evidence' disputing allegations from other women",
-      "published_at": "2026-11-02T12:04:12.000Z",
-      "observed_at": "2026-11-02T00:10:20.057Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-dominate-second-half-defeat-chargers-24-9",
       "source_name": "Pro Football Talk",
       "headline": "Rams dominate second half, defeat Chargers 24-9",
@@ -41837,6 +41794,45 @@
       "confidence": "high",
       "detected_teams": [
         "LV"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/how-is-stefon-diggs-still-getting-it-done-he-s-a-technician-and-he-loves-the-work",
+      "source_name": "NFL.com",
+      "headline": "How is Stefon Diggs still getting it done? He's a 'technician,' and he loves the work",
+      "published_at": "2026-11-19T11:16:07.000Z",
+      "observed_at": "2026-11-19T16:40:19.217Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-lions-thanksgiving-audience-will-be-huge-and-it-could-have-been-even-bigger",
+      "source_name": "Pro Football Talk",
+      "headline": "Bears-Lions Thanksgiving audience will be huge — and it could have been even bigger",
+      "published_at": "2026-11-19T16:28:12.000Z",
+      "observed_at": "2026-11-19T16:40:19.217Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "DET"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
