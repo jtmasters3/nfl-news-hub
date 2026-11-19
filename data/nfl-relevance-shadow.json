@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-jacobss-lawyers-issue-statement-regarding-release-of-additional-allegations",
-      "source_name": "Pro Football Talk",
-      "headline": "Josh Jacobs's lawyers issue statement regarding release of additional allegations",
-      "published_at": "2026-11-01T22:24:30.000Z",
-      "observed_at": "2026-11-01T22:30:24.242Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jerry-jones-i-dont-see-making-an-in-season-coaching-change",
       "source_name": "Pro Football Talk",
       "headline": "Jerry Jones: I don't see making an in-season coaching change",
@@ -41869,6 +41848,23 @@
       "confidence": "low",
       "detected_teams": [],
       "detected_category": "coaching",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/joe-burrow-can-become-the-first-qb-ever-with-4-touchdowns-in-6-consecutive-games",
+      "source_name": "Pro Football Talk",
+      "headline": "Joe Burrow can become the first QB ever with 4+ touchdowns in 6 consecutive games",
+      "published_at": "2026-11-19T08:48:47.000Z",
+      "observed_at": "2026-11-19T09:00:27.942Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
       "nfl_evidence": [],
       "non_nfl_evidence": [],
       "reason_codes": [
