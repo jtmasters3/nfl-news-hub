@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/joe-burrow-totals-472-yards-and-six-touchdowns-as-bengals-beat-titans-in-overtime",
-      "source_name": "Pro Football Talk",
-      "headline": "Joe Burrow totals 472 yards and six touchdowns as Bengals beat Titans in overtime",
-      "published_at": "2026-11-01T21:47:41.000Z",
-      "observed_at": "2026-11-01T21:50:19.948Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CIN",
-        "TEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-campbell-had-no-new-information-on-jack-campbell-after-sundays-win",
       "source_name": "Pro Football Talk",
       "headline": "Dan Campbell had \"no new information\" on Jack Campbell after Sunday's win",
@@ -41875,6 +41853,29 @@
         "SF"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/giants-rb-cam-skattebo-says-no-more-backflips-after-aidan-hutchinsons-injury",
+      "source_name": "FOX Sports",
+      "headline": "Giants RB Cam Skattebo Says No More Backflips After Aidan Hutchinson’s Injury",
+      "published_at": "2026-11-19T01:02:55.000Z",
+      "observed_at": "2026-11-19T01:20:19.094Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "NYG",
+        "NYJ"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
