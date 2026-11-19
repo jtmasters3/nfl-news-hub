@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-campbell-had-no-new-information-on-jack-campbell-after-sundays-win",
-      "source_name": "Pro Football Talk",
-      "headline": "Dan Campbell had \"no new information\" on Jack Campbell after Sunday's win",
-      "published_at": "2026-11-01T21:47:11.000Z",
-      "observed_at": "2026-11-01T21:50:19.948Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET",
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lamar-jackson-to-have-thumb-surgery-could-be-out-for-season",
       "source_name": "Pro Football Talk",
       "headline": "Lamar Jackson to have thumb surgery, could be out for season",
@@ -41882,6 +41860,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/tom-bradys-nfl-power-rankings-bears-49ers-bills-chiefs-bengals",
+      "source_name": "FOX Sports",
+      "headline": "Tom Brady's NFL Power Rankings: The GOAT Thinks It's Obvious Who Best QB Is Right Now",
+      "published_at": "2026-11-19T02:11:36.000Z",
+      "observed_at": "2026-11-19T02:30:20.938Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
