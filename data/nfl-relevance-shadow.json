@@ -2,48 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.espn.com/nfl/story/_/id/50353208/vikings-acknowledge-justin-jefferson-frustration-loss",
-      "source_name": "ESPN",
-      "headline": "Vikings recognize Jefferson's frustration as WR quiet during -- and after -- loss",
-      "published_at": "2026-11-02T00:26:38.000Z",
-      "observed_at": "2026-11-02T00:40:28.166Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.espn.com/fantasy/football/story/_/page/FFSundayHighLows-50350092/nfl-week-8-fantasy-football-winners-losers-injuries-rankings-more",
-      "source_name": "ESPN",
-      "headline": "Week 8 winners and losers: Burrow, Higgins, Chase steal the show; Falcons falter",
-      "published_at": "2026-11-01T23:59:08.000Z",
-      "observed_at": "2026-11-02T00:40:28.166Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.espn.com/nfl/story/_/id/50353065/raiders-ashton-jeanty-two-carries-win-jets-comments",
       "source_name": "ESPN",
       "headline": "Raiders' Jeanty limited to 2 carries in win after comments about Jets' D",
@@ -41828,6 +41786,45 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "nfl_preserving_category:contract"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-thursday-nov-19",
+      "source_name": "NFL.com",
+      "headline": "NFL news roundup: Latest league updates from Thursday, Nov. 19",
+      "published_at": "2026-11-19T05:10:52.000Z",
+      "observed_at": "2026-11-19T17:20:22.099Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-sauce-gardner-is-not-expected-to-play-vs-texans-due-to-calf-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Sauce Gardner is not expected to play vs. Texans due to calf injury",
+      "published_at": "2026-11-19T17:09:45.000Z",
+      "observed_at": "2026-11-19T17:20:22.099Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "HOU",
+        "IND"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
