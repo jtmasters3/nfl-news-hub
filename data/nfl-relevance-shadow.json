@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lamar-jackson-to-have-thumb-surgery-could-be-out-for-season",
-      "source_name": "Pro Football Talk",
-      "headline": "Lamar Jackson to have thumb surgery, could be out for season",
-      "published_at": "2026-11-01T21:39:26.000Z",
-      "observed_at": "2026-11-01T21:50:19.948Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/2026-nfl-season-week-8-what-we-learned-from-sunday-s-games",
       "source_name": "NFL.com",
       "headline": "2026 NFL season, Week 8: What We Learned from Sunday's games",
@@ -41877,6 +41856,26 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/diego-pavia-is-the-first-pick-in-the-ufl-draft",
+      "source_name": "Pro Football Talk",
+      "headline": "Diego Pavia is the first pick in the UFL draft",
+      "published_at": "2026-11-19T02:44:41.000Z",
+      "observed_at": "2026-11-19T02:50:18.682Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [],
+      "detected_category": "draft",
+      "nfl_evidence": [
+        "phrase_nfl_draft",
+        "nfl_preserving_category:draft"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
