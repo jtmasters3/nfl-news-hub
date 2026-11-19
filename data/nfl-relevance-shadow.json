@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kyler-murray-developed-hamstring-tightness-late-in-sundays-loss",
-      "source_name": "Pro Football Talk",
-      "headline": "Kyler Murray developed hamstring tightness late in Sunday's loss",
-      "published_at": "2026-11-02T03:11:16.000Z",
-      "observed_at": "2026-11-02T03:20:19.924Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/frustrated-justin-jefferson-didnt-speak-to-reporters-after-sundays-loss",
-      "source_name": "Pro Football Talk",
-      "headline": "Frustrated Justin Jefferson didn't speak to reporters after Sunday's loss",
-      "published_at": "2026-11-02T03:07:08.000Z",
-      "observed_at": "2026-11-02T03:20:19.924Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chiefs-steelers-commanders-have-interest-in-brian-thomas-jr",
       "source_name": "Pro Football Talk",
       "headline": "Chiefs, Steelers, Commanders have interest in Brian Thomas Jr.",
@@ -41786,6 +41748,48 @@
         "CIN"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/christian-parker-considered-leaving-cowboys-after-losing-play-calling-duties",
+      "source_name": "NFL.com",
+      "headline": "Christian Parker considered leaving Cowboys after losing play-calling duties",
+      "published_at": "2026-11-19T07:46:06.000Z",
+      "observed_at": "2026-11-19T20:20:19.862Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/darren-waller-tommy-tremble-return-to-panthers-practice-thursday",
+      "source_name": "Pro Football Talk",
+      "headline": "Darren Waller, Tommy Tremble return to Panthers practice Thursday",
+      "published_at": "2026-11-19T20:07:39.000Z",
+      "observed_at": "2026-11-19T20:20:19.862Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
