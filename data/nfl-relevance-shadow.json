@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.espn.com/espn/betting/story/_/id/50358691/2026-nfl-week-9-schedule-odds-point-spreads-totals",
-      "source_name": "ESPN",
-      "headline": "Week 9 betting odds for every game",
-      "published_at": "2026-11-02T16:44:00.000Z",
-      "observed_at": "2026-11-02T21:10:28.521Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.espn.com/espn/betting/story/_/id/50358387/nfl-week-9-betting-odds-props-early-picks-predictions",
       "source_name": "ESPN",
       "headline": "Early bets for Week 9: Bengals stay hot? Another Cowboys shootout?",
@@ -41758,6 +41741,27 @@
         "DET"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/bills-to-retire-hall-of-fame-wide-receiver-andre-reed-no-83-next-season",
+      "source_name": "NFL.com",
+      "headline": "Bills to retire Hall of Fame wide receiver Andre Reed’s No. 83 next season",
+      "published_at": "2026-11-20T02:29:14.000Z",
+      "observed_at": "2026-11-20T14:40:19.936Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF"
+      ],
+      "detected_category": "retirement",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
