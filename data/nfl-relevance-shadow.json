@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/jacksonville-jaguars-davon-hamilton-quad-injury",
-      "source_name": "FOX Sports",
-      "headline": "Jaguars DT DaVon Hamilton Suffers Torn Quad, Reportedly Out For Season",
-      "published_at": "2026-11-02T17:01:32.000Z",
-      "observed_at": "2026-11-02T17:30:25.015Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "JAX"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/the-chiefs-were-seconds-from-a-huge-win-in-denver-instead-they-re-searching-for-answers",
       "source_name": "NFL.com",
       "headline": "The Chiefs were seconds from a huge win in Denver. Instead, they're searching for answers.",
@@ -41774,6 +41752,27 @@
       "confidence": "high",
       "detected_teams": [
         "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/c-j-stroud-connects-with-nico-collins-to-give-texans-7-3-lead",
+      "source_name": "Pro Football Talk",
+      "headline": "C.J. Stroud connects with Nico Collins to give Texans 7-3 lead",
+      "published_at": "2026-11-20T02:02:30.000Z",
+      "observed_at": "2026-11-20T02:10:17.630Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "HOU"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
