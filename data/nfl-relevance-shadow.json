@@ -2,51 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.espn.com/nfl/story/_/id/50353305/larry-csonka-1972-miami-dolphins-celebrates",
-      "source_name": "ESPN",
-      "headline": "Larry Csonka celebrates Vikings' first loss, keeping '72 Dolphins' undefeated record alive",
-      "published_at": "2026-11-02T16:14:24.000Z",
-      "observed_at": "2026-11-02T21:10:28.521Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIA",
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/murray-has-hamstring-soreness-but-the-vikings-arent-ready-to-say-if-his-availability-is-a-question",
-      "source_name": "FOX Sports",
-      "headline": "Vikings QB Kyler Murray Has Hamstring Soreness; Status vs. Bills Unclear",
-      "published_at": "2026-11-02T21:01:39.000Z",
-      "observed_at": "2026-11-02T21:10:28.521Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "DET",
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brandon-aiyuk-hires-drew-rosenhaus-wants-to-play-again",
       "source_name": "Pro Football Talk",
       "headline": "Brandon Aiyuk hires Drew Rosenhaus, wants to play again",
@@ -41761,6 +41716,50 @@
         "LAR"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/kirk-cousins-slow-down-blinders-on-whirlwind-vikings-return",
+      "source_name": "NFL.com",
+      "headline": "Kirk Cousins trying to 'slow down,' keep blinders on amid whirlwind Vikings return: 'Ignorance is bliss'",
+      "published_at": "2026-11-20T03:21:21.000Z",
+      "observed_at": "2026-11-20T15:30:25.037Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV",
+        "MIN"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/geno-smith-set-for-full-practice-on-friday",
+      "source_name": "Pro Football Talk",
+      "headline": "Geno Smith set for full practice on Friday",
+      "published_at": "2026-11-20T15:19:41.000Z",
+      "observed_at": "2026-11-20T15:30:25.037Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC",
+        "NYJ"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
