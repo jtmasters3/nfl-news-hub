@@ -2,93 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/packers-plan-for-micah-parsons-to-practice-this-week-for-first-time-since-acl-tear",
-      "source_name": "NFL.com",
-      "headline": "Packers plan for Micah Parsons to practice this week for first time since ACL tear",
-      "published_at": "2026-11-02T08:01:06.000Z",
-      "observed_at": "2026-11-02T23:50:20.581Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-dbs-caleb-downs-p-j-locke-in-concussion-protocol",
-      "source_name": "Pro Football Talk",
-      "headline": "Cowboys DBs Caleb Downs, P.J. Locke in concussion protocol",
-      "published_at": "2026-11-02T23:45:29.000Z",
-      "observed_at": "2026-11-02T23:50:20.581Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI",
-        "DAL"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ravens-qb-joe-fagnano-fighting-through-a-couple-things-has-a-chance-to-play-thursday",
-      "source_name": "Pro Football Talk",
-      "headline": "Ravens QB Joe Fagnano \"fighting through a couple things,\" has \"a chance\" to play Thursday",
-      "published_at": "2026-11-02T23:42:18.000Z",
-      "observed_at": "2026-11-02T23:50:20.581Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "JAX"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/week-8-monday-night-inactives-chicago-bears-at-seattle-seahawks",
-      "source_name": "NFL.com",
-      "headline": "Week 8 Monday night inactives: Chicago Bears at Seattle Seahawks",
-      "published_at": "2026-11-02T11:49:52.000Z",
-      "observed_at": "2026-11-03T00:00:26.825Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/packers-plan-keep-josh-jacobs-roster-nfl-conducts-investigation",
       "source_name": "FOX Sports",
       "headline": "Packers Plan To Keep Josh Jacobs On Roster As NFL Conducts Investigation",
@@ -41739,6 +41652,88 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/arizona-cardinals-qb-carson-beck-injury-josh-johnson",
+      "source_name": "FOX Sports",
+      "headline": "Cardinals' QB Carson Beck dealing with back spasms, meaning 40-year-old Josh Johnson could start",
+      "published_at": "2026-11-20T19:05:15.000Z",
+      "observed_at": "2026-11-20T19:40:20.702Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-list-isaiah-rodgers-as-questionable-for-sunday-nights-game",
+      "source_name": "Pro Football Talk",
+      "headline": "Vikings list Isaiah Rodgers as questionable for Sunday night's game",
+      "published_at": "2026-11-20T19:35:00.000Z",
+      "observed_at": "2026-11-20T19:40:20.702Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN",
+        "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/a-j-brown-is-expected-to-miss-multiple-weeks-with-hamstring-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "A.J. Brown is expected to miss multiple weeks with hamstring injury",
+      "published_at": "2026-11-20T19:33:48.000Z",
+      "observed_at": "2026-11-20T19:40:20.702Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/shane-steichen-daniel-jones-didnt-ask-to-be-released",
+      "source_name": "Pro Football Talk",
+      "headline": "Shane Steichen: Daniel Jones didn't ask to be released",
+      "published_at": "2026-11-20T19:25:36.000Z",
+      "observed_at": "2026-11-20T19:40:20.702Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
