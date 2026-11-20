@@ -2,87 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-yaya-diaby-set-to-miss-time-with-grade-2-mcl-sprain",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: YaYa Diaby set to miss time with Grade 2 MCL sprain",
-      "published_at": "2026-11-02T17:37:01.000Z",
-      "observed_at": "2026-11-02T17:40:20.849Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "TB"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/donde-ver-el-2026-nfl-madrid-game-en-espana",
-      "source_name": "NFL.com",
-      "headline": "Dónde ver el 2026 NFL Madrid Game en España",
-      "published_at": "2026-11-01T05:35:00.000Z",
-      "observed_at": "2026-11-02T17:50:21.857Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/hammond-isnt-giving-up-on-bears-making-a-move-to-indiana",
-      "source_name": "Pro Football Talk",
-      "headline": "Hammond isn't giving up on Bears making a move to Indiana",
-      "published_at": "2026-11-02T17:58:21.000Z",
-      "observed_at": "2026-11-02T18:00:29.288Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-week-8-sunday-aftermath-ravens-cowboys-vikings",
-      "source_name": "NFL.com",
-      "headline": "NFL Week 8 Sunday aftermath: Ravens' season on the brink; can Vikings trust Kyler Murray?",
-      "published_at": "2026-11-02T06:26:23.000Z",
-      "observed_at": "2026-11-02T18:30:23.489Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-vrabel-on-a-j-brown-well-see-how-he-progresses-during-the-week",
       "source_name": "Pro Football Talk",
       "headline": "Mike Vrabel on A.J. Brown: We'll see how he progresses during the week",
@@ -41773,6 +41692,92 @@
       "detected_teams": [
         "HOU",
         "IND"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50535018/colts-texans-highlights-best-plays-moments-touchdowns",
+      "source_name": "ESPN",
+      "headline": "Follow live: Texans' D forces safety on Daniel Jones as Colts look for answers",
+      "published_at": "2026-11-20T03:15:53.000Z",
+      "observed_at": "2026-11-20T03:30:31.133Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "HOU",
+        "IND"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50535411/bears-jeffery-simmons-says-knee-fine-expects-play-vs-saints",
+      "source_name": "ESPN",
+      "headline": "99 problems? Bears DT Simmons says knee injury 'ain't one,' expects to play",
+      "published_at": "2026-11-19T23:55:03.000Z",
+      "observed_at": "2026-11-20T03:30:31.133Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "NO"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50535323/washington-commanders-beer-spear",
+      "source_name": "ESPN",
+      "headline": "Behold the Beer Spear: Commanders unveil limited-edition vessel tied to new alternates",
+      "published_at": "2026-11-20T01:25:49.000Z",
+      "observed_at": "2026-11-20T03:30:31.133Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/puka-nacuas-suspension-arises-from-diversion-program",
+      "source_name": "Pro Football Talk",
+      "headline": "Puka Nacua's suspension arises from diversion program",
+      "published_at": "2026-11-20T03:20:53.000Z",
+      "observed_at": "2026-11-20T03:30:31.133Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
