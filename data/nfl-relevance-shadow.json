@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.espn.com/nfl/story/_/id/50349514/week-8-overreactions-2026-graziano-schottenheimer-jackson",
-      "source_name": "ESPN",
-      "headline": "Overreactions: Brian Schottenheimer's days in Dallas numbered? And much more",
-      "published_at": "2026-11-02T15:42:54.000Z",
-      "observed_at": "2026-11-02T21:10:28.521Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.espn.com/nfl/story/_/id/50357980/dallas-cowboys-loss-cardinals-nfc-east",
-      "source_name": "ESPN",
-      "headline": "'Names don't win games': Cowboys failed to get it done despite believing in their talent",
-      "published_at": "2026-11-02T15:42:44.000Z",
-      "observed_at": "2026-11-02T21:10:28.521Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI",
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.espn.com/nfl/story/_/id/50359521/chiefs-fourth-quarter-collapse-broncos-afc-west-standings",
       "source_name": "ESPN",
       "headline": "'Didn't finish the way we should've': Chiefs' collapse opens up the AFC West",
@@ -41759,6 +41715,44 @@
       "detected_teams": [
         "DAL",
         "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/he-grew-up-among-raider-haters-why-klint-kubiak-is-now-trying-to-save-the-silver-and-black",
+      "source_name": "NFL.com",
+      "headline": "He grew up among 'Raider Haters.' Why Klint Kubiak is now trying to save the Silver and Black",
+      "published_at": "2026-11-20T10:46:06.000Z",
+      "observed_at": "2026-11-20T14:00:26.435Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/what-would-a-chargers-tank-even-look-like-it-s-impossible-to-tank-in-football",
+      "source_name": "NFL.com",
+      "headline": "What would a Chargers tank even look like? 'It's impossible to tank in football'",
+      "published_at": "2026-11-20T01:16:06.000Z",
+      "observed_at": "2026-11-20T14:00:26.435Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
