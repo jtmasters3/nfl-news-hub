@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.espn.com/nfl/story/_/id/50361004/vikings-uncertain-qb-kyler-murray-status-vs-bills",
-      "source_name": "ESPN",
-      "headline": "Vikings uncertain of Murray's status vs. Bills due to sore hamstring",
-      "published_at": "2026-11-02T22:59:35.000Z",
-      "observed_at": "2026-11-02T23:10:28.116Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.espn.com/nfl/story/_/id/50360735/miami-dolphins-blow-lead-vs-patriots-improving",
-      "source_name": "ESPN",
-      "headline": "Jeff Hafley said Dolphins now need to show resiliency for all four quarters",
-      "published_at": "2026-11-02T22:27:06.000Z",
-      "observed_at": "2026-11-02T23:10:28.116Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/john-harbaugh-admits-calling-amy-adams-strunk-about-jeffery-simmons-trade",
       "source_name": "Pro Football Talk",
       "headline": "John Harbaugh admits calling Amy Adams Strunk about Jeffery Simmons trade",
@@ -41737,6 +41694,50 @@
         "IND"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/colts-waive-daniel-jones-name-anthony-richardson-new-starting-quarterback",
+      "source_name": "NFL.com",
+      "headline": "Colts waive Daniel Jones, name Anthony Richardson new starting quarterback",
+      "published_at": "2026-11-20T06:17:59.000Z",
+      "observed_at": "2026-11-20T18:30:23.115Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/christian-benford-and-dorian-williams-ruled-out-dalton-kincaid-doubtful-for-bills",
+      "source_name": "Pro Football Talk",
+      "headline": "Christian Benford and Dorian Williams ruled out, Dalton Kincaid doubtful for Bills",
+      "published_at": "2026-11-20T18:24:08.000Z",
+      "observed_at": "2026-11-20T18:30:23.115Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "MIA"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
