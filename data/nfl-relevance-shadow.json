@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-cut-des-jared-ivey-drake-jackson",
-      "source_name": "Pro Football Talk",
-      "headline": "Falcons cut DEs Jared Ivey, Drake Jackson",
-      "published_at": "2026-11-02T21:37:19.000Z",
-      "observed_at": "2026-11-02T21:40:20.559Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL"
-      ],
-      "detected_category": "free_agency",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:free_agency"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/cardinals-qb-gardner-minshew-starting-qb-carson-beck-backup",
-      "source_name": "NFL.com",
-      "headline": "Cardinals to start QB Gardner Minshew vs. Seahawks; rookie Carson Beck to be backup",
-      "published_at": "2026-11-02T09:39:18.000Z",
-      "observed_at": "2026-11-02T21:50:22.636Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI",
-        "SEA"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/browns-waive-rb-audric-estime",
       "source_name": "Pro Football Talk",
       "headline": "Browns waive RB Audric Estime",
@@ -41750,6 +41706,40 @@
       "headline": "The Protect College Sports Act proponents are getting desperate",
       "published_at": "2026-11-20T16:09:25.000Z",
       "observed_at": "2026-11-20T16:20:20.405Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/trey-mcbride-is-the-nfl-s-best-tight-end-and-maybe-its-best-trash-talker-on-offense",
+      "source_name": "NFL.com",
+      "headline": "Trey McBride is the NFL's best tight end, and maybe its best trash talker on offense",
+      "published_at": "2026-11-20T11:16:06.000Z",
+      "observed_at": "2026-11-20T16:30:23.339Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/the-nfl-s-largest-international-slate-yet-concludes-sunday-in-mexico-city-what-did-we-learn",
+      "source_name": "NFL.com",
+      "headline": "The NFL's largest international slate yet concludes Sunday in Mexico City. What did we learn?",
+      "published_at": "2026-11-20T10:46:06.000Z",
+      "observed_at": "2026-11-20T16:30:23.339Z",
       "decision": "keep",
       "classification": "ambiguous",
       "confidence": "low",
