@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brandon-aiyuk-hires-drew-rosenhaus-wants-to-play-again",
-      "source_name": "Pro Football Talk",
-      "headline": "Brandon Aiyuk hires Drew Rosenhaus, wants to play again",
-      "published_at": "2026-11-02T21:01:11.000Z",
-      "observed_at": "2026-11-02T21:10:28.521Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-elevate-te-stephen-carlson-for-monday-night-vs-seahawks",
       "source_name": "Pro Football Talk",
       "headline": "Bears elevate TE Stephen Carlson for Monday night vs. Seahawks",
@@ -41758,6 +41741,28 @@
       "detected_teams": [
         "LAC",
         "NYJ"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brock-purdy-practicing-at-altitude-was-the-right-move-for-sure",
+      "source_name": "Pro Football Talk",
+      "headline": "Brock Purdy: Practicing at altitude was the right move, for sure",
+      "published_at": "2026-11-20T15:32:08.000Z",
+      "observed_at": "2026-11-20T15:40:19.793Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN",
+        "SF"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
