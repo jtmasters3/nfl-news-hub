@@ -2,30 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ravens-add-qb-austin-reed-to-practice-squad",
-      "source_name": "Pro Football Talk",
-      "headline": "Ravens add QB Austin Reed to practice squad",
-      "published_at": "2026-11-02T21:26:55.000Z",
-      "observed_at": "2026-11-02T21:30:24.292Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "BUF"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-cut-des-jared-ivey-drake-jackson",
       "source_name": "Pro Football Talk",
       "headline": "Falcons cut DEs Jared Ivey, Drake Jackson",
@@ -41757,6 +41733,23 @@
       "headline": "NFL news roundup: Latest league updates from Friday, Nov. 20",
       "published_at": "2026-11-20T03:51:45.000Z",
       "observed_at": "2026-11-20T16:00:36.500Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/the-protect-college-sports-act-proponents-are-getting-desperate",
+      "source_name": "Pro Football Talk",
+      "headline": "The Protect College Sports Act proponents are getting desperate",
+      "published_at": "2026-11-20T16:09:25.000Z",
+      "observed_at": "2026-11-20T16:20:20.405Z",
       "decision": "keep",
       "classification": "ambiguous",
       "confidence": "low",
