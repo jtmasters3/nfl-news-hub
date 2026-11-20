@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-elevate-te-stephen-carlson-for-monday-night-vs-seahawks",
-      "source_name": "Pro Football Talk",
-      "headline": "Bears elevate TE Stephen Carlson for Monday night vs. Seahawks",
-      "published_at": "2026-11-02T21:10:22.000Z",
-      "observed_at": "2026-11-02T21:20:22.122Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/seahawks-activate-jadarian-price-from-ir",
-      "source_name": "Pro Football Talk",
-      "headline": "Seahawks activate Jadarian Price from IR",
-      "published_at": "2026-11-02T21:26:56.000Z",
-      "observed_at": "2026-11-02T21:30:24.292Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "SEA"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ravens-add-qb-austin-reed-to-practice-squad",
       "source_name": "Pro Football Talk",
       "headline": "Ravens add QB Austin Reed to practice squad",
@@ -41771,6 +41727,45 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/vikings-vs-49ers-3-must-know-storylines-for-nfl-week-11-mexico-city-game-on-sunday-night-football",
+      "source_name": "NFL.com",
+      "headline": "Vikings vs. 49ers: 3 must-know storylines for NFL Week 11 Mexico City game on 'Sunday Night Football'",
+      "published_at": "2026-11-20T03:56:26.000Z",
+      "observed_at": "2026-11-20T16:00:36.500Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN",
+        "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-nov-20",
+      "source_name": "NFL.com",
+      "headline": "NFL news roundup: Latest league updates from Friday, Nov. 20",
+      "published_at": "2026-11-20T03:51:45.000Z",
+      "observed_at": "2026-11-20T16:00:36.500Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
