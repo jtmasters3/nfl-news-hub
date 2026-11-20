@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cardinals-wr-kendrick-bournes-ankle-injury-could-end-his-season",
-      "source_name": "Pro Football Talk",
-      "headline": "Cardinals WR Kendrick Bourne's ankle injury could end his season",
-      "published_at": "2026-11-02T22:06:28.000Z",
-      "observed_at": "2026-11-02T22:20:20.362Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI",
-        "DAL"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/the-nfl-caleb-williams-shoe-dispute-takes-center-stage-on-monday-night",
-      "source_name": "Pro Football Talk",
-      "headline": "The NFL, Caleb Williams shoe dispute takes center stage on Monday night",
-      "published_at": "2026-11-02T22:23:00.000Z",
-      "observed_at": "2026-11-02T22:30:24.483Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patriots-waive-s-elliott-davison",
       "source_name": "Pro Football Talk",
       "headline": "Patriots waive S Elliott Davison",
@@ -41751,6 +41707,45 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/todd-bowles-baker-mayfield-trending-in-the-right-direction-to-play-vs-lions",
+      "source_name": "Pro Football Talk",
+      "headline": "Todd Bowles: Baker Mayfield trending in the right direction to play vs. Lions",
+      "published_at": "2026-11-20T17:27:29.000Z",
+      "observed_at": "2026-11-20T17:30:21.629Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "TB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/puka-nacua-will-undergo-knee-surgery-and-likely-miss-the-rest-of-the-season",
+      "source_name": "Pro Football Talk",
+      "headline": "Puka Nacua will undergo knee surgery and likely miss the rest of the season",
+      "published_at": "2026-11-20T17:24:22.000Z",
+      "observed_at": "2026-11-20T17:30:21.629Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
