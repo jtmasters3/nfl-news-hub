@@ -887123,7 +887123,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-11-19T20:40:24.092Z",
-      "updated_at": "2026-11-20T13:00:27.587Z",
+      "updated_at": "2026-11-20T15:00:29.837Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -887274,11 +887274,11 @@
         "retry_count": 0
       },
       "selection": {
-        "destination": "feed",
-        "slot_id": "feed:2026-11-20T08:00:00-05:00",
-        "selected_at": "2026-11-20T13:00:27.587Z",
-        "window_start": "2026-11-20T03:00:00.000Z",
-        "window_end": "2026-11-20T13:00:00.000Z",
+        "destination": "story",
+        "slot_id": "story:2026-11-20T10:00:00-05:00",
+        "selected_at": "2026-11-20T15:00:29.837Z",
+        "window_start": "2026-11-20T14:00:00.000Z",
+        "window_end": "2026-11-20T15:00:00.000Z",
         "score": 10,
         "reason": "final_fallback_recent_pool_importance_score_rank"
       }
@@ -896546,7 +896546,7 @@
       "status": "queued",
       "merged_into": null,
       "created_at": "2026-11-20T14:10:37.882Z",
-      "updated_at": "2026-11-20T14:10:37.897Z",
+      "updated_at": "2026-11-20T15:00:29.837Z",
       "content_package_version": 2,
       "publishing_preferences": {
         "instagram_feed": true,
@@ -896697,6 +896697,15 @@
         "message": null,
         "at": null,
         "retry_count": 0
+      },
+      "selection": {
+        "destination": "feed",
+        "slot_id": "feed:2026-11-20T10:00:00-05:00",
+        "selected_at": "2026-11-20T15:00:29.837Z",
+        "window_start": "2026-11-20T13:00:00.000Z",
+        "window_end": "2026-11-20T15:00:00.000Z",
+        "score": 4,
+        "reason": "importance_score_rank"
       }
     },
     "7d4c16f7-c92e-438c-b30c-4d9e17acf9aa": {
@@ -909659,6 +909668,24 @@
       "status": "selected",
       "story_id": "c00d7d73-395c-40db-9751-4dbeb0e954c7",
       "processed_at": "2026-11-20T14:00:26.435Z"
+    },
+    "feed:2026-11-20T10:00:00-05:00": {
+      "destination": "feed",
+      "slot_time": "2026-11-20T15:00:00.000Z",
+      "window_start": "2026-11-20T13:00:00.000Z",
+      "window_end": "2026-11-20T15:00:00.000Z",
+      "status": "selected",
+      "story_id": "d7bc9f27-01e1-4ea2-a370-366ecf01d4b4",
+      "processed_at": "2026-11-20T15:00:29.837Z"
+    },
+    "story:2026-11-20T10:00:00-05:00": {
+      "destination": "story",
+      "slot_time": "2026-11-20T15:00:00.000Z",
+      "window_start": "2026-11-20T14:00:00.000Z",
+      "window_end": "2026-11-20T15:00:00.000Z",
+      "status": "selected",
+      "story_id": "fece6031-32a3-4de2-a6e3-d88e6321906b",
+      "processed_at": "2026-11-20T15:00:29.837Z"
     }
   }
 }
