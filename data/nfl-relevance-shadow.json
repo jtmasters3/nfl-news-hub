@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/todd-monken-expects-to-see-sacks-start-to-pile-up-for-jared-verse",
-      "source_name": "Pro Football Talk",
-      "headline": "Todd Monken expects to see sacks start to \"pile up\" for Jared Verse",
-      "published_at": "2026-11-02T23:23:59.000Z",
-      "observed_at": "2026-11-02T23:30:27.574Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE",
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/big-bets-report-huge-wager-3-leg-parlay-cashes-almost-600k",
-      "source_name": "FOX Sports",
-      "headline": "Big Bets Report: 3-Leg Moneyline Parlay Cashes In For Almost $600k",
-      "published_at": "2026-11-02T23:17:52.000Z",
-      "observed_at": "2026-11-02T23:40:21.159Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/packers-plan-for-micah-parsons-to-practice-this-week-for-first-time-since-acl-tear",
       "source_name": "NFL.com",
       "headline": "Packers plan for Micah Parsons to practice this week for first time since ACL tear",
@@ -41743,6 +41700,45 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jeffery-simmons-luther-burden-kyle-monangai-have-no-injury-designations-for-sunday",
+      "source_name": "Pro Football Talk",
+      "headline": "Jeffery Simmons, Luther Burden, Kyle Monangai have no injury designations for Sunday",
+      "published_at": "2026-11-20T19:23:49.000Z",
+      "observed_at": "2026-11-20T19:30:24.212Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "NO"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/drake-maye-likely-out-for-season-with-fractured-fibula",
+      "source_name": "Pro Football Talk",
+      "headline": "Drake Maye likely out for season with fractured fibula",
+      "published_at": "2026-11-20T19:22:33.000Z",
+      "observed_at": "2026-11-20T19:30:24.212Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
