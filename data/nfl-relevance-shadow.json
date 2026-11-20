@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patriots-waive-s-elliott-davison",
-      "source_name": "Pro Football Talk",
-      "headline": "Patriots waive S Elliott Davison",
-      "published_at": "2026-11-02T22:28:26.000Z",
-      "observed_at": "2026-11-02T22:40:20.938Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE"
-      ],
-      "detected_category": "free_agency",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:free_agency"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/myles-garrett-will-practice-this-week",
       "source_name": "Pro Football Talk",
       "headline": "Myles Garrett will practice this week",
@@ -41746,6 +41724,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-hope-to-have-kobie-turner-back-for-week-12",
+      "source_name": "Pro Football Talk",
+      "headline": "Rams hope to have Kobie Turner back for Week 12",
+      "published_at": "2026-11-20T17:33:28.000Z",
+      "observed_at": "2026-11-20T17:50:18.225Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
