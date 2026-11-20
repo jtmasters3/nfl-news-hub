@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lions-provide-update-on-lb-jack-campbell",
-      "source_name": "Pro Football Talk",
-      "headline": "Lions provide update on LB Jack Campbell",
-      "published_at": "2026-11-02T19:43:29.000Z",
-      "observed_at": "2026-11-02T19:50:20.670Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-bears-vs-seahawks-tv-channel-live-stream-time-nov-2-2026",
       "source_name": "FOX Sports",
       "headline": "How to Watch Bears vs. Seahawks: TV Channel, Live Stream, Time",
@@ -41783,6 +41762,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ashton-jeantys-bad-season-running-the-ball-overshadows-his-receiving-production",
+      "source_name": "Pro Football Talk",
+      "headline": "Ashton Jeanty's bad season running the ball overshadows his receiving production",
+      "published_at": "2026-11-20T10:20:15.000Z",
+      "observed_at": "2026-11-20T10:30:22.827Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
