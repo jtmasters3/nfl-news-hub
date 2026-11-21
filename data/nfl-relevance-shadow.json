@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-power-rankings-week-9-2026-nfl-season",
-      "source_name": "NFL.com",
-      "headline": "NFL Power Rankings, Week 9: Bills claim No. 1 spot, while Bears vault into top three",
-      "published_at": "2026-11-03T03:54:11.000Z",
-      "observed_at": "2026-11-03T16:00:30.102Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "CHI",
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/caleb-williams-has-arrived-as-a-top-tier-quarterback",
       "source_name": "Pro Football Talk",
       "headline": "Caleb Williams has arrived as a top-tier quarterback",
@@ -41731,6 +41708,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/the-first-21-chapters-of-quarterback-of-the-future-are-available",
+      "source_name": "Pro Football Talk",
+      "headline": "The first 21 chapters of Quarterback of the Future are available",
+      "published_at": "2026-11-21T15:23:01.000Z",
+      "observed_at": "2026-11-21T15:30:22.213Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
