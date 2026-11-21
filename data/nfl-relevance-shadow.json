@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/ravens-to-start-undrafted-rookie-qb-joe-fagnano-vs-jaguars-on-thursday",
-      "source_name": "NFL.com",
-      "headline": "Ravens to start undrafted rookie QB Joe Fagnano vs. Jaguars on Thursday",
-      "published_at": "2026-11-03T09:18:07.000Z",
-      "observed_at": "2026-11-03T21:30:32.702Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "JAX"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_udfa"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cardinals-officially-place-jeremiyah-love-kendrick-bourne-on-ir",
       "source_name": "Pro Football Talk",
       "headline": "Cardinals officially place Jeremiyah Love, Kendrick Bourne on IR",
@@ -41738,6 +41715,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kyren-williams-has-a-toe-injury-is-expected-to-be-ready-for-wednesday",
+      "source_name": "Pro Football Talk",
+      "headline": "Kyren Williams has a toe injury, is expected to be ready for Wednesday",
+      "published_at": "2026-11-21T22:54:25.000Z",
+      "observed_at": "2026-11-21T23:00:26.513Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
+        "LAR"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
