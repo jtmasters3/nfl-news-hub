@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/favorite-dogs-back-panthers-over-broncos-minnesota-cover-vs-ucla",
-      "source_name": "FOX Sports",
-      "headline": "Favorite 'Dogs: Back Panthers Over Broncos; Minnesota To Cover vs. UCLA",
-      "published_at": "2026-11-03T19:19:27.000Z",
-      "observed_at": "2026-11-03T19:30:29.244Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR",
-        "DEN",
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/bears-signal-arrive-top-nfc-contender-dominating-seahawks",
       "source_name": "FOX Sports",
       "headline": "The Bears Have Arrived: Caleb Williams & Co. Emerge As A Top Super Bowl Contender",
@@ -41730,6 +41707,28 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/commanders-list-jacory-croskey-merritt-rachaad-white-as-questionable-for-monday",
+      "source_name": "Pro Football Talk",
+      "headline": "Commanders list Jacory Croskey-Merritt, Rachaad White as questionable for Monday",
+      "published_at": "2026-11-21T21:11:52.000Z",
+      "observed_at": "2026-11-21T21:20:24.066Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN",
+        "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
