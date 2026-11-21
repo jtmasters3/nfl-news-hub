@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dt-adetomiwa-adebawore-agrees-to-two-year-extension-with-colts",
-      "source_name": "Pro Football Talk",
-      "headline": "DT Adetomiwa Adebawore agrees to two-year extension with Colts",
-      "published_at": "2026-11-03T21:17:50.000Z",
-      "observed_at": "2026-11-03T21:20:30.911Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/ravens-to-start-undrafted-rookie-qb-joe-fagnano-vs-jaguars-on-thursday",
       "source_name": "NFL.com",
       "headline": "Ravens to start undrafted rookie QB Joe Fagnano vs. Jaguars on Thursday",
@@ -41742,6 +41721,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ceedee-lamb-fined-23-882-for-block-the-league-used-as-a-highlight",
+      "source_name": "Pro Football Talk",
+      "headline": "CeeDee Lamb fined $23,882 for block the league used as a highlight",
+      "published_at": "2026-11-21T22:12:33.000Z",
+      "observed_at": "2026-11-21T22:20:18.541Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
