@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/cowboys-keep-losing-games-they-shouldn-t-time-is-running-out-to-stack-wins",
-      "source_name": "NFL.com",
-      "headline": "Cowboys keep losing games they shouldn't -- time is running out to stack wins",
-      "published_at": "2026-11-03T12:46:06.000Z",
-      "observed_at": "2026-11-03T16:50:21.558Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-campbell-credits-mike-kafka-for-big-play-to-amon-ra-st-brown",
       "source_name": "Pro Football Talk",
       "headline": "Dan Campbell credits Mike Kafka for big play to Amon-Ra St. Brown",
@@ -41712,6 +41691,28 @@
         "PIT"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bills-add-ed-oliver-to-injury-report-list-him-as-questionable",
+      "source_name": "Pro Football Talk",
+      "headline": "Bills add Ed Oliver to injury report, list him as questionable",
+      "published_at": "2026-11-21T17:40:38.000Z",
+      "observed_at": "2026-11-21T17:50:18.697Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "MIA"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
