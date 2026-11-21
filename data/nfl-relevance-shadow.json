@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-lafleur-i-know-carson-beck-is-prepared-to-go-in-if-need-be",
-      "source_name": "Pro Football Talk",
-      "headline": "Mike LaFleur: I know Carson Beck is prepared to go in if need be",
-      "published_at": "2026-11-03T16:48:11.000Z",
-      "observed_at": "2026-11-03T17:00:32.628Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-tuesday-nov-3",
       "source_name": "NFL.com",
       "headline": "NFL news roundup: Latest league updates from Tuesday, Nov. 3",
@@ -41719,6 +41698,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-saturday-nov-21",
+      "source_name": "NFL.com",
+      "headline": "NFL news roundup: Latest league updates from Saturday, Nov. 21",
+      "published_at": "2026-11-21T05:52:29.000Z",
+      "observed_at": "2026-11-21T18:10:16.631Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
