@@ -2,52 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lions-to-sign-lb-k-j-britt-off-patriots-practice-squad",
-      "source_name": "Pro Football Talk",
-      "headline": "Lions to sign LB K.J. Britt off Patriots practice squad",
-      "published_at": "2026-11-03T13:43:32.000Z",
-      "observed_at": "2026-11-03T13:50:22.377Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET",
-        "MIN",
-        "NE"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_practice_squad"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/raiders-klint-kubiak-says-workload-between-rbs-ashton-jeanty-mike-washington-jr-moving-target",
-      "source_name": "NFL.com",
-      "headline": "Raiders' Klint Kubiak says workload between RBs Ashton Jeanty, Mike Washington Jr. 'moving target'",
-      "published_at": "2026-11-03T01:48:00.000Z",
-      "observed_at": "2026-11-03T14:00:28.450Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV",
-        "WAS"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/uk-and-ireland-week-9-broadcast-games",
       "source_name": "NFL.com",
       "headline": "UK and Ireland Week 9 Broadcast Games",
@@ -41741,6 +41695,45 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50544261/burrow-practices-again-full-strength-mnf",
+      "source_name": "ESPN",
+      "headline": "Back at practice again, Bengals QB Burrow should be at full strength for MNF",
+      "published_at": "2026-11-20T23:10:15.000Z",
+      "observed_at": "2026-11-21T00:30:28.771Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN",
+        "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/fantasy/football/story/_/page/FFSundayInactives-50530832/fantasy-football-injuries-nfl-week-11-inactive-active",
+      "source_name": "ESPN",
+      "headline": "Inactives watch: Kenneth Walker III out again, Brock Bowers questionable",
+      "published_at": "2026-11-20T23:49:32.000Z",
+      "observed_at": "2026-11-21T00:30:28.771Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
