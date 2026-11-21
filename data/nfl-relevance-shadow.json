@@ -2,67 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/the-christmas-day-schedule-is-shaping-up-to-be-massive",
-      "source_name": "Pro Football Talk",
-      "headline": "The Christmas Day schedule is shaping up to be massive",
-      "published_at": "2026-11-03T17:52:10.000Z",
-      "observed_at": "2026-11-03T18:00:42.581Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "free_agency",
-      "nfl_evidence": [
-        "nfl_preserving_category:free_agency"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/andy-reid-chris-jones-is-giving-his-all-doing-everything-he-can-do",
-      "source_name": "Pro Football Talk",
-      "headline": "Andy Reid: Chris Jones is giving his all, doing everything he can do",
-      "published_at": "2026-11-03T17:51:17.000Z",
-      "observed_at": "2026-11-03T18:00:42.581Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/with-braelon-allen-s-breakout-is-it-time-for-the-jets-to-trade-breece-hall",
-      "source_name": "NFL.com",
-      "headline": "With Braelon Allen's breakout, is it time for the Jets to trade Breece Hall?",
-      "published_at": "2026-11-03T10:46:08.000Z",
-      "observed_at": "2026-11-03T18:10:21.839Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYJ"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mark-davis-absolutely-no-pressure-whatsoever-from-me-to-start-fernando-mendoza",
       "source_name": "Pro Football Talk",
       "headline": "Mark Davis: \"Absolutely no pressure whatsoever\" from me to start Fernando Mendoza",
@@ -41718,6 +41657,70 @@
         "TEN"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50551434/titans-dl-jaylen-harrell-hospitalized-car-accident-tampa",
+      "source_name": "ESPN",
+      "headline": "Titans DL Harrell hospitalized after car accident in Tampa",
+      "published_at": "2026-11-21T18:15:44.000Z",
+      "observed_at": "2026-11-21T19:20:22.489Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "TEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/niners-wr-mike-evans-achilles-expected-to-play-sunday-vs-vikings",
+      "source_name": "NFL.com",
+      "headline": "Niners WR Mike Evans (Achilles) expected to play Sunday vs. Vikings",
+      "published_at": "2026-11-21T07:12:31.000Z",
+      "observed_at": "2026-11-21T19:20:22.489Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN",
+        "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-wr-mike-evans-is-set-for-his-return-on-sunday",
+      "source_name": "Pro Football Talk",
+      "headline": "49ers WR Mike Evans is \"set for his return\" on Sunday",
+      "published_at": "2026-11-21T19:09:49.000Z",
+      "observed_at": "2026-11-21T19:20:22.489Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
