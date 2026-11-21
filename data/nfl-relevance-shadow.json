@@ -2,40 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-tuesday-nov-3",
-      "source_name": "NFL.com",
-      "headline": "NFL news roundup: Latest league updates from Tuesday, Nov. 3",
-      "published_at": "2026-11-03T05:01:45.000Z",
-      "observed_at": "2026-11-03T17:10:25.759Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/qb-stock-market-week-9-whos-been-best-starter-first-half-2026",
-      "source_name": "FOX Sports",
-      "headline": "QB Stock Market Week 9: Who's Been The Best Starter In The First Half Of 2026?",
-      "published_at": "2026-11-03T17:24:42.000Z",
-      "observed_at": "2026-11-03T17:40:27.625Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/blockbuster-incoming-all-signs-point-to-giants-making-splash-ahead-of-nfl-trade-deadline",
       "source_name": "NFL.com",
       "headline": "Blockbuster incoming? All signs point to Giants making splash ahead of NFL trade deadline",
@@ -41715,6 +41681,49 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50545137/steelers-receiver-corps-boost-wilson-pittman-week-11",
+      "source_name": "ESPN",
+      "headline": "How Steelers' wide receiver corps gets big boost in Week 11",
+      "published_at": "2026-11-21T17:41:40.000Z",
+      "observed_at": "2026-11-21T18:20:25.142Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/kyle-shanahan-confident-in-49ers-cbs-bouncing-back-vs-vikings-i-know-they-ll-be-better",
+      "source_name": "NFL.com",
+      "headline": "Kyle Shanahan confident in 49ers CBs bouncing back vs. Vikings: I 'know they'll be better'",
+      "published_at": "2026-11-21T06:10:30.000Z",
+      "observed_at": "2026-11-21T18:20:25.142Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN",
+        "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
