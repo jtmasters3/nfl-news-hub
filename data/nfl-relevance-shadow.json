@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/jonah-coleman-gives-broncos-glimpses-in-run-game-do-they-still-need-a-deadline-move",
-      "source_name": "NFL.com",
-      "headline": "Jonah Coleman gives Broncos 'glimpses' in run game. Do they still need a deadline move?",
-      "published_at": "2026-11-03T12:46:06.000Z",
-      "observed_at": "2026-11-03T15:20:22.918Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/teams-are-interested-in-titans-rb-tony-pollard-but-tennessee-isnt-talking-yet",
       "source_name": "Pro Football Talk",
       "headline": "Teams are interested in Titans RB Tony Pollard, but Tennessee isn't talking (yet)",
@@ -41734,6 +41713,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/raiders-owner-mark-davis-hated-the-madden-movie",
+      "source_name": "Pro Football Talk",
+      "headline": "Raiders owner Mark Davis hated the Madden movie",
+      "published_at": "2026-11-21T13:12:50.000Z",
+      "observed_at": "2026-11-21T13:20:18.797Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
