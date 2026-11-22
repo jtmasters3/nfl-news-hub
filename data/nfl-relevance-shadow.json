@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-fantasy-2026-start-em-sit-em-kickers-in-week-9",
-      "source_name": "NFL.com",
-      "headline": "NFL Fantasy 2026 Start 'Em, Sit 'Em: Kickers in Week 9",
-      "published_at": "2026-11-04T05:47:13.000Z",
-      "observed_at": "2026-11-04T18:00:26.181Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "fantasy",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-fantasy-2026-start-em-sit-em-defenses-for-week-9",
-      "source_name": "NFL.com",
-      "headline": "NFL Fantasy 2026 Start 'Em, Sit 'Em: Defenses for Week 9",
-      "published_at": "2026-11-04T05:47:11.000Z",
-      "observed_at": "2026-11-04T18:00:26.181Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB",
-        "NE"
-      ],
-      "detected_category": "fantasy",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-fantasy-2026-start-em-sit-em-tight-ends-for-week-9",
       "source_name": "NFL.com",
       "headline": "NFL Fantasy 2026 Start 'Em, Sit 'Em: Tight ends for Week 9",
@@ -41774,6 +41735,45 @@
       "detected_teams": [
         "CHI",
         "NO"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/2026-nfl-season-week-11-what-we-learned-from-sunday-s-games",
+      "source_name": "NFL.com",
+      "headline": "2026 NFL season, Week 11: What We Learned from Sunday's games",
+      "published_at": "2026-11-22T09:39:08.000Z",
+      "observed_at": "2026-11-22T21:50:17.582Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jets-end-touchdown-drought-lead-chargers-10-3",
+      "source_name": "Pro Football Talk",
+      "headline": "Jets end touchdown drought, lead Chargers 10-3",
+      "published_at": "2026-11-22T21:42:58.000Z",
+      "observed_at": "2026-11-22T21:50:17.582Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC",
+        "NYJ"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
