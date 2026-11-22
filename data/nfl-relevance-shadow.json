@@ -2,82 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/which-nfl-teams-should-be-buyers-sellers-or-stand-pat-at-the-trade-deadline",
-      "source_name": "NFL.com",
-      "headline": "Which NFL teams should be buyers, sellers or stand pat at the trade deadline?",
-      "published_at": "2026-11-04T10:16:06.000Z",
-      "observed_at": "2026-11-04T16:20:20.102Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "trade",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-odds-win-totals-shift-surprise-teams-super-bowl-favorites",
-      "source_name": "FOX Sports",
-      "headline": "2026 NFL Odds: Win Totals Shift For Surprise Teams, Super Bowl Favorites",
-      "published_at": "2026-11-04T16:04:31.000Z",
-      "observed_at": "2026-11-04T16:20:20.102Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-list-james-pearce-as-a-full-practice-participant",
-      "source_name": "Pro Football Talk",
-      "headline": "Falcons list James Pearce as a full practice participant",
-      "published_at": "2026-11-04T16:15:04.000Z",
-      "observed_at": "2026-11-04T16:20:20.102Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/chiefs-trade-possibilities-which-receiver-would-be-the-best-fit-in-kansas-city",
-      "source_name": "NFL.com",
-      "headline": "Chiefs trade possibilities: Which receiver would be the best fit in Kansas City?",
-      "published_at": "2026-11-04T12:16:10.000Z",
-      "observed_at": "2026-11-04T16:30:23.088Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/why-trading-jonathan-taylor-is-the-only-logical-path-for-a-rebuilding-colts-team",
       "source_name": "NFL.com",
       "headline": "Why trading Jonathan Taylor is the only logical path for a rebuilding Colts team",
@@ -41753,6 +41677,95 @@
         "TB"
       ],
       "detected_category": "live_game_state",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bills-lead-dolphins-20-6-at-halftime",
+      "source_name": "Pro Football Talk",
+      "headline": "Bills lead Dolphins 20-6 at halftime",
+      "published_at": "2026-11-22T19:36:36.000Z",
+      "observed_at": "2026-11-22T19:40:17.778Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "KC",
+        "MIA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-lead-saints-16-10-at-halftime",
+      "source_name": "Pro Football Talk",
+      "headline": "Bears lead Saints 16-10 at halftime",
+      "published_at": "2026-11-22T19:35:00.000Z",
+      "observed_at": "2026-11-22T19:40:17.778Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "NO"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-roll-to-27-9-halftime-lead-over-titans",
+      "source_name": "Pro Football Talk",
+      "headline": "Cowboys roll to 27-9 halftime lead over Titans",
+      "published_at": "2026-11-22T19:29:08.000Z",
+      "observed_at": "2026-11-22T19:40:17.778Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "TEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/travis-kelce-has-two-tds-chiefs-lead-cardinals-27-7-at-halftime",
+      "source_name": "Pro Football Talk",
+      "headline": "Travis Kelce has two TDs, Chiefs lead Cardinals 27-7 at halftime",
+      "published_at": "2026-11-22T19:26:06.000Z",
+      "observed_at": "2026-11-22T19:40:17.778Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI",
+        "KC"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
