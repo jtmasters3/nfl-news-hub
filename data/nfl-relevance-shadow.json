@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.espn.com/nfl/story/_/id/50349677/trade-deadline-rise-quiet-chaotic-more-deals-2026",
-      "source_name": "ESPN",
-      "headline": "The rise of the trade deadline: How it went from annual snoozer to annual chaos",
-      "published_at": "2026-11-03T19:11:19.000Z",
-      "observed_at": "2026-11-03T22:20:33.094Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "trade",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.espn.com/nfl/story/_/id/50366346/jaguars-wr-brian-thomas-jr-trade-deadline-rumors",
       "source_name": "ESPN",
       "headline": "Why trade deadline rumors are swirling around Brian Thomas Jr. in Jacksonville",
@@ -41716,6 +41699,28 @@
       "confidence": "high",
       "detected_teams": [
         "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-try-for-first-win-in-philadelphia-since-lbj-was-president",
+      "source_name": "Pro Football Talk",
+      "headline": "Steelers try for first win in Philadelphia since LBJ was president",
+      "published_at": "2026-11-22T13:01:32.000Z",
+      "observed_at": "2026-11-22T13:10:18.054Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI",
+        "PIT"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
