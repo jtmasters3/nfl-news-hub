@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/tom-brady-aaron-rodgers-quote-steelers-offense-stats",
-      "source_name": "FOX Sports",
-      "headline": "Tom Brady Explains The Transition Steelers QB Aaron Rodgers Has Made",
-      "published_at": "2026-11-03T20:55:17.000Z",
-      "observed_at": "2026-11-03T21:50:22.807Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bills-release-s-c-j-gardner-johnson-after-one-game-suspension",
       "source_name": "Pro Football Talk",
       "headline": "Bills release S C.J. Gardner-Johnson after one-game suspension",
@@ -41725,6 +41704,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/loss-to-cincinnati-eliminates-deion-sanders-colorado-from-bowl-eligibility",
+      "source_name": "Pro Football Talk",
+      "headline": "Loss to Cincinnati eliminates Deion Sanders, Colorado from bowl eligibility",
+      "published_at": "2026-11-22T02:55:02.000Z",
+      "observed_at": "2026-11-22T03:00:25.056Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
