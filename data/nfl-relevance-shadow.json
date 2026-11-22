@@ -2,67 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/qb-notebook-caleb-williams-has-erased-all-doubts-qb-teams-should-trade",
-      "source_name": "FOX Sports",
-      "headline": "QB Notebook: Caleb Williams Has Erased All Doubts; The QB Teams Should Trade For",
-      "published_at": "2026-11-04T04:48:20.000Z",
-      "observed_at": "2026-11-04T05:00:28.144Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "MIN"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaguars-defense-aiming-for-25th-straight-game-not-allowing-a-75-yard-rusher",
-      "source_name": "Pro Football Talk",
-      "headline": "Jaguars' defense aiming for 25th straight game not allowing a 75-yard rusher",
-      "published_at": "2026-11-04T09:13:42.000Z",
-      "observed_at": "2026-11-04T09:20:25.001Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "JAX"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bryce-young-c-j-stroud-continue-fourth-seasons-without-new-contracts",
-      "source_name": "Pro Football Talk",
-      "headline": "Bryce Young, C.J. Stroud continue fourth seasons without new contracts",
-      "published_at": "2026-11-04T11:17:51.000Z",
-      "observed_at": "2026-11-04T11:20:21.360Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-macdonald-wants-seahawks-to-focus-on-recapturing-us",
       "source_name": "Pro Football Talk",
       "headline": "Mike Macdonald wants Seahawks to \"focus on recapturing us\"",
@@ -41740,6 +41679,67 @@
       "detected_teams": [
         "GB",
         "LAC",
+        "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50535179/nfl-week-11-fashionable-arrivals",
+      "source_name": "ESPN",
+      "headline": "Sweater weather sets the tone for NFL Week 11 arrivals",
+      "published_at": "2026-11-22T17:14:31.000Z",
+      "observed_at": "2026-11-22T17:20:32.660Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-rejected-a-trade-offer-from-the-ravens-for-daniel-jones",
+      "source_name": "Pro Football Talk",
+      "headline": "Colts rejected a trade offer from the Ravens for Daniel Jones",
+      "published_at": "2026-11-22T17:15:37.000Z",
+      "observed_at": "2026-11-22T17:20:32.660Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "IND"
+      ],
+      "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/micah-parsons-to-practice-in-pads-on-sunday",
+      "source_name": "Pro Football Talk",
+      "headline": "Micah Parsons to practice in pads on Sunday",
+      "published_at": "2026-11-22T17:00:18.000Z",
+      "observed_at": "2026-11-22T17:20:32.660Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
         "LAR"
       ],
       "detected_category": "league_news",
