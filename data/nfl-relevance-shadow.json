@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/herd-hierarchy-bears-nfls-best-team-seahawks-chiefs-slide",
-      "source_name": "FOX Sports",
-      "headline": "Herd Hierarchy: Are The Bears The NFL’s Best Team? Seahawks, Chiefs Slide",
-      "published_at": "2026-11-04T01:09:08.000Z",
-      "observed_at": "2026-11-04T01:20:24.431Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "KC",
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/college-football/north-carolina-state-considering-2-former-nfl-quarterbacks-head-coaching-job",
-      "source_name": "FOX Sports",
-      "headline": "North Carolina State Considering 2 Former NFL Quarterbacks For Head Coaching Job",
-      "published_at": "2026-11-04T01:31:41.000Z",
-      "observed_at": "2026-11-04T01:50:20.886Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bills-reverse-course-on-high-maintenance-c-j-gardner-johnson",
       "source_name": "Pro Football Talk",
       "headline": "Bills reverse course on \"high-maintenance\" C.J. Gardner-Johnson",
@@ -41741,6 +41697,48 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/daniel-jones-to-wait-before-joining-new-team-after-surprising-colts-release",
+      "source_name": "NFL.com",
+      "headline": "NFL Network: Daniel Jones to wait before joining new team after surprising Colts release",
+      "published_at": "2026-11-22T03:34:52.000Z",
+      "observed_at": "2026-11-22T15:40:25.238Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/broncos-tv-legend-tom-jackson-dies-at-75",
+      "source_name": "Pro Football Talk",
+      "headline": "Broncos, TV legend Tom Jackson dies at 75",
+      "published_at": "2026-11-22T15:34:25.000Z",
+      "observed_at": "2026-11-22T15:40:25.238Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
