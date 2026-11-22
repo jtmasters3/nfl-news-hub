@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ravens-put-tyler-loop-on-injured-reserve",
-      "source_name": "Pro Football Talk",
-      "headline": "Ravens put Tyler Loop on injured reserve",
-      "published_at": "2026-11-03T21:35:49.000Z",
-      "observed_at": "2026-11-03T21:40:32.715Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kyler-murrays-hamstring-issue-could-be-cover-for-a-soft-benching",
       "source_name": "Pro Football Talk",
       "headline": "Kyler Murray's hamstring issue could be cover for a soft benching",
@@ -41733,6 +41712,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfc-north-continues-its-historic-dominance",
+      "source_name": "Pro Football Talk",
+      "headline": "NFC North continues its historic dominance",
+      "published_at": "2026-11-22T02:01:16.000Z",
+      "observed_at": "2026-11-22T02:10:16.966Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
