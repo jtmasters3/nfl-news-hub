@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/bengals-searching-for-answers-in-defense-s-back-seven-where-will-they-come-from",
-      "source_name": "NFL.com",
-      "headline": "Bengals searching for answers in defense's back seven. Where will they come from?",
-      "published_at": "2026-11-03T11:16:07.000Z",
-      "observed_at": "2026-11-03T23:00:33.359Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-waive-cb-jakorian-bennett-off-of-injured-reserve",
       "source_name": "Pro Football Talk",
       "headline": "Eagles waive CB Jakorian Bennett off of injured reserve",
@@ -41753,6 +41732,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-daniel-jones-is-likely-to-wait-to-sign-with-the-right-team-at-the-right-time",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Daniel Jones is likely to wait to sign with the \"right team at the right time\"",
+      "published_at": "2026-11-22T13:58:16.000Z",
+      "observed_at": "2026-11-22T14:10:19.426Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "medium",
+      "detected_teams": [],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "phrase_signs_with",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_weak_uncontradicted_transaction_evidence"
       ]
     }
   ]
