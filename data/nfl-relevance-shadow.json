@@ -2,67 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/alex-anzalone-earns-first-nfc-defensive-player-of-the-week-award",
-      "source_name": "Pro Football Talk",
-      "headline": "Alex Anzalone earns first NFC defensive player of the week award",
-      "published_at": "2026-11-04T17:11:08.000Z",
-      "observed_at": "2026-11-04T17:20:20.341Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL",
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaguars-s-rayuan-lane-is-the-afc-defensive-player-of-the-week",
-      "source_name": "Pro Football Talk",
-      "headline": "Jaguars S Rayuan Lane is the AFC defensive player of the week",
-      "published_at": "2026-11-04T17:10:02.000Z",
-      "observed_at": "2026-11-04T17:20:20.341Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "JAX"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/doug-williams-robert-kraft-contributor-candidates-pro-football-hall-of-fame-class-of-2027",
-      "source_name": "NFL.com",
-      "headline": "Doug Williams, Robert Kraft among 5 contributor candidates for Pro Football Hall of Fame Class of 2027",
-      "published_at": "2026-11-04T05:28:22.000Z",
-      "observed_at": "2026-11-04T17:30:21.577Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/garrett-wilson-is-in-the-concussion-protocol",
       "source_name": "Pro Football Talk",
       "headline": "Garrett Wilson is in the concussion protocol",
@@ -41766,6 +41705,74 @@
         "ARI",
         "BUF",
         "KC"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-offense-is-awful-in-loss-to-eagles",
+      "source_name": "Pro Football Talk",
+      "headline": "Steelers' offense is awful in loss to Eagles",
+      "published_at": "2026-11-22T21:10:03.000Z",
+      "observed_at": "2026-11-22T21:20:23.898Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI",
+        "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bills-dont-allow-a-touchdown-for-third-straight-game-beat-dolphins-26-9",
+      "source_name": "Pro Football Talk",
+      "headline": "Bills don't allow a touchdown for third straight game, beat Dolphins 26-9",
+      "published_at": "2026-11-22T21:05:21.000Z",
+      "observed_at": "2026-11-22T21:20:23.898Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "KC",
+        "MIA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lions-avoid-tampa-bay-trap-move-to-8-2",
+      "source_name": "Pro Football Talk",
+      "headline": "Lions avoid Tampa Bay trap, move to 8-2",
+      "published_at": "2026-11-22T21:08:23.000Z",
+      "observed_at": "2026-11-22T21:20:23.898Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "DET",
+        "TB"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
