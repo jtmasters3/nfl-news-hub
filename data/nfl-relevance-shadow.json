@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kyler-murrays-hamstring-issue-could-be-cover-for-a-soft-benching",
-      "source_name": "Pro Football Talk",
-      "headline": "Kyler Murray's hamstring issue could be cover for a soft benching",
-      "published_at": "2026-11-03T21:30:10.000Z",
-      "observed_at": "2026-11-03T21:40:32.715Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/tom-brady-aaron-rodgers-quote-steelers-offense-stats",
       "source_name": "FOX Sports",
       "headline": "Tom Brady Explains The Transition Steelers QB Aaron Rodgers Has Made",
@@ -41725,6 +41704,23 @@
       "confidence": "low",
       "detected_teams": [],
       "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/knee-surgery-complicates-puka-nacuas-future",
+      "source_name": "Pro Football Talk",
+      "headline": "Knee surgery complicates Puka Nacua's future",
+      "published_at": "2026-11-22T02:37:08.000Z",
+      "observed_at": "2026-11-22T02:40:25.719Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
       "nfl_evidence": [],
       "non_nfl_evidence": [],
       "reason_codes": [
