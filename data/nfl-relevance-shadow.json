@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nebraska-voters-say-no-to-mobile-sports-betting",
-      "source_name": "Pro Football Talk",
-      "headline": "Nebraska voters say no to mobile sports betting",
-      "published_at": "2026-11-04T15:21:22.000Z",
-      "observed_at": "2026-11-04T15:30:23.175Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/browns-sign-te-carsen-ryan-to-53-man-roster",
-      "source_name": "Pro Football Talk",
-      "headline": "Browns sign TE Carsen Ryan to 53-man roster",
-      "published_at": "2026-11-04T15:17:46.000Z",
-      "observed_at": "2026-11-04T15:30:23.175Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/jaguars-vs-ravens-three-must-know-storylines-for-thursday-s-week-9-prime-time-game",
       "source_name": "NFL.com",
       "headline": "Jaguars vs. Ravens: Three must-know storylines for Thursday's Week 9 prime-time game",
@@ -41746,6 +41707,50 @@
       "confidence": "high",
       "detected_teams": [
         "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/james-cook-goes-over-1-000-rushing-yards-puts-bills-up-20-3",
+      "source_name": "Pro Football Talk",
+      "headline": "James Cook goes over 1,000 rushing yards, puts Bills up 20-3",
+      "published_at": "2026-11-22T19:11:25.000Z",
+      "observed_at": "2026-11-22T19:20:18.752Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "MIA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ravens-devontez-walker-returns-kickoff-for-touchdown-in-wild-game-in-carolina",
+      "source_name": "Pro Football Talk",
+      "headline": "Ravens' Devontez Walker returns kickoff for touchdown in wild game in Carolina",
+      "published_at": "2026-11-22T19:09:03.000Z",
+      "observed_at": "2026-11-22T19:20:18.752Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "CAR"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
