@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/jaguars-vs-ravens-three-must-know-storylines-for-thursday-s-week-9-prime-time-game",
-      "source_name": "NFL.com",
-      "headline": "Jaguars vs. Ravens: Three must-know storylines for Thursday's Week 9 prime-time game",
-      "published_at": "2026-11-04T03:44:44.000Z",
-      "observed_at": "2026-11-04T15:50:19.068Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "JAX"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/which-nfl-teams-should-be-buyers-sellers-or-stand-pat-at-the-trade-deadline",
       "source_name": "NFL.com",
       "headline": "Which NFL teams should be buyers, sellers or stand pat at the trade deadline?",
@@ -41753,6 +41731,28 @@
         "CAR"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bucs-get-on-the-board-to-trail-lions-10-7-at-half",
+      "source_name": "Pro Football Talk",
+      "headline": "Bucs get on the board to trail Lions 10-7 at half",
+      "published_at": "2026-11-22T19:22:56.000Z",
+      "observed_at": "2026-11-22T19:30:22.555Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "TB"
+      ],
+      "detected_category": "live_game_state",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
