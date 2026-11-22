@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-waive-cb-jakorian-bennett-off-of-injured-reserve",
-      "source_name": "Pro Football Talk",
-      "headline": "Eagles waive CB Jakorian Bennett off of injured reserve",
-      "published_at": "2026-11-03T22:57:48.000Z",
-      "observed_at": "2026-11-03T23:10:21.503Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jets-sign-ol-blake-freeland-off-bengals-practice-squad",
       "source_name": "Pro Football Talk",
       "headline": "Jets sign OL Blake Freeland off Bengals' practice squad",
@@ -41753,6 +41732,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_weak_uncontradicted_transaction_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/buccaneers-baker-mayfield-will-play-vs-lions",
+      "source_name": "NFL.com",
+      "headline": "NFL Network: Buccaneers' Baker Mayfield (foot/thumb) will play Sunday vs. Lions",
+      "published_at": "2026-11-22T02:11:59.000Z",
+      "observed_at": "2026-11-22T14:20:28.053Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "TB"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
