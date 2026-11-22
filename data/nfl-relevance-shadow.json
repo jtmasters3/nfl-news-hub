@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/2026-season-could-highlight-the-unfairness-of-the-eight-division-structure",
-      "source_name": "Pro Football Talk",
-      "headline": "2026 season could highlight the unfairness of the eight-division structure",
-      "published_at": "2026-11-04T03:46:58.000Z",
-      "observed_at": "2026-11-04T03:50:21.583Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/qb-notebook-caleb-williams-has-erased-all-doubts-qb-teams-should-trade",
       "source_name": "FOX Sports",
       "headline": "QB Notebook: Caleb Williams Has Erased All Doubts; The QB Teams Should Trade For",
@@ -41743,6 +41726,29 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/micah-parsons-acl-injury-update-packers-rams",
+      "source_name": "FOX Sports",
+      "headline": "He's Back: Packers Star Micah Parsons Expected To Play vs. Rams In Week 12",
+      "published_at": "2026-11-22T16:49:32.000Z",
+      "observed_at": "2026-11-22T17:00:26.066Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
+        "LAC",
+        "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
