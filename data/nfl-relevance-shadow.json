@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-russell-wilson-interviews-for-nc-state-head-coaching-job",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Russell Wilson interviews for NC State head-coaching job",
-      "published_at": "2026-11-04T00:55:40.000Z",
-      "observed_at": "2026-11-04T01:00:32.738Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "coaching",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/why-might-year-joe-burrow-bengals-get-over-hump",
-      "source_name": "FOX Sports",
-      "headline": "Why This Might Be The Year That Joe Burrow, Bengals Get Over The Hump",
-      "published_at": "2026-11-04T00:53:41.000Z",
-      "observed_at": "2026-11-04T01:10:22.089Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/herd-hierarchy-bears-nfls-best-team-seahawks-chiefs-slide",
       "source_name": "FOX Sports",
       "headline": "Herd Hierarchy: Are The Bears The NFL’s Best Team? Seahawks, Chiefs Slide",
@@ -41741,6 +41703,44 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50561778/tom-jackson-broncos-star-espn-legend-dies-75",
+      "source_name": "ESPN",
+      "headline": "Tom Jackson, who formed Hall of Fame ESPN tandem with Chris Berman, dies at 75",
+      "published_at": "2026-11-22T15:06:12.000Z",
+      "observed_at": "2026-11-22T15:20:27.632Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/the-week-11-afternoon-schedule-is-short-on-must-see-games",
+      "source_name": "Pro Football Talk",
+      "headline": "The Week 11 afternoon schedule is short on must-see games",
+      "published_at": "2026-11-22T15:13:06.000Z",
+      "observed_at": "2026-11-22T15:20:27.632Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
