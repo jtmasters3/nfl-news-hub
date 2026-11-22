@@ -2,88 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-waive-g-trevor-keegan",
-      "source_name": "Pro Football Talk",
-      "headline": "Vikings waive G Trevor Keegan",
-      "published_at": "2026-11-03T22:03:58.000Z",
-      "observed_at": "2026-11-03T22:10:22.767Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-place-de-samson-ebukam-on-ir",
-      "source_name": "Pro Football Talk",
-      "headline": "Falcons place DE Samson Ebukam on IR",
-      "published_at": "2026-11-03T22:02:36.000Z",
-      "observed_at": "2026-11-03T22:10:22.767Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bhayshul-tuten-remains-out-of-practice-for-the-jaguars",
-      "source_name": "Pro Football Talk",
-      "headline": "Bhayshul Tuten remains out of practice for the Jaguars",
-      "published_at": "2026-11-03T22:00:38.000Z",
-      "observed_at": "2026-11-03T22:10:22.767Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "JAX"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.espn.com/nfl/story/_/id/50360444/cj-stroud-texans-contract",
-      "source_name": "ESPN",
-      "headline": "Inside C.J. Stroud's high-stakes decision not to sign a contract extension -- and what's next",
-      "published_at": "2026-11-03T18:36:56.000Z",
-      "observed_at": "2026-11-03T22:20:33.094Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "contract",
-      "nfl_evidence": [
-        "nfl_preserving_category:contract"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.espn.com/nfl/story/_/id/50372292/bills-release-safety-cj-gardner-johnson",
       "source_name": "ESPN",
       "headline": "Bills release Gardner-Johnson after he served one-game spitting suspension",
@@ -41713,6 +41631,94 @@
       "confidence": "high",
       "detected_teams": [
         "BUF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/cowboys-vs-titans-prediction-odds-pick-nfl-week-11",
+      "source_name": "FOX Sports",
+      "headline": "Cowboys vs. Titans Prediction, Odds, Pick For NFL Week 11",
+      "published_at": "2026-11-22T06:00:45.000Z",
+      "observed_at": "2026-11-22T06:20:17.508Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "TEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/lions-vs-buccaneers-prediction-odds-pick-nfl-week-11",
+      "source_name": "FOX Sports",
+      "headline": "Lions vs. Buccaneers Prediction, Odds, Pick For NFL Week 11",
+      "published_at": "2026-11-22T06:00:34.000Z",
+      "observed_at": "2026-11-22T06:20:17.508Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET",
+        "TB"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/panthers-vs-ravens-prediction-odds-pick-nfl-week-11",
+      "source_name": "FOX Sports",
+      "headline": "Panthers vs. Ravens Prediction, Odds, Pick For NFL Week 11",
+      "published_at": "2026-11-22T06:00:29.000Z",
+      "observed_at": "2026-11-22T06:20:17.508Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "CAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/bears-vs-saints-prediction-odds-pick-nfl-week-11",
+      "source_name": "FOX Sports",
+      "headline": "Bears vs. Saints Prediction, Odds, Pick For NFL Week 11",
+      "published_at": "2026-11-22T06:00:07.000Z",
+      "observed_at": "2026-11-22T06:20:17.508Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "NO"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
