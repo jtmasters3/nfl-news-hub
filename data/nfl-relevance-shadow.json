@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/iowa-coach-kirk-ferentz-expresses-support-for-former-hawkeyes-lb-jack-campbell",
-      "source_name": "Pro Football Talk",
-      "headline": "Iowa coach Kirk Ferentz expresses support for former Hawkeyes LB Jack Campbell",
-      "published_at": "2026-11-04T00:31:22.000Z",
-      "observed_at": "2026-11-04T00:40:19.846Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET",
-        "MIN"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-russell-wilson-interviews-for-nc-state-head-coaching-job",
       "source_name": "Pro Football Talk",
       "headline": "Report: Russell Wilson interviews for NC State head-coaching job",
@@ -41742,6 +41720,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/police-investigating-whether-titans-jaylen-harrell-assaulted-driver-before-florida-crash",
+      "source_name": "NFL.com",
+      "headline": "Police investigating whether Titans' Jaylen Harrell assaulted driver before Florida crash",
+      "published_at": "2026-11-22T02:43:44.000Z",
+      "observed_at": "2026-11-22T15:00:24.573Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "TEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
