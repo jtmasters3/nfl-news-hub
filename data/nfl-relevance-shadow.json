@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/ravens-qb-tyler-huntley-out-for-season-turf-toe-injury",
-      "source_name": "NFL.com",
-      "headline": "Report: Ravens QB Tyler Huntley out for season with turf toe injury",
-      "published_at": "2026-11-04T01:12:00.000Z",
-      "observed_at": "2026-11-04T13:20:23.936Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patriots-wr-mack-hollins-is-expected-to-practice-on-wednesday",
       "source_name": "Pro Football Talk",
       "headline": "Patriots WR Mack Hollins is expected to practice on Wednesday",
@@ -41741,6 +41720,27 @@
       "detected_teams": [
         "BUF",
         "MIA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/colts-shutting-down-wr-alec-pierce",
+      "source_name": "NFL.com",
+      "headline": "NFL Network: Colts shutting down WR Alec Pierce (heel) for season with eyes on healthy 2027",
+      "published_at": "2026-11-22T05:44:47.000Z",
+      "observed_at": "2026-11-22T18:00:25.791Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
