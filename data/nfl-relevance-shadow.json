@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/cardinals-rb-jeremiyah-love-goes-to-ir-with-high-ankle-sprain-in-another-setback",
-      "source_name": "FOX Sports",
-      "headline": "Cardinals Place No. 3 Pick Jeremiyah Love On IR With High Ankle Sprain",
-      "published_at": "2026-11-04T00:23:14.000Z",
-      "observed_at": "2026-11-04T00:30:23.344Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/iowa-coach-kirk-ferentz-expresses-support-for-former-hawkeyes-lb-jack-campbell",
       "source_name": "Pro Football Talk",
       "headline": "Iowa coach Kirk Ferentz expresses support for former Hawkeyes LB Jack Campbell",
@@ -41746,6 +41725,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/troy-aikmans-latest-comments-invite-speculation-that-hes-hoping-for-an-early-exit",
+      "source_name": "Pro Football Talk",
+      "headline": "Troy Aikman's latest comments invite speculation that he's hoping for an early exit",
+      "published_at": "2026-11-22T14:39:35.000Z",
+      "observed_at": "2026-11-22T14:50:21.653Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
