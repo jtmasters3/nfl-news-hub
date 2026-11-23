@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/talanoa-hufanga-returns-to-broncos-practice",
-      "source_name": "Pro Football Talk",
-      "headline": "Talanoa Hufanga returns to Broncos practice",
-      "published_at": "2026-11-05T22:49:02.000Z",
-      "observed_at": "2026-11-05T23:00:26.602Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/raiders-re-sign-wr-cody-white-waive-te-carter-runyon",
-      "source_name": "Pro Football Talk",
-      "headline": "Raiders re-sign WR Cody White, waive TE Carter Runyon",
-      "published_at": "2026-11-05T22:57:06.000Z",
-      "observed_at": "2026-11-05T23:10:18.639Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV"
-      ],
-      "detected_category": "free_agency",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:free_agency"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/christian-mccaffrey-returned-to-practice-as-limited-participant",
       "source_name": "Pro Football Talk",
       "headline": "Christian McCaffrey returned to practice as limited participant",
@@ -41904,6 +41861,47 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/seahawks-sign-cb-trevon-diggs-ot-bobby-hart-to-active-roster",
+      "source_name": "Pro Football Talk",
+      "headline": "Seahawks sign CB Trevon Diggs, OT Bobby Hart to active roster",
+      "published_at": "2026-11-23T23:31:18.000Z",
+      "observed_at": "2026-11-23T23:40:19.162Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SEA"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/justin-reid-cleared-waivers-on-monday",
+      "source_name": "Pro Football Talk",
+      "headline": "Justin Reid cleared waivers on Monday",
+      "published_at": "2026-11-23T23:25:56.000Z",
+      "observed_at": "2026-11-23T23:40:19.162Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
