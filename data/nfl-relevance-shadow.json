@@ -2,86 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/next-woman-up-alissa-jagarnath-director-of-brand-merchandise-for-the-tampa-bay-buccaneers",
-      "source_name": "NFL.com",
-      "headline": "Next Woman Up: Alissa Jagarnath, Director of Brand & Merchandise for the Tampa Bay Buccaneers",
-      "published_at": "2026-11-05T04:28:00.000Z",
-      "observed_at": "2026-11-05T16:30:43.600Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "TB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-unites-to-honor-and-support-the-military-community-through-salute-to-service",
-      "source_name": "NFL.com",
-      "headline": "NFL unites to honor and support the military community through Salute to Service",
-      "published_at": "2026-11-05T04:33:19.000Z",
-      "observed_at": "2026-11-05T16:40:28.602Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brian-robinson-remains-limited-on-thursday-injury-report",
-      "source_name": "Pro Football Talk",
-      "headline": "Brian Robinson remains limited on Thursday injury report",
-      "published_at": "2026-11-05T16:35:40.000Z",
-      "observed_at": "2026-11-05T16:40:28.602Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-evans-is-unlikely-to-play-in-week-9",
-      "source_name": "Pro Football Talk",
-      "headline": "Mike Evans is unlikely to play in Week 9",
-      "published_at": "2026-11-05T16:30:53.000Z",
-      "observed_at": "2026-11-05T16:40:28.602Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/some-wonder-whether-the-49ers-are-in-play-for-jonathan-taylor",
       "source_name": "Pro Football Talk",
       "headline": "Some wonder whether the 49ers are in play for Jonathan Taylor",
@@ -41860,6 +41780,96 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50573989/steelers-metcalf-denies-trying-poke-eagles-dejean-eye",
+      "source_name": "ESPN",
+      "headline": "Metcalf denies trying to poke DeJean in eye but 'can't remember' much else",
+      "published_at": "2026-11-23T17:09:09.000Z",
+      "observed_at": "2026-11-23T17:50:31.800Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI",
+        "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50570558/jaguars-loss-giants-trevor-lawrence-takes-blame",
+      "source_name": "ESPN",
+      "headline": "Lawrence, Coen share the blame for the Jaguars' loss to the Giants: What went wrong?",
+      "published_at": "2026-11-23T17:19:14.000Z",
+      "observed_at": "2026-11-23T17:50:31.800Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX",
+        "NYG",
+        "NYJ",
+        "TEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/washington-d-c-is-officially-on-the-clock-for-the-2027-nfl-draft-presented-by-bud-light",
+      "source_name": "NFL.com",
+      "headline": "Washington, D.C. is officially on the clock for the 2027 NFL Draft presented by Bud Light",
+      "published_at": "2026-11-23T05:47:27.000Z",
+      "observed_at": "2026-11-23T17:50:31.800Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "WAS"
+      ],
+      "detected_category": "draft",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_nfl_draft",
+        "nfl_preserving_category:draft"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-vrabel-says-pats-dont-plan-to-add-another-qb-tommy-devito-is-our-starter",
+      "source_name": "Pro Football Talk",
+      "headline": "Mike Vrabel says Pats don't plan to add another QB: Tommy DeVito is our starter",
+      "published_at": "2026-11-23T17:37:50.000Z",
+      "observed_at": "2026-11-23T17:50:31.800Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
