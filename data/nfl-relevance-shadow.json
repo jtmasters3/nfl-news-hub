@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/bears-super-bowl-seahawks-miss-playoffs-chargers-go-winless",
-      "source_name": "FOX Sports",
-      "headline": "NFL Fact or Fiction: Bears Going To The Super Bowl? Seahawks To Miss Playoffs?",
-      "published_at": "2026-11-05T16:58:17.000Z",
-      "observed_at": "2026-11-05T17:10:19.740Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "LAC",
-        "PIT",
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/fox-sports-nfl-college-football-coverage-live-west-point-annapolis-veterans-day",
-      "source_name": "NFL.com",
-      "headline": "Fox Sports to honor America's veterans with NFL, college football coverage live from West Point, Annapolis ahead of Veterans Day",
-      "published_at": "2026-11-05T05:11:44.000Z",
-      "observed_at": "2026-11-05T17:20:20.660Z",
-      "decision": "reject",
-      "classification": "college_football",
-      "confidence": "medium",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [
-        "college_football_phrase"
-      ],
-      "reason_codes": [
-        "college_marker_no_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/evan-williams-named-nfc-defensive-player-of-the-month",
       "source_name": "Pro Football Talk",
       "headline": "Evan Williams named NFC defensive player of the month",
@@ -41866,6 +41823,49 @@
       "confidence": "high",
       "detected_teams": [
         "PHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/why-justin-herbert-finding-a-rhythm-in-another-chargers-loss-still-matters",
+      "source_name": "NFL.com",
+      "headline": "Why Justin Herbert finding a rhythm in another Chargers' loss still matters",
+      "published_at": "2026-11-23T01:46:07.000Z",
+      "observed_at": "2026-11-23T18:30:22.920Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/steelers-dk-metcalf-says-he-wasnt-poking-eagles-cooper-dejean-was-telling-him-to-stop-pushing",
+      "source_name": "FOX Sports",
+      "headline": "DK Metcalf Denies Eye-Poke Intent In Scuffle With Eagles' DB Cooper DeJean",
+      "published_at": "2026-11-23T18:17:21.000Z",
+      "observed_at": "2026-11-23T18:30:22.920Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI",
+        "PIT"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
