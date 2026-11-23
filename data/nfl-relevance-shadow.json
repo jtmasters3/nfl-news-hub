@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bill-belichick-tom-coughlin-among-five-coaches-to-advance-in-hall-of-fame-selection-process",
-      "source_name": "Pro Football Talk",
-      "headline": "Bill Belichick, Tom Coughlin among five coaches to advance in Hall of Fame selection process",
-      "published_at": "2026-11-05T17:52:14.000Z",
-      "observed_at": "2026-11-05T18:00:24.428Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/the-chiefs-are-under-fire-for-refusing-to-qb-sneak-patrick-mahomes-says-he-s-willing",
       "source_name": "NFL.com",
       "headline": "The Chiefs are under fire for refusing to QB sneak. Patrick Mahomes says he's willing",
@@ -41876,6 +41859,27 @@
         "SEA"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-te-terrance-ferguson-to-undergo-season-ending-ankle-surgery",
+      "source_name": "Pro Football Talk",
+      "headline": "Rams TE Terrance Ferguson to undergo season-ending ankle surgery",
+      "published_at": "2026-11-23T19:46:25.000Z",
+      "observed_at": "2026-11-23T20:00:28.411Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
