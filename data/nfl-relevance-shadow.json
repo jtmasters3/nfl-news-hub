@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.espn.com/nfl/story/_/id/50378134/sources-ravens-qb-tyler-snoop-huntley-season",
-      "source_name": "ESPN",
-      "headline": "With Lamar sidelined, Ravens QB Huntley also out for season, sources say",
-      "published_at": "2026-11-04T18:07:13.000Z",
-      "observed_at": "2026-11-04T19:00:40.233Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.espn.com/nfl/story/_/id/50379976/doug-williams-kraft-5-hof-contributor-candidates",
-      "source_name": "ESPN",
-      "headline": "Doug Williams, Robert Kraft among 5 Hall of Fame contributor candidates",
-      "published_at": "2026-11-04T18:07:13.000Z",
-      "observed_at": "2026-11-04T19:00:40.233Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.espn.com/nfl/story/_/id/50378427/source-commanders-javon-kinlaw-knee-surgery-season",
       "source_name": "ESPN",
       "headline": "Source: Commanders lose another DL with Kinlaw (knee) out for season",
@@ -41802,6 +41764,50 @@
         "DAL"
       ],
       "detected_category": "fantasy",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/officials-deny-jaguars-td-on-sensational-catch-by-parker-washington",
+      "source_name": "Pro Football Talk",
+      "headline": "Officials deny Jaguars TD on sensational catch by Parker Washington",
+      "published_at": "2026-11-23T00:14:42.000Z",
+      "observed_at": "2026-11-23T00:20:18.230Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX",
+        "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sunday-night-football-mike-evans-active-dre-greenlaw-inactive-for-49ers-vikings",
+      "source_name": "Pro Football Talk",
+      "headline": "Sunday Night Football: Mike Evans active, Dre Greenlaw inactive for 49ers-Vikings",
+      "published_at": "2026-11-23T00:06:54.000Z",
+      "observed_at": "2026-11-23T00:20:18.230Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN",
+        "SF"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
