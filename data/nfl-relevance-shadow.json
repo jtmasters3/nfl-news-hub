@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/packers-josh-jacobs-isnt-worrying-additional-allegations-more-punishment",
-      "source_name": "NFL.com",
-      "headline": "Packers' Josh Jacobs isn't worrying over whether additional allegations will lead to more punishment",
-      "published_at": "2026-11-05T03:07:33.000Z",
-      "observed_at": "2026-11-05T15:10:18.481Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/voting-for-2026-nfl-channel-midseason-awards-opens-sunday-nov-8",
       "source_name": "NFL.com",
       "headline": "Voting for 2026 NFL Channel midseason awards opens Sunday, Nov. 8",
@@ -41862,6 +41841,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dk-metcalf-should-have-been-ejected-earlier-than-he-was-for-contact-with-official",
+      "source_name": "Pro Football Talk",
+      "headline": "DK Metcalf should have been ejected earlier than he was, for contact with official",
+      "published_at": "2026-11-23T16:09:10.000Z",
+      "observed_at": "2026-11-23T16:20:20.450Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
