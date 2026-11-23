@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/an-investigation-regarding-the-jalen-hurts-situation-has-not-begun",
-      "source_name": "Pro Football Talk",
-      "headline": "An investigation regarding the Jalen Hurts situation has not begun",
-      "published_at": "2026-11-05T18:50:01.000Z",
-      "observed_at": "2026-11-05T19:00:25.769Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-picks-week-9-2026-nfl-season",
-      "source_name": "NFL.com",
-      "headline": "NFL Week 9 picks: Upset and score predictions, matchup breakdowns for every game",
-      "published_at": "2026-11-05T07:08:32.000Z",
-      "observed_at": "2026-11-05T19:10:18.934Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jonathan-taylor-no-one-likes-uncertainty",
       "source_name": "Pro Football Talk",
       "headline": "Jonathan Taylor: No one likes uncertainty",
@@ -41892,6 +41854,45 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/terrance-ferguson-los-angeles-rams-ankle-hamstring-injury",
+      "source_name": "FOX Sports",
+      "headline": "Rams TE Terrance Ferguson Needs Season-Ending Ankle Surgery",
+      "published_at": "2026-11-23T20:45:26.000Z",
+      "observed_at": "2026-11-23T20:50:20.142Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC",
+        "LAR"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/big-bets-report-1-wager-7-leg-nfl-parlay-cashes-96k",
+      "source_name": "FOX Sports",
+      "headline": "Big Bets Report: $1 Wager On 7-leg NFL Parlay Cashes For $96k",
+      "published_at": "2026-11-23T20:31:12.000Z",
+      "observed_at": "2026-11-23T20:50:20.142Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
