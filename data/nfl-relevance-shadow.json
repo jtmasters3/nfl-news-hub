@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/d-j-reed-dj-wonnum-out-of-practice-for-lions-wednesday",
-      "source_name": "Pro Football Talk",
-      "headline": "D.J. Reed, DJ Wonnum out of practice for Lions Wednesday",
-      "published_at": "2026-11-04T21:11:51.000Z",
-      "observed_at": "2026-11-04T21:20:19.355Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET",
-        "MIA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dianna-russini-gets-out-the-word-that-shes-coming-back-to-work-next-week",
-      "source_name": "Pro Football Talk",
-      "headline": "Dianna Russini gets out the word that she's coming back to work next week",
-      "published_at": "2026-11-04T21:21:42.000Z",
-      "observed_at": "2026-11-04T21:30:24.070Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-put-dl-kentavius-street-on-injured-reserve",
       "source_name": "Pro Football Talk",
       "headline": "Bears put DL Kentavius Street on injured reserve",
@@ -41827,6 +41788,50 @@
       "classification": "nfl",
       "confidence": "high",
       "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-shakeout-week-11-giants-100m-bet-paying-off-time-bench-aaron-rodgers",
+      "source_name": "FOX Sports",
+      "headline": "NFL Shakeout Week 11: Giants' $100M Bet Paying Off; Time To Bench Aaron Rodgers",
+      "published_at": "2026-11-23T04:26:45.000Z",
+      "observed_at": "2026-11-23T04:30:20.452Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NYG",
+        "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sunday-night-football-49ers-move-to-9-1-with-dominant-35-10-victory-over-vikings",
+      "source_name": "Pro Football Talk",
+      "headline": "Sunday Night Football: 49ers move to 9-1 with dominant 35-10 victory over Vikings",
+      "published_at": "2026-11-23T04:25:41.000Z",
+      "observed_at": "2026-11-23T04:30:20.452Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN",
         "SF"
       ],
       "detected_category": "league_news",
