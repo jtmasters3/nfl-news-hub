@@ -2,46 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/micah-parsons-wont-pinpoint-a-day-ill-be-back-in-the-lineup",
-      "source_name": "Pro Football Talk",
-      "headline": "Micah Parsons won't \"pinpoint a day\" I'll be back in the lineup",
-      "published_at": "2026-11-04T22:38:16.000Z",
-      "observed_at": "2026-11-04T22:50:24.386Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mansoor-delane-travis-kelce-limited-at-chiefs-practice",
-      "source_name": "Pro Football Talk",
-      "headline": "Mansoor Delane, Travis Kelce limited at Chiefs practice",
-      "published_at": "2026-11-04T22:58:27.000Z",
-      "observed_at": "2026-11-04T23:00:26.658Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DEN",
-        "KC",
-        "NYJ"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/wr-george-pickens-og-tyler-smith-were-limited-in-wednesdays-practice",
       "source_name": "Pro Football Talk",
       "headline": "WR George Pickens, OG Tyler Smith were limited in Wednesday's practice",
@@ -41845,6 +41805,45 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50525677/49ers-beat-vikings-sunday-night-football-mexico-city-kittle",
+      "source_name": "ESPN",
+      "headline": "49ers run roughshod over Vikings in Mexico City, maintain top-seed position in NFC",
+      "published_at": "2026-11-23T04:40:55.000Z",
+      "observed_at": "2026-11-23T05:00:34.277Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN",
+        "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-week-11-defining-stats",
+      "source_name": "FOX Sports",
+      "headline": "NFL Week 11 Defining Stats: Kittle Passes Terrell Owens; Cook Breaks NFL Record",
+      "published_at": "2026-11-23T04:52:01.000Z",
+      "observed_at": "2026-11-23T05:00:34.277Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
