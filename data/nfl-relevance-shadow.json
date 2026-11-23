@@ -2,47 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/the-chiefs-are-under-fire-for-refusing-to-qb-sneak-patrick-mahomes-says-he-s-willing",
-      "source_name": "NFL.com",
-      "headline": "The Chiefs are under fire for refusing to QB sneak. Patrick Mahomes says he's willing",
-      "published_at": "2026-11-05T01:01:08.000Z",
-      "observed_at": "2026-11-05T18:10:21.822Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/2027-nfl-mock-draft-drew-mestemaker-first-6-qbs-selected-first-round",
-      "source_name": "FOX Sports",
-      "headline": "2027 NFL Mock Draft: Drew Mestemaker First Of 6 QBs Selected In First Round",
-      "published_at": "2026-11-05T18:00:07.000Z",
-      "observed_at": "2026-11-05T18:10:21.822Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [],
-      "detected_category": "draft",
-      "nfl_evidence": [
-        "phrase_nfl_draft",
-        "nfl_preserving_category:draft"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ben-johnson-was-impressed-with-the-buccaneers-all-run-offense",
       "source_name": "Pro Football Talk",
       "headline": "Ben Johnson was impressed with the Buccaneers' all-run offense",
@@ -41886,6 +41845,44 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/49ers-release-wide-receiver-brandon-aiyuk-nfl-waivers-free-agent",
+      "source_name": "FOX Sports",
+      "headline": "San Francisco 49ers Release WR Brandon Aiyuk To NFL Waivers",
+      "published_at": "2026-11-23T20:09:53.000Z",
+      "observed_at": "2026-11-23T20:20:21.951Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/super-bowl-lxi-will-be-shown-in-imax-theaters",
+      "source_name": "Pro Football Talk",
+      "headline": "Super Bowl LXI will be shown in IMAX theaters",
+      "published_at": "2026-11-23T20:02:25.000Z",
+      "observed_at": "2026-11-23T20:20:21.951Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
