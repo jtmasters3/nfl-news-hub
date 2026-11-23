@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-mcvay-ive-coached-rams-for-10-years-this-is-the-worst-for-injuries-to-key-players",
-      "source_name": "Pro Football Talk",
-      "headline": "Sean McVay: I've coached Rams for 10 years, this is the worst for injuries to key players",
-      "published_at": "2026-11-05T15:49:03.000Z",
-      "observed_at": "2026-11-05T16:20:18.733Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/next-woman-up-alissa-jagarnath-director-of-brand-merchandise-for-the-tampa-bay-buccaneers",
       "source_name": "NFL.com",
       "headline": "Next Woman Up: Alissa Jagarnath, Director of Brand & Merchandise for the Tampa Bay Buccaneers",
@@ -41859,6 +41838,28 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-waive-lb-christian-harris-sign-s-jammie-robinson",
+      "source_name": "Pro Football Talk",
+      "headline": "Falcons waive LB Christian Harris, sign S Jammie Robinson",
+      "published_at": "2026-11-23T17:30:29.000Z",
+      "observed_at": "2026-11-23T17:40:19.403Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:roster_move"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
