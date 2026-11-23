@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/jacoby-brissett-named-baltimore-ravens-starter-trade",
-      "source_name": "FOX Sports",
-      "headline": "Ravens Finalizing Trade For Jacoby Brissett With Lamar Jackson, Tyler Huntley Out",
-      "published_at": "2026-11-04T20:23:45.000Z",
-      "observed_at": "2026-11-04T20:40:18.677Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI",
-        "BAL"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chargers-open-21-day-practice-window-for-lb-denzel-perryman",
-      "source_name": "Pro Football Talk",
-      "headline": "Chargers open 21-day practice window for LB Denzel Perryman",
-      "published_at": "2026-11-04T20:39:23.000Z",
-      "observed_at": "2026-11-04T20:50:18.893Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAC"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/jim-harbaugh-says-khalil-mack-wants-to-be-here-chargers-deadline-musings",
       "source_name": "NFL.com",
       "headline": "Jim Harbaugh says Khalil Mack 'wants to be here': Chargers deadline musings",
@@ -41832,6 +41789,45 @@
         "JAX",
         "NYG",
         "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-thanksgiving-odds-lines-spreads-what-know-all-4-games",
+      "source_name": "FOX Sports",
+      "headline": "2026 NFL Thanksgiving Odds: Lines, Spreads, What to Know for All 4 Games",
+      "published_at": "2026-11-23T03:07:23.000Z",
+      "observed_at": "2026-11-23T03:10:17.518Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sunday-night-football-49ers-lead-vikings-28-10-at-halftime",
+      "source_name": "Pro Football Talk",
+      "headline": "Sunday Night Football: 49ers lead Vikings 28-10 at halftime",
+      "published_at": "2026-11-23T03:01:01.000Z",
+      "observed_at": "2026-11-23T03:10:17.518Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN",
+        "SF"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
