@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/who-is-joe-fagnano-meet-the-ravens-cinderella-man-starting-thursday-vs-jaguars",
-      "source_name": "NFL.com",
-      "headline": "Who is Joe Fagnano? Meet the Ravens' 'Cinderella Man' starting Thursday vs. Jaguars",
-      "published_at": "2026-11-05T10:16:10.000Z",
-      "observed_at": "2026-11-05T14:10:22.614Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "JAX"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nick-sirianni-ive-always-felt-complete-support-from-jeffrey-lurie",
-      "source_name": "Pro Football Talk",
-      "headline": "Nick Sirianni: I've always felt complete support from Jeffrey Lurie",
-      "published_at": "2026-11-05T13:58:33.000Z",
-      "observed_at": "2026-11-05T14:10:22.614Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/texans-will-anderson-justin-herbert-playing-out-of-his-mind-for-winless-chargers",
       "source_name": "NFL.com",
       "headline": "Texans' Will Anderson: Justin Herbert 'playing out of his mind' for winless Chargers",
@@ -41860,6 +41817,44 @@
         "TEN"
       ],
       "detected_category": "trade",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-cfb-weekend-recap-weve-been-cooked-like-thanksgiving-turkey",
+      "source_name": "FOX Sports",
+      "headline": "NFL, CFB Weekend Recap: 'We've Been Cooked Like A Thanksgiving Turkey'",
+      "published_at": "2026-11-23T15:05:12.000Z",
+      "observed_at": "2026-11-23T15:10:19.000Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bryce-youngs-14-game-winning-drives-tied-for-most-by-any-player-25-or-younger-since-at-least-1950",
+      "source_name": "Pro Football Talk",
+      "headline": "Bryce Young's 14 game-winning drives tied for most by any player 25 or younger since at least 1950",
+      "published_at": "2026-11-23T15:02:00.000Z",
+      "observed_at": "2026-11-23T15:10:19.000Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
