@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-teams-made-22-in-season-trades-in-2025-only-a-handful-truly-paid-off",
-      "source_name": "NFL.com",
-      "headline": "NFL teams made 22 in-season trades in 2025. Only a handful truly paid off",
-      "published_at": "2026-11-05T10:46:09.000Z",
-      "observed_at": "2026-11-05T14:10:22.614Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "trade",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/why-justin-jefferson-s-silence-is-deafening-when-it-comes-to-the-vikings-offense",
       "source_name": "NFL.com",
       "headline": "Why Justin Jefferson's silence is deafening when it comes to the Vikings' offense",
@@ -41855,6 +41838,30 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "nfl_preserving_category:draft"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/monday-morning-nfl-top-10-rankings-week-11",
+      "source_name": "FOX Sports",
+      "headline": "Monday Morning NFL Top 10 Rankings: Did The 49ers Pass Buffalo? Bears, Lions Move Up",
+      "published_at": "2026-11-23T14:42:07.000Z",
+      "observed_at": "2026-11-23T14:50:19.636Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "CHI",
+        "DET",
+        "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
