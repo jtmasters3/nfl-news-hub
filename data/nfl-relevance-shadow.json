@@ -2,67 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-campbell-and-jeff-hafley-agree-dolphins-now-are-like-lions-at-start-of-their-rebuild",
-      "source_name": "Pro Football Talk",
-      "headline": "Dan Campbell and Jeff Hafley agree: Dolphins now are like Lions at start of their rebuild",
-      "published_at": "2026-11-04T20:08:22.000Z",
-      "observed_at": "2026-11-04T20:20:19.251Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET",
-        "MIA"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-week-9-injury-report-2026-season",
-      "source_name": "NFL.com",
-      "headline": "NFL Week 9 injury report: Player statuses for all 15 games",
-      "published_at": "2026-11-04T08:19:32.000Z",
-      "observed_at": "2026-11-04T20:30:23.365Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaguars-list-bhayshul-tuten-travon-walker-as-questionable-for-thursday-night",
-      "source_name": "Pro Football Talk",
-      "headline": "Jaguars list Bhayshul Tuten, Travon Walker as questionable for Thursday night",
-      "published_at": "2026-11-04T20:25:34.000Z",
-      "observed_at": "2026-11-04T20:30:23.365Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "JAX"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/jacoby-brissett-named-baltimore-ravens-starter-trade",
       "source_name": "FOX Sports",
       "headline": "Ravens Finalizing Trade For Jacoby Brissett With Lamar Jackson, Tyler Huntley Out",
@@ -41831,6 +41770,68 @@
       "confidence": "high",
       "detected_teams": [
         "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-odds-week-12-lines-spreads-results-all-16-games",
+      "source_name": "FOX Sports",
+      "headline": "2026 NFL Odds Week 12: Lines, Spreads, Results For All 16 Games",
+      "published_at": "2026-11-23T02:31:08.000Z",
+      "observed_at": "2026-11-23T02:40:17.482Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-rt-colton-mckivitz-carted-off-in-an-air-cast-with-apparent-significant-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "49ers RT Colton McKivitz carted off in an air cast with apparent significant injury",
+      "published_at": "2026-11-23T02:29:36.000Z",
+      "observed_at": "2026-11-23T02:40:17.482Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN",
+        "SF"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-says-parker-washington-didnt-control-ball-until-he-was-out-of-bounds",
+      "source_name": "Pro Football Talk",
+      "headline": "NFL says Parker Washington didn't control ball until he was out of bounds",
+      "published_at": "2026-11-23T02:28:02.000Z",
+      "observed_at": "2026-11-23T02:40:17.482Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX",
+        "NYG",
+        "WAS"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
