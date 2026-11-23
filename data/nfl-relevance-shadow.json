@@ -2,70 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/drake-maye-tom-brady-patriots-packers",
-      "source_name": "FOX Sports",
-      "headline": "Patriots QB Drake Maye Talks Impact Of 'Legend' Tom Brady Calling Week 9 Game",
-      "published_at": "2026-11-05T15:08:18.000Z",
-      "observed_at": "2026-11-05T15:20:21.612Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-rob-gronkowski-transformed-best-tight-end-all-time",
-      "source_name": "FOX Sports",
-      "headline": "How A Goofy Rookie Called 'Gronk' Transformed Into The Best Tight End Ever",
-      "published_at": "2026-11-05T15:00:17.000Z",
-      "observed_at": "2026-11-05T15:20:21.612Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/the-matthew-stafford-elbow-injury-is-a-something-to-monitor",
-      "source_name": "Pro Football Talk",
-      "headline": "The Matthew Stafford elbow injury is a something to monitor",
-      "published_at": "2026-11-05T15:20:28.000Z",
-      "observed_at": "2026-11-05T15:30:23.636Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAC",
-        "LAR"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-jaguars-vs-ravens-tv-channel-live-stream-time-nov-5-2026",
       "source_name": "FOX Sports",
       "headline": "How to Watch Jaguars vs. Ravens: TV Channel, Live Stream, Time",
@@ -41857,6 +41793,66 @@
         "CAR"
       ],
       "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-nov-23",
+      "source_name": "NFL.com",
+      "headline": "NFL news roundup: Latest league updates from Monday, Nov. 23",
+      "published_at": "2026-11-23T04:45:39.000Z",
+      "observed_at": "2026-11-23T16:50:17.578Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/2026-nfl-fantasy-football-waiver-wire-week-12-rb-justice-hill-wr-caleb-douglas-among-top-targets",
+      "source_name": "NFL.com",
+      "headline": "2026 NFL fantasy football waiver wire, Week 12: RB Justice Hill, WR Caleb Douglas among top targets",
+      "published_at": "2026-11-23T04:35:22.000Z",
+      "observed_at": "2026-11-23T16:50:17.578Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL"
+      ],
+      "detected_category": "fantasy",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/malik-nabers-on-sideline-moment-i-was-just-trying-to-watch-the-game",
+      "source_name": "Pro Football Talk",
+      "headline": "Malik Nabers on sideline moment: I was just trying to watch the game",
+      "published_at": "2026-11-23T16:41:52.000Z",
+      "observed_at": "2026-11-23T16:50:17.578Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX",
+        "NYG"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
