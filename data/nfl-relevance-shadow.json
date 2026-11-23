@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/voting-for-2026-nfl-channel-midseason-awards-opens-sunday-nov-8",
-      "source_name": "NFL.com",
-      "headline": "Voting for 2026 NFL Channel midseason awards opens Sunday, Nov. 8",
-      "published_at": "2026-11-05T03:00:17.000Z",
-      "observed_at": "2026-11-05T15:10:18.481Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/drake-maye-tom-brady-patriots-packers",
       "source_name": "FOX Sports",
       "headline": "Patriots QB Drake Maye Talks Impact Of 'Legend' Tom Brady Calling Week 9 Game",
@@ -41858,6 +41841,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jesse-minter-the-only-thing-you-can-do-is-get-up-off-the-mat-again",
+      "source_name": "Pro Football Talk",
+      "headline": "Jesse Minter: The only thing you can do is get up off the mat again",
+      "published_at": "2026-11-23T16:18:40.000Z",
+      "observed_at": "2026-11-23T16:30:24.337Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "CAR"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
