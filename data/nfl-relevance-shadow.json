@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jonathan-taylor-no-one-likes-uncertainty",
-      "source_name": "Pro Football Talk",
-      "headline": "Jonathan Taylor: No one likes uncertainty",
-      "published_at": "2026-11-05T19:31:06.000Z",
-      "observed_at": "2026-11-05T19:40:23.718Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-thursday-nov-5",
-      "source_name": "NFL.com",
-      "headline": "NFL news roundup: Latest league updates from Thursday, Nov. 5",
-      "published_at": "2026-11-05T07:44:13.000Z",
-      "observed_at": "2026-11-05T19:50:19.222Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cb-dj-turner-upgraded-to-full-practice-for-bengals",
       "source_name": "Pro Football Talk",
       "headline": "CB DJ Turner upgraded to full practice for Bengals",
@@ -41893,6 +41855,49 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/jonah-coleman-has-become-broncos-closer-and-that-bodes-well-for-the-stretch-run",
+      "source_name": "NFL.com",
+      "headline": "Jonah Coleman has become Broncos' closer -- and that bodes well for the stretch run",
+      "published_at": "2026-11-23T01:01:06.000Z",
+      "observed_at": "2026-11-23T21:00:26.015Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-dont-necessarily-expect-jordan-addison-back-this-week",
+      "source_name": "Pro Football Talk",
+      "headline": "Vikings \"don't necessarily expect\" Jordan Addison back this week",
+      "published_at": "2026-11-23T20:54:07.000Z",
+      "observed_at": "2026-11-23T21:00:26.015Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN",
+        "SF"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
