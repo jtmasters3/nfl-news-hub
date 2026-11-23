@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/evan-williams-named-nfc-defensive-player-of-the-month",
-      "source_name": "Pro Football Talk",
-      "headline": "Evan Williams named NFC defensive player of the month",
-      "published_at": "2026-11-05T17:16:29.000Z",
-      "observed_at": "2026-11-05T17:20:20.660Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/malik-nabers-named-nfc-offensive-player-of-the-month",
       "source_name": "Pro Football Talk",
       "headline": "Malik Nabers named NFC offensive player of the month",
@@ -41870,6 +41849,28 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-extend-g-m-john-lynchs-contract",
+      "source_name": "Pro Football Talk",
+      "headline": "49ers extend G.M. John Lynch's contract",
+      "published_at": "2026-11-23T18:29:14.000Z",
+      "observed_at": "2026-11-23T18:40:18.809Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "contract",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:contract"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
