@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/will-hills-parlay-week-back-bears-keep-winning-gophers-cover",
-      "source_name": "FOX Sports",
-      "headline": "Will Hill's Parlay Of The Week: Back Bears To Keep Winning; Gophers To Cover",
-      "published_at": "2026-11-05T21:57:10.000Z",
-      "observed_at": "2026-11-05T22:20:17.041Z",
-      "decision": "keep",
-      "classification": "nfl_with_college_context",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [
-        "conference_big_ten"
-      ],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/joey-porter-jr-downgraded-to-limited-thursday",
-      "source_name": "Pro Football Talk",
-      "headline": "Joey Porter Jr. downgraded to limited Thursday",
-      "published_at": "2026-11-05T22:13:32.000Z",
-      "observed_at": "2026-11-05T22:20:17.041Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dj-moore-limited-dion-dawkins-did-not-practice-on-thursday",
       "source_name": "Pro Football Talk",
       "headline": "DJ Moore limited, Dion Dawkins did not practice on Thursday",
@@ -41908,6 +41864,50 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kenneth-walker-listed-as-out-of-chiefs-practice-monday",
+      "source_name": "Pro Football Talk",
+      "headline": "Kenneth Walker listed as out of Chiefs practice Monday",
+      "published_at": "2026-11-23T22:40:31.000Z",
+      "observed_at": "2026-11-23T22:50:19.401Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "KC"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/daniel-jones-clears-waivers-becomes-free-agent",
+      "source_name": "Pro Football Talk",
+      "headline": "Daniel Jones clears waivers, becomes free agent",
+      "published_at": "2026-11-23T22:37:54.000Z",
+      "observed_at": "2026-11-23T22:50:19.401Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:free_agency"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
