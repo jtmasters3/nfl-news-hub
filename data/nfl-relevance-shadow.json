@@ -2,84 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-jaguars-vs-ravens-tv-channel-live-stream-time-nov-5-2026",
-      "source_name": "FOX Sports",
-      "headline": "How to Watch Jaguars vs. Ravens: TV Channel, Live Stream, Time",
-      "published_at": "2026-11-05T15:30:04.000Z",
-      "observed_at": "2026-11-05T15:40:21.698Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "JAX"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/kyle-shanahan-admits-49ers-explored-jauan-jennings-trade-but-wr-pretty-happy-in-minnesota",
-      "source_name": "NFL.com",
-      "headline": "Kyle Shanahan admits 49ers explored Jauan Jennings trade, but WR 'pretty happy' in Minnesota",
-      "published_at": "2026-11-05T03:47:03.000Z",
-      "observed_at": "2026-11-05T15:50:22.201Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN",
-        "SF"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/salute-to-service-nfl-unites-to-honor-the-military-community",
-      "source_name": "NFL.com",
-      "headline": "Salute to Service: NFL unites to honor the military community",
-      "published_at": "2026-11-05T03:55:45.000Z",
-      "observed_at": "2026-11-05T16:20:18.733Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/pfts-week-9-2026-nfl-picks",
-      "source_name": "Pro Football Talk",
-      "headline": "PFT's Week 9 2026 NFL picks",
-      "published_at": "2026-11-05T15:56:59.000Z",
-      "observed_at": "2026-11-05T16:20:18.733Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sean-mcvay-ive-coached-rams-for-10-years-this-is-the-worst-for-injuries-to-key-players",
       "source_name": "Pro Football Talk",
       "headline": "Sean McVay: I've coached Rams for 10 years, this is the worst for injuries to key players",
@@ -41851,6 +41773,88 @@
       "detected_teams": [
         "JAX",
         "NYG"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50573132/ravens-nfl-best-beating-week-11-panthers",
+      "source_name": "ESPN",
+      "headline": "Turnovers, penalties, time management: Ravens are NFL's best at beating themselves",
+      "published_at": "2026-11-23T16:50:48.000Z",
+      "observed_at": "2026-11-23T17:00:34.525Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/fantasy/football/story/_/page/FFWaiverWirePickUp-50572280/fantasy-football-waivers-free-agent-pickups-nfl-week-12",
+      "source_name": "ESPN",
+      "headline": "Free agents: Grab Rams and Packers quickly in a spread-out Week 12",
+      "published_at": "2026-11-23T16:52:35.000Z",
+      "observed_at": "2026-11-23T17:00:34.525Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
+        "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/espn/betting/story/_/id/50570870/2026-nfl-week-12-schedule-odds-point-spreads-totals",
+      "source_name": "ESPN",
+      "headline": "Week 12 betting odds for every game: Tight spreads galore on holiday week slate",
+      "published_at": "2026-11-23T16:11:39.000Z",
+      "observed_at": "2026-11-23T17:00:34.525Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cooper-dejean-dk-metcalf-just-missed-poking-me-in-the-eye",
+      "source_name": "Pro Football Talk",
+      "headline": "Cooper DeJean: DK Metcalf \"just missed\" poking me in the eye",
+      "published_at": "2026-11-23T16:47:18.000Z",
+      "observed_at": "2026-11-23T17:00:34.525Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PHI",
+        "PIT"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
