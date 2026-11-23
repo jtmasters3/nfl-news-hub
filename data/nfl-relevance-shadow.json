@@ -2,154 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-allen-and-james-cook-can-both-top-5-000-career-rushing-yards-on-monday-night",
-      "source_name": "Pro Football Talk",
-      "headline": "Josh Allen and James Cook can both top 5,000 career rushing yards on Monday night",
-      "published_at": "2026-11-05T08:45:39.000Z",
-      "observed_at": "2026-11-05T08:50:19.182Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.espn.com/nfl/story/_/id/50381318/sources-ravens-finalizing-trade-cardinals-qb-brissett",
-      "source_name": "ESPN",
-      "headline": "Sources: Ravens finalizing trade with Cardinals for QB Brissett",
-      "published_at": "2026-11-05T03:43:30.000Z",
-      "observed_at": "2026-11-05T09:40:29.829Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI",
-        "BAL"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.espn.com/nfl/story/_/id/50383350/jalen-hurts-makes-appearance-eagles-facility",
-      "source_name": "ESPN",
-      "headline": "Sources: Hurts makes appearance at Eagles facility amid recovery from blood clots",
-      "published_at": "2026-11-05T03:43:30.000Z",
-      "observed_at": "2026-11-05T09:40:29.829Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.espn.com/nfl/story/_/id/50383288/packers-josh-jacobs-not-worried-missing-more-games-additional-allegations",
-      "source_name": "ESPN",
-      "headline": "Packers' Jacobs addresses latest allegations, not worried about missing more games",
-      "published_at": "2026-11-05T03:43:30.000Z",
-      "observed_at": "2026-11-05T09:40:29.829Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "phrase_nfl_commissioner"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.espn.com/nfl/story/_/id/50382895/niners-shanahan-says-jennings-told-happy-vikings",
-      "source_name": "ESPN",
-      "headline": "Shanahan: No bad blood with Jennings, who said he's 'happy' with Vikings",
-      "published_at": "2026-11-05T03:43:30.000Z",
-      "observed_at": "2026-11-05T09:40:29.829Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN",
-        "SF"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.espn.com/nfl/story/_/id/50383380/saints-jordyn-tyson-first-practice-august-injury",
-      "source_name": "ESPN",
-      "headline": "Saints' Tyson has 1st practice since injury, feels 'more explosive' than ever",
-      "published_at": "2026-11-05T03:43:30.000Z",
-      "observed_at": "2026-11-05T09:40:29.829Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "JAX",
-        "NO"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.espn.com/nfl/story/_/id/50380713/seahawks-qb-sam-darnold-ruled-quad-injury",
-      "source_name": "ESPN",
-      "headline": "Seahawks QB Darnold ruled out for Sunday, will be week-to-week, coach says",
-      "published_at": "2026-11-05T03:43:30.000Z",
-      "observed_at": "2026-11-05T09:40:29.829Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ARI",
-        "SEA"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.espn.com/nfl/story/_/id/50380724/sources-eagles-turn-joe-milton-starting-qb-vs-giants",
       "source_name": "ESPN",
       "headline": "Sources: Slumping Eagles turn to Milton as starting QB vs. Giants",
@@ -41848,6 +41700,152 @@
       "detected_teams": [
         "DAL",
         "TEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50563331/week-11-most-gain-lose-2026-season-pickens-mccarthy",
+      "source_name": "ESPN",
+      "headline": "Who has the most to gain -- or lose -- down the stretch? Barnwell on 11 NFL players under pressure",
+      "published_at": "2026-11-23T13:27:12.000Z",
+      "observed_at": "2026-11-23T13:40:25.801Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50565876/bengals-jamarr-chase-gymnastics",
+      "source_name": "ESPN",
+      "headline": "Inside the gymnastics lore of Bengals superstar Ja'Marr Chase",
+      "published_at": "2026-11-23T12:46:36.000Z",
+      "observed_at": "2026-11-23T13:40:25.801Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/49828234/washington-commanders-daronte-jones-2026-defense",
+      "source_name": "ESPN",
+      "headline": "How a 1988 Honda Prelude and pet python shaped Commanders DC Daronte Jones",
+      "published_at": "2026-11-23T12:46:36.000Z",
+      "observed_at": "2026-11-23T13:40:25.801Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "WAS"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/32646037/nfl-thanksgiving-day-games-history-lions-cowboys-play-every-year-moments-traditions-records",
+      "source_name": "ESPN",
+      "headline": "The tradition of NFL football on Thanksgiving: What to know about the history and the 2026 schedule",
+      "published_at": "2026-11-23T12:20:06.000Z",
+      "observed_at": "2026-11-23T13:40:25.801Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "DET"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/i-m-the-best-in-the-world-abdul-carter-puts-on-a-show-in-giants-upset-of-jaguars",
+      "source_name": "NFL.com",
+      "headline": "'I'm the best in the world': Abdul Carter puts on a show in Giants' upset of Jaguars",
+      "published_at": "2026-11-23T12:16:06.000Z",
+      "observed_at": "2026-11-23T13:40:25.801Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX",
+        "NYG"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/how-brian-flores-defensive-humbling-vs-49ers-has-chance-to-define-vikings-ceiling",
+      "source_name": "NFL.com",
+      "headline": "How Brian Flores' defensive humbling vs. 49ers has chance to define Vikings' ceiling",
+      "published_at": "2026-11-23T11:16:07.000Z",
+      "observed_at": "2026-11-23T13:40:25.801Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN",
+        "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/fred-warner-whipped-mexican-fans-into-a-frenzy-then-whipped-up-on-the-vikings",
+      "source_name": "NFL.com",
+      "headline": "Fred Warner whipped Mexican fans into a frenzy, then whipped up on the Vikings",
+      "published_at": "2026-11-23T01:16:05.000Z",
+      "observed_at": "2026-11-23T13:40:25.801Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
