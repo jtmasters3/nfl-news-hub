@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/christian-mccaffrey-says-i-feel-great-after-hamstring-injury-but-he-didnt-practice-on-wednesday",
-      "source_name": "Pro Football Talk",
-      "headline": "Christian McCaffrey says \"I feel great\" after hamstring injury, but he didn't practice on Wednesday",
-      "published_at": "2026-11-05T00:57:46.000Z",
-      "observed_at": "2026-11-05T01:00:25.471Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-catchup-ravens-trade-jacoby-brissett-myles-garrett-micah-parsons-practice",
-      "source_name": "FOX Sports",
-      "headline": "NFL Catchup: Ravens Trade For Jacoby Brissett; Myles Garrett, Micah Parsons Practice",
-      "published_at": "2026-11-05T00:56:54.000Z",
-      "observed_at": "2026-11-05T01:10:19.847Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/matthew-stafford-has-full-participation-wednesday-myles-garrett-limited-in-return",
       "source_name": "Pro Football Talk",
       "headline": "Matthew Stafford has full participation Wednesday; Myles Garrett limited in return",
@@ -41836,6 +41798,52 @@
         "DET"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-says-wr-parker-washington-didn-t-control-catch-on-controversial-non-td-in-jaguars-loss-to-giants",
+      "source_name": "NFL.com",
+      "headline": "NFL says WR Parker Washington didn't control catch on controversial non-TD in Jaguars' loss to Giants",
+      "published_at": "2026-11-23T11:44:42.000Z",
+      "observed_at": "2026-11-23T11:50:26.306Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX",
+        "NYG",
+        "NYJ",
+        "WAS"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cam-skattebo-on-unretiring-the-backflip-when-energy-calls-for-it-it-calls-for-it",
+      "source_name": "Pro Football Talk",
+      "headline": "Cam Skattebo on unretiring the backflip: When energy calls for it, it calls for it",
+      "published_at": "2026-11-23T11:48:55.000Z",
+      "observed_at": "2026-11-23T11:50:26.306Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET"
+      ],
+      "detected_category": "retirement",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
