@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/christian-mccaffrey-returned-to-practice-as-limited-participant",
-      "source_name": "Pro Football Talk",
-      "headline": "Christian McCaffrey returned to practice as limited participant",
-      "published_at": "2026-11-05T22:56:08.000Z",
-      "observed_at": "2026-11-05T23:10:18.639Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rashee-rice-files-for-bankruptcy-citing-more-than-3-45-million-in-debt",
-      "source_name": "Pro Football Talk",
-      "headline": "Rashee Rice files for bankruptcy, citing more than $3.45 million in debt",
-      "published_at": "2026-11-05T22:55:33.000Z",
-      "observed_at": "2026-11-05T23:10:18.639Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC"
-      ],
-      "detected_category": "contract",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:contract"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/breece-hall-up-to-full-practice-thursday-says-hes-ready-to-play-this-week",
       "source_name": "Pro Football Talk",
       "headline": "Breece Hall up to full practice Thursday, says he's ready to play this week",
@@ -41902,6 +41863,50 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/week-11-monday-night-inactives-cincinnati-bengals-at-washington-commanders",
+      "source_name": "NFL.com",
+      "headline": "Week 11 Monday night inactives: Cincinnati Bengals at Washington Commanders",
+      "published_at": "2026-11-23T11:48:38.000Z",
+      "observed_at": "2026-11-24T00:00:27.931Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN",
+        "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rachaad-white-active-for-commanders-dax-hill-active-for-bengals",
+      "source_name": "Pro Football Talk",
+      "headline": "Rachaad White active for Commanders, Dax Hill active for Bengals",
+      "published_at": "2026-11-23T23:50:21.000Z",
+      "observed_at": "2026-11-24T00:00:27.931Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN",
+        "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
