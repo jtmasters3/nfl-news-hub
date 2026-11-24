@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/jack-campbell-means-a-lot-to-lions-dc-kelvin-sheppard-he-poured-it-all-out-thursday",
-      "source_name": "NFL.com",
-      "headline": "Jack Campbell means a lot to Lions DC Kelvin Sheppard -- he poured it all out Thursday",
-      "published_at": "2026-11-06T11:16:07.000Z",
-      "observed_at": "2026-11-06T14:20:19.540Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/myles-garrett-s-return-could-unleash-aaron-donald-and-lift-an-injury-hit-rams-defense",
       "source_name": "NFL.com",
       "headline": "Myles Garrett's return could unleash Aaron Donald and lift an injury-hit Rams defense",
@@ -41898,6 +41877,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jamarr-chase-losing-when-you-know-youre-better-is-the-worst",
+      "source_name": "Pro Football Talk",
+      "headline": "Ja'Marr Chase: Losing when you know you're better is the worst",
+      "published_at": "2026-11-24T12:12:11.000Z",
+      "observed_at": "2026-11-24T12:20:21.340Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN",
+        "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
