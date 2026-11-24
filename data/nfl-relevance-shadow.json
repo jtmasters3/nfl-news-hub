@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/wr-brandon-aiyuk-meets-with-49ers-back-to-100-percent-as-he-seeks-reinstatement",
-      "source_name": "NFL.com",
-      "headline": "WR Brandon Aiyuk meets with 49ers, 'back to 100 percent' as he seeks reinstatement",
-      "published_at": "2026-11-07T01:11:11.000Z",
-      "observed_at": "2026-11-07T01:20:19.830Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/saints-to-have-chip-on-shoulder-after-browns-chirping",
       "source_name": "Pro Football Talk",
       "headline": "Saints to have \"chip on our shoulder\" after Browns' \"chirping\"",
@@ -41881,6 +41860,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-playoff-picture-postseason-probabilities-week-12-2026-season",
+      "source_name": "NFL.com",
+      "headline": "NFL playoff picture: Postseason probabilities entering Week 12 of the 2026 season",
+      "published_at": "2026-11-24T10:28:41.000Z",
+      "observed_at": "2026-11-24T22:30:32.616Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
