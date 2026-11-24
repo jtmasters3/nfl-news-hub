@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jets-rule-out-garrett-wilson-for-week-9",
-      "source_name": "Pro Football Talk",
-      "headline": "Jets rule out Garrett Wilson for Week 9",
-      "published_at": "2026-11-06T16:15:10.000Z",
-      "observed_at": "2026-11-06T16:20:22.434Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC",
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/pats-treveyon-henderson-says-he-was-hospitalized-after-unusual-emergency-focused-on-recovery",
-      "source_name": "NFL.com",
-      "headline": "Pats' TreVeyon Henderson says he was hospitalized after 'unusual' emergency, focused on recovery",
-      "published_at": "2026-11-06T04:24:26.000Z",
-      "observed_at": "2026-11-06T16:30:21.303Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE"
-      ],
-      "detected_category": "free_agency",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:free_agency"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nflpa-names-steelers-ls-christian-kuntz-their-community-mvp-for-week-9",
       "source_name": "Pro Football Talk",
       "headline": "NFLPA names Steelers LS Christian Kuntz their Community MVP for Week 9",
@@ -41897,6 +41853,44 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/as-chargers-struggle-jim-harbaughs-answer-on-defensive-playcalling-raises-more-questions",
+      "source_name": "Pro Football Talk",
+      "headline": "As Chargers struggle, Jim Harbaugh's answer on defensive playcalling raises more questions",
+      "published_at": "2026-11-24T15:45:37.000Z",
+      "observed_at": "2026-11-24T15:50:19.089Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mvp-race-is-currently-down-to-joe-burrow-and-brock-purdy",
+      "source_name": "Pro Football Talk",
+      "headline": "MVP race is currently down to Joe Burrow and Brock Purdy",
+      "published_at": "2026-11-24T15:40:42.000Z",
+      "observed_at": "2026-11-24T15:50:19.089Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
