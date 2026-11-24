@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/myles-garrett-remains-limited-participant-thursday",
-      "source_name": "Pro Football Talk",
-      "headline": "Myles Garrett remains limited participant Thursday",
-      "published_at": "2026-11-06T01:55:29.000Z",
-      "observed_at": "2026-11-06T02:10:20.134Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/thursday-night-football-jaguars-lead-ravens-17-3-at-halftime",
-      "source_name": "Pro Football Talk",
-      "headline": "Thursday Night Football: Jaguars lead Ravens 17-3 at halftime",
-      "published_at": "2026-11-06T02:42:56.000Z",
-      "observed_at": "2026-11-06T02:50:19.021Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "JAX"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/derrick-henry-moves-to-seventh-on-the-nfls-all-time-rushing-list",
       "source_name": "Pro Football Talk",
       "headline": "Derrick Henry moves to seventh on the NFL's all-time rushing list",
@@ -41904,6 +41861,45 @@
         "NYG"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tee-higgins-touchdown-highlights-inconsistency-of-replay-review",
+      "source_name": "Pro Football Talk",
+      "headline": "Tee Higgins touchdown highlights inconsistency of replay review",
+      "published_at": "2026-11-24T02:45:29.000Z",
+      "observed_at": "2026-11-24T02:50:18.305Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/monday-night-football-bengals-lead-10-7-at-halftime",
+      "source_name": "Pro Football Talk",
+      "headline": "Monday Night Football: Bengals lead 10-7 at halftime",
+      "published_at": "2026-11-24T02:43:21.000Z",
+      "observed_at": "2026-11-24T02:50:18.305Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN",
+        "WAS"
+      ],
+      "detected_category": "live_game_state",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
