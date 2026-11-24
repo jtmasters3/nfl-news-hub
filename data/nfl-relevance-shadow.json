@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/antonio-brown-pleads-guilty-to-aggravated-assault-with-a-firearm",
-      "source_name": "Pro Football Talk",
-      "headline": "Antonio Brown pleads guilty to aggravated assault with a firearm",
-      "published_at": "2026-11-06T19:10:32.000Z",
-      "observed_at": "2026-11-06T19:20:18.307Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/new-england-patriots-treveyon-henderson-hospital-tests",
       "source_name": "FOX Sports",
       "headline": "Patriots RB Henderson Reveals Hospitalization For Neurological Symptoms",
@@ -41891,6 +41870,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50583595/drew-stevens-washington-commanders-kicker",
+      "source_name": "ESPN",
+      "headline": "'Can he come in every week?' Drew Stevens goes viral after game-winning kick",
+      "published_at": "2026-11-24T17:15:09.000Z",
+      "observed_at": "2026-11-24T17:20:26.696Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
