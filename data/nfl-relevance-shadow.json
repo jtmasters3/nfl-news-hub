@@ -2,66 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/trent-mcduffie-colby-parkinson-listed-as-questionable-for-the-rams",
-      "source_name": "Pro Football Talk",
-      "headline": "Trent McDuffie, Colby Parkinson listed as questionable for the Rams",
-      "published_at": "2026-11-06T21:37:25.000Z",
-      "observed_at": "2026-11-06T21:40:18.790Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nick-sirianni-admits-that-he-misled-reporters-about-quarterback-situation",
-      "source_name": "Pro Football Talk",
-      "headline": "Nick Sirianni admits that he misled reporters about quarterback situation",
-      "published_at": "2026-11-06T21:33:34.000Z",
-      "observed_at": "2026-11-06T21:40:18.790Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/commanders-rule-out-wrs-dyami-brown-treylon-burks",
-      "source_name": "Pro Football Talk",
-      "headline": "Commanders rule out WRs Dyami Brown, Treylon Burks",
-      "published_at": "2026-11-06T21:30:05.000Z",
-      "observed_at": "2026-11-06T21:40:18.790Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR",
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/cowboys-owner-jerry-jones-money-has-never-stood-in-way-of-hiring-right-coach",
       "source_name": "NFL.com",
       "headline": "Cowboys owner Jerry Jones: Money has never stood in way of hiring 'right coach'",
@@ -41864,6 +41804,68 @@
         "DET"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-thanksgiving-games-schedule-teams-how-watch",
+      "source_name": "FOX Sports",
+      "headline": "2026 NFL Thanksgiving Games: Schedule, Teams, How to Watch",
+      "published_at": "2026-11-24T20:13:05.000Z",
+      "observed_at": "2026-11-24T20:20:20.526Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-sign-qb-shane-buechele-off-bills-practice-squad",
+      "source_name": "Pro Football Talk",
+      "headline": "Colts sign QB Shane Buechele off Bills practice squad",
+      "published_at": "2026-11-24T20:15:32.000Z",
+      "observed_at": "2026-11-24T20:20:20.526Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "IND"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ravens-waive-returner-lajohntay-wester",
+      "source_name": "Pro Football Talk",
+      "headline": "Ravens waive returner LaJohntay Wester",
+      "published_at": "2026-11-24T20:07:04.000Z",
+      "observed_at": "2026-11-24T20:20:20.526Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
