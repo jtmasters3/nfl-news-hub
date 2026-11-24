@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rb-cam-skattebo-doubtful-but-wr-malik-nabers-has-no-injury-designation",
-      "source_name": "Pro Football Talk",
-      "headline": "RB Cam Skattebo doubtful, but WR Malik Nabers has no injury designation",
-      "published_at": "2026-11-06T21:53:08.000Z",
-      "observed_at": "2026-11-06T22:00:26.447Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brandon-aiyuk-plans-to-meet-with-49ers-at-teams-business-offices-not-team-facility",
       "source_name": "Pro Football Talk",
       "headline": "Brandon Aiyuk plans to meet with 49ers at team's business offices, not team facility",
@@ -41868,6 +41847,30 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/seahawks-add-chase-lundt-off-bills-practice-squad-waive-cb-avery-smith",
+      "source_name": "Pro Football Talk",
+      "headline": "Seahawks add Chase Lundt off Bills practice squad, waive CB Avery Smith",
+      "published_at": "2026-11-24T20:44:42.000Z",
+      "observed_at": "2026-11-24T20:50:18.539Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "SEA"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
