@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaguars-lb-foye-oluokun-we-cant-let-wins-mask-stuff",
-      "source_name": "Pro Football Talk",
-      "headline": "Jaguars LB Foye Oluokun: We can't let wins mask stuff",
-      "published_at": "2026-11-06T12:30:22.000Z",
-      "observed_at": "2026-11-06T12:40:18.114Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "JAX"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/eagles-qb-joe-milton-prepares-first-start-giants",
       "source_name": "NFL.com",
       "headline": "Eagles QB Joe Milton prepares for first start: NFL is about 'being ready when your name is called'",
@@ -41907,6 +41886,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/nfl-week-11-all-stars-dak-prescott-ceedee-lamb-cowboys-travis-kelce-chiefs-jeffery-simmons-bears",
+      "source_name": "FOX Sports",
+      "headline": "NFL Week 11 All-Stars: Dak Prescott Or Patrick Mahomes? Rookies Make An Impact",
+      "published_at": "2026-11-24T05:05:14.000Z",
+      "observed_at": "2026-11-24T05:20:21.911Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
