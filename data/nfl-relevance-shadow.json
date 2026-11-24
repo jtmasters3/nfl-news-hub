@@ -2,71 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/thursday-night-football-jaguars-blow-out-ravens-33-10",
-      "source_name": "Pro Football Talk",
-      "headline": "Thursday Night Football: Jaguars blow out Ravens 33-10",
-      "published_at": "2026-11-06T04:21:24.000Z",
-      "observed_at": "2026-11-06T04:30:22.628Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "JAX"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/george-kittle-is-skeptical-that-brandon-aiyuk-will-get-in-the-team-facility",
-      "source_name": "Pro Football Talk",
-      "headline": "George Kittle is skeptical that Brandon Aiyuk will \"get in\" the team facility",
-      "published_at": "2026-11-06T05:03:53.000Z",
-      "observed_at": "2026-11-06T05:10:18.630Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/justin-jefferson-says-his-frustration-came-from-wanting-to-win",
-      "source_name": "Pro Football Talk",
-      "headline": "Justin Jefferson says his frustration came from \"wanting to win\"",
-      "published_at": "2026-11-06T05:22:55.000Z",
-      "observed_at": "2026-11-06T05:30:22.601Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET",
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaguars-point-differential-of-108-this-season-is-50-points-better-than-any-other-team",
       "source_name": "Pro Football Talk",
       "headline": "Jaguars' point differential of +108 this season is 50 points better than any other team",
@@ -41902,6 +41837,70 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/bengals-commanders-on-monday-night-football-what-we-learned-from-washington-s-22-20-win",
+      "source_name": "NFL.com",
+      "headline": "Bengals-Commanders on 'Monday Night Football': What We Learned from Washington's 22-20 win",
+      "published_at": "2026-11-24T04:23:26.000Z",
+      "observed_at": "2026-11-24T04:30:20.978Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN",
+        "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/cowboys-explosive-offense-jaguars-lose-49ers-best-team",
+      "source_name": "FOX Sports",
+      "headline": "NFL Best & Worst: From The Cowboys’ Offensive Explosion To The Jaguars’ Nightmare Day",
+      "published_at": "2026-11-24T04:29:04.000Z",
+      "observed_at": "2026-11-24T04:30:20.978Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "JAX",
+        "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sec-plans-to-consider-ejecting-lsu-on-december-3",
+      "source_name": "Pro Football Talk",
+      "headline": "SEC plans to consider ejecting LSU on December 3",
+      "published_at": "2026-11-24T04:22:54.000Z",
+      "observed_at": "2026-11-24T04:30:20.978Z",
+      "decision": "reject",
+      "classification": "college_football",
+      "confidence": "medium",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [
+        "conference_sec"
+      ],
+      "reason_codes": [
+        "college_marker_no_nfl_evidence"
       ]
     }
   ]
