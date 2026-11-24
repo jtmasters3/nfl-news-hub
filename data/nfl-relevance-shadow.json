@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/a-lions-offensive-play-captivated-the-nfl-the-details-behind-it-tell-a-bigger-story",
-      "source_name": "NFL.com",
-      "headline": "A Lions offensive play captivated the NFL. The details behind it tell a bigger story",
-      "published_at": "2026-11-06T11:16:07.000Z",
-      "observed_at": "2026-11-06T14:10:23.702Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/jack-campbell-means-a-lot-to-lions-dc-kelvin-sheppard-he-poured-it-all-out-thursday",
       "source_name": "NFL.com",
       "headline": "Jack Campbell means a lot to Lions DC Kelvin Sheppard -- he poured it all out Thursday",
@@ -41902,6 +41881,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lights-went-out-on-monday-night-because-routine-maintenance-schedule-wasnt-changed",
+      "source_name": "Pro Football Talk",
+      "headline": "Lights went out on Monday night because routine maintenance schedule wasn't changed",
+      "published_at": "2026-11-24T11:22:08.000Z",
+      "observed_at": "2026-11-24T11:30:22.521Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
