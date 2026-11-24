@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/s-talanoa-hufanga-questionable-for-sundays-game",
-      "source_name": "Pro Football Talk",
-      "headline": "S Talanoa Hufanga questionable for Sunday's game",
-      "published_at": "2026-11-06T22:57:01.000Z",
-      "observed_at": "2026-11-06T23:10:19.597Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR",
-        "DEN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/amon-ra-st-brown-listed-as-questionable-for-lions",
-      "source_name": "Pro Football Talk",
-      "headline": "Amon-Ra St. Brown listed as questionable for Lions",
-      "published_at": "2026-11-06T23:09:24.000Z",
-      "observed_at": "2026-11-06T23:20:17.723Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET",
-        "MIA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/texans-rule-out-s-reed-blankenship-rb-david-montgomery",
       "source_name": "Pro Football Talk",
       "headline": "Texans rule out S Reed Blankenship, RB David Montgomery",
@@ -41878,6 +41834,46 @@
       "confidence": "high",
       "detected_teams": [
         "DAL"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brandon-aiyuk-is-a-free-agent-after-clearing-waivers",
+      "source_name": "Pro Football Talk",
+      "headline": "Brandon Aiyuk is a free agent after clearing waivers",
+      "published_at": "2026-11-24T21:50:41.000Z",
+      "observed_at": "2026-11-24T22:00:26.370Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kenneth-walker-limited-in-his-return-to-chiefs-practice",
+      "source_name": "Pro Football Talk",
+      "headline": "Kenneth Walker limited in his return to Chiefs practice",
+      "published_at": "2026-11-24T21:42:44.000Z",
+      "observed_at": "2026-11-24T22:00:26.370Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC"
       ],
       "detected_category": "injury",
       "nfl_evidence": [
