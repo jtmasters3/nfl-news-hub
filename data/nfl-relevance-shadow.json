@@ -2,48 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/ravens-play-not-acceptable-in-latest-blowout-loss-to-jaguars",
-      "source_name": "NFL.com",
-      "headline": "Ravens play 'not acceptable' in latest blowout loss to Jaguars",
-      "published_at": "2026-11-06T12:17:24.000Z",
-      "observed_at": "2026-11-06T12:30:21.703Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "JAX"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/trevor-lawrence-is-having-by-far-the-best-season-of-his-career",
-      "source_name": "Pro Football Talk",
-      "headline": "Trevor Lawrence is having by far the best season of his career",
-      "published_at": "2026-11-06T12:23:16.000Z",
-      "observed_at": "2026-11-06T12:30:21.703Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [],
-      "detected_category": "draft",
-      "nfl_evidence": [
-        "phrase_nfl_draft",
-        "nfl_preserving_category:draft"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaguars-lb-foye-oluokun-we-cant-let-wins-mask-stuff",
       "source_name": "Pro Football Talk",
       "headline": "Jaguars LB Foye Oluokun: We can't let wins mask stuff",
@@ -41895,6 +41853,52 @@
       "detected_teams": [
         "CIN",
         "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/cincinnati-bengals-vs-washington-commanders-nfl-takeaways-november-23-2026",
+      "source_name": "FOX Sports",
+      "headline": "Jayden Daniels Gets The Better Of Joe Burrow: 3 Takeaways From The Commanders' Win",
+      "published_at": "2026-11-24T04:52:43.000Z",
+      "observed_at": "2026-11-24T05:00:28.283Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN",
+        "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-power-rankings-week-12",
+      "source_name": "FOX Sports",
+      "headline": "2026 NFL Power Rankings Week 12: Are The Giants Finally A Top-10 Team?",
+      "published_at": "2026-11-24T04:49:53.000Z",
+      "observed_at": "2026-11-24T05:00:28.283Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN",
+        "JAX",
+        "MIN",
+        "NYG"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
