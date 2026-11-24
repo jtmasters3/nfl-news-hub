@@ -2,92 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/as-chargers-offense-struggles-mike-mcdaniel-will-move-from-the-sideline-to-the-booth",
-      "source_name": "Pro Football Talk",
-      "headline": "As Chargers' offense struggles, Mike McDaniel will move from the sideline to the booth",
-      "published_at": "2026-11-05T23:19:37.000Z",
-      "observed_at": "2026-11-05T23:30:19.454Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "HOU",
-        "LAC"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/back-surgery-will-keep-robert-kraft-from-rob-gronkowskis-patriots-hall-of-fame-induction",
-      "source_name": "Pro Football Talk",
-      "headline": "Back surgery will keep Robert Kraft from Rob Gronkowski's Patriots Hall of Fame induction",
-      "published_at": "2026-11-05T23:16:37.000Z",
-      "observed_at": "2026-11-05T23:30:19.454Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/john-lynch-on-brandon-aiyuk-well-look-for-a-path-that-works-for-both-sides",
-      "source_name": "Pro Football Talk",
-      "headline": "John Lynch on Brandon Aiyuk: We'll look for a path that works for both sides",
-      "published_at": "2026-11-05T23:33:15.000Z",
-      "observed_at": "2026-11-05T23:40:23.099Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/week-9-thursday-night-inactives-jacksonville-jaguars-at-baltimore-ravens",
-      "source_name": "NFL.com",
-      "headline": "Week 9 Thursday night inactives: Jacksonville Jaguars at Baltimore Ravens",
-      "published_at": "2026-11-05T11:50:56.000Z",
-      "observed_at": "2026-11-06T00:00:29.273Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "JAX"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/tom-brady-nfl-mvp-candidates-josh-allen",
       "source_name": "FOX Sports",
       "headline": "Who Are Tom Brady's Top 4 NFL MVP Candidates? The GOAT Assesses The Favorites",
@@ -41899,6 +41813,90 @@
       "confidence": "low",
       "detected_teams": [],
       "detected_category": "coaching",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50577301/sources-packers-micah-parsons-cleared-return-wednesday",
+      "source_name": "ESPN",
+      "headline": "Sources: Packers' Parsons cleared to make season debut Wednesday vs. Rams",
+      "published_at": "2026-11-24T01:45:17.000Z",
+      "observed_at": "2026-11-24T01:50:29.072Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
+        "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50578357/seahawks-holding-final-sam-darnold-call-vs-49ers",
+      "source_name": "ESPN",
+      "headline": "Darnold still on track to face 49ers, but Seahawks holding off on final call",
+      "published_at": "2026-11-24T01:45:18.000Z",
+      "observed_at": "2026-11-24T01:50:29.072Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF",
+        "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50577306/ravens-noncommittal-whether-cb-humphrey-play-sunday",
+      "source_name": "ESPN",
+      "headline": "Minter, Ravens noncommittal on whether CB Humphrey will return to face Texans",
+      "published_at": "2026-11-24T01:45:18.000Z",
+      "observed_at": "2026-11-24T01:50:29.072Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL",
+        "CAR",
+        "HOU"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/fantasy/football/story/_/id/50574503/2026-fantasy-football-trade-deadline-trade-away",
+      "source_name": "ESPN",
+      "headline": "Why you should trade for (or away) these 12 players in fantasy football",
+      "published_at": "2026-11-23T22:51:09.000Z",
+      "observed_at": "2026-11-24T01:50:29.072Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "trade",
       "nfl_evidence": [],
       "non_nfl_evidence": [],
       "reason_codes": [
