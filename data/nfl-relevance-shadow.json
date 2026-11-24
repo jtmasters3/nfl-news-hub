@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/jaguars-ravens-on-thursday-night-football-what-we-learned-from-jacksonville-s-33-10-win",
-      "source_name": "NFL.com",
-      "headline": "Jaguars-Ravens on 'Thursday Night Football': What We Learned from Jacksonville's 33-10 win",
-      "published_at": "2026-11-06T04:06:41.000Z",
-      "observed_at": "2026-11-06T04:20:17.039Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "JAX"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/baltimore-never-stood-chance-3-takeaways-from-jaguars-win-over-ravens",
       "source_name": "FOX Sports",
       "headline": "Jaguars Overwhelm Lamar Jackson-Less Ravens: 3 Takeaways From Jacksonville's Win",
@@ -41895,6 +41873,27 @@
       "detected_teams": [
         "CHI",
         "DET"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/monday-night-football-joe-burrows-second-td-pass-puts-bengals-up-17-10",
+      "source_name": "Pro Football Talk",
+      "headline": "Monday Night Football: Joe Burrow's second TD pass puts Bengals up 17-10",
+      "published_at": "2026-11-24T03:20:20.000Z",
+      "observed_at": "2026-11-24T03:30:23.228Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
