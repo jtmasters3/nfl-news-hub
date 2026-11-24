@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/caleb-downs-has-no-injury-designation-george-pickens-listed-as-questionable",
-      "source_name": "Pro Football Talk",
-      "headline": "Caleb Downs has no injury designation, George Pickens listed as questionable",
-      "published_at": "2026-11-06T20:42:51.000Z",
-      "observed_at": "2026-11-06T20:50:24.836Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "IND"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/bengals-joe-burrow-madrid-game",
       "source_name": "NFL.com",
       "headline": "Bengals' Joe Burrow enjoying Madrid's museums, feeling like ‘normal person’ ahead of Madrid game",
@@ -41878,6 +41856,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/rob-gronkowski-ben-roethlisberger-pro-football-hall-of-fame",
+      "source_name": "FOX Sports",
+      "headline": "Rob Gronkowski Among 1st-Time Eligibles Advancing In Hall of Fame Voting Process",
+      "published_at": "2026-11-24T18:59:49.000Z",
+      "observed_at": "2026-11-24T19:20:20.496Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
