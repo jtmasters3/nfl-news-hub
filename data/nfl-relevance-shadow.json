@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/breece-hall-up-to-full-practice-thursday-says-hes-ready-to-play-this-week",
-      "source_name": "Pro Football Talk",
-      "headline": "Breece Hall up to full practice Thursday, says he's ready to play this week",
-      "published_at": "2026-11-05T23:09:40.000Z",
-      "observed_at": "2026-11-05T23:20:20.326Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/as-chargers-offense-struggles-mike-mcdaniel-will-move-from-the-sideline-to-the-booth",
       "source_name": "Pro Football Talk",
       "headline": "As Chargers' offense struggles, Mike McDaniel will move from the sideline to the booth",
@@ -41907,6 +41886,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-mccarthy-aaron-rodgers-is-our-quarterback",
+      "source_name": "Pro Football Talk",
+      "headline": "Mike McCarthy: Aaron Rodgers is our quarterback",
+      "published_at": "2026-11-24T01:34:41.000Z",
+      "observed_at": "2026-11-24T01:40:21.073Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "coaching",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
