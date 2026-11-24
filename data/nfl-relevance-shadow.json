@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ravens-rule-out-kyle-hamilton-with-a-hip-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "Ravens rule out Kyle Hamilton with a hip injury",
-      "published_at": "2026-11-06T03:34:15.000Z",
-      "observed_at": "2026-11-06T03:40:19.299Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/jaguars-ravens-on-thursday-night-football-what-we-learned-from-jacksonville-s-33-10-win",
       "source_name": "NFL.com",
       "headline": "Jaguars-Ravens on 'Thursday Night Football': What We Learned from Jacksonville's 33-10 win",
@@ -41902,6 +41881,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/how-the-detroit-lions-defense-transformed-into-capable-unit-ahead-of-matchup-vs-bears",
+      "source_name": "FOX Sports",
+      "headline": "Inside The Lions' Staggering Defensive Transformation Ahead Of Matchup vs. Bears",
+      "published_at": "2026-11-24T03:09:49.000Z",
+      "observed_at": "2026-11-24T03:20:18.898Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "DET"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
