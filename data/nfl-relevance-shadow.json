@@ -2,92 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/christian-watson-set-to-play-for-packers-keisean-nixon-listed-as-questionable",
-      "source_name": "Pro Football Talk",
-      "headline": "Christian Watson set to play for Packers, Keisean Nixon listed as questionable",
-      "published_at": "2026-11-06T20:57:57.000Z",
-      "observed_at": "2026-11-06T21:00:23.070Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB",
-        "NE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-rule-out-cb-justin-walley-lb-akeem-davis-gaither",
-      "source_name": "Pro Football Talk",
-      "headline": "Colts rule out CB Justin Walley, LB Akeem Davis-Gaither",
-      "published_at": "2026-11-06T21:03:38.000Z",
-      "observed_at": "2026-11-06T21:10:20.904Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "IND"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/saquon-barkley-set-to-play-as-eagles-remain-without-devonta-smith-dontayvion-wicks",
-      "source_name": "Pro Football Talk",
-      "headline": "Saquon Barkley set to play as Eagles remain without DeVonta Smith, Dontayvion Wicks",
-      "published_at": "2026-11-06T21:15:26.000Z",
-      "observed_at": "2026-11-06T21:20:21.445Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patriots-list-eight-players-as-questionable-to-play-after-ruling-out-a-j-brown-treveyon-henderson",
-      "source_name": "Pro Football Talk",
-      "headline": "Patriots list eight players as questionable after ruling out A.J. Brown, TreVeyon Henderson",
-      "published_at": "2026-11-06T21:20:15.000Z",
-      "observed_at": "2026-11-06T21:30:21.787Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/trent-mcduffie-colby-parkinson-listed-as-questionable-for-the-rams",
       "source_name": "Pro Football Talk",
       "headline": "Trent McDuffie, Colby Parkinson listed as questionable for the Rams",
@@ -41866,6 +41780,88 @@
       "detected_teams": [
         "GB",
         "LAR"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-week-12-injury-report-2026-season",
+      "source_name": "NFL.com",
+      "headline": "NFL Week 12 injury report: Player statuses for all 16 games",
+      "published_at": "2026-11-24T07:35:25.000Z",
+      "observed_at": "2026-11-24T19:40:20.099Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "injury",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/chiefs-sign-ot-fred-johnson-to-53-man-roster",
+      "source_name": "Pro Football Talk",
+      "headline": "Chiefs sign OT Fred Johnson to 53-man roster",
+      "published_at": "2026-11-24T19:38:35.000Z",
+      "observed_at": "2026-11-24T19:40:20.099Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/packers-activate-micah-parsons-to-53-man-roster",
+      "source_name": "Pro Football Talk",
+      "headline": "Packers activate Micah Parsons to 53-man roster",
+      "published_at": "2026-11-24T19:34:57.000Z",
+      "observed_at": "2026-11-24T19:40:20.099Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lions-dt-skyler-gill-howard-out-for-season-with-knee-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Lions DT Skyler Gill-Howard out for season with knee injury",
+      "published_at": "2026-11-24T19:31:59.000Z",
+      "observed_at": "2026-11-24T19:40:20.099Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET"
       ],
       "detected_category": "injury",
       "nfl_evidence": [
