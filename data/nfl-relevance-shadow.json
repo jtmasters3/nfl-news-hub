@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brandon-aiyuk-plans-to-meet-with-49ers-at-teams-business-offices-not-team-facility",
-      "source_name": "Pro Football Talk",
-      "headline": "Brandon Aiyuk plans to meet with 49ers at team's business offices, not team facility",
-      "published_at": "2026-11-06T21:50:45.000Z",
-      "observed_at": "2026-11-06T22:00:26.447Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/quenton-nelson-out-this-sunday-week-to-week-with-knee-injury",
       "source_name": "Pro Football Talk",
       "headline": "Quenton Nelson out this Sunday, week-to-week with knee injury",
@@ -41870,6 +41849,29 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-sign-lb-chance-campbell-waive-c-jake-majors",
+      "source_name": "Pro Football Talk",
+      "headline": "Eagles sign LB Chance Campbell, waive C Jake Majors",
+      "published_at": "2026-11-24T21:12:57.000Z",
+      "observed_at": "2026-11-24T21:20:19.035Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "PHI"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
         "nfl_preserving_category:roster_move"
       ],
       "non_nfl_evidence": [],
