@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/minkah-fitzpatrick-clarifies-jets-being-jets-comments-i-know-what-i-said",
-      "source_name": "NFL.com",
-      "headline": "Minkah Fitzpatrick clarifies 'Jets being Jets' comments: 'I know what I said'",
-      "published_at": "2026-11-06T03:14:57.000Z",
-      "observed_at": "2026-11-06T15:20:19.498Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG",
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-has-not-yet-reinstated-brandon-aiyuk-from-reserve-left-squad",
-      "source_name": "Pro Football Talk",
-      "headline": "NFL has not yet reinstated Brandon Aiyuk from reserve/left squad list",
-      "published_at": "2026-11-06T15:38:03.000Z",
-      "observed_at": "2026-11-06T15:50:17.714Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/ravens-cardinals-announce-jacoby-brissett-trade",
       "source_name": "Pro Football Talk",
       "headline": "Ravens, Cardinals announce Jacoby Brissett trade",
@@ -41892,6 +41853,49 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/why-the-patriots-aren-t-pursuing-daniel-jones-tommy-devito-s-our-starter",
+      "source_name": "NFL.com",
+      "headline": "Why the Patriots aren't pursuing Daniel Jones: 'Tommy (DeVito)'s our starter'",
+      "published_at": "2026-11-24T11:16:08.000Z",
+      "observed_at": "2026-11-24T15:30:24.420Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/daniel-jones-clears-waivers-where-could-the-former-colts-qb-land-as-a-free-agent",
+      "source_name": "NFL.com",
+      "headline": "Daniel Jones clears waivers. Where could the former Colts QB land as a free agent?",
+      "published_at": "2026-11-24T10:31:05.000Z",
+      "observed_at": "2026-11-24T15:30:24.420Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:free_agency"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
