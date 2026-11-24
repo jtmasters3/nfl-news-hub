@@ -2,29 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/eagles-qb-joe-milton-prepares-first-start-giants",
-      "source_name": "NFL.com",
-      "headline": "Eagles QB Joe Milton prepares for first start: NFL is about 'being ready when your name is called'",
-      "published_at": "2026-11-06T01:35:45.000Z",
-      "observed_at": "2026-11-06T13:50:18.784Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG",
-        "NYJ",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-list-james-pearce-divine-diablo-as-questionable-for-sunday",
       "source_name": "Pro Football Talk",
       "headline": "Falcons list James Pearce, Divine Diablo as questionable for Sunday",
@@ -41903,6 +41880,28 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50580514/jayden-daniels-delivers-another-late-game-drive-commanders-win-vs-bengals-mnf",
+      "source_name": "ESPN",
+      "headline": "'I live for these moments': QB Daniels again delivers in clutch for Commanders",
+      "published_at": "2026-11-24T07:15:26.000Z",
+      "observed_at": "2026-11-24T07:30:33.096Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN",
+        "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
