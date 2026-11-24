@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/joe-milton-on-his-first-start-the-nfl-is-about-being-ready-when-your-number-is-called",
-      "source_name": "Pro Football Talk",
-      "headline": "Joe Milton on his first start: The NFL is about being ready when your number is called",
-      "published_at": "2026-11-06T01:34:33.000Z",
-      "observed_at": "2026-11-06T01:40:20.507Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaguars-score-on-opening-drive-for-7-0-lead-on-ravens",
-      "source_name": "Pro Football Talk",
-      "headline": "Jaguars score on opening drive for 7-0 lead on Ravens",
-      "published_at": "2026-11-06T01:27:17.000Z",
-      "observed_at": "2026-11-06T01:40:20.507Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL",
-        "JAX"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/myles-garrett-remains-limited-participant-thursday",
       "source_name": "Pro Football Talk",
       "headline": "Myles Garrett remains limited participant Thursday",
@@ -41897,6 +41858,50 @@
       "confidence": "high",
       "detected_teams": [
         "DET"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bengals-get-on-the-board-in-second-quarter-lead-3-0",
+      "source_name": "Pro Football Talk",
+      "headline": "Bengals get on the board in second quarter, lead 3-0",
+      "published_at": "2026-11-24T02:11:10.000Z",
+      "observed_at": "2026-11-24T02:20:20.537Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN",
+        "WAS"
+      ],
+      "detected_category": "live_game_state",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/making-sense-of-liam-coens-nonsensical-decision-to-kick-a-late-field-goal",
+      "source_name": "Pro Football Talk",
+      "headline": "Making sense of Liam Coen's nonsensical decision to kick a late field goal",
+      "published_at": "2026-11-24T02:08:18.000Z",
+      "observed_at": "2026-11-24T02:20:20.537Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "JAX",
+        "NYG"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
