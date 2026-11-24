@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-issue-new-statement-on-stadium-that-officially-puts-illinois-back-in-play",
-      "source_name": "Pro Football Talk",
-      "headline": "Bears issue new statement on stadium that officially puts Illinois back in play",
-      "published_at": "2026-11-06T18:39:58.000Z",
-      "observed_at": "2026-11-06T18:50:23.407Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mansoor-delane-will-not-play-for-the-chiefs-on-sunday",
       "source_name": "Pro Football Talk",
       "headline": "Mansoor Delane will not play for the Chiefs on Sunday",
@@ -41892,6 +41871,27 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/how-the-raiders-finally-got-ashton-jeanty-and-the-run-game-back-on-track",
+      "source_name": "NFL.com",
+      "headline": "How the Raiders finally got Ashton Jeanty and the run game back on track",
+      "published_at": "2026-11-24T01:46:13.000Z",
+      "observed_at": "2026-11-24T16:50:19.880Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LV"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
