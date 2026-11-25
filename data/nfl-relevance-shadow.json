@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaxon-smith-njigba-can-do-something-no-one-has-done-since-1960",
-      "source_name": "Pro Football Talk",
-      "headline": "Jaxon Smith-Njigba can do something no one has done since 1960",
-      "published_at": "2026-11-08T19:35:40.000Z",
-      "observed_at": "2026-11-08T19:40:17.351Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/broncos-lead-panthers-13-7-at-the-half",
       "source_name": "Pro Football Talk",
       "headline": "Broncos lead Panthers 13-7 at the half",
@@ -41851,6 +41834,28 @@
       "nfl_evidence": [
         "nfl_team_detected",
         "phrase_practice_squad"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-rodgers-mike-mccarthy-fell-asleep-in-meeting-last-week-broke-down-steelers-with-1-2-3-packers",
+      "source_name": "Pro Football Talk",
+      "headline": "Aaron Rodgers: Mike McCarthy fell asleep in meeting last week, broke down Steelers with \"1-2-3 Packers\"",
+      "published_at": "2026-11-25T19:06:49.000Z",
+      "observed_at": "2026-11-25T19:20:29.200Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
+        "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
