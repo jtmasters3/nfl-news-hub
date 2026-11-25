@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-take-8-6-lead-over-giants-into-halftime",
-      "source_name": "Pro Football Talk",
-      "headline": "Eagles take 8-6 lead over Giants into halftime",
-      "published_at": "2026-11-08T19:44:38.000Z",
-      "observed_at": "2026-11-08T19:50:19.481Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG",
-        "PHI"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/notable-injuries-news-sunday-week-9-games-2026",
-      "source_name": "NFL.com",
-      "headline": "Notable injuries, news from Sunday's Week 9 games: Broncos WR Jaylen Waddle suffers concussion vs. Panthers",
-      "published_at": "2026-11-08T07:45:38.000Z",
-      "observed_at": "2026-11-08T20:00:24.590Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR",
-        "DEN"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/mike-tirico-to-miss-bears-buccaneers-snf-broadcast-with-health-issue",
       "source_name": "NFL.com",
       "headline": "Mike Tirico to miss Bears-Buccaneers SNF broadcast with health issue",
@@ -41851,6 +41807,49 @@
       "confidence": "high",
       "detected_teams": [
         "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-suddenly-have-a-major-mess",
+      "source_name": "Pro Football Talk",
+      "headline": "Steelers suddenly have a major mess",
+      "published_at": "2026-11-25T19:49:36.000Z",
+      "observed_at": "2026-11-25T20:00:29.298Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brock-bowers-is-practicing-on-wednesday-after-missing-sundays-game",
+      "source_name": "Pro Football Talk",
+      "headline": "Brock Bowers is practicing on Wednesday after missing Sunday's game",
+      "published_at": "2026-11-25T19:47:34.000Z",
+      "observed_at": "2026-11-25T20:00:29.298Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE",
+        "LV"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
