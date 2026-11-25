@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-activate-myles-garrett-put-jaylen-watson-on-ir",
-      "source_name": "Pro Football Talk",
-      "headline": "Rams activate Myles Garrett, put Jaylen Watson on IR",
-      "published_at": "2026-11-07T18:52:34.000Z",
-      "observed_at": "2026-11-07T19:00:24.751Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/bills-vikings-predictions-can-minnesota-s-defense-stop-josh-allen",
-      "source_name": "NFL.com",
-      "headline": "Bills-Vikings predictions: Can Minnesota's defense stop Josh Allen?",
-      "published_at": "2026-11-07T12:16:06.000Z",
-      "observed_at": "2026-11-07T19:10:17.549Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/victor-cruz-these-are-the-3-best-leaders-i-played-with-in-the-nfl",
       "source_name": "NFL.com",
       "headline": "Victor Cruz: These are the 3 best leaders I played with in the NFL",
@@ -41858,6 +41815,44 @@
       "confidence": "low",
       "detected_teams": [],
       "detected_category": "coaching",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50588773/long-lions-owner-martha-firestone-ford-dies-age-101",
+      "source_name": "ESPN",
+      "headline": "Longtime Lions owner Martha Firestone Ford dies at age 101",
+      "published_at": "2026-11-25T02:37:29.000Z",
+      "observed_at": "2026-11-25T03:20:26.268Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/fantasy/football/story/_/id/50585589/dynasty-league-trade-deadline-advice",
+      "source_name": "ESPN",
+      "headline": "What to do in dynasty and keeper leagues at the fantasy trade deadline",
+      "published_at": "2026-11-25T02:41:23.000Z",
+      "observed_at": "2026-11-25T03:20:26.268Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "trade",
       "nfl_evidence": [],
       "non_nfl_evidence": [],
       "reason_codes": [
