@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/rob-gronkowski-takes-army-west-points-legendary-survival-gate-challenge",
-      "source_name": "FOX Sports",
-      "headline": "Rob Gronkowski Takes On Army West Point’s Legendary ‘Survival Gate’ Challenge",
-      "published_at": "2026-11-08T18:30:01.000Z",
-      "observed_at": "2026-11-08T18:30:23.286Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-packers-vs-patriots-tv-channel-live-stream-time-nov-8-2026",
       "source_name": "FOX Sports",
       "headline": "How to Watch Packers vs. Patriots: TV Channel, Live Stream, Time",
@@ -41840,6 +41823,28 @@
       "confidence": "high",
       "detected_teams": [
         "CAR"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/quinyon-mitchell-has-no-injury-designation-for-thanksgiving",
+      "source_name": "Pro Football Talk",
+      "headline": "Quinyon Mitchell has no injury designation for Thanksgiving",
+      "published_at": "2026-11-25T17:50:04.000Z",
+      "observed_at": "2026-11-25T18:00:26.088Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "PHI"
       ],
       "detected_category": "injury",
       "nfl_evidence": [
