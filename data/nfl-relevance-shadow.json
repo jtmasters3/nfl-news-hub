@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lamar-jacksons-message-to-teammates-stay-alive-and-ill-be-back",
-      "source_name": "Pro Football Talk",
-      "headline": "Lamar Jackson's message to teammates: Stay alive, and I'll be back",
-      "published_at": "2026-11-08T13:53:12.000Z",
-      "observed_at": "2026-11-08T14:00:25.668Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/james-pearce-jr-is-active-for-the-falcons",
       "source_name": "Pro Football Talk",
       "headline": "James Pearce Jr. is active for the Falcons",
@@ -41836,6 +41819,27 @@
       "confidence": "high",
       "detected_teams": [
         "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/three-bengals-issues-sow-seeds-of-concern-toward-playoff-ambitions",
+      "source_name": "NFL.com",
+      "headline": "Three Bengals issues sow seeds of concern toward playoff ambitions",
+      "published_at": "2026-11-25T11:16:07.000Z",
+      "observed_at": "2026-11-25T16:40:17.532Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CIN"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
