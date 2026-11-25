@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-colts-have-told-teams-they-were-offered-a-fourth-round-pick-for-josh-downs",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Colts have told teams they were offered a fourth-round pick for Josh Downs",
-      "published_at": "2026-11-08T09:32:24.000Z",
-      "observed_at": "2026-11-08T09:40:17.244Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/deion-sanders-says-colorado-deserves-better-after-falling-to-3-6",
-      "source_name": "Pro Football Talk",
-      "headline": "Deion Sanders says Colorado deserves better after falling to 3-6",
-      "published_at": "2026-11-08T11:56:12.000Z",
-      "observed_at": "2026-11-08T12:10:16.861Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "coaching",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/hall-of-fame-lb-jack-ham-hospitalized-after-medical-emergency-at-penn-state-game",
       "source_name": "Pro Football Talk",
       "headline": "Hall of Fame LB Jack Ham hospitalized after medical emergency at Penn State game",
@@ -41839,6 +41801,49 @@
       "detected_teams": [
         "MIN",
         "SF"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/how-bet-todays-best-games-packers-rams-uconn-duke-nov-25",
+      "source_name": "FOX Sports",
+      "headline": "How To Bet Today's Best Games: Packers-Rams, UConn-Duke — Nov. 25",
+      "published_at": "2026-11-25T14:51:58.000Z",
+      "observed_at": "2026-11-25T15:10:18.575Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
+        "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-rodgers-could-land-in-time-on-reserve-left-squad-list",
+      "source_name": "Pro Football Talk",
+      "headline": "Aaron Rodgers could land, in time, on reserve/left squad list",
+      "published_at": "2026-11-25T15:00:20.000Z",
+      "observed_at": "2026-11-25T15:10:18.575Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
