@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/giants-jj-mccarthy-hip-injury-update",
-      "source_name": "FOX Sports",
-      "headline": "Giants QB J.J. McCarthy Leaves Game vs. Eagles Before Returning",
-      "published_at": "2026-11-08T20:28:50.000Z",
-      "observed_at": "2026-11-08T20:30:22.317Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG",
-        "NYJ",
-        "PHI"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/puka-nacuas-14th-catch-goes-for-td-rams-lead-20-13",
-      "source_name": "Pro Football Talk",
-      "headline": "Puka Nacua's 14th catch goes for TD, Rams lead 20-13",
-      "published_at": "2026-11-08T20:32:50.000Z",
-      "observed_at": "2026-11-08T20:40:16.380Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/j-j-mccarthy-returns-giants-up-13-8-in-fourth-quarter",
       "source_name": "Pro Football Talk",
       "headline": "J.J. McCarthy returns; Giants up 13-8 in fourth quarter",
@@ -41849,6 +41805,45 @@
         "PIT"
       ],
       "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-qb-rankings-index-week-12-2026-nfl-season",
+      "source_name": "NFL.com",
+      "headline": "NFL QB rankings, Week 12: Brock Purdy retakes throne; Jayden Daniels hits season high",
+      "published_at": "2026-11-25T08:53:00.000Z",
+      "observed_at": "2026-11-25T21:00:29.177Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lions-list-dj-wonnum-chuck-clark-as-questionable-for-thursday",
+      "source_name": "Pro Football Talk",
+      "headline": "Lions list DJ Wonnum, Chuck Clark as questionable for Thursday",
+      "published_at": "2026-11-25T20:56:46.000Z",
+      "observed_at": "2026-11-25T21:00:29.177Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "DET"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
