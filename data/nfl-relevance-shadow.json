@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/puka-nacua-hurts-knee-late-rams-win-over-commanders-set-mri-monday",
-      "source_name": "FOX Sports",
-      "headline": "Puka Nacua Reportedly Injured Late in Rams’ Win, Set For MRI On Monday",
-      "published_at": "2026-11-08T23:05:48.000Z",
-      "observed_at": "2026-11-08T23:10:22.141Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR",
-        "WAS"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/tom-brady-signs-1-of-1-exclusive-topps-card-live-air-fox-broadcast",
-      "source_name": "FOX Sports",
-      "headline": "Tom Brady Signs 1-of-1 Exclusive Topps Card Live On Air During Packers vs. Patriots",
-      "published_at": "2026-11-08T22:50:21.000Z",
-      "observed_at": "2026-11-08T23:10:22.141Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB",
-        "NE"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dallas-goedert-on-whether-hell-be-traded-for-the-right-price-everybodys-available",
       "source_name": "Pro Football Talk",
       "headline": "Dallas Goedert on whether he'll be traded: \"For the right price, everybody's available\"",
@@ -41827,6 +41783,44 @@
         "MIN"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-how-to-watch-week-12-nfl-games-schedule-thanksgiving-game-details-and-more",
+      "source_name": "NFL.com",
+      "headline": "NFL+: How to watch Week 12 NFL games, schedule, Thanksgiving game details, and more",
+      "published_at": "2026-11-25T11:31:48.000Z",
+      "observed_at": "2026-11-25T23:40:19.416Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/broncos-officially-put-jk-dobbins-on-suspended-list",
+      "source_name": "Pro Football Talk",
+      "headline": "Broncos officially put JK Dobbins on suspended list",
+      "published_at": "2026-11-25T23:34:33.000Z",
+      "observed_at": "2026-11-25T23:40:19.416Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN"
+      ],
+      "detected_category": "suspension",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
