@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/hall-of-fame-lb-jack-ham-hospitalized-after-medical-emergency-at-penn-state-game",
-      "source_name": "Pro Football Talk",
-      "headline": "Hall of Fame LB Jack Ham hospitalized after medical emergency at Penn State game",
-      "published_at": "2026-11-08T12:10:07.000Z",
-      "observed_at": "2026-11-08T12:20:19.798Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-lions-vs-dolphins-tv-channel-live-stream-time-nov-8-2026",
       "source_name": "FOX Sports",
       "headline": "How to Watch Lions vs. Dolphins: TV Channel, Live Stream, Time",
@@ -41852,6 +41831,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-aaron-rodgers-was-excused-from-work-on-wednesday",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Aaron Rodgers was \"excused\" from work on Wednesday",
+      "published_at": "2026-11-25T15:19:17.000Z",
+      "observed_at": "2026-11-25T15:30:23.351Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
