@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/commanders-vs-rams-prediction-odds-pick-nfl-week-9",
-      "source_name": "FOX Sports",
-      "headline": "Commanders vs. Rams Prediction, Odds, Pick For NFL Week 9",
-      "published_at": "2026-11-08T06:00:10.000Z",
-      "observed_at": "2026-11-08T06:20:21.207Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR",
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-dfs-week-9-best-picks-lineup-advice-value-plays",
-      "source_name": "FOX Sports",
-      "headline": "NFL DFS Week 9: Best Picks, Lineup Advice and Value Plays",
-      "published_at": "2026-11-08T06:33:57.000Z",
-      "observed_at": "2026-11-08T06:50:16.400Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "fantasy",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/patriots-vs-packers-prediction-odds-pick-nfl-week-9",
       "source_name": "FOX Sports",
       "headline": "Patriots vs. Packers Prediction, Odds, Pick For NFL Week 9",
@@ -41848,6 +41809,45 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-aaron-rodgers-did-not-report-to-steelers-facility-on-wednesday",
+      "source_name": "Pro Football Talk",
+      "headline": "Report: Aaron Rodgers did not report to Steelers facility on Wednesday",
+      "published_at": "2026-11-25T14:40:01.000Z",
+      "observed_at": "2026-11-25T14:50:19.609Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/if-aaron-rodgers-never-plays-again-his-last-nfl-throw-was-a-touchdown-pass",
+      "source_name": "Pro Football Talk",
+      "headline": "If Aaron Rodgers never plays again, his last NFL throw was a touchdown pass",
+      "published_at": "2026-11-25T14:37:33.000Z",
+      "observed_at": "2026-11-25T14:50:19.609Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
