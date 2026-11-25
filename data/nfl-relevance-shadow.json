@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/j-j-mccarthy-returns-giants-up-13-8-in-fourth-quarter",
-      "source_name": "Pro Football Talk",
-      "headline": "J.J. McCarthy returns; Giants up 13-8 in fourth quarter",
-      "published_at": "2026-11-08T20:30:09.000Z",
-      "observed_at": "2026-11-08T20:40:16.380Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/eagles-braden-mann-delivered-wild-86-yard-punt-vs-giants",
       "source_name": "FOX Sports",
       "headline": "Eagles' Braden Mann Boots Second-Longest Punt Of The Century vs. Giants",
@@ -41844,6 +41823,28 @@
         "DET"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-activate-de-kobie-turner-off-ir",
+      "source_name": "Pro Football Talk",
+      "headline": "Rams activate DE Kobie Turner off IR",
+      "published_at": "2026-11-25T21:03:14.000Z",
+      "observed_at": "2026-11-25T21:10:20.625Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
+        "LAR"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
