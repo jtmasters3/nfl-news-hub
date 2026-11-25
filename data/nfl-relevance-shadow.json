@@ -2,95 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jayden-daniels-tosses-7-yard-td-commanders-lead-rams-10-3",
-      "source_name": "Pro Football Talk",
-      "headline": "Jayden Daniels tosses 7-yard TD, Commanders lead Rams 10-3",
-      "published_at": "2026-11-08T18:43:04.000Z",
-      "observed_at": "2026-11-08T18:50:17.997Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR",
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-up-8-6-after-saquon-barkley-td",
-      "source_name": "Pro Football Talk",
-      "headline": "Eagles up 8-6 after Saquon Barkley TD",
-      "published_at": "2026-11-08T18:41:53.000Z",
-      "observed_at": "2026-11-08T18:50:17.997Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/broncos-lead-panthers-10-0-early",
-      "source_name": "Pro Football Talk",
-      "headline": "Broncos lead Panthers 10-0 early",
-      "published_at": "2026-11-08T18:41:51.000Z",
-      "observed_at": "2026-11-08T18:50:17.997Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CAR",
-        "DEN",
-        "LV"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dak-prescotts-fourth-down-td-gives-cowboys-10-7-lead",
-      "source_name": "Pro Football Talk",
-      "headline": "Dak Prescott's fourth-down TD throw gives Cowboys 10-7 lead",
-      "published_at": "2026-11-08T18:51:41.000Z",
-      "observed_at": "2026-11-08T19:00:21.948Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "IND"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kenneth-walkers-ninth-td-of-the-season-puts-chiefs-up-7-6",
       "source_name": "Pro Football Talk",
       "headline": "Kenneth Walkers ninth TD of the season puts Chiefs up 7-6",
@@ -41851,6 +41762,102 @@
         "nfl_team_detected"
       ],
       "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/brandon-aiyuk-commanders-to-sign-ex-49ers-wr-practice-squad",
+      "source_name": "NFL.com",
+      "headline": "Commanders to sign ex-49ers WR Brandon Aiyuk to practice squad",
+      "published_at": "2026-11-25T06:33:45.000Z",
+      "observed_at": "2026-11-25T18:40:20.664Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF",
+        "WAS"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/commanders-reportedly-sign-ex-49ers-wr-brandon-aiyuk-practice-squad",
+      "source_name": "FOX Sports",
+      "headline": "Commanders Reportedly Sign Ex-49ers WR Brandon Aiyuk To Practice Squad",
+      "published_at": "2026-11-25T18:35:10.000Z",
+      "observed_at": "2026-11-25T18:40:20.664Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF",
+        "WAS"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brandon-aiyuk-agrees-to-join-commanders-practice-squad",
+      "source_name": "Pro Football Talk",
+      "headline": "Brandon Aiyuk agrees to join Commanders practice squad",
+      "published_at": "2026-11-25T18:30:32.000Z",
+      "observed_at": "2026-11-25T18:40:20.664Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF",
+        "WAS"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "phrase_released_by",
+        "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-are-aware-of-suggestion-that-james-pearce-jr-has-been-trying-to-contact-rickea-jackson",
+      "source_name": "Pro Football Talk",
+      "headline": "Falcons are \"aware\" of suggestion that James Pearce Jr. has been trying to contact Rickea Jackson",
+      "published_at": "2026-11-25T18:28:34.000Z",
+      "observed_at": "2026-11-25T18:40:20.664Z",
+      "decision": "keep",
+      "classification": "nfl_with_college_context",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [
+        "league_wnba"
+      ],
       "reason_codes": [
         "kept_strong_nfl_evidence"
       ]
