@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jordan-loves-100th-career-passing-td-puts-packers-up-14-0",
-      "source_name": "Pro Football Talk",
-      "headline": "Jordan Love's 100th career passing TD puts Packers up 14-0",
-      "published_at": "2026-11-08T21:47:19.000Z",
-      "observed_at": "2026-11-08T21:50:18.822Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-rally-for-27-23-win-over-colts",
       "source_name": "Pro Football Talk",
       "headline": "Cowboys rally for 27-23 win over Colts",
@@ -41844,6 +41823,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-week-12-picks-best-bets-every-game-wills-wagers",
+      "source_name": "FOX Sports",
+      "headline": "2026 NFL Week 12 Picks: Best Bets For Every Game — Will's Wagers",
+      "published_at": "2026-11-25T21:54:30.000Z",
+      "observed_at": "2026-11-25T22:00:25.648Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
