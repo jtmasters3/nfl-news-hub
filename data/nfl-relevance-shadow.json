@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jack-campbell-is-determined-to-return-to-football",
-      "source_name": "Pro Football Talk",
-      "headline": "Jack Campbell is \"determined\" to return to football",
-      "published_at": "2026-11-08T18:59:36.000Z",
-      "observed_at": "2026-11-08T19:10:18.942Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET",
-        "MIN"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/saints-browns-tied-3-3-at-halftime",
-      "source_name": "Pro Football Talk",
-      "headline": "Saints-Browns tied 3-3 at halftime",
-      "published_at": "2026-11-08T19:27:09.000Z",
-      "observed_at": "2026-11-08T19:30:23.303Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE",
-        "NO"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaxon-smith-njigba-can-do-something-no-one-has-done-since-1960",
       "source_name": "Pro Football Talk",
       "headline": "Jaxon Smith-Njigba can do something no one has done since 1960",
@@ -41856,6 +41812,45 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50595660/rodgers-heard-mccarthy-benching",
+      "source_name": "ESPN",
+      "headline": "Rodgers still hasn't heard from McCarthy on benching, says coach asleep in meetings",
+      "published_at": "2026-11-25T19:03:53.000Z",
+      "observed_at": "2026-11-25T19:10:33.859Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "coaching",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50587341/brandon-aiyuk-commanders-questions",
+      "source_name": "ESPN",
+      "headline": "Will Brandon Aiyuk fit in Washington? What to expect, his role and fantasy impact",
+      "published_at": "2026-11-25T18:52:04.000Z",
+      "observed_at": "2026-11-25T19:10:33.859Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "WAS"
+      ],
+      "detected_category": "fantasy",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
