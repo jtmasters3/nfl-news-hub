@@ -2,40 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/college-football/philip-rivers-nc-state-head-coach-hire-details",
-      "source_name": "FOX Sports",
-      "headline": "A Homecoming At NC State: Philip Rivers Reportedly Agrees To Become Wolfpack's Head Coach",
-      "published_at": "2026-11-08T17:58:16.000Z",
-      "observed_at": "2026-11-08T18:10:20.207Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "coaching",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/2026-nfl-season-week-9-what-we-learned-from-sunday-s-games",
-      "source_name": "NFL.com",
-      "headline": "2026 NFL season, Week 9: What We Learned from Sunday's games",
-      "published_at": "2026-11-08T06:09:00.000Z",
-      "observed_at": "2026-11-08T18:20:17.234Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/rob-gronkowski-takes-army-west-points-legendary-survival-gate-challenge",
       "source_name": "FOX Sports",
       "headline": "Rob Gronkowski Takes On Army West Point’s Legendary ‘Survival Gate’ Challenge",
@@ -41834,6 +41800,48 @@
         "CAR"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/commanders-gm-adam-peters-praises-brandon-aiyuk-says-team-has-genuine-interest",
+      "source_name": "NFL.com",
+      "headline": "Commanders GM Adam Peters praises Brandon Aiyuk, says team has 'genuine interest'",
+      "published_at": "2026-11-25T04:31:06.000Z",
+      "observed_at": "2026-11-25T17:50:20.348Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "WAS"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/panthers-designate-lb-thomas-incoom-for-return-from-ir",
+      "source_name": "Pro Football Talk",
+      "headline": "Panthers designate LB Thomas Incoom for return from IR",
+      "published_at": "2026-11-25T17:45:36.000Z",
+      "observed_at": "2026-11-25T17:50:20.348Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CAR"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
