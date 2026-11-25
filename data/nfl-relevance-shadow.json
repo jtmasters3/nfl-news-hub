@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/victor-cruz-these-are-the-3-best-leaders-i-played-with-in-the-nfl",
-      "source_name": "NFL.com",
-      "headline": "Victor Cruz: These are the 3 best leaders I played with in the NFL",
-      "published_at": "2026-11-07T11:16:07.000Z",
-      "observed_at": "2026-11-07T19:10:17.549Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/saints-release-rb-kendre-miller",
-      "source_name": "Pro Football Talk",
-      "headline": "Saints release RB Kendre Miller",
-      "published_at": "2026-11-07T19:15:02.000Z",
-      "observed_at": "2026-11-07T19:30:20.543Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NO"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/commanders-activate-dt-johnny-newton-from-injured-reserve",
       "source_name": "Pro Football Talk",
       "headline": "Commanders activate DT Johnny Newton from injured reserve",
@@ -41857,6 +41819,49 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/aaron-rodgers-will-be-inactive-for-steelers-friday-vs-broncos-mason-rudolph-to-start",
+      "source_name": "NFL.com",
+      "headline": "Aaron Rodgers will be inactive for Steelers Friday vs. Broncos; Mason Rudolph to start",
+      "published_at": "2026-11-25T04:23:19.000Z",
+      "observed_at": "2026-11-25T04:30:22.026Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-bench-aaron-rodgers-for-mason-rudolph",
+      "source_name": "Pro Football Talk",
+      "headline": "Steelers bench Aaron Rodgers for Mason Rudolph",
+      "published_at": "2026-11-25T04:27:45.000Z",
+      "observed_at": "2026-11-25T04:30:22.026Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
