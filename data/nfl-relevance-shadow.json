@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/deshaun-watson-clears-concussion-protocol-remains-questionable-for-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "Deshaun Watson clears concussion protocol, remains questionable for Sunday",
-      "published_at": "2026-11-07T18:39:38.000Z",
-      "observed_at": "2026-11-07T18:50:17.585Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NO"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-activate-myles-garrett-put-jaylen-watson-on-ir",
       "source_name": "Pro Football Talk",
       "headline": "Rams activate Myles Garrett, put Jaylen Watson on IR",
@@ -41866,6 +41845,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/deion-sanders-shrugs-at-talk-of-being-on-the-hot-seat-in-colorado",
+      "source_name": "Pro Football Talk",
+      "headline": "Deion Sanders shrugs at talk of being on the hot seat in Colorado",
+      "published_at": "2026-11-25T03:05:25.000Z",
+      "observed_at": "2026-11-25T03:10:23.017Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "coaching",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
