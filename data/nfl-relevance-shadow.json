@@ -2,50 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patrick-mahomes-hurts-elbow-but-returns-before-halftime-chiefs-lead-14-12",
-      "source_name": "Pro Football Talk",
-      "headline": "Patrick Mahomes hurts elbow, but returns before halftime; Chiefs lead 14-12",
-      "published_at": "2026-11-08T19:34:54.000Z",
-      "observed_at": "2026-11-08T19:40:17.351Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "KC",
-        "NYJ"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/commanders-have-10-6-lead-over-rams-at-halftime",
-      "source_name": "Pro Football Talk",
-      "headline": "Commanders have 10-6 lead over Rams at halftime",
-      "published_at": "2026-11-08T19:32:13.000Z",
-      "observed_at": "2026-11-08T19:40:17.351Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR",
-        "WAS"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-take-8-6-lead-over-giants-into-halftime",
       "source_name": "Pro Football Talk",
       "headline": "Eagles take 8-6 lead over Giants into halftime",
@@ -41853,6 +41809,50 @@
         "SF"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/brock-purdy-sits-out-practice-ankle-sprain-49ers-seahawks",
+      "source_name": "NFL.com",
+      "headline": "Brock Purdy sits out practice with ankle sprain; 'possibility' 49ers QB won't play vs. Seahawks",
+      "published_at": "2026-11-25T07:40:37.000Z",
+      "observed_at": "2026-11-25T19:50:18.205Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIN",
+        "SF",
+        "SEA"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/aaron-rodgers-benching-mike-mccarthy-behavior-steelers",
+      "source_name": "FOX Sports",
+      "headline": "Aaron Rodgers Calls Mike McCarthy's Behavior 'Unhealthy'; QB Says He's Done With Steelers",
+      "published_at": "2026-11-25T19:19:28.000Z",
+      "observed_at": "2026-11-25T19:50:18.205Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
