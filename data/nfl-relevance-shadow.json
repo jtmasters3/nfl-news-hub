@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-lead-colts-20-17-headed-to-third-quarter",
-      "source_name": "Pro Football Talk",
-      "headline": "Cowboys lead Colts 20-17 headed to fourth quarter",
-      "published_at": "2026-11-08T20:39:00.000Z",
-      "observed_at": "2026-11-08T20:50:17.165Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL",
-        "IND"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/justin-herbert-hopes-to-reverse-struggles-against-demeco-ryans-defenses",
-      "source_name": "Pro Football Talk",
-      "headline": "Justin Herbert hopes to reverse struggles against DeMeco Ryans defenses",
-      "published_at": "2026-11-08T20:39:33.000Z",
-      "observed_at": "2026-11-08T20:50:17.165Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAC"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lions-defense-shuts-down-malik-willis-and-the-dolphins-in-19-9-win",
       "source_name": "Pro Football Talk",
       "headline": "Lions' defense shuts down Malik Willis and the Dolphins in 19-9 win",
@@ -41840,6 +41797,51 @@
         "DET"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/49ers-activate-nate-hobbs-re-sign-brandin-cooks-to-practice-squad",
+      "source_name": "Pro Football Talk",
+      "headline": "49ers activate Nate Hobbs, re-sign Brandin Cooks to practice squad",
+      "published_at": "2026-11-25T21:27:13.000Z",
+      "observed_at": "2026-11-25T21:30:23.170Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF",
+        "SEA"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-could-try-to-not-pay-aaron-rodgers-the-balance-of-his-22-million-salary",
+      "source_name": "Pro Football Talk",
+      "headline": "Steelers could try to not pay Aaron Rodgers the balance of his $22 million salary",
+      "published_at": "2026-11-25T21:22:06.000Z",
+      "observed_at": "2026-11-25T21:30:23.170Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
