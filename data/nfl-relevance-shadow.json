@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/report-saints-activating-wr-jordyn-tyson-hamstring-lt-kelvin-banks-ankle-from-ir",
-      "source_name": "NFL.com",
-      "headline": "Report: Saints activating WR Jordyn Tyson (hamstring), LT Kelvin Banks (ankle) from IR",
-      "published_at": "2026-11-07T07:58:04.000Z",
-      "observed_at": "2026-11-07T20:10:17.859Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NO"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-place-olb-malachi-lawrence-on-ir-activate-olb-marist-liufau-from-ir",
       "source_name": "Pro Football Talk",
       "headline": "Cowboys place OLB Malachi Lawrence on IR, activate OLB Marist Liufau from IR",
@@ -41867,6 +41846,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/move-to-bench-aaron-rodgers-reportedly-was-coachs-decision",
+      "source_name": "Pro Football Talk",
+      "headline": "Move to bench Aaron Rodgers reportedly was \"coach's decision\"",
+      "published_at": "2026-11-25T11:03:32.000Z",
+      "observed_at": "2026-11-25T11:10:19.433Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "coaching",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
