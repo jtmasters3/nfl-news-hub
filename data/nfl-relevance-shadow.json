@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/j-j-mccarthy-zack-baun-questionable-to-return-in-philadelphia",
-      "source_name": "Pro Football Talk",
-      "headline": "J.J. McCarthy, Zack Baun questionable to return in Philadelphia",
-      "published_at": "2026-11-08T20:16:08.000Z",
-      "observed_at": "2026-11-08T20:20:20.709Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "live_game_state",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/hunter-henry-keisean-nixon-are-active-for-patriots-packers-clash",
-      "source_name": "Pro Football Talk",
-      "headline": "Hunter Henry, Keisean Nixon are active for Patriots-Packers clash",
-      "published_at": "2026-11-08T20:11:27.000Z",
-      "observed_at": "2026-11-08T20:20:20.709Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB",
-        "NE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-campbell-goes-for-it-on-fourth-down-jahmyr-gibbs-finds-the-end-zone",
       "source_name": "Pro Football Talk",
       "headline": "Dan Campbell goes for it on fourth down, Jahmyr Gibbs finds the end zone",
@@ -41848,6 +41805,51 @@
       "detected_category": "coaching",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-picks-week-12-2026-nfl-season",
+      "source_name": "NFL.com",
+      "headline": "NFL Week 12 picks: Upset and score predictions, matchup breakdowns for every game",
+      "published_at": "2026-11-25T08:32:27.000Z",
+      "observed_at": "2026-11-25T20:40:32.396Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
+        "LAR",
+        "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/pittsburgh-steelers-aaron-rodgers-release-pat-mcafee-show-mike-mccarthy-snoring",
+      "source_name": "FOX Sports",
+      "headline": "Steelers Reportedly Release Aaron Rodgers Following Shocking Interview",
+      "published_at": "2026-11-25T20:22:33.000Z",
+      "observed_at": "2026-11-25T20:40:32.396Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:free_agency"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
