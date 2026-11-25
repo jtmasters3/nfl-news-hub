@@ -2,46 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/philip-rivers-completes-high-school-season-confirms-interview-with-nc-state",
-      "source_name": "Pro Football Talk",
-      "headline": "Philip Rivers completes high-school season, confirms interview with NC State",
-      "published_at": "2026-11-07T19:55:10.000Z",
-      "observed_at": "2026-11-07T20:00:24.197Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "coaching",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-rule-jauan-jennings-out-for-monday-night",
-      "source_name": "Pro Football Talk",
-      "headline": "Vikings rule Jauan Jennings out for Monday night",
-      "published_at": "2026-11-07T19:53:01.000Z",
-      "observed_at": "2026-11-07T20:00:24.197Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "MIN",
-        "SF"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/report-saints-activating-wr-jordyn-tyson-hamstring-lt-kelvin-banks-ankle-from-ir",
       "source_name": "NFL.com",
       "headline": "Report: Saints activating WR Jordyn Tyson (hamstring), LT Kelvin Banks (ankle) from IR",
@@ -41856,6 +41816,49 @@
       "detected_teams": [
         "DEN",
         "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50589757/steelers-bench-struggling-qb-aaron-rodgers-start-mason-rudolph",
+      "source_name": "ESPN",
+      "headline": "Steelers bench struggling QB Rodgers, to start Rudolph",
+      "published_at": "2026-11-25T04:43:25.000Z",
+      "observed_at": "2026-11-25T09:50:24.746Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-lions-is-first-thanksgiving-game-ever-with-both-teams-on-5-game-winning-streaks",
+      "source_name": "Pro Football Talk",
+      "headline": "Bears-Lions is first Thanksgiving game ever with both teams on 5+ game winning streaks",
+      "published_at": "2026-11-25T09:43:53.000Z",
+      "observed_at": "2026-11-25T09:50:24.746Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "DET"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
