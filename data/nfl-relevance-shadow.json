@@ -2,100 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/espn-cfp-strike-deal-to-expand-college-playoff-to-24-teams",
-      "source_name": "Pro Football Talk",
-      "headline": "ESPN, CFP strike deal to expand college playoff to 24 teams",
-      "published_at": "2026-11-09T16:27:44.000Z",
-      "observed_at": "2026-11-09T16:40:19.784Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jaguars-announce-jessie-bates-trade",
-      "source_name": "Pro Football Talk",
-      "headline": "Jaguars announce Jessie Bates trade",
-      "published_at": "2026-11-09T16:39:03.000Z",
-      "observed_at": "2026-11-09T16:50:20.451Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "JAX"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-monday-nov-9",
-      "source_name": "NFL.com",
-      "headline": "NFL news roundup: Latest league updates from Monday, Nov. 9",
-      "published_at": "2026-11-09T04:54:28.000Z",
-      "observed_at": "2026-11-09T17:00:25.952Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-cfb-weekend-recap-bettors-were-praying-day-like-this",
-      "source_name": "FOX Sports",
-      "headline": "NFL, CFB Weekend Recap: 'Bettors Were Praying For A Day Like This'",
-      "published_at": "2026-11-09T16:42:54.000Z",
-      "observed_at": "2026-11-09T17:00:25.952Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patriots-dont-expect-ben-brown-to-play-in-week-10-waiting-for-rhamondre-stevenson-mri-results",
-      "source_name": "Pro Football Talk",
-      "headline": "Patriots don't expect Ben Brown to play in Week 10, waiting for Rhamondre Stevenson MRI results",
-      "published_at": "2026-11-09T16:49:00.000Z",
-      "observed_at": "2026-11-09T17:00:25.952Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET",
-        "NE"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/maxx-crosby-on-trade-deadline-i-expect-to-play-for-the-raiders",
       "source_name": "Pro Football Talk",
       "headline": "Maxx Crosby on trade deadline: I expect to play for the Raiders",
@@ -41816,6 +41722,115 @@
         "DET"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50605750/jahmyr-gibbs-lions-caleb-williams-bears-thanksgiving-game",
+      "source_name": "ESPN",
+      "headline": "Gibbs goes off but 'Iceman' Williams, Bears steal the show in Thanksgiving thriller",
+      "published_at": "2026-11-26T21:59:55.000Z",
+      "observed_at": "2026-11-26T22:20:24.818Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "DET"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50605070/steelers-owner-disappointed-rodgers-backs-mccarthy",
+      "source_name": "ESPN",
+      "headline": "Steelers owner: Rodgers' 'insubordination can't be tolerated,' backs McCarthy",
+      "published_at": "2026-11-26T21:10:02.000Z",
+      "observed_at": "2026-11-26T22:20:24.818Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50605365/bears-colston-loveland-ruled-vs-lions-knee-injury",
+      "source_name": "ESPN",
+      "headline": "Bears TE Loveland (knee) carted to locker room, won't return vs. Lions",
+      "published_at": "2026-11-26T21:13:00.000Z",
+      "observed_at": "2026-11-26T22:20:24.818Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "DET"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50606063/steelers-activate-michael-pittman-jr-ir-sign-max-hurleman-active-roster-practice-squad",
+      "source_name": "ESPN",
+      "headline": "Steelers activate Pittman, sign Hurleman, whom Rodgers recently advocated for",
+      "published_at": "2026-11-26T21:10:02.000Z",
+      "observed_at": "2026-11-26T22:20:24.818Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cooper-dejean-exits-with-concussion-and-cowboys-take-lead-over-eagles",
+      "source_name": "Pro Football Talk",
+      "headline": "Cooper DeJean exits with concussion and Cowboys take lead over Eagles",
+      "published_at": "2026-11-26T22:06:17.000Z",
+      "observed_at": "2026-11-26T22:20:24.818Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "PHI"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
