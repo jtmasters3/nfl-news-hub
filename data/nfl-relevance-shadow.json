@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-munich-gameday-guide",
-      "source_name": "NFL.com",
-      "headline": "Munich Gameday Guide",
-      "published_at": "2026-11-09T12:10:00.000Z",
-      "observed_at": "2026-11-09T10:50:19.015Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/malik-nabers-fox-tried-to-create-a-narrative-about-me-being-a-bad-teammate",
-      "source_name": "Pro Football Talk",
-      "headline": "Malik Nabers: Fox tried to \"create a narrative\" about me being a bad teammate",
-      "published_at": "2026-11-09T10:55:16.000Z",
-      "observed_at": "2026-11-09T11:00:32.655Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG",
-        "PHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tee-higgins-thinks-joe-burrow-has-another-step-in-him",
       "source_name": "Pro Football Talk",
       "headline": "Tee Higgins thinks Joe Burrow has \"another step in him\"",
@@ -41802,6 +41763,48 @@
         "GB",
         "LAC",
         "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/back-as-colts-starter-anthony-richardson-sr-is-grateful-to-grow-through-the-adversity",
+      "source_name": "NFL.com",
+      "headline": "Back as Colts' starter, Anthony Richardson Sr. is grateful to 'grow through' the adversity",
+      "published_at": "2026-11-26T12:46:05.000Z",
+      "observed_at": "2026-11-26T16:00:25.246Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "IND"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/how-bet-todays-best-games-nfl-thanksgiving-miami-michigan-more-nov-26",
+      "source_name": "FOX Sports",
+      "headline": "How To Bet Today's Best Games: NFL Thanksgiving, Miami-Michigan, More — Nov. 26",
+      "published_at": "2026-11-26T15:40:52.000Z",
+      "observed_at": "2026-11-26T16:00:25.246Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "MIA"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
