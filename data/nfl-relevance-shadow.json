@@ -2,44 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/neil-reynolds-week-9-wrap-up-2026",
-      "source_name": "NFL.com",
-      "headline": "Neil Reynolds' Week 9 Wrap Up",
-      "published_at": "2026-11-08T12:56:00.000Z",
-      "observed_at": "2026-11-09T13:50:17.715Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/john-harbaugh-is-giants-biggest-asset-in-years-can-he-lead-them-on-a-dream-playoff-run",
-      "source_name": "NFL.com",
-      "headline": "John Harbaugh is Giants' biggest asset in years. Can he lead them on a dream playoff run?",
-      "published_at": "2026-11-09T11:16:08.000Z",
-      "observed_at": "2026-11-09T14:00:28.532Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/lions-win-for-jack-campbell-as-their-defense-gives-reason-to-believe-again",
       "source_name": "NFL.com",
       "headline": "Lions win for Jack Campbell as their defense gives reason to believe again",
@@ -41799,6 +41761,44 @@
       "confidence": "high",
       "detected_teams": [
         "CHI"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-thursday-nov-26",
+      "source_name": "NFL.com",
+      "headline": "NFL news roundup: Latest league updates from Thursday, Nov. 26",
+      "published_at": "2026-11-26T06:46:08.000Z",
+      "observed_at": "2026-11-26T18:50:19.962Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jahmyr-gibbs-puts-lions-up-10-0-colston-loveland-out-with-knee-injury",
+      "source_name": "Pro Football Talk",
+      "headline": "Jahmyr Gibbs puts Lions up 10-0, Colston Loveland out with knee injury",
+      "published_at": "2026-11-26T18:47:43.000Z",
+      "observed_at": "2026-11-26T18:50:19.962Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET"
       ],
       "detected_category": "injury",
       "nfl_evidence": [
