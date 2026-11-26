@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-wr-luther-burden-suffered-a-concussion-on-sunday-night",
-      "source_name": "Pro Football Talk",
-      "headline": "Bears WR Luther Burden suffered a concussion on Sunday night",
-      "published_at": "2026-11-09T11:29:40.000Z",
-      "observed_at": "2026-11-09T11:40:17.637Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI",
-        "TB"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jordan-love-sundays-game-definitely-up-there-with-best-ive-ever-played",
       "source_name": "Pro Football Talk",
       "headline": "Jordan Love: Sunday's game \"definitely up there\" with best I've ever played",
@@ -41805,6 +41783,29 @@
       "detected_teams": [
         "DAL",
         "DET"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/happy-birthday-blake-corum-turns-26-carries-rams-to-win-over-packers-with-184-rushing-yards",
+      "source_name": "NFL.com",
+      "headline": "Happy birthday, Blake! Corum turns 26, carries Rams to win over Packers with 184 rushing yards",
+      "published_at": "2026-11-26T04:21:15.000Z",
+      "observed_at": "2026-11-26T16:30:26.052Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "GB",
+        "LAC",
+        "LAR"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
