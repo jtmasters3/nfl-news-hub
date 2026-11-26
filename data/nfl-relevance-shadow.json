@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/cowboys-escape-with-win-now-get-to-see-how-they-stack-up-against-a-super-bowl-contender",
-      "source_name": "NFL.com",
-      "headline": "Cowboys escape with win; now get to see how they stack up against a Super Bowl contender",
-      "published_at": "2026-11-09T02:01:17.000Z",
-      "observed_at": "2026-11-09T02:10:18.301Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DAL"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kirk-cousins-becomes-an-option-for-a-contender-like-the-vikings",
       "source_name": "Pro Football Talk",
       "headline": "Kirk Cousins becomes an option for a contender, like the Vikings",
@@ -41827,6 +41806,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/t-j-lang-blasts-despicable-aaron-rodgers-comments-about-mike-mccarthy",
+      "source_name": "Pro Football Talk",
+      "headline": "T.J. Lang blasts \"despicable\" Aaron Rodgers comments about Mike McCarthy",
+      "published_at": "2026-11-26T05:24:31.000Z",
+      "observed_at": "2026-11-26T05:30:22.604Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
