@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/monday-morning-nfl-top-10-rankings-stand-firm-after-week-9-favorites-win",
-      "source_name": "FOX Sports",
-      "headline": "Monday Morning NFL Top 10 Rankings Stand Firm After Week 9 Favorites Win",
-      "published_at": "2026-11-09T13:58:07.000Z",
-      "observed_at": "2026-11-09T14:00:28.532Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/how-to-watch-bills-vs-vikings-tv-channel-live-stream-time-nov-9-2026",
       "source_name": "FOX Sports",
       "headline": "How to Watch Bills vs. Vikings: TV Channel, Live Stream, Time",
@@ -41801,6 +41784,28 @@
         "LAC"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-tie-lions-10-10-on-kyle-monangai-td",
+      "source_name": "Pro Football Talk",
+      "headline": "Bears tie Lions 10-10 on Kyle Monangai TD",
+      "published_at": "2026-11-26T19:10:42.000Z",
+      "observed_at": "2026-11-26T19:20:19.122Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "DET"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
