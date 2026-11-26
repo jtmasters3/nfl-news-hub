@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jordan-loves-mvp-case-surges",
-      "source_name": "Pro Football Talk",
-      "headline": "Jordan Love's MVP case surges",
-      "published_at": "2026-11-09T16:03:16.000Z",
-      "observed_at": "2026-11-09T16:10:19.697Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/tom-brady-revisits-2016-suspension-28-3-super-bowl-comeback-gronk-jules",
       "source_name": "FOX Sports",
       "headline": "Ten Seasons Later, Brady, Julian Edelman And Gronk Relive The 28-3 Comeback",
@@ -41810,6 +41789,28 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-network-aaron-rodgers-clears-waivers-now-a-free-agent-after-stunning-release-from-steelers",
+      "source_name": "NFL.com",
+      "headline": "NFL Network: Aaron Rodgers clears waivers, now a free agent after stunning release from Steelers",
+      "published_at": "2026-11-26T09:33:29.000Z",
+      "observed_at": "2026-11-26T21:40:18.475Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT"
+      ],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "nfl_preserving_category:free_agency"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
