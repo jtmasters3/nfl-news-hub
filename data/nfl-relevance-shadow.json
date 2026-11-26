@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/tom-brady-awards-packers-s-evan-williams-lfg-says-drake-maye-threw-deli-meat",
-      "source_name": "FOX Sports",
-      "headline": "Tom Brady Awards Packers S Evan Williams LFG, But Says Drake Maye Threw 'Deli Meat'",
-      "published_at": "2026-11-09T02:33:16.000Z",
-      "observed_at": "2026-11-09T02:40:16.758Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB",
-        "NE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-mri-shows-patrick-mahomes-avoided-serious-injury",
       "source_name": "Pro Football Talk",
       "headline": "Report: MRI shows Patrick Mahomes avoided serious injury",
@@ -41823,6 +41801,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/neil-reynolds-week-12-power-rankings-2026",
+      "source_name": "NFL.com",
+      "headline": "Neil Reynolds' Week 12 Power rankings",
+      "published_at": "2026-11-24T01:35:00.000Z",
+      "observed_at": "2026-11-26T09:20:24.681Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
