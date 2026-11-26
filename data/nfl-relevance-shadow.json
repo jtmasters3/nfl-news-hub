@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-browns-to-start-deshaun-watson-against-texans",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Browns to start Deshaun Watson against Texans",
-      "published_at": "2026-11-09T16:56:58.000Z",
-      "observed_at": "2026-11-09T17:10:19.083Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE",
-        "HOU"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/john-harbaugh-says-it-looks-like-qb-j-j-mccarthy-hip-will-be-able-to-play-on-thursday",
-      "source_name": "Pro Football Talk",
-      "headline": "John Harbaugh says it \"looks like\" QB J.J. McCarthy (hip) will be able to play on Thursday",
-      "published_at": "2026-11-09T17:14:37.000Z",
-      "observed_at": "2026-11-09T17:20:19.570Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/giants-expect-cam-skattebo-to-play-on-thursday-night",
       "source_name": "Pro Football Talk",
       "headline": "Giants expect Cam Skattebo to play on Thursday night",
@@ -41832,6 +41793,54 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/thanksgiving-tripleheader-what-we-learned-from-bears-lions-eagles-cowboys-chiefs-bills",
+      "source_name": "NFL.com",
+      "headline": "Thanksgiving tripleheader: What We Learned from Bears-Lions, Eagles-Cowboys, Chiefs-Bills",
+      "published_at": "2026-11-26T10:37:18.000Z",
+      "observed_at": "2026-11-26T23:10:19.120Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "CHI",
+        "DAL",
+        "DET",
+        "KC",
+        "PHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cowboys-offense-rolling-over-eagles-defense-in-dallas",
+      "source_name": "Pro Football Talk",
+      "headline": "Cowboys' offense rolling over Eagles' defense in Dallas",
+      "published_at": "2026-11-26T23:03:04.000Z",
+      "observed_at": "2026-11-26T23:10:19.120Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "PHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
