@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-expect-terrance-ferguson-to-miss-another-couple-weeks-with-hamstring-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "Rams expect Terrance Ferguson to miss \"another couple weeks\" with hamstring injury",
-      "published_at": "2026-11-09T12:00:28.000Z",
-      "observed_at": "2026-11-09T12:10:18.516Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LAR",
-        "WAS"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nick-sirianni-not-ruling-out-staff-changes-during-eagles-bye-week-following-7th-consecutive-loss",
       "source_name": "NFL.com",
       "headline": "Nick Sirianni not ruling out staff changes during Eagles' bye week following 7th consecutive loss",
@@ -41809,6 +41787,27 @@
         "DET",
         "KC",
         "PHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/the-lions-despite-their-resurgence-are-1-8-in-their-last-nine-thanksgiving-games",
+      "source_name": "Pro Football Talk",
+      "headline": "The Lions, despite their resurgence, are 1-8 in their last nine Thanksgiving games",
+      "published_at": "2026-11-26T16:53:00.000Z",
+      "observed_at": "2026-11-26T17:00:27.675Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
