@@ -2,70 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/patriots-throw-grand-nostalgia-party-for-2016-team-then-forget-to-play-football",
-      "source_name": "NFL.com",
-      "headline": "Patriots throw grand nostalgia party for 2016 team, then forget to play football",
-      "published_at": "2026-11-09T10:16:13.000Z",
-      "observed_at": "2026-11-09T13:50:17.715Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "NE"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/bills-and-vikings-have-lost-4-super-bowls-apiece-could-they-meet-in-the-next-one",
-      "source_name": "NFL.com",
-      "headline": "Bills and Vikings have lost 4 Super Bowls apiece. Could they meet in the next one?",
-      "published_at": "2026-11-09T10:16:13.000Z",
-      "observed_at": "2026-11-09T13:50:17.715Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/brock-purdy-finds-a-rhythm-with-49ers-unfamiliar-and-unproven-wide-receiving-crew",
-      "source_name": "NFL.com",
-      "headline": "Brock Purdy finds a rhythm with 49ers' unfamiliar and unproven wide receiving crew",
-      "published_at": "2026-11-09T04:16:13.000Z",
-      "observed_at": "2026-11-09T13:50:17.715Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/neil-reynolds-week-9-wrap-up-2026",
       "source_name": "NFL.com",
       "headline": "Neil Reynolds' Week 9 Wrap Up",
@@ -41806,6 +41742,65 @@
         "PIT"
       ],
       "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-community-celebrates-2026-thanksgiving-day-on-social-media",
+      "source_name": "NFL.com",
+      "headline": "NFL community celebrates 2026 Thanksgiving Day on social media",
+      "published_at": "2026-11-26T06:32:52.000Z",
+      "observed_at": "2026-11-26T18:40:17.936Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/steelers-president-art-rooney-ii-supports-mike-mccarthy-blasts-aaron-rodgers",
+      "source_name": "NFL.com",
+      "headline": "Steelers prez Art Rooney II backs Mike McCarthy, criticizes Aaron Rodgers for 'insubordination'",
+      "published_at": "2026-11-26T06:26:47.000Z",
+      "observed_at": "2026-11-26T18:40:17.936Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT"
+      ],
+      "detected_category": "coaching",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colston-loveland-goes-to-locker-room-in-the-first-quarter",
+      "source_name": "Pro Football Talk",
+      "headline": "Colston Loveland goes to locker room in the first quarter",
+      "published_at": "2026-11-26T18:36:00.000Z",
+      "observed_at": "2026-11-26T18:40:17.936Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
