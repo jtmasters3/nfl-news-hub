@@ -2,40 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/tom-brady-revisits-2016-suspension-28-3-super-bowl-comeback-gronk-jules",
-      "source_name": "FOX Sports",
-      "headline": "Ten Seasons Later, Brady, Julian Edelman And Gronk Relive The 28-3 Comeback",
-      "published_at": "2026-11-09T16:06:00.000Z",
-      "observed_at": "2026-11-09T16:20:19.234Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/2026-nfl-fantasy-football-waiver-wire-week-10-jordyn-tyson-tank-dell-headline-top-15-targets",
-      "source_name": "NFL.com",
-      "headline": "2026 NFL fantasy football waiver wire, Week 10: Jordyn Tyson, Tank Dell headline top 15 targets",
-      "published_at": "2026-11-09T04:23:35.000Z",
-      "observed_at": "2026-11-09T16:30:24.843Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "fantasy",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/robert-saleh-calvin-ridleys-airport-incident-was-a-very-minor-miscommunication",
       "source_name": "Pro Football Talk",
       "headline": "Robert Saleh: Calvin Ridley's airport incident was \"a very minor miscommunication\"",
@@ -41815,6 +41781,47 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bears-stun-lions-on-late-rome-odunze-td",
+      "source_name": "Pro Football Talk",
+      "headline": "Bears stun Lions on late Rome Odunze TD",
+      "published_at": "2026-11-26T21:41:14.000Z",
+      "observed_at": "2026-11-26T21:50:20.014Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "DET"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/aaron-rodgers-clears-waivers",
+      "source_name": "Pro Football Talk",
+      "headline": "Aaron Rodgers clears waivers",
+      "published_at": "2026-11-26T21:40:37.000Z",
+      "observed_at": "2026-11-26T21:50:20.014Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "free_agency",
+      "nfl_evidence": [
+        "nfl_preserving_category:free_agency"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
