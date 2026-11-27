@@ -2,83 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/big-bets-report-777k-bet-falls-short-second-straight-week",
-      "source_name": "FOX Sports",
-      "headline": "Big Bets Report: $777k Bet Falls Short For Second-Straight Week",
-      "published_at": "2026-11-09T22:56:57.000Z",
-      "observed_at": "2026-11-09T23:00:27.703Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-gardner-minshew-will-likely-need-season-ending-elbow-surgery",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Gardner Minshew will likely need season-ending elbow surgery",
-      "published_at": "2026-11-09T22:56:32.000Z",
-      "observed_at": "2026-11-09T23:00:27.703Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kyle-shanahan-brandon-aiyuks-reinstatement-means-absolutely-nothing-to-49ers",
-      "source_name": "Pro Football Talk",
-      "headline": "Kyle Shanahan: Brandon Aiyuk's reinstatement means \"absolutely nothing\" to 49ers",
-      "published_at": "2026-11-09T22:55:29.000Z",
-      "observed_at": "2026-11-09T23:00:27.703Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-say-jaguars-made-an-offer-they-couldnt-refuse-for-jordan-davis",
-      "source_name": "Pro Football Talk",
-      "headline": "Eagles say Jaguars made an offer they couldn't refuse for Jordan Davis",
-      "published_at": "2026-11-09T22:55:24.000Z",
-      "observed_at": "2026-11-09T23:00:27.703Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "JAX",
-        "PHI"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/nfl-network-cardinals-gardner-minshew-likely-needs-season-ending-elbow-surgery-carson-beck-in-line-to-start",
       "source_name": "NFL.com",
       "headline": "NFL Network: Cardinals' Gardner Minshew likely needs season-ending elbow surgery; Carson Beck in line to start",
@@ -41864,6 +41787,95 @@
       "detected_teams": [
         "CHI",
         "DET"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50595313/pat-surtain-ii-jaylen-waddle-broncos-alabama-best-friends",
+      "source_name": "ESPN",
+      "headline": "Best buddy reunion: Pat Surtain II, Jaylen Waddle embracing playing together with the Broncos",
+      "published_at": "2026-11-27T12:37:07.000Z",
+      "observed_at": "2026-11-27T13:20:27.307Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50582755/san-francisco-49ers-nfc-west-playoffs-seeding",
+      "source_name": "ESPN",
+      "headline": "The 49ers have exceeded expectations in 2026 -- but can they lock up the NFC West soon?",
+      "published_at": "2026-11-27T12:40:41.000Z",
+      "observed_at": "2026-11-27T13:20:27.307Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR",
+        "SF",
+        "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50609180/why-seahawks-starting-qb-sam-darnold-49ers-week-12",
+      "source_name": "ESPN",
+      "headline": "Why the Seahawks are turning back to quarterback Sam Darnold vs. the 49ers",
+      "published_at": "2026-11-27T12:40:41.000Z",
+      "observed_at": "2026-11-27T13:20:27.307Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF",
+        "SEA"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50587851/week-12-picks-predictions-schedule-fantasy-odds-2026",
+      "source_name": "ESPN",
+      "headline": "Our guide to remaining NFL Week 12 games: Matchup previews, predictions, picks and nuggets",
+      "published_at": "2026-11-27T13:09:22.000Z",
+      "observed_at": "2026-11-27T13:20:27.307Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "SF",
+        "SEA"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
