@@ -2,69 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brandon-aiyuk-likely-will-be-cut-by-4-00-p-m-et-today",
-      "source_name": "Pro Football Talk",
-      "headline": "Brandon Aiyuk likely will be cut by 4:00 p.m. ET today",
-      "published_at": "2026-11-10T17:05:51.000Z",
-      "observed_at": "2026-11-10T17:20:23.733Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "free_agency",
-      "nfl_evidence": [
-        "nfl_preserving_category:free_agency"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bengals-call-off-trade-for-arnold-ebiketie",
-      "source_name": "Pro Football Talk",
-      "headline": "Bengals call off trade for Arnold Ebiketie",
-      "published_at": "2026-11-10T17:33:13.000Z",
-      "observed_at": "2026-11-10T17:40:20.226Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CIN",
-        "PHI"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/falcons-signing-k-jake-moody-releasing-k-nick-folk",
-      "source_name": "Pro Football Talk",
-      "headline": "Falcons signing K Jake Moody, releasing K Nick Folk",
-      "published_at": "2026-11-10T17:27:41.000Z",
-      "observed_at": "2026-11-10T17:40:20.226Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "ATL"
-      ],
-      "detected_category": "roster_move",
-      "nfl_evidence": [
-        "nfl_team_detected",
-        "nfl_preserving_category:roster_move"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/zach-sieler-injury-update-dolphins-nfl-trade-deadline",
       "source_name": "FOX Sports",
       "headline": "NFL Trade Candidate, Dolphins Defensive Leader Reportedly Out For Year",
@@ -41924,6 +41861,67 @@
       "confidence": "high",
       "detected_teams": [
         "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/injuries-quarterback-impacting-49ers-seahawks-matchup",
+      "source_name": "FOX Sports",
+      "headline": "Brock Purdy Out, Sam Darnold Back As 49ers And Seahawks Head Into Pivotal Matchup",
+      "published_at": "2026-11-27T23:16:23.000Z",
+      "observed_at": "2026-11-27T23:20:24.466Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF",
+        "SEA"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/college-football/ohio-state-michigan-all-22-roster",
+      "source_name": "FOX Sports",
+      "headline": "Ohio State-Michigan All-22 Roster: Top Buckeyes And Wolverines Since 2000",
+      "published_at": "2026-11-27T23:14:32.000Z",
+      "observed_at": "2026-11-27T23:20:24.466Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/steelers-overwhelm-broncos-post-aaron-rodgers-era-3-takeaways-from-pittsburgh-win",
+      "source_name": "FOX Sports",
+      "headline": "Steelers Overwhelm Broncos In Post-Aaron Rodgers Era: 3 Takeaways From Pittsburgh's Win",
+      "published_at": "2026-11-27T22:55:16.000Z",
+      "observed_at": "2026-11-27T23:20:24.466Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "PIT"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
