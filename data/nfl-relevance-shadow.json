@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-moves-jaguars-giants-game-in-week-11-to-a-4-25-p-m-et-kickoff",
-      "source_name": "Pro Football Talk",
-      "headline": "NFL moves Jaguars-Giants game in Week 11 to a 4:25 p.m. ET kickoff",
-      "published_at": "2026-11-09T18:11:26.000Z",
-      "observed_at": "2026-11-09T18:20:18.137Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "JAX",
-        "NYG"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tom-brady-there-was-some-deli-meat-given-out-by-drake-maye-today",
-      "source_name": "Pro Football Talk",
-      "headline": "Tom Brady: \"There was some deli meat given out by Drake Maye today\"",
-      "published_at": "2026-11-09T18:03:58.000Z",
-      "observed_at": "2026-11-09T18:20:18.137Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sam-darnold-ruled-out-for-week-10-drew-lock-in-line-to-start",
       "source_name": "Pro Football Talk",
       "headline": "Sam Darnold ruled out for Week 10, Drew Lock in line to start",
@@ -41829,6 +41790,49 @@
       "headline": "Eagles make a game of it with blocked punt for touchdown",
       "published_at": "2026-11-27T00:36:09.000Z",
       "observed_at": "2026-11-27T00:40:19.473Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "PHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/tom-brady-aaron-rodgers-steelers-mike-mccarthy",
+      "source_name": "FOX Sports",
+      "headline": "Tom Brady Didn't Like Aaron Rodgers' Outburst: 'Nobody Wins When The Family Feuds'",
+      "published_at": "2026-11-27T01:33:11.000Z",
+      "observed_at": "2026-11-27T01:40:20.765Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/eagles-mount-furious-comeback-beat-cowboys-39-38-in-thanksgiving-classic",
+      "source_name": "Pro Football Talk",
+      "headline": "Eagles mount furious comeback, beat Cowboys 39-38 in Thanksgiving classic",
+      "published_at": "2026-11-27T01:34:11.000Z",
+      "observed_at": "2026-11-27T01:40:20.765Z",
       "decision": "keep",
       "classification": "nfl",
       "confidence": "high",
