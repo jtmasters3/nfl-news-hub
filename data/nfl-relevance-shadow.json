@@ -2,45 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-munich-game-nfl-shop-merchandise",
-      "source_name": "NFL.com",
-      "headline": "NFL Munich Game: NFL Shop & Merchandise",
-      "published_at": "2026-11-10T12:57:01.000Z",
-      "observed_at": "2026-11-10T13:00:25.326Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/josh-allen-bills-offense-have-no-peer-after-taking-everything-the-vikings-defense-had",
-      "source_name": "NFL.com",
-      "headline": "Josh Allen, Bills offense have no peer after taking everything the Vikings' defense had",
-      "published_at": "2026-11-10T12:31:06.000Z",
-      "observed_at": "2026-11-10T13:40:20.799Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/with-josh-jacobs-sidelined-packers-should-let-kaleb-johnson-lead-the-backfield",
       "source_name": "NFL.com",
       "headline": "With Josh Jacobs sidelined, Packers should let Kaleb Johnson lead the backfield",
@@ -41898,6 +41859,50 @@
       "confidence": "high",
       "detected_teams": [
         "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/arizona-cardinals-carson-beck-back-injury-washington-commanders",
+      "source_name": "FOX Sports",
+      "headline": "Cardinals QB Carson Beck Out Against Commanders, Josh Johnson To Start Again",
+      "published_at": "2026-11-27T19:35:50.000Z",
+      "observed_at": "2026-11-27T19:50:19.810Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI",
+        "WAS"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brandon-aiyuk-will-not-play-sunday-vs-cardinals",
+      "source_name": "Pro Football Talk",
+      "headline": "Brandon Aiyuk will not play Sunday vs. Cardinals",
+      "published_at": "2026-11-27T19:42:54.000Z",
+      "observed_at": "2026-11-27T19:50:19.810Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ARI",
+        "WAS"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
