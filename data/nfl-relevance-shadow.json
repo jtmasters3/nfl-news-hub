@@ -2,47 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/week-11-schedule-change",
-      "source_name": "NFL.com",
-      "headline": "Week 11 Schedule Change",
-      "published_at": "2026-11-10T02:53:06.000Z",
-      "observed_at": "2026-11-10T15:00:31.497Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "JAX",
-        "NYG",
-        "PHI",
-        "PIT"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/tom-brady-sells-stake-in-birmingham-city-football-club",
-      "source_name": "Pro Football Talk",
-      "headline": "Tom Brady sells stake in Birmingham City Football Club",
-      "published_at": "2026-11-10T14:53:58.000Z",
-      "observed_at": "2026-11-10T15:00:31.497Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/dan-campbell-on-benching-christian-mahogany-thats-why-i-have-team-rules",
       "source_name": "Pro Football Talk",
       "headline": "Dan Campbell on benching Christian Mahogany: That's why I have team rules",
@@ -41913,6 +41872,52 @@
       "detected_teams": [
         "DEN",
         "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/college-football/2026-nfl-cfb-odds-best-bets-falcons-vikings",
+      "source_name": "FOX Sports",
+      "headline": "2026 NFL, CFB Odds: Best Bets For Louisville-Kentucky, Falcons-Vikings",
+      "published_at": "2026-11-27T21:09:03.000Z",
+      "observed_at": "2026-11-27T21:20:19.654Z",
+      "decision": "keep",
+      "classification": "nfl_with_college_context",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "MIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [
+        "college_football_phrase"
+      ],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brock-bowers-questionable-for-sunday-night-vs-browns",
+      "source_name": "Pro Football Talk",
+      "headline": "Brock Bowers questionable for Sunday night vs. Browns",
+      "published_at": "2026-11-27T21:09:16.000Z",
+      "observed_at": "2026-11-27T21:20:19.654Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE",
+        "LV"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
