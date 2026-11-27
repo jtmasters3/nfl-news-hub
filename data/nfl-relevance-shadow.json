@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/packers-rb-josh-jacobs-to-undergo-surgery-on-finger-this-week",
-      "source_name": "NFL.com",
-      "headline": "Packers RB Josh Jacobs to undergo surgery on finger this week; timeline to return TBD",
-      "published_at": "2026-11-09T09:24:48.000Z",
-      "observed_at": "2026-11-09T21:30:22.531Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "GB"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/josh-jacobs-to-have-surgery-on-fractured-finger-out-indefinitely",
       "source_name": "Pro Football Talk",
       "headline": "Josh Jacobs to have surgery on fractured finger, out indefinitely",
@@ -41869,6 +41848,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/tom-brady-admits-he-wasnt-great-friends-peyton-manning-during-playing-career",
+      "source_name": "FOX Sports",
+      "headline": "Tom Brady Admits He Wasn't Great Friends With Peyton Manning During Playing Career",
+      "published_at": "2026-11-27T04:26:42.000Z",
+      "observed_at": "2026-11-27T04:40:21.812Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
