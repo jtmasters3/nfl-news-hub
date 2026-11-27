@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-reinstates-wr-brandon-aiyuk-from-reserve-left-squad-list",
-      "source_name": "Pro Football Talk",
-      "headline": "NFL reinstates WR Brandon Aiyuk from reserve/left squad list",
-      "published_at": "2026-11-09T22:22:32.000Z",
-      "observed_at": "2026-11-09T22:30:22.598Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-lafleur-downplays-on-field-exchange-between-darius-robinson-josh-sweat",
       "source_name": "Pro Football Talk",
       "headline": "Mike LaFleur downplays on-field exchange between Darius Robinson, Josh Sweat",
@@ -41865,6 +41844,30 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/joe-milton-eagles-dont-quit-so-happy-to-be-on-this-team",
+      "source_name": "Pro Football Talk",
+      "headline": "Joe Milton: Eagles don't quit, so happy to be on this team",
+      "published_at": "2026-11-27T10:59:16.000Z",
+      "observed_at": "2026-11-27T11:10:31.242Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "PHI"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
