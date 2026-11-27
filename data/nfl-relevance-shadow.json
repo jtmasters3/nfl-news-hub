@@ -2,87 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/the-vikings-need-to-trade-for-a-quarterback-tomorrow",
-      "source_name": "Pro Football Talk",
-      "headline": "The Vikings need to trade for a quarterback tomorrow",
-      "published_at": "2026-11-10T04:11:10.000Z",
-      "observed_at": "2026-11-10T04:20:20.551Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "MIN"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/2026-nfl-playoff-picture-bracket-schedule",
-      "source_name": "FOX Sports",
-      "headline": "2026 NFL Playoff Picture, Bracket After Week 9",
-      "published_at": "2026-11-10T04:28:38.000Z",
-      "observed_at": "2026-11-10T04:30:20.481Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/bills-vikings-on-monday-night-football-what-we-learned-from-buffalo-s-23-6-win-over-minnesota",
-      "source_name": "NFL.com",
-      "headline": "Bills-Vikings on 'Monday Night Football': What We Learned from Buffalo's 23-6 win over Minnesota",
-      "published_at": "2026-11-10T04:27:46.000Z",
-      "observed_at": "2026-11-10T04:40:18.873Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/nfl-week-9-plays-stood-out",
-      "source_name": "FOX Sports",
-      "headline": "The Week 9 Plays That Stood Out, From Ben Johnson's Scheme To Joe Burrow's Big TD Toss",
-      "published_at": "2026-11-10T04:39:05.000Z",
-      "observed_at": "2026-11-10T04:40:18.873Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CHI"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/packers-jordan-love-bears-caleb-williams-mvp-race",
       "source_name": "FOX Sports",
       "headline": "NFL Best And Worst: From Jordan Love’s Masterpiece To Caleb Williams’ Clunker",
@@ -41891,6 +41810,88 @@
         "CHI"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/falcons-failed-qb-plan-heads-toward-reunion-game-against-kirk-cousins-and-vikings",
+      "source_name": "NFL.com",
+      "headline": "Falcons' failed QB plan heads toward reunion game against Kirk Cousins and Vikings",
+      "published_at": "2026-11-27T11:16:05.000Z",
+      "observed_at": "2026-11-27T17:50:20.671Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "ATL",
+        "MIN"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nick-sirianni-often-says-it-takes-all-of-us-nfl-s-largest-thanksgiving-comeback-required-it",
+      "source_name": "NFL.com",
+      "headline": "Nick Sirianni often says 'it takes all of us.' NFL's largest Thanksgiving comeback required it",
+      "published_at": "2026-11-27T01:16:05.000Z",
+      "observed_at": "2026-11-27T17:50:20.671Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/49ers-o-line-answers-the-bell-after-latest-injury-shows-football-can-be-brutal",
+      "source_name": "NFL.com",
+      "headline": "49ers' O-line answers the bell after latest injury shows football can be 'brutal'",
+      "published_at": "2026-11-27T01:16:05.000Z",
+      "observed_at": "2026-11-27T17:50:20.671Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/dallas-cowboys-philadelphia-eagles-thanksgiving-loss-jerry-jones",
+      "source_name": "FOX Sports",
+      "headline": "Jerry Jones Believes In Brian Schottenheimer Even After Latest Cowboys' Loss",
+      "published_at": "2026-11-27T17:39:05.000Z",
+      "observed_at": "2026-11-27T17:50:20.671Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "PHI"
+      ],
+      "detected_category": "coaching",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
