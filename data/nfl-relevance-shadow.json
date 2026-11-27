@@ -2,62 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-saints-agree-to-trade-dt-davon-godchaux-to-jaguars",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Saints agree to trade DT Davon Godchaux to Jaguars",
-      "published_at": "2026-11-09T18:25:20.000Z",
-      "observed_at": "2026-11-09T18:30:22.397Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "JAX",
-        "NO"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/andy-reid-patrick-mahomes-day-to-day-with-elbow-injury",
-      "source_name": "Pro Football Talk",
-      "headline": "Andy Reid: Patrick Mahomes day-to-day with elbow injury",
-      "published_at": "2026-11-09T18:26:10.000Z",
-      "observed_at": "2026-11-09T18:40:21.032Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "injury",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.foxsports.com/stories/nfl/tom-brady-his-return-from-deflategate-i-whoop-some-ass",
-      "source_name": "FOX Sports",
-      "headline": "Tom Brady On His Return From Deflategate: 'I Was There To Whoop Some Ass'",
-      "published_at": "2026-11-09T18:41:13.000Z",
-      "observed_at": "2026-11-09T18:50:29.091Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/lions-agree-to-acquire-s-andre-cisco-from-jets",
       "source_name": "Pro Football Talk",
       "headline": "Lions agree to acquire S Andre Cisco from Jets",
@@ -41840,6 +41784,73 @@
         "CHI"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/there-s-no-way-around-it-the-lions-will-feel-sting-of-this-loss-for-a-while",
+      "source_name": "NFL.com",
+      "headline": "There's no way around it: The Lions will feel sting of this loss for a while",
+      "published_at": "2026-11-27T01:46:04.000Z",
+      "observed_at": "2026-11-27T02:20:24.217Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DET"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/james-cook-touchdown-gives-bills-7-0-lead-over-chiefs",
+      "source_name": "Pro Football Talk",
+      "headline": "James Cook touchdown gives Bills 7-0 lead over Chiefs",
+      "published_at": "2026-11-27T02:12:32.000Z",
+      "observed_at": "2026-11-27T02:20:24.217Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BUF",
+        "KC",
+        "NYG",
+        "NYJ"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nick-sirianni-confronts-cowboys-fans-after-comeback-win",
+      "source_name": "Pro Football Talk",
+      "headline": "Nick Sirianni confronts Cowboys fans after comeback win",
+      "published_at": "2026-11-27T02:08:51.000Z",
+      "observed_at": "2026-11-27T02:20:24.217Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "PHI"
+      ],
+      "detected_category": "coaching",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
