@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/as-jadarian-price-shows-flashes-of-brilliance-the-seahawks-expect-more-to-come",
-      "source_name": "NFL.com",
-      "headline": "As Jadarian Price shows flashes of brilliance, the Seahawks expect more to come",
-      "published_at": "2026-11-10T01:16:06.000Z",
-      "observed_at": "2026-11-10T16:30:23.757Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/bengals-agree-to-acquire-arnold-ebiketie-from-eagles",
-      "source_name": "Pro Football Talk",
-      "headline": "Bengals agree to acquire Arnold Ebiketie from Eagles",
-      "published_at": "2026-11-10T16:20:08.000Z",
-      "observed_at": "2026-11-10T16:30:23.757Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CIN",
-        "PHI"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cardinals-add-qb-joey-aguilar-off-jaguars-practice-squad",
       "source_name": "Pro Football Talk",
       "headline": "Cardinals add QB Joey Aguilar off Jaguars' practice squad",
@@ -41919,6 +41876,49 @@
       "detected_teams": [
         "LAC",
         "NE"
+      ],
+      "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/brock-purdy-ankle-out-49ers-seahawks-mac-jones-start",
+      "source_name": "NFL.com",
+      "headline": "Brock Purdy (ankle) ruled out for 49ers' game vs. Seahawks; Mac Jones to start at QB",
+      "published_at": "2026-11-27T10:21:36.000Z",
+      "observed_at": "2026-11-27T22:30:22.365Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF",
+        "SEA"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/sam-darnold-officially-off-injury-report-set-to-start-vs-49ers",
+      "source_name": "Pro Football Talk",
+      "headline": "Sam Darnold officially off injury report, set to start vs. 49ers",
+      "published_at": "2026-11-27T22:22:44.000Z",
+      "observed_at": "2026-11-27T22:30:22.365Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF"
       ],
       "detected_category": "injury",
       "nfl_evidence": [
