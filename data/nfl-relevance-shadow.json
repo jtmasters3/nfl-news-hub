@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-reinstates-receiver-brandon-aiyuk-to-49ers-after-he-left-team-last-year",
-      "source_name": "NFL.com",
-      "headline": "NFL reinstates receiver Brandon Aiyuk to 49ers after he left team last year",
-      "published_at": "2026-11-09T10:13:11.000Z",
-      "observed_at": "2026-11-09T22:20:23.025Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SF"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/rams-puka-nacua-knee-toe-injury-update",
       "source_name": "FOX Sports",
       "headline": "Rams Expected To Place Puka Nacua On IR With MCL, PCL Sprains And Turf Toe",
@@ -41859,6 +41838,29 @@
       "detected_teams": [
         "BUF",
         "KC"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/andy-reid-new-york-overturned-rashee-rice-catch-not-a-call-i-agree-with",
+      "source_name": "Pro Football Talk",
+      "headline": "Andy Reid: New York overturned Rashee Rice catch, not a call I agree with",
+      "published_at": "2026-11-27T09:48:00.000Z",
+      "observed_at": "2026-11-27T10:00:25.486Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "KC",
+        "NYG",
+        "NYJ"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
