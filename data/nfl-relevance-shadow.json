@@ -2,27 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/after-lions-guard-christian-mahogany-benched-dan-campbell-says-ball-s-in-his-court",
-      "source_name": "NFL.com",
-      "headline": "After Lions guard Christian Mahogany benched, Dan Campbell says 'ball's in his court'",
-      "published_at": "2026-11-09T09:16:06.000Z",
-      "observed_at": "2026-11-10T00:20:37.479Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "DET"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/packers-josh-jacobs-finger-injury-update",
       "source_name": "FOX Sports",
       "headline": "Packers RB Josh Jacobs Needs Surgery On Finger, Could Go On IR",
@@ -41885,6 +41864,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/best-thanksgiving-nfl-games-ever-historic-turkey-day-by-the-numbers-2026",
+      "source_name": "NFL.com",
+      "headline": "Best Thanksgiving NFL games ever? Historic Turkey Day by the numbers",
+      "published_at": "2026-11-27T02:56:55.000Z",
+      "observed_at": "2026-11-27T15:00:27.518Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
