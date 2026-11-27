@@ -2,67 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/justin-jefferson-vikings-offense-didnt-get-it-done-weve-got-to-figure-it-out",
-      "source_name": "Pro Football Talk",
-      "headline": "Justin Jefferson: Vikings' offense didn't get it done, we've got to figure it out",
-      "published_at": "2026-11-10T09:29:54.000Z",
-      "observed_at": "2026-11-10T09:40:19.118Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nfl.com/news/nfl-to-host-australia-s-biggest-ever-super-bowl-watch-party",
-      "source_name": "NFL.com",
-      "headline": "NFL to host Australia's biggest-ever Super Bowl watch party",
-      "published_at": "2026-11-08T09:49:00.000Z",
-      "observed_at": "2026-11-10T10:00:26.565Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/james-cooks-31-carries-vs-vikings-were-the-most-in-any-nfl-game-this-season",
-      "source_name": "Pro Football Talk",
-      "headline": "James Cook's 31 carries vs. Vikings were the most in any NFL game this season",
-      "published_at": "2026-11-10T10:06:10.000Z",
-      "observed_at": "2026-11-10T10:10:21.661Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "MIN"
-      ],
-      "detected_category": "coaching",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/patriots-cb-christian-gonzalez-had-a-game-so-bad-he-did-something-never-seen-before",
       "source_name": "Pro Football Talk",
       "headline": "Patriots CB Christian Gonzalez had a game so bad, he did something never seen before",
@@ -41896,6 +41835,66 @@
         "NE"
       ],
       "detected_category": "injury",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/nfl-week-12-fantasy-sleepers-fernando-mendoza-dylan-sampson-could-produce-on-sunday-night",
+      "source_name": "NFL.com",
+      "headline": "NFL Week 12 fantasy sleepers: Fernando Mendoza, Dylan Sampson could produce on Sunday night",
+      "published_at": "2026-11-27T06:41:14.000Z",
+      "observed_at": "2026-11-27T18:50:20.436Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "fantasy",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/week-12-black-friday-inactives-denver-broncos-at-pittsburgh-steelers",
+      "source_name": "NFL.com",
+      "headline": "Week 12 Black Friday inactives: Denver Broncos at Pittsburgh Steelers",
+      "published_at": "2026-11-27T06:38:45.000Z",
+      "observed_at": "2026-11-27T18:50:20.436Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/denzel-boston-listed-as-questionable-after-missing-fridays-practice",
+      "source_name": "Pro Football Talk",
+      "headline": "Denzel Boston listed as questionable after missing Friday's practice",
+      "published_at": "2026-11-27T18:38:37.000Z",
+      "observed_at": "2026-11-27T18:50:20.436Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CLE"
+      ],
+      "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
