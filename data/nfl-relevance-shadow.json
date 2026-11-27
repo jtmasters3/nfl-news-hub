@@ -2,65 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/nfl-news-roundup-latest-league-updates-from-tuesday-nov-10",
-      "source_name": "NFL.com",
-      "headline": "NFL news roundup: Latest league updates from Tuesday, Nov. 10",
-      "published_at": "2026-11-10T03:51:31.000Z",
-      "observed_at": "2026-11-10T16:00:33.111Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "league_news",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-jaguars-plan-to-keep-brian-thomas-jr-at-trade-deadline",
-      "source_name": "Pro Football Talk",
-      "headline": "Report: Jaguars plan to keep Brian Thomas Jr. at trade deadline",
-      "published_at": "2026-11-10T15:54:12.000Z",
-      "observed_at": "2026-11-10T16:00:33.111Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "JAX"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jordan-davis-is-a-little-disappointed-to-be-traded-by-eagles",
-      "source_name": "Pro Football Talk",
-      "headline": "Jordan Davis is \"a little disappointed\" to be traded by Eagles",
-      "published_at": "2026-11-10T15:46:34.000Z",
-      "observed_at": "2026-11-10T16:00:33.111Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "PHI"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/falcons-are-willing-to-listen-will-the-league-have-anything-else-to-say-after-jessie-bates-deal",
       "source_name": "NFL.com",
       "headline": "Falcons are willing to listen. Will the league have anything else to say after Jessie Bates deal?",
@@ -41917,6 +41858,66 @@
       "detected_teams": [
         "DEN",
         "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/ravens-marlon-humphrey-to-play-sunday-after-being-deactivated-in-week-11",
+      "source_name": "NFL.com",
+      "headline": "Ravens' Marlon Humphrey to play Sunday after being deactivated in Week 11",
+      "published_at": "2026-11-27T09:01:06.000Z",
+      "observed_at": "2026-11-27T21:40:17.801Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "BAL"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/luke-mccaffrey-gives-up-no-11-to-brandon-aiyuk",
+      "source_name": "Pro Football Talk",
+      "headline": "Luke McCaffrey gives up No. 11 to Brandon Aiyuk",
+      "published_at": "2026-11-27T21:35:21.000Z",
+      "observed_at": "2026-11-27T21:40:17.801Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/brock-purdy-not-practicing-on-friday-putting-mac-jones-in-line-to-start",
+      "source_name": "Pro Football Talk",
+      "headline": "Brock Purdy not practicing on Friday, putting Mac Jones in line to start",
+      "published_at": "2026-11-27T21:27:40.000Z",
+      "observed_at": "2026-11-27T21:40:17.801Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SF",
+        "SEA"
       ],
       "detected_category": "league_news",
       "nfl_evidence": [
