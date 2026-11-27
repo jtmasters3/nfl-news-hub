@@ -2,49 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/browns-todd-monken-fails-to-commit-to-a-starting-qb-ahead-of-game-vs-texans",
-      "source_name": "NFL.com",
-      "headline": "Browns' Todd Monken fails to commit to a starting QB ahead of game vs. Texans",
-      "published_at": "2026-11-09T08:16:06.000Z",
-      "observed_at": "2026-11-09T20:50:17.749Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "CLE",
-        "HOU"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/jesse-minter-does-not-address-lamar-jacksons-injury-says-hell-keep-conversations-with-qb-private",
-      "source_name": "Pro Football Talk",
-      "headline": "Jesse Minter does not address Lamar Jackson's injury, says he'll keep conversations with QB private",
-      "published_at": "2026-11-09T20:51:09.000Z",
-      "observed_at": "2026-11-09T21:00:26.221Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BAL"
-      ],
-      "detected_category": "injury",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nfl.com/news/packers-rb-josh-jacobs-to-undergo-surgery-on-finger-this-week",
       "source_name": "NFL.com",
       "headline": "Packers RB Josh Jacobs to undergo surgery on finger this week; timeline to return TBD",
@@ -41862,6 +41819,52 @@
       "detected_category": "league_news",
       "nfl_evidence": [
         "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nfl.com/news/rock-star-joe-milton-iii-leads-eagles-to-stunning-rally-over-cowboys",
+      "source_name": "NFL.com",
+      "headline": "'Rock star' Joe Milton III leads Eagles to stunning rally over Cowboys, his former team",
+      "published_at": "2026-11-27T04:09:47.000Z",
+      "observed_at": "2026-11-27T04:20:17.901Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "PHI"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/joe-milton-tom-brady-eagles-cowboys",
+      "source_name": "FOX Sports",
+      "headline": "Eagles' Joe Milton Torches Former Team, But He Was Just As Excited To Meet Tom Brady",
+      "published_at": "2026-11-27T03:56:34.000Z",
+      "observed_at": "2026-11-27T04:20:17.901Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DAL",
+        "PHI"
+      ],
+      "detected_category": "roster_move",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_practice_squad",
+        "nfl_preserving_category:roster_move"
       ],
       "non_nfl_evidence": [],
       "reason_codes": [
