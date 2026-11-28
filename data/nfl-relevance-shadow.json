@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nfl.com/news/josh-downs-chiefs-colts-trade",
-      "source_name": "NFL.com",
-      "headline": "NFL Network: Chiefs acquire Colts WR Josh Downs ahead of trade deadline",
-      "published_at": "2026-11-10T08:45:52.000Z",
-      "observed_at": "2026-11-10T20:50:21.092Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "KC"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/chiefs-colts-josh-downs-trade-deadline",
       "source_name": "FOX Sports",
       "headline": "Chiefs Reportedly Find Wide Receiver Help In Trade With Colts",
@@ -41937,6 +41915,23 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/its-time-for-the-clock-to-have-tenths-of-a-second",
+      "source_name": "Pro Football Talk",
+      "headline": "It's time for the clock to have tenths of a second",
+      "published_at": "2026-11-28T13:56:30.000Z",
+      "observed_at": "2026-11-28T14:00:29.000Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "league_news",
+      "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
       ]
     }
   ]
