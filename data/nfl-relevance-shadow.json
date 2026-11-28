@@ -2,23 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/not-many-players-are-truly-untradeable",
-      "source_name": "Pro Football Talk",
-      "headline": "Not many players are truly untradeable",
-      "published_at": "2026-11-10T17:39:33.000Z",
-      "observed_at": "2026-11-10T17:50:19.195Z",
-      "decision": "keep",
-      "classification": "ambiguous",
-      "confidence": "low",
-      "detected_teams": [],
-      "detected_category": "trade",
-      "nfl_evidence": [],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "no_signal_fail_open"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-kendre-miller-to-visit-cowboys-on-tuesday",
       "source_name": "Pro Football Talk",
       "headline": "Report: Kendre Miller to visit Cowboys on Tuesday",
@@ -41927,6 +41910,27 @@
         "NYG"
       ],
       "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/mike-macdonald-on-sam-darnold-when-healthy-i-think-hes-done-a-good-job",
+      "source_name": "Pro Football Talk",
+      "headline": "Mike Macdonald on Sam Darnold, when healthy: \"I think he's done a good job\"",
+      "published_at": "2026-11-28T00:44:40.000Z",
+      "observed_at": "2026-11-28T00:50:21.912Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "SEA"
+      ],
+      "detected_category": "injury",
       "nfl_evidence": [
         "nfl_team_detected"
       ],
