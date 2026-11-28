@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/titans-agree-to-trade-s-amani-hooker-to-bills",
-      "source_name": "Pro Football Talk",
-      "headline": "Titans agree to trade S Amani Hooker to Bills",
-      "published_at": "2026-11-10T19:20:46.000Z",
-      "observed_at": "2026-11-10T19:30:21.898Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "TEN"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/raiders-49ers-game-at-levis-stadium-resulted-in-11-arrests-and-45-ejections",
       "source_name": "Pro Football Talk",
       "headline": "Raiders-49ers game at Levi's Stadium resulted in 11 arrests and 45 ejections",
@@ -41941,6 +41919,29 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.foxsports.com/stories/nfl/chargers-qb-justin-herbert-set-miss-sundays-game-vs-patriots",
+      "source_name": "FOX Sports",
+      "headline": "Chargers QB Justin Herbert Set To Miss Sunday's Game vs. Patriots",
+      "published_at": "2026-11-28T01:20:40.000Z",
+      "observed_at": "2026-11-28T01:40:24.000Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAC",
+        "LAR",
+        "NE"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
