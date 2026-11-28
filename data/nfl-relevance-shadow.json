@@ -2,71 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/amani-hooker-trade-details-bills-titans",
-      "source_name": "FOX Sports",
-      "headline": "Bills Reportedly Make Trade With Titans For Secondary Help",
-      "published_at": "2026-11-10T19:31:20.000Z",
-      "observed_at": "2026-11-10T19:50:19.889Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "BUF",
-        "TEN"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/vikings-bring-kirk-cousins-back-to-minnesota",
-      "source_name": "Pro Football Talk",
-      "headline": "Vikings bring Kirk Cousins back to Minnesota",
-      "published_at": "2026-11-10T19:48:14.000Z",
-      "observed_at": "2026-11-10T20:00:25.180Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "LV",
-        "MIN"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
-      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/fernando-mendoza-in-line-to-make-first-start-vs-seahawks-on-sunday",
-      "source_name": "Pro Football Talk",
-      "headline": "Fernando Mendoza in line to make first start vs. Seahawks on Sunday",
-      "published_at": "2026-11-10T20:04:07.000Z",
-      "observed_at": "2026-11-10T20:10:18.499Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "SEA"
-      ],
-      "detected_category": "league_news",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/kirk-cousins-can-become-the-first-quarterback-to-play-an-18-game-regular-season",
       "source_name": "Pro Football Talk",
       "headline": "Kirk Cousins can become the first quarterback to play an 18-game regular season",
@@ -41937,6 +41872,72 @@
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50618077/steelers-fueled-jabs-aaron-rodgers-drama-rout-broncos",
+      "source_name": "ESPN",
+      "headline": "Steelers, fueled by jabs over Rodgers drama, 'come together' to rout Broncos",
+      "published_at": "2026-11-28T04:14:38.000Z",
+      "observed_at": "2026-11-28T08:50:26.420Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "DEN",
+        "PIT"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.espn.com/nfl/story/_/id/50618212/singled-nfl-officiating-video-bears-simmons-draws-false-start-ire-lions",
+      "source_name": "ESPN",
+      "headline": "Singled out in officiating video, Bears' Simmons stokes further ire from Lions",
+      "published_at": "2026-11-28T04:14:38.000Z",
+      "observed_at": "2026-11-28T08:50:26.420Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "CHI",
+        "DET"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/rams-guard-bill-murray-out-for-season-after-torn-achilles-in-first-career-start",
+      "source_name": "Pro Football Talk",
+      "headline": "Rams guard Bill Murray out for season after torn Achilles in first career start",
+      "published_at": "2026-11-28T08:41:33.000Z",
+      "observed_at": "2026-11-28T08:50:26.420Z",
+      "decision": "keep",
+      "classification": "nfl",
+      "confidence": "high",
+      "detected_teams": [
+        "LAR"
+      ],
+      "detected_category": "league_news",
+      "nfl_evidence": [
+        "nfl_team_detected",
+        "phrase_udfa"
+      ],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "kept_strong_nfl_evidence"
       ]
     }
   ]
