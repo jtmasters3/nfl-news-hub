@@ -2,28 +2,6 @@
   "schema_version": 1,
   "observations": [
     {
-      "source_url": "https://www.foxsports.com/stories/nfl/chiefs-colts-josh-downs-trade-deadline",
-      "source_name": "FOX Sports",
-      "headline": "Chiefs Reportedly Find Wide Receiver Help In Trade With Colts",
-      "published_at": "2026-11-10T20:48:21.000Z",
-      "observed_at": "2026-11-10T20:50:21.092Z",
-      "decision": "keep",
-      "classification": "nfl",
-      "confidence": "high",
-      "detected_teams": [
-        "IND",
-        "KC"
-      ],
-      "detected_category": "trade",
-      "nfl_evidence": [
-        "nfl_team_detected"
-      ],
-      "non_nfl_evidence": [],
-      "reason_codes": [
-        "kept_strong_nfl_evidence"
-      ]
-    },
-    {
       "source_url": "https://www.foxsports.com/stories/nfl/fernando-mendozas-offensive-rookie-year-odds-jump-after-kirk-cousins-trade",
       "source_name": "FOX Sports",
       "headline": "Mendoza's Offensive Rookie Of The Year Odds Spike After Cousins Trade",
@@ -41929,6 +41907,25 @@
       "detected_teams": [],
       "detected_category": "league_news",
       "nfl_evidence": [],
+      "non_nfl_evidence": [],
+      "reason_codes": [
+        "no_signal_fail_open"
+      ]
+    },
+    {
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/the-caleb-williams-second-contract-looms-possibly-sooner-than-anyone-realizes",
+      "source_name": "Pro Football Talk",
+      "headline": "The Caleb Williams second contract looms, possibly sooner than anyone realizes",
+      "published_at": "2026-11-28T14:55:14.000Z",
+      "observed_at": "2026-11-28T15:00:26.682Z",
+      "decision": "keep",
+      "classification": "ambiguous",
+      "confidence": "low",
+      "detected_teams": [],
+      "detected_category": "contract",
+      "nfl_evidence": [
+        "nfl_preserving_category:contract"
+      ],
       "non_nfl_evidence": [],
       "reason_codes": [
         "no_signal_fail_open"
